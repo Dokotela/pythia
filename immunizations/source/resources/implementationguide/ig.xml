@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+	<id value="ig" />
+	<url value="http://hl7.org/fhir/uv/immds/ImplementationGuide/ig"/>
+	<version value="0.2.0"/>
+	<name value="ImmDSForecast" />
+	<title value="Immunization Decision Support Forecast" />
+	<status value="active" />
+	<date value="2019-07-15"/>
+	<publisher value="HL7 International - Public Health Work Group"/>
+	<contact>
+		<!-- 0..* ContactDetail Contact details for the publisher -->
+		<telecom>
+			<system value="url"/>
+			<value value="https://confluence.hl7.org/display/PHWG/Public+Health+Work+Group"/>
+		</telecom>
+	</contact>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="USA"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License"/>
+	<!-- 0..1 Use and/or publishing restrictions -->
+	<packageId value="hl7.fhir.uv.immds"/>
+	<!-- 0..1 NPM Package name for IG -->
+	<license value="CC0-1.0"/>
+	<!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
+	<fhirVersion value="4.0.1"/>
+	<!-- 0..1 FHIR Version this Implementation Guide targets -->
+	<definition>
+		<!--  <grouping> -->
+		<!-- 0..* Grouping used to present related resources in the IG -->
+		<!--   <name value="[string]"/> -->
+		<!-- 1..1 Descriptive name for the package -->
+		<!--   <description value="[string]"/> -->
+		<!-- 0..1 Human readable text describing the package -->
+		<!-- </grouping> -->
+		<!-- <resource><reference><reference value="[type]/[id]"/></reference><name value="Test Example"/><description value="A test example to show how a implementation guide works"/><exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/></resource>   -->
+		<!-- insert resources -->
+		<resource>
+			<reference>
+				<reference value="OperationDefinition/immds-forecast-operation"/>
+				<display value="Immunization Decision Support Forecast Operation"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/immds-immunizationevaluation"/>
+				<display value="Immunization Decision Support Forecast ImmunizationEvaluation"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/immds-immunizationrecommendation"/>
+				<display value="Immunization Decision Support Forecast ImmunizationRecommendation"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/immds-patient"/>
+				<display value="Immunization Decision Support Forecast Patient"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CapabilityStatement/client"/>
+				<display value="Immunization Decision Support Forecast Client"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CapabilityStatement/server"/>
+				<display value="Immunization Decision Support Forecast server"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Immunization/immunization-forecast-example"/>
+				<display value="Immunization forecast example"/>
+			</reference>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ImmunizationEvaluation/immunizationevaluation-forecast-example"/>
+				<display value="ImmunizationEvaluation forecast example"/>
+			</reference>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ImmunizationRecommendation/immunizationrecommendation-forecast-example"/>
+				<display value="ImmunizationRecommendation forecast example"/>
+			</reference>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Parameters/parameters-in-example"/>
+				<display value="Parameters in example"/>
+			</reference>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Parameters/parameters-out-example"/>
+				<display value="Parameters out example"/>
+			</reference>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/forecast-example"/>
+				<display value="Patient forecast example"/>
+			</reference>
+			<exampleBoolean value="true"/>
+		</resource>
+		<!-- ============ Home Page =============== -->
+		<page>
+			<nameUrl value="index.html"/>
+			<title value="Home"/>
+			<generation value="markdown"/>
+			<!-- ============ Guidance Page =============== -->
+			<page>
+				<nameUrl value="guidance.html"/>
+				<title value="Guidance"/>
+				<generation value="markdown"/>
+			</page>
+			<!-- ============ Guidance Page =============== -->
+			<!-- ============ Use Cases Page =============== -->
+			<page>
+				<nameUrl value="usecases.html"/>
+				<title value="Use Cases"/>
+				<generation value="markdown"/>
+			</page>
+			<!-- ============ Guidance Page =============== -->
+			<!-- ============ Profiles Page =============== -->
+			<page>
+				<nameUrl value="profiles.html"/>
+				<title value="Profiles and Extensions"/>
+				<generation value="markdown"/>
+				<!-- ============ Profiles and examples=============== -->
+				<!-- insert profiles -->
+				<page>
+					<nameUrl value="StructureDefinition-immds-patient.html"/>
+					<title value="StructureDefinition ImmDS Patient (R4)"/>
+					<generation value="generated"/>
+				</page>
+				<page>
+					<nameUrl value="StructureDefinition-immds-immunizationevaluation.html"/>
+					<title value="StructureDefinition ImmDS ImmunizationEvaluation (R4)"/>
+					<generation value="generated"/>
+				</page>
+				<page>
+					<nameUrl value="StructureDefinition-immds-immunizationrecommendation.html"/>
+					<title value="StructureDefinition ImmDS ImmunizationRecommendation (R4)"/>
+					<generation value="generated"/>
+				</page>
+				<!-- ============ End Profiles and examples=============== -->
+				<!-- ============ Extensions and examples =============== -->
+				<!-- insert extensions -->
+				<!-- ============ End Extensions and examples =============== -->
+			</page>
+			<!-- ============ Operations Page =============== -->
+			<page>
+				<nameUrl value="operations.html"/>
+				<title value="Operations"/>
+				<generation value="markdown"/>
+				<!-- ============ Operations  =============== -->
+				<!-- insert operationdefinitions -->
+				<page>
+					<nameUrl value="OperationDefinition-immds-forecast-operation.html"/>
+					<title value="OperationDefinition ImmunizationDS Forecast"/>
+					<generation value="generated"/>
+				</page>
+				<!-- ============ End Operations  =============== -->
+			</page>
+			<!-- ============ Terminology Page =============== -->
+			<page>
+				<nameUrl value="terminology.html"/>
+				<title value="Terminology"/>
+				<generation value="markdown"/>
+				<!-- ============ ValueSet   =============== -->
+				<!-- insert valuesets -->
+				<!-- ============ End ValueSet   =============== -->
+			</page>
+			<!-- ============ Conformance Pages =============== -->
+			<page>
+				<nameUrl value="CapabilityStatement-server.html"/>
+				<title value="CapabilityStatement server"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="CapabilityStatement-client.html"/>
+				<title value="CapabilityStatement client"/>
+				<generation value="markdown"/>
+			</page>
+			<!-- ============ End Conformance Pages =============== -->
+			<!-- ============ Security Page =============== -->
+			<page>
+				<nameUrl value="security.html"/>
+				<title value="Security"/>
+				<generation value="markdown"/>
+			</page>
+			<!-- ============ Downloads Page =============== -->
+			<page>
+				<nameUrl value="downloads.html"/>
+				<title value="Downloads"/>
+				<generation value="markdown"/>
+			</page>
+			<!-- ============ Table of Contents =============== -->
+			<page>
+				<nameUrl value="toc.html"/>
+				<title value="Table of Contents"/>
+				<generation value="html"/>
+			</page>
+		</page>
+	</definition>
+</ImplementationGuide>
