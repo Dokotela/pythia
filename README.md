@@ -4,7 +4,7 @@ Immunization Forecaster with Background, Information, and Guidance
 
 ## Get in touch
 
-If you have any concerns about anything in this repo, please reach out to [grey@fhirfli.dev](grey@fhirfli.dev)
+If you have any concerns about anything in this repo, please reach out to [grey@fhirfli.dev](mailto: grey@fhirfli.dev)
 
 ## 100% Credit goes to the CDC and their [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/vaccines/programs/iis/cdsi.html)
 
