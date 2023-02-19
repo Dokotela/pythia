@@ -15,12 +15,20 @@ _$_ConditionalSkip _$$_ConditionalSkipFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConditionalSkipToJson(_$_ConditionalSkip instance) =>
-    <String, dynamic>{
-      'context': _$SkipContextEnumMap[instance.context],
-      'setLogic': _$SetLogicEnumMap[instance.setLogic],
-      'set': instance.set_,
-    };
+Map<String, dynamic> _$$_ConditionalSkipToJson(_$_ConditionalSkip instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('context', _$SkipContextEnumMap[instance.context]);
+  writeNotNull('setLogic', _$SetLogicEnumMap[instance.setLogic]);
+  writeNotNull('set', instance.set_?.map((e) => e.toJson()).toList());
+  return val;
+}
 
 const _$SkipContextEnumMap = {
   SkipContext.evaluation: 'Evaluation',

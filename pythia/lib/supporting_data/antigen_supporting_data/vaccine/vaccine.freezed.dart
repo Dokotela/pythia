@@ -21,7 +21,7 @@ Vaccine _$VaccineFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Vaccine {
   String? get vaccineType => throw _privateConstructorUsedError;
-  Cvx? get cvx => throw _privateConstructorUsedError;
+  String? get cvx => throw _privateConstructorUsedError;
   String? get beginAge => throw _privateConstructorUsedError;
   String? get endAge => throw _privateConstructorUsedError;
   String? get tradeName => throw _privateConstructorUsedError;
@@ -41,7 +41,7 @@ abstract class $VaccineCopyWith<$Res> {
   @useResult
   $Res call(
       {String? vaccineType,
-      Cvx? cvx,
+      String? cvx,
       String? beginAge,
       String? endAge,
       String? tradeName,
@@ -80,7 +80,7 @@ class _$VaccineCopyWithImpl<$Res, $Val extends Vaccine>
       cvx: freezed == cvx
           ? _value.cvx
           : cvx // ignore: cast_nullable_to_non_nullable
-              as Cvx?,
+              as String?,
       beginAge: freezed == beginAge
           ? _value.beginAge
           : beginAge // ignore: cast_nullable_to_non_nullable
@@ -118,7 +118,7 @@ abstract class _$$_VaccineCopyWith<$Res> implements $VaccineCopyWith<$Res> {
   @useResult
   $Res call(
       {String? vaccineType,
-      Cvx? cvx,
+      String? cvx,
       String? beginAge,
       String? endAge,
       String? tradeName,
@@ -154,7 +154,7 @@ class __$$_VaccineCopyWithImpl<$Res>
       cvx: freezed == cvx
           ? _value.cvx
           : cvx // ignore: cast_nullable_to_non_nullable
-              as Cvx?,
+              as String?,
       beginAge: freezed == beginAge
           ? _value.beginAge
           : beginAge // ignore: cast_nullable_to_non_nullable
@@ -203,7 +203,7 @@ class _$_Vaccine extends _Vaccine {
   @override
   final String? vaccineType;
   @override
-  final Cvx? cvx;
+  final String? cvx;
   @override
   final String? beginAge;
   @override
@@ -263,7 +263,7 @@ class _$_Vaccine extends _Vaccine {
 abstract class _Vaccine extends Vaccine {
   factory _Vaccine(
       {final String? vaccineType,
-      final Cvx? cvx,
+      final String? cvx,
       final String? beginAge,
       final String? endAge,
       final String? tradeName,
@@ -277,7 +277,7 @@ abstract class _Vaccine extends Vaccine {
   @override
   String? get vaccineType;
   @override
-  Cvx? get cvx;
+  String? get cvx;
   @override
   String? get beginAge;
   @override

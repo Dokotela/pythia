@@ -31,11 +31,20 @@ _$_ScheduleSupportingData _$$_ScheduleSupportingDataFromJson(
     );
 
 Map<String, dynamic> _$$_ScheduleSupportingDataToJson(
-        _$_ScheduleSupportingData instance) =>
-    <String, dynamic>{
-      'liveVirusConflicts': instance.liveVirusConflicts,
-      'vaccineGroups': instance.vaccineGroups,
-      'vaccineGroupToAntigenMap': instance.vaccineGroupToAntigenMap,
-      'cvxToAntigenMap': instance.cvxToAntigenMap,
-      'observations': instance.observations,
-    };
+    _$_ScheduleSupportingData instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('liveVirusConflicts', instance.liveVirusConflicts?.toJson());
+  writeNotNull('vaccineGroups', instance.vaccineGroups?.toJson());
+  writeNotNull(
+      'vaccineGroupToAntigenMap', instance.vaccineGroupToAntigenMap?.toJson());
+  writeNotNull('cvxToAntigenMap', instance.cvxToAntigenMap?.toJson());
+  writeNotNull('observations', instance.observations?.toJson());
+  return val;
+}

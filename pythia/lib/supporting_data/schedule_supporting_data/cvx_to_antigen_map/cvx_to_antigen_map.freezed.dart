@@ -167,7 +167,7 @@ CvxMap _$CvxMapFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CvxMap {
-  Cvx? get cvx => throw _privateConstructorUsedError;
+  String? get cvx => throw _privateConstructorUsedError;
   String? get shortDescription => throw _privateConstructorUsedError;
   List<Association>? get association => throw _privateConstructorUsedError;
 
@@ -182,7 +182,7 @@ abstract class $CvxMapCopyWith<$Res> {
       _$CvxMapCopyWithImpl<$Res, CvxMap>;
   @useResult
   $Res call(
-      {Cvx? cvx, String? shortDescription, List<Association>? association});
+      {String? cvx, String? shortDescription, List<Association>? association});
 }
 
 /// @nodoc
@@ -206,7 +206,7 @@ class _$CvxMapCopyWithImpl<$Res, $Val extends CvxMap>
       cvx: freezed == cvx
           ? _value.cvx
           : cvx // ignore: cast_nullable_to_non_nullable
-              as Cvx?,
+              as String?,
       shortDescription: freezed == shortDescription
           ? _value.shortDescription
           : shortDescription // ignore: cast_nullable_to_non_nullable
@@ -226,7 +226,7 @@ abstract class _$$_CvxMapCopyWith<$Res> implements $CvxMapCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Cvx? cvx, String? shortDescription, List<Association>? association});
+      {String? cvx, String? shortDescription, List<Association>? association});
 }
 
 /// @nodoc
@@ -247,7 +247,7 @@ class __$$_CvxMapCopyWithImpl<$Res>
       cvx: freezed == cvx
           ? _value.cvx
           : cvx // ignore: cast_nullable_to_non_nullable
-              as Cvx?,
+              as String?,
       shortDescription: freezed == shortDescription
           ? _value.shortDescription
           : shortDescription // ignore: cast_nullable_to_non_nullable
@@ -272,7 +272,7 @@ class _$_CvxMap extends _CvxMap {
       _$$_CvxMapFromJson(json);
 
   @override
-  final Cvx? cvx;
+  final String? cvx;
   @override
   final String? shortDescription;
   final List<Association>? _association;
@@ -323,7 +323,7 @@ class _$_CvxMap extends _CvxMap {
 
 abstract class _CvxMap extends CvxMap {
   factory _CvxMap(
-      {final Cvx? cvx,
+      {final String? cvx,
       final String? shortDescription,
       final List<Association>? association}) = _$_CvxMap;
   _CvxMap._() : super._();
@@ -331,7 +331,7 @@ abstract class _CvxMap extends CvxMap {
   factory _CvxMap.fromJson(Map<String, dynamic> json) = _$_CvxMap.fromJson;
 
   @override
-  Cvx? get cvx;
+  String? get cvx;
   @override
   String? get shortDescription;
   @override
@@ -348,7 +348,7 @@ Association _$AssociationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Association {
-  TargetDisease? get antigen => throw _privateConstructorUsedError;
+  String? get antigen => throw _privateConstructorUsedError;
   String? get associationBeginAge => throw _privateConstructorUsedError;
   String? get associationEndAge => throw _privateConstructorUsedError;
 
@@ -365,7 +365,7 @@ abstract class $AssociationCopyWith<$Res> {
       _$AssociationCopyWithImpl<$Res, Association>;
   @useResult
   $Res call(
-      {TargetDisease? antigen,
+      {String? antigen,
       String? associationBeginAge,
       String? associationEndAge});
 }
@@ -391,7 +391,7 @@ class _$AssociationCopyWithImpl<$Res, $Val extends Association>
       antigen: freezed == antigen
           ? _value.antigen
           : antigen // ignore: cast_nullable_to_non_nullable
-              as TargetDisease?,
+              as String?,
       associationBeginAge: freezed == associationBeginAge
           ? _value.associationBeginAge
           : associationBeginAge // ignore: cast_nullable_to_non_nullable
@@ -413,7 +413,7 @@ abstract class _$$_AssociationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {TargetDisease? antigen,
+      {String? antigen,
       String? associationBeginAge,
       String? associationEndAge});
 }
@@ -437,7 +437,7 @@ class __$$_AssociationCopyWithImpl<$Res>
       antigen: freezed == antigen
           ? _value.antigen
           : antigen // ignore: cast_nullable_to_non_nullable
-              as TargetDisease?,
+              as String?,
       associationBeginAge: freezed == associationBeginAge
           ? _value.associationBeginAge
           : associationBeginAge // ignore: cast_nullable_to_non_nullable
@@ -461,7 +461,7 @@ class _$_Association extends _Association {
       _$$_AssociationFromJson(json);
 
   @override
-  final TargetDisease? antigen;
+  final String? antigen;
   @override
   final String? associationBeginAge;
   @override
@@ -505,7 +505,7 @@ class _$_Association extends _Association {
 
 abstract class _Association extends Association {
   factory _Association(
-      {final TargetDisease? antigen,
+      {final String? antigen,
       final String? associationBeginAge,
       final String? associationEndAge}) = _$_Association;
   _Association._() : super._();
@@ -514,7 +514,7 @@ abstract class _Association extends Association {
       _$_Association.fromJson;
 
   @override
-  TargetDisease? get antigen;
+  String? get antigen;
   @override
   String? get associationBeginAge;
   @override

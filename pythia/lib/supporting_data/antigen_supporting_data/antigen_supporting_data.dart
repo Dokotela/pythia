@@ -29,8 +29,8 @@ part 'antigen_supporting_data.g.dart';
 class AntigenSupportingData with _$AntigenSupportingData {
   AntigenSupportingData._();
   factory AntigenSupportingData({
-    TargetDisease? targetDisease,
-    VaccineGroupName? vaccineGroup,
+    String? targetDisease,
+    String? vaccineGroup,
     Immunity? immunity,
     Contraindications? contraindications,
     List<Series>? series,

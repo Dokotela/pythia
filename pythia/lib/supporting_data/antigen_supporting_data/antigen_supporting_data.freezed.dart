@@ -21,8 +21,8 @@ AntigenSupportingData _$AntigenSupportingDataFromJson(
 
 /// @nodoc
 mixin _$AntigenSupportingData {
-  TargetDisease? get targetDisease => throw _privateConstructorUsedError;
-  VaccineGroupName? get vaccineGroup => throw _privateConstructorUsedError;
+  String? get targetDisease => throw _privateConstructorUsedError;
+  String? get vaccineGroup => throw _privateConstructorUsedError;
   Immunity? get immunity => throw _privateConstructorUsedError;
   Contraindications? get contraindications =>
       throw _privateConstructorUsedError;
@@ -41,8 +41,8 @@ abstract class $AntigenSupportingDataCopyWith<$Res> {
       _$AntigenSupportingDataCopyWithImpl<$Res, AntigenSupportingData>;
   @useResult
   $Res call(
-      {TargetDisease? targetDisease,
-      VaccineGroupName? vaccineGroup,
+      {String? targetDisease,
+      String? vaccineGroup,
       Immunity? immunity,
       Contraindications? contraindications,
       List<Series>? series});
@@ -75,11 +75,11 @@ class _$AntigenSupportingDataCopyWithImpl<$Res,
       targetDisease: freezed == targetDisease
           ? _value.targetDisease
           : targetDisease // ignore: cast_nullable_to_non_nullable
-              as TargetDisease?,
+              as String?,
       vaccineGroup: freezed == vaccineGroup
           ? _value.vaccineGroup
           : vaccineGroup // ignore: cast_nullable_to_non_nullable
-              as VaccineGroupName?,
+              as String?,
       immunity: freezed == immunity
           ? _value.immunity
           : immunity // ignore: cast_nullable_to_non_nullable
@@ -129,8 +129,8 @@ abstract class _$$_AntigenSupportingDataCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {TargetDisease? targetDisease,
-      VaccineGroupName? vaccineGroup,
+      {String? targetDisease,
+      String? vaccineGroup,
       Immunity? immunity,
       Contraindications? contraindications,
       List<Series>? series});
@@ -162,11 +162,11 @@ class __$$_AntigenSupportingDataCopyWithImpl<$Res>
       targetDisease: freezed == targetDisease
           ? _value.targetDisease
           : targetDisease // ignore: cast_nullable_to_non_nullable
-              as TargetDisease?,
+              as String?,
       vaccineGroup: freezed == vaccineGroup
           ? _value.vaccineGroup
           : vaccineGroup // ignore: cast_nullable_to_non_nullable
-              as VaccineGroupName?,
+              as String?,
       immunity: freezed == immunity
           ? _value.immunity
           : immunity // ignore: cast_nullable_to_non_nullable
@@ -199,9 +199,9 @@ class _$_AntigenSupportingData extends _AntigenSupportingData {
       _$$_AntigenSupportingDataFromJson(json);
 
   @override
-  final TargetDisease? targetDisease;
+  final String? targetDisease;
   @override
-  final VaccineGroupName? vaccineGroup;
+  final String? vaccineGroup;
   @override
   final Immunity? immunity;
   @override
@@ -264,8 +264,8 @@ class _$_AntigenSupportingData extends _AntigenSupportingData {
 
 abstract class _AntigenSupportingData extends AntigenSupportingData {
   factory _AntigenSupportingData(
-      {final TargetDisease? targetDisease,
-      final VaccineGroupName? vaccineGroup,
+      {final String? targetDisease,
+      final String? vaccineGroup,
       final Immunity? immunity,
       final Contraindications? contraindications,
       final List<Series>? series}) = _$_AntigenSupportingData;
@@ -275,9 +275,9 @@ abstract class _AntigenSupportingData extends AntigenSupportingData {
       _$_AntigenSupportingData.fromJson;
 
   @override
-  TargetDisease? get targetDisease;
+  String? get targetDisease;
   @override
-  VaccineGroupName? get vaccineGroup;
+  String? get vaccineGroup;
   @override
   Immunity? get immunity;
   @override

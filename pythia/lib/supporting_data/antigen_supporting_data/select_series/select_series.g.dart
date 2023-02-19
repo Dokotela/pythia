@@ -23,17 +23,28 @@ _$_SelectSeries _$$_SelectSeriesFromJson(Map<String, dynamic> json) =>
       maxAgeToStart: json['maxAgeToStart'] as String?,
     );
 
-Map<String, dynamic> _$$_SelectSeriesToJson(_$_SelectSeries instance) =>
-    <String, dynamic>{
-      'defaultSeries': _$BinaryEnumMap[instance.defaultSeries],
-      'productPath': _$BinaryEnumMap[instance.productPath],
-      'seriesGroupName': _$SeriesGroupNameEnumMap[instance.seriesGroupName],
-      'seriesGroup': _$SeriesGroupEnumMap[instance.seriesGroup],
-      'seriesPriority': _$SeriesPriorityEnumMap[instance.seriesPriority],
-      'seriesPreference': _$SeriesPreferenceEnumMap[instance.seriesPreference],
-      'minAgeToStart': instance.minAgeToStart,
-      'maxAgeToStart': instance.maxAgeToStart,
-    };
+Map<String, dynamic> _$$_SelectSeriesToJson(_$_SelectSeries instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('defaultSeries', _$BinaryEnumMap[instance.defaultSeries]);
+  writeNotNull('productPath', _$BinaryEnumMap[instance.productPath]);
+  writeNotNull(
+      'seriesGroupName', _$SeriesGroupNameEnumMap[instance.seriesGroupName]);
+  writeNotNull('seriesGroup', _$SeriesGroupEnumMap[instance.seriesGroup]);
+  writeNotNull(
+      'seriesPriority', _$SeriesPriorityEnumMap[instance.seriesPriority]);
+  writeNotNull(
+      'seriesPreference', _$SeriesPreferenceEnumMap[instance.seriesPreference]);
+  writeNotNull('minAgeToStart', instance.minAgeToStart);
+  writeNotNull('maxAgeToStart', instance.maxAgeToStart);
+  return val;
+}
 
 const _$BinaryEnumMap = {
   Binary.yes: 'Yes',

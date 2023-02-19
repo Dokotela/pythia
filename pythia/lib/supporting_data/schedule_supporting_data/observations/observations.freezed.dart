@@ -169,7 +169,7 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Observation {
-  int? get observationCode => throw _privateConstructorUsedError;
+  String? get observationCode => throw _privateConstructorUsedError;
   String? get observationTitle => throw _privateConstructorUsedError;
   String? get group => throw _privateConstructorUsedError;
   String? get indicationText => throw _privateConstructorUsedError;
@@ -190,7 +190,7 @@ abstract class $ObservationCopyWith<$Res> {
       _$ObservationCopyWithImpl<$Res, Observation>;
   @useResult
   $Res call(
-      {int? observationCode,
+      {String? observationCode,
       String? observationTitle,
       String? group,
       String? indicationText,
@@ -226,7 +226,7 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
       observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       observationTitle: freezed == observationTitle
           ? _value.observationTitle
           : observationTitle // ignore: cast_nullable_to_non_nullable
@@ -276,7 +276,7 @@ abstract class _$$_ObservationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? observationCode,
+      {String? observationCode,
       String? observationTitle,
       String? group,
       String? indicationText,
@@ -311,7 +311,7 @@ class __$$_ObservationCopyWithImpl<$Res>
       observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       observationTitle: freezed == observationTitle
           ? _value.observationTitle
           : observationTitle // ignore: cast_nullable_to_non_nullable
@@ -357,7 +357,7 @@ class _$_Observation extends _Observation {
       _$$_ObservationFromJson(json);
 
   @override
-  final int? observationCode;
+  final String? observationCode;
   @override
   final String? observationTitle;
   @override
@@ -424,7 +424,7 @@ class _$_Observation extends _Observation {
 
 abstract class _Observation extends Observation {
   factory _Observation(
-      {final int? observationCode,
+      {final String? observationCode,
       final String? observationTitle,
       final String? group,
       final String? indicationText,
@@ -437,7 +437,7 @@ abstract class _Observation extends Observation {
       _$_Observation.fromJson;
 
   @override
-  int? get observationCode;
+  String? get observationCode;
   @override
   String? get observationTitle;
   @override

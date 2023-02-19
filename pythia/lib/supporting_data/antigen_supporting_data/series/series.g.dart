@@ -8,10 +8,8 @@ part of 'series.dart';
 
 _$_Series _$$_SeriesFromJson(Map<String, dynamic> json) => _$_Series(
       seriesName: json['seriesName'] as String?,
-      targetDisease:
-          $enumDecodeNullable(_$TargetDiseaseEnumMap, json['targetDisease']),
-      vaccineGroup:
-          $enumDecodeNullable(_$VaccineGroupNameEnumMap, json['vaccineGroup']),
+      targetDisease: json['targetDisease'] as String?,
+      vaccineGroup: json['vaccineGroup'] as String?,
       seriesAdminGuidance: (json['seriesAdminGuidance'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -32,73 +30,31 @@ _$_Series _$$_SeriesFromJson(Map<String, dynamic> json) => _$_Series(
           .toList(),
     );
 
-Map<String, dynamic> _$$_SeriesToJson(_$_Series instance) => <String, dynamic>{
-      'seriesName': instance.seriesName,
-      'targetDisease': _$TargetDiseaseEnumMap[instance.targetDisease],
-      'vaccineGroup': _$VaccineGroupNameEnumMap[instance.vaccineGroup],
-      'seriesAdminGuidance': instance.seriesAdminGuidance,
-      'seriesType': _$SeriesTypeEnumMap[instance.seriesType],
-      'equivalentSeriesGroups':
-          _$EquivalentSeriesGroupsEnumMap[instance.equivalentSeriesGroups],
-      'requiredGender':
-          instance.requiredGender?.map((e) => _$GenderEnumMap[e]!).toList(),
-      'selectSeries': instance.selectSeries,
-      'indication': instance.indication,
-      'seriesDose': instance.seriesDose,
-    };
+Map<String, dynamic> _$$_SeriesToJson(_$_Series instance) {
+  final val = <String, dynamic>{};
 
-const _$TargetDiseaseEnumMap = {
-  TargetDisease.cholera: 'Cholera',
-  TargetDisease.covid_19: 'COVID-19',
-  TargetDisease.diptheria: 'Diphtheria',
-  TargetDisease.ebola: 'Ebola',
-  TargetDisease.hepA: 'HepA',
-  TargetDisease.hepB: 'HepB',
-  TargetDisease.hib: 'Hib',
-  TargetDisease.hpv: 'HPV',
-  TargetDisease.influenza: 'Influenza',
-  TargetDisease.japaneseEncephalitis: 'Japanese Encephalitis',
-  TargetDisease.meningococcal: 'Meningococcal',
-  TargetDisease.meningococcalB: 'Meningococcal B',
-  TargetDisease.measles: 'Measles',
-  TargetDisease.mumps: 'Mumps',
-  TargetDisease.pertussis: 'Pertussis',
-  TargetDisease.pneumococcal: 'Pneumococcal',
-  TargetDisease.polio: 'Polio',
-  TargetDisease.rabies: 'Rabies',
-  TargetDisease.rotavirus: 'Rotavirus',
-  TargetDisease.rubella: 'Rubella',
-  TargetDisease.tetanus: 'Tetanus',
-  TargetDisease.tuberculosis: 'Tuberculosis',
-  TargetDisease.typhoid: 'Typhoid',
-  TargetDisease.varicella: 'Varicella',
-  TargetDisease.yellowFever: 'Yellow Fever',
-  TargetDisease.zoster: 'Zoster',
-};
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
 
-const _$VaccineGroupNameEnumMap = {
-  VaccineGroupName.cholera: 'Cholera',
-  VaccineGroupName.covid_19: 'COVID-19',
-  VaccineGroupName.dtap_tdap_td: 'DTaP/Tdap/Td',
-  VaccineGroupName.ebola: 'Ebola',
-  VaccineGroupName.hepA: 'HepA',
-  VaccineGroupName.hepB: 'HepB',
-  VaccineGroupName.hib: 'Hib',
-  VaccineGroupName.hpv: 'HPV',
-  VaccineGroupName.influenza: 'Influenza',
-  VaccineGroupName.japaneseEncephalitis: 'Japanese Encephalitis',
-  VaccineGroupName.meningococcal: 'Meningococcal',
-  VaccineGroupName.meningococcalB: 'Meningococcal B',
-  VaccineGroupName.mmr: 'MMR',
-  VaccineGroupName.pneumococcal: 'Pneumococcal',
-  VaccineGroupName.polio: 'Polio',
-  VaccineGroupName.rabies: 'Rabies',
-  VaccineGroupName.rotavirus: 'Rotavirus',
-  VaccineGroupName.typhoid: 'Typhoid',
-  VaccineGroupName.varicella: 'Varicella',
-  VaccineGroupName.yellowFever: 'Yellow Fever',
-  VaccineGroupName.zoster: 'Zoster',
-};
+  writeNotNull('seriesName', instance.seriesName);
+  writeNotNull('targetDisease', instance.targetDisease);
+  writeNotNull('vaccineGroup', instance.vaccineGroup);
+  writeNotNull('seriesAdminGuidance', instance.seriesAdminGuidance);
+  writeNotNull('seriesType', _$SeriesTypeEnumMap[instance.seriesType]);
+  writeNotNull('equivalentSeriesGroups',
+      _$EquivalentSeriesGroupsEnumMap[instance.equivalentSeriesGroups]);
+  writeNotNull('requiredGender',
+      instance.requiredGender?.map((e) => _$GenderEnumMap[e]!).toList());
+  writeNotNull('selectSeries', instance.selectSeries?.toJson());
+  writeNotNull(
+      'indication', instance.indication?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'seriesDose', instance.seriesDose?.map((e) => e.toJson()).toList());
+  return val;
+}
 
 const _$SeriesTypeEnumMap = {
   SeriesType.standard: 'Standard',

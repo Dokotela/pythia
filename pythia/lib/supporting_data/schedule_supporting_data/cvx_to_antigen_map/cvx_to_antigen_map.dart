@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../pythia.dart';
-
 part 'cvx_to_antigen_map.freezed.dart';
 part 'cvx_to_antigen_map.g.dart';
 
@@ -20,7 +18,7 @@ class CvxToAntigenMap with _$CvxToAntigenMap {
 class CvxMap with _$CvxMap {
   CvxMap._();
   factory CvxMap({
-    Cvx? cvx,
+    String? cvx,
     String? shortDescription,
     List<Association>? association,
   }) = _CvxMap;
@@ -32,7 +30,7 @@ class CvxMap with _$CvxMap {
 class Association with _$Association {
   Association._();
   factory Association({
-    TargetDisease? antigen,
+    String? antigen,
     String? associationBeginAge,
     String? associationEndAge,
   }) = _Association;

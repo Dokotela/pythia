@@ -15,9 +15,18 @@ _$_DateOfBirth _$$_DateOfBirthFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DateOfBirthToJson(_$_DateOfBirth instance) =>
-    <String, dynamic>{
-      'immunityBirthDate': instance.immunityBirthDate,
-      'birthCountry': instance.birthCountry,
-      'exclusion': instance.exclusion,
-    };
+Map<String, dynamic> _$$_DateOfBirthToJson(_$_DateOfBirth instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('immunityBirthDate', instance.immunityBirthDate);
+  writeNotNull('birthCountry', instance.birthCountry);
+  writeNotNull(
+      'exclusion', instance.exclusion?.map((e) => e.toJson()).toList());
+  return val;
+}

@@ -8,9 +8,6 @@ Enum? stringToEnum<T>(Type enumType, String value) {
     case ConditionType:
       return conditionTypeStringToEnum[value];
 
-    case Cvx:
-      return cvxStringToEnumMap[value];
-
     case DoseCountLogic:
       return doseCountLogicStringToEnum[value];
 
@@ -49,12 +46,6 @@ Enum? stringToEnum<T>(Type enumType, String value) {
 
     case SkipContext:
       return skipContextStringToEnum[value];
-
-    case TargetDisease:
-      return targetDiseaseStringToEnum[value];
-
-    case VaccineGroupName:
-      return vaccineGroupNameStringToEnum[value];
 
     default:
       return null;

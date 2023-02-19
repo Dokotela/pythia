@@ -12,8 +12,16 @@ _$_ObservationCode _$$_ObservationCodeFromJson(Map<String, dynamic> json) =>
       code: json['code'] as int?,
     );
 
-Map<String, dynamic> _$$_ObservationCodeToJson(_$_ObservationCode instance) =>
-    <String, dynamic>{
-      'text': instance.text,
-      'code': instance.code,
-    };
+Map<String, dynamic> _$$_ObservationCodeToJson(_$_ObservationCode instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('text', instance.text);
+  writeNotNull('code', instance.code);
+  return val;
+}

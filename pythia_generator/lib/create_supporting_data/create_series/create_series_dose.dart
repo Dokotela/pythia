@@ -133,7 +133,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
 
       seriesDose.preferableVaccine!.add(Vaccine(
         vaccineType: text,
-        cvx: cvxStringToEnumMap[code],
+        cvx: code,
         beginAge: valueToString(row[2]!),
         endAge: valueToString(row[3]!),
         tradeName: tradeName,
@@ -160,7 +160,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
 
       seriesDose.allowableVaccine!.add(Vaccine(
         vaccineType: text,
-        cvx: cvxStringToEnumMap[code],
+        cvx: code,
         beginAge: valueToString(row[2]!),
         endAge: valueToString(row[3]!),
       ));
@@ -183,7 +183,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
 
       seriesDose.inadvertentVaccine!.add(Vaccine(
         vaccineType: text,
-        cvx: cvxStringToEnumMap[code],
+        cvx: code,
       ));
     } else if (row[0]!.toString().contains('Conditional Skip') &&
         !row[1]!.toString().contains('Skip Context') &&

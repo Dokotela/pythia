@@ -12,8 +12,16 @@ _$_ClinicalHistory _$$_ClinicalHistoryFromJson(Map<String, dynamic> json) =>
       guidelineTitle: json['guidelineTitle'] as String?,
     );
 
-Map<String, dynamic> _$$_ClinicalHistoryToJson(_$_ClinicalHistory instance) =>
-    <String, dynamic>{
-      'guidelineCode': instance.guidelineCode,
-      'guidelineTitle': instance.guidelineTitle,
-    };
+Map<String, dynamic> _$$_ClinicalHistoryToJson(_$_ClinicalHistory instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('guidelineCode', instance.guidelineCode);
+  writeNotNull('guidelineTitle', instance.guidelineTitle);
+  return val;
+}

@@ -20,7 +20,7 @@ class VaccineGroups with _$VaccineGroups {
 class VaccineGroup with _$VaccineGroup {
   VaccineGroup._();
   factory VaccineGroup({
-    VaccineGroupName? name,
+    String? name,
     Binary? administerFullVaccineGroup,
   }) = _VaccineGroup;
 

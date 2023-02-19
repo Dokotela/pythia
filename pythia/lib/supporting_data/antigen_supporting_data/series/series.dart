@@ -10,8 +10,8 @@ class Series with _$Series {
   Series._();
   factory Series({
     String? seriesName,
-    TargetDisease? targetDisease,
-    VaccineGroupName? vaccineGroup,
+    String? targetDisease,
+    String? vaccineGroup,
     List<String>? seriesAdminGuidance,
     SeriesType? seriesType,
     EquivalentSeriesGroups? equivalentSeriesGroups,

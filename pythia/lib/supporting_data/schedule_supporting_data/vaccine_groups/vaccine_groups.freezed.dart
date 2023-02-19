@@ -169,7 +169,7 @@ VaccineGroup _$VaccineGroupFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$VaccineGroup {
-  VaccineGroupName? get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   Binary? get administerFullVaccineGroup => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -184,7 +184,7 @@ abstract class $VaccineGroupCopyWith<$Res> {
           VaccineGroup value, $Res Function(VaccineGroup) then) =
       _$VaccineGroupCopyWithImpl<$Res, VaccineGroup>;
   @useResult
-  $Res call({VaccineGroupName? name, Binary? administerFullVaccineGroup});
+  $Res call({String? name, Binary? administerFullVaccineGroup});
 }
 
 /// @nodoc
@@ -207,7 +207,7 @@ class _$VaccineGroupCopyWithImpl<$Res, $Val extends VaccineGroup>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as VaccineGroupName?,
+              as String?,
       administerFullVaccineGroup: freezed == administerFullVaccineGroup
           ? _value.administerFullVaccineGroup
           : administerFullVaccineGroup // ignore: cast_nullable_to_non_nullable
@@ -224,7 +224,7 @@ abstract class _$$_VaccineGroupCopyWith<$Res>
       __$$_VaccineGroupCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({VaccineGroupName? name, Binary? administerFullVaccineGroup});
+  $Res call({String? name, Binary? administerFullVaccineGroup});
 }
 
 /// @nodoc
@@ -245,7 +245,7 @@ class __$$_VaccineGroupCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as VaccineGroupName?,
+              as String?,
       administerFullVaccineGroup: freezed == administerFullVaccineGroup
           ? _value.administerFullVaccineGroup
           : administerFullVaccineGroup // ignore: cast_nullable_to_non_nullable
@@ -263,7 +263,7 @@ class _$_VaccineGroup extends _VaccineGroup {
       _$$_VaccineGroupFromJson(json);
 
   @override
-  final VaccineGroupName? name;
+  final String? name;
   @override
   final Binary? administerFullVaccineGroup;
 
@@ -305,7 +305,7 @@ class _$_VaccineGroup extends _VaccineGroup {
 
 abstract class _VaccineGroup extends VaccineGroup {
   factory _VaccineGroup(
-      {final VaccineGroupName? name,
+      {final String? name,
       final Binary? administerFullVaccineGroup}) = _$_VaccineGroup;
   _VaccineGroup._() : super._();
 
@@ -313,7 +313,7 @@ abstract class _VaccineGroup extends VaccineGroup {
       _$_VaccineGroup.fromJson;
 
   @override
-  VaccineGroupName? get name;
+  String? get name;
   @override
   Binary? get administerFullVaccineGroup;
   @override

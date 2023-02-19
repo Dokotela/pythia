@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../pythia.dart';
-
 part 'vaccine.freezed.dart';
 part 'vaccine.g.dart';
 
@@ -10,7 +8,7 @@ class Vaccine with _$Vaccine {
   Vaccine._();
   factory Vaccine({
     String? vaccineType,
-    Cvx? cvx,
+    String? cvx,
     String? beginAge,
     String? endAge,
     String? tradeName,

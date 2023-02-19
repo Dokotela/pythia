@@ -55,55 +55,51 @@ Future<void> createSupportingData(
         null;
     }
   }
-  final dataString = "import 'package:vaxcast/vaxcast.dart';\n\n"
+  final dataString = "import 'package:pythia/pythia.dart';\n\n"
       'final scheduleSupportingData = '
       'ScheduleSupportingData.fromJson(${jsonEncoder.convert(scheduleSupportingData)});';
 
   await File('lib/files/schedule_supporting_data.dart')
       .writeAsString(dataString);
 
-  // for (var supportString in supportingStrings) {
-  //   if (supportString is AntigenSupportingStrings) {
-  //     var antigenSupportingData = AntigenSupportingData(
-  //       immunity: immunity(supportString.immunity),
-  //       contraindications: contraindications(supportString.contraindications),
-  //       series: supportString.series?.map((e) => createSeries(e)).toList(),
-  //     );
+  for (var supportString in supportingStrings) {
+    if (supportString is AntigenSupportingStrings) {
+      var antigenSupportingData = AntigenSupportingData(
+        immunity: immunity(supportString.immunity),
+        contraindications: contraindications(supportString.contraindications),
+        series: supportString.series?.map((e) => createSeries(e)).toList(),
+      );
 
-  //     antigenSupportingData = antigenSupportingData.copyWith(
-  //       targetDisease: antigenSupportingData.series?[0].targetDisease,
-  //       vaccineGroup: antigenSupportingData.series?[0].vaccineGroup,
-  //     );
+      antigenSupportingData = antigenSupportingData.copyWith(
+        targetDisease: antigenSupportingData.series?[0].targetDisease,
+        vaccineGroup: antigenSupportingData.series?[0].vaccineGroup,
+      );
 
-  //     print(targetDiseaseEnumToString[
-  //         antigenSupportingData.series?[0].targetDisease]);
-  //     print(targetDiseaseEnumToString[
-  //             antigenSupportingData.series?[0].targetDisease]
-  //         ?.replaceAll(' ', '_'));
-  //     print(targetDiseaseEnumToString[
-  //             antigenSupportingData.series?[0].targetDisease]
-  //         ?.replaceAll(' ', '_')
-  //         .replaceAll('-', '_'));
-  //     final fileName = targetDiseaseEnumToString[
-  //             antigenSupportingData.series?[0].targetDisease]
-  //         ?.replaceAll(' ', '_')
-  //         .replaceAll('-', '_')
-  //         .toLowerCase();
-  //     final index = fileName?.indexOf('_');
-  //     var diseaseName = fileName;
-  //     if (index != null && index != -1) {
-  //       diseaseName = '${fileName?.substring(0, index)}'
-  //           '${fileName?.substring(index + 1, index + 2).toUpperCase()}'
-  //           '${fileName?.substring(index + 2)}';
-  //     }
+      print(antigenSupportingData.series?[0].targetDisease);
+      print(
+          antigenSupportingData.series?[0].targetDisease?.replaceAll(' ', '_'));
+      print(antigenSupportingData.series?[0].targetDisease
+          ?.replaceAll(' ', '_')
+          .replaceAll('-', '_'));
+      final fileName = antigenSupportingData.series?[0].targetDisease
+          ?.replaceAll(' ', '_')
+          .replaceAll('-', '_')
+          .toLowerCase();
+      final index = fileName?.indexOf('_');
+      var diseaseName = fileName;
+      if (index != null && index != -1) {
+        diseaseName = '${fileName?.substring(0, index)}'
+            '${fileName?.substring(index + 1, index + 2).toUpperCase()}'
+            '${fileName?.substring(index + 2)}';
+      }
 
-  //     final dataString = "import 'package:vaxcast/vaxcast.dart';\n\n"
-  //         'final $diseaseName = '
-  //         'AntigenSupportingData.fromJson(${jsonEncoder.convert(antigenSupportingData)});';
+      final dataString = "import 'package:vaxcast/vaxcast.dart';\n\n"
+          'final $diseaseName = '
+          'AntigenSupportingData.fromJson(${jsonEncoder.convert(antigenSupportingData)});';
 
-  //     await File('lib/files/$fileName.dart').writeAsString(dataString);
-  //     await File('lib/files/$fileName.json')
-  //         .writeAsString(jsonEncoder.convert(antigenSupportingData));
-  //   } else {}
-  // }
+      await File('lib/files/$fileName.dart').writeAsString(dataString);
+      await File('lib/files/$fileName.json')
+          .writeAsString(jsonEncoder.convert(antigenSupportingData));
+    }
+  }
 }

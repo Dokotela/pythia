@@ -21,8 +21,8 @@ Series _$SeriesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Series {
   String? get seriesName => throw _privateConstructorUsedError;
-  TargetDisease? get targetDisease => throw _privateConstructorUsedError;
-  VaccineGroupName? get vaccineGroup => throw _privateConstructorUsedError;
+  String? get targetDisease => throw _privateConstructorUsedError;
+  String? get vaccineGroup => throw _privateConstructorUsedError;
   List<String>? get seriesAdminGuidance => throw _privateConstructorUsedError;
   SeriesType? get seriesType => throw _privateConstructorUsedError;
   EquivalentSeriesGroups? get equivalentSeriesGroups =>
@@ -44,8 +44,8 @@ abstract class $SeriesCopyWith<$Res> {
   @useResult
   $Res call(
       {String? seriesName,
-      TargetDisease? targetDisease,
-      VaccineGroupName? vaccineGroup,
+      String? targetDisease,
+      String? vaccineGroup,
       List<String>? seriesAdminGuidance,
       SeriesType? seriesType,
       EquivalentSeriesGroups? equivalentSeriesGroups,
@@ -89,11 +89,11 @@ class _$SeriesCopyWithImpl<$Res, $Val extends Series>
       targetDisease: freezed == targetDisease
           ? _value.targetDisease
           : targetDisease // ignore: cast_nullable_to_non_nullable
-              as TargetDisease?,
+              as String?,
       vaccineGroup: freezed == vaccineGroup
           ? _value.vaccineGroup
           : vaccineGroup // ignore: cast_nullable_to_non_nullable
-              as VaccineGroupName?,
+              as String?,
       seriesAdminGuidance: freezed == seriesAdminGuidance
           ? _value.seriesAdminGuidance
           : seriesAdminGuidance // ignore: cast_nullable_to_non_nullable
@@ -146,8 +146,8 @@ abstract class _$$_SeriesCopyWith<$Res> implements $SeriesCopyWith<$Res> {
   @useResult
   $Res call(
       {String? seriesName,
-      TargetDisease? targetDisease,
-      VaccineGroupName? vaccineGroup,
+      String? targetDisease,
+      String? vaccineGroup,
       List<String>? seriesAdminGuidance,
       SeriesType? seriesType,
       EquivalentSeriesGroups? equivalentSeriesGroups,
@@ -189,11 +189,11 @@ class __$$_SeriesCopyWithImpl<$Res>
       targetDisease: freezed == targetDisease
           ? _value.targetDisease
           : targetDisease // ignore: cast_nullable_to_non_nullable
-              as TargetDisease?,
+              as String?,
       vaccineGroup: freezed == vaccineGroup
           ? _value.vaccineGroup
           : vaccineGroup // ignore: cast_nullable_to_non_nullable
-              as VaccineGroupName?,
+              as String?,
       seriesAdminGuidance: freezed == seriesAdminGuidance
           ? _value._seriesAdminGuidance
           : seriesAdminGuidance // ignore: cast_nullable_to_non_nullable
@@ -252,9 +252,9 @@ class _$_Series extends _Series {
   @override
   final String? seriesName;
   @override
-  final TargetDisease? targetDisease;
+  final String? targetDisease;
   @override
-  final VaccineGroupName? vaccineGroup;
+  final String? vaccineGroup;
   final List<String>? _seriesAdminGuidance;
   @override
   List<String>? get seriesAdminGuidance {
@@ -366,8 +366,8 @@ class _$_Series extends _Series {
 abstract class _Series extends Series {
   factory _Series(
       {final String? seriesName,
-      final TargetDisease? targetDisease,
-      final VaccineGroupName? vaccineGroup,
+      final String? targetDisease,
+      final String? vaccineGroup,
       final List<String>? seriesAdminGuidance,
       final SeriesType? seriesType,
       final EquivalentSeriesGroups? equivalentSeriesGroups,
@@ -382,9 +382,9 @@ abstract class _Series extends Series {
   @override
   String? get seriesName;
   @override
-  TargetDisease? get targetDisease;
+  String? get targetDisease;
   @override
-  VaccineGroupName? get vaccineGroup;
+  String? get vaccineGroup;
   @override
   List<String>? get seriesAdminGuidance;
   @override

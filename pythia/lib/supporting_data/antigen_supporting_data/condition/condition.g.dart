@@ -23,21 +23,30 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
       seriesGroups: json['seriesGroups'] as String?,
     );
 
-Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) =>
-    <String, dynamic>{
-      'conditionID': instance.conditionID,
-      'conditionType': _$ConditionTypeEnumMap[instance.conditionType],
-      'startDate': instance.startDate,
-      'endDate': instance.endDate,
-      'beginAge': instance.beginAge,
-      'endAge': instance.endAge,
-      'interval': instance.interval,
-      'doseCount': instance.doseCount,
-      'doseType': _$DoseTypeEnumMap[instance.doseType],
-      'doseCountLogic': _$DoseCountLogicEnumMap[instance.doseCountLogic],
-      'vaccineTypes': instance.vaccineTypes,
-      'seriesGroups': instance.seriesGroups,
-    };
+Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('conditionID', instance.conditionID);
+  writeNotNull('conditionType', _$ConditionTypeEnumMap[instance.conditionType]);
+  writeNotNull('startDate', instance.startDate);
+  writeNotNull('endDate', instance.endDate);
+  writeNotNull('beginAge', instance.beginAge);
+  writeNotNull('endAge', instance.endAge);
+  writeNotNull('interval', instance.interval);
+  writeNotNull('doseCount', instance.doseCount);
+  writeNotNull('doseType', _$DoseTypeEnumMap[instance.doseType]);
+  writeNotNull(
+      'doseCountLogic', _$DoseCountLogicEnumMap[instance.doseCountLogic]);
+  writeNotNull('vaccineTypes', instance.vaccineTypes);
+  writeNotNull('seriesGroups', instance.seriesGroups);
+  return val;
+}
 
 const _$ConditionTypeEnumMap = {
   ConditionType.age: 'Age',

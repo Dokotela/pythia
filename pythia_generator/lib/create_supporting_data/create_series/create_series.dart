@@ -20,11 +20,9 @@ Series createSeries(String? seriesString) {
       if (row[0]!.toString().contains('Series Name')) {
         newSeries = newSeries.copyWith(seriesName: valueToString(row[1]!));
       } else if (row[0]!.toString().contains('Target Disease')) {
-        newSeries = newSeries.copyWith(
-            targetDisease: targetDiseaseStringToEnum[valueToString(row[1]!)]);
+        newSeries = newSeries.copyWith(targetDisease: valueToString(row[1]!));
       } else if (row[0]!.toString().contains('Vaccine Group')) {
-        newSeries = newSeries.copyWith(
-            vaccineGroup: vaccineGroupNameStringToEnum[valueToString(row[1]!)]);
+        newSeries = newSeries.copyWith(vaccineGroup: valueToString(row[1]!));
       } else if (row[0]!.toString().contains('Administrative Guidance') &&
           row[1]?.toString() != 'Text') {
         if (!row[1]!.toString().contains('n/a')) {

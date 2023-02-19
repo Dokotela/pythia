@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../pythia.dart';
-
 part 'vaccine_group_to_antigen_map.freezed.dart';
 part 'vaccine_group_to_antigen_map.g.dart';
 
@@ -20,8 +18,8 @@ class VaccineGroupToAntigenMap with _$VaccineGroupToAntigenMap {
 class VaccineGroupMap with _$VaccineGroupMap {
   VaccineGroupMap._();
   factory VaccineGroupMap({
-    VaccineGroupName? name,
-    List<TargetDisease>? antigen,
+    String? name,
+    List<String>? antigen,
   }) = _VaccineGroupMap;
 
   factory VaccineGroupMap.fromJson(Map<String, dynamic> json) =>

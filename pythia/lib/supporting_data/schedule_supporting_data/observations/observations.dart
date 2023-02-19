@@ -18,7 +18,7 @@ class Observations with _$Observations {
 class Observation with _$Observation {
   Observation._();
   factory Observation({
-    int? observationCode,
+    String? observationCode,
     String? observationTitle,
     String? group,
     String? indicationText,

@@ -101,7 +101,7 @@ Contraindications? contraindications(String? contraindicationString) {
             .add(
           Vaccine(
             vaccineType: text,
-            cvx: cvxStringToEnumMap[code],
+            cvx: code!,
             beginAge: i[5]!.toString() == 'n/a' ? null : valueToString(i[5]!),
             endAge: i[6]!.toString() == 'n/a' ? null : valueToString(i[6]!),
           ),

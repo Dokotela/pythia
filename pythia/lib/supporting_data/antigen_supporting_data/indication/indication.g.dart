@@ -18,11 +18,19 @@ _$_Indication _$$_IndicationFromJson(Map<String, dynamic> json) =>
       guidance: json['guidance'] as String?,
     );
 
-Map<String, dynamic> _$$_IndicationToJson(_$_Indication instance) =>
-    <String, dynamic>{
-      'observationCode': instance.observationCode,
-      'description': instance.description,
-      'beginAge': instance.beginAge,
-      'endAge': instance.endAge,
-      'guidance': instance.guidance,
-    };
+Map<String, dynamic> _$$_IndicationToJson(_$_Indication instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('observationCode', instance.observationCode?.toJson());
+  writeNotNull('description', instance.description);
+  writeNotNull('beginAge', instance.beginAge);
+  writeNotNull('endAge', instance.endAge);
+  writeNotNull('guidance', instance.guidance);
+  return val;
+}

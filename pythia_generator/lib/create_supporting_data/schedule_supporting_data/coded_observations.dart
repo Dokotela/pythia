@@ -23,7 +23,7 @@ Observations observations(String? data) {
                     i[0].toString() == '' ||
                     i[0].toString() == 'n/a'
                 ? null
-                : int.parse(i[0].toString().padLeft(3, '0')),
+                : i[0].toString().padLeft(3, '0'),
             'observationTitle': i.length < 2 ||
                     i[1] == null ||
                     i[1].toString() == '' ||
@@ -98,15 +98,16 @@ List<CodedValue> codedValueList(String codeString, int column) {
   var tempList = codeString.split(';');
   for (var value in tempList) {
     if (value.length > 0) {
-      final index = value.indexOf('(');
+      final openingIndex = value.indexOf('(');
+      final closingIndex = value.indexOf(')');
       codedValueList.add(CodedValue(
-        code: value.substring(index + 1, value.length - 1),
+        code: value.substring(openingIndex + 1, closingIndex),
         codeSystem: column == 5
             ? 'SNOMED'
             : column == 6
                 ? 'CVX'
                 : 'CDCPHINVS',
-        text: value.substring(0, index - 1),
+        text: value.substring(0, openingIndex - 1).trim(),
       ));
     }
   }

@@ -19,8 +19,16 @@ _$_Contraindications _$$_ContraindicationsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$_ContraindicationsToJson(
-        _$_Contraindications instance) =>
-    <String, dynamic>{
-      'vaccineGroup': instance.vaccineGroup,
-      'vaccine': instance.vaccine,
-    };
+    _$_Contraindications instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('vaccineGroup', instance.vaccineGroup?.toJson());
+  writeNotNull('vaccine', instance.vaccine?.toJson());
+  return val;
+}

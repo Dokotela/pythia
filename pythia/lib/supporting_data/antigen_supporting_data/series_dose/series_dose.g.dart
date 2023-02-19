@@ -39,19 +39,32 @@ _$_SeriesDose _$$_SeriesDoseFromJson(Map<String, dynamic> json) =>
               json['seasonalRecommendation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SeriesDoseToJson(_$_SeriesDose instance) =>
-    <String, dynamic>{
-      'doseNumber': _$DoseNumberEnumMap[instance.doseNumber],
-      'age': instance.age,
-      'interval': instance.interval,
-      'allowableInterval': instance.allowableInterval,
-      'preferableVaccine': instance.preferableVaccine,
-      'allowableVaccine': instance.allowableVaccine,
-      'inadvertentVaccine': instance.inadvertentVaccine,
-      'conditionalSkip': instance.conditionalSkip,
-      'recurringDose': _$BinaryEnumMap[instance.recurringDose],
-      'seasonalRecommendation': instance.seasonalRecommendation,
-    };
+Map<String, dynamic> _$$_SeriesDoseToJson(_$_SeriesDose instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('doseNumber', _$DoseNumberEnumMap[instance.doseNumber]);
+  writeNotNull('age', instance.age?.map((e) => e.toJson()).toList());
+  writeNotNull('interval', instance.interval?.map((e) => e.toJson()).toList());
+  writeNotNull('allowableInterval', instance.allowableInterval?.toJson());
+  writeNotNull('preferableVaccine',
+      instance.preferableVaccine?.map((e) => e.toJson()).toList());
+  writeNotNull('allowableVaccine',
+      instance.allowableVaccine?.map((e) => e.toJson()).toList());
+  writeNotNull('inadvertentVaccine',
+      instance.inadvertentVaccine?.map((e) => e.toJson()).toList());
+  writeNotNull('conditionalSkip',
+      instance.conditionalSkip?.map((e) => e.toJson()).toList());
+  writeNotNull('recurringDose', _$BinaryEnumMap[instance.recurringDose]);
+  writeNotNull(
+      'seasonalRecommendation', instance.seasonalRecommendation?.toJson());
+  return val;
+}
 
 const _$DoseNumberEnumMap = {
   DoseNumber.num1: 'Dose 1',

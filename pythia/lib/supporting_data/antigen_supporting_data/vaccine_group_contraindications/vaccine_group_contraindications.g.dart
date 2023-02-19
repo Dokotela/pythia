@@ -16,10 +16,19 @@ _$_VaccineGroupContraindications _$$_VaccineGroupContraindicationsFromJson(
     );
 
 Map<String, dynamic> _$$_VaccineGroupContraindicationsToJson(
-        _$_VaccineGroupContraindications instance) =>
-    <String, dynamic>{
-      'contraindication': instance.contraindication,
-    };
+    _$_VaccineGroupContraindications instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('contraindication',
+      instance.contraindication?.map((e) => e.toJson()).toList());
+  return val;
+}
 
 _$_GroupContraindication _$$_GroupContraindicationFromJson(
         Map<String, dynamic> json) =>
@@ -33,12 +42,20 @@ _$_GroupContraindication _$$_GroupContraindicationFromJson(
     );
 
 Map<String, dynamic> _$$_GroupContraindicationToJson(
-        _$_GroupContraindication instance) =>
-    <String, dynamic>{
-      'observationCode': instance.observationCode,
-      'observationTitle': instance.observationTitle,
-      'contraindicationText': instance.contraindicationText,
-      'contraindicationGuidance': instance.contraindicationGuidance,
-      'beginAge': instance.beginAge,
-      'endAge': instance.endAge,
-    };
+    _$_GroupContraindication instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('observationCode', instance.observationCode);
+  writeNotNull('observationTitle', instance.observationTitle);
+  writeNotNull('contraindicationText', instance.contraindicationText);
+  writeNotNull('contraindicationGuidance', instance.contraindicationGuidance);
+  writeNotNull('beginAge', instance.beginAge);
+  writeNotNull('endAge', instance.endAge);
+  return val;
+}

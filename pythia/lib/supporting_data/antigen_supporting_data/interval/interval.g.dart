@@ -25,20 +25,28 @@ _$_Interval _$$_IntervalFromJson(Map<String, dynamic> json) => _$_Interval(
       cessationDate: json['cessationDate'] as String?,
     );
 
-Map<String, dynamic> _$$_IntervalToJson(_$_Interval instance) =>
-    <String, dynamic>{
-      'fromPrevious': _$FromPreviousEnumMap[instance.fromPrevious],
-      'fromTargetDose': _$FromTargetEnumMap[instance.fromTargetDose],
-      'fromMostRecent': instance.fromMostRecent,
-      'fromRelevantObs': instance.fromRelevantObs,
-      'absMinInt': instance.absMinInt,
-      'minInt': instance.minInt,
-      'earliestRecInt': instance.earliestRecInt,
-      'latestRecInt': instance.latestRecInt,
-      'intervalPriority': instance.intervalPriority,
-      'effectiveDate': instance.effectiveDate,
-      'cessationDate': instance.cessationDate,
-    };
+Map<String, dynamic> _$$_IntervalToJson(_$_Interval instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('fromPrevious', _$FromPreviousEnumMap[instance.fromPrevious]);
+  writeNotNull('fromTargetDose', _$FromTargetEnumMap[instance.fromTargetDose]);
+  writeNotNull('fromMostRecent', instance.fromMostRecent);
+  writeNotNull('fromRelevantObs', instance.fromRelevantObs?.toJson());
+  writeNotNull('absMinInt', instance.absMinInt);
+  writeNotNull('minInt', instance.minInt);
+  writeNotNull('earliestRecInt', instance.earliestRecInt);
+  writeNotNull('latestRecInt', instance.latestRecInt);
+  writeNotNull('intervalPriority', instance.intervalPriority);
+  writeNotNull('effectiveDate', instance.effectiveDate);
+  writeNotNull('cessationDate', instance.cessationDate);
+  return val;
+}
 
 const _$FromPreviousEnumMap = {
   FromPrevious.yes: 'Y',

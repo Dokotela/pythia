@@ -11,9 +11,6 @@ String? enumToString(Enum? value) {
     case ConditionType:
       return conditionTypeEnumToString[value];
 
-    case Cvx:
-      return cvxEnumToStringMap[value];
-
     case DoseCountLogic:
       return doseCountLogicEnumToString[value];
 
@@ -52,12 +49,6 @@ String? enumToString(Enum? value) {
 
     case SkipContext:
       return skipContextEnumToString[value];
-
-    case TargetDisease:
-      return targetDiseaseEnumToString[value];
-
-    case VaccineGroupName:
-      return vaccineGroupNameEnumToString[value];
 
     default:
       return value.toString().split('.').last;

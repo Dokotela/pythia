@@ -176,8 +176,8 @@ VaccineGroupMap _$VaccineGroupMapFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$VaccineGroupMap {
-  VaccineGroupName? get name => throw _privateConstructorUsedError;
-  List<TargetDisease>? get antigen => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  List<String>? get antigen => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -191,7 +191,7 @@ abstract class $VaccineGroupMapCopyWith<$Res> {
           VaccineGroupMap value, $Res Function(VaccineGroupMap) then) =
       _$VaccineGroupMapCopyWithImpl<$Res, VaccineGroupMap>;
   @useResult
-  $Res call({VaccineGroupName? name, List<TargetDisease>? antigen});
+  $Res call({String? name, List<String>? antigen});
 }
 
 /// @nodoc
@@ -214,11 +214,11 @@ class _$VaccineGroupMapCopyWithImpl<$Res, $Val extends VaccineGroupMap>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as VaccineGroupName?,
+              as String?,
       antigen: freezed == antigen
           ? _value.antigen
           : antigen // ignore: cast_nullable_to_non_nullable
-              as List<TargetDisease>?,
+              as List<String>?,
     ) as $Val);
   }
 }
@@ -231,7 +231,7 @@ abstract class _$$_VaccineGroupMapCopyWith<$Res>
       __$$_VaccineGroupMapCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({VaccineGroupName? name, List<TargetDisease>? antigen});
+  $Res call({String? name, List<String>? antigen});
 }
 
 /// @nodoc
@@ -252,11 +252,11 @@ class __$$_VaccineGroupMapCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as VaccineGroupName?,
+              as String?,
       antigen: freezed == antigen
           ? _value._antigen
           : antigen // ignore: cast_nullable_to_non_nullable
-              as List<TargetDisease>?,
+              as List<String>?,
     ));
   }
 }
@@ -264,7 +264,7 @@ class __$$_VaccineGroupMapCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_VaccineGroupMap extends _VaccineGroupMap {
-  _$_VaccineGroupMap({this.name, final List<TargetDisease>? antigen})
+  _$_VaccineGroupMap({this.name, final List<String>? antigen})
       : _antigen = antigen,
         super._();
 
@@ -272,10 +272,10 @@ class _$_VaccineGroupMap extends _VaccineGroupMap {
       _$$_VaccineGroupMapFromJson(json);
 
   @override
-  final VaccineGroupName? name;
-  final List<TargetDisease>? _antigen;
+  final String? name;
+  final List<String>? _antigen;
   @override
-  List<TargetDisease>? get antigen {
+  List<String>? get antigen {
     final value = _antigen;
     if (value == null) return null;
     if (_antigen is EqualUnmodifiableListView) return _antigen;
@@ -317,18 +317,17 @@ class _$_VaccineGroupMap extends _VaccineGroupMap {
 }
 
 abstract class _VaccineGroupMap extends VaccineGroupMap {
-  factory _VaccineGroupMap(
-      {final VaccineGroupName? name,
-      final List<TargetDisease>? antigen}) = _$_VaccineGroupMap;
+  factory _VaccineGroupMap({final String? name, final List<String>? antigen}) =
+      _$_VaccineGroupMap;
   _VaccineGroupMap._() : super._();
 
   factory _VaccineGroupMap.fromJson(Map<String, dynamic> json) =
       _$_VaccineGroupMap.fromJson;
 
   @override
-  VaccineGroupName? get name;
+  String? get name;
   @override
-  List<TargetDisease>? get antigen;
+  List<String>? get antigen;
   @override
   @JsonKey(ignore: true)
   _$$_VaccineGroupMapCopyWith<_$_VaccineGroupMap> get copyWith =>
