@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../pythia.dart';
-
 part 'observations.freezed.dart';
 part 'observations.g.dart';
 

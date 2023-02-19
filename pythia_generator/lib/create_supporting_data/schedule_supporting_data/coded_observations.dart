@@ -2,7 +2,7 @@ import 'package:csv/csv.dart';
 import 'package:pythia/pythia.dart';
 
 Observations observations(String? data) {
-  final observations = Observations(observation: []);
+  var observations = Observations(observation: []);
   if (data == null) {
     return observations;
   }
@@ -12,7 +12,10 @@ Observations observations(String? data) {
 
   for (var i in supportingData) {
     if (i[0].toString() != 'Observation Code') {
-      observations.observation!.add(
+      observations = observations.copyWith(observation: [
+        if (observations.observation != null &&
+            observations.observation!.isNotEmpty)
+          ...observations.observation!,
         Observation.fromJson(
           {
             'observationCode': i.length < 1 ||
@@ -20,7 +23,7 @@ Observations observations(String? data) {
                     i[0].toString() == '' ||
                     i[0].toString() == 'n/a'
                 ? null
-                : i[0].toString().padLeft(3, '0'),
+                : int.parse(i[0].toString().padLeft(3, '0')),
             'observationTitle': i.length < 2 ||
                     i[1] == null ||
                     i[1].toString() == '' ||
@@ -47,7 +50,7 @@ Observations observations(String? data) {
                 : i[4].toString(),
           },
         ),
-      );
+      ]);
 
       if ((i.length > 5 &&
               i[5] != null &&
@@ -62,15 +65,26 @@ Observations observations(String? data) {
               i[7].toString() != '' &&
               i[7].toString() != 'n/a')) {
         if (observations.observation!.last.codedValues == null) {
-          observations.observation!.last = observations.observation!.last
-              .copyWith(codedValues: CodedValues(codedValue: []));
+          observations = observations.copyWith(observation: [
+            ...observations.observation!
+                .sublist(0, observations.observation!.length - 1),
+            observations.observation!.last
+                .copyWith(codedValues: CodedValues(codedValue: [])),
+          ]);
         }
         for (var j in [5, 6, 7]) {
           if (i[j] != null &&
               i[j].toString() != '' &&
-              i[j].toString() != 'n/a') {
-            observations.observation?.last.codedValues?.codedValue
-                ?.addAll(codedValueList(i[j].toString(), j));
+              i[j].toString() != 'n/a' &&
+              observations.observation?.last.codedValues?.codedValue != null) {
+            observations = observations.copyWith(observation: [
+              ...observations.observation!
+                  .sublist(0, observations.observation!.length - 1),
+              observations.observation!.last.copyWith.codedValues!(codedValue: [
+                ...observations.observation!.last.codedValues!.codedValue!,
+                ...codedValueList(i[j].toString(), j)
+              ])
+            ]);
           }
         }
       }
