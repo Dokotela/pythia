@@ -14,16 +14,8 @@ _$_SeasonalRecommendation _$$_SeasonalRecommendationFromJson(
     );
 
 Map<String, dynamic> _$$_SeasonalRecommendationToJson(
-    _$_SeasonalRecommendation instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('startDate', instance.startDate);
-  writeNotNull('endDate', instance.endDate);
-  return val;
-}
+        _$_SeasonalRecommendation instance) =>
+    <String, dynamic>{
+      'startDate': instance.startDate,
+      'endDate': instance.endDate,
+    };

@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'series.dart';
 
@@ -11,48 +12,11 @@ part of 'series.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Series _$SeriesFromJson(Map<String, dynamic> json) {
   return _Series.fromJson(json);
 }
-
-/// @nodoc
-class _$SeriesTearOff {
-  const _$SeriesTearOff();
-
-  _Series call(
-      {String? seriesName,
-      TargetDisease? targetDisease,
-      VaccineGroupName? vaccineGroup,
-      List<String>? seriesAdminGuidance,
-      SeriesType? seriesType,
-      EquivalentSeriesGroups? equivalentSeriesGroups,
-      List<Gender>? requiredGender,
-      SelectSeries? selectSeries,
-      List<Indication>? indication,
-      List<SeriesDose>? seriesDose}) {
-    return _Series(
-      seriesName: seriesName,
-      targetDisease: targetDisease,
-      vaccineGroup: vaccineGroup,
-      seriesAdminGuidance: seriesAdminGuidance,
-      seriesType: seriesType,
-      equivalentSeriesGroups: equivalentSeriesGroups,
-      requiredGender: requiredGender,
-      selectSeries: selectSeries,
-      indication: indication,
-      seriesDose: seriesDose,
-    );
-  }
-
-  Series fromJson(Map<String, Object> json) {
-    return Series.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Series = _$SeriesTearOff();
 
 /// @nodoc
 mixin _$Series {
@@ -76,7 +40,8 @@ mixin _$Series {
 /// @nodoc
 abstract class $SeriesCopyWith<$Res> {
   factory $SeriesCopyWith(Series value, $Res Function(Series) then) =
-      _$SeriesCopyWithImpl<$Res>;
+      _$SeriesCopyWithImpl<$Res, Series>;
+  @useResult
   $Res call(
       {String? seriesName,
       TargetDisease? targetDisease,
@@ -93,13 +58,16 @@ abstract class $SeriesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SeriesCopyWithImpl<$Res> implements $SeriesCopyWith<$Res> {
+class _$SeriesCopyWithImpl<$Res, $Val extends Series>
+    implements $SeriesCopyWith<$Res> {
   _$SeriesCopyWithImpl(this._value, this._then);
 
-  final Series _value;
   // ignore: unused_field
-  final $Res Function(Series) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? seriesName = freezed,
@@ -114,66 +82,68 @@ class _$SeriesCopyWithImpl<$Res> implements $SeriesCopyWith<$Res> {
     Object? seriesDose = freezed,
   }) {
     return _then(_value.copyWith(
-      seriesName: seriesName == freezed
+      seriesName: freezed == seriesName
           ? _value.seriesName
           : seriesName // ignore: cast_nullable_to_non_nullable
               as String?,
-      targetDisease: targetDisease == freezed
+      targetDisease: freezed == targetDisease
           ? _value.targetDisease
           : targetDisease // ignore: cast_nullable_to_non_nullable
               as TargetDisease?,
-      vaccineGroup: vaccineGroup == freezed
+      vaccineGroup: freezed == vaccineGroup
           ? _value.vaccineGroup
           : vaccineGroup // ignore: cast_nullable_to_non_nullable
               as VaccineGroupName?,
-      seriesAdminGuidance: seriesAdminGuidance == freezed
+      seriesAdminGuidance: freezed == seriesAdminGuidance
           ? _value.seriesAdminGuidance
           : seriesAdminGuidance // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      seriesType: seriesType == freezed
+      seriesType: freezed == seriesType
           ? _value.seriesType
           : seriesType // ignore: cast_nullable_to_non_nullable
               as SeriesType?,
-      equivalentSeriesGroups: equivalentSeriesGroups == freezed
+      equivalentSeriesGroups: freezed == equivalentSeriesGroups
           ? _value.equivalentSeriesGroups
           : equivalentSeriesGroups // ignore: cast_nullable_to_non_nullable
               as EquivalentSeriesGroups?,
-      requiredGender: requiredGender == freezed
+      requiredGender: freezed == requiredGender
           ? _value.requiredGender
           : requiredGender // ignore: cast_nullable_to_non_nullable
               as List<Gender>?,
-      selectSeries: selectSeries == freezed
+      selectSeries: freezed == selectSeries
           ? _value.selectSeries
           : selectSeries // ignore: cast_nullable_to_non_nullable
               as SelectSeries?,
-      indication: indication == freezed
+      indication: freezed == indication
           ? _value.indication
           : indication // ignore: cast_nullable_to_non_nullable
               as List<Indication>?,
-      seriesDose: seriesDose == freezed
+      seriesDose: freezed == seriesDose
           ? _value.seriesDose
           : seriesDose // ignore: cast_nullable_to_non_nullable
               as List<SeriesDose>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SelectSeriesCopyWith<$Res>? get selectSeries {
     if (_value.selectSeries == null) {
       return null;
     }
 
     return $SelectSeriesCopyWith<$Res>(_value.selectSeries!, (value) {
-      return _then(_value.copyWith(selectSeries: value));
+      return _then(_value.copyWith(selectSeries: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SeriesCopyWith<$Res> implements $SeriesCopyWith<$Res> {
-  factory _$SeriesCopyWith(_Series value, $Res Function(_Series) then) =
-      __$SeriesCopyWithImpl<$Res>;
+abstract class _$$_SeriesCopyWith<$Res> implements $SeriesCopyWith<$Res> {
+  factory _$$_SeriesCopyWith(_$_Series value, $Res Function(_$_Series) then) =
+      __$$_SeriesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? seriesName,
       TargetDisease? targetDisease,
@@ -191,14 +161,13 @@ abstract class _$SeriesCopyWith<$Res> implements $SeriesCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$SeriesCopyWithImpl<$Res> extends _$SeriesCopyWithImpl<$Res>
-    implements _$SeriesCopyWith<$Res> {
-  __$SeriesCopyWithImpl(_Series _value, $Res Function(_Series) _then)
-      : super(_value, (v) => _then(v as _Series));
+class __$$_SeriesCopyWithImpl<$Res>
+    extends _$SeriesCopyWithImpl<$Res, _$_Series>
+    implements _$$_SeriesCopyWith<$Res> {
+  __$$_SeriesCopyWithImpl(_$_Series _value, $Res Function(_$_Series) _then)
+      : super(_value, _then);
 
-  @override
-  _Series get _value => super._value as _Series;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? seriesName = freezed,
@@ -212,45 +181,45 @@ class __$SeriesCopyWithImpl<$Res> extends _$SeriesCopyWithImpl<$Res>
     Object? indication = freezed,
     Object? seriesDose = freezed,
   }) {
-    return _then(_Series(
-      seriesName: seriesName == freezed
+    return _then(_$_Series(
+      seriesName: freezed == seriesName
           ? _value.seriesName
           : seriesName // ignore: cast_nullable_to_non_nullable
               as String?,
-      targetDisease: targetDisease == freezed
+      targetDisease: freezed == targetDisease
           ? _value.targetDisease
           : targetDisease // ignore: cast_nullable_to_non_nullable
               as TargetDisease?,
-      vaccineGroup: vaccineGroup == freezed
+      vaccineGroup: freezed == vaccineGroup
           ? _value.vaccineGroup
           : vaccineGroup // ignore: cast_nullable_to_non_nullable
               as VaccineGroupName?,
-      seriesAdminGuidance: seriesAdminGuidance == freezed
-          ? _value.seriesAdminGuidance
+      seriesAdminGuidance: freezed == seriesAdminGuidance
+          ? _value._seriesAdminGuidance
           : seriesAdminGuidance // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      seriesType: seriesType == freezed
+      seriesType: freezed == seriesType
           ? _value.seriesType
           : seriesType // ignore: cast_nullable_to_non_nullable
               as SeriesType?,
-      equivalentSeriesGroups: equivalentSeriesGroups == freezed
+      equivalentSeriesGroups: freezed == equivalentSeriesGroups
           ? _value.equivalentSeriesGroups
           : equivalentSeriesGroups // ignore: cast_nullable_to_non_nullable
               as EquivalentSeriesGroups?,
-      requiredGender: requiredGender == freezed
-          ? _value.requiredGender
+      requiredGender: freezed == requiredGender
+          ? _value._requiredGender
           : requiredGender // ignore: cast_nullable_to_non_nullable
               as List<Gender>?,
-      selectSeries: selectSeries == freezed
+      selectSeries: freezed == selectSeries
           ? _value.selectSeries
           : selectSeries // ignore: cast_nullable_to_non_nullable
               as SelectSeries?,
-      indication: indication == freezed
-          ? _value.indication
+      indication: freezed == indication
+          ? _value._indication
           : indication // ignore: cast_nullable_to_non_nullable
               as List<Indication>?,
-      seriesDose: seriesDose == freezed
-          ? _value.seriesDose
+      seriesDose: freezed == seriesDose
+          ? _value._seriesDose
           : seriesDose // ignore: cast_nullable_to_non_nullable
               as List<SeriesDose>?,
     ));
@@ -264,14 +233,18 @@ class _$_Series extends _Series {
       {this.seriesName,
       this.targetDisease,
       this.vaccineGroup,
-      this.seriesAdminGuidance,
+      final List<String>? seriesAdminGuidance,
       this.seriesType,
       this.equivalentSeriesGroups,
-      this.requiredGender,
+      final List<Gender>? requiredGender,
       this.selectSeries,
-      this.indication,
-      this.seriesDose})
-      : super._();
+      final List<Indication>? indication,
+      final List<SeriesDose>? seriesDose})
+      : _seriesAdminGuidance = seriesAdminGuidance,
+        _requiredGender = requiredGender,
+        _indication = indication,
+        _seriesDose = seriesDose,
+        super._();
 
   factory _$_Series.fromJson(Map<String, dynamic> json) =>
       _$$_SeriesFromJson(json);
@@ -282,20 +255,52 @@ class _$_Series extends _Series {
   final TargetDisease? targetDisease;
   @override
   final VaccineGroupName? vaccineGroup;
+  final List<String>? _seriesAdminGuidance;
   @override
-  final List<String>? seriesAdminGuidance;
+  List<String>? get seriesAdminGuidance {
+    final value = _seriesAdminGuidance;
+    if (value == null) return null;
+    if (_seriesAdminGuidance is EqualUnmodifiableListView)
+      return _seriesAdminGuidance;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final SeriesType? seriesType;
   @override
   final EquivalentSeriesGroups? equivalentSeriesGroups;
+  final List<Gender>? _requiredGender;
   @override
-  final List<Gender>? requiredGender;
+  List<Gender>? get requiredGender {
+    final value = _requiredGender;
+    if (value == null) return null;
+    if (_requiredGender is EqualUnmodifiableListView) return _requiredGender;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final SelectSeries? selectSeries;
+  final List<Indication>? _indication;
   @override
-  final List<Indication>? indication;
+  List<Indication>? get indication {
+    final value = _indication;
+    if (value == null) return null;
+    if (_indication is EqualUnmodifiableListView) return _indication;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SeriesDose>? _seriesDose;
   @override
-  final List<SeriesDose>? seriesDose;
+  List<SeriesDose>? get seriesDose {
+    final value = _seriesDose;
+    if (value == null) return null;
+    if (_seriesDose is EqualUnmodifiableListView) return _seriesDose;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -305,102 +310,97 @@ class _$_Series extends _Series {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Series &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Series &&
             (identical(other.seriesName, seriesName) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesName, seriesName)) &&
+                other.seriesName == seriesName) &&
             (identical(other.targetDisease, targetDisease) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetDisease, targetDisease)) &&
+                other.targetDisease == targetDisease) &&
             (identical(other.vaccineGroup, vaccineGroup) ||
-                const DeepCollectionEquality()
-                    .equals(other.vaccineGroup, vaccineGroup)) &&
-            (identical(other.seriesAdminGuidance, seriesAdminGuidance) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesAdminGuidance, seriesAdminGuidance)) &&
+                other.vaccineGroup == vaccineGroup) &&
+            const DeepCollectionEquality()
+                .equals(other._seriesAdminGuidance, _seriesAdminGuidance) &&
             (identical(other.seriesType, seriesType) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesType, seriesType)) &&
+                other.seriesType == seriesType) &&
             (identical(other.equivalentSeriesGroups, equivalentSeriesGroups) ||
-                const DeepCollectionEquality().equals(
-                    other.equivalentSeriesGroups, equivalentSeriesGroups)) &&
-            (identical(other.requiredGender, requiredGender) ||
-                const DeepCollectionEquality()
-                    .equals(other.requiredGender, requiredGender)) &&
+                other.equivalentSeriesGroups == equivalentSeriesGroups) &&
+            const DeepCollectionEquality()
+                .equals(other._requiredGender, _requiredGender) &&
             (identical(other.selectSeries, selectSeries) ||
-                const DeepCollectionEquality()
-                    .equals(other.selectSeries, selectSeries)) &&
-            (identical(other.indication, indication) ||
-                const DeepCollectionEquality()
-                    .equals(other.indication, indication)) &&
-            (identical(other.seriesDose, seriesDose) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesDose, seriesDose)));
+                other.selectSeries == selectSeries) &&
+            const DeepCollectionEquality()
+                .equals(other._indication, _indication) &&
+            const DeepCollectionEquality()
+                .equals(other._seriesDose, _seriesDose));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(seriesName) ^
-      const DeepCollectionEquality().hash(targetDisease) ^
-      const DeepCollectionEquality().hash(vaccineGroup) ^
-      const DeepCollectionEquality().hash(seriesAdminGuidance) ^
-      const DeepCollectionEquality().hash(seriesType) ^
-      const DeepCollectionEquality().hash(equivalentSeriesGroups) ^
-      const DeepCollectionEquality().hash(requiredGender) ^
-      const DeepCollectionEquality().hash(selectSeries) ^
-      const DeepCollectionEquality().hash(indication) ^
-      const DeepCollectionEquality().hash(seriesDose);
 
   @JsonKey(ignore: true)
   @override
-  _$SeriesCopyWith<_Series> get copyWith =>
-      __$SeriesCopyWithImpl<_Series>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      seriesName,
+      targetDisease,
+      vaccineGroup,
+      const DeepCollectionEquality().hash(_seriesAdminGuidance),
+      seriesType,
+      equivalentSeriesGroups,
+      const DeepCollectionEquality().hash(_requiredGender),
+      selectSeries,
+      const DeepCollectionEquality().hash(_indication),
+      const DeepCollectionEquality().hash(_seriesDose));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SeriesCopyWith<_$_Series> get copyWith =>
+      __$$_SeriesCopyWithImpl<_$_Series>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SeriesToJson(this);
+    return _$$_SeriesToJson(
+      this,
+    );
   }
 }
 
 abstract class _Series extends Series {
   factory _Series(
-      {String? seriesName,
-      TargetDisease? targetDisease,
-      VaccineGroupName? vaccineGroup,
-      List<String>? seriesAdminGuidance,
-      SeriesType? seriesType,
-      EquivalentSeriesGroups? equivalentSeriesGroups,
-      List<Gender>? requiredGender,
-      SelectSeries? selectSeries,
-      List<Indication>? indication,
-      List<SeriesDose>? seriesDose}) = _$_Series;
+      {final String? seriesName,
+      final TargetDisease? targetDisease,
+      final VaccineGroupName? vaccineGroup,
+      final List<String>? seriesAdminGuidance,
+      final SeriesType? seriesType,
+      final EquivalentSeriesGroups? equivalentSeriesGroups,
+      final List<Gender>? requiredGender,
+      final SelectSeries? selectSeries,
+      final List<Indication>? indication,
+      final List<SeriesDose>? seriesDose}) = _$_Series;
   _Series._() : super._();
 
   factory _Series.fromJson(Map<String, dynamic> json) = _$_Series.fromJson;
 
   @override
-  String? get seriesName => throw _privateConstructorUsedError;
+  String? get seriesName;
   @override
-  TargetDisease? get targetDisease => throw _privateConstructorUsedError;
+  TargetDisease? get targetDisease;
   @override
-  VaccineGroupName? get vaccineGroup => throw _privateConstructorUsedError;
+  VaccineGroupName? get vaccineGroup;
   @override
-  List<String>? get seriesAdminGuidance => throw _privateConstructorUsedError;
+  List<String>? get seriesAdminGuidance;
   @override
-  SeriesType? get seriesType => throw _privateConstructorUsedError;
+  SeriesType? get seriesType;
   @override
-  EquivalentSeriesGroups? get equivalentSeriesGroups =>
-      throw _privateConstructorUsedError;
+  EquivalentSeriesGroups? get equivalentSeriesGroups;
   @override
-  List<Gender>? get requiredGender => throw _privateConstructorUsedError;
+  List<Gender>? get requiredGender;
   @override
-  SelectSeries? get selectSeries => throw _privateConstructorUsedError;
+  SelectSeries? get selectSeries;
   @override
-  List<Indication>? get indication => throw _privateConstructorUsedError;
+  List<Indication>? get indication;
   @override
-  List<SeriesDose>? get seriesDose => throw _privateConstructorUsedError;
+  List<SeriesDose>? get seriesDose;
   @override
   @JsonKey(ignore: true)
-  _$SeriesCopyWith<_Series> get copyWith => throw _privateConstructorUsedError;
+  _$$_SeriesCopyWith<_$_Series> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -9,17 +9,17 @@ part of 'series.dart';
 _$_Series _$$_SeriesFromJson(Map<String, dynamic> json) => _$_Series(
       seriesName: json['seriesName'] as String?,
       targetDisease:
-          _$enumDecodeNullable(_$TargetDiseaseEnumMap, json['targetDisease']),
+          $enumDecodeNullable(_$TargetDiseaseEnumMap, json['targetDisease']),
       vaccineGroup:
-          _$enumDecodeNullable(_$VaccineGroupNameEnumMap, json['vaccineGroup']),
+          $enumDecodeNullable(_$VaccineGroupNameEnumMap, json['vaccineGroup']),
       seriesAdminGuidance: (json['seriesAdminGuidance'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      seriesType: _$enumDecodeNullable(_$SeriesTypeEnumMap, json['seriesType']),
-      equivalentSeriesGroups: _$enumDecodeNullable(
+      seriesType: $enumDecodeNullable(_$SeriesTypeEnumMap, json['seriesType']),
+      equivalentSeriesGroups: $enumDecodeNullable(
           _$EquivalentSeriesGroupsEnumMap, json['equivalentSeriesGroups']),
       requiredGender: (json['requiredGender'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$GenderEnumMap, e))
+          ?.map((e) => $enumDecode(_$GenderEnumMap, e))
           .toList(),
       selectSeries: json['selectSeries'] == null
           ? null
@@ -32,69 +32,20 @@ _$_Series _$$_SeriesFromJson(Map<String, dynamic> json) => _$_Series(
           .toList(),
     );
 
-Map<String, dynamic> _$$_SeriesToJson(_$_Series instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('seriesName', instance.seriesName);
-  writeNotNull('targetDisease', _$TargetDiseaseEnumMap[instance.targetDisease]);
-  writeNotNull(
-      'vaccineGroup', _$VaccineGroupNameEnumMap[instance.vaccineGroup]);
-  writeNotNull('seriesAdminGuidance', instance.seriesAdminGuidance);
-  writeNotNull('seriesType', _$SeriesTypeEnumMap[instance.seriesType]);
-  writeNotNull('equivalentSeriesGroups',
-      _$EquivalentSeriesGroupsEnumMap[instance.equivalentSeriesGroups]);
-  writeNotNull('requiredGender',
-      instance.requiredGender?.map((e) => _$GenderEnumMap[e]).toList());
-  writeNotNull('selectSeries', instance.selectSeries?.toJson());
-  writeNotNull(
-      'indication', instance.indication?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'seriesDose', instance.seriesDose?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
+Map<String, dynamic> _$$_SeriesToJson(_$_Series instance) => <String, dynamic>{
+      'seriesName': instance.seriesName,
+      'targetDisease': _$TargetDiseaseEnumMap[instance.targetDisease],
+      'vaccineGroup': _$VaccineGroupNameEnumMap[instance.vaccineGroup],
+      'seriesAdminGuidance': instance.seriesAdminGuidance,
+      'seriesType': _$SeriesTypeEnumMap[instance.seriesType],
+      'equivalentSeriesGroups':
+          _$EquivalentSeriesGroupsEnumMap[instance.equivalentSeriesGroups],
+      'requiredGender':
+          instance.requiredGender?.map((e) => _$GenderEnumMap[e]!).toList(),
+      'selectSeries': instance.selectSeries,
+      'indication': instance.indication,
+      'seriesDose': instance.seriesDose,
+    };
 
 const _$TargetDiseaseEnumMap = {
   TargetDisease.cholera: 'Cholera',

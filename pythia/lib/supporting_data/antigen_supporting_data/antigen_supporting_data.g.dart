@@ -10,9 +10,9 @@ _$_AntigenSupportingData _$$_AntigenSupportingDataFromJson(
         Map<String, dynamic> json) =>
     _$_AntigenSupportingData(
       targetDisease:
-          _$enumDecodeNullable(_$TargetDiseaseEnumMap, json['targetDisease']),
+          $enumDecodeNullable(_$TargetDiseaseEnumMap, json['targetDisease']),
       vaccineGroup:
-          _$enumDecodeNullable(_$VaccineGroupNameEnumMap, json['vaccineGroup']),
+          $enumDecodeNullable(_$VaccineGroupNameEnumMap, json['vaccineGroup']),
       immunity: json['immunity'] == null
           ? null
           : Immunity.fromJson(json['immunity'] as Map<String, dynamic>),
@@ -26,60 +26,14 @@ _$_AntigenSupportingData _$$_AntigenSupportingDataFromJson(
     );
 
 Map<String, dynamic> _$$_AntigenSupportingDataToJson(
-    _$_AntigenSupportingData instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('targetDisease', _$TargetDiseaseEnumMap[instance.targetDisease]);
-  writeNotNull(
-      'vaccineGroup', _$VaccineGroupNameEnumMap[instance.vaccineGroup]);
-  writeNotNull('immunity', instance.immunity?.toJson());
-  writeNotNull('contraindications', instance.contraindications?.toJson());
-  writeNotNull('series', instance.series?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
+        _$_AntigenSupportingData instance) =>
+    <String, dynamic>{
+      'targetDisease': _$TargetDiseaseEnumMap[instance.targetDisease],
+      'vaccineGroup': _$VaccineGroupNameEnumMap[instance.vaccineGroup],
+      'immunity': instance.immunity,
+      'contraindications': instance.contraindications,
+      'series': instance.series,
+    };
 
 const _$TargetDiseaseEnumMap = {
   TargetDisease.cholera: 'Cholera',

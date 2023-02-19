@@ -17,21 +17,11 @@ _$_VaxSet _$$_VaxSetFromJson(Map<String, dynamic> json) => _$_VaxSet(
           .toList(),
     );
 
-Map<String, dynamic> _$$_VaxSetToJson(_$_VaxSet instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('setID', instance.setID);
-  writeNotNull('setDescription', instance.setDescription);
-  writeNotNull('effectiveDate', instance.effectiveDate);
-  writeNotNull('cessationDate', instance.cessationDate);
-  writeNotNull('conditionLogic', instance.conditionLogic);
-  writeNotNull(
-      'condition', instance.condition?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$$_VaxSetToJson(_$_VaxSet instance) => <String, dynamic>{
+      'setID': instance.setID,
+      'setDescription': instance.setDescription,
+      'effectiveDate': instance.effectiveDate,
+      'cessationDate': instance.cessationDate,
+      'conditionLogic': instance.conditionLogic,
+      'condition': instance.condition,
+    };

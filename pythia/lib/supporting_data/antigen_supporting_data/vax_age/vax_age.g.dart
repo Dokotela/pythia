@@ -16,21 +16,12 @@ _$_VaxAge _$$_VaxAgeFromJson(Map<String, dynamic> json) => _$_VaxAge(
       cessationDate: json['cessationDate'] as String?,
     );
 
-Map<String, dynamic> _$$_VaxAgeToJson(_$_VaxAge instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('absMinAge', instance.absMinAge);
-  writeNotNull('minAge', instance.minAge);
-  writeNotNull('earliestRecAge', instance.earliestRecAge);
-  writeNotNull('latestRecAge', instance.latestRecAge);
-  writeNotNull('maxAge', instance.maxAge);
-  writeNotNull('effectiveDate', instance.effectiveDate);
-  writeNotNull('cessationDate', instance.cessationDate);
-  return val;
-}
+Map<String, dynamic> _$$_VaxAgeToJson(_$_VaxAge instance) => <String, dynamic>{
+      'absMinAge': instance.absMinAge,
+      'minAge': instance.minAge,
+      'earliestRecAge': instance.earliestRecAge,
+      'latestRecAge': instance.latestRecAge,
+      'maxAge': instance.maxAge,
+      'effectiveDate': instance.effectiveDate,
+      'cessationDate': instance.cessationDate,
+    };

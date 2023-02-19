@@ -15,19 +15,10 @@ _$_LiveVirusConflicts _$$_LiveVirusConflictsFromJson(
     );
 
 Map<String, dynamic> _$$_LiveVirusConflictsToJson(
-    _$_LiveVirusConflicts instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('liveVirusConflict',
-      instance.liveVirusConflict?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$_LiveVirusConflicts instance) =>
+    <String, dynamic>{
+      'liveVirusConflict': instance.liveVirusConflict,
+    };
 
 _$_LiveVirusConflict _$$_LiveVirusConflictFromJson(Map<String, dynamic> json) =>
     _$_LiveVirusConflict(
@@ -43,19 +34,11 @@ _$_LiveVirusConflict _$$_LiveVirusConflictFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$_LiveVirusConflictToJson(
-    _$_LiveVirusConflict instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('previous', instance.previous?.toJson());
-  writeNotNull('current', instance.current?.toJson());
-  writeNotNull('conflictBeginInterval', instance.conflictBeginInterval);
-  writeNotNull('minConflictEndInterval', instance.minConflictEndInterval);
-  writeNotNull('conflictEndInterval', instance.conflictEndInterval);
-  return val;
-}
+        _$_LiveVirusConflict instance) =>
+    <String, dynamic>{
+      'previous': instance.previous,
+      'current': instance.current,
+      'conflictBeginInterval': instance.conflictBeginInterval,
+      'minConflictEndInterval': instance.minConflictEndInterval,
+      'conflictEndInterval': instance.conflictEndInterval,
+    };

@@ -20,7 +20,7 @@ class Observations with _$Observations {
 class Observation with _$Observation {
   Observation._();
   factory Observation({
-    Obs? observationCode,
+    int? observationCode,
     String? observationTitle,
     String? group,
     String? indicationText,

@@ -1,7 +1,7 @@
 import 'enums.dart';
 
 String? enumToString(Enum? value) {
-  if(value == null){
+  if (value == null) {
     return null;
   }
   switch (value.runtimeType) {
@@ -34,9 +34,6 @@ String? enumToString(Enum? value) {
 
     case Gender:
       return genderEnumToString[value];
-
-    case Obs:
-      return obsEnumToStringMap[value];
 
     case SeriesGroup:
       return seriesGroupEnumToString[value];

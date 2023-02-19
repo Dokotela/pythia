@@ -84,8 +84,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
         fromMostRecent: valueToString(row[3]!),
         fromRelevantObs: open == -1 || close == -1
             ? null
-            : ObservationCode(
-                code: stringToEnum(Obs, code) as Obs?, text: text),
+            : ObservationCode(code: int.tryParse(code), text: text),
         absMinInt: valueToString(row[5]!),
         minInt: valueToString(row[6]!),
         earliestRecInt: valueToString(row[7]!),

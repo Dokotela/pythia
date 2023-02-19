@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'vaccine.dart';
 
@@ -11,44 +12,11 @@ part of 'vaccine.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Vaccine _$VaccineFromJson(Map<String, dynamic> json) {
   return _Vaccine.fromJson(json);
 }
-
-/// @nodoc
-class _$VaccineTearOff {
-  const _$VaccineTearOff();
-
-  _Vaccine call(
-      {String? vaccineType,
-      Cvx? cvx,
-      String? beginAge,
-      String? endAge,
-      String? tradeName,
-      String? mvx,
-      String? volume,
-      String? forecastVaccineType}) {
-    return _Vaccine(
-      vaccineType: vaccineType,
-      cvx: cvx,
-      beginAge: beginAge,
-      endAge: endAge,
-      tradeName: tradeName,
-      mvx: mvx,
-      volume: volume,
-      forecastVaccineType: forecastVaccineType,
-    );
-  }
-
-  Vaccine fromJson(Map<String, Object> json) {
-    return Vaccine.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Vaccine = _$VaccineTearOff();
 
 /// @nodoc
 mixin _$Vaccine {
@@ -69,7 +37,8 @@ mixin _$Vaccine {
 /// @nodoc
 abstract class $VaccineCopyWith<$Res> {
   factory $VaccineCopyWith(Vaccine value, $Res Function(Vaccine) then) =
-      _$VaccineCopyWithImpl<$Res>;
+      _$VaccineCopyWithImpl<$Res, Vaccine>;
+  @useResult
   $Res call(
       {String? vaccineType,
       Cvx? cvx,
@@ -82,13 +51,16 @@ abstract class $VaccineCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$VaccineCopyWithImpl<$Res> implements $VaccineCopyWith<$Res> {
+class _$VaccineCopyWithImpl<$Res, $Val extends Vaccine>
+    implements $VaccineCopyWith<$Res> {
   _$VaccineCopyWithImpl(this._value, this._then);
 
-  final Vaccine _value;
   // ignore: unused_field
-  final $Res Function(Vaccine) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? vaccineType = freezed,
@@ -101,47 +73,49 @@ class _$VaccineCopyWithImpl<$Res> implements $VaccineCopyWith<$Res> {
     Object? forecastVaccineType = freezed,
   }) {
     return _then(_value.copyWith(
-      vaccineType: vaccineType == freezed
+      vaccineType: freezed == vaccineType
           ? _value.vaccineType
           : vaccineType // ignore: cast_nullable_to_non_nullable
               as String?,
-      cvx: cvx == freezed
+      cvx: freezed == cvx
           ? _value.cvx
           : cvx // ignore: cast_nullable_to_non_nullable
               as Cvx?,
-      beginAge: beginAge == freezed
+      beginAge: freezed == beginAge
           ? _value.beginAge
           : beginAge // ignore: cast_nullable_to_non_nullable
               as String?,
-      endAge: endAge == freezed
+      endAge: freezed == endAge
           ? _value.endAge
           : endAge // ignore: cast_nullable_to_non_nullable
               as String?,
-      tradeName: tradeName == freezed
+      tradeName: freezed == tradeName
           ? _value.tradeName
           : tradeName // ignore: cast_nullable_to_non_nullable
               as String?,
-      mvx: mvx == freezed
+      mvx: freezed == mvx
           ? _value.mvx
           : mvx // ignore: cast_nullable_to_non_nullable
               as String?,
-      volume: volume == freezed
+      volume: freezed == volume
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
               as String?,
-      forecastVaccineType: forecastVaccineType == freezed
+      forecastVaccineType: freezed == forecastVaccineType
           ? _value.forecastVaccineType
           : forecastVaccineType // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$VaccineCopyWith<$Res> implements $VaccineCopyWith<$Res> {
-  factory _$VaccineCopyWith(_Vaccine value, $Res Function(_Vaccine) then) =
-      __$VaccineCopyWithImpl<$Res>;
+abstract class _$$_VaccineCopyWith<$Res> implements $VaccineCopyWith<$Res> {
+  factory _$$_VaccineCopyWith(
+          _$_Vaccine value, $Res Function(_$_Vaccine) then) =
+      __$$_VaccineCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? vaccineType,
       Cvx? cvx,
@@ -154,14 +128,13 @@ abstract class _$VaccineCopyWith<$Res> implements $VaccineCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$VaccineCopyWithImpl<$Res> extends _$VaccineCopyWithImpl<$Res>
-    implements _$VaccineCopyWith<$Res> {
-  __$VaccineCopyWithImpl(_Vaccine _value, $Res Function(_Vaccine) _then)
-      : super(_value, (v) => _then(v as _Vaccine));
+class __$$_VaccineCopyWithImpl<$Res>
+    extends _$VaccineCopyWithImpl<$Res, _$_Vaccine>
+    implements _$$_VaccineCopyWith<$Res> {
+  __$$_VaccineCopyWithImpl(_$_Vaccine _value, $Res Function(_$_Vaccine) _then)
+      : super(_value, _then);
 
-  @override
-  _Vaccine get _value => super._value as _Vaccine;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? vaccineType = freezed,
@@ -173,36 +146,36 @@ class __$VaccineCopyWithImpl<$Res> extends _$VaccineCopyWithImpl<$Res>
     Object? volume = freezed,
     Object? forecastVaccineType = freezed,
   }) {
-    return _then(_Vaccine(
-      vaccineType: vaccineType == freezed
+    return _then(_$_Vaccine(
+      vaccineType: freezed == vaccineType
           ? _value.vaccineType
           : vaccineType // ignore: cast_nullable_to_non_nullable
               as String?,
-      cvx: cvx == freezed
+      cvx: freezed == cvx
           ? _value.cvx
           : cvx // ignore: cast_nullable_to_non_nullable
               as Cvx?,
-      beginAge: beginAge == freezed
+      beginAge: freezed == beginAge
           ? _value.beginAge
           : beginAge // ignore: cast_nullable_to_non_nullable
               as String?,
-      endAge: endAge == freezed
+      endAge: freezed == endAge
           ? _value.endAge
           : endAge // ignore: cast_nullable_to_non_nullable
               as String?,
-      tradeName: tradeName == freezed
+      tradeName: freezed == tradeName
           ? _value.tradeName
           : tradeName // ignore: cast_nullable_to_non_nullable
               as String?,
-      mvx: mvx == freezed
+      mvx: freezed == mvx
           ? _value.mvx
           : mvx // ignore: cast_nullable_to_non_nullable
               as String?,
-      volume: volume == freezed
+      volume: freezed == volume
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
               as String?,
-      forecastVaccineType: forecastVaccineType == freezed
+      forecastVaccineType: freezed == forecastVaccineType
           ? _value.forecastVaccineType
           : forecastVaccineType // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -252,84 +225,73 @@ class _$_Vaccine extends _Vaccine {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Vaccine &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Vaccine &&
             (identical(other.vaccineType, vaccineType) ||
-                const DeepCollectionEquality()
-                    .equals(other.vaccineType, vaccineType)) &&
-            (identical(other.cvx, cvx) ||
-                const DeepCollectionEquality().equals(other.cvx, cvx)) &&
+                other.vaccineType == vaccineType) &&
+            (identical(other.cvx, cvx) || other.cvx == cvx) &&
             (identical(other.beginAge, beginAge) ||
-                const DeepCollectionEquality()
-                    .equals(other.beginAge, beginAge)) &&
-            (identical(other.endAge, endAge) ||
-                const DeepCollectionEquality().equals(other.endAge, endAge)) &&
+                other.beginAge == beginAge) &&
+            (identical(other.endAge, endAge) || other.endAge == endAge) &&
             (identical(other.tradeName, tradeName) ||
-                const DeepCollectionEquality()
-                    .equals(other.tradeName, tradeName)) &&
-            (identical(other.mvx, mvx) ||
-                const DeepCollectionEquality().equals(other.mvx, mvx)) &&
-            (identical(other.volume, volume) ||
-                const DeepCollectionEquality().equals(other.volume, volume)) &&
+                other.tradeName == tradeName) &&
+            (identical(other.mvx, mvx) || other.mvx == mvx) &&
+            (identical(other.volume, volume) || other.volume == volume) &&
             (identical(other.forecastVaccineType, forecastVaccineType) ||
-                const DeepCollectionEquality()
-                    .equals(other.forecastVaccineType, forecastVaccineType)));
+                other.forecastVaccineType == forecastVaccineType));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(vaccineType) ^
-      const DeepCollectionEquality().hash(cvx) ^
-      const DeepCollectionEquality().hash(beginAge) ^
-      const DeepCollectionEquality().hash(endAge) ^
-      const DeepCollectionEquality().hash(tradeName) ^
-      const DeepCollectionEquality().hash(mvx) ^
-      const DeepCollectionEquality().hash(volume) ^
-      const DeepCollectionEquality().hash(forecastVaccineType);
 
   @JsonKey(ignore: true)
   @override
-  _$VaccineCopyWith<_Vaccine> get copyWith =>
-      __$VaccineCopyWithImpl<_Vaccine>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, vaccineType, cvx, beginAge,
+      endAge, tradeName, mvx, volume, forecastVaccineType);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_VaccineCopyWith<_$_Vaccine> get copyWith =>
+      __$$_VaccineCopyWithImpl<_$_Vaccine>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VaccineToJson(this);
+    return _$$_VaccineToJson(
+      this,
+    );
   }
 }
 
 abstract class _Vaccine extends Vaccine {
   factory _Vaccine(
-      {String? vaccineType,
-      Cvx? cvx,
-      String? beginAge,
-      String? endAge,
-      String? tradeName,
-      String? mvx,
-      String? volume,
-      String? forecastVaccineType}) = _$_Vaccine;
+      {final String? vaccineType,
+      final Cvx? cvx,
+      final String? beginAge,
+      final String? endAge,
+      final String? tradeName,
+      final String? mvx,
+      final String? volume,
+      final String? forecastVaccineType}) = _$_Vaccine;
   _Vaccine._() : super._();
 
   factory _Vaccine.fromJson(Map<String, dynamic> json) = _$_Vaccine.fromJson;
 
   @override
-  String? get vaccineType => throw _privateConstructorUsedError;
+  String? get vaccineType;
   @override
-  Cvx? get cvx => throw _privateConstructorUsedError;
+  Cvx? get cvx;
   @override
-  String? get beginAge => throw _privateConstructorUsedError;
+  String? get beginAge;
   @override
-  String? get endAge => throw _privateConstructorUsedError;
+  String? get endAge;
   @override
-  String? get tradeName => throw _privateConstructorUsedError;
+  String? get tradeName;
   @override
-  String? get mvx => throw _privateConstructorUsedError;
+  String? get mvx;
   @override
-  String? get volume => throw _privateConstructorUsedError;
+  String? get volume;
   @override
-  String? get forecastVaccineType => throw _privateConstructorUsedError;
+  String? get forecastVaccineType;
   @override
   @JsonKey(ignore: true)
-  _$VaccineCopyWith<_Vaccine> get copyWith =>
+  _$$_VaccineCopyWith<_$_Vaccine> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -13,79 +13,24 @@ _$_CvxToAntigenMap _$$_CvxToAntigenMapFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CvxToAntigenMapToJson(_$_CvxToAntigenMap instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('cvxMap', instance.cvxMap?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$$_CvxToAntigenMapToJson(_$_CvxToAntigenMap instance) =>
+    <String, dynamic>{
+      'cvxMap': instance.cvxMap,
+    };
 
 _$_CvxMap _$$_CvxMapFromJson(Map<String, dynamic> json) => _$_CvxMap(
-      cvx: _$enumDecodeNullable(_$CvxEnumMap, json['cvx']),
+      cvx: $enumDecodeNullable(_$CvxEnumMap, json['cvx']),
       shortDescription: json['shortDescription'] as String?,
       association: (json['association'] as List<dynamic>?)
           ?.map((e) => Association.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_CvxMapToJson(_$_CvxMap instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('cvx', _$CvxEnumMap[instance.cvx]);
-  writeNotNull('shortDescription', instance.shortDescription);
-  writeNotNull(
-      'association', instance.association?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
+Map<String, dynamic> _$$_CvxMapToJson(_$_CvxMap instance) => <String, dynamic>{
+      'cvx': _$CvxEnumMap[instance.cvx],
+      'shortDescription': instance.shortDescription,
+      'association': instance.association,
+    };
 
 const _$CvxEnumMap = {
   Cvx.code01: '01',
@@ -253,25 +198,17 @@ const _$CvxEnumMap = {
 
 _$_Association _$$_AssociationFromJson(Map<String, dynamic> json) =>
     _$_Association(
-      antigen: _$enumDecodeNullable(_$TargetDiseaseEnumMap, json['antigen']),
+      antigen: $enumDecodeNullable(_$TargetDiseaseEnumMap, json['antigen']),
       associationBeginAge: json['associationBeginAge'] as String?,
       associationEndAge: json['associationEndAge'] as String?,
     );
 
-Map<String, dynamic> _$$_AssociationToJson(_$_Association instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('antigen', _$TargetDiseaseEnumMap[instance.antigen]);
-  writeNotNull('associationBeginAge', instance.associationBeginAge);
-  writeNotNull('associationEndAge', instance.associationEndAge);
-  return val;
-}
+Map<String, dynamic> _$$_AssociationToJson(_$_Association instance) =>
+    <String, dynamic>{
+      'antigen': _$TargetDiseaseEnumMap[instance.antigen],
+      'associationBeginAge': instance.associationBeginAge,
+      'associationEndAge': instance.associationEndAge,
+    };
 
 const _$TargetDiseaseEnumMap = {
   TargetDisease.cholera: 'Cholera',

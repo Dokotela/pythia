@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../pythia.dart';
-
 part 'exclusion.freezed.dart';
 part 'exclusion.g.dart';
 
@@ -9,7 +7,7 @@ part 'exclusion.g.dart';
 class Exclusion with _$Exclusion {
   Exclusion._();
   factory Exclusion({
-    Obs? exclusionCode,
+    int? exclusionCode,
     String? exclusionTitle,
   }) = _Exclusion;
 

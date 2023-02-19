@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../pythia.dart';
-
 part 'vaccine_group_contraindications.freezed.dart';
 part 'vaccine_group_contraindications.g.dart';
 
@@ -20,7 +18,7 @@ class VaccineGroupContraindications with _$VaccineGroupContraindications {
 class GroupContraindication with _$GroupContraindication {
   GroupContraindication._();
   factory GroupContraindication({
-    Obs? observationCode,
+    int? observationCode,
     String? observationTitle,
     String? contraindicationText,
     String? contraindicationGuidance,

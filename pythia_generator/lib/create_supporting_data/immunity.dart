@@ -35,13 +35,11 @@ Immunity? immunity(String? immunityString) {
       if (immunity.clinicalHistory == null) {
         immunity = immunity.copyWith(clinicalHistory: [
           ClinicalHistory(
-              guidelineCode: stringToEnum(Obs, code) as Obs?,
-              guidelineTitle: text)
+              guidelineCode: int.tryParse(code), guidelineTitle: text)
         ]);
       } else {
         immunity.clinicalHistory!.add(ClinicalHistory(
-            guidelineCode: stringToEnum(Obs, code) as Obs?,
-            guidelineTitle: text));
+            guidelineCode: int.tryParse(code), guidelineTitle: text));
       }
 
       /// Find any of the Birth Date Immunity rows
@@ -74,7 +72,7 @@ Immunity? immunity(String? immunityString) {
 
         immunity.dateOfBirth!.exclusion!.add(
           Exclusion(
-            exclusionCode: stringToEnum(Obs, code) as Obs?,
+            exclusionCode: int.tryParse(code),
             exclusionTitle: text,
           ),
         );

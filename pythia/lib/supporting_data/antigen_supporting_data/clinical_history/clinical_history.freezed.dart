@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'clinical_history.dart';
 
@@ -11,34 +12,15 @@ part of 'clinical_history.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ClinicalHistory _$ClinicalHistoryFromJson(Map<String, dynamic> json) {
   return _ClinicalHistory.fromJson(json);
 }
 
 /// @nodoc
-class _$ClinicalHistoryTearOff {
-  const _$ClinicalHistoryTearOff();
-
-  _ClinicalHistory call({Obs? guidelineCode, String? guidelineTitle}) {
-    return _ClinicalHistory(
-      guidelineCode: guidelineCode,
-      guidelineTitle: guidelineTitle,
-    );
-  }
-
-  ClinicalHistory fromJson(Map<String, Object> json) {
-    return ClinicalHistory.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ClinicalHistory = _$ClinicalHistoryTearOff();
-
-/// @nodoc
 mixin _$ClinicalHistory {
-  Obs? get guidelineCode => throw _privateConstructorUsedError;
+  int? get guidelineCode => throw _privateConstructorUsedError;
   String? get guidelineTitle => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -51,69 +33,71 @@ mixin _$ClinicalHistory {
 abstract class $ClinicalHistoryCopyWith<$Res> {
   factory $ClinicalHistoryCopyWith(
           ClinicalHistory value, $Res Function(ClinicalHistory) then) =
-      _$ClinicalHistoryCopyWithImpl<$Res>;
-  $Res call({Obs? guidelineCode, String? guidelineTitle});
+      _$ClinicalHistoryCopyWithImpl<$Res, ClinicalHistory>;
+  @useResult
+  $Res call({int? guidelineCode, String? guidelineTitle});
 }
 
 /// @nodoc
-class _$ClinicalHistoryCopyWithImpl<$Res>
+class _$ClinicalHistoryCopyWithImpl<$Res, $Val extends ClinicalHistory>
     implements $ClinicalHistoryCopyWith<$Res> {
   _$ClinicalHistoryCopyWithImpl(this._value, this._then);
 
-  final ClinicalHistory _value;
   // ignore: unused_field
-  final $Res Function(ClinicalHistory) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? guidelineCode = freezed,
     Object? guidelineTitle = freezed,
   }) {
     return _then(_value.copyWith(
-      guidelineCode: guidelineCode == freezed
+      guidelineCode: freezed == guidelineCode
           ? _value.guidelineCode
           : guidelineCode // ignore: cast_nullable_to_non_nullable
-              as Obs?,
-      guidelineTitle: guidelineTitle == freezed
+              as int?,
+      guidelineTitle: freezed == guidelineTitle
           ? _value.guidelineTitle
           : guidelineTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ClinicalHistoryCopyWith<$Res>
+abstract class _$$_ClinicalHistoryCopyWith<$Res>
     implements $ClinicalHistoryCopyWith<$Res> {
-  factory _$ClinicalHistoryCopyWith(
-          _ClinicalHistory value, $Res Function(_ClinicalHistory) then) =
-      __$ClinicalHistoryCopyWithImpl<$Res>;
+  factory _$$_ClinicalHistoryCopyWith(
+          _$_ClinicalHistory value, $Res Function(_$_ClinicalHistory) then) =
+      __$$_ClinicalHistoryCopyWithImpl<$Res>;
   @override
-  $Res call({Obs? guidelineCode, String? guidelineTitle});
+  @useResult
+  $Res call({int? guidelineCode, String? guidelineTitle});
 }
 
 /// @nodoc
-class __$ClinicalHistoryCopyWithImpl<$Res>
-    extends _$ClinicalHistoryCopyWithImpl<$Res>
-    implements _$ClinicalHistoryCopyWith<$Res> {
-  __$ClinicalHistoryCopyWithImpl(
-      _ClinicalHistory _value, $Res Function(_ClinicalHistory) _then)
-      : super(_value, (v) => _then(v as _ClinicalHistory));
+class __$$_ClinicalHistoryCopyWithImpl<$Res>
+    extends _$ClinicalHistoryCopyWithImpl<$Res, _$_ClinicalHistory>
+    implements _$$_ClinicalHistoryCopyWith<$Res> {
+  __$$_ClinicalHistoryCopyWithImpl(
+      _$_ClinicalHistory _value, $Res Function(_$_ClinicalHistory) _then)
+      : super(_value, _then);
 
-  @override
-  _ClinicalHistory get _value => super._value as _ClinicalHistory;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? guidelineCode = freezed,
     Object? guidelineTitle = freezed,
   }) {
-    return _then(_ClinicalHistory(
-      guidelineCode: guidelineCode == freezed
+    return _then(_$_ClinicalHistory(
+      guidelineCode: freezed == guidelineCode
           ? _value.guidelineCode
           : guidelineCode // ignore: cast_nullable_to_non_nullable
-              as Obs?,
-      guidelineTitle: guidelineTitle == freezed
+              as int?,
+      guidelineTitle: freezed == guidelineTitle
           ? _value.guidelineTitle
           : guidelineTitle // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -130,7 +114,7 @@ class _$_ClinicalHistory extends _ClinicalHistory {
       _$$_ClinicalHistoryFromJson(json);
 
   @override
-  final Obs? guidelineCode;
+  final int? guidelineCode;
   @override
   final String? guidelineTitle;
 
@@ -142,46 +126,47 @@ class _$_ClinicalHistory extends _ClinicalHistory {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ClinicalHistory &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ClinicalHistory &&
             (identical(other.guidelineCode, guidelineCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.guidelineCode, guidelineCode)) &&
+                other.guidelineCode == guidelineCode) &&
             (identical(other.guidelineTitle, guidelineTitle) ||
-                const DeepCollectionEquality()
-                    .equals(other.guidelineTitle, guidelineTitle)));
+                other.guidelineTitle == guidelineTitle));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(guidelineCode) ^
-      const DeepCollectionEquality().hash(guidelineTitle);
 
   @JsonKey(ignore: true)
   @override
-  _$ClinicalHistoryCopyWith<_ClinicalHistory> get copyWith =>
-      __$ClinicalHistoryCopyWithImpl<_ClinicalHistory>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, guidelineCode, guidelineTitle);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ClinicalHistoryCopyWith<_$_ClinicalHistory> get copyWith =>
+      __$$_ClinicalHistoryCopyWithImpl<_$_ClinicalHistory>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClinicalHistoryToJson(this);
+    return _$$_ClinicalHistoryToJson(
+      this,
+    );
   }
 }
 
 abstract class _ClinicalHistory extends ClinicalHistory {
-  factory _ClinicalHistory({Obs? guidelineCode, String? guidelineTitle}) =
-      _$_ClinicalHistory;
+  factory _ClinicalHistory(
+      {final int? guidelineCode,
+      final String? guidelineTitle}) = _$_ClinicalHistory;
   _ClinicalHistory._() : super._();
 
   factory _ClinicalHistory.fromJson(Map<String, dynamic> json) =
       _$_ClinicalHistory.fromJson;
 
   @override
-  Obs? get guidelineCode => throw _privateConstructorUsedError;
+  int? get guidelineCode;
   @override
-  String? get guidelineTitle => throw _privateConstructorUsedError;
+  String? get guidelineTitle;
   @override
   @JsonKey(ignore: true)
-  _$ClinicalHistoryCopyWith<_ClinicalHistory> get copyWith =>
+  _$$_ClinicalHistoryCopyWith<_$_ClinicalHistory> get copyWith =>
       throw _privateConstructorUsedError;
 }

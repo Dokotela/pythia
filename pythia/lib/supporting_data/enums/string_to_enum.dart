@@ -32,9 +32,6 @@ Enum? stringToEnum<T>(Type enumType, String value) {
     case Gender:
       return genderStringToEnum[value];
 
-    case Obs:
-      return obsStringToEnumMap[value];
-
     case SeriesGroup:
       return seriesGroupStringToEnum[value];
 

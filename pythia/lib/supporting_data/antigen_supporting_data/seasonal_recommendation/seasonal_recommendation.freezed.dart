@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'seasonal_recommendation.dart';
 
@@ -11,31 +12,12 @@ part of 'seasonal_recommendation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SeasonalRecommendation _$SeasonalRecommendationFromJson(
     Map<String, dynamic> json) {
   return _SeasonalRecommendation.fromJson(json);
 }
-
-/// @nodoc
-class _$SeasonalRecommendationTearOff {
-  const _$SeasonalRecommendationTearOff();
-
-  _SeasonalRecommendation call({String? startDate, String? endDate}) {
-    return _SeasonalRecommendation(
-      startDate: startDate,
-      endDate: endDate,
-    );
-  }
-
-  SeasonalRecommendation fromJson(Map<String, Object> json) {
-    return SeasonalRecommendation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SeasonalRecommendation = _$SeasonalRecommendationTearOff();
 
 /// @nodoc
 mixin _$SeasonalRecommendation {
@@ -52,69 +34,73 @@ mixin _$SeasonalRecommendation {
 abstract class $SeasonalRecommendationCopyWith<$Res> {
   factory $SeasonalRecommendationCopyWith(SeasonalRecommendation value,
           $Res Function(SeasonalRecommendation) then) =
-      _$SeasonalRecommendationCopyWithImpl<$Res>;
+      _$SeasonalRecommendationCopyWithImpl<$Res, SeasonalRecommendation>;
+  @useResult
   $Res call({String? startDate, String? endDate});
 }
 
 /// @nodoc
-class _$SeasonalRecommendationCopyWithImpl<$Res>
+class _$SeasonalRecommendationCopyWithImpl<$Res,
+        $Val extends SeasonalRecommendation>
     implements $SeasonalRecommendationCopyWith<$Res> {
   _$SeasonalRecommendationCopyWithImpl(this._value, this._then);
 
-  final SeasonalRecommendation _value;
   // ignore: unused_field
-  final $Res Function(SeasonalRecommendation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? startDate = freezed,
     Object? endDate = freezed,
   }) {
     return _then(_value.copyWith(
-      startDate: startDate == freezed
+      startDate: freezed == startDate
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
               as String?,
-      endDate: endDate == freezed
+      endDate: freezed == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$SeasonalRecommendationCopyWith<$Res>
+abstract class _$$_SeasonalRecommendationCopyWith<$Res>
     implements $SeasonalRecommendationCopyWith<$Res> {
-  factory _$SeasonalRecommendationCopyWith(_SeasonalRecommendation value,
-          $Res Function(_SeasonalRecommendation) then) =
-      __$SeasonalRecommendationCopyWithImpl<$Res>;
+  factory _$$_SeasonalRecommendationCopyWith(_$_SeasonalRecommendation value,
+          $Res Function(_$_SeasonalRecommendation) then) =
+      __$$_SeasonalRecommendationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? startDate, String? endDate});
 }
 
 /// @nodoc
-class __$SeasonalRecommendationCopyWithImpl<$Res>
-    extends _$SeasonalRecommendationCopyWithImpl<$Res>
-    implements _$SeasonalRecommendationCopyWith<$Res> {
-  __$SeasonalRecommendationCopyWithImpl(_SeasonalRecommendation _value,
-      $Res Function(_SeasonalRecommendation) _then)
-      : super(_value, (v) => _then(v as _SeasonalRecommendation));
+class __$$_SeasonalRecommendationCopyWithImpl<$Res>
+    extends _$SeasonalRecommendationCopyWithImpl<$Res,
+        _$_SeasonalRecommendation>
+    implements _$$_SeasonalRecommendationCopyWith<$Res> {
+  __$$_SeasonalRecommendationCopyWithImpl(_$_SeasonalRecommendation _value,
+      $Res Function(_$_SeasonalRecommendation) _then)
+      : super(_value, _then);
 
-  @override
-  _SeasonalRecommendation get _value => super._value as _SeasonalRecommendation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? startDate = freezed,
     Object? endDate = freezed,
   }) {
-    return _then(_SeasonalRecommendation(
-      startDate: startDate == freezed
+    return _then(_$_SeasonalRecommendation(
+      startDate: freezed == startDate
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
               as String?,
-      endDate: endDate == freezed
+      endDate: freezed == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -143,46 +129,47 @@ class _$_SeasonalRecommendation extends _SeasonalRecommendation {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SeasonalRecommendation &&
+        (other.runtimeType == runtimeType &&
+            other is _$_SeasonalRecommendation &&
             (identical(other.startDate, startDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.startDate, startDate)) &&
-            (identical(other.endDate, endDate) ||
-                const DeepCollectionEquality().equals(other.endDate, endDate)));
+                other.startDate == startDate) &&
+            (identical(other.endDate, endDate) || other.endDate == endDate));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(startDate) ^
-      const DeepCollectionEquality().hash(endDate);
 
   @JsonKey(ignore: true)
   @override
-  _$SeasonalRecommendationCopyWith<_SeasonalRecommendation> get copyWith =>
-      __$SeasonalRecommendationCopyWithImpl<_SeasonalRecommendation>(
+  int get hashCode => Object.hash(runtimeType, startDate, endDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SeasonalRecommendationCopyWith<_$_SeasonalRecommendation> get copyWith =>
+      __$$_SeasonalRecommendationCopyWithImpl<_$_SeasonalRecommendation>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SeasonalRecommendationToJson(this);
+    return _$$_SeasonalRecommendationToJson(
+      this,
+    );
   }
 }
 
 abstract class _SeasonalRecommendation extends SeasonalRecommendation {
-  factory _SeasonalRecommendation({String? startDate, String? endDate}) =
-      _$_SeasonalRecommendation;
+  factory _SeasonalRecommendation(
+      {final String? startDate,
+      final String? endDate}) = _$_SeasonalRecommendation;
   _SeasonalRecommendation._() : super._();
 
   factory _SeasonalRecommendation.fromJson(Map<String, dynamic> json) =
       _$_SeasonalRecommendation.fromJson;
 
   @override
-  String? get startDate => throw _privateConstructorUsedError;
+  String? get startDate;
   @override
-  String? get endDate => throw _privateConstructorUsedError;
+  String? get endDate;
   @override
   @JsonKey(ignore: true)
-  _$SeasonalRecommendationCopyWith<_SeasonalRecommendation> get copyWith =>
+  _$$_SeasonalRecommendationCopyWith<_$_SeasonalRecommendation> get copyWith =>
       throw _privateConstructorUsedError;
 }

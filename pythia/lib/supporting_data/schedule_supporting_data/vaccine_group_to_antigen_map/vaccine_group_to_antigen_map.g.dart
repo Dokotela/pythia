@@ -15,79 +15,25 @@ _$_VaccineGroupToAntigenMap _$$_VaccineGroupToAntigenMapFromJson(
     );
 
 Map<String, dynamic> _$$_VaccineGroupToAntigenMapToJson(
-    _$_VaccineGroupToAntigenMap instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('vaccineGroupMap',
-      instance.vaccineGroupMap?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$_VaccineGroupToAntigenMap instance) =>
+    <String, dynamic>{
+      'vaccineGroupMap': instance.vaccineGroupMap,
+    };
 
 _$_VaccineGroupMap _$$_VaccineGroupMapFromJson(Map<String, dynamic> json) =>
     _$_VaccineGroupMap(
-      name: _$enumDecodeNullable(_$VaccineGroupNameEnumMap, json['name']),
+      name: $enumDecodeNullable(_$VaccineGroupNameEnumMap, json['name']),
       antigen: (json['antigen'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$TargetDiseaseEnumMap, e))
+          ?.map((e) => $enumDecode(_$TargetDiseaseEnumMap, e))
           .toList(),
     );
 
-Map<String, dynamic> _$$_VaccineGroupMapToJson(_$_VaccineGroupMap instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', _$VaccineGroupNameEnumMap[instance.name]);
-  writeNotNull('antigen',
-      instance.antigen?.map((e) => _$TargetDiseaseEnumMap[e]).toList());
-  return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
+Map<String, dynamic> _$$_VaccineGroupMapToJson(_$_VaccineGroupMap instance) =>
+    <String, dynamic>{
+      'name': _$VaccineGroupNameEnumMap[instance.name],
+      'antigen':
+          instance.antigen?.map((e) => _$TargetDiseaseEnumMap[e]!).toList(),
+    };
 
 const _$VaccineGroupNameEnumMap = {
   VaccineGroupName.cholera: 'Cholera',

@@ -8,7 +8,7 @@ part of 'vaccine.dart';
 
 _$_Vaccine _$$_VaccineFromJson(Map<String, dynamic> json) => _$_Vaccine(
       vaccineType: json['vaccineType'] as String?,
-      cvx: _$enumDecodeNullable(_$CvxEnumMap, json['cvx']),
+      cvx: $enumDecodeNullable(_$CvxEnumMap, json['cvx']),
       beginAge: json['beginAge'] as String?,
       endAge: json['endAge'] as String?,
       tradeName: json['tradeName'] as String?,
@@ -17,62 +17,17 @@ _$_Vaccine _$$_VaccineFromJson(Map<String, dynamic> json) => _$_Vaccine(
       forecastVaccineType: json['forecastVaccineType'] as String?,
     );
 
-Map<String, dynamic> _$$_VaccineToJson(_$_Vaccine instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('vaccineType', instance.vaccineType);
-  writeNotNull('cvx', _$CvxEnumMap[instance.cvx]);
-  writeNotNull('beginAge', instance.beginAge);
-  writeNotNull('endAge', instance.endAge);
-  writeNotNull('tradeName', instance.tradeName);
-  writeNotNull('mvx', instance.mvx);
-  writeNotNull('volume', instance.volume);
-  writeNotNull('forecastVaccineType', instance.forecastVaccineType);
-  return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
+Map<String, dynamic> _$$_VaccineToJson(_$_Vaccine instance) =>
+    <String, dynamic>{
+      'vaccineType': instance.vaccineType,
+      'cvx': _$CvxEnumMap[instance.cvx],
+      'beginAge': instance.beginAge,
+      'endAge': instance.endAge,
+      'tradeName': instance.tradeName,
+      'mvx': instance.mvx,
+      'volume': instance.volume,
+      'forecastVaccineType': instance.forecastVaccineType,
+    };
 
 const _$CvxEnumMap = {
   Cvx.code01: '01',

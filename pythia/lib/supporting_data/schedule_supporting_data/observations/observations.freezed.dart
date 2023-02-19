@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'observations.dart';
 
@@ -11,29 +12,11 @@ part of 'observations.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Observations _$ObservationsFromJson(Map<String, dynamic> json) {
   return _Observations.fromJson(json);
 }
-
-/// @nodoc
-class _$ObservationsTearOff {
-  const _$ObservationsTearOff();
-
-  _Observations call({List<Observation>? observation}) {
-    return _Observations(
-      observation: observation,
-    );
-  }
-
-  Observations fromJson(Map<String, Object> json) {
-    return Observations.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Observations = _$ObservationsTearOff();
 
 /// @nodoc
 mixin _$Observations {
@@ -49,58 +32,62 @@ mixin _$Observations {
 abstract class $ObservationsCopyWith<$Res> {
   factory $ObservationsCopyWith(
           Observations value, $Res Function(Observations) then) =
-      _$ObservationsCopyWithImpl<$Res>;
+      _$ObservationsCopyWithImpl<$Res, Observations>;
+  @useResult
   $Res call({List<Observation>? observation});
 }
 
 /// @nodoc
-class _$ObservationsCopyWithImpl<$Res> implements $ObservationsCopyWith<$Res> {
+class _$ObservationsCopyWithImpl<$Res, $Val extends Observations>
+    implements $ObservationsCopyWith<$Res> {
   _$ObservationsCopyWithImpl(this._value, this._then);
 
-  final Observations _value;
   // ignore: unused_field
-  final $Res Function(Observations) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? observation = freezed,
   }) {
     return _then(_value.copyWith(
-      observation: observation == freezed
+      observation: freezed == observation
           ? _value.observation
           : observation // ignore: cast_nullable_to_non_nullable
               as List<Observation>?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ObservationsCopyWith<$Res>
+abstract class _$$_ObservationsCopyWith<$Res>
     implements $ObservationsCopyWith<$Res> {
-  factory _$ObservationsCopyWith(
-          _Observations value, $Res Function(_Observations) then) =
-      __$ObservationsCopyWithImpl<$Res>;
+  factory _$$_ObservationsCopyWith(
+          _$_Observations value, $Res Function(_$_Observations) then) =
+      __$$_ObservationsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<Observation>? observation});
 }
 
 /// @nodoc
-class __$ObservationsCopyWithImpl<$Res> extends _$ObservationsCopyWithImpl<$Res>
-    implements _$ObservationsCopyWith<$Res> {
-  __$ObservationsCopyWithImpl(
-      _Observations _value, $Res Function(_Observations) _then)
-      : super(_value, (v) => _then(v as _Observations));
+class __$$_ObservationsCopyWithImpl<$Res>
+    extends _$ObservationsCopyWithImpl<$Res, _$_Observations>
+    implements _$$_ObservationsCopyWith<$Res> {
+  __$$_ObservationsCopyWithImpl(
+      _$_Observations _value, $Res Function(_$_Observations) _then)
+      : super(_value, _then);
 
-  @override
-  _Observations get _value => super._value as _Observations;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? observation = freezed,
   }) {
-    return _then(_Observations(
-      observation: observation == freezed
-          ? _value.observation
+    return _then(_$_Observations(
+      observation: freezed == observation
+          ? _value._observation
           : observation // ignore: cast_nullable_to_non_nullable
               as List<Observation>?,
     ));
@@ -110,13 +97,22 @@ class __$ObservationsCopyWithImpl<$Res> extends _$ObservationsCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Observations extends _Observations {
-  _$_Observations({this.observation}) : super._();
+  _$_Observations({final List<Observation>? observation})
+      : _observation = observation,
+        super._();
 
   factory _$_Observations.fromJson(Map<String, dynamic> json) =>
       _$$_ObservationsFromJson(json);
 
+  final List<Observation>? _observation;
   @override
-  final List<Observation>? observation;
+  List<Observation>? get observation {
+    final value = _observation;
+    if (value == null) return null;
+    if (_observation is EqualUnmodifiableListView) return _observation;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -126,39 +122,44 @@ class _$_Observations extends _Observations {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Observations &&
-            (identical(other.observation, observation) ||
-                const DeepCollectionEquality()
-                    .equals(other.observation, observation)));
+        (other.runtimeType == runtimeType &&
+            other is _$_Observations &&
+            const DeepCollectionEquality()
+                .equals(other._observation, _observation));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(observation);
 
   @JsonKey(ignore: true)
   @override
-  _$ObservationsCopyWith<_Observations> get copyWith =>
-      __$ObservationsCopyWithImpl<_Observations>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_observation));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ObservationsCopyWith<_$_Observations> get copyWith =>
+      __$$_ObservationsCopyWithImpl<_$_Observations>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationsToJson(this);
+    return _$$_ObservationsToJson(
+      this,
+    );
   }
 }
 
 abstract class _Observations extends Observations {
-  factory _Observations({List<Observation>? observation}) = _$_Observations;
+  factory _Observations({final List<Observation>? observation}) =
+      _$_Observations;
   _Observations._() : super._();
 
   factory _Observations.fromJson(Map<String, dynamic> json) =
       _$_Observations.fromJson;
 
   @override
-  List<Observation>? get observation => throw _privateConstructorUsedError;
+  List<Observation>? get observation;
   @override
   @JsonKey(ignore: true)
-  _$ObservationsCopyWith<_Observations> get copyWith =>
+  _$$_ObservationsCopyWith<_$_Observations> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -167,39 +168,8 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$ObservationTearOff {
-  const _$ObservationTearOff();
-
-  _Observation call(
-      {Obs? observationCode,
-      String? observationTitle,
-      String? group,
-      String? indicationText,
-      String? contraindicationText,
-      String? clarifyingText,
-      CodedValues? codedValues}) {
-    return _Observation(
-      observationCode: observationCode,
-      observationTitle: observationTitle,
-      group: group,
-      indicationText: indicationText,
-      contraindicationText: contraindicationText,
-      clarifyingText: clarifyingText,
-      codedValues: codedValues,
-    );
-  }
-
-  Observation fromJson(Map<String, Object> json) {
-    return Observation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Observation = _$ObservationTearOff();
-
-/// @nodoc
 mixin _$Observation {
-  Obs? get observationCode => throw _privateConstructorUsedError;
+  int? get observationCode => throw _privateConstructorUsedError;
   String? get observationTitle => throw _privateConstructorUsedError;
   String? get group => throw _privateConstructorUsedError;
   String? get indicationText => throw _privateConstructorUsedError;
@@ -217,9 +187,10 @@ mixin _$Observation {
 abstract class $ObservationCopyWith<$Res> {
   factory $ObservationCopyWith(
           Observation value, $Res Function(Observation) then) =
-      _$ObservationCopyWithImpl<$Res>;
+      _$ObservationCopyWithImpl<$Res, Observation>;
+  @useResult
   $Res call(
-      {Obs? observationCode,
+      {int? observationCode,
       String? observationTitle,
       String? group,
       String? indicationText,
@@ -231,13 +202,16 @@ abstract class $ObservationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
+class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
+    implements $ObservationCopyWith<$Res> {
   _$ObservationCopyWithImpl(this._value, this._then);
 
-  final Observation _value;
   // ignore: unused_field
-  final $Res Function(Observation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? observationCode = freezed,
@@ -249,58 +223,60 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
     Object? codedValues = freezed,
   }) {
     return _then(_value.copyWith(
-      observationCode: observationCode == freezed
+      observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
-              as Obs?,
-      observationTitle: observationTitle == freezed
+              as int?,
+      observationTitle: freezed == observationTitle
           ? _value.observationTitle
           : observationTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-      group: group == freezed
+      group: freezed == group
           ? _value.group
           : group // ignore: cast_nullable_to_non_nullable
               as String?,
-      indicationText: indicationText == freezed
+      indicationText: freezed == indicationText
           ? _value.indicationText
           : indicationText // ignore: cast_nullable_to_non_nullable
               as String?,
-      contraindicationText: contraindicationText == freezed
+      contraindicationText: freezed == contraindicationText
           ? _value.contraindicationText
           : contraindicationText // ignore: cast_nullable_to_non_nullable
               as String?,
-      clarifyingText: clarifyingText == freezed
+      clarifyingText: freezed == clarifyingText
           ? _value.clarifyingText
           : clarifyingText // ignore: cast_nullable_to_non_nullable
               as String?,
-      codedValues: codedValues == freezed
+      codedValues: freezed == codedValues
           ? _value.codedValues
           : codedValues // ignore: cast_nullable_to_non_nullable
               as CodedValues?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodedValuesCopyWith<$Res>? get codedValues {
     if (_value.codedValues == null) {
       return null;
     }
 
     return $CodedValuesCopyWith<$Res>(_value.codedValues!, (value) {
-      return _then(_value.copyWith(codedValues: value));
+      return _then(_value.copyWith(codedValues: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ObservationCopyWith<$Res>
+abstract class _$$_ObservationCopyWith<$Res>
     implements $ObservationCopyWith<$Res> {
-  factory _$ObservationCopyWith(
-          _Observation value, $Res Function(_Observation) then) =
-      __$ObservationCopyWithImpl<$Res>;
+  factory _$$_ObservationCopyWith(
+          _$_Observation value, $Res Function(_$_Observation) then) =
+      __$$_ObservationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
-      {Obs? observationCode,
+      {int? observationCode,
       String? observationTitle,
       String? group,
       String? indicationText,
@@ -313,15 +289,14 @@ abstract class _$ObservationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
-    implements _$ObservationCopyWith<$Res> {
-  __$ObservationCopyWithImpl(
-      _Observation _value, $Res Function(_Observation) _then)
-      : super(_value, (v) => _then(v as _Observation));
+class __$$_ObservationCopyWithImpl<$Res>
+    extends _$ObservationCopyWithImpl<$Res, _$_Observation>
+    implements _$$_ObservationCopyWith<$Res> {
+  __$$_ObservationCopyWithImpl(
+      _$_Observation _value, $Res Function(_$_Observation) _then)
+      : super(_value, _then);
 
-  @override
-  _Observation get _value => super._value as _Observation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? observationCode = freezed,
@@ -332,32 +307,32 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
     Object? clarifyingText = freezed,
     Object? codedValues = freezed,
   }) {
-    return _then(_Observation(
-      observationCode: observationCode == freezed
+    return _then(_$_Observation(
+      observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
-              as Obs?,
-      observationTitle: observationTitle == freezed
+              as int?,
+      observationTitle: freezed == observationTitle
           ? _value.observationTitle
           : observationTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-      group: group == freezed
+      group: freezed == group
           ? _value.group
           : group // ignore: cast_nullable_to_non_nullable
               as String?,
-      indicationText: indicationText == freezed
+      indicationText: freezed == indicationText
           ? _value.indicationText
           : indicationText // ignore: cast_nullable_to_non_nullable
               as String?,
-      contraindicationText: contraindicationText == freezed
+      contraindicationText: freezed == contraindicationText
           ? _value.contraindicationText
           : contraindicationText // ignore: cast_nullable_to_non_nullable
               as String?,
-      clarifyingText: clarifyingText == freezed
+      clarifyingText: freezed == clarifyingText
           ? _value.clarifyingText
           : clarifyingText // ignore: cast_nullable_to_non_nullable
               as String?,
-      codedValues: codedValues == freezed
+      codedValues: freezed == codedValues
           ? _value.codedValues
           : codedValues // ignore: cast_nullable_to_non_nullable
               as CodedValues?,
@@ -382,7 +357,7 @@ class _$_Observation extends _Observation {
       _$$_ObservationFromJson(json);
 
   @override
-  final Obs? observationCode;
+  final int? observationCode;
   @override
   final String? observationTitle;
   @override
@@ -404,106 +379,86 @@ class _$_Observation extends _Observation {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Observation &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Observation &&
             (identical(other.observationCode, observationCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.observationCode, observationCode)) &&
+                other.observationCode == observationCode) &&
             (identical(other.observationTitle, observationTitle) ||
-                const DeepCollectionEquality()
-                    .equals(other.observationTitle, observationTitle)) &&
-            (identical(other.group, group) ||
-                const DeepCollectionEquality().equals(other.group, group)) &&
+                other.observationTitle == observationTitle) &&
+            (identical(other.group, group) || other.group == group) &&
             (identical(other.indicationText, indicationText) ||
-                const DeepCollectionEquality()
-                    .equals(other.indicationText, indicationText)) &&
+                other.indicationText == indicationText) &&
             (identical(other.contraindicationText, contraindicationText) ||
-                const DeepCollectionEquality().equals(
-                    other.contraindicationText, contraindicationText)) &&
+                other.contraindicationText == contraindicationText) &&
             (identical(other.clarifyingText, clarifyingText) ||
-                const DeepCollectionEquality()
-                    .equals(other.clarifyingText, clarifyingText)) &&
+                other.clarifyingText == clarifyingText) &&
             (identical(other.codedValues, codedValues) ||
-                const DeepCollectionEquality()
-                    .equals(other.codedValues, codedValues)));
+                other.codedValues == codedValues));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(observationCode) ^
-      const DeepCollectionEquality().hash(observationTitle) ^
-      const DeepCollectionEquality().hash(group) ^
-      const DeepCollectionEquality().hash(indicationText) ^
-      const DeepCollectionEquality().hash(contraindicationText) ^
-      const DeepCollectionEquality().hash(clarifyingText) ^
-      const DeepCollectionEquality().hash(codedValues);
 
   @JsonKey(ignore: true)
   @override
-  _$ObservationCopyWith<_Observation> get copyWith =>
-      __$ObservationCopyWithImpl<_Observation>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      observationCode,
+      observationTitle,
+      group,
+      indicationText,
+      contraindicationText,
+      clarifyingText,
+      codedValues);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ObservationCopyWith<_$_Observation> get copyWith =>
+      __$$_ObservationCopyWithImpl<_$_Observation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationToJson(this);
+    return _$$_ObservationToJson(
+      this,
+    );
   }
 }
 
 abstract class _Observation extends Observation {
   factory _Observation(
-      {Obs? observationCode,
-      String? observationTitle,
-      String? group,
-      String? indicationText,
-      String? contraindicationText,
-      String? clarifyingText,
-      CodedValues? codedValues}) = _$_Observation;
+      {final int? observationCode,
+      final String? observationTitle,
+      final String? group,
+      final String? indicationText,
+      final String? contraindicationText,
+      final String? clarifyingText,
+      final CodedValues? codedValues}) = _$_Observation;
   _Observation._() : super._();
 
   factory _Observation.fromJson(Map<String, dynamic> json) =
       _$_Observation.fromJson;
 
   @override
-  Obs? get observationCode => throw _privateConstructorUsedError;
+  int? get observationCode;
   @override
-  String? get observationTitle => throw _privateConstructorUsedError;
+  String? get observationTitle;
   @override
-  String? get group => throw _privateConstructorUsedError;
+  String? get group;
   @override
-  String? get indicationText => throw _privateConstructorUsedError;
+  String? get indicationText;
   @override
-  String? get contraindicationText => throw _privateConstructorUsedError;
+  String? get contraindicationText;
   @override
-  String? get clarifyingText => throw _privateConstructorUsedError;
+  String? get clarifyingText;
   @override
-  CodedValues? get codedValues => throw _privateConstructorUsedError;
+  CodedValues? get codedValues;
   @override
   @JsonKey(ignore: true)
-  _$ObservationCopyWith<_Observation> get copyWith =>
+  _$$_ObservationCopyWith<_$_Observation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 CodedValues _$CodedValuesFromJson(Map<String, dynamic> json) {
   return _CodedValues.fromJson(json);
 }
-
-/// @nodoc
-class _$CodedValuesTearOff {
-  const _$CodedValuesTearOff();
-
-  _CodedValues call({List<CodedValue>? codedValue}) {
-    return _CodedValues(
-      codedValue: codedValue,
-    );
-  }
-
-  CodedValues fromJson(Map<String, Object> json) {
-    return CodedValues.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CodedValues = _$CodedValuesTearOff();
 
 /// @nodoc
 mixin _$CodedValues {
@@ -519,58 +474,62 @@ mixin _$CodedValues {
 abstract class $CodedValuesCopyWith<$Res> {
   factory $CodedValuesCopyWith(
           CodedValues value, $Res Function(CodedValues) then) =
-      _$CodedValuesCopyWithImpl<$Res>;
+      _$CodedValuesCopyWithImpl<$Res, CodedValues>;
+  @useResult
   $Res call({List<CodedValue>? codedValue});
 }
 
 /// @nodoc
-class _$CodedValuesCopyWithImpl<$Res> implements $CodedValuesCopyWith<$Res> {
+class _$CodedValuesCopyWithImpl<$Res, $Val extends CodedValues>
+    implements $CodedValuesCopyWith<$Res> {
   _$CodedValuesCopyWithImpl(this._value, this._then);
 
-  final CodedValues _value;
   // ignore: unused_field
-  final $Res Function(CodedValues) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? codedValue = freezed,
   }) {
     return _then(_value.copyWith(
-      codedValue: codedValue == freezed
+      codedValue: freezed == codedValue
           ? _value.codedValue
           : codedValue // ignore: cast_nullable_to_non_nullable
               as List<CodedValue>?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$CodedValuesCopyWith<$Res>
+abstract class _$$_CodedValuesCopyWith<$Res>
     implements $CodedValuesCopyWith<$Res> {
-  factory _$CodedValuesCopyWith(
-          _CodedValues value, $Res Function(_CodedValues) then) =
-      __$CodedValuesCopyWithImpl<$Res>;
+  factory _$$_CodedValuesCopyWith(
+          _$_CodedValues value, $Res Function(_$_CodedValues) then) =
+      __$$_CodedValuesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<CodedValue>? codedValue});
 }
 
 /// @nodoc
-class __$CodedValuesCopyWithImpl<$Res> extends _$CodedValuesCopyWithImpl<$Res>
-    implements _$CodedValuesCopyWith<$Res> {
-  __$CodedValuesCopyWithImpl(
-      _CodedValues _value, $Res Function(_CodedValues) _then)
-      : super(_value, (v) => _then(v as _CodedValues));
+class __$$_CodedValuesCopyWithImpl<$Res>
+    extends _$CodedValuesCopyWithImpl<$Res, _$_CodedValues>
+    implements _$$_CodedValuesCopyWith<$Res> {
+  __$$_CodedValuesCopyWithImpl(
+      _$_CodedValues _value, $Res Function(_$_CodedValues) _then)
+      : super(_value, _then);
 
-  @override
-  _CodedValues get _value => super._value as _CodedValues;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? codedValue = freezed,
   }) {
-    return _then(_CodedValues(
-      codedValue: codedValue == freezed
-          ? _value.codedValue
+    return _then(_$_CodedValues(
+      codedValue: freezed == codedValue
+          ? _value._codedValue
           : codedValue // ignore: cast_nullable_to_non_nullable
               as List<CodedValue>?,
     ));
@@ -580,13 +539,22 @@ class __$CodedValuesCopyWithImpl<$Res> extends _$CodedValuesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CodedValues extends _CodedValues {
-  _$_CodedValues({this.codedValue}) : super._();
+  _$_CodedValues({final List<CodedValue>? codedValue})
+      : _codedValue = codedValue,
+        super._();
 
   factory _$_CodedValues.fromJson(Map<String, dynamic> json) =>
       _$$_CodedValuesFromJson(json);
 
+  final List<CodedValue>? _codedValue;
   @override
-  final List<CodedValue>? codedValue;
+  List<CodedValue>? get codedValue {
+    final value = _codedValue;
+    if (value == null) return null;
+    if (_codedValue is EqualUnmodifiableListView) return _codedValue;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -596,65 +564,49 @@ class _$_CodedValues extends _CodedValues {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CodedValues &&
-            (identical(other.codedValue, codedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.codedValue, codedValue)));
+        (other.runtimeType == runtimeType &&
+            other is _$_CodedValues &&
+            const DeepCollectionEquality()
+                .equals(other._codedValue, _codedValue));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(codedValue);
 
   @JsonKey(ignore: true)
   @override
-  _$CodedValuesCopyWith<_CodedValues> get copyWith =>
-      __$CodedValuesCopyWithImpl<_CodedValues>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_codedValue));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CodedValuesCopyWith<_$_CodedValues> get copyWith =>
+      __$$_CodedValuesCopyWithImpl<_$_CodedValues>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodedValuesToJson(this);
+    return _$$_CodedValuesToJson(
+      this,
+    );
   }
 }
 
 abstract class _CodedValues extends CodedValues {
-  factory _CodedValues({List<CodedValue>? codedValue}) = _$_CodedValues;
+  factory _CodedValues({final List<CodedValue>? codedValue}) = _$_CodedValues;
   _CodedValues._() : super._();
 
   factory _CodedValues.fromJson(Map<String, dynamic> json) =
       _$_CodedValues.fromJson;
 
   @override
-  List<CodedValue>? get codedValue => throw _privateConstructorUsedError;
+  List<CodedValue>? get codedValue;
   @override
   @JsonKey(ignore: true)
-  _$CodedValuesCopyWith<_CodedValues> get copyWith =>
+  _$$_CodedValuesCopyWith<_$_CodedValues> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 CodedValue _$CodedValueFromJson(Map<String, dynamic> json) {
   return _CodedValue.fromJson(json);
 }
-
-/// @nodoc
-class _$CodedValueTearOff {
-  const _$CodedValueTearOff();
-
-  _CodedValue call({String? code, String? codeSystem, String? text}) {
-    return _CodedValue(
-      code: code,
-      codeSystem: codeSystem,
-      text: text,
-    );
-  }
-
-  CodedValue fromJson(Map<String, Object> json) {
-    return CodedValue.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CodedValue = _$CodedValueTearOff();
 
 /// @nodoc
 mixin _$CodedValue {
@@ -672,18 +624,22 @@ mixin _$CodedValue {
 abstract class $CodedValueCopyWith<$Res> {
   factory $CodedValueCopyWith(
           CodedValue value, $Res Function(CodedValue) then) =
-      _$CodedValueCopyWithImpl<$Res>;
+      _$CodedValueCopyWithImpl<$Res, CodedValue>;
+  @useResult
   $Res call({String? code, String? codeSystem, String? text});
 }
 
 /// @nodoc
-class _$CodedValueCopyWithImpl<$Res> implements $CodedValueCopyWith<$Res> {
+class _$CodedValueCopyWithImpl<$Res, $Val extends CodedValue>
+    implements $CodedValueCopyWith<$Res> {
   _$CodedValueCopyWithImpl(this._value, this._then);
 
-  final CodedValue _value;
   // ignore: unused_field
-  final $Res Function(CodedValue) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? code = freezed,
@@ -691,57 +647,58 @@ class _$CodedValueCopyWithImpl<$Res> implements $CodedValueCopyWith<$Res> {
     Object? text = freezed,
   }) {
     return _then(_value.copyWith(
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String?,
-      codeSystem: codeSystem == freezed
+      codeSystem: freezed == codeSystem
           ? _value.codeSystem
           : codeSystem // ignore: cast_nullable_to_non_nullable
               as String?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$CodedValueCopyWith<$Res> implements $CodedValueCopyWith<$Res> {
-  factory _$CodedValueCopyWith(
-          _CodedValue value, $Res Function(_CodedValue) then) =
-      __$CodedValueCopyWithImpl<$Res>;
+abstract class _$$_CodedValueCopyWith<$Res>
+    implements $CodedValueCopyWith<$Res> {
+  factory _$$_CodedValueCopyWith(
+          _$_CodedValue value, $Res Function(_$_CodedValue) then) =
+      __$$_CodedValueCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? code, String? codeSystem, String? text});
 }
 
 /// @nodoc
-class __$CodedValueCopyWithImpl<$Res> extends _$CodedValueCopyWithImpl<$Res>
-    implements _$CodedValueCopyWith<$Res> {
-  __$CodedValueCopyWithImpl(
-      _CodedValue _value, $Res Function(_CodedValue) _then)
-      : super(_value, (v) => _then(v as _CodedValue));
+class __$$_CodedValueCopyWithImpl<$Res>
+    extends _$CodedValueCopyWithImpl<$Res, _$_CodedValue>
+    implements _$$_CodedValueCopyWith<$Res> {
+  __$$_CodedValueCopyWithImpl(
+      _$_CodedValue _value, $Res Function(_$_CodedValue) _then)
+      : super(_value, _then);
 
-  @override
-  _CodedValue get _value => super._value as _CodedValue;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? code = freezed,
     Object? codeSystem = freezed,
     Object? text = freezed,
   }) {
-    return _then(_CodedValue(
-      code: code == freezed
+    return _then(_$_CodedValue(
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String?,
-      codeSystem: codeSystem == freezed
+      codeSystem: freezed == codeSystem
           ? _value.codeSystem
           : codeSystem // ignore: cast_nullable_to_non_nullable
               as String?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -772,50 +729,50 @@ class _$_CodedValue extends _CodedValue {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CodedValue &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_CodedValue &&
+            (identical(other.code, code) || other.code == code) &&
             (identical(other.codeSystem, codeSystem) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeSystem, codeSystem)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)));
+                other.codeSystem == codeSystem) &&
+            (identical(other.text, text) || other.text == text));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(codeSystem) ^
-      const DeepCollectionEquality().hash(text);
 
   @JsonKey(ignore: true)
   @override
-  _$CodedValueCopyWith<_CodedValue> get copyWith =>
-      __$CodedValueCopyWithImpl<_CodedValue>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, code, codeSystem, text);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CodedValueCopyWith<_$_CodedValue> get copyWith =>
+      __$$_CodedValueCopyWithImpl<_$_CodedValue>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodedValueToJson(this);
+    return _$$_CodedValueToJson(
+      this,
+    );
   }
 }
 
 abstract class _CodedValue extends CodedValue {
-  factory _CodedValue({String? code, String? codeSystem, String? text}) =
-      _$_CodedValue;
+  factory _CodedValue(
+      {final String? code,
+      final String? codeSystem,
+      final String? text}) = _$_CodedValue;
   _CodedValue._() : super._();
 
   factory _CodedValue.fromJson(Map<String, dynamic> json) =
       _$_CodedValue.fromJson;
 
   @override
-  String? get code => throw _privateConstructorUsedError;
+  String? get code;
   @override
-  String? get codeSystem => throw _privateConstructorUsedError;
+  String? get codeSystem;
   @override
-  String? get text => throw _privateConstructorUsedError;
+  String? get text;
   @override
   @JsonKey(ignore: true)
-  _$CodedValueCopyWith<_CodedValue> get copyWith =>
+  _$$_CodedValueCopyWith<_$_CodedValue> get copyWith =>
       throw _privateConstructorUsedError;
 }

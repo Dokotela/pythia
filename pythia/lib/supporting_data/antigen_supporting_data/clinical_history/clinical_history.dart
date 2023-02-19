@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../pythia.dart';
-
 part 'clinical_history.freezed.dart';
 part 'clinical_history.g.dart';
 
@@ -9,7 +7,7 @@ part 'clinical_history.g.dart';
 class ClinicalHistory with _$ClinicalHistory {
   ClinicalHistory._();
   factory ClinicalHistory({
-    Obs? guidelineCode,
+    int? guidelineCode,
     String? guidelineTitle,
   }) = _ClinicalHistory;
 

@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'select_series.dart';
 
@@ -11,44 +12,11 @@ part of 'select_series.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SelectSeries _$SelectSeriesFromJson(Map<String, dynamic> json) {
   return _SelectSeries.fromJson(json);
 }
-
-/// @nodoc
-class _$SelectSeriesTearOff {
-  const _$SelectSeriesTearOff();
-
-  _SelectSeries call(
-      {Binary? defaultSeries,
-      Binary? productPath,
-      SeriesGroupName? seriesGroupName,
-      SeriesGroup? seriesGroup,
-      SeriesPriority? seriesPriority,
-      SeriesPreference? seriesPreference,
-      String? minAgeToStart,
-      String? maxAgeToStart}) {
-    return _SelectSeries(
-      defaultSeries: defaultSeries,
-      productPath: productPath,
-      seriesGroupName: seriesGroupName,
-      seriesGroup: seriesGroup,
-      seriesPriority: seriesPriority,
-      seriesPreference: seriesPreference,
-      minAgeToStart: minAgeToStart,
-      maxAgeToStart: maxAgeToStart,
-    );
-  }
-
-  SelectSeries fromJson(Map<String, Object> json) {
-    return SelectSeries.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SelectSeries = _$SelectSeriesTearOff();
 
 /// @nodoc
 mixin _$SelectSeries {
@@ -71,7 +39,8 @@ mixin _$SelectSeries {
 abstract class $SelectSeriesCopyWith<$Res> {
   factory $SelectSeriesCopyWith(
           SelectSeries value, $Res Function(SelectSeries) then) =
-      _$SelectSeriesCopyWithImpl<$Res>;
+      _$SelectSeriesCopyWithImpl<$Res, SelectSeries>;
+  @useResult
   $Res call(
       {Binary? defaultSeries,
       Binary? productPath,
@@ -84,13 +53,16 @@ abstract class $SelectSeriesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SelectSeriesCopyWithImpl<$Res> implements $SelectSeriesCopyWith<$Res> {
+class _$SelectSeriesCopyWithImpl<$Res, $Val extends SelectSeries>
+    implements $SelectSeriesCopyWith<$Res> {
   _$SelectSeriesCopyWithImpl(this._value, this._then);
 
-  final SelectSeries _value;
   // ignore: unused_field
-  final $Res Function(SelectSeries) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? defaultSeries = freezed,
@@ -103,49 +75,50 @@ class _$SelectSeriesCopyWithImpl<$Res> implements $SelectSeriesCopyWith<$Res> {
     Object? maxAgeToStart = freezed,
   }) {
     return _then(_value.copyWith(
-      defaultSeries: defaultSeries == freezed
+      defaultSeries: freezed == defaultSeries
           ? _value.defaultSeries
           : defaultSeries // ignore: cast_nullable_to_non_nullable
               as Binary?,
-      productPath: productPath == freezed
+      productPath: freezed == productPath
           ? _value.productPath
           : productPath // ignore: cast_nullable_to_non_nullable
               as Binary?,
-      seriesGroupName: seriesGroupName == freezed
+      seriesGroupName: freezed == seriesGroupName
           ? _value.seriesGroupName
           : seriesGroupName // ignore: cast_nullable_to_non_nullable
               as SeriesGroupName?,
-      seriesGroup: seriesGroup == freezed
+      seriesGroup: freezed == seriesGroup
           ? _value.seriesGroup
           : seriesGroup // ignore: cast_nullable_to_non_nullable
               as SeriesGroup?,
-      seriesPriority: seriesPriority == freezed
+      seriesPriority: freezed == seriesPriority
           ? _value.seriesPriority
           : seriesPriority // ignore: cast_nullable_to_non_nullable
               as SeriesPriority?,
-      seriesPreference: seriesPreference == freezed
+      seriesPreference: freezed == seriesPreference
           ? _value.seriesPreference
           : seriesPreference // ignore: cast_nullable_to_non_nullable
               as SeriesPreference?,
-      minAgeToStart: minAgeToStart == freezed
+      minAgeToStart: freezed == minAgeToStart
           ? _value.minAgeToStart
           : minAgeToStart // ignore: cast_nullable_to_non_nullable
               as String?,
-      maxAgeToStart: maxAgeToStart == freezed
+      maxAgeToStart: freezed == maxAgeToStart
           ? _value.maxAgeToStart
           : maxAgeToStart // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$SelectSeriesCopyWith<$Res>
+abstract class _$$_SelectSeriesCopyWith<$Res>
     implements $SelectSeriesCopyWith<$Res> {
-  factory _$SelectSeriesCopyWith(
-          _SelectSeries value, $Res Function(_SelectSeries) then) =
-      __$SelectSeriesCopyWithImpl<$Res>;
+  factory _$$_SelectSeriesCopyWith(
+          _$_SelectSeries value, $Res Function(_$_SelectSeries) then) =
+      __$$_SelectSeriesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Binary? defaultSeries,
       Binary? productPath,
@@ -158,15 +131,14 @@ abstract class _$SelectSeriesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SelectSeriesCopyWithImpl<$Res> extends _$SelectSeriesCopyWithImpl<$Res>
-    implements _$SelectSeriesCopyWith<$Res> {
-  __$SelectSeriesCopyWithImpl(
-      _SelectSeries _value, $Res Function(_SelectSeries) _then)
-      : super(_value, (v) => _then(v as _SelectSeries));
+class __$$_SelectSeriesCopyWithImpl<$Res>
+    extends _$SelectSeriesCopyWithImpl<$Res, _$_SelectSeries>
+    implements _$$_SelectSeriesCopyWith<$Res> {
+  __$$_SelectSeriesCopyWithImpl(
+      _$_SelectSeries _value, $Res Function(_$_SelectSeries) _then)
+      : super(_value, _then);
 
-  @override
-  _SelectSeries get _value => super._value as _SelectSeries;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? defaultSeries = freezed,
@@ -178,36 +150,36 @@ class __$SelectSeriesCopyWithImpl<$Res> extends _$SelectSeriesCopyWithImpl<$Res>
     Object? minAgeToStart = freezed,
     Object? maxAgeToStart = freezed,
   }) {
-    return _then(_SelectSeries(
-      defaultSeries: defaultSeries == freezed
+    return _then(_$_SelectSeries(
+      defaultSeries: freezed == defaultSeries
           ? _value.defaultSeries
           : defaultSeries // ignore: cast_nullable_to_non_nullable
               as Binary?,
-      productPath: productPath == freezed
+      productPath: freezed == productPath
           ? _value.productPath
           : productPath // ignore: cast_nullable_to_non_nullable
               as Binary?,
-      seriesGroupName: seriesGroupName == freezed
+      seriesGroupName: freezed == seriesGroupName
           ? _value.seriesGroupName
           : seriesGroupName // ignore: cast_nullable_to_non_nullable
               as SeriesGroupName?,
-      seriesGroup: seriesGroup == freezed
+      seriesGroup: freezed == seriesGroup
           ? _value.seriesGroup
           : seriesGroup // ignore: cast_nullable_to_non_nullable
               as SeriesGroup?,
-      seriesPriority: seriesPriority == freezed
+      seriesPriority: freezed == seriesPriority
           ? _value.seriesPriority
           : seriesPriority // ignore: cast_nullable_to_non_nullable
               as SeriesPriority?,
-      seriesPreference: seriesPreference == freezed
+      seriesPreference: freezed == seriesPreference
           ? _value.seriesPreference
           : seriesPreference // ignore: cast_nullable_to_non_nullable
               as SeriesPreference?,
-      minAgeToStart: minAgeToStart == freezed
+      minAgeToStart: freezed == minAgeToStart
           ? _value.minAgeToStart
           : minAgeToStart // ignore: cast_nullable_to_non_nullable
               as String?,
-      maxAgeToStart: maxAgeToStart == freezed
+      maxAgeToStart: freezed == maxAgeToStart
           ? _value.maxAgeToStart
           : maxAgeToStart // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -257,89 +229,86 @@ class _$_SelectSeries extends _SelectSeries {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SelectSeries &&
+        (other.runtimeType == runtimeType &&
+            other is _$_SelectSeries &&
             (identical(other.defaultSeries, defaultSeries) ||
-                const DeepCollectionEquality()
-                    .equals(other.defaultSeries, defaultSeries)) &&
+                other.defaultSeries == defaultSeries) &&
             (identical(other.productPath, productPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.productPath, productPath)) &&
+                other.productPath == productPath) &&
             (identical(other.seriesGroupName, seriesGroupName) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesGroupName, seriesGroupName)) &&
+                other.seriesGroupName == seriesGroupName) &&
             (identical(other.seriesGroup, seriesGroup) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesGroup, seriesGroup)) &&
+                other.seriesGroup == seriesGroup) &&
             (identical(other.seriesPriority, seriesPriority) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesPriority, seriesPriority)) &&
+                other.seriesPriority == seriesPriority) &&
             (identical(other.seriesPreference, seriesPreference) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesPreference, seriesPreference)) &&
+                other.seriesPreference == seriesPreference) &&
             (identical(other.minAgeToStart, minAgeToStart) ||
-                const DeepCollectionEquality()
-                    .equals(other.minAgeToStart, minAgeToStart)) &&
+                other.minAgeToStart == minAgeToStart) &&
             (identical(other.maxAgeToStart, maxAgeToStart) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxAgeToStart, maxAgeToStart)));
+                other.maxAgeToStart == maxAgeToStart));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(defaultSeries) ^
-      const DeepCollectionEquality().hash(productPath) ^
-      const DeepCollectionEquality().hash(seriesGroupName) ^
-      const DeepCollectionEquality().hash(seriesGroup) ^
-      const DeepCollectionEquality().hash(seriesPriority) ^
-      const DeepCollectionEquality().hash(seriesPreference) ^
-      const DeepCollectionEquality().hash(minAgeToStart) ^
-      const DeepCollectionEquality().hash(maxAgeToStart);
 
   @JsonKey(ignore: true)
   @override
-  _$SelectSeriesCopyWith<_SelectSeries> get copyWith =>
-      __$SelectSeriesCopyWithImpl<_SelectSeries>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      defaultSeries,
+      productPath,
+      seriesGroupName,
+      seriesGroup,
+      seriesPriority,
+      seriesPreference,
+      minAgeToStart,
+      maxAgeToStart);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SelectSeriesCopyWith<_$_SelectSeries> get copyWith =>
+      __$$_SelectSeriesCopyWithImpl<_$_SelectSeries>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SelectSeriesToJson(this);
+    return _$$_SelectSeriesToJson(
+      this,
+    );
   }
 }
 
 abstract class _SelectSeries extends SelectSeries {
   factory _SelectSeries(
-      {Binary? defaultSeries,
-      Binary? productPath,
-      SeriesGroupName? seriesGroupName,
-      SeriesGroup? seriesGroup,
-      SeriesPriority? seriesPriority,
-      SeriesPreference? seriesPreference,
-      String? minAgeToStart,
-      String? maxAgeToStart}) = _$_SelectSeries;
+      {final Binary? defaultSeries,
+      final Binary? productPath,
+      final SeriesGroupName? seriesGroupName,
+      final SeriesGroup? seriesGroup,
+      final SeriesPriority? seriesPriority,
+      final SeriesPreference? seriesPreference,
+      final String? minAgeToStart,
+      final String? maxAgeToStart}) = _$_SelectSeries;
   _SelectSeries._() : super._();
 
   factory _SelectSeries.fromJson(Map<String, dynamic> json) =
       _$_SelectSeries.fromJson;
 
   @override
-  Binary? get defaultSeries => throw _privateConstructorUsedError;
+  Binary? get defaultSeries;
   @override
-  Binary? get productPath => throw _privateConstructorUsedError;
+  Binary? get productPath;
   @override
-  SeriesGroupName? get seriesGroupName => throw _privateConstructorUsedError;
+  SeriesGroupName? get seriesGroupName;
   @override
-  SeriesGroup? get seriesGroup => throw _privateConstructorUsedError;
+  SeriesGroup? get seriesGroup;
   @override
-  SeriesPriority? get seriesPriority => throw _privateConstructorUsedError;
+  SeriesPriority? get seriesPriority;
   @override
-  SeriesPreference? get seriesPreference => throw _privateConstructorUsedError;
+  SeriesPreference? get seriesPreference;
   @override
-  String? get minAgeToStart => throw _privateConstructorUsedError;
+  String? get minAgeToStart;
   @override
-  String? get maxAgeToStart => throw _privateConstructorUsedError;
+  String? get maxAgeToStart;
   @override
   @JsonKey(ignore: true)
-  _$SelectSeriesCopyWith<_SelectSeries> get copyWith =>
+  _$$_SelectSeriesCopyWith<_$_SelectSeries> get copyWith =>
       throw _privateConstructorUsedError;
 }

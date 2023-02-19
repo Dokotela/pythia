@@ -15,17 +15,8 @@ _$_Immunity _$$_ImmunityFromJson(Map<String, dynamic> json) => _$_Immunity(
           : DateOfBirth.fromJson(json['dateOfBirth'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ImmunityToJson(_$_Immunity instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('clinicalHistory',
-      instance.clinicalHistory?.map((e) => e.toJson()).toList());
-  writeNotNull('dateOfBirth', instance.dateOfBirth?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$_ImmunityToJson(_$_Immunity instance) =>
+    <String, dynamic>{
+      'clinicalHistory': instance.clinicalHistory,
+      'dateOfBirth': instance.dateOfBirth,
+    };

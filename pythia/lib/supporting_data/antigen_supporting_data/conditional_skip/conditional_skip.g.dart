@@ -8,64 +8,19 @@ part of 'conditional_skip.dart';
 
 _$_ConditionalSkip _$$_ConditionalSkipFromJson(Map<String, dynamic> json) =>
     _$_ConditionalSkip(
-      context: _$enumDecodeNullable(_$SkipContextEnumMap, json['context']),
-      setLogic: _$enumDecodeNullable(_$SetLogicEnumMap, json['setLogic']),
+      context: $enumDecodeNullable(_$SkipContextEnumMap, json['context']),
+      setLogic: $enumDecodeNullable(_$SetLogicEnumMap, json['setLogic']),
       set_: (json['set'] as List<dynamic>?)
           ?.map((e) => VaxSet.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConditionalSkipToJson(_$_ConditionalSkip instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('context', _$SkipContextEnumMap[instance.context]);
-  writeNotNull('setLogic', _$SetLogicEnumMap[instance.setLogic]);
-  writeNotNull('set', instance.set_?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
+Map<String, dynamic> _$$_ConditionalSkipToJson(_$_ConditionalSkip instance) =>
+    <String, dynamic>{
+      'context': _$SkipContextEnumMap[instance.context],
+      'setLogic': _$SetLogicEnumMap[instance.setLogic],
+      'set': instance.set_,
+    };
 
 const _$SkipContextEnumMap = {
   SkipContext.evaluation: 'Evaluation',

@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'exclusion.dart';
 
@@ -11,34 +12,15 @@ part of 'exclusion.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Exclusion _$ExclusionFromJson(Map<String, dynamic> json) {
   return _Exclusion.fromJson(json);
 }
 
 /// @nodoc
-class _$ExclusionTearOff {
-  const _$ExclusionTearOff();
-
-  _Exclusion call({Obs? exclusionCode, String? exclusionTitle}) {
-    return _Exclusion(
-      exclusionCode: exclusionCode,
-      exclusionTitle: exclusionTitle,
-    );
-  }
-
-  Exclusion fromJson(Map<String, Object> json) {
-    return Exclusion.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Exclusion = _$ExclusionTearOff();
-
-/// @nodoc
 mixin _$Exclusion {
-  Obs? get exclusionCode => throw _privateConstructorUsedError;
+  int? get exclusionCode => throw _privateConstructorUsedError;
   String? get exclusionTitle => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -50,65 +32,70 @@ mixin _$Exclusion {
 /// @nodoc
 abstract class $ExclusionCopyWith<$Res> {
   factory $ExclusionCopyWith(Exclusion value, $Res Function(Exclusion) then) =
-      _$ExclusionCopyWithImpl<$Res>;
-  $Res call({Obs? exclusionCode, String? exclusionTitle});
+      _$ExclusionCopyWithImpl<$Res, Exclusion>;
+  @useResult
+  $Res call({int? exclusionCode, String? exclusionTitle});
 }
 
 /// @nodoc
-class _$ExclusionCopyWithImpl<$Res> implements $ExclusionCopyWith<$Res> {
+class _$ExclusionCopyWithImpl<$Res, $Val extends Exclusion>
+    implements $ExclusionCopyWith<$Res> {
   _$ExclusionCopyWithImpl(this._value, this._then);
 
-  final Exclusion _value;
   // ignore: unused_field
-  final $Res Function(Exclusion) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? exclusionCode = freezed,
     Object? exclusionTitle = freezed,
   }) {
     return _then(_value.copyWith(
-      exclusionCode: exclusionCode == freezed
+      exclusionCode: freezed == exclusionCode
           ? _value.exclusionCode
           : exclusionCode // ignore: cast_nullable_to_non_nullable
-              as Obs?,
-      exclusionTitle: exclusionTitle == freezed
+              as int?,
+      exclusionTitle: freezed == exclusionTitle
           ? _value.exclusionTitle
           : exclusionTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ExclusionCopyWith<$Res> implements $ExclusionCopyWith<$Res> {
-  factory _$ExclusionCopyWith(
-          _Exclusion value, $Res Function(_Exclusion) then) =
-      __$ExclusionCopyWithImpl<$Res>;
+abstract class _$$_ExclusionCopyWith<$Res> implements $ExclusionCopyWith<$Res> {
+  factory _$$_ExclusionCopyWith(
+          _$_Exclusion value, $Res Function(_$_Exclusion) then) =
+      __$$_ExclusionCopyWithImpl<$Res>;
   @override
-  $Res call({Obs? exclusionCode, String? exclusionTitle});
+  @useResult
+  $Res call({int? exclusionCode, String? exclusionTitle});
 }
 
 /// @nodoc
-class __$ExclusionCopyWithImpl<$Res> extends _$ExclusionCopyWithImpl<$Res>
-    implements _$ExclusionCopyWith<$Res> {
-  __$ExclusionCopyWithImpl(_Exclusion _value, $Res Function(_Exclusion) _then)
-      : super(_value, (v) => _then(v as _Exclusion));
+class __$$_ExclusionCopyWithImpl<$Res>
+    extends _$ExclusionCopyWithImpl<$Res, _$_Exclusion>
+    implements _$$_ExclusionCopyWith<$Res> {
+  __$$_ExclusionCopyWithImpl(
+      _$_Exclusion _value, $Res Function(_$_Exclusion) _then)
+      : super(_value, _then);
 
-  @override
-  _Exclusion get _value => super._value as _Exclusion;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? exclusionCode = freezed,
     Object? exclusionTitle = freezed,
   }) {
-    return _then(_Exclusion(
-      exclusionCode: exclusionCode == freezed
+    return _then(_$_Exclusion(
+      exclusionCode: freezed == exclusionCode
           ? _value.exclusionCode
           : exclusionCode // ignore: cast_nullable_to_non_nullable
-              as Obs?,
-      exclusionTitle: exclusionTitle == freezed
+              as int?,
+      exclusionTitle: freezed == exclusionTitle
           ? _value.exclusionTitle
           : exclusionTitle // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -125,7 +112,7 @@ class _$_Exclusion extends _Exclusion {
       _$$_ExclusionFromJson(json);
 
   @override
-  final Obs? exclusionCode;
+  final int? exclusionCode;
   @override
   final String? exclusionTitle;
 
@@ -137,34 +124,34 @@ class _$_Exclusion extends _Exclusion {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Exclusion &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Exclusion &&
             (identical(other.exclusionCode, exclusionCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.exclusionCode, exclusionCode)) &&
+                other.exclusionCode == exclusionCode) &&
             (identical(other.exclusionTitle, exclusionTitle) ||
-                const DeepCollectionEquality()
-                    .equals(other.exclusionTitle, exclusionTitle)));
+                other.exclusionTitle == exclusionTitle));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(exclusionCode) ^
-      const DeepCollectionEquality().hash(exclusionTitle);
 
   @JsonKey(ignore: true)
   @override
-  _$ExclusionCopyWith<_Exclusion> get copyWith =>
-      __$ExclusionCopyWithImpl<_Exclusion>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, exclusionCode, exclusionTitle);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ExclusionCopyWith<_$_Exclusion> get copyWith =>
+      __$$_ExclusionCopyWithImpl<_$_Exclusion>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExclusionToJson(this);
+    return _$$_ExclusionToJson(
+      this,
+    );
   }
 }
 
 abstract class _Exclusion extends Exclusion {
-  factory _Exclusion({Obs? exclusionCode, String? exclusionTitle}) =
+  factory _Exclusion({final int? exclusionCode, final String? exclusionTitle}) =
       _$_Exclusion;
   _Exclusion._() : super._();
 
@@ -172,11 +159,11 @@ abstract class _Exclusion extends Exclusion {
       _$_Exclusion.fromJson;
 
   @override
-  Obs? get exclusionCode => throw _privateConstructorUsedError;
+  int? get exclusionCode;
   @override
-  String? get exclusionTitle => throw _privateConstructorUsedError;
+  String? get exclusionTitle;
   @override
   @JsonKey(ignore: true)
-  _$ExclusionCopyWith<_Exclusion> get copyWith =>
+  _$$_ExclusionCopyWith<_$_Exclusion> get copyWith =>
       throw _privateConstructorUsedError;
 }
