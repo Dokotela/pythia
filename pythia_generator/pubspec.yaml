@@ -1,0 +1,12 @@
+name: pythia_generator
+description: Pulling the data from the cloud to make supporting data fro VaxCast
+publish_to: "none"
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+  
+dependencies:
+  csv: ^5.0.1
+  gsheets: ^0.4.2
+  pythia: 
+    path: ../pythia

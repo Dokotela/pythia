@@ -1,15 +1,5 @@
-# FHIR related Immunizations IG
-*.DS_Store
-*Thumbs.db
-*/input-cache/org.hl7.fhir.publisher.jar
-*/output
-*/template
-*/temp
-*/package.json
-*/build*
-*SUSHI-GENERATED-FILES.md
-*/fsh-generated
-*/input-cache/publisher.jar
+# Credentials
+*api.dart
 
 # Miscellaneous
 *.class
