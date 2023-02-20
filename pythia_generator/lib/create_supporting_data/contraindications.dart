@@ -106,12 +106,6 @@ Contraindications? contraindications(String? contraindicationString) {
             i.length < 5 ? null : i[4]!.toString().substring(open + 1, close);
         var text =
             i.length < 5 ? null : i[4]!.toString().substring(0, open - 1);
-        print(Vaccine(
-          vaccineType: text,
-          cvx: code!,
-          beginAge: i[5]!.toString() == 'n/a' ? null : valueToString(i[5]!),
-          endAge: i[6]!.toString() == 'n/a' ? null : valueToString(i[6]!),
-        ).toJson());
 
         contraindications = contraindications.copyWith.vaccine!(
           contraindication: [

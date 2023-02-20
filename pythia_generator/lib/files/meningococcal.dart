@@ -1,4 +1,6 @@
-{
+import 'package:pythia/pythia.dart';
+
+final meningococcal = AntigenSupportingData.fromJson({
     "targetDisease": "Meningococcal",
     "vaccineGroup": "Meningococcal",
     "contraindications": {
@@ -104,6 +106,15 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "10 years",
+                            "minAge": "11 years",
+                            "earliestRecAge": "11 years",
+                            "latestRecAge": "13 years + 4 weeks",
+                            "maxAge": "19 years"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "Meningococcal, MCV4P",
@@ -199,6 +210,15 @@
                 },
                 {
                     "doseNumber": "Dose 2",
+                    "age": [
+                        {
+                            "absMinAge": "16 years - 4 days",
+                            "minAge": "16 years",
+                            "earliestRecAge": "16 years",
+                            "latestRecAge": "17 years + 4 weeks",
+                            "maxAge": "19 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -283,7 +303,7 @@
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": "070"
+                        "code": 70
                     },
                     "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup",
                     "beginAge": "2 months"
@@ -291,7 +311,7 @@
                 {
                     "observationCode": {
                         "text": "Persistent complement, properdin, or factor B deficiency",
-                        "code": "151"
+                        "code": 151
                     },
                     "description": "Administer to persons who have persistent complement deficiencies",
                     "beginAge": "2 months"
@@ -299,7 +319,7 @@
                 {
                     "observationCode": {
                         "text": "Anatomical or functional asplenia",
-                        "code": "160"
+                        "code": 160
                     },
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "2 months"
@@ -307,7 +327,7 @@
                 {
                     "observationCode": {
                         "text": "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
-                        "code": "164"
+                        "code": 164
                     },
                     "description": "Administer to persons who travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
                     "beginAge": "2 months"
@@ -315,7 +335,7 @@
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": "186"
+                        "code": 186
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "2 months"
@@ -324,6 +344,13 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "2 months - 4 days",
+                            "minAge": "2 months",
+                            "earliestRecAge": "2 months"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "Meningococcal, MCV4O",
@@ -389,6 +416,11 @@
                 },
                 {
                     "doseNumber": "Dose 2",
+                    "age": [
+                        {
+                            "earliestRecAge": "4 months"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -466,6 +498,11 @@
                 },
                 {
                     "doseNumber": "Dose 3",
+                    "age": [
+                        {
+                            "earliestRecAge": "6 months"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -541,6 +578,11 @@
                 },
                 {
                     "doseNumber": "Dose 4",
+                    "age": [
+                        {
+                            "earliestRecAge": "7 months"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -639,6 +681,13 @@
                 },
                 {
                     "doseNumber": "Dose 5",
+                    "age": [
+                        {
+                            "absMinAge": "12 months - 4 days",
+                            "minAge": "12 months",
+                            "earliestRecAge": "12 months"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -849,7 +898,7 @@
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": "070"
+                        "code": 70
                     },
                     "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup",
                     "beginAge": "2 months"
@@ -857,7 +906,7 @@
                 {
                     "observationCode": {
                         "text": "Persistent complement, properdin, or factor B deficiency",
-                        "code": "151"
+                        "code": 151
                     },
                     "description": "Administer to persons who have persistent complement deficiencies",
                     "beginAge": "2 months"
@@ -865,7 +914,7 @@
                 {
                     "observationCode": {
                         "text": "Anatomical or functional asplenia",
-                        "code": "160"
+                        "code": 160
                     },
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "2 months"
@@ -874,6 +923,14 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "6 weeks",
+                            "minAge": "2 months",
+                            "earliestRecAge": "2 months",
+                            "maxAge": "19 months"
+                        }
+                    ],
                     "allowableVaccine": [
                         {
                             "vaccineType": "Meningococcal C/Y-HIB PRP",
@@ -886,6 +943,11 @@
                 },
                 {
                     "doseNumber": "Dose 2",
+                    "age": [
+                        {
+                            "maxAge": "19 months"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -924,6 +986,11 @@
                 },
                 {
                     "doseNumber": "Dose 3",
+                    "age": [
+                        {
+                            "maxAge": "19 months"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -982,6 +1049,11 @@
                 },
                 {
                     "doseNumber": "Dose 4",
+                    "age": [
+                        {
+                            "maxAge": "19 months"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -1194,7 +1266,7 @@
                 {
                     "observationCode": {
                         "text": "Persistent complement, properdin, or factor B deficiency",
-                        "code": "151"
+                        "code": 151
                     },
                     "description": "Administer to persons who have persistent complement deficiencies",
                     "beginAge": "2 years"
@@ -1202,7 +1274,7 @@
                 {
                     "observationCode": {
                         "text": "Anatomical or functional asplenia",
-                        "code": "160"
+                        "code": 160
                     },
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "2 years"
@@ -1210,7 +1282,7 @@
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": "186"
+                        "code": 186
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "2 years"
@@ -1219,6 +1291,13 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "2 years - 4 days",
+                            "minAge": "2 years",
+                            "earliestRecAge": "2 years"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "Meningococcal, MCV4P",
@@ -1490,7 +1569,7 @@
                 {
                     "observationCode": {
                         "text": "College students living in residence halls",
-                        "code": "046"
+                        "code": 46
                     },
                     "description": "Administer to college students living in residence halls.",
                     "beginAge": "19 years",
@@ -1499,7 +1578,7 @@
                 {
                     "observationCode": {
                         "text": "Microbiologists routinely exposed to Neisseria meningitidis",
-                        "code": "050"
+                        "code": 50
                     },
                     "description": "Administer to microbiologists routinely exposed to Neisseria meningitidis",
                     "beginAge": "19 years"
@@ -1507,7 +1586,7 @@
                 {
                     "observationCode": {
                         "text": "Military recruits",
-                        "code": "064"
+                        "code": 64
                     },
                     "description": "Administer to military recruits.",
                     "beginAge": "19 years"
@@ -1515,7 +1594,7 @@
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": "070"
+                        "code": 70
                     },
                     "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup.",
                     "beginAge": "2 years"
@@ -1523,7 +1602,7 @@
                 {
                     "observationCode": {
                         "text": "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
-                        "code": "164"
+                        "code": 164
                     },
                     "description": "Administer to persons who travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic.",
                     "beginAge": "2 years"
@@ -1532,6 +1611,13 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "2 years - 4 days",
+                            "minAge": "2 years",
+                            "earliestRecAge": "2 years"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "Meningococcal, MCV4P",
@@ -1726,4 +1812,4 @@
             ]
         }
     ]
-}
+});

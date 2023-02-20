@@ -76,11 +76,11 @@ Future<void> createSupportingData(
       );
 
       print(antigenSupportingData.series?[0].targetDisease);
-      print(
-          antigenSupportingData.series?[0].targetDisease?.replaceAll(' ', '_'));
-      print(antigenSupportingData.series?[0].targetDisease
-          ?.replaceAll(' ', '_')
-          .replaceAll('-', '_'));
+      // print(
+      //     antigenSupportingData.series?[0].targetDisease?.replaceAll(' ', '_'));
+      // print(antigenSupportingData.series?[0].targetDisease
+      //     ?.replaceAll(' ', '_')
+      //     .replaceAll('-', '_'));
       final fileName = antigenSupportingData.series?[0].targetDisease
           ?.replaceAll(' ', '_')
           .replaceAll('-', '_')

@@ -13,7 +13,6 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
           doseNumber: doseNumberStringToEnum[row[1]!.toString().trim()]);
     } else if (row[0]!.toString().contains('Age') &&
         !row[1]!.toString().contains('Absolute Minimum Age')) {
-      print('age');
       if ((row[1] != null && row[1] != '' && row[1] != 'n/a') ||
           (row[2] != null && row[2] != '' && row[2] != 'n/a') ||
           (row[3] != null && row[3] != '' && row[3] != 'n/a') ||
@@ -21,7 +20,6 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
           (row[5] != null && row[5] != '' && row[5] != 'n/a') ||
           (row[6] != null && row[6] != '' && row[6] != 'n/a') ||
           (row[7] != null && row[7] != '' && row[7] != 'n/a')) {
-        print('not null');
         if (seriesDose.age == null) {
           seriesDose = seriesDose.copyWith(
             age: [
@@ -80,7 +78,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
             fromMostRecent: valueToString(row[3]!),
             fromRelevantObs: open == -1 || close == -1
                 ? null
-                : ObservationCode(code: int.tryParse(code), text: text),
+                : ObservationCode(code: code, text: text),
             absMinInt: valueToString(row[5]!),
             minInt: valueToString(row[6]!),
             earliestRecInt: valueToString(row[7]!),

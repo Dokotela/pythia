@@ -21,7 +21,7 @@ ObservationCode _$ObservationCodeFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ObservationCode {
   String? get text => throw _privateConstructorUsedError;
-  int? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $ObservationCodeCopyWith<$Res> {
           ObservationCode value, $Res Function(ObservationCode) then) =
       _$ObservationCodeCopyWithImpl<$Res, ObservationCode>;
   @useResult
-  $Res call({String? text, int? code});
+  $Res call({String? text, String? code});
 }
 
 /// @nodoc
@@ -62,7 +62,7 @@ class _$ObservationCodeCopyWithImpl<$Res, $Val extends ObservationCode>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
     ) as $Val);
   }
 }
@@ -75,7 +75,7 @@ abstract class _$$_ObservationCodeCopyWith<$Res>
       __$$_ObservationCodeCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? text, int? code});
+  $Res call({String? text, String? code});
 }
 
 /// @nodoc
@@ -100,7 +100,7 @@ class __$$_ObservationCodeCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
     ));
   }
 }
@@ -116,7 +116,7 @@ class _$_ObservationCode extends _ObservationCode {
   @override
   final String? text;
   @override
-  final int? code;
+  final String? code;
 
   @override
   String toString() {
@@ -151,7 +151,7 @@ class _$_ObservationCode extends _ObservationCode {
 }
 
 abstract class _ObservationCode extends ObservationCode {
-  factory _ObservationCode({final String? text, final int? code}) =
+  factory _ObservationCode({final String? text, final String? code}) =
       _$_ObservationCode;
   _ObservationCode._() : super._();
 
@@ -161,7 +161,7 @@ abstract class _ObservationCode extends ObservationCode {
   @override
   String? get text;
   @override
-  int? get code;
+  String? get code;
   @override
   @JsonKey(ignore: true)
   _$$_ObservationCodeCopyWith<_$_ObservationCode> get copyWith =>

@@ -1,4 +1,6 @@
-{
+import 'package:pythia/pythia.dart';
+
+final meningococcalB = AntigenSupportingData.fromJson({
     "targetDisease": "Meningococcal B",
     "vaccineGroup": "Meningococcal B",
     "contraindications": {
@@ -30,13 +32,13 @@
                 "seriesGroupName": "Patient Seeks Protection",
                 "seriesGroup": "1",
                 "seriesPriority": "A",
-                "minAgeToStart": "10 years"
+                "minAgeToStart": "16 years"
             },
             "indication": [
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": "001"
+                        "code": 1
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "16 years",
@@ -46,7 +48,7 @@
                 {
                     "observationCode": {
                         "text": "Patient seeks Meningococcal B protection",
-                        "code": "177"
+                        "code": 177
                     },
                     "description": "Administer to persons seeking protection from Meningococcal B.",
                     "beginAge": "16 years",
@@ -57,6 +59,13 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "10 years - 4 days",
+                            "minAge": "16 years",
+                            "earliestRecAge": "16 years"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "meningococcal B, OMV",
@@ -79,6 +88,13 @@
                 },
                 {
                     "doseNumber": "Dose 2",
+                    "age": [
+                        {
+                            "absMinAge": "10 years - 4 days",
+                            "minAge": "16 years",
+                            "earliestRecAge": "16 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -143,7 +159,7 @@
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": "001"
+                        "code": 1
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "16 years",
@@ -153,7 +169,7 @@
                 {
                     "observationCode": {
                         "text": "Patient seeks Meningococcal B protection",
-                        "code": "177"
+                        "code": 177
                     },
                     "description": "Administer to persons seeking protection from Meningococcal B.",
                     "beginAge": "16 years",
@@ -164,6 +180,13 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "10 years - 4 days",
+                            "minAge": "16 years",
+                            "earliestRecAge": "16 years"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "meningococcal B, recombinant",
@@ -186,6 +209,13 @@
                 },
                 {
                     "doseNumber": "Dose 2",
+                    "age": [
+                        {
+                            "absMinAge": "10 years - 4 days",
+                            "minAge": "16 years",
+                            "earliestRecAge": "16 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -245,7 +275,7 @@
                 {
                     "observationCode": {
                         "text": "Undergoing elective splenectomy",
-                        "code": "002"
+                        "code": 2
                     },
                     "description": "Administered to persons who are undergoing elective splenectomy if they have not previously received Meningococcal B vaccine.",
                     "beginAge": "10 years",
@@ -254,7 +284,7 @@
                 {
                     "observationCode": {
                         "text": "Microbiologists routinely exposed to Neisseria meningitidis",
-                        "code": "050"
+                        "code": 50
                     },
                     "description": "Administer to microbiologists routinely exposed to isolates of Neisseria meningitidis.",
                     "beginAge": "10 years"
@@ -262,7 +292,7 @@
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": "070"
+                        "code": 70
                     },
                     "description": "Administer to persons identified as at increased risk because of a serogroup B meningococcal disease outbreak",
                     "beginAge": "10 years"
@@ -270,7 +300,7 @@
                 {
                     "observationCode": {
                         "text": "Persistent complement, properdin, or factor B deficiency",
-                        "code": "151"
+                        "code": 151
                     },
                     "description": "Administer to persons who have persistent complement component deficiencies, including inherited or chronic deficiencies in C3, C5-9, properdin, factor D, factor H, or who are taking eculizumab (Soliris).",
                     "beginAge": "10 years"
@@ -278,7 +308,7 @@
                 {
                     "observationCode": {
                         "text": "Anatomical or functional asplenia",
-                        "code": "160"
+                        "code": 160
                     },
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "10 years"
@@ -287,6 +317,13 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "10 years - 4 days",
+                            "minAge": "10 years",
+                            "earliestRecAge": "10 years"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "meningococcal B, OMV",
@@ -436,7 +473,7 @@
                 {
                     "observationCode": {
                         "text": "Undergoing elective splenectomy",
-                        "code": "002"
+                        "code": 2
                     },
                     "description": "Administered to persons who are undergoing elective splenectomy if they have not previously received Meningococcal B vaccine.",
                     "beginAge": "10 years",
@@ -445,7 +482,7 @@
                 {
                     "observationCode": {
                         "text": "Microbiologists routinely exposed to Neisseria meningitidis",
-                        "code": "050"
+                        "code": 50
                     },
                     "description": "Administer to microbiologists routinely exposed to isolates of Neisseria meningitidis.",
                     "beginAge": "10 years"
@@ -453,7 +490,7 @@
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": "070"
+                        "code": 70
                     },
                     "description": "Administer to persons identified as at increased risk because of a serogroup B meningococcal disease outbreak",
                     "beginAge": "10 years"
@@ -461,7 +498,7 @@
                 {
                     "observationCode": {
                         "text": "Persistent complement, properdin, or factor B deficiency",
-                        "code": "151"
+                        "code": 151
                     },
                     "description": "Administer to persons 10 years or older with persistent complement component deficiencies, including inherited or chronic deficiencies in C3, C5-9, properdin, factor D, factor H, or who are taking eculizumab (Soliris).",
                     "beginAge": "10 years"
@@ -469,7 +506,7 @@
                 {
                     "observationCode": {
                         "text": "Anatomical or functional asplenia",
-                        "code": "160"
+                        "code": 160
                     },
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "10 years"
@@ -478,6 +515,13 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "10 years - 4 days",
+                            "minAge": "10 years",
+                            "earliestRecAge": "10 years"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "meningococcal B, recombinant",
@@ -676,4 +720,4 @@
             ]
         }
     ]
-}
+});

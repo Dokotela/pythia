@@ -4,15 +4,15 @@
     "immunity": {
         "clinicalHistory": [
             {
-                "guidelineCode": "023",
+                "guidelineCode": 23,
                 "guidelineTitle": "Laboratory Evidence of Immunity or confirmation of Varicella disease"
             },
             {
-                "guidelineCode": "024",
+                "guidelineCode": 24,
                 "guidelineTitle": "Healthcare provider verified history of or diagnosis of Varicella"
             },
             {
-                "guidelineCode": "025",
+                "guidelineCode": 25,
                 "guidelineTitle": "Healthcare provider verified history or diagnosis of Herpes Zoster"
             }
         ],
@@ -21,15 +21,15 @@
             "birthCountry": "U.S.",
             "exclusion": [
                 {
-                    "exclusionCode": "055",
+                    "exclusionCode": 55,
                     "exclusionTitle": "Health care personnel"
                 },
                 {
-                    "exclusionCode": "007",
+                    "exclusionCode": 7,
                     "exclusionTitle": "Pregnant"
                 },
                 {
-                    "exclusionCode": "003",
+                    "exclusionCode": 3,
                     "exclusionTitle": "Immunocompromised"
                 }
             ]
@@ -234,6 +234,14 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "12 months - 4 days",
+                            "minAge": "12 months",
+                            "earliestRecAge": "12 months",
+                            "latestRecAge": "16 months + 4 weeks"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "Varicella",
@@ -273,6 +281,14 @@
                 },
                 {
                     "doseNumber": "Dose 2",
+                    "age": [
+                        {
+                            "absMinAge": "13 months",
+                            "minAge": "15 months",
+                            "earliestRecAge": "4 years",
+                            "latestRecAge": "7 years + 4 weeks"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -345,6 +361,14 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "13 years",
+                            "minAge": "13 years",
+                            "earliestRecAge": "13 years",
+                            "latestRecAge": "13 years"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "Varicella",

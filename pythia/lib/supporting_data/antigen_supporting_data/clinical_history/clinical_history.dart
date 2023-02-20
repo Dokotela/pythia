@@ -7,7 +7,7 @@ part 'clinical_history.g.dart';
 class ClinicalHistory with _$ClinicalHistory {
   ClinicalHistory._();
   factory ClinicalHistory({
-    int? guidelineCode,
+    String? guidelineCode,
     String? guidelineTitle,
   }) = _ClinicalHistory;
 

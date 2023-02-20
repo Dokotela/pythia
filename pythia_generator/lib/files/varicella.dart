@@ -1,19 +1,38 @@
-{
-    "targetDisease": "Measles",
-    "vaccineGroup": "MMR",
+import 'package:pythia/pythia.dart';
+
+final varicella = AntigenSupportingData.fromJson({
+    "targetDisease": "Varicella",
+    "vaccineGroup": "Varicella",
     "immunity": {
         "clinicalHistory": [
             {
-                "guidelineCode": "020",
-                "guidelineTitle": "Laboratory Evidence of Immunity for Measles"
+                "guidelineCode": 23,
+                "guidelineTitle": "Laboratory Evidence of Immunity or confirmation of Varicella disease"
+            },
+            {
+                "guidelineCode": 24,
+                "guidelineTitle": "Healthcare provider verified history of or diagnosis of Varicella"
+            },
+            {
+                "guidelineCode": 25,
+                "guidelineTitle": "Healthcare provider verified history or diagnosis of Herpes Zoster"
             }
         ],
         "dateOfBirth": {
-            "immunityBirthDate": "01/01/1957",
+            "immunityBirthDate": "01/01/1980",
+            "birthCountry": "U.S.",
             "exclusion": [
                 {
-                    "exclusionCode": "055",
+                    "exclusionCode": 55,
                     "exclusionTitle": "Health care personnel"
+                },
+                {
+                    "exclusionCode": 7,
+                    "exclusionTitle": "Pregnant"
+                },
+                {
+                    "exclusionCode": 3,
+                    "exclusionTitle": "Immunocompromised"
                 }
             ]
         }
@@ -47,9 +66,9 @@
                     "contraindicationText": "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
                 },
                 {
-                    "observationCode": "091",
-                    "observationTitle": "Severe allergic reaction after previous dose of Measles",
-                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Measles vaccine."
+                    "observationCode": "089",
+                    "observationTitle": "Severe allergic reaction after previous dose of Varicella",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Varicella vaccine."
                 },
                 {
                     "observationCode": "102",
@@ -201,9 +220,9 @@
     },
     "series": [
         {
-            "seriesName": "Measles 2-dose series",
-            "targetDisease": "Measles",
-            "vaccineGroup": "MMR",
+            "seriesName": "Varicella childhood 2-dose series",
+            "targetDisease": "Varicella",
+            "vaccineGroup": "Varicella",
             "seriesType": "Standard",
             "selectSeries": {
                 "defaultSeries": "Yes",
@@ -211,15 +230,24 @@
                 "seriesGroupName": "Standard",
                 "seriesGroup": "1",
                 "seriesPriority": "A",
-                "seriesPreference": "1"
+                "seriesPreference": "1",
+                "maxAgeToStart": "13 years"
             },
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "12 months - 4 days",
+                            "minAge": "12 months",
+                            "earliestRecAge": "12 months",
+                            "latestRecAge": "16 months + 4 weeks"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
                             "beginAge": "12 months",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
@@ -235,43 +263,51 @@
                     ],
                     "allowableVaccine": [
                         {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles/Rubella",
-                            "cvx": "04",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles",
-                            "cvx": "05",
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
                             "beginAge": "12 months - 4 days"
                         },
                         {
                             "vaccineType": "MMRV",
                             "cvx": "94",
                             "beginAge": "12 months - 4 days"
+                        },
+                        {
+                            "vaccineType": "Zoster Live",
+                            "cvx": "121",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "50 years"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
                     "doseNumber": "Dose 2",
+                    "age": [
+                        {
+                            "absMinAge": "13 months",
+                            "minAge": "15 months",
+                            "earliestRecAge": "4 years",
+                            "latestRecAge": "7 years + 4 weeks"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
+                            "absMinInt": "12 weeks - 4 days",
+                            "minInt": "12 weeks",
                             "earliestRecInt": "3 years",
                             "latestRecInt": "6 years + 4 weeks"
                         }
                     ],
+                    "allowableInterval": {
+                        "fromPrevious": "Y",
+                        "absMinInt": "4 weeks"
+                    },
                     "preferableVaccine": [
                         {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
                             "beginAge": "12 months",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
@@ -287,42 +323,20 @@
                     ],
                     "allowableVaccine": [
                         {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles/Rubella",
-                            "cvx": "04",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles",
-                            "cvx": "05",
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
                             "beginAge": "12 months - 4 days"
                         },
                         {
                             "vaccineType": "MMRV",
                             "cvx": "94",
                             "beginAge": "12 months - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
+                        },
                         {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required for those 19 years or older",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "19 years - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
+                            "vaccineType": "Zoster Live",
+                            "cvx": "121",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "50 years"
                         }
                     ],
                     "recurringDose": "No"
@@ -330,139 +344,37 @@
             ]
         },
         {
-            "seriesName": "Measles risk 1-dose series",
-            "targetDisease": "Measles",
-            "vaccineGroup": "MMR",
+            "seriesName": "Varicella 13+ 2-dose series",
+            "targetDisease": "Varicella",
+            "vaccineGroup": "Varicella",
             "seriesAdminGuidance": [
-                "Children who received MMR vaccine before age 12 months should be considered potentially susceptible to all three diseases and should be revaccinated with 2 doses of MMR vaccine, the first dose administered when the child is aged 12 through 15 months (12 months if the child remains in an area where disease risk is high) and the second dose at least 28 days later."
+                "Vaccination should be emphasized for those who have close contact with persons at high risk for severe disease or are at high risk for exposure or transmission. Pregnant women should be assessed for evidence of varicella immunity. Women who do not have evidence of immunity should receive the first dose of varicella vaccine upon completion or termination of pregnancy and before discharge from the health care facility."
             ],
-            "seriesType": "Risk",
+            "seriesType": "Standard",
             "selectSeries": {
                 "defaultSeries": "No",
                 "productPath": "No",
-                "seriesGroupName": "Increased Risk Infant",
-                "seriesGroup": "2",
+                "seriesGroupName": "Standard",
+                "seriesGroup": "1",
                 "seriesPriority": "A",
-                "seriesPreference": "1",
-                "minAgeToStart": "6 months",
-                "maxAgeToStart": "12 months"
+                "seriesPreference": "2",
+                "maxAgeToStart": "50 years"
             },
-            "indication": [
-                {
-                    "observationCode": {
-                        "text": "Travelling Internationally",
-                        "code": "048"
-                    },
-                    "description": "Administer to persons who will be travelling internationally.",
-                    "beginAge": "6 months",
-                    "endAge": "12 months"
-                }
-            ],
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
-                    "preferableVaccine": [
+                    "age": [
                         {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "6 months",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
+                            "absMinAge": "13 years",
+                            "minAge": "13 years",
+                            "earliestRecAge": "13 years",
+                            "latestRecAge": "13 years"
                         }
                     ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "6 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles/Rubella",
-                            "cvx": "04",
-                            "beginAge": "6 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles",
-                            "cvx": "05",
-                            "beginAge": "6 months - 4 days"
-                        }
-                    ],
-                    "recurringDose": "No"
-                }
-            ]
-        },
-        {
-            "seriesName": "Measles risk 2-dose series",
-            "targetDisease": "Measles",
-            "vaccineGroup": "MMR",
-            "seriesType": "Risk",
-            "selectSeries": {
-                "defaultSeries": "No",
-                "productPath": "No",
-                "seriesGroupName": "Increased Risk",
-                "seriesGroup": "3",
-                "seriesPriority": "A",
-                "seriesPreference": "1",
-                "minAgeToStart": "18 years"
-            },
-            "indication": [
-                {
-                    "observationCode": {
-                        "text": "Travelling Internationally",
-                        "code": "048"
-                    },
-                    "description": "Administer to persons who will be travelling internationally.",
-                    "beginAge": "18 years"
-                },
-                {
-                    "observationCode": {
-                        "text": "Health care personnel",
-                        "code": "055"
-                    },
-                    "description": "Administer to healthcare personnel without evidence of immunity.",
-                    "beginAge": "18 years",
-                    "guidance": "Includes those born before 1957 who would normally be considered to have immunity."
-                },
-                {
-                    "observationCode": {
-                        "text": "Post secondary student",
-                        "code": "063"
-                    },
-                    "description": "Administer to persons who are students in a postsecondary educational institution.",
-                    "beginAge": "18 years"
-                },
-                {
-                    "observationCode": {
-                        "text": "Household and close contacts of immunocompromised persons",
-                        "code": "073"
-                    },
-                    "description": "Administer to persons who are household and close contacts of immunocompromised persons.",
-                    "beginAge": "18 years"
-                },
-                {
-                    "observationCode": {
-                        "text": "Received inactivated or unknown measles vaccine between 1963-1967",
-                        "code": "077"
-                    },
-                    "description": "Administer to persons who received inactivated or unknown measles vaccine between 1963-1967.",
-                    "beginAge": "18 years"
-                },
-                {
-                    "observationCode": {
-                        "text": "HIV/AIDS - not severely immunocompromised",
-                        "code": "155"
-                    },
-                    "description": "Administer to persons who have HIV/AIDS but are not severely immunocompromised (See the CDC general recommendations for a definition of severely immunocompromised).",
-                    "beginAge": "18 years"
-                }
-            ],
-            "seriesDose": [
-                {
-                    "doseNumber": "Dose 1",
                     "preferableVaccine": [
                         {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
                             "beginAge": "12 months",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
@@ -470,24 +382,20 @@
                     ],
                     "allowableVaccine": [
                         {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles/Rubella",
-                            "cvx": "04",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles",
-                            "cvx": "05",
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
                             "beginAge": "12 months - 4 days"
                         },
                         {
                             "vaccineType": "MMRV",
                             "cvx": "94",
                             "beginAge": "12 months - 4 days"
+                        },
+                        {
+                            "vaccineType": "Zoster Live",
+                            "cvx": "121",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "50 years"
                         }
                     ],
                     "recurringDose": "No"
@@ -499,13 +407,14 @@
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
                         {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
                             "beginAge": "12 months",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
@@ -513,138 +422,20 @@
                     ],
                     "allowableVaccine": [
                         {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles/Rubella",
-                            "cvx": "04",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles",
-                            "cvx": "05",
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
                             "beginAge": "12 months - 4 days"
                         },
                         {
                             "vaccineType": "MMRV",
                             "cvx": "94",
                             "beginAge": "12 months - 4 days"
-                        }
-                    ],
-                    "recurringDose": "No"
-                }
-            ]
-        },
-        {
-            "seriesName": "Measles risk 2-dose ART series",
-            "targetDisease": "Measles",
-            "vaccineGroup": "MMR",
-            "seriesType": "Risk",
-            "selectSeries": {
-                "defaultSeries": "No",
-                "productPath": "No",
-                "seriesGroupName": "Increased Risk",
-                "seriesGroup": "3",
-                "seriesPriority": "A",
-                "seriesPreference": "1"
-            },
-            "indication": [
-                {
-                    "observationCode": {
-                        "text": "Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]",
-                        "code": "026"
-                    },
-                    "description": "Administer to persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]."
-                }
-            ],
-            "seriesDose": [
-                {
-                    "doseNumber": "Dose 1",
-                    "interval": [
-                        {
-                            "fromPrevious": "N",
-                            "fromRelevantObs": {
-                                "text": "Begin Date of antiviral therapy [ART]",
-                                "code": "120"
-                            },
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months - 4 days"
                         },
                         {
-                            "vaccineType": "Measles/Rubella",
-                            "cvx": "04",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles",
-                            "cvx": "05",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "MMRV",
-                            "cvx": "94",
-                            "beginAge": "12 months - 4 days"
-                        }
-                    ],
-                    "recurringDose": "No"
-                },
-                {
-                    "doseNumber": "Dose 2",
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles/Rubella",
-                            "cvx": "04",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Measles",
-                            "cvx": "05",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "MMRV",
-                            "cvx": "94",
-                            "beginAge": "12 months - 4 days"
+                            "vaccineType": "Zoster Live",
+                            "cvx": "121",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "50 years"
                         }
                     ],
                     "recurringDose": "No"
@@ -652,4 +443,4 @@
             ]
         }
     ]
-}
+});

@@ -7,7 +7,7 @@ part of 'exclusion.dart';
 // **************************************************************************
 
 _$_Exclusion _$$_ExclusionFromJson(Map<String, dynamic> json) => _$_Exclusion(
-      exclusionCode: json['exclusionCode'] as int?,
+      exclusionCode: json['exclusionCode'] as String?,
       exclusionTitle: json['exclusionTitle'] as String?,
     );
 

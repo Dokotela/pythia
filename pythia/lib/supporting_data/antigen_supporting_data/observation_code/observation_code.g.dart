@@ -9,7 +9,7 @@ part of 'observation_code.dart';
 _$_ObservationCode _$$_ObservationCodeFromJson(Map<String, dynamic> json) =>
     _$_ObservationCode(
       text: json['text'] as String?,
-      code: json['code'] as int?,
+      code: json['code'] as String?,
     );
 
 Map<String, dynamic> _$$_ObservationCodeToJson(_$_ObservationCode instance) {

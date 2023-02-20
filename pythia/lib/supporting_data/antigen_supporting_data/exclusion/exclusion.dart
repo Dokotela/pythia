@@ -7,7 +7,7 @@ part 'exclusion.g.dart';
 class Exclusion with _$Exclusion {
   Exclusion._();
   factory Exclusion({
-    int? exclusionCode,
+    String? exclusionCode,
     String? exclusionTitle,
   }) = _Exclusion;
 

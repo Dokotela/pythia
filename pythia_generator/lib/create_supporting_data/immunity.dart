@@ -34,12 +34,15 @@ Immunity? immunity(String? immunityString) {
 
       if (immunity.clinicalHistory == null) {
         immunity = immunity.copyWith(clinicalHistory: [
-          ClinicalHistory(
-              guidelineCode: int.tryParse(code), guidelineTitle: text)
+          ClinicalHistory(guidelineCode: code, guidelineTitle: text)
         ]);
       } else {
-        immunity.clinicalHistory!.add(ClinicalHistory(
-            guidelineCode: int.tryParse(code), guidelineTitle: text));
+        immunity = immunity.copyWith(clinicalHistory: [
+          if (immunity.clinicalHistory != null &&
+              immunity.clinicalHistory!.isNotEmpty)
+            ...immunity.clinicalHistory!,
+          ClinicalHistory(guidelineCode: code, guidelineTitle: text)
+        ]);
       }
 
       /// Find any of the Birth Date Immunity rows
@@ -70,11 +73,16 @@ Immunity? immunity(String? immunityString) {
         var code = i[3]!.toString().substring(open + 1, close);
         var text = i[3]!.toString().substring(0, open - 1);
 
-        immunity.dateOfBirth!.exclusion!.add(
-          Exclusion(
-            exclusionCode: int.tryParse(code),
-            exclusionTitle: text,
-          ),
+        immunity = immunity.copyWith.dateOfBirth!(
+          exclusion: [
+            if (immunity.dateOfBirth!.exclusion != null &&
+                immunity.dateOfBirth!.exclusion!.isNotEmpty)
+              ...immunity.dateOfBirth!.exclusion!,
+            Exclusion(
+              exclusionCode: code,
+              exclusionTitle: text,
+            ),
+          ],
         );
       }
     }

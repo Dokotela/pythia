@@ -8,7 +8,7 @@ class ObservationCode with _$ObservationCode {
   ObservationCode._();
   factory ObservationCode({
     String? text,
-    int? code,
+    String? code,
   }) = _ObservationCode;
 
   factory ObservationCode.fromJson(Map<String, dynamic> json) =>

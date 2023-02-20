@@ -8,7 +8,7 @@ part of 'clinical_history.dart';
 
 _$_ClinicalHistory _$$_ClinicalHistoryFromJson(Map<String, dynamic> json) =>
     _$_ClinicalHistory(
-      guidelineCode: json['guidelineCode'] as int?,
+      guidelineCode: json['guidelineCode'] as String?,
       guidelineTitle: json['guidelineTitle'] as String?,
     );
 

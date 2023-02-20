@@ -1,13 +1,13 @@
 {
-    "targetDisease": "Diphtheria",
+    "targetDisease": "Tetanus",
     "vaccineGroup": "DTaP/Tdap/Td",
     "contraindications": {
         "vaccineGroup": {
             "contraindication": [
                 {
-                    "observationCode": "087",
-                    "observationTitle": "Severe allergic reaction after previous dose of Diphtheria",
-                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Diphtheria vaccine."
+                    "observationCode": "088",
+                    "observationTitle": "Severe allergic reaction after previous dose of Tetanus",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Tetanus vaccine."
                 },
                 {
                     "observationCode": "080",
@@ -149,8 +149,8 @@
     },
     "series": [
         {
-            "seriesName": "Diphtheria standard series",
-            "targetDisease": "Diphtheria",
+            "seriesName": "Tetanus standard series",
+            "targetDisease": "Tetanus",
             "vaccineGroup": "DTaP/Tdap/Td",
             "seriesType": "Standard",
             "selectSeries": {
@@ -165,6 +165,14 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "6 weeks - 4 days",
+                            "minAge": "6 weeks",
+                            "earliestRecAge": "2 months",
+                            "latestRecAge": "3 months + 4 weeks"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "DTaP",
@@ -381,6 +389,14 @@
                 },
                 {
                     "doseNumber": "Dose 2",
+                    "age": [
+                        {
+                            "absMinAge": "10 weeks - 4 days",
+                            "minAge": "10 weeks",
+                            "earliestRecAge": "4 months",
+                            "latestRecAge": "5 months + 4 weeks"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -606,6 +622,14 @@
                 },
                 {
                     "doseNumber": "Dose 3",
+                    "age": [
+                        {
+                            "absMinAge": "14 weeks - 4 days",
+                            "minAge": "14 weeks",
+                            "earliestRecAge": "6 months",
+                            "latestRecAge": "7 months + 4 weeks"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -831,6 +855,14 @@
                 },
                 {
                     "doseNumber": "Dose 4",
+                    "age": [
+                        {
+                            "absMinAge": "12 months - 4 days",
+                            "minAge": "15 months",
+                            "earliestRecAge": "15 months",
+                            "latestRecAge": "19 months + 4 weeks"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -1048,6 +1080,14 @@
                 },
                 {
                     "doseNumber": "Dose 5",
+                    "age": [
+                        {
+                            "absMinAge": "4 years - 4 days",
+                            "minAge": "4 years",
+                            "earliestRecAge": "4 years",
+                            "latestRecAge": "7 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -1261,6 +1301,14 @@
                 },
                 {
                     "doseNumber": "Dose 6",
+                    "age": [
+                        {
+                            "absMinAge": "7 years",
+                            "minAge": "7 years",
+                            "earliestRecAge": "7 years",
+                            "latestRecAge": "7 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -1505,6 +1553,14 @@
                 },
                 {
                     "doseNumber": "Dose 7",
+                    "age": [
+                        {
+                            "absMinAge": "7 years",
+                            "minAge": "7 years",
+                            "earliestRecAge": "7 years",
+                            "latestRecAge": "7 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -1674,6 +1730,14 @@
                 },
                 {
                     "doseNumber": "Dose 8",
+                    "age": [
+                        {
+                            "absMinAge": "7 years",
+                            "minAge": "7 years",
+                            "earliestRecAge": "7 years",
+                            "latestRecAge": "7 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -1843,6 +1907,14 @@
                 },
                 {
                     "doseNumber": "Dose 9",
+                    "age": [
+                        {
+                            "absMinAge": "10 years",
+                            "minAge": "11 years",
+                            "earliestRecAge": "11 years",
+                            "latestRecAge": "13 years + 4 weeks"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "Td - Adult Adsorbed",
@@ -2152,8 +2224,8 @@
             ]
         },
         {
-            "seriesName": "Diphtheria start at 12 months series",
-            "targetDisease": "Diphtheria",
+            "seriesName": "Tetanus start at 12 months series",
+            "targetDisease": "Tetanus",
             "vaccineGroup": "DTaP/Tdap/Td",
             "seriesType": "Standard",
             "selectSeries": {
@@ -2167,6 +2239,12 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "12 months - 4 days",
+                            "minAge": "12 months"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "DTaP",
@@ -2833,6 +2911,14 @@
                 },
                 {
                     "doseNumber": "Dose 4",
+                    "age": [
+                        {
+                            "absMinAge": "12 months - 4 days",
+                            "minAge": "15 months",
+                            "earliestRecAge": "15 months",
+                            "latestRecAge": "19 months + 4 weeks"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -3050,6 +3136,14 @@
                 },
                 {
                     "doseNumber": "Dose 5",
+                    "age": [
+                        {
+                            "absMinAge": "4 years - 4 days",
+                            "minAge": "4 years",
+                            "earliestRecAge": "4 years",
+                            "latestRecAge": "7 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -3263,6 +3357,14 @@
                 },
                 {
                     "doseNumber": "Dose 6",
+                    "age": [
+                        {
+                            "absMinAge": "7 years",
+                            "minAge": "7 years",
+                            "earliestRecAge": "7 years",
+                            "latestRecAge": "7 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -3650,6 +3752,14 @@
                 },
                 {
                     "doseNumber": "Dose 7",
+                    "age": [
+                        {
+                            "absMinAge": "7 years",
+                            "minAge": "7 years",
+                            "earliestRecAge": "7 years",
+                            "latestRecAge": "7 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -3819,6 +3929,14 @@
                 },
                 {
                     "doseNumber": "Dose 8",
+                    "age": [
+                        {
+                            "absMinAge": "7 years",
+                            "minAge": "7 years",
+                            "earliestRecAge": "7 years",
+                            "latestRecAge": "7 years"
+                        }
+                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -3988,6 +4106,14 @@
                 },
                 {
                     "doseNumber": "Dose 9",
+                    "age": [
+                        {
+                            "absMinAge": "10 years",
+                            "minAge": "11 years",
+                            "earliestRecAge": "11 years",
+                            "latestRecAge": "13 years + 4 weeks"
+                        }
+                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "Td - Adult Adsorbed",

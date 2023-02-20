@@ -20,7 +20,7 @@ Exclusion _$ExclusionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Exclusion {
-  int? get exclusionCode => throw _privateConstructorUsedError;
+  String? get exclusionCode => throw _privateConstructorUsedError;
   String? get exclusionTitle => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -34,7 +34,7 @@ abstract class $ExclusionCopyWith<$Res> {
   factory $ExclusionCopyWith(Exclusion value, $Res Function(Exclusion) then) =
       _$ExclusionCopyWithImpl<$Res, Exclusion>;
   @useResult
-  $Res call({int? exclusionCode, String? exclusionTitle});
+  $Res call({String? exclusionCode, String? exclusionTitle});
 }
 
 /// @nodoc
@@ -57,7 +57,7 @@ class _$ExclusionCopyWithImpl<$Res, $Val extends Exclusion>
       exclusionCode: freezed == exclusionCode
           ? _value.exclusionCode
           : exclusionCode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       exclusionTitle: freezed == exclusionTitle
           ? _value.exclusionTitle
           : exclusionTitle // ignore: cast_nullable_to_non_nullable
@@ -73,7 +73,7 @@ abstract class _$$_ExclusionCopyWith<$Res> implements $ExclusionCopyWith<$Res> {
       __$$_ExclusionCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? exclusionCode, String? exclusionTitle});
+  $Res call({String? exclusionCode, String? exclusionTitle});
 }
 
 /// @nodoc
@@ -94,7 +94,7 @@ class __$$_ExclusionCopyWithImpl<$Res>
       exclusionCode: freezed == exclusionCode
           ? _value.exclusionCode
           : exclusionCode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       exclusionTitle: freezed == exclusionTitle
           ? _value.exclusionTitle
           : exclusionTitle // ignore: cast_nullable_to_non_nullable
@@ -112,7 +112,7 @@ class _$_Exclusion extends _Exclusion {
       _$$_ExclusionFromJson(json);
 
   @override
-  final int? exclusionCode;
+  final String? exclusionCode;
   @override
   final String? exclusionTitle;
 
@@ -151,15 +151,16 @@ class _$_Exclusion extends _Exclusion {
 }
 
 abstract class _Exclusion extends Exclusion {
-  factory _Exclusion({final int? exclusionCode, final String? exclusionTitle}) =
-      _$_Exclusion;
+  factory _Exclusion(
+      {final String? exclusionCode,
+      final String? exclusionTitle}) = _$_Exclusion;
   _Exclusion._() : super._();
 
   factory _Exclusion.fromJson(Map<String, dynamic> json) =
       _$_Exclusion.fromJson;
 
   @override
-  int? get exclusionCode;
+  String? get exclusionCode;
   @override
   String? get exclusionTitle;
   @override

@@ -20,7 +20,7 @@ ClinicalHistory _$ClinicalHistoryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClinicalHistory {
-  int? get guidelineCode => throw _privateConstructorUsedError;
+  String? get guidelineCode => throw _privateConstructorUsedError;
   String? get guidelineTitle => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +35,7 @@ abstract class $ClinicalHistoryCopyWith<$Res> {
           ClinicalHistory value, $Res Function(ClinicalHistory) then) =
       _$ClinicalHistoryCopyWithImpl<$Res, ClinicalHistory>;
   @useResult
-  $Res call({int? guidelineCode, String? guidelineTitle});
+  $Res call({String? guidelineCode, String? guidelineTitle});
 }
 
 /// @nodoc
@@ -58,7 +58,7 @@ class _$ClinicalHistoryCopyWithImpl<$Res, $Val extends ClinicalHistory>
       guidelineCode: freezed == guidelineCode
           ? _value.guidelineCode
           : guidelineCode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       guidelineTitle: freezed == guidelineTitle
           ? _value.guidelineTitle
           : guidelineTitle // ignore: cast_nullable_to_non_nullable
@@ -75,7 +75,7 @@ abstract class _$$_ClinicalHistoryCopyWith<$Res>
       __$$_ClinicalHistoryCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? guidelineCode, String? guidelineTitle});
+  $Res call({String? guidelineCode, String? guidelineTitle});
 }
 
 /// @nodoc
@@ -96,7 +96,7 @@ class __$$_ClinicalHistoryCopyWithImpl<$Res>
       guidelineCode: freezed == guidelineCode
           ? _value.guidelineCode
           : guidelineCode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       guidelineTitle: freezed == guidelineTitle
           ? _value.guidelineTitle
           : guidelineTitle // ignore: cast_nullable_to_non_nullable
@@ -114,7 +114,7 @@ class _$_ClinicalHistory extends _ClinicalHistory {
       _$$_ClinicalHistoryFromJson(json);
 
   @override
-  final int? guidelineCode;
+  final String? guidelineCode;
   @override
   final String? guidelineTitle;
 
@@ -154,7 +154,7 @@ class _$_ClinicalHistory extends _ClinicalHistory {
 
 abstract class _ClinicalHistory extends ClinicalHistory {
   factory _ClinicalHistory(
-      {final int? guidelineCode,
+      {final String? guidelineCode,
       final String? guidelineTitle}) = _$_ClinicalHistory;
   _ClinicalHistory._() : super._();
 
@@ -162,7 +162,7 @@ abstract class _ClinicalHistory extends ClinicalHistory {
       _$_ClinicalHistory.fromJson;
 
   @override
-  int? get guidelineCode;
+  String? get guidelineCode;
   @override
   String? get guidelineTitle;
   @override

@@ -1,4 +1,6 @@
-{
+import 'package:pythia/pythia.dart';
+
+final polio = AntigenSupportingData.fromJson({
     "targetDisease": "Polio",
     "vaccineGroup": "Polio",
     "contraindications": {
@@ -1674,4 +1676,4 @@
             ]
         }
     ]
-}
+});

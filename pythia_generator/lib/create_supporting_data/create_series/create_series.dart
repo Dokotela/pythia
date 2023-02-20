@@ -56,8 +56,12 @@ Series createSeries(String? seriesString) {
             newSeries = newSeries.copyWith(
                 requiredGender: [genderStringToEnum[valueToString(row[1]!)]!]);
           } else {
-            newSeries.requiredGender!
-                .add(genderStringToEnum[valueToString(row[1]!)]!);
+            newSeries = newSeries.copyWith(requiredGender: [
+              if (newSeries.requiredGender != null &&
+                  newSeries.requiredGender!.isNotEmpty)
+                ...newSeries.requiredGender!,
+              genderStringToEnum[valueToString(row[1]!)]!
+            ]);
           }
         }
       } else if (row[0]!.toString().contains('Select Patient Series') &&
@@ -97,8 +101,7 @@ Series createSeries(String? seriesString) {
                 newSeries.indication!.isNotEmpty)
               ...newSeries.indication!,
             Indication(
-              observationCode:
-                  ObservationCode(code: int.tryParse(code), text: text),
+              observationCode: ObservationCode(code: code, text: text),
               description: row[2]!.toString().contains('n/a')
                   ? null
                   : valueToString(row[2]!),
