@@ -96,7 +96,7 @@ final dengue = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Evidence of previous dengue infection and living in areas where dengue is endemic",
-                        "code": 211
+                        "code": "211"
                     },
                     "description": "Administer to persons with evidence of previous dengue infection and living in areas where dengue is endemic.",
                     "beginAge": "9 years",

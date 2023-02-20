@@ -303,7 +303,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": 70
+                        "code": "070"
                     },
                     "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup",
                     "beginAge": "2 months"
@@ -311,7 +311,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persistent complement, properdin, or factor B deficiency",
-                        "code": 151
+                        "code": "151"
                     },
                     "description": "Administer to persons who have persistent complement deficiencies",
                     "beginAge": "2 months"
@@ -319,7 +319,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Anatomical or functional asplenia",
-                        "code": 160
+                        "code": "160"
                     },
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "2 months"
@@ -327,7 +327,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
-                        "code": 164
+                        "code": "164"
                     },
                     "description": "Administer to persons who travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
                     "beginAge": "2 months"
@@ -335,7 +335,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "2 months"
@@ -898,7 +898,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": 70
+                        "code": "070"
                     },
                     "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup",
                     "beginAge": "2 months"
@@ -906,7 +906,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persistent complement, properdin, or factor B deficiency",
-                        "code": 151
+                        "code": "151"
                     },
                     "description": "Administer to persons who have persistent complement deficiencies",
                     "beginAge": "2 months"
@@ -914,7 +914,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Anatomical or functional asplenia",
-                        "code": 160
+                        "code": "160"
                     },
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "2 months"
@@ -1266,7 +1266,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persistent complement, properdin, or factor B deficiency",
-                        "code": 151
+                        "code": "151"
                     },
                     "description": "Administer to persons who have persistent complement deficiencies",
                     "beginAge": "2 years"
@@ -1274,7 +1274,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Anatomical or functional asplenia",
-                        "code": 160
+                        "code": "160"
                     },
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "2 years"
@@ -1282,7 +1282,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "2 years"
@@ -1569,7 +1569,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "College students living in residence halls",
-                        "code": 46
+                        "code": "046"
                     },
                     "description": "Administer to college students living in residence halls.",
                     "beginAge": "19 years",
@@ -1578,7 +1578,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Microbiologists routinely exposed to Neisseria meningitidis",
-                        "code": 50
+                        "code": "050"
                     },
                     "description": "Administer to microbiologists routinely exposed to Neisseria meningitidis",
                     "beginAge": "19 years"
@@ -1586,7 +1586,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Military recruits",
-                        "code": 64
+                        "code": "064"
                     },
                     "description": "Administer to military recruits.",
                     "beginAge": "19 years"
@@ -1594,7 +1594,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": 70
+                        "code": "070"
                     },
                     "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup.",
                     "beginAge": "2 years"
@@ -1602,7 +1602,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
-                        "code": 164
+                        "code": "164"
                     },
                     "description": "Administer to persons who travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic.",
                     "beginAge": "2 years"

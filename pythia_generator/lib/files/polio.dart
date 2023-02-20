@@ -1348,7 +1348,7 @@ final polio = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Laboratory workers who handle specimens that might contain polioviruses",
-                        "code": 54
+                        "code": "054"
                     },
                     "description": "Administer to laboratory workers who handle specimens that might contain polioviruses.",
                     "beginAge": "18 years"
@@ -1356,7 +1356,7 @@ final polio = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Health-care workers who have close contact with patients who might be excreting wild polioviruses",
-                        "code": 56
+                        "code": "056"
                     },
                     "description": "Administer to health-care workers who have close contact with patients who might be excreting wild polioviruses.",
                     "beginAge": "18 years"
@@ -1364,7 +1364,7 @@ final polio = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to areas or countries where polio is epidemic or endemic",
-                        "code": 143
+                        "code": "143"
                     },
                     "description": "Administer to travelers to areas or countries where polio is epidemic or endemic.",
                     "beginAge": "18 years"

@@ -197,7 +197,7 @@ final typhoid = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Microbiology laboratorians who work frequently with S. typhi",
-                        "code": 51
+                        "code": "051"
                     },
                     "description": "Administer to persons who are microbiology laboratorians who work frequently with S. typhi.",
                     "beginAge": "18 years"
@@ -205,7 +205,7 @@ final typhoid = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Intimate exposure to a documented S. typhi carrier",
-                        "code": 72
+                        "code": "072"
                     },
                     "description": "Administer to persons who have intimate exposure to a documented S. typhi carrier.",
                     "beginAge": "2 years"
@@ -213,7 +213,7 @@ final typhoid = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to areas in which there is a recognized risk of exposure to S. typhi",
-                        "code": 163
+                        "code": "163"
                     },
                     "description": "Administer to persons who travel to areas in which there is a recognized risk of exposure to S. typhi.",
                     "beginAge": "2 years"
@@ -297,7 +297,7 @@ final typhoid = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Microbiology laboratorians who work frequently with S. typhi",
-                        "code": 51
+                        "code": "051"
                     },
                     "description": "Administer to persons who are microbiology laboratorians who work frequently with S. typhi.",
                     "beginAge": "18 years"
@@ -305,7 +305,7 @@ final typhoid = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Intimate exposure to a documented S. typhi carrier",
-                        "code": 72
+                        "code": "072"
                     },
                     "description": "Administer to persons who have intimate exposure to a documented S. typhi carrier.",
                     "beginAge": "2 years"
@@ -313,7 +313,7 @@ final typhoid = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to areas in which there is a recognized risk of exposure to S. typhi",
-                        "code": 163
+                        "code": "163"
                     },
                     "description": "Administer to persons who travel to areas in which there is a recognized risk of exposure to S. typhi.",
                     "beginAge": "2 years"

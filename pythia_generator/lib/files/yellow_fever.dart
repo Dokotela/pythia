@@ -132,7 +132,7 @@ final yellowFever = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to country with a Yellow Fever vaccination entry requirement",
-                        "code": 45
+                        "code": "045"
                     },
                     "description": "Administer to persons who travel to a country with a Yellow Fever vaccination entry requirement.",
                     "beginAge": "9 months",
@@ -141,7 +141,7 @@ final yellowFever = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Resident of area at risk for exposure to the disease",
-                        "code": 47
+                        "code": "047"
                     },
                     "description": "Administer to residents of an area at risk for exposure to the disease.",
                     "beginAge": "9 months"
@@ -149,7 +149,7 @@ final yellowFever = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Laboratory personnel who might be exposed to YFV",
-                        "code": 52
+                        "code": "052"
                     },
                     "description": "Administer to laboratory personnel who might be exposed to virulent YFV or to concentrated preparations of YF vaccine virus strains by direct or indirect contact or by aerosols.",
                     "beginAge": "18 years"
@@ -157,7 +157,7 @@ final yellowFever = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to areas at risk for Yellow Fever transmission",
-                        "code": 162
+                        "code": "162"
                     },
                     "description": "Administer to persons who travel to areas at risk for Yellow Fever transmission.",
                     "beginAge": "9 months",

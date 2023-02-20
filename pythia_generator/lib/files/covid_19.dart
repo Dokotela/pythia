@@ -6466,7 +6466,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Recipient of a hematopoietic stem cell transplant",
-                        "code": 4
+                        "code": "004"
                     },
                     "description": "Administer to recipients of a hematopoietic stem cell transplant [HSCT] within 2 years of successful transplantation.",
                     "beginAge": "6 months"
@@ -6474,7 +6474,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Severe antibody deficiencies",
-                        "code": 145
+                        "code": "145"
                     },
                     "description": "Administer to persons who have severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
                     "beginAge": "6 months"
@@ -6482,7 +6482,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-                        "code": 147
+                        "code": "147"
                     },
                     "description": "Administer to persons who have complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
                     "beginAge": "6 months"
@@ -6490,7 +6490,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-                        "code": 148
+                        "code": "148"
                     },
                     "description": "Administer to persons who have partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
                     "beginAge": "6 months"
@@ -6498,7 +6498,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-                        "code": 153
+                        "code": "153"
                     },
                     "description": "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
                     "beginAge": "6 months"
@@ -6506,7 +6506,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV/AIDS - Severely immunocompromised",
-                        "code": 154
+                        "code": "154"
                     },
                     "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
                     "beginAge": "6 months"
@@ -6514,7 +6514,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Transplantation",
-                        "code": 157
+                        "code": "157"
                     },
                     "description": "Administer to persons who have received a transplant.",
                     "beginAge": "6 months"
@@ -6522,7 +6522,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Immunosuppressive therapy",
-                        "code": 158
+                        "code": "158"
                     },
                     "description": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "beginAge": "6 months",
@@ -6531,7 +6531,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Radiation therapy",
-                        "code": 159
+                        "code": "159"
                     },
                     "description": "Administer to persons who are undergoing radiation therapy.",
                     "beginAge": "6 months",
@@ -6540,7 +6540,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for solid tumors",
-                        "code": 189
+                        "code": "189"
                     },
                     "description": "Administer to persons receiving active treatment for solid tumors",
                     "beginAge": "6 months"
@@ -6548,7 +6548,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for hematologic malignancies",
-                        "code": 190
+                        "code": "190"
                     },
                     "description": "Administer to persons receiving active treatment for hematologic malignancies",
                     "beginAge": "6 months"
@@ -6556,7 +6556,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receipt of CAR-T-cell therapy",
-                        "code": 191
+                        "code": "191"
                     },
                     "description": "Administer to persons receiving CAR-T-cell therapy",
                     "beginAge": "6 months"
@@ -7629,7 +7629,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Recipient of a hematopoietic stem cell transplant",
-                        "code": 4
+                        "code": "004"
                     },
                     "description": "Administer to recipients of a hematopoietic stem cell transplant [HSCT] within 2 years of successful transplantation.",
                     "beginAge": "6 months"
@@ -7637,7 +7637,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Severe antibody deficiencies",
-                        "code": 145
+                        "code": "145"
                     },
                     "description": "Administer to persons who have severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
                     "beginAge": "6 months"
@@ -7645,7 +7645,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-                        "code": 147
+                        "code": "147"
                     },
                     "description": "Administer to persons who have complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
                     "beginAge": "6 months"
@@ -7653,7 +7653,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-                        "code": 148
+                        "code": "148"
                     },
                     "description": "Administer to persons who have partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
                     "beginAge": "6 months"
@@ -7661,7 +7661,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-                        "code": 153
+                        "code": "153"
                     },
                     "description": "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
                     "beginAge": "6 months"
@@ -7669,7 +7669,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV/AIDS - Severely immunocompromised",
-                        "code": 154
+                        "code": "154"
                     },
                     "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
                     "beginAge": "6 months"
@@ -7677,7 +7677,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Transplantation",
-                        "code": 157
+                        "code": "157"
                     },
                     "description": "Administer to persons who have received a transplant.",
                     "beginAge": "6 months"
@@ -7685,7 +7685,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Immunosuppressive therapy",
-                        "code": 158
+                        "code": "158"
                     },
                     "description": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "beginAge": "6 months",
@@ -7694,7 +7694,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Radiation therapy",
-                        "code": 159
+                        "code": "159"
                     },
                     "description": "Administer to persons who are undergoing radiation therapy.",
                     "beginAge": "6 months",
@@ -7703,7 +7703,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for solid tumors",
-                        "code": 189
+                        "code": "189"
                     },
                     "description": "Administer to persons receiving active treatment for solid tumors",
                     "beginAge": "6 months"
@@ -7711,7 +7711,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for hematologic malignancies",
-                        "code": 190
+                        "code": "190"
                     },
                     "description": "Administer to persons receiving active treatment for hematologic malignancies",
                     "beginAge": "6 months"
@@ -7719,7 +7719,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receipt of CAR-T-cell therapy",
-                        "code": 191
+                        "code": "191"
                     },
                     "description": "Administer to persons receiving CAR-T-cell therapy",
                     "beginAge": "6 months"
@@ -8836,7 +8836,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Recipient of a hematopoietic stem cell transplant",
-                        "code": 4
+                        "code": "004"
                     },
                     "description": "Administer to recipients of a hematopoietic stem cell transplant [HSCT] within 2 years of successful transplantation.",
                     "beginAge": "18 years"
@@ -8844,7 +8844,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Severe antibody deficiencies",
-                        "code": 145
+                        "code": "145"
                     },
                     "description": "Administer to persons who have severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
                     "beginAge": "18 years"
@@ -8852,7 +8852,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-                        "code": 147
+                        "code": "147"
                     },
                     "description": "Administer to persons who have complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
                     "beginAge": "18 years"
@@ -8860,7 +8860,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-                        "code": 148
+                        "code": "148"
                     },
                     "description": "Administer to persons who have partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
                     "beginAge": "18 years"
@@ -8868,7 +8868,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-                        "code": 153
+                        "code": "153"
                     },
                     "description": "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
                     "beginAge": "18 years"
@@ -8876,7 +8876,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV/AIDS - Severely immunocompromised",
-                        "code": 154
+                        "code": "154"
                     },
                     "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
                     "beginAge": "18 years"
@@ -8884,7 +8884,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Transplantation",
-                        "code": 157
+                        "code": "157"
                     },
                     "description": "Administer to persons who have received a transplant.",
                     "beginAge": "18 years"
@@ -8892,7 +8892,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Immunosuppressive therapy",
-                        "code": 158
+                        "code": "158"
                     },
                     "description": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "beginAge": "18 years",
@@ -8901,7 +8901,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Radiation therapy",
-                        "code": 159
+                        "code": "159"
                     },
                     "description": "Administer to persons who are undergoing radiation therapy.",
                     "beginAge": "18 years",
@@ -8910,7 +8910,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for solid tumors",
-                        "code": 189
+                        "code": "189"
                     },
                     "description": "Administer to persons receiving active treatment for solid tumors",
                     "beginAge": "18 years"
@@ -8918,7 +8918,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for hematologic malignancies",
-                        "code": 190
+                        "code": "190"
                     },
                     "description": "Administer to persons receiving active treatment for hematologic malignancies",
                     "beginAge": "18 years"
@@ -8926,7 +8926,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receipt of CAR-T-cell therapy",
-                        "code": 191
+                        "code": "191"
                     },
                     "description": "Administer to persons receiving CAR-T-cell therapy",
                     "beginAge": "18 years"
@@ -9544,7 +9544,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Recipient of a hematopoietic stem cell transplant",
-                        "code": 4
+                        "code": "004"
                     },
                     "description": "Administer to recipients of a hematopoietic stem cell transplant [HSCT] within 2 years of successful transplantation.",
                     "beginAge": "12 years"
@@ -9552,7 +9552,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Severe antibody deficiencies",
-                        "code": 145
+                        "code": "145"
                     },
                     "description": "Administer to persons who have severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
                     "beginAge": "12 years"
@@ -9560,7 +9560,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-                        "code": 147
+                        "code": "147"
                     },
                     "description": "Administer to persons who have complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
                     "beginAge": "12 years"
@@ -9568,7 +9568,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-                        "code": 148
+                        "code": "148"
                     },
                     "description": "Administer to persons who have partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
                     "beginAge": "12 years"
@@ -9576,7 +9576,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-                        "code": 153
+                        "code": "153"
                     },
                     "description": "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
                     "beginAge": "12 years"
@@ -9584,7 +9584,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV/AIDS - Severely immunocompromised",
-                        "code": 154
+                        "code": "154"
                     },
                     "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
                     "beginAge": "12 years"
@@ -9592,7 +9592,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Transplantation",
-                        "code": 157
+                        "code": "157"
                     },
                     "description": "Administer to persons who have received a transplant.",
                     "beginAge": "12 years"
@@ -9600,7 +9600,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Immunosuppressive therapy",
-                        "code": 158
+                        "code": "158"
                     },
                     "description": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "beginAge": "12 years",
@@ -9609,7 +9609,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Radiation therapy",
-                        "code": 159
+                        "code": "159"
                     },
                     "description": "Administer to persons who are undergoing radiation therapy.",
                     "beginAge": "12 years",
@@ -9618,7 +9618,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for solid tumors",
-                        "code": 189
+                        "code": "189"
                     },
                     "description": "Administer to persons receiving active treatment for solid tumors",
                     "beginAge": "12 years"
@@ -9626,7 +9626,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for hematologic malignancies",
-                        "code": 190
+                        "code": "190"
                     },
                     "description": "Administer to persons receiving active treatment for hematologic malignancies",
                     "beginAge": "12 years"
@@ -9634,7 +9634,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receipt of CAR-T-cell therapy",
-                        "code": 191
+                        "code": "191"
                     },
                     "description": "Administer to persons receiving CAR-T-cell therapy",
                     "beginAge": "12 years"
@@ -9890,7 +9890,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Recipient of a hematopoietic stem cell transplant",
-                        "code": 4
+                        "code": "004"
                     },
                     "description": "Administer to recipients of a hematopoietic stem cell transplant [HSCT] within 2 years of successful transplantation.",
                     "beginAge": "6 months"
@@ -9898,7 +9898,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Severe antibody deficiencies",
-                        "code": 145
+                        "code": "145"
                     },
                     "description": "Administer to persons who have severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
                     "beginAge": "6 months"
@@ -9906,7 +9906,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-                        "code": 147
+                        "code": "147"
                     },
                     "description": "Administer to persons who have complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
                     "beginAge": "6 months"
@@ -9914,7 +9914,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-                        "code": 148
+                        "code": "148"
                     },
                     "description": "Administer to persons who have partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
                     "beginAge": "6 months"
@@ -9922,7 +9922,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-                        "code": 153
+                        "code": "153"
                     },
                     "description": "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
                     "beginAge": "6 months"
@@ -9930,7 +9930,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV/AIDS - Severely immunocompromised",
-                        "code": 154
+                        "code": "154"
                     },
                     "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
                     "beginAge": "6 months"
@@ -9938,7 +9938,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Transplantation",
-                        "code": 157
+                        "code": "157"
                     },
                     "description": "Administer to persons who have received a transplant.",
                     "beginAge": "6 months"
@@ -9946,7 +9946,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Immunosuppressive therapy",
-                        "code": 158
+                        "code": "158"
                     },
                     "description": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "beginAge": "6 months",
@@ -9955,7 +9955,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Radiation therapy",
-                        "code": 159
+                        "code": "159"
                     },
                     "description": "Administer to persons who are undergoing radiation therapy.",
                     "beginAge": "6 months",
@@ -9964,7 +9964,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for solid tumors",
-                        "code": 189
+                        "code": "189"
                     },
                     "description": "Administer to persons receiving active treatment for solid tumors",
                     "beginAge": "6 months"
@@ -9972,7 +9972,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for hematologic malignancies",
-                        "code": 190
+                        "code": "190"
                     },
                     "description": "Administer to persons receiving active treatment for hematologic malignancies",
                     "beginAge": "6 months"
@@ -9980,7 +9980,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receipt of CAR-T-cell therapy",
-                        "code": 191
+                        "code": "191"
                     },
                     "description": "Administer to persons receiving CAR-T-cell therapy",
                     "beginAge": "6 months"
@@ -11425,7 +11425,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Recipient of a hematopoietic stem cell transplant",
-                        "code": 4
+                        "code": "004"
                     },
                     "description": "Administer to recipients of a hematopoietic stem cell transplant [HSCT] within 2 years of successful transplantation.",
                     "beginAge": "6 months"
@@ -11433,7 +11433,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Severe antibody deficiencies",
-                        "code": 145
+                        "code": "145"
                     },
                     "description": "Administer to persons who have severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
                     "beginAge": "6 months"
@@ -11441,7 +11441,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-                        "code": 147
+                        "code": "147"
                     },
                     "description": "Administer to persons who have complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
                     "beginAge": "6 months"
@@ -11449,7 +11449,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-                        "code": 148
+                        "code": "148"
                     },
                     "description": "Administer to persons who have partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
                     "beginAge": "6 months"
@@ -11457,7 +11457,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-                        "code": 153
+                        "code": "153"
                     },
                     "description": "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
                     "beginAge": "6 months"
@@ -11465,7 +11465,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV/AIDS - Severely immunocompromised",
-                        "code": 154
+                        "code": "154"
                     },
                     "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
                     "beginAge": "6 months"
@@ -11473,7 +11473,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Transplantation",
-                        "code": 157
+                        "code": "157"
                     },
                     "description": "Administer to persons who have received a transplant.",
                     "beginAge": "6 months"
@@ -11481,7 +11481,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Immunosuppressive therapy",
-                        "code": 158
+                        "code": "158"
                     },
                     "description": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "beginAge": "6 months",
@@ -11490,7 +11490,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Radiation therapy",
-                        "code": 159
+                        "code": "159"
                     },
                     "description": "Administer to persons who are undergoing radiation therapy.",
                     "beginAge": "6 months",
@@ -11499,7 +11499,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for solid tumors",
-                        "code": 189
+                        "code": "189"
                     },
                     "description": "Administer to persons receiving active treatment for solid tumors",
                     "beginAge": "6 months"
@@ -11507,7 +11507,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for hematologic malignancies",
-                        "code": 190
+                        "code": "190"
                     },
                     "description": "Administer to persons receiving active treatment for hematologic malignancies",
                     "beginAge": "6 months"
@@ -11515,7 +11515,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receipt of CAR-T-cell therapy",
-                        "code": 191
+                        "code": "191"
                     },
                     "description": "Administer to persons receiving CAR-T-cell therapy",
                     "beginAge": "6 months"
@@ -12574,7 +12574,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Recipient of a hematopoietic stem cell transplant",
-                        "code": 4
+                        "code": "004"
                     },
                     "description": "Administer to recipients of a hematopoietic stem cell transplant [HSCT] within 2 years of successful transplantation.",
                     "beginAge": "6 months"
@@ -12582,7 +12582,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Severe antibody deficiencies",
-                        "code": 145
+                        "code": "145"
                     },
                     "description": "Administer to persons who have severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
                     "beginAge": "6 months"
@@ -12590,7 +12590,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-                        "code": 147
+                        "code": "147"
                     },
                     "description": "Administer to persons who have complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
                     "beginAge": "6 months"
@@ -12598,7 +12598,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-                        "code": 148
+                        "code": "148"
                     },
                     "description": "Administer to persons who have partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
                     "beginAge": "6 months"
@@ -12606,7 +12606,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-                        "code": 153
+                        "code": "153"
                     },
                     "description": "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
                     "beginAge": "6 months"
@@ -12614,7 +12614,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV/AIDS - Severely immunocompromised",
-                        "code": 154
+                        "code": "154"
                     },
                     "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
                     "beginAge": "6 months"
@@ -12622,7 +12622,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Transplantation",
-                        "code": 157
+                        "code": "157"
                     },
                     "description": "Administer to persons who have received a transplant.",
                     "beginAge": "6 months"
@@ -12630,7 +12630,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Immunosuppressive therapy",
-                        "code": 158
+                        "code": "158"
                     },
                     "description": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "beginAge": "6 months",
@@ -12639,7 +12639,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Radiation therapy",
-                        "code": 159
+                        "code": "159"
                     },
                     "description": "Administer to persons who are undergoing radiation therapy.",
                     "beginAge": "6 months",
@@ -12648,7 +12648,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for solid tumors",
-                        "code": 189
+                        "code": "189"
                     },
                     "description": "Administer to persons receiving active treatment for solid tumors",
                     "beginAge": "6 months"
@@ -12656,7 +12656,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Active treatment for hematologic malignancies",
-                        "code": 190
+                        "code": "190"
                     },
                     "description": "Administer to persons receiving active treatment for hematologic malignancies",
                     "beginAge": "6 months"
@@ -12664,7 +12664,7 @@ final covid19 = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receipt of CAR-T-cell therapy",
-                        "code": 191
+                        "code": "191"
                     },
                     "description": "Administer to persons receiving CAR-T-cell therapy",
                     "beginAge": "6 months"

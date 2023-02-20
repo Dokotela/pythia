@@ -1275,7 +1275,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "History of sexual abuse or assault",
-                        "code": 169
+                        "code": "169"
                     },
                     "description": "Administer to persons who have a history of sexual abuse or assault.",
                     "beginAge": "0 days",
@@ -1527,7 +1527,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "History of sexual abuse or assault",
-                        "code": 169
+                        "code": "169"
                     },
                     "description": "Administer to persons who have a history of sexual abuse or assault.",
                     "beginAge": "0 days",
@@ -1787,7 +1787,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Severe antibody deficiencies",
-                        "code": 145
+                        "code": "145"
                     },
                     "description": "Administer to persons who have severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
                     "beginAge": "9 years"
@@ -1795,7 +1795,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Less severe antibody deficiencies",
-                        "code": 146
+                        "code": "146"
                     },
                     "description": "Administer to persons who have less severe B-lymphocyte (humoral) - antibody deficiencies (e.g., selective IgA deficiency and IgG subclass deficiency).",
                     "beginAge": "9 years"
@@ -1803,7 +1803,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-                        "code": 147
+                        "code": "147"
                     },
                     "description": "Administer to persons who have complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
                     "beginAge": "9 years"
@@ -1811,7 +1811,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-                        "code": 148
+                        "code": "148"
                     },
                     "description": "Administer to persons who have partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
                     "beginAge": "9 years"
@@ -1819,7 +1819,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies",
-                        "code": 149
+                        "code": "149"
                     },
                     "description": "Administer to persons who have T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies.",
                     "beginAge": "9 years"
@@ -1827,7 +1827,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha",
-                        "code": 150
+                        "code": "150"
                     },
                     "description": "Administer to persons who have T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha.",
                     "beginAge": "9 years"
@@ -1835,7 +1835,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-                        "code": 153
+                        "code": "153"
                     },
                     "description": "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
                     "beginAge": "9 years"
@@ -1843,7 +1843,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Generalized malignant neoplasm",
-                        "code": 156
+                        "code": "156"
                     },
                     "description": "Administer to persons who have generalized malignant neoplasm.",
                     "beginAge": "9 years"
@@ -1851,7 +1851,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Transplantation",
-                        "code": 157
+                        "code": "157"
                     },
                     "description": "Administer to persons who have received a transplant.",
                     "beginAge": "9 years"
@@ -1859,7 +1859,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Immunosuppressive therapy",
-                        "code": 158
+                        "code": "158"
                     },
                     "description": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "beginAge": "9 years"
@@ -1867,7 +1867,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Radiation therapy",
-                        "code": 159
+                        "code": "159"
                     },
                     "description": "Administer to persons who are undergoing radiation therapy.",
                     "beginAge": "9 years"
@@ -1875,7 +1875,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "9 years"
@@ -2063,7 +2063,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Severe antibody deficiencies",
-                        "code": 145
+                        "code": "145"
                     },
                     "description": "Administer to persons who have severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
                     "beginAge": "9 years"
@@ -2071,7 +2071,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Less severe antibody deficiencies",
-                        "code": 146
+                        "code": "146"
                     },
                     "description": "Administer to persons who have less severe B-lymphocyte (humoral) - antibody deficiencies (e.g., selective IgA deficiency and IgG subclass deficiency).",
                     "beginAge": "9 years"
@@ -2079,7 +2079,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-                        "code": 147
+                        "code": "147"
                     },
                     "description": "Administer to persons who have complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
                     "beginAge": "9 years"
@@ -2087,7 +2087,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-                        "code": 148
+                        "code": "148"
                     },
                     "description": "Administer to persons who have partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
                     "beginAge": "9 years"
@@ -2095,7 +2095,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies",
-                        "code": 149
+                        "code": "149"
                     },
                     "description": "Administer to persons who have T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies.",
                     "beginAge": "9 years"
@@ -2103,7 +2103,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha",
-                        "code": 150
+                        "code": "150"
                     },
                     "description": "Administer to persons who have T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha.",
                     "beginAge": "9 years"
@@ -2111,7 +2111,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-                        "code": 153
+                        "code": "153"
                     },
                     "description": "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
                     "beginAge": "9 years"
@@ -2119,7 +2119,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Generalized malignant neoplasm",
-                        "code": 156
+                        "code": "156"
                     },
                     "description": "Administer to persons who have generalized malignant neoplasm.",
                     "beginAge": "9 years"
@@ -2127,7 +2127,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Transplantation",
-                        "code": 157
+                        "code": "157"
                     },
                     "description": "Administer to persons who have received a transplant.",
                     "beginAge": "9 years"
@@ -2135,7 +2135,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Immunosuppressive therapy",
-                        "code": 158
+                        "code": "158"
                     },
                     "description": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "beginAge": "9 years"
@@ -2143,7 +2143,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Radiation therapy",
-                        "code": 159
+                        "code": "159"
                     },
                     "description": "Administer to persons who are undergoing radiation therapy.",
                     "beginAge": "9 years"
@@ -2151,7 +2151,7 @@ final hpv = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "9 years"

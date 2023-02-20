@@ -201,7 +201,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Research laboratory personnel working with more virulent orthopoxviruses (e.g., Variola virus or Monkeypox virus)",
-                        "code": 232
+                        "code": "232"
                     },
                     "description": "Administer to research laboratory personnel working with more virulent orthopoxviruses (e.g., Variola virus or Monkeypox virus)",
                     "beginAge": "18 years"
@@ -209,7 +209,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Clinical laboratory personnel performing diagnostic testing for more virulent orthopoxviruses (e.g., Variola virus or Monkeypox virus)",
-                        "code": 233
+                        "code": "233"
                     },
                     "description": "Administer to clinical laboratory personnel performing diagnostic testing for more virulent orthopoxviruses (e.g., Variola virus or Monkeypox virus)",
                     "beginAge": "18 years"
@@ -217,7 +217,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Designated response team members working with more virulent orthopoxviruses (e.g., Variola virus or Monkeypox virus)",
-                        "code": 234
+                        "code": "234"
                     },
                     "description": "Administer to designated response team members working with more virulent orthopoxviruses (e.g., Variola virus or Monkeypox virus)",
                     "beginAge": "18 years",
@@ -226,7 +226,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Healthcare personnel who care for patients infected with more virulent orthopoxviruses (e.g., Variola virus or Monkeypox virus)",
-                        "code": 235
+                        "code": "235"
                     },
                     "description": "Administer to healthcare personnel who care for patients infected with more virulent orthopoxviruses (e.g., Variola virus or Monkeypox virus)",
                     "beginAge": "18 years"
@@ -406,7 +406,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Research laboratory personnel working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
-                        "code": 236
+                        "code": "236"
                     },
                     "description": "Administer to research laboratory personnel working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
                     "beginAge": "18 years"
@@ -414,7 +414,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Clinical laboratory personnel performing diagnostic testing for less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
-                        "code": 237
+                        "code": "237"
                     },
                     "description": "Administer to clinical laboratory personnel performing diagnostic testing for less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
                     "beginAge": "18 years"
@@ -422,7 +422,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Designated response team members working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
-                        "code": 238
+                        "code": "238"
                     },
                     "description": "Administer to designated response team members working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
                     "beginAge": "18 years",
@@ -431,7 +431,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Healthcare personnel who administer ACAM2000",
-                        "code": 239
+                        "code": "239"
                     },
                     "description": "Administer to healthcare personnel who administer ACAM2000",
                     "beginAge": "18 years"
@@ -439,7 +439,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
-                        "code": 240
+                        "code": "240"
                     },
                     "description": "Administer to healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
                     "beginAge": "18 years"
@@ -621,7 +621,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Known exposure to monkeypox",
-                        "code": 241
+                        "code": "241"
                     },
                     "description": "Administer to persons who are known contacts to someone with monkeypox who are identified by public health authorities",
                     "beginAge": "0 days",
@@ -630,7 +630,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Presumed exposure to monkeypox",
-                        "code": 242
+                        "code": "242"
                     },
                     "description": "Administer to persons who have presumed exposure to monkeypox",
                     "beginAge": "0 days",

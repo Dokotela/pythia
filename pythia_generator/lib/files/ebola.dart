@@ -43,7 +43,7 @@ final ebola = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Ebola virus outbreak response",
-                        "code": 182
+                        "code": "182"
                     },
                     "description": "Administer to persons responding to an outbreak of Ebola Virus Disease.",
                     "beginAge": "18 years"
@@ -51,7 +51,7 @@ final ebola = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Health care personnel at federally designated Ebola treatement center in U.S.",
-                        "code": 183
+                        "code": "183"
                     },
                     "description": "Administer to persons working as health care personnel at federally designated Ebola treatement centers in the Unied States",
                     "beginAge": "18 years"
@@ -59,7 +59,7 @@ final ebola = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Laboratorians or other staff at biosafety level 4 facilities in U.S.",
-                        "code": 184
+                        "code": "184"
                     },
                     "description": "Administer to persons working as Laboratorians or other staff at biosafety level 4 facilities in U.S.",
                     "beginAge": "18 years"
@@ -67,7 +67,7 @@ final ebola = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Health care personnel involved in the care and transport of patients with suspected or confirmed Ebola virus disease at Special Pathogen Treatment Centers",
-                        "code": 212
+                        "code": "212"
                     },
                     "description": "Administer to persons working as Health care personnel involved in the care and transport of patients with suspected or confirmed Ebola virus disease at Special Pathogen Treatment Centers",
                     "beginAge": "18 years"
@@ -75,7 +75,7 @@ final ebola = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Laboratorians and support staff members at Laboratory Response Network (LRN) facilities that handle specimens that might contain replication-competent Ebola virus in the United States",
-                        "code": 213
+                        "code": "213"
                     },
                     "description": "Administer to persons working as Laboratorians and support staff members at Laboratory Response Network (LRN) facilities that handle specimens that might contain replication-competent Ebola virus in the United States",
                     "beginAge": "18 years"

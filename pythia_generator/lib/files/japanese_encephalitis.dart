@@ -49,7 +49,7 @@ final japaneseEncephalitis = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Longer-term (e.g., 1 month or more) travel to a JE-endemic area",
-                        "code": 165
+                        "code": "165"
                     },
                     "description": "Administer to persons who plan for longer-term (e.g., ≥ 1 month) travel to JE-endemic areas.",
                     "beginAge": "2 months"
@@ -57,7 +57,7 @@ final japaneseEncephalitis = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Moving to JE-endemic country to take up residence",
-                        "code": 173
+                        "code": "173"
                     },
                     "description": "Administer to persons who plan to move to JE-endemic countries to take up residence.",
                     "beginAge": "2 months"
@@ -65,7 +65,7 @@ final japaneseEncephalitis = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Frequent travel to JE-endemic areas",
-                        "code": 174
+                        "code": "174"
                     },
                     "description": "Administer to persons who frequently travel to JE-endemic areas.",
                     "beginAge": "2 months"
@@ -206,7 +206,7 @@ final japaneseEncephalitis = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Longer-term (e.g., 1 month or more) travel to a JE-endemic area",
-                        "code": 165
+                        "code": "165"
                     },
                     "description": "Administer to persons who plan for longer-term (e.g., ≥ 1 month) travel to JE-endemic areas.",
                     "beginAge": "18 years",
@@ -215,7 +215,7 @@ final japaneseEncephalitis = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Moving to JE-endemic country to take up residence",
-                        "code": 173
+                        "code": "173"
                     },
                     "description": "Administer to persons who plan to move to JE-endemic countries to take up residence.",
                     "beginAge": "18 years",
@@ -224,7 +224,7 @@ final japaneseEncephalitis = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Frequent travel to JE-endemic areas",
-                        "code": 174
+                        "code": "174"
                     },
                     "description": "Administer to persons who frequently travel to JE-endemic areas.",
                     "beginAge": "18 years",

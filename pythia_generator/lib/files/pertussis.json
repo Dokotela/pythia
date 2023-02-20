@@ -3827,7 +3827,7 @@
                 {
                     "observationCode": {
                         "text": "Pregnant",
-                        "code": 7
+                        "code": "007"
                     },
                     "description": "Administer to women who are pregnant.",
                     "guidance": "Pregnant women should receive 1 dose of Tdap during each pregnancy, preferably during the early part of gestational weeks 27-36, regardless of prior history of receiving Tdap."
@@ -3841,7 +3841,7 @@
                             "fromPrevious": "N",
                             "fromRelevantObs": {
                                 "text": "Onset of pregnancy",
-                                "code": 170
+                                "code": "170"
                             },
                             "earliestRecInt": "27 weeks",
                             "latestRecInt": "36 weeks"

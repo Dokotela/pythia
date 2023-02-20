@@ -245,7 +245,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Severe antibody deficiencies",
-                        "code": 145
+                        "code": "145"
                     },
                     "description": "Administer to persons who have severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
                     "beginAge": "19 years"
@@ -253,7 +253,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Less severe antibody deficiencies",
-                        "code": 146
+                        "code": "146"
                     },
                     "description": "Administer to persons who have less severe B-lymphocyte (humoral) - antibody deficiencies (e.g., selective IgA deficiency and IgG subclass deficiency).",
                     "beginAge": "19 years"
@@ -261,7 +261,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-                        "code": 147
+                        "code": "147"
                     },
                     "description": "Administer to persons who have complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
                     "beginAge": "19 years"
@@ -269,7 +269,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-                        "code": 148
+                        "code": "148"
                     },
                     "description": "Administer to persons who have partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
                     "beginAge": "19 years"
@@ -277,7 +277,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-                        "code": 153
+                        "code": "153"
                     },
                     "description": "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
                     "beginAge": "19 years"
@@ -285,7 +285,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Generalized malignant neoplasm",
-                        "code": 156
+                        "code": "156"
                     },
                     "description": "Administer to persons who have generalized malignant neoplasm.",
                     "beginAge": "19 years"
@@ -293,7 +293,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Transplantation",
-                        "code": 157
+                        "code": "157"
                     },
                     "description": "Administer to persons who have received a transplant.",
                     "beginAge": "19 years",
@@ -302,7 +302,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Immunosuppressive therapy",
-                        "code": 158
+                        "code": "158"
                     },
                     "description": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "beginAge": "19 years",
@@ -311,7 +311,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Radiation therapy",
-                        "code": 159
+                        "code": "159"
                     },
                     "description": "Administer to persons who are undergoing radiation therapy.",
                     "beginAge": "19 years",
@@ -320,7 +320,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Leukemia",
-                        "code": 178
+                        "code": "178"
                     },
                     "description": "Administer to persons with leukemia.",
                     "beginAge": "19 years"
@@ -328,7 +328,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Lymphoma",
-                        "code": 179
+                        "code": "179"
                     },
                     "description": "Administer to persons with lymphoma.",
                     "beginAge": "19 years"
@@ -336,7 +336,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Hodgkin's disease",
-                        "code": 180
+                        "code": "180"
                     },
                     "description": "Administer to persons with Hodgkin's disease.",
                     "beginAge": "19 years"
@@ -344,7 +344,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Multiple myeloma",
-                        "code": 181
+                        "code": "181"
                     },
                     "description": "Administer to persons with multiple myeloma.",
                     "beginAge": "19 years"
@@ -352,7 +352,7 @@ final zoster = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "19 years"

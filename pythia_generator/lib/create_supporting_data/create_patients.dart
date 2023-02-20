@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:fhir/r4.dart';
 import 'package:gsheets/gsheets.dart';
 
 import '../utils/api.dart';
@@ -26,11 +27,19 @@ Future<void> main() async {
 
       /// For each row, evaluate its values
       for (var v in values) {
-        /// Join the values of each cell together separated by tabs
-        healthyString += v.join('\t');
-
-        /// Separate each line with a carriage return
-        healthyString += '\n';
+        if (!v[0].contains('CDC')) {
+          final patient = Patient(
+            id: v[0],
+            name: [HumanName(family: v[1])],
+            birthDate: Date(
+                '${v[2].split('/').last}-${v[2].split('/')[0]}-${v[2].split('/')[1]}'),
+            gender: v[3].contains('F')
+                ? Code('female')
+                : v[3].contains('M')
+                    ? Code('male')
+                    : Code('unknown'),
+          );
+        }
       }
     }
   }

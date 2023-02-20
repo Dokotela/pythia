@@ -41,7 +41,7 @@ final rabies = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Rabies researchers",
-                        "code": 53
+                        "code": "053"
                     },
                     "description": "Administer to rabies researchers",
                     "beginAge": "0 days"
@@ -49,7 +49,7 @@ final rabies = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons working in rabies vaccine production facilities",
-                        "code": 217
+                        "code": "217"
                     },
                     "description": "Administer to persons working in rabies vaccine production facilities",
                     "beginAge": "0 days"
@@ -57,7 +57,7 @@ final rabies = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons performing testing for rabies in diagnostic laboratories",
-                        "code": 218
+                        "code": "218"
                     },
                     "description": "Administer to persons performing testing for rabies in diagnostic laboratories",
                     "beginAge": "0 days"
@@ -327,7 +327,7 @@ final rabies = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons who frequently handle bats",
-                        "code": 219
+                        "code": "219"
                     },
                     "description": "Administer to persons who frequently handle bats.",
                     "beginAge": "0 days"
@@ -335,7 +335,7 @@ final rabies = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons who frequently have contact with bats",
-                        "code": 220
+                        "code": "220"
                     },
                     "description": "Administer to persons who frequently have contact with bats.",
                     "beginAge": "0 days"
@@ -343,7 +343,7 @@ final rabies = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons who frequently enter high-density bat environments",
-                        "code": 221
+                        "code": "221"
                     },
                     "description": "Administer to persons who frequently enter high-density bat environments.",
                     "beginAge": "0 days"
@@ -351,7 +351,7 @@ final rabies = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons who frequently perform animal necropsies",
-                        "code": 222
+                        "code": "222"
                     },
                     "description": "Administer to persons who frequently perform animal necropsies.",
                     "beginAge": "0 days",
@@ -624,7 +624,7 @@ final rabies = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals",
-                        "code": 62
+                        "code": "062"
                     },
                     "description": "Administer to persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals.",
                     "beginAge": "0 days",
@@ -633,7 +633,7 @@ final rabies = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "International travel with possible contact with animals in areas where rabies is enzootic and immediate access to appropriate medical care might be limited",
-                        "code": 144
+                        "code": "144"
                     },
                     "description": "Administer to persons with plans for international travel with possible contact with animals in areas where rabies is enzootic and immediate access to appropriate medical care might be limited.",
                     "beginAge": "0 days",

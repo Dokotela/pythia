@@ -1821,7 +1821,7 @@ final hib = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persistent complement, properdin, or factor B deficiency",
-                        "code": 151
+                        "code": "151"
                     },
                     "description": "Administer to persons who have early complement component deficiencies.",
                     "beginAge": "12 months",
@@ -1830,7 +1830,7 @@ final hib = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "B-lymphocyte [humoral] - Less severe antibody deficiencies",
-                        "code": 146
+                        "code": "146"
                     },
                     "description": "Administer to persons who have less severe B-lymphocyte [humoral] - antibody deficiencies [e.g., selective IgA deficiency and IgG subclass deficiency].",
                     "beginAge": "12 months",
@@ -1839,7 +1839,7 @@ final hib = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Anatomical or functional asplenia",
-                        "code": 160
+                        "code": "160"
                     },
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "12 months",
@@ -2156,7 +2156,7 @@ final hib = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Undergoing elective splenectomy",
-                        "code": 2
+                        "code": "002"
                     },
                     "description": "Administered to persons who are undergoing elective splenectomy if they have not previously received Hib vaccine. Vaccination 14 or more days before splenectomy is suggested.",
                     "beginAge": "15 months",
@@ -2165,7 +2165,7 @@ final hib = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Anatomical or functional asplenia",
-                        "code": 160
+                        "code": "160"
                     },
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "5 years"
@@ -2173,7 +2173,7 @@ final hib = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "5 years",
@@ -2300,7 +2300,7 @@ final hib = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Recipient of a hematopoietic stem cell transplant",
-                        "code": 4
+                        "code": "004"
                     },
                     "description": "Administer to recipients of a hematopoietic stem cell transplant (HSCT) 6 to 12 months after a successful transplant, regardless of vaccination history.",
                     "beginAge": "6 weeks",
@@ -2321,7 +2321,7 @@ final hib = AntigenSupportingData.fromJson({
                             "fromPrevious": "N",
                             "fromRelevantObs": {
                                 "text": "Date of hematopoietic stem cell transplant",
-                                "code": 171
+                                "code": "171"
                             },
                             "earliestRecInt": "6 months",
                             "latestRecInt": "12 months"

@@ -6,7 +6,7 @@ final hepa = AntigenSupportingData.fromJson({
     "immunity": {
         "clinicalHistory": [
             {
-                "guidelineCode": 18,
+                "guidelineCode": "018",
                 "guidelineTitle": "Laboratory Evidence of Immunity or confirmation of Hepatitis A disease"
             }
         ]
@@ -223,7 +223,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travelling Internationally",
-                        "code": 48
+                        "code": "048"
                     },
                     "description": "Administer to persons who will be travelling internationally.",
                     "beginAge": "6 months",
@@ -304,7 +304,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": 1
+                        "code": "001"
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "19 years"
@@ -312,7 +312,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Chronic liver disease",
-                        "code": 15
+                        "code": "015"
                     },
                     "description": "Administer to persons who have chronic liver disease.",
                     "beginAge": "19 years",
@@ -321,7 +321,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Men who have sex with men",
-                        "code": 36
+                        "code": "036"
                     },
                     "description": "Administer to men who have sex with men.",
                     "beginAge": "19 years"
@@ -329,7 +329,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Illicit drug use",
-                        "code": 40
+                        "code": "040"
                     },
                     "description": "Administer to persons who use illicit drugs.",
                     "beginAge": "19 years",
@@ -338,7 +338,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Anticipate close personal contact with international adoptee",
-                        "code": 44
+                        "code": "044"
                     },
                     "description": "Administer to persons who anticipate close personal contact with an international adoptee during the first 60 days.",
                     "beginAge": "19 years",
@@ -347,7 +347,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Occupational exposure for Hepatitis A",
-                        "code": 59
+                        "code": "059"
                     },
                     "description": "Administer to persons who have an occupational exposure for Hepatitis A",
                     "beginAge": "19 years",
@@ -356,7 +356,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": 70
+                        "code": "070"
                     },
                     "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup.",
                     "beginAge": "19 years"
@@ -364,7 +364,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Homelessness",
-                        "code": 121
+                        "code": "121"
                     },
                     "description": "Administer to persons who are experiencing homelessness.",
                     "beginAge": "19 years",
@@ -373,7 +373,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A",
-                        "code": 142
+                        "code": "142"
                     },
                     "description": "Administer to persons traveling to or working in countries that have high or intermediate endemicity of Hepatitis A.",
                     "beginAge": "19 years"
@@ -381,7 +381,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks Hepatitis A  protection",
-                        "code": 175
+                        "code": "175"
                     },
                     "description": "Administer to persons seeking protection from Hepatitis A.",
                     "beginAge": "19 years"
@@ -389,7 +389,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons in settings that provide services to adults with high proportion of those persons have risk factors for HAV infection",
-                        "code": 185
+                        "code": "185"
                     },
                     "description": "Administer to persons in settings that provider services to adults with high proportion of those persons have risk factors HAV infection",
                     "beginAge": "19 years",
@@ -398,7 +398,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "19 years"
@@ -529,7 +529,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": 1
+                        "code": "001"
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "19 years"
@@ -537,7 +537,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Chronic liver disease",
-                        "code": 15
+                        "code": "015"
                     },
                     "description": "Administer to persons who have chronic liver disease.",
                     "beginAge": "19 years",
@@ -546,7 +546,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Men who have sex with men",
-                        "code": 36
+                        "code": "036"
                     },
                     "description": "Administer to men who have sex with men.",
                     "beginAge": "19 years"
@@ -554,7 +554,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Illicit drug use",
-                        "code": 40
+                        "code": "040"
                     },
                     "description": "Administer to persons who use illicit drugs.",
                     "beginAge": "19 years",
@@ -563,7 +563,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Anticipate close personal contact with international adoptee",
-                        "code": 44
+                        "code": "044"
                     },
                     "description": "Administer to persons who anticipate close personal contact with an international adoptee during the first 60 days.",
                     "beginAge": "19 years",
@@ -572,7 +572,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Occupational exposure for Hepatitis A",
-                        "code": 59
+                        "code": "059"
                     },
                     "description": "Administer to persons who have an occupational exposure for Hepatitis A",
                     "beginAge": "19 years",
@@ -581,7 +581,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": 70
+                        "code": "070"
                     },
                     "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup.",
                     "beginAge": "19 years"
@@ -589,7 +589,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Homelessness",
-                        "code": 121
+                        "code": "121"
                     },
                     "description": "Administer to persons who are experiencing homelessness.",
                     "beginAge": "19 years",
@@ -598,7 +598,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A",
-                        "code": 142
+                        "code": "142"
                     },
                     "description": "Administer to persons traveling to or working in countries that have high or intermediate endemicity of Hepatitis A.",
                     "beginAge": "19 years"
@@ -606,7 +606,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks Hepatitis A  protection",
-                        "code": 175
+                        "code": "175"
                     },
                     "description": "Administer to persons seeking protection from Hepatitis A.",
                     "beginAge": "19 years"
@@ -614,7 +614,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons in settings that provide services to adults with high proportion of those persons have risk factors for HAV infection",
-                        "code": 185
+                        "code": "185"
                     },
                     "description": "Administer to persons in settings that provider services to adults with high proportion of those persons have risk factors HAV infection",
                     "beginAge": "19 years",
@@ -623,7 +623,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "19 years"
@@ -807,7 +807,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": 1
+                        "code": "001"
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "19 years"
@@ -815,7 +815,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Chronic liver disease",
-                        "code": 15
+                        "code": "015"
                     },
                     "description": "Administer to persons who have chronic liver disease.",
                     "beginAge": "19 years",
@@ -824,7 +824,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Men who have sex with men",
-                        "code": 36
+                        "code": "036"
                     },
                     "description": "Administer to men who have sex with men.",
                     "beginAge": "19 years"
@@ -832,7 +832,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Illicit drug use",
-                        "code": 40
+                        "code": "040"
                     },
                     "description": "Administer to persons who use illicit drugs.",
                     "beginAge": "19 years",
@@ -841,7 +841,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Anticipate close personal contact with international adoptee",
-                        "code": 44
+                        "code": "044"
                     },
                     "description": "Administer to persons who anticipate close personal contact with an international adoptee during the first 60 days.",
                     "beginAge": "19 years",
@@ -850,7 +850,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Occupational exposure for Hepatitis A",
-                        "code": 59
+                        "code": "059"
                     },
                     "description": "Administer to persons who have an occupational exposure for Hepatitis A",
                     "beginAge": "19 years",
@@ -859,7 +859,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons at risk during an outbreak",
-                        "code": 70
+                        "code": "070"
                     },
                     "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup.",
                     "beginAge": "19 years"
@@ -867,7 +867,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Homelessness",
-                        "code": 121
+                        "code": "121"
                     },
                     "description": "Administer to persons who are experiencing homelessness.",
                     "beginAge": "19 years",
@@ -876,7 +876,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A",
-                        "code": 142
+                        "code": "142"
                     },
                     "description": "Administer to persons traveling to or working in countries that have high or intermediate endemicity of Hepatitis A.",
                     "beginAge": "19 years"
@@ -884,7 +884,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks Hepatitis A  protection",
-                        "code": 175
+                        "code": "175"
                     },
                     "description": "Administer to persons seeking protection from Hepatitis A.",
                     "beginAge": "19 years"
@@ -892,7 +892,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons in settings that provide services to adults with high proportion of those persons have risk factors for HAV infection",
-                        "code": 185
+                        "code": "185"
                     },
                     "description": "Administer to persons in settings that provider services to adults with high proportion of those persons have risk factors HAV infection",
                     "beginAge": "19 years",
@@ -901,7 +901,7 @@ final hepa = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "19 years"

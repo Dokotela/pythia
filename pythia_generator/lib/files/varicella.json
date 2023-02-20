@@ -4,15 +4,15 @@
     "immunity": {
         "clinicalHistory": [
             {
-                "guidelineCode": 23,
+                "guidelineCode": "023",
                 "guidelineTitle": "Laboratory Evidence of Immunity or confirmation of Varicella disease"
             },
             {
-                "guidelineCode": 24,
+                "guidelineCode": "024",
                 "guidelineTitle": "Healthcare provider verified history of or diagnosis of Varicella"
             },
             {
-                "guidelineCode": 25,
+                "guidelineCode": "025",
                 "guidelineTitle": "Healthcare provider verified history or diagnosis of Herpes Zoster"
             }
         ],
@@ -21,15 +21,15 @@
             "birthCountry": "U.S.",
             "exclusion": [
                 {
-                    "exclusionCode": 55,
+                    "exclusionCode": "055",
                     "exclusionTitle": "Health care personnel"
                 },
                 {
-                    "exclusionCode": 7,
+                    "exclusionCode": "007",
                     "exclusionTitle": "Pregnant"
                 },
                 {
-                    "exclusionCode": 3,
+                    "exclusionCode": "003",
                     "exclusionTitle": "Immunocompromised"
                 }
             ]

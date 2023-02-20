@@ -44,7 +44,7 @@ final cholera = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to an area of active cholera transmission",
-                        "code": 8
+                        "code": "008"
                     },
                     "description": "Administer to travelers from the United States traveling to an area of active cholera transmission.",
                     "beginAge": "2 years",

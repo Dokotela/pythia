@@ -6,7 +6,7 @@ final hepb = AntigenSupportingData.fromJson({
     "immunity": {
         "clinicalHistory": [
             {
-                "guidelineCode": 19,
+                "guidelineCode": "019",
                 "guidelineTitle": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease"
             }
         ]
@@ -2699,7 +2699,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": 1
+                        "code": "001"
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "60 years"
@@ -2707,7 +2707,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Chronic liver disease",
-                        "code": 15
+                        "code": "015"
                     },
                     "description": "Administer to persons who have chronic liver disease.",
                     "beginAge": "60 years",
@@ -2716,7 +2716,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Men who have sex with men",
-                        "code": 36
+                        "code": "036"
                     },
                     "description": "Administer to men who have sex with men.",
                     "beginAge": "60 years"
@@ -2724,7 +2724,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Not in a long-term, mutually monogamous relationship",
-                        "code": 37
+                        "code": "037"
                     },
                     "description": "Administer to persons not in a long-term, mutually monogamous relationship.",
                     "beginAge": "60 years"
@@ -2732,7 +2732,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Sex partner of Hepatitis B surface antigen-positive persons",
-                        "code": 38
+                        "code": "038"
                     },
                     "description": "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
                     "beginAge": "60 years"
@@ -2740,7 +2740,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receives treatment for STD",
-                        "code": 39
+                        "code": "039"
                     },
                     "description": "Administer to persons who receive treatment for STD.",
                     "beginAge": "60 years"
@@ -2748,7 +2748,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Illicit injection drug use",
-                        "code": 41
+                        "code": "041"
                     },
                     "description": "Administer to persons who use illicit injection drugs.",
                     "beginAge": "60 years"
@@ -2756,7 +2756,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Health care personnel",
-                        "code": 55
+                        "code": "055"
                     },
                     "description": "Administer to healthcare personnel.",
                     "beginAge": "60 years"
@@ -2764,7 +2764,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Public safety worker exposed to blood or infection body fluids",
-                        "code": 57
+                        "code": "057"
                     },
                     "description": "Administer to public safety workers exposed to blood or infection body fluids",
                     "beginAge": "60 years"
@@ -2772,7 +2772,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Staff of institution for persons with developmental disabilities",
-                        "code": 58
+                        "code": "058"
                     },
                     "description": "Administer to staff of institution for persons with developmental disabilities",
                     "beginAge": "60 years"
@@ -2780,7 +2780,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Client of institution for persons with developmental disabilities",
-                        "code": 65
+                        "code": "065"
                     },
                     "description": "Administer to persons who are a client of institution for persons with developmental disabilities.",
                     "beginAge": "60 years"
@@ -2788,7 +2788,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "In correctional facility",
-                        "code": 69
+                        "code": "069"
                     },
                     "description": "Administer to persons who are in a correctional facility.",
                     "beginAge": "60 years"
@@ -2796,7 +2796,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Household contact with hepatitis B surface antigen-positive persons",
-                        "code": 71
+                        "code": "071"
                     },
                     "description": "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
                     "beginAge": "60 years"
@@ -2804,7 +2804,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-                        "code": 166
+                        "code": "166"
                     },
                     "description": "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
                     "beginAge": "60 years"
@@ -2812,7 +2812,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks Hepatitis B protection",
-                        "code": 176
+                        "code": "176"
                     },
                     "description": "Administer to persons seeking protection from Hepatitis B.",
                     "beginAge": "60 years"
@@ -2820,7 +2820,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "60 years"
@@ -3159,7 +3159,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": 1
+                        "code": "001"
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "60 years"
@@ -3167,7 +3167,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Chronic liver disease",
-                        "code": 15
+                        "code": "015"
                     },
                     "description": "Administer to persons who have chronic liver disease.",
                     "beginAge": "60 years",
@@ -3176,7 +3176,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Men who have sex with men",
-                        "code": 36
+                        "code": "036"
                     },
                     "description": "Administer to men who have sex with men.",
                     "beginAge": "60 years"
@@ -3184,7 +3184,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Not in a long-term, mutually monogamous relationship",
-                        "code": 37
+                        "code": "037"
                     },
                     "description": "Administer to persons not in a long-term, mutually monogamous relationship.",
                     "beginAge": "60 years"
@@ -3192,7 +3192,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Sex partner of Hepatitis B surface antigen-positive persons",
-                        "code": 38
+                        "code": "038"
                     },
                     "description": "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
                     "beginAge": "60 years"
@@ -3200,7 +3200,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receives treatment for STD",
-                        "code": 39
+                        "code": "039"
                     },
                     "description": "Administer to persons who receive treatment for STD.",
                     "beginAge": "60 years"
@@ -3208,7 +3208,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Illicit injection drug use",
-                        "code": 41
+                        "code": "041"
                     },
                     "description": "Administer to persons who use illicit injection drugs.",
                     "beginAge": "60 years"
@@ -3216,7 +3216,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Health care personnel",
-                        "code": 55
+                        "code": "055"
                     },
                     "description": "Administer to healthcare personnel.",
                     "beginAge": "60 years"
@@ -3224,7 +3224,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Public safety worker exposed to blood or infection body fluids",
-                        "code": 57
+                        "code": "057"
                     },
                     "description": "Administer to public safety workers exposed to blood or infection body fluids",
                     "beginAge": "60 years"
@@ -3232,7 +3232,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Staff of institution for persons with developmental disabilities",
-                        "code": 58
+                        "code": "058"
                     },
                     "description": "Administer to staff of institution for persons with developmental disabilities",
                     "beginAge": "60 years"
@@ -3240,7 +3240,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Client of institution for persons with developmental disabilities",
-                        "code": 65
+                        "code": "065"
                     },
                     "description": "Administer to persons who are a client of institution for persons with developmental disabilities.",
                     "beginAge": "60 years"
@@ -3248,7 +3248,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "In correctional facility",
-                        "code": 69
+                        "code": "069"
                     },
                     "description": "Administer to persons who are in a correctional facility.",
                     "beginAge": "60 years"
@@ -3256,7 +3256,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Household contact with hepatitis B surface antigen-positive persons",
-                        "code": 71
+                        "code": "071"
                     },
                     "description": "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
                     "beginAge": "60 years"
@@ -3264,7 +3264,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-                        "code": 166
+                        "code": "166"
                     },
                     "description": "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
                     "beginAge": "60 years"
@@ -3272,7 +3272,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks Hepatitis B  protection",
-                        "code": 176
+                        "code": "176"
                     },
                     "description": "Administer to persons seeking protection from Hepatitis B.",
                     "beginAge": "60 years"
@@ -3280,7 +3280,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "60 years"
@@ -3372,7 +3372,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": 1
+                        "code": "001"
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "60 years"
@@ -3380,7 +3380,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Chronic liver disease",
-                        "code": 15
+                        "code": "015"
                     },
                     "description": "Administer to persons who have chronic liver disease.",
                     "beginAge": "60 years",
@@ -3389,7 +3389,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Men who have sex with men",
-                        "code": 36
+                        "code": "036"
                     },
                     "description": "Administer to men who have sex with men.",
                     "beginAge": "60 years"
@@ -3397,7 +3397,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Not in a long-term, mutually monogamous relationship",
-                        "code": 37
+                        "code": "037"
                     },
                     "description": "Administer to persons not in a long-term, mutually monogamous relationship.",
                     "beginAge": "60 years"
@@ -3405,7 +3405,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Sex partner of Hepatitis B surface antigen-positive persons",
-                        "code": 38
+                        "code": "038"
                     },
                     "description": "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
                     "beginAge": "60 years"
@@ -3413,7 +3413,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receives treatment for STD",
-                        "code": 39
+                        "code": "039"
                     },
                     "description": "Administer to persons who receive treatment for STD.",
                     "beginAge": "60 years"
@@ -3421,7 +3421,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Illicit injection drug use",
-                        "code": 41
+                        "code": "041"
                     },
                     "description": "Administer to persons who use illicit injection drugs.",
                     "beginAge": "60 years"
@@ -3429,7 +3429,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Health care personnel",
-                        "code": 55
+                        "code": "055"
                     },
                     "description": "Administer to healthcare personnel.",
                     "beginAge": "60 years"
@@ -3437,7 +3437,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Public safety worker exposed to blood or infection body fluids",
-                        "code": 57
+                        "code": "057"
                     },
                     "description": "Administer to public safety workers exposed to blood or infection body fluids",
                     "beginAge": "60 years"
@@ -3445,7 +3445,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Staff of institution for persons with developmental disabilities",
-                        "code": 58
+                        "code": "058"
                     },
                     "description": "Administer to staff of institution for persons with developmental disabilities",
                     "beginAge": "60 years"
@@ -3453,7 +3453,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Client of institution for persons with developmental disabilities",
-                        "code": 65
+                        "code": "065"
                     },
                     "description": "Administer to persons who are a client of institution for persons with developmental disabilities.",
                     "beginAge": "60 years"
@@ -3461,7 +3461,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "In correctional facility",
-                        "code": 69
+                        "code": "069"
                     },
                     "description": "Administer to persons who are in a correctional facility.",
                     "beginAge": "60 years"
@@ -3469,7 +3469,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Household contact with hepatitis B surface antigen-positive persons",
-                        "code": 71
+                        "code": "071"
                     },
                     "description": "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
                     "beginAge": "60 years"
@@ -3477,7 +3477,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-                        "code": 166
+                        "code": "166"
                     },
                     "description": "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
                     "beginAge": "60 years"
@@ -3485,7 +3485,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks Hepatitis B  protection",
-                        "code": 176
+                        "code": "176"
                     },
                     "description": "Administer to persons seeking protection from Hepatitis B.",
                     "beginAge": "60 years"
@@ -3493,7 +3493,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "60 years"
@@ -3851,7 +3851,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": 1
+                        "code": "001"
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "60 years"
@@ -3859,7 +3859,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Chronic liver disease",
-                        "code": 15
+                        "code": "015"
                     },
                     "description": "Administer to persons who have chronic liver disease.",
                     "beginAge": "60 years",
@@ -3868,7 +3868,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Men who have sex with men",
-                        "code": 36
+                        "code": "036"
                     },
                     "description": "Administer to men who have sex with men.",
                     "beginAge": "60 years"
@@ -3876,7 +3876,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Not in a long-term, mutually monogamous relationship",
-                        "code": 37
+                        "code": "037"
                     },
                     "description": "Administer to persons not in a long-term, mutually monogamous relationship.",
                     "beginAge": "60 years"
@@ -3884,7 +3884,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Sex partner of Hepatitis B surface antigen-positive persons",
-                        "code": 38
+                        "code": "038"
                     },
                     "description": "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
                     "beginAge": "60 years"
@@ -3892,7 +3892,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receives treatment for STD",
-                        "code": 39
+                        "code": "039"
                     },
                     "description": "Administer to persons who receive treatment for STD.",
                     "beginAge": "60 years"
@@ -3900,7 +3900,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Illicit injection drug use",
-                        "code": 41
+                        "code": "041"
                     },
                     "description": "Administer to persons who use illicit injection drugs.",
                     "beginAge": "60 years"
@@ -3908,7 +3908,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Health care personnel",
-                        "code": 55
+                        "code": "055"
                     },
                     "description": "Administer to healthcare personnel.",
                     "beginAge": "60 years"
@@ -3916,7 +3916,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Public safety worker exposed to blood or infection body fluids",
-                        "code": 57
+                        "code": "057"
                     },
                     "description": "Administer to public safety workers exposed to blood or infection body fluids",
                     "beginAge": "60 years"
@@ -3924,7 +3924,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Staff of institution for persons with developmental disabilities",
-                        "code": 58
+                        "code": "058"
                     },
                     "description": "Administer to staff of institution for persons with developmental disabilities",
                     "beginAge": "60 years"
@@ -3932,7 +3932,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Client of institution for persons with developmental disabilities",
-                        "code": 65
+                        "code": "065"
                     },
                     "description": "Administer to persons who are a client of institution for persons with developmental disabilities.",
                     "beginAge": "60 years"
@@ -3940,7 +3940,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "In correctional facility",
-                        "code": 69
+                        "code": "069"
                     },
                     "description": "Administer to persons who are in a correctional facility.",
                     "beginAge": "60 years"
@@ -3948,7 +3948,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Household contact with hepatitis B surface antigen-positive persons",
-                        "code": 71
+                        "code": "071"
                     },
                     "description": "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
                     "beginAge": "60 years"
@@ -3956,7 +3956,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-                        "code": 166
+                        "code": "166"
                     },
                     "description": "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
                     "beginAge": "60 years"
@@ -3964,7 +3964,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks Hepatitis B  protection",
-                        "code": 176
+                        "code": "176"
                     },
                     "description": "Administer to persons seeking protection from Hepatitis B.",
                     "beginAge": "60 years"
@@ -3972,7 +3972,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "60 years"
@@ -4325,7 +4325,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": 1
+                        "code": "001"
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "60 years"
@@ -4333,7 +4333,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Chronic liver disease",
-                        "code": 15
+                        "code": "015"
                     },
                     "description": "Administer to persons who have chronic liver disease.",
                     "beginAge": "60 years",
@@ -4342,7 +4342,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Men who have sex with men",
-                        "code": 36
+                        "code": "036"
                     },
                     "description": "Administer to men who have sex with men.",
                     "beginAge": "60 years"
@@ -4350,7 +4350,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Not in a long-term, mutually monogamous relationship",
-                        "code": 37
+                        "code": "037"
                     },
                     "description": "Administer to persons not in a long-term, mutually monogamous relationship.",
                     "beginAge": "60 years"
@@ -4358,7 +4358,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Sex partner of Hepatitis B surface antigen-positive persons",
-                        "code": 38
+                        "code": "038"
                     },
                     "description": "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
                     "beginAge": "60 years"
@@ -4366,7 +4366,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receives treatment for STD",
-                        "code": 39
+                        "code": "039"
                     },
                     "description": "Administer to persons who receive treatment for STD.",
                     "beginAge": "60 years"
@@ -4374,7 +4374,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Illicit injection drug use",
-                        "code": 41
+                        "code": "041"
                     },
                     "description": "Administer to persons who use illicit injection drugs.",
                     "beginAge": "60 years"
@@ -4382,7 +4382,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Health care personnel",
-                        "code": 55
+                        "code": "055"
                     },
                     "description": "Administer to  healthcare personnel.",
                     "beginAge": "60 years"
@@ -4390,7 +4390,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Public safety worker exposed to blood or infection body fluids",
-                        "code": 57
+                        "code": "057"
                     },
                     "description": "Administer to public safety workers exposed to blood or infection body fluids",
                     "beginAge": "60 years"
@@ -4398,7 +4398,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Staff of institution for persons with developmental disabilities",
-                        "code": 58
+                        "code": "058"
                     },
                     "description": "Administer to staff of institution for persons with developmental disabilities",
                     "beginAge": "60 years"
@@ -4406,7 +4406,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Client of institution for persons with developmental disabilities",
-                        "code": 65
+                        "code": "065"
                     },
                     "description": "Administer to persons who are a client of institution for persons with developmental disabilities.",
                     "beginAge": "60 years"
@@ -4414,7 +4414,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "In correctional facility",
-                        "code": 69
+                        "code": "069"
                     },
                     "description": "Administer to persons who are in a correctional facility.",
                     "beginAge": "60 years"
@@ -4422,7 +4422,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Household contact with hepatitis B surface antigen-positive persons",
-                        "code": 71
+                        "code": "071"
                     },
                     "description": "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
                     "beginAge": "60 years"
@@ -4430,7 +4430,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-                        "code": 166
+                        "code": "166"
                     },
                     "description": "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
                     "beginAge": "60 years"
@@ -4438,7 +4438,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks Hepatitis B  protection",
-                        "code": 176
+                        "code": "176"
                     },
                     "description": "Administer to persons seeking protection from Hepatitis B.",
                     "beginAge": "60 years"
@@ -4446,7 +4446,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "60 years"
@@ -4577,7 +4577,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks protection",
-                        "code": 1
+                        "code": "001"
                     },
                     "description": "Administer to persons seeking protection.",
                     "beginAge": "60 years"
@@ -4585,7 +4585,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Chronic liver disease",
-                        "code": 15
+                        "code": "015"
                     },
                     "description": "Administer to persons who have chronic liver disease.",
                     "beginAge": "60 years",
@@ -4594,7 +4594,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Men who have sex with men",
-                        "code": 36
+                        "code": "036"
                     },
                     "description": "Administer to men who have sex with men.",
                     "beginAge": "60 years"
@@ -4602,7 +4602,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Not in a long-term, mutually monogamous relationship",
-                        "code": 37
+                        "code": "037"
                     },
                     "description": "Administer to persons not in a long-term, mutually monogamous relationship.",
                     "beginAge": "60 years"
@@ -4610,7 +4610,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Sex partner of Hepatitis B surface antigen-positive persons",
-                        "code": 38
+                        "code": "038"
                     },
                     "description": "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
                     "beginAge": "60 years"
@@ -4618,7 +4618,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Receives treatment for STD",
-                        "code": 39
+                        "code": "039"
                     },
                     "description": "Administer to persons who receive treatment for STD.",
                     "beginAge": "60 years"
@@ -4626,7 +4626,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Illicit injection drug use",
-                        "code": 41
+                        "code": "041"
                     },
                     "description": "Administer to persons who use illicit injection drugs.",
                     "beginAge": "60 years"
@@ -4634,7 +4634,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Health care personnel",
-                        "code": 55
+                        "code": "055"
                     },
                     "description": "Administer to  healthcare personnel.",
                     "beginAge": "60 years"
@@ -4642,7 +4642,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Public safety worker exposed to blood or infection body fluids",
-                        "code": 57
+                        "code": "057"
                     },
                     "description": "Administer to public safety workers exposed to blood or infection body fluids",
                     "beginAge": "60 years"
@@ -4650,7 +4650,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Staff of institution for persons with developmental disabilities",
-                        "code": 58
+                        "code": "058"
                     },
                     "description": "Administer to staff of institution for persons with developmental disabilities",
                     "beginAge": "60 years"
@@ -4658,7 +4658,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Client of institution for persons with developmental disabilities",
-                        "code": 65
+                        "code": "065"
                     },
                     "description": "Administer to persons who are a client of institution for persons with developmental disabilities.",
                     "beginAge": "60 years"
@@ -4666,7 +4666,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "In correctional facility",
-                        "code": 69
+                        "code": "069"
                     },
                     "description": "Administer to persons who are in a correctional facility.",
                     "beginAge": "60 years"
@@ -4674,7 +4674,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Household contact with hepatitis B surface antigen-positive persons",
-                        "code": 71
+                        "code": "071"
                     },
                     "description": "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
                     "beginAge": "60 years"
@@ -4682,7 +4682,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-                        "code": 166
+                        "code": "166"
                     },
                     "description": "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
                     "beginAge": "60 years"
@@ -4690,7 +4690,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Patient seeks Hepatitis B  protection",
-                        "code": 176
+                        "code": "176"
                     },
                     "description": "Administer to persons seeking protection from Hepatitis B.",
                     "beginAge": "60 years"
@@ -4698,7 +4698,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV Infection",
-                        "code": 186
+                        "code": "186"
                     },
                     "description": "Administer to persons with HIV Infection",
                     "beginAge": "60 years"
@@ -4842,7 +4842,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Dialysis patient",
-                        "code": 32
+                        "code": "032"
                     },
                     "description": "Administer to hemodialysis patients and predialysis, peritoneal dialysis, and home dialysis patients",
                     "beginAge": "20 years"
@@ -5070,7 +5070,7 @@ final hepb = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Dialysis patient",
-                        "code": 32
+                        "code": "032"
                     },
                     "description": "Administer to hemodialysis patients and predialysis, peritoneal dialysis, and home dialysis patients",
                     "beginAge": "20 years"

@@ -6,7 +6,7 @@ final measles = AntigenSupportingData.fromJson({
     "immunity": {
         "clinicalHistory": [
             {
-                "guidelineCode": 20,
+                "guidelineCode": "020",
                 "guidelineTitle": "Laboratory Evidence of Immunity for Measles"
             }
         ],
@@ -14,7 +14,7 @@ final measles = AntigenSupportingData.fromJson({
             "immunityBirthDate": "01/01/1957",
             "exclusion": [
                 {
-                    "exclusionCode": 55,
+                    "exclusionCode": "055",
                     "exclusionTitle": "Health care personnel"
                 }
             ]
@@ -369,7 +369,7 @@ final measles = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travelling Internationally",
-                        "code": 48
+                        "code": "048"
                     },
                     "description": "Administer to persons who will be travelling internationally.",
                     "beginAge": "6 months",
@@ -436,7 +436,7 @@ final measles = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Travelling Internationally",
-                        "code": 48
+                        "code": "048"
                     },
                     "description": "Administer to persons who will be travelling internationally.",
                     "beginAge": "18 years"
@@ -444,7 +444,7 @@ final measles = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Health care personnel",
-                        "code": 55
+                        "code": "055"
                     },
                     "description": "Administer to healthcare personnel without evidence of immunity.",
                     "beginAge": "18 years",
@@ -453,7 +453,7 @@ final measles = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Post secondary student",
-                        "code": 63
+                        "code": "063"
                     },
                     "description": "Administer to persons who are students in a postsecondary educational institution.",
                     "beginAge": "18 years"
@@ -461,7 +461,7 @@ final measles = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Household and close contacts of immunocompromised persons",
-                        "code": 73
+                        "code": "073"
                     },
                     "description": "Administer to persons who are household and close contacts of immunocompromised persons.",
                     "beginAge": "18 years"
@@ -469,7 +469,7 @@ final measles = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Received inactivated or unknown measles vaccine between 1963-1967",
-                        "code": 77
+                        "code": "077"
                     },
                     "description": "Administer to persons who received inactivated or unknown measles vaccine between 1963-1967.",
                     "beginAge": "18 years"
@@ -477,7 +477,7 @@ final measles = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "HIV/AIDS - not severely immunocompromised",
-                        "code": 155
+                        "code": "155"
                     },
                     "description": "Administer to persons who have HIV/AIDS but are not severely immunocompromised (See the CDC general recommendations for a definition of severely immunocompromised).",
                     "beginAge": "18 years"
@@ -588,7 +588,7 @@ final measles = AntigenSupportingData.fromJson({
                 {
                     "observationCode": {
                         "text": "Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]",
-                        "code": 26
+                        "code": "026"
                     },
                     "description": "Administer to persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]."
                 }
@@ -608,7 +608,7 @@ final measles = AntigenSupportingData.fromJson({
                             "fromPrevious": "N",
                             "fromRelevantObs": {
                                 "text": "Begin Date of antiviral therapy [ART]",
-                                "code": 120
+                                "code": "120"
                             },
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
