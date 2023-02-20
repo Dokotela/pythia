@@ -22,3 +22,4 @@ All I've done is take all of their hard work, guidance and expertise and make it
 - All of the XLSX files I've transferred into Gsheets, [the link can be found here](https://drive.google.com/drive/folders/1LUDu9y85qd0aJwFtvwv0h3fQUafqfTDq?usp=sharing)
 - The Coded Observations sheets I had to remove all of the carriage returns ("\n" in Regex) because they screw up the Gsheets TSV parser in Dart
 - I had to do the same for most of the Antigen spreadsheets as well (I replaced all "\n" with " ")
+- So run the pythia generator (just be in the same directory as the project and run "```./generate.sh```")
