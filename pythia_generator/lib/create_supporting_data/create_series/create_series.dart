@@ -30,7 +30,12 @@ Series createSeries(String? seriesString) {
             newSeries = newSeries
                 .copyWith(seriesAdminGuidance: [valueToString(row[1]!) ?? '']);
           } else {
-            newSeries.seriesAdminGuidance!.add(valueToString(row[1]!) ?? '');
+            newSeries = newSeries.copyWith(seriesAdminGuidance: [
+              if (newSeries.seriesAdminGuidance != null &&
+                  newSeries.seriesAdminGuidance!.isNotEmpty)
+                ...newSeries.seriesAdminGuidance!,
+              valueToString(row[1]!) ?? '',
+            ]);
           }
         }
       } else if (row[0]!.toString().contains('Series Type') &&
@@ -61,8 +66,7 @@ Series createSeries(String? seriesString) {
           selectSeries: SelectSeries(
             defaultSeries: binaryStringToEnum[valueToString(row[1]!)],
             productPath: binaryStringToEnum[valueToString(row[2]!)],
-            seriesGroupName:
-                seriesGroupNameStringToEnum[valueToString(row[3]!)],
+            seriesGroupName: valueToString(row[3]!),
             seriesGroup: seriesGroupStringToEnum[valueToString(row[4]!)],
             seriesPriority: seriesPriorityStringToEnum[valueToString(row[5]!)],
             seriesPreference:
@@ -87,38 +91,48 @@ Series createSeries(String? seriesString) {
         if (newSeries.indication == null) {
           newSeries = newSeries.copyWith(indication: []);
         }
-        newSeries.indication!.add(
-          Indication(
-            observationCode:
-                ObservationCode(code: int.tryParse(code), text: text),
-            description: row[2]!.toString().contains('n/a')
-                ? null
-                : valueToString(row[2]!),
-            beginAge: row[3]!.toString().contains('n/a')
-                ? null
-                : valueToString(row[3]!),
-            endAge: row[4]!.toString().contains('n/a')
-                ? null
-                : valueToString(row[4]!),
-            guidance: row[5]!.toString().contains('n/a')
-                ? null
-                : valueToString(row[5]!),
-          ),
+        newSeries = newSeries.copyWith(
+          indication: [
+            if (newSeries.indication != null &&
+                newSeries.indication!.isNotEmpty)
+              ...newSeries.indication!,
+            Indication(
+              observationCode:
+                  ObservationCode(code: int.tryParse(code), text: text),
+              description: row[2]!.toString().contains('n/a')
+                  ? null
+                  : valueToString(row[2]!),
+              beginAge: row[3]!.toString().contains('n/a')
+                  ? null
+                  : valueToString(row[3]!),
+              endAge: row[4]!.toString().contains('n/a')
+                  ? null
+                  : valueToString(row[4]!),
+              guidance: row[5]!.toString().contains('n/a')
+                  ? null
+                  : valueToString(row[5]!),
+            ),
+          ],
         );
       } else if (row[0]!.toString().contains('Series Dose')) {
         if (newSeries.seriesDose == null) {
           newSeries = newSeries.copyWith(seriesDose: []);
         }
-        ;
-        newSeries.seriesDose!.add(
-          createSeriesDose(
+        newSeries = newSeries.copyWith(
+          seriesDose: [
+            if (newSeries.seriesDose != null &&
+                newSeries.seriesDose!.isNotEmpty)
+              ...newSeries.seriesDose!,
+            createSeriesDose(
               seriesData.indexWhere(
                 (element) =>
                     element[0]?.toString().trim() ==
                         row[0]!.toString().trim() &&
                     element[1]?.toString().trim() == row[1]!.toString().trim(),
               ),
-              seriesData),
+              seriesData,
+            ),
+          ],
         );
       }
     }

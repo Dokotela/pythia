@@ -20,7 +20,7 @@ class VaccineContraindications with _$VaccineContraindications {
 class VaccineContraindication with _$VaccineContraindication {
   VaccineContraindication._();
   factory VaccineContraindication({
-    int? observationCode,
+    String? observationCode,
     String? observationTitle,
     String? contraindicationText,
     String? contraindicationGuidance,

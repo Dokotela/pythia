@@ -179,7 +179,7 @@ VaccineContraindication _$VaccineContraindicationFromJson(
 
 /// @nodoc
 mixin _$VaccineContraindication {
-  int? get observationCode => throw _privateConstructorUsedError;
+  String? get observationCode => throw _privateConstructorUsedError;
   String? get observationTitle => throw _privateConstructorUsedError;
   String? get contraindicationText => throw _privateConstructorUsedError;
   String? get contraindicationGuidance => throw _privateConstructorUsedError;
@@ -199,7 +199,7 @@ abstract class $VaccineContraindicationCopyWith<$Res> {
       _$VaccineContraindicationCopyWithImpl<$Res, VaccineContraindication>;
   @useResult
   $Res call(
-      {int? observationCode,
+      {String? observationCode,
       String? observationTitle,
       String? contraindicationText,
       String? contraindicationGuidance,
@@ -230,7 +230,7 @@ class _$VaccineContraindicationCopyWithImpl<$Res,
       observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       observationTitle: freezed == observationTitle
           ? _value.observationTitle
           : observationTitle // ignore: cast_nullable_to_non_nullable
@@ -260,7 +260,7 @@ abstract class _$$_VaccineContraindicationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? observationCode,
+      {String? observationCode,
       String? observationTitle,
       String? contraindicationText,
       String? contraindicationGuidance,
@@ -289,7 +289,7 @@ class __$$_VaccineContraindicationCopyWithImpl<$Res>
       observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       observationTitle: freezed == observationTitle
           ? _value.observationTitle
           : observationTitle // ignore: cast_nullable_to_non_nullable
@@ -326,7 +326,7 @@ class _$_VaccineContraindication extends _VaccineContraindication {
       _$$_VaccineContraindicationFromJson(json);
 
   @override
-  final int? observationCode;
+  final String? observationCode;
   @override
   final String? observationTitle;
   @override
@@ -395,7 +395,7 @@ class _$_VaccineContraindication extends _VaccineContraindication {
 
 abstract class _VaccineContraindication extends VaccineContraindication {
   factory _VaccineContraindication(
-          {final int? observationCode,
+          {final String? observationCode,
           final String? observationTitle,
           final String? contraindicationText,
           final String? contraindicationGuidance,
@@ -407,7 +407,7 @@ abstract class _VaccineContraindication extends VaccineContraindication {
       _$_VaccineContraindication.fromJson;
 
   @override
-  int? get observationCode;
+  String? get observationCode;
   @override
   String? get observationTitle;
   @override

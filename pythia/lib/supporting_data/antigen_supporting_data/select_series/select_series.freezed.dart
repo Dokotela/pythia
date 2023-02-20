@@ -22,7 +22,7 @@ SelectSeries _$SelectSeriesFromJson(Map<String, dynamic> json) {
 mixin _$SelectSeries {
   Binary? get defaultSeries => throw _privateConstructorUsedError;
   Binary? get productPath => throw _privateConstructorUsedError;
-  SeriesGroupName? get seriesGroupName => throw _privateConstructorUsedError;
+  String? get seriesGroupName => throw _privateConstructorUsedError;
   SeriesGroup? get seriesGroup => throw _privateConstructorUsedError;
   SeriesPriority? get seriesPriority => throw _privateConstructorUsedError;
   SeriesPreference? get seriesPreference => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $SelectSeriesCopyWith<$Res> {
   $Res call(
       {Binary? defaultSeries,
       Binary? productPath,
-      SeriesGroupName? seriesGroupName,
+      String? seriesGroupName,
       SeriesGroup? seriesGroup,
       SeriesPriority? seriesPriority,
       SeriesPreference? seriesPreference,
@@ -86,7 +86,7 @@ class _$SelectSeriesCopyWithImpl<$Res, $Val extends SelectSeries>
       seriesGroupName: freezed == seriesGroupName
           ? _value.seriesGroupName
           : seriesGroupName // ignore: cast_nullable_to_non_nullable
-              as SeriesGroupName?,
+              as String?,
       seriesGroup: freezed == seriesGroup
           ? _value.seriesGroup
           : seriesGroup // ignore: cast_nullable_to_non_nullable
@@ -122,7 +122,7 @@ abstract class _$$_SelectSeriesCopyWith<$Res>
   $Res call(
       {Binary? defaultSeries,
       Binary? productPath,
-      SeriesGroupName? seriesGroupName,
+      String? seriesGroupName,
       SeriesGroup? seriesGroup,
       SeriesPriority? seriesPriority,
       SeriesPreference? seriesPreference,
@@ -162,7 +162,7 @@ class __$$_SelectSeriesCopyWithImpl<$Res>
       seriesGroupName: freezed == seriesGroupName
           ? _value.seriesGroupName
           : seriesGroupName // ignore: cast_nullable_to_non_nullable
-              as SeriesGroupName?,
+              as String?,
       seriesGroup: freezed == seriesGroup
           ? _value.seriesGroup
           : seriesGroup // ignore: cast_nullable_to_non_nullable
@@ -209,7 +209,7 @@ class _$_SelectSeries extends _SelectSeries {
   @override
   final Binary? productPath;
   @override
-  final SeriesGroupName? seriesGroupName;
+  final String? seriesGroupName;
   @override
   final SeriesGroup? seriesGroup;
   @override
@@ -280,7 +280,7 @@ abstract class _SelectSeries extends SelectSeries {
   factory _SelectSeries(
       {final Binary? defaultSeries,
       final Binary? productPath,
-      final SeriesGroupName? seriesGroupName,
+      final String? seriesGroupName,
       final SeriesGroup? seriesGroup,
       final SeriesPriority? seriesPriority,
       final SeriesPreference? seriesPreference,
@@ -296,7 +296,7 @@ abstract class _SelectSeries extends SelectSeries {
   @override
   Binary? get productPath;
   @override
-  SeriesGroupName? get seriesGroupName;
+  String? get seriesGroupName;
   @override
   SeriesGroup? get seriesGroup;
   @override

@@ -184,7 +184,7 @@ GroupContraindication _$GroupContraindicationFromJson(
 
 /// @nodoc
 mixin _$GroupContraindication {
-  int? get observationCode => throw _privateConstructorUsedError;
+  String? get observationCode => throw _privateConstructorUsedError;
   String? get observationTitle => throw _privateConstructorUsedError;
   String? get contraindicationText => throw _privateConstructorUsedError;
   String? get contraindicationGuidance => throw _privateConstructorUsedError;
@@ -204,7 +204,7 @@ abstract class $GroupContraindicationCopyWith<$Res> {
       _$GroupContraindicationCopyWithImpl<$Res, GroupContraindication>;
   @useResult
   $Res call(
-      {int? observationCode,
+      {String? observationCode,
       String? observationTitle,
       String? contraindicationText,
       String? contraindicationGuidance,
@@ -237,7 +237,7 @@ class _$GroupContraindicationCopyWithImpl<$Res,
       observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       observationTitle: freezed == observationTitle
           ? _value.observationTitle
           : observationTitle // ignore: cast_nullable_to_non_nullable
@@ -271,7 +271,7 @@ abstract class _$$_GroupContraindicationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? observationCode,
+      {String? observationCode,
       String? observationTitle,
       String? contraindicationText,
       String? contraindicationGuidance,
@@ -301,7 +301,7 @@ class __$$_GroupContraindicationCopyWithImpl<$Res>
       observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       observationTitle: freezed == observationTitle
           ? _value.observationTitle
           : observationTitle // ignore: cast_nullable_to_non_nullable
@@ -342,7 +342,7 @@ class _$_GroupContraindication extends _GroupContraindication {
       _$$_GroupContraindicationFromJson(json);
 
   @override
-  final int? observationCode;
+  final String? observationCode;
   @override
   final String? observationTitle;
   @override
@@ -406,7 +406,7 @@ class _$_GroupContraindication extends _GroupContraindication {
 
 abstract class _GroupContraindication extends GroupContraindication {
   factory _GroupContraindication(
-      {final int? observationCode,
+      {final String? observationCode,
       final String? observationTitle,
       final String? contraindicationText,
       final String? contraindicationGuidance,
@@ -418,7 +418,7 @@ abstract class _GroupContraindication extends GroupContraindication {
       _$_GroupContraindication.fromJson;
 
   @override
-  int? get observationCode;
+  String? get observationCode;
   @override
   String? get observationTitle;
   @override

@@ -11,8 +11,7 @@ _$_SelectSeries _$$_SelectSeriesFromJson(Map<String, dynamic> json) =>
       defaultSeries:
           $enumDecodeNullable(_$BinaryEnumMap, json['defaultSeries']),
       productPath: $enumDecodeNullable(_$BinaryEnumMap, json['productPath']),
-      seriesGroupName: $enumDecodeNullable(
-          _$SeriesGroupNameEnumMap, json['seriesGroupName']),
+      seriesGroupName: json['seriesGroupName'] as String?,
       seriesGroup:
           $enumDecodeNullable(_$SeriesGroupEnumMap, json['seriesGroup']),
       seriesPriority:
@@ -34,8 +33,7 @@ Map<String, dynamic> _$$_SelectSeriesToJson(_$_SelectSeries instance) {
 
   writeNotNull('defaultSeries', _$BinaryEnumMap[instance.defaultSeries]);
   writeNotNull('productPath', _$BinaryEnumMap[instance.productPath]);
-  writeNotNull(
-      'seriesGroupName', _$SeriesGroupNameEnumMap[instance.seriesGroupName]);
+  writeNotNull('seriesGroupName', instance.seriesGroupName);
   writeNotNull('seriesGroup', _$SeriesGroupEnumMap[instance.seriesGroup]);
   writeNotNull(
       'seriesPriority', _$SeriesPriorityEnumMap[instance.seriesPriority]);
@@ -50,14 +48,6 @@ const _$BinaryEnumMap = {
   Binary.yes: 'Yes',
   Binary.no: 'No',
   Binary.na: '',
-};
-
-const _$SeriesGroupNameEnumMap = {
-  SeriesGroupName.standard: 'Standard',
-  SeriesGroupName.standard65: 'Standard 65+',
-  SeriesGroupName.increasedRisk: 'Increased Risk',
-  SeriesGroupName.increasedRiskInfant: 'Increased Risk Infant',
-  SeriesGroupName.patientSeeksProtection: 'Patient Seeks Protection',
 };
 
 const _$SeriesGroupEnumMap = {

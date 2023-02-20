@@ -18,7 +18,7 @@ class VaccineGroupContraindications with _$VaccineGroupContraindications {
 class GroupContraindication with _$GroupContraindication {
   GroupContraindication._();
   factory GroupContraindication({
-    int? observationCode,
+    String? observationCode,
     String? observationTitle,
     String? contraindicationText,
     String? contraindicationGuidance,

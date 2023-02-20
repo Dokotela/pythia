@@ -18,17 +18,14 @@ Future<void> createSupportingData(
   /// I think I'm going to use this for the Antigen generation, so we're actually
   /// going to parse it first
   final scheduleSupportingStrings = supportingStrings.toList();
-  print(scheduleSupportingStrings.length);
 
   /// Only ScheduleSupportingStrings
   scheduleSupportingStrings
       .removeWhere((element) => element is AntigenSupportingStrings);
-  print(scheduleSupportingStrings.length);
 
   /// Now this is only AntigenSupportingStrings
   supportingStrings
       .removeWhere((element) => element is! AntigenSupportingStrings);
-  print(supportingStrings.length);
 
   for (final scheduleSupportingString in scheduleSupportingStrings) {
     switch ((scheduleSupportingString as ScheduleSupportingStrings).type) {
@@ -66,7 +63,6 @@ Future<void> createSupportingData(
       .writeAsString(dataString);
 
   for (var supportString in supportingStrings) {
-    print(supportString);
     if (supportString is AntigenSupportingStrings) {
       var antigenSupportingData = AntigenSupportingData(
         immunity: immunity(supportString.immunity),
@@ -97,7 +93,7 @@ Future<void> createSupportingData(
             '${fileName?.substring(index + 2)}';
       }
 
-      final dataString = "import 'package:vaxcast/vaxcast.dart';\n\n"
+      final dataString = "import 'package:pythia/pythia.dart';\n\n"
           'final $diseaseName = '
           'AntigenSupportingData.fromJson(${jsonEncoder.convert(antigenSupportingData)});';
 

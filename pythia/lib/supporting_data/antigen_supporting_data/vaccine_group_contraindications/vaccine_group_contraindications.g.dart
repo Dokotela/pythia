@@ -33,7 +33,7 @@ Map<String, dynamic> _$$_VaccineGroupContraindicationsToJson(
 _$_GroupContraindication _$$_GroupContraindicationFromJson(
         Map<String, dynamic> json) =>
     _$_GroupContraindication(
-      observationCode: json['observationCode'] as int?,
+      observationCode: json['observationCode'] as String?,
       observationTitle: json['observationTitle'] as String?,
       contraindicationText: json['contraindicationText'] as String?,
       contraindicationGuidance: json['contraindicationGuidance'] as String?,

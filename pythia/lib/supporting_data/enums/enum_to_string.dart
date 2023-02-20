@@ -35,9 +35,6 @@ String? enumToString(Enum? value) {
     case SeriesGroup:
       return seriesGroupEnumToString[value];
 
-    case SeriesGroupName:
-      return seriesGroupNameEnumToString[value];
-
     case SeriesPreference:
       return seriesPreferenceEnumToString[value];
 

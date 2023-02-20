@@ -32,9 +32,6 @@ Enum? stringToEnum<T>(Type enumType, String value) {
     case SeriesGroup:
       return seriesGroupStringToEnum[value];
 
-    case SeriesGroupName:
-      return seriesGroupNameStringToEnum[value];
-
     case SeriesPreference:
       return seriesPreferenceStringToEnum[value];
 

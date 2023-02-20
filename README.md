@@ -21,3 +21,4 @@ All I've done is take all of their hard work, guidance and expertise and make it
 - You'll notice they have both XML and XLSX files. Unfortunately (at least for me) I don't like either of these formats. So to fix this, I've created a generator that runs on google sheets.
 - All of the XLSX files I've transferred into Gsheets, [the link can be found here](https://drive.google.com/drive/folders/1LUDu9y85qd0aJwFtvwv0h3fQUafqfTDq?usp=sharing)
 - The Coded Observations sheets I had to remove all of the carriage returns ("\n" in Regex) because they screw up the Gsheets TSV parser in Dart
+- I had to do the same for most of the Antigen spreadsheets as well (I replaced all "\n" with " ")

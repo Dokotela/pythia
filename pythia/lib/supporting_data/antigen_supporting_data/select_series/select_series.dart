@@ -11,7 +11,7 @@ class SelectSeries with _$SelectSeries {
   factory SelectSeries({
     Binary? defaultSeries,
     Binary? productPath,
-    SeriesGroupName? seriesGroupName,
+    String? seriesGroupName,
     SeriesGroup? seriesGroup,
     SeriesPriority? seriesPriority,
     SeriesPreference? seriesPreference,

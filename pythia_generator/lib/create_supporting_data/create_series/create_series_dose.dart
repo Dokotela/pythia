@@ -13,27 +13,15 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
           doseNumber: doseNumberStringToEnum[row[1]!.toString().trim()]);
     } else if (row[0]!.toString().contains('Age') &&
         !row[1]!.toString().contains('Absolute Minimum Age')) {
-      if (row[1] != null &&
-          row[1] != '' &&
-          row[1] != 'n/a' &&
-          row[2] != null &&
-          row[2] != '' &&
-          row[2] != 'n/a' &&
-          row[3] != null &&
-          row[3] != '' &&
-          row[3] != 'n/a' &&
-          row[4] != null &&
-          row[4] != '' &&
-          row[4] != 'n/a' &&
-          row[5] != null &&
-          row[5] != '' &&
-          row[5] != 'n/a' &&
-          row[6] != null &&
-          row[6] != '' &&
-          row[6] != 'n/a' &&
-          row[7] != null &&
-          row[7] != '' &&
-          row[7] != 'n/a') {
+      print('age');
+      if ((row[1] != null && row[1] != '' && row[1] != 'n/a') ||
+          (row[2] != null && row[2] != '' && row[2] != 'n/a') ||
+          (row[3] != null && row[3] != '' && row[3] != 'n/a') ||
+          (row[4] != null && row[4] != '' && row[4] != 'n/a') ||
+          (row[5] != null && row[5] != '' && row[5] != 'n/a') ||
+          (row[6] != null && row[6] != '' && row[6] != 'n/a') ||
+          (row[7] != null && row[7] != '' && row[7] != 'n/a')) {
+        print('not null');
         if (seriesDose.age == null) {
           seriesDose = seriesDose.copyWith(
             age: [
@@ -49,16 +37,20 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
             ],
           );
         } else {
-          seriesDose.age!.add(
-            VaxAge(
-              absMinAge: valueToString(row[1]!),
-              minAge: valueToString(row[2]!),
-              earliestRecAge: valueToString(row[3]!),
-              latestRecAge: valueToString(row[4]!),
-              maxAge: valueToString(row[5]!),
-              effectiveDate: valueToString(row[6]!),
-              cessationDate: valueToString(row[7]!),
-            ),
+          seriesDose = seriesDose.copyWith(
+            age: [
+              if (seriesDose.age != null && seriesDose.age!.isNotEmpty)
+                ...seriesDose.age!,
+              VaxAge(
+                absMinAge: valueToString(row[1]!),
+                minAge: valueToString(row[2]!),
+                earliestRecAge: valueToString(row[3]!),
+                latestRecAge: valueToString(row[4]!),
+                maxAge: valueToString(row[5]!),
+                effectiveDate: valueToString(row[6]!),
+                cessationDate: valueToString(row[7]!),
+              ),
+            ],
           );
         }
       }
@@ -78,21 +70,27 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
         code = row[4]!.toString().substring(open + 1, close);
         text = row[4]!.toString().substring(0, open - 1);
       }
-      seriesDose.interval!.add(Interval(
-        fromPrevious: _valueToEnum(row[1]!, fromPreviousStringToEnum),
-        fromTargetDose: _valueToEnum(row[2]!, fromTargetStringToEnum),
-        fromMostRecent: valueToString(row[3]!),
-        fromRelevantObs: open == -1 || close == -1
-            ? null
-            : ObservationCode(code: int.tryParse(code), text: text),
-        absMinInt: valueToString(row[5]!),
-        minInt: valueToString(row[6]!),
-        earliestRecInt: valueToString(row[7]!),
-        latestRecInt: valueToString(row[8]!),
-        intervalPriority: valueToString(row[9]!),
-        effectiveDate: valueToString(row[10]!),
-        cessationDate: valueToString(row[11]!),
-      ));
+      seriesDose = seriesDose.copyWith(
+        interval: [
+          if (seriesDose.interval != null && seriesDose.interval!.isNotEmpty)
+            ...seriesDose.interval!,
+          Interval(
+            fromPrevious: _valueToEnum(row[1]!, fromPreviousStringToEnum),
+            fromTargetDose: _valueToEnum(row[2]!, fromTargetStringToEnum),
+            fromMostRecent: valueToString(row[3]!),
+            fromRelevantObs: open == -1 || close == -1
+                ? null
+                : ObservationCode(code: int.tryParse(code), text: text),
+            absMinInt: valueToString(row[5]!),
+            minInt: valueToString(row[6]!),
+            earliestRecInt: valueToString(row[7]!),
+            latestRecInt: valueToString(row[8]!),
+            intervalPriority: valueToString(row[9]!),
+            effectiveDate: valueToString(row[10]!),
+            cessationDate: valueToString(row[11]!),
+          ),
+        ],
+      );
     } else if (row[0]!.toString().contains('Allowable Interval') &&
         !row[1]!.toString().contains('Previous Dose Administered? Y/N') &&
         !row[1]!.toString().contains('n/a')) {
@@ -131,16 +129,23 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
         }
       }
 
-      seriesDose.preferableVaccine!.add(Vaccine(
-        vaccineType: text,
-        cvx: code,
-        beginAge: valueToString(row[2]!),
-        endAge: valueToString(row[3]!),
-        tradeName: tradeName,
-        mvx: mvx,
-        volume: valueToString(row[5]!),
-        forecastVaccineType: valueToString(row[6]!),
-      ));
+      seriesDose = seriesDose.copyWith(
+        preferableVaccine: [
+          if (seriesDose.preferableVaccine != null &&
+              seriesDose.preferableVaccine!.isNotEmpty)
+            ...seriesDose.preferableVaccine!,
+          Vaccine(
+            vaccineType: text,
+            cvx: code,
+            beginAge: valueToString(row[2]!),
+            endAge: valueToString(row[3]!),
+            tradeName: tradeName,
+            mvx: mvx,
+            volume: valueToString(row[5]!),
+            forecastVaccineType: valueToString(row[6]!),
+          ),
+        ],
+      );
     } else if (row[0]!.toString().contains('Allowable Vaccine') &&
         !row[1]!.toString().contains('Vaccine Type (CVX)') &&
         !row[1]!.toString().contains('n/a')) {
@@ -157,13 +162,19 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
         code = row[1]!.toString().substring(open + 1, close);
         text = row[1]!.toString().substring(0, open - 1);
       }
-
-      seriesDose.allowableVaccine!.add(Vaccine(
-        vaccineType: text,
-        cvx: code,
-        beginAge: valueToString(row[2]!),
-        endAge: valueToString(row[3]!),
-      ));
+      seriesDose = seriesDose.copyWith(
+        allowableVaccine: [
+          if (seriesDose.allowableVaccine != null &&
+              seriesDose.allowableVaccine!.isNotEmpty)
+            ...seriesDose.allowableVaccine!,
+          Vaccine(
+            vaccineType: text,
+            cvx: code,
+            beginAge: valueToString(row[2]!),
+            endAge: valueToString(row[3]!),
+          ),
+        ],
+      );
     } else if (row[0]!.toString().contains('Inadvertent Vaccine') &&
         !row[1]!.toString().contains('Vaccine Type (CVX)') &&
         !row[1]!.toString().contains('n/a')) {
@@ -180,11 +191,17 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
         code = row[1]!.toString().substring(open + 1, close);
         text = row[1]!.toString().substring(0, open - 1);
       }
-
-      seriesDose.inadvertentVaccine!.add(Vaccine(
-        vaccineType: text,
-        cvx: code,
-      ));
+      seriesDose = seriesDose.copyWith(
+        inadvertentVaccine: [
+          if (seriesDose.inadvertentVaccine != null &&
+              seriesDose.inadvertentVaccine!.isNotEmpty)
+            ...seriesDose.inadvertentVaccine!,
+          Vaccine(
+            vaccineType: text,
+            cvx: code,
+          ),
+        ],
+      );
     } else if (row[0]!.toString().contains('Conditional Skip') &&
         !row[1]!.toString().contains('Skip Context') &&
         !row[1]!.toString().contains('n/a')) {
@@ -206,130 +223,172 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
           16,
           17
         ].indexWhere((e) => row[e] != null && row[e] != '' && row[e] != 'n/a');
-        seriesDose = seriesDose.copyWith(conditionalSkip: [
-          ConditionalSkip(
-            context: skipContextStringToEnum[row[1]!.toString().trim()],
-            setLogic:
-                stringToEnum(SetLogic, row[2]!.toString().trim()) as SetLogic?,
-            set_: index == -1
-                ? null
-                : [
-                    VaxSet(
-                      setID: valueToString(row[3]!),
-                      setDescription: row[4]!.toString().trim(),
-                      effectiveDate: valueToString(row[5]!),
-                      cessationDate: valueToString(row[6]!),
-                      conditionLogic: valueToString(row[7]!),
-                      condition: [
-                        Condition(
-                          conditionID: valueToString(row[8]!),
-                          conditionType:
-                              _valueToEnum(row[9]!, conditionTypeStringToEnum),
-                          startDate: valueToString(row[10]!),
-                          endDate: valueToString(row[11]!),
-                          beginAge: valueToString(row[12]!),
-                          endAge: valueToString(row[13]!),
-                          interval: valueToString(row[14]!),
-                          doseCount: valueToString(row[15]!),
-                          doseType:
-                              _valueToEnum(row[16]!, doseTypeStringToEnum),
-                          doseCountLogic: _valueToEnum(
-                              row[17]!, doseCountLogicStringToEnum),
-                          vaccineTypes: valueToString(row[18]!),
-                          seriesGroups: valueToString(row[19]!),
-                        )
-                      ],
-                    )
-                  ],
-          ),
-        ]);
+        seriesDose = seriesDose.copyWith(
+          conditionalSkip: [
+            ConditionalSkip(
+              context: skipContextStringToEnum[row[1]!.toString().trim()],
+              setLogic: stringToEnum(SetLogic, row[2]!.toString().trim())
+                  as SetLogic?,
+              set_: index == -1
+                  ? null
+                  : [
+                      VaxSet(
+                        setID: valueToString(row[3]!),
+                        setDescription: row[4]!.toString().trim(),
+                        effectiveDate: valueToString(row[5]!),
+                        cessationDate: valueToString(row[6]!),
+                        conditionLogic: valueToString(row[7]!),
+                        condition: [
+                          Condition(
+                            conditionID: valueToString(row[8]!),
+                            conditionType: _valueToEnum(
+                                row[9]!, conditionTypeStringToEnum),
+                            startDate: valueToString(row[10]!),
+                            endDate: valueToString(row[11]!),
+                            beginAge: valueToString(row[12]!),
+                            endAge: valueToString(row[13]!),
+                            interval: valueToString(row[14]!),
+                            doseCount: valueToString(row[15]!),
+                            doseType:
+                                _valueToEnum(row[16]!, doseTypeStringToEnum),
+                            doseCountLogic: _valueToEnum(
+                                row[17]!, doseCountLogicStringToEnum),
+                            vaccineTypes: valueToString(row[18]!),
+                            seriesGroups: valueToString(row[19]!),
+                          ),
+                        ],
+                      ),
+                    ],
+            ),
+          ],
+        );
       } else if (seriesDose.conditionalSkip?.last.context !=
               _valueToEnum(row[1]!, skipContextStringToEnum) ||
           seriesDose.conditionalSkip?.last.setLogic !=
               row[2]!.toString().trim()) {
-        seriesDose.conditionalSkip!.add(
-          ConditionalSkip(
-            context: skipContextStringToEnum[row[1]!.toString().trim()],
-            setLogic:
-                stringToEnum(SetLogic, row[2]!.toString().trim()) as SetLogic?,
-            set_: index == -1
-                ? null
-                : [
-                    VaxSet(
-                      setID: valueToString(row[3]!),
-                      setDescription: row[4]!.toString().trim(),
-                      effectiveDate: valueToString(row[5]!),
-                      cessationDate: valueToString(row[6]!),
-                      conditionLogic: valueToString(row[7]!),
-                      condition: [
-                        Condition(
-                          conditionID: valueToString(row[8]!),
-                          conditionType:
-                              _valueToEnum(row[9]!, conditionTypeStringToEnum),
-                          startDate: valueToString(row[10]!),
-                          endDate: valueToString(row[11]!),
-                          beginAge: valueToString(row[12]!),
-                          endAge: valueToString(row[13]!),
-                          interval: valueToString(row[14]!),
-                          doseCount: valueToString(row[15]!),
-                          doseType:
-                              _valueToEnum(row[16]!, doseTypeStringToEnum),
-                          doseCountLogic: _valueToEnum(
-                              row[17]!, doseCountLogicStringToEnum),
-                          vaccineTypes: valueToString(row[18]!),
-                          seriesGroups: valueToString(row[19]!),
-                        ),
-                      ],
-                    ),
-                  ],
-          ),
+        seriesDose = seriesDose.copyWith(
+          conditionalSkip: [
+            if (seriesDose.conditionalSkip != null &&
+                seriesDose.conditionalSkip!.isNotEmpty)
+              ...seriesDose.conditionalSkip!,
+            ConditionalSkip(
+              context: skipContextStringToEnum[row[1]!.toString().trim()],
+              setLogic: stringToEnum(SetLogic, row[2]!.toString().trim())
+                  as SetLogic?,
+              set_: index == -1
+                  ? null
+                  : [
+                      VaxSet(
+                        setID: valueToString(row[3]!),
+                        setDescription: row[4]!.toString().trim(),
+                        effectiveDate: valueToString(row[5]!),
+                        cessationDate: valueToString(row[6]!),
+                        conditionLogic: valueToString(row[7]!),
+                        condition: [
+                          Condition(
+                            conditionID: valueToString(row[8]!),
+                            conditionType: _valueToEnum(
+                                row[9]!, conditionTypeStringToEnum),
+                            startDate: valueToString(row[10]!),
+                            endDate: valueToString(row[11]!),
+                            beginAge: valueToString(row[12]!),
+                            endAge: valueToString(row[13]!),
+                            interval: valueToString(row[14]!),
+                            doseCount: valueToString(row[15]!),
+                            doseType:
+                                _valueToEnum(row[16]!, doseTypeStringToEnum),
+                            doseCountLogic: _valueToEnum(
+                                row[17]!, doseCountLogicStringToEnum),
+                            vaccineTypes: valueToString(row[18]!),
+                            seriesGroups: valueToString(row[19]!),
+                          ),
+                        ],
+                      ),
+                    ],
+            ),
+          ],
         );
       } else if (seriesDose.conditionalSkip?.last.set_?.last.setID !=
           row[3]!.toString().trim()) {
-        seriesDose.conditionalSkip!.last.set_?.add(
-          VaxSet(
-            setID: valueToString(row[3]!),
-            setDescription: row[4]!.toString().trim(),
-            effectiveDate: valueToString(row[5]!),
-            cessationDate: valueToString(row[6]!),
-            conditionLogic: valueToString(row[7]!),
-            condition: [
-              Condition(
-                conditionID: valueToString(row[8]!),
-                conditionType: _valueToEnum(row[9]!, conditionTypeStringToEnum),
-                startDate: valueToString(row[10]!),
-                endDate: valueToString(row[11]!),
-                beginAge: valueToString(row[12]!),
-                endAge: valueToString(row[13]!),
-                interval: valueToString(row[14]!),
-                doseCount: valueToString(row[15]!),
-                doseType: _valueToEnum(row[16]!, doseTypeStringToEnum),
-                doseCountLogic:
-                    _valueToEnum(row[17]!, doseCountLogicStringToEnum),
-                vaccineTypes: valueToString(row[18]!),
-                seriesGroups: valueToString(row[19]!),
-              ),
-            ],
-          ),
+        seriesDose = seriesDose.copyWith(
+          conditionalSkip: [
+            ...seriesDose.conditionalSkip!
+                .sublist(0, seriesDose.conditionalSkip!.length - 1),
+            seriesDose.conditionalSkip!.last.copyWith(
+              set_: [
+                if (seriesDose.conditionalSkip!.last.set_ != null &&
+                    seriesDose.conditionalSkip!.last.set_!.isNotEmpty)
+                  ...seriesDose.conditionalSkip!.last.set_!,
+                VaxSet(
+                  setID: valueToString(row[3]!),
+                  setDescription: row[4]!.toString().trim(),
+                  effectiveDate: valueToString(row[5]!),
+                  cessationDate: valueToString(row[6]!),
+                  conditionLogic: valueToString(row[7]!),
+                  condition: [
+                    Condition(
+                      conditionID: valueToString(row[8]!),
+                      conditionType:
+                          _valueToEnum(row[9]!, conditionTypeStringToEnum),
+                      startDate: valueToString(row[10]!),
+                      endDate: valueToString(row[11]!),
+                      beginAge: valueToString(row[12]!),
+                      endAge: valueToString(row[13]!),
+                      interval: valueToString(row[14]!),
+                      doseCount: valueToString(row[15]!),
+                      doseType: _valueToEnum(row[16]!, doseTypeStringToEnum),
+                      doseCountLogic:
+                          _valueToEnum(row[17]!, doseCountLogicStringToEnum),
+                      vaccineTypes: valueToString(row[18]!),
+                      seriesGroups: valueToString(row[19]!),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
         );
-      } else if (seriesDose
-              .conditionalSkip?.last.set_?.last.condition?.last.conditionID !=
-          row[8]!.toString().trim()) {
-        seriesDose.conditionalSkip!.last.set_?.last.condition?.add(
-          Condition(
-            conditionID: valueToString(row[8]!),
-            conditionType: _valueToEnum(row[9]!, conditionTypeStringToEnum),
-            startDate: valueToString(row[10]!),
-            endDate: valueToString(row[11]!),
-            beginAge: valueToString(row[12]!),
-            endAge: valueToString(row[13]!),
-            interval: valueToString(row[14]!),
-            doseCount: valueToString(row[15]!),
-            doseType: _valueToEnum(row[16]!, doseTypeStringToEnum),
-            doseCountLogic: _valueToEnum(row[17]!, doseCountLogicStringToEnum),
-            vaccineTypes: valueToString(row[18]!),
-            seriesGroups: valueToString(row[19]!),
-          ),
+      } else if (seriesDose.conditionalSkip != null &&
+          seriesDose.conditionalSkip!.isNotEmpty &&
+          seriesDose.conditionalSkip!.last.set_ != null &&
+          seriesDose.conditionalSkip!.last.set_!.isNotEmpty &&
+          seriesDose.conditionalSkip!.last.set_!.last.condition != null &&
+          seriesDose.conditionalSkip!.last.set_!.last.condition!.isNotEmpty &&
+          seriesDose.conditionalSkip!.last.set_!.last.condition!.last
+                  .conditionID !=
+              row[8]!.toString().trim()) {
+        seriesDose = seriesDose.copyWith(
+          conditionalSkip: [
+            ...seriesDose.conditionalSkip!
+                .sublist(0, seriesDose.conditionalSkip!.length - 1),
+            seriesDose.conditionalSkip!.last.copyWith(
+              set_: [
+                ...seriesDose.conditionalSkip!.last.set_!.sublist(
+                    0, seriesDose.conditionalSkip!.last.set_!.length - 1),
+                seriesDose.conditionalSkip!.last.set_!.last.copyWith(
+                  condition: [
+                    ...seriesDose.conditionalSkip!.last.set_!.last.condition!,
+                    Condition(
+                      conditionID: valueToString(row[8]!),
+                      conditionType:
+                          _valueToEnum(row[9]!, conditionTypeStringToEnum),
+                      startDate: valueToString(row[10]!),
+                      endDate: valueToString(row[11]!),
+                      beginAge: valueToString(row[12]!),
+                      endAge: valueToString(row[13]!),
+                      interval: valueToString(row[14]!),
+                      doseCount: valueToString(row[15]!),
+                      doseType: _valueToEnum(row[16]!, doseTypeStringToEnum),
+                      doseCountLogic:
+                          _valueToEnum(row[17]!, doseCountLogicStringToEnum),
+                      vaccineTypes: valueToString(row[18]!),
+                      seriesGroups: valueToString(row[19]!),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
         );
       }
     } else if (row[0]!.toString().contains('Recurring Dose') &&
