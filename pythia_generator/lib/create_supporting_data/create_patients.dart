@@ -3,11 +3,14 @@ import 'dart:io';
 
 import 'package:csv/csv.dart';
 import 'package:fhir/r4.dart';
-import 'package:pythia_generator/files/schedule_supporting_data.dart';
+import 'package:pythia/pythia.dart' as pythia;
 
 import '../supporting_strings.dart';
 
-Future<void> createPatients(TestCasesStrings string) async {
+Future<void> createPatients(
+  TestCasesStrings string,
+  pythia.ScheduleSupportingData scheduleSupportingData,
+) async {
   final values = const CsvToListConverter()
       .convert(string.cases, fieldDelimiter: '\t', eol: '\n');
   final parametersList = <Parameters>[];
@@ -44,7 +47,7 @@ Future<void> createPatients(TestCasesStrings string) async {
       final conditionList = <Condition>[];
       for (var i = 0; i < doseIndexes.length; i++) {
         final index = doseIndexes[i];
-        if (v[index] != null && v[index] != '') {
+        if (v[index] != null && v[index] != '' && v[index] != '-') {
           immunizationList.add(Immunization(
             id: '${patient.id}_dose${i + 1}',
             patient: patient.thisReference,
@@ -70,30 +73,52 @@ Future<void> createPatients(TestCasesStrings string) async {
       }
       for (var i = 0; i < cdsiObservationIndexes.length; i++) {
         final index = cdsiObservationIndexes[i];
-        final obsIndex = scheduleSupportingData.observations?.observation
-            ?.indexWhere((element) => element.observationCode == v[index + 1]);
-        if (obsIndex == 0) {
-          print(v[index]);
+        if (v[index] != null && v[index] != '') {
+          final obsCode = v[index].toString().padLeft(3, '0');
+          final obsIndex = scheduleSupportingData.observations?.observation
+              ?.indexWhere((element) => element.observationCode == obsCode);
+          if (obsIndex == null || obsIndex == -1) {
+            print('$obsCode not found in Schedule Supporting Data');
+          } else {
+            final obs =
+                scheduleSupportingData.observations!.observation![obsIndex];
+            final snomedIndex = obs.codedValues?.codedValue
+                ?.indexWhere((element) => element.codeSystem == 'SNOMED');
+
+            conditionList.add(Condition(
+              subject: patient.thisReference,
+              onsetDateTime: v[index + 2] != null && v[index + 2] != ''
+                  ? FhirDateTime(epoch.add(Duration(days: v[index + 2])))
+                  : null,
+              recordedDate: v[index + 2] != null && v[index + 2] != ''
+                  ? FhirDateTime(epoch.add(Duration(days: v[index + 2])))
+                  : null,
+              code: CodeableConcept(
+                coding: [
+                  Coding(
+                      system: FhirUri(
+                          'https://www.cdc.gov/vaccines/programs/iis/cdsi.html'),
+                      code: Code(obsCode),
+                      display: v[index + 1]),
+                  if (snomedIndex != null &&
+                      snomedIndex != -1 &&
+                      obs.codedValues!.codedValue![snomedIndex].code != null)
+                    Coding(
+                      system: FhirUri('http://snomed.info/sct'),
+                      code:
+                          Code(obs.codedValues!.codedValue![snomedIndex].code),
+                      display: obs.codedValues!.codedValue![snomedIndex].text ==
+                                  null ||
+                              obs.codedValues!.codedValue![snomedIndex].text ==
+                                  ''
+                          ? null
+                          : obs.codedValues!.codedValue![snomedIndex].text,
+                    ),
+                ],
+              ),
+            ));
+          }
         }
-        conditionList.add(Condition(
-          subject: patient.thisReference,
-          onsetDateTime: v[index + 2] != null && v[index + 2] != ''
-              ? FhirDateTime(epoch.add(Duration(days: v[index + 2])))
-              : null,
-          recordedDate: v[index + 2] != null && v[index + 2] != ''
-              ? FhirDateTime(epoch.add(Duration(days: v[index + 2])))
-              : null,
-          code: CodeableConcept(
-            coding: [
-              Coding(
-                  system: FhirUri(
-                      'https://www.cdc.gov/vaccines/programs/iis/cdsi.html'),
-                  code: v[index],
-                  display: v[index + 1]),
-              Coding(),
-            ],
-          ),
-        ));
       }
       parametersList.add(
         Parameters(
@@ -104,7 +129,9 @@ Future<void> createPatients(TestCasesStrings string) async {
                     .toString()),
             ParametersParameter(name: 'Patient', resource: patient),
             ...immunizationList.map(
-                (e) => ParametersParameter(name: 'immunization', resource: e))
+                (e) => ParametersParameter(name: 'immunization', resource: e)),
+            ...conditionList.map(
+                (e) => ParametersParameter(name: 'condition', resource: e)),
           ],
         ),
       );
@@ -114,5 +141,11 @@ Future<void> createPatients(TestCasesStrings string) async {
   parametersList.forEach((element) {
     writeString += '${jsonEncode(element.toJson())}\n';
   });
-  await File('lib/test_cases/testCases.ndjson').writeAsString(writeString);
+  if (string.isHealthy ?? false) {
+    await File('lib/generated_files/healthyTestCases.ndjson')
+        .writeAsString(writeString);
+  } else {
+    await File('lib/generated_files/underlyingConditionTestCases.ndjson')
+        .writeAsString(writeString);
+  }
 }

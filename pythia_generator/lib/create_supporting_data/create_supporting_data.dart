@@ -60,13 +60,17 @@ Future<void> createSupportingData(
         null;
     }
   }
-  final dataString = "import 'package:pythia/pythia.dart';\n\n"
-      'final scheduleSupportingData = '
-      'ScheduleSupportingData.fromJson(${jsonEncoder.convert(scheduleSupportingData)});';
+  if (scheduleSupportingData.toJson().isNotEmpty) {
+    final dataString = "import 'package:pythia/pythia.dart';\n\n"
+        'final scheduleSupportingData = '
+        'ScheduleSupportingData.fromJson(${jsonEncoder.convert(scheduleSupportingData)});';
 
-  await File('lib/files/schedule_supporting_data.dart')
-      .writeAsString(dataString);
+    await File('lib/generated_files/schedule_supporting_data.dart')
+        .writeAsString(dataString);
+  }
 
+  var importString = '';
+  var listString = 'final antigenSupportingData = [\n';
   for (var supportString
       in antigenSupportingStrings as List<AntigenSupportingStrings>) {
     var antigenSupportingData = AntigenSupportingData(
@@ -101,13 +105,18 @@ Future<void> createSupportingData(
     final dataString = "import 'package:pythia/pythia.dart';\n\n"
         'final $diseaseName = '
         'AntigenSupportingData.fromJson(${jsonEncoder.convert(antigenSupportingData)});';
+    importString += "import '$diseaseName.dart';\n";
+    listString += '$diseaseName,\n';
 
-    await File('lib/files/$fileName.dart').writeAsString(dataString);
-    await File('lib/files/$fileName.json')
+    await File('lib/generated_files/$fileName.dart').writeAsString(dataString);
+    await File('lib/generated_files/$fileName.json')
         .writeAsString(jsonEncoder.convert(antigenSupportingData));
   }
 
+  await File('lib/generated_files/antigen_supporting_data.dart')
+      .writeAsString('$importString\n$listString\n];');
+
   for (final string in testCasesStrings as List<TestCasesStrings>) {
-    createPatients(string);
+    createPatients(string, scheduleSupportingData);
   }
 }
