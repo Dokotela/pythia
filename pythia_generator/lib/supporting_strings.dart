@@ -32,6 +32,20 @@ class ScheduleSupportingStrings extends SupportingStrings {
   String? overview;
 }
 
+class TestCasesStrings extends SupportingStrings {
+  TestCasesStrings({
+    this.isHealthy,
+    this.overview,
+    this.testCaseLayout,
+    this.cases,
+  });
+
+  bool? isHealthy;
+  String? overview;
+  String? testCaseLayout;
+  String? cases;
+}
+
 enum SupportingType {
   codedObservations,
   cvxToAntigenMap,

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:pythia/pythia.dart';
+import 'package:pythia_generator/create_supporting_data/create_patients.dart';
 
 import '../supporting_strings.dart';
 import 'contraindications.dart';
@@ -15,17 +16,21 @@ Future<void> createSupportingData(
   var scheduleSupportingData = ScheduleSupportingData();
   const JsonEncoder jsonEncoder = JsonEncoder.withIndent('    ');
 
-  /// I think I'm going to use this for the Antigen generation, so we're actually
-  /// going to parse it first
-  final scheduleSupportingStrings = supportingStrings.toList();
-
-  /// Only ScheduleSupportingStrings
+  /// Make copies of all of the spreadsheets so that we can divide them into
+  /// appropriate categories
+  var scheduleSupportingStrings = supportingStrings.toList();
   scheduleSupportingStrings
-      .removeWhere((element) => element is AntigenSupportingStrings);
-
-  /// Now this is only AntigenSupportingStrings
-  supportingStrings
+      .removeWhere((element) => element is! ScheduleSupportingStrings);
+  scheduleSupportingStrings =
+      scheduleSupportingStrings.cast<ScheduleSupportingStrings>();
+  var antigenSupportingStrings = supportingStrings.toList();
+  antigenSupportingStrings
       .removeWhere((element) => element is! AntigenSupportingStrings);
+  antigenSupportingStrings =
+      antigenSupportingStrings.cast<AntigenSupportingStrings>();
+  var testCasesStrings = supportingStrings.toList();
+  testCasesStrings.removeWhere((element) => element is! TestCasesStrings);
+  testCasesStrings = testCasesStrings.cast<TestCasesStrings>();
 
   for (final scheduleSupportingString in scheduleSupportingStrings) {
     switch ((scheduleSupportingString as ScheduleSupportingStrings).type) {
@@ -62,44 +67,47 @@ Future<void> createSupportingData(
   await File('lib/files/schedule_supporting_data.dart')
       .writeAsString(dataString);
 
-  for (var supportString in supportingStrings) {
-    if (supportString is AntigenSupportingStrings) {
-      var antigenSupportingData = AntigenSupportingData(
-        immunity: immunity(supportString.immunity),
-        contraindications: contraindications(supportString.contraindications),
-        series: supportString.series?.map((e) => createSeries(e)).toList(),
-      );
+  for (var supportString
+      in antigenSupportingStrings as List<AntigenSupportingStrings>) {
+    var antigenSupportingData = AntigenSupportingData(
+      immunity: immunity(supportString.immunity),
+      contraindications: contraindications(supportString.contraindications),
+      series: supportString.series?.map((e) => createSeries(e)).toList(),
+    );
 
-      antigenSupportingData = antigenSupportingData.copyWith(
-        targetDisease: antigenSupportingData.series?[0].targetDisease,
-        vaccineGroup: antigenSupportingData.series?[0].vaccineGroup,
-      );
+    antigenSupportingData = antigenSupportingData.copyWith(
+      targetDisease: antigenSupportingData.series?[0].targetDisease,
+      vaccineGroup: antigenSupportingData.series?[0].vaccineGroup,
+    );
 
-      print(antigenSupportingData.series?[0].targetDisease);
-      // print(
-      //     antigenSupportingData.series?[0].targetDisease?.replaceAll(' ', '_'));
-      // print(antigenSupportingData.series?[0].targetDisease
-      //     ?.replaceAll(' ', '_')
-      //     .replaceAll('-', '_'));
-      final fileName = antigenSupportingData.series?[0].targetDisease
-          ?.replaceAll(' ', '_')
-          .replaceAll('-', '_')
-          .toLowerCase();
-      final index = fileName?.indexOf('_');
-      var diseaseName = fileName;
-      if (index != null && index != -1) {
-        diseaseName = '${fileName?.substring(0, index)}'
-            '${fileName?.substring(index + 1, index + 2).toUpperCase()}'
-            '${fileName?.substring(index + 2)}';
-      }
-
-      final dataString = "import 'package:pythia/pythia.dart';\n\n"
-          'final $diseaseName = '
-          'AntigenSupportingData.fromJson(${jsonEncoder.convert(antigenSupportingData)});';
-
-      await File('lib/files/$fileName.dart').writeAsString(dataString);
-      await File('lib/files/$fileName.json')
-          .writeAsString(jsonEncoder.convert(antigenSupportingData));
+    print(antigenSupportingData.series?[0].targetDisease);
+    // print(
+    //     antigenSupportingData.series?[0].targetDisease?.replaceAll(' ', '_'));
+    // print(antigenSupportingData.series?[0].targetDisease
+    //     ?.replaceAll(' ', '_')
+    //     .replaceAll('-', '_'));
+    final fileName = antigenSupportingData.series?[0].targetDisease
+        ?.replaceAll(' ', '_')
+        .replaceAll('-', '_')
+        .toLowerCase();
+    final index = fileName?.indexOf('_');
+    var diseaseName = fileName;
+    if (index != null && index != -1) {
+      diseaseName = '${fileName?.substring(0, index)}'
+          '${fileName?.substring(index + 1, index + 2).toUpperCase()}'
+          '${fileName?.substring(index + 2)}';
     }
+
+    final dataString = "import 'package:pythia/pythia.dart';\n\n"
+        'final $diseaseName = '
+        'AntigenSupportingData.fromJson(${jsonEncoder.convert(antigenSupportingData)});';
+
+    await File('lib/files/$fileName.dart').writeAsString(dataString);
+    await File('lib/files/$fileName.json')
+        .writeAsString(jsonEncoder.convert(antigenSupportingData));
+  }
+
+  for (final string in testCasesStrings as List<TestCasesStrings>) {
+    createPatients(string);
   }
 }

@@ -22,7 +22,9 @@ Future<List<SupportingStrings>> downloadSheets() async {
     SupportingStrings supportingStrings =
         ss.sheets[0].title == 'Antigen Series Overview'
             ? AntigenSupportingStrings()
-            : ScheduleSupportingStrings();
+            : ss.sheets[0].title == 'Overview'
+                ? TestCasesStrings()
+                : ScheduleSupportingStrings();
 
     /// For each tab in the sheets
     for (var tab in ss.sheets) {
@@ -74,7 +76,13 @@ Future<List<SupportingStrings>> downloadSheets() async {
           break;
         case 'Overview':
           {
-            (supportingStrings as ScheduleSupportingStrings).overview = string;
+            if (supportingStrings is ScheduleSupportingStrings) {
+              supportingStrings.overview = string;
+            } else {
+              {
+                (supportingStrings as TestCasesStrings).overview = string;
+              }
+            }
           }
           break;
         case 'Conditions':
@@ -112,11 +120,23 @@ Future<List<SupportingStrings>> downloadSheets() async {
             supportingStrings.data = string;
           }
           break;
+        case 'Test Case Layout':
+          {
+            (supportingStrings as TestCasesStrings).testCaseLayout = string;
+          }
+          break;
         default:
           {
-            (supportingStrings as AntigenSupportingStrings).series == null
-                ? supportingStrings.series = [string]
-                : supportingStrings.series!.add(string);
+            if (tab.title.toLowerCase().contains('cases')) {
+              (supportingStrings as TestCasesStrings).cases = string;
+              supportingStrings.isHealthy =
+                  !tab.title.toLowerCase().contains('condition');
+              await File('tests.txt').writeAsString(string);
+            } else {
+              (supportingStrings as AntigenSupportingStrings).series == null
+                  ? supportingStrings.series = [string]
+                  : supportingStrings.series!.add(string);
+            }
           }
       }
     }
