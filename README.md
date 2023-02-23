@@ -162,7 +162,7 @@ Many of the diagrams from the CDC manual I didn't think made sense when I first 
 
 ![Figure ](images/4-2%20Refinement%20of%20Patient%20Series)
 
-## 2.2 Organize Immunization History
+## 4.2 Organize Immunization History
 
 ### This is pretty self explanatory. After obtaining all of the immunization a patient has received, break them down into their [antigenic components](lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json)
 

@@ -2,10 +2,11 @@ import 'package:fhir/r4.dart';
 import 'package:pythia/forecast/forecast.dart';
 
 Future<void> main() async {
-  await forecastFromParameters(testParameters);
+  await forecastFromParameters(simpleTest);
+  await forecastFromParameters(complexTest);
 }
 
-final testParameters = Parameters.fromJson({
+final simpleTest = Parameters.fromJson({
   "resourceType": "Parameters",
   "id": "parameters-in-example",
   "parameter": [
@@ -57,6 +58,101 @@ final testParameters = Parameters.fromJson({
         "patient": {"reference": "Patient/ImmDSPatientExample"},
         "occurrenceDateTime": "2020-04-28",
         "primarySource": true
+      }
+    }
+  ]
+});
+
+final complexTest = Parameters.fromJson({
+  "resourceType": "Parameters",
+  "id": "parameters-2013-0053",
+  "parameter": [
+    {"name": "2022-12-16"},
+    {
+      "name": "Patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "2013-0053",
+        "name": [
+          {
+            "family":
+                "Invalid dose 1 to dose 2 interval in midst of other vaccines "
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2021-12-12"
+      }
+    },
+    {
+      "name": "immunization",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "2013-0053_dose1",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "107",
+              "display": "DTaP, unspecified formulation"
+            }
+          ]
+        },
+        "patient": {"reference": "Patient/2013-0053", "type": "Patient"},
+        "occurrenceDateTime": "2022-02-12T00:00:00.000-05:00"
+      }
+    },
+    {
+      "name": "immunization",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "2013-0053_dose2",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "107",
+              "display": "DTaP, unspecified formulation"
+            }
+          ]
+        },
+        "patient": {"reference": "Patient/2013-0053", "type": "Patient"},
+        "occurrenceDateTime": "2022-03-04T00:00:00.000-05:00"
+      }
+    },
+    {
+      "name": "immunization",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "2013-0053_dose3",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "107",
+              "display": "DTaP, unspecified formulation"
+            }
+          ]
+        },
+        "patient": {"reference": "Patient/2013-0053", "type": "Patient"},
+        "occurrenceDateTime": "2022-06-12T01:00:00.000-04:00"
+      }
+    },
+    {
+      "name": "immunization",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "2013-0053_dose4",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "107",
+              "display": "DTaP, unspecified formulation"
+            }
+          ]
+        },
+        "patient": {"reference": "Patient/2013-0053", "type": "Patient"},
+        "occurrenceDateTime": "2022-12-16T00:00:00.000-05:00"
       }
     }
   ]

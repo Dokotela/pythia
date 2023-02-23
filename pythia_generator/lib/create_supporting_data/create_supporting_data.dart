@@ -105,7 +105,7 @@ Future<void> createSupportingData(
     final dataString = "import 'package:pythia/pythia.dart';\n\n"
         'final $diseaseName = '
         'AntigenSupportingData.fromJson(${jsonEncoder.convert(antigenSupportingData)});';
-    importString += "import '$diseaseName.dart';\n";
+    importString += "import '$fileName.dart';\n";
     listString += '$diseaseName,\n';
 
     await File('lib/generated_files/$fileName.dart').writeAsString(dataString);

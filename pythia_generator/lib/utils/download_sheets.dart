@@ -16,6 +16,7 @@ Future<List<SupportingStrings>> downloadSheets() async {
 
     /// Get all of tabs/sheets at the stated location
     final ss = await gsheets.spreadsheet(gsheet);
+    print('Downloading ${ss.data.properties.title}');
 
     /// If the first sheet is entitled Antigen Series Overview, it is an sheet
     /// for Antigen Supporting Data, otherwise it's for Schedule Supporting Data

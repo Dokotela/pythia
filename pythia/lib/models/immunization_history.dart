@@ -1,10 +1,10 @@
 import 'package:fhir/r4.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'imm_list.g.dart';
+part 'immunization_history.g.dart';
 
 @riverpod
-class ImmList extends _$ImmList {
+class ImmunizationHistory extends _$ImmunizationHistory {
   @override
   List<Immunization> build() => <Immunization>[];
 
