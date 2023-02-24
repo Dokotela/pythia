@@ -38,9 +38,6 @@ Enum? stringToEnum<T>(Type enumType, String value) {
     case SeriesPriority:
       return seriesPriorityStringToEnum[value];
 
-    case SeriesType:
-      return seriesTypeStringToEnum[value];
-
     case SkipContext:
       return skipContextStringToEnum[value];
 

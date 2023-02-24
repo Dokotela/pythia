@@ -1,26 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'immunization_history.dart';
+part of 'assessment_date.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$immunizationHistoryHash() =>
-    r'd6ad2e3db510601f32751c92309e4ce47178d826';
+String _$assessmentDateHash() => r'9179ec1a9d26ea0ecc3e5bdbaa709a758b1e901c';
 
-/// See also [ImmunizationHistory].
-@ProviderFor(ImmunizationHistory)
-final immunizationHistoryProvider = AutoDisposeNotifierProvider<
-    ImmunizationHistory, List<Immunization>>.internal(
-  ImmunizationHistory.new,
-  name: r'immunizationHistoryProvider',
+/// See also [AssessmentDate].
+@ProviderFor(AssessmentDate)
+final assessmentDateProvider =
+    AutoDisposeNotifierProvider<AssessmentDate, VaxDate>.internal(
+  AssessmentDate.new,
+  name: r'assessmentDateProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$immunizationHistoryHash,
+      : _$assessmentDateHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$ImmunizationHistory = AutoDisposeNotifier<List<Immunization>>;
+typedef _$AssessmentDate = AutoDisposeNotifier<VaxDate>;
 // ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions

@@ -13,7 +13,7 @@ _$_Series _$$_SeriesFromJson(Map<String, dynamic> json) => _$_Series(
       seriesAdminGuidance: (json['seriesAdminGuidance'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      seriesType: $enumDecodeNullable(_$SeriesTypeEnumMap, json['seriesType']),
+      seriesType: json['seriesType'] as String?,
       equivalentSeriesGroups: $enumDecodeNullable(
           _$EquivalentSeriesGroupsEnumMap, json['equivalentSeriesGroups']),
       requiredGender: (json['requiredGender'] as List<dynamic>?)
@@ -43,7 +43,7 @@ Map<String, dynamic> _$$_SeriesToJson(_$_Series instance) {
   writeNotNull('targetDisease', instance.targetDisease);
   writeNotNull('vaccineGroup', instance.vaccineGroup);
   writeNotNull('seriesAdminGuidance', instance.seriesAdminGuidance);
-  writeNotNull('seriesType', _$SeriesTypeEnumMap[instance.seriesType]);
+  writeNotNull('seriesType', instance.seriesType);
   writeNotNull('equivalentSeriesGroups',
       _$EquivalentSeriesGroupsEnumMap[instance.equivalentSeriesGroups]);
   writeNotNull('requiredGender',
@@ -55,11 +55,6 @@ Map<String, dynamic> _$$_SeriesToJson(_$_Series instance) {
       'seriesDose', instance.seriesDose?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$SeriesTypeEnumMap = {
-  SeriesType.standard: 'Standard',
-  SeriesType.risk: 'Risk',
-};
 
 const _$EquivalentSeriesGroupsEnumMap = {
   EquivalentSeriesGroups.group1: '1',

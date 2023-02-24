@@ -15,7 +15,9 @@ All I've done is take all of their hard work, guidance and expertise and make it
 - I've worked on this project a couple times before and was reasonably successful, but I'd like to see if I can truly (or at least mostly) make it a finished product this time
 - As with my previous attempts, I'm going to try and keep fairly meticulous notes so that if I or anyone else ever tries to repeat this process, they'll have all of the guidance they need
 
-## 1.1 Pre-preparation
+## 1 Pre-Preparation
+
+### 1.1 Just some updates (and so my instructions align numerically with the CDC manual)
 
 - First thing is to download all of the [Supporting Data](https://www.cdc.gov/vaccines/programs/iis/downloads/supporting-data-4.40-508.zip) from the above site
 - You'll notice they have both XML and XLSX files. Unfortunately (at least for me) I don't like either of these formats. So to fix this, I've created a generator that runs on google sheets.
@@ -28,25 +30,27 @@ All I've done is take all of their hard work, guidance and expertise and make it
 - Once again, had to replace all ```"\n"``` with ```" "``` for the generation
 - TODO: copy over files
 
-## 2.1 Evaluation
+## 2 Props to the folks who deserve it
+
+### 2.1 Evaluation
 
 - Because I can never find it, this is the workgroup around [Immunization Decision Support](http://hl7.org/fhir/us/immds/)
 - Again all data and logic used in this forecaster is from the CDC, their manual can be found [here](https://www.cdc.gov/vaccines/programs/iis/interop-proj/downloads/logic-spec-acip-rec-4.3.pdf)
 - While the logic is well thought-out and complete, it's complicated, and I found it difficult to decipher at times. Therefore, I've decided to go through the whole thing step by step and explain how I've interpreted it, in the hopes that maybe someday it will help someone else (although it's most likely just going to help me)
 
-### Introduction to Immunization Forecasting (numbers below match numbers in manual)
+## 3 Logical Specification Concepts
 
-## 3.1 Target Dose (3.1 in manual)
+### 3.1 Target Dose
 
-### A TargetDose is said to be 'unsatisfied' until a dose matches all of its required criteria. At that time, the TargetDose is incremented by one. Below is a basic example from the CDC
+#### A TargetDose is said to be 'unsatisfied' until a dose matches all of its required criteria. At that time, the TargetDose is incremented by one. Below is a basic example from the CDC
 
-![How a Vaccine Dose Administered Satisfies a Target Dose](images/3-1%20How%20a%20Vaccine%20Dose%20Administered%20Satisfies%20a%20Target%20Dose)
+![How a Vaccine Dose Administered Satisfies a Target Dose](images/How%20a%20Vaccine%20Dose%20Administered%20Satisfies%20a%20Target%20Dose.png)
 
 - Target dose - this is a term that makes some intrinsic sense, and then has been used in confusing ways, at least I thought so. The target dose is the next recommended dose in a series. When we evaluate past vaccines, we check to see if the next one given meets the requirements of the target dose. If it is, that dose is considered complete, and we move onto the next target dose.
 
 #### *As a side note, anytime you see the term 'Vaccine Dose Administered' replace it with 'Dose Given', and it makes much more sense
 
-## 3.2 Statuses
+### 3.2 Statuses
 
   TABLE 3-1 DOSE STATUS: recorded for each dose within each series
 | Status       | Meaning         |
@@ -73,7 +77,7 @@ TABLE 3-3 PATIENT SERIES STATUSES: recorded for each series within the the antig
 | Not Complete    | Patient has not met all of the ACIP recommendations for this series|
 | Not Recommended | Patient's immunization history provides sufficient immunity, and further doses in this series are not recommended |
 
-## 3.3 Selecting Supporting Data
+### 3.3 Selecting Supporting Data
 
 TABLE 3-5 Is the Logical Component Relevant?
 | Business Rule ID | Business Rule |
@@ -81,7 +85,7 @@ TABLE 3-5 Is the Logical Component Relevant?
 | RELEVANT-1 | A component applies to a previously given vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the date given is between the two |
 | RELEVANT-2 | A component applies to forecasting a vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the assessment date is between the two |
 
-## 3.4 Date Calculations
+### 3.4 Date Calculations
 
 As anyone who has worked with dates can tell you, they're a huge pain in the ass. I've created a dedicated class for dealing with them called VaxDate. The CDC has stated how they expect for dates to be processed, I've reproduced this below.
 
@@ -147,34 +151,51 @@ ToDo: get rid of these age dates that I don't actually use
 - The series are then grouped together in Vaccine groups (MMR, DTAP, etc) to provide final recommendations for vaccines
 - While not supplied in the official logic, these Vaccine groups should then be combined to actual Vaccines, with CVX/MVX codes and names, although this is somewhat more challenging as it usually has to do with which vaccines are available, rather than true preferences or recommendations
 
-## 4.1
-
-### The actual steps involved in forecasting vaccinations
-
-1. Evaluate All Patient Series
-2. Evaluate each dose administered to see if it meets all required criteria for each appropriate series, and then forecast the next required dose for the series
-3. Select Patient Series
-4. Select the patient series by antigen to recommend for the patient
-5. Identify and Evaluate Vaccine Group
-6. Merge Antigen Recommendations into Vaccine Recommendations
+### 4.1 Gathering Necessary Data
 
 Many of the diagrams from the CDC manual I didn't think made sense when I first when through them, and are still not terribly helpful to understanding the process, at least for me, so I'm going to leave them out. Although this one isn't bad:
 
-![Figure ](images/4-2%20Refinement%20of%20Patient%20Series)
+![Figure ](images/Refinement%20of%20Patient%20Series.png)
 
-## 4.2 Organize Immunization History
+### 4.2 Organize Immunization History
 
 ### This is pretty self explanatory. After obtaining all of the immunization a patient has received, break them down into their [antigenic components](lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json)
 
-## 2.3 Evaluate Immunization History
+### 4.3 Create Relevant Patient Series
 
-### This is actually one of the sections that made more sense to me, but I'll still try and clear it up a bit
+This is a bit confusing at first. Later on in the logic it makes a bit more sense. At this stage there are just a couple of things to remember:
 
-1. For each series, within each antigen, we start at the first target dose.
-2. We compare, in chronological order, all of the antigens the patient has received that could satisfy the target dose.
-3. If the patient has received no antigens for this series, we are finished with that series for now.
-4. There are multiple requirements that have to be met to satisfy a target dose (was the vaccine given at the correct age, was the interval between the last dose and this dose appropriate, etc).
-5. If all of those requirements are met, then that target dose is said to be satisfied.
-6. If the patient has more antigens, we start the process over and evaluate the antigens remaining against the next target dose.
-7. When the patient has not more doses, or the series has no more target doses (we have successfully completed it), then we are done and can move onto the next series
-8. The one exception is for series that are recurring (such as Flu or Tetanus). In this case, anytime a target dose is met, a new target dose, identical to the original is created, adn then compared against the previous vaccines.
+1. There are multiple ways to get appropriate immunity for an antigen
+2. ANY of them are equally valid, and so we have to test each of them (as long as they are appropriate for the patient)
+3. Standard Series: appropriate for anyone of the correct gender
+4. Risk Series: appropriate for those with certain 'conditions' (in this context, conditions do not just refer to medical conditions, but may also refer to exposure, travel to endemic areas, etc). If a Risk series cannot be definitely applied to a patient, then it is not used in the forecast (but a notification should be sent to the clinician alerting them to this fact).
+
+### 4.4 Evaluate and Forecast all Patient Series
+
+1. For each antigen, we evaluate all of the relevant series.
+2. For each series, we evaluate each required dose, the dose IN THE SERIES that we're trying to satisfy is called the target dose
+3. We compare, in chronological order, all of the injections the patient has received that could satisfy the target dose
+4. If the patient has received no antigens for this series, we are finished with that series for now
+5. There are multiple requirements that have to be met to satisfy a target dose (was the vaccine given at the correct age, was the interval between the last dose and this dose appropriate, etc)
+6. If all of those requirements are met, then that target dose is said to be satisfied
+7. If not, and the patient has received more injections, we repeat this process with each subsequent injection until the target dose has been satisfied or there are no more injections to evaluate.
+8. If we have evaluated all of the patient's injections against the series, or the series has no more target doses (meaning we have successfully completed it), then we are done and can move onto the next series
+9. The one exception is for recurring series (such as Flu or Tetanus). For these, anytime a target dose is met, a new target dose, identical to the original is created, and then compared against the previous vaccines.
+
+### 4.5 Select Patient Series
+
+We're going to look through all of the series we just evaluated and find the one (or occasionally more than one) that is the best recommendation to get the patient fully immunized.
+
+### 4.6 Identify and Evaluate Vaccine Group
+
+The above series are for individual antigens, not vaccines. There are vaccine groups that go together (notably MMR and DTaP/Tdap/Td) and generally you don't give one without the others. Because of this, we have to join the individual antigens together and evaluate them as a group. It's similar to the process for individual antigens, but we'll get to that towards the end
+
+## 5 Create Relevant Patient Series
+
+### 5.1 Select Relevant Patient Series
+
+- Correct gender, for the purposes of vaccine logic, patients are grouped into male, female, transgender or unknown. We use this value to determine if a series is appropriate for a patient.
+
+#### Gender - Note that in this logic gender and sex are used synonymously for consistency in the logic. FOR THESE PURPOSES ONLY they refer to the same thing, and that is the genetic sex at birth. If you don't understand why there are be differences in sex and gender (and gender identity), please consider reading any of the following articles by the [AMA](https://journalofethics.ama-assn.org/article/sex-gender-and-why-differences-matter/2008-07), [Stanford](https://stanmed.stanford.edu/2017spring/how-sex-and-gender-which-are-not-the-same-thing-influence-our-health.html), or [Planned Parenthood](https://www.plannedparenthood.org/learn/gender-identity/sex-gender-identity)
+
+- The other part of a relevant series if the type of series. Series can be 'Standard', 'Evaluation Only', or 'Risk'. If it's a 'Standard' or 'Evaluation Only' series, then it applies to everyone (again, assuming the appropriate gender). A 'Risk' series is only appropriate if the patient has certain conditions. Each 'Risk' series has a list of indications that come from the list of 'Observations' (note, these are NOT the same as FHIR Observations). They are in some cases conditions, but in other cases just circumstances (like being a healthcare worker) that imparts a higher risk for certain diseases, and therefore the series will apply.

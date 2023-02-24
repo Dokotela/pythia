@@ -40,8 +40,7 @@ Series createSeries(String? seriesString) {
         }
       } else if (row[0]!.toString().contains('Series Type') &&
           row[1]?.toString() != 'Type') {
-        newSeries = newSeries.copyWith(
-            seriesType: seriesTypeStringToEnum[valueToString(row[1]!)]);
+        newSeries = newSeries.copyWith(seriesType: valueToString(row[1]!));
       } else if (row[0]!.toString().contains('Equivalent Series Groups') &&
           row[1]?.toString() != 'Series Groups') {
         if (!row[1]!.toString().contains('n/a')) {

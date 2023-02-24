@@ -71,6 +71,7 @@ Future<void> createSupportingData(
 
   var importString = '';
   var listString = 'final antigenSupportingData = [\n';
+  var mapString = 'final antigenSupportingDataMap = {\n';
   for (var supportString
       in antigenSupportingStrings as List<AntigenSupportingStrings>) {
     var antigenSupportingData = AntigenSupportingData(
@@ -107,6 +108,7 @@ Future<void> createSupportingData(
         'AntigenSupportingData.fromJson(${jsonEncoder.convert(antigenSupportingData)});';
     importString += "import '$fileName.dart';\n";
     listString += '$diseaseName,\n';
+    mapString += "'${antigenSupportingData.targetDisease}': $diseaseName,\n";
 
     await File('lib/generated_files/$fileName.dart').writeAsString(dataString);
     await File('lib/generated_files/$fileName.json')
@@ -114,7 +116,7 @@ Future<void> createSupportingData(
   }
 
   await File('lib/generated_files/antigen_supporting_data.dart')
-      .writeAsString('$importString\n$listString\n];');
+      .writeAsString('$importString\n$listString];\n\n$mapString};');
 
   for (final string in testCasesStrings as List<TestCasesStrings>) {
     createPatients(string, scheduleSupportingData);

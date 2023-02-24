@@ -157,3 +157,62 @@ final complexTest = Parameters.fromJson({
     }
   ]
 });
+
+final uc1 = Parameters.fromJson({
+  "resourceType": "Parameters",
+  "id": "parameters-2015-UC-0012",
+  "parameter": [
+    {"name": "2015-05-28"},
+    {
+      "name": "Patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "2015-UC-0012",
+        "name": [
+          {"family": "Varicella: Zoster dose administered at 50 years - 1 day"}
+        ],
+        "gender": "female",
+        "birthDate": "1965-05-29"
+      }
+    },
+    {
+      "name": "immunization",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "2015-UC-0012_dose1",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "121",
+              "display": "Zostavax"
+            }
+          ]
+        },
+        "patient": {"reference": "Patient/2015-UC-0012", "type": "Patient"},
+        "occurrenceDateTime": "2015-05-28T01:00:00.000-04:00"
+      }
+    },
+    {
+      "name": "condition",
+      "resource": {
+        "resourceType": "Condition",
+        "code": {
+          "coding": [
+            {
+              "system": "https://www.cdc.gov/vaccines/programs/iis/cdsi.html",
+              "code": "055",
+              "display": "Health care personnel"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "223366009",
+              "display": "Healthcare professional [occupation]"
+            }
+          ]
+        },
+        "subject": {"reference": "Patient/2015-UC-0012", "type": "Patient"}
+      }
+    }
+  ]
+});

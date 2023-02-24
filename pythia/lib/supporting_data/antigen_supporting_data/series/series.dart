@@ -13,7 +13,7 @@ class Series with _$Series {
     String? targetDisease,
     String? vaccineGroup,
     List<String>? seriesAdminGuidance,
-    SeriesType? seriesType,
+    String? seriesType,
     EquivalentSeriesGroups? equivalentSeriesGroups,
     List<Gender>? requiredGender,
     SelectSeries? selectSeries,

@@ -47,11 +47,15 @@ class VaxDate extends DateTime {
 
   String toJson() => this.toString();
 
-  VaxDate minIfNull(String dateChange) =>
-      dateChange == '' ? VaxDate(1900, 1, 1) : change(dateChange);
+  VaxDate minIfNull(String? dateChange) =>
+      dateChange == null || dateChange == ''
+          ? VaxDate(1900, 1, 1)
+          : change(dateChange);
 
-  VaxDate maxIfNull(String dateChange) =>
-      dateChange == '' ? VaxDate(2999, 12, 31) : change(dateChange);
+  VaxDate maxIfNull(String? dateChange) =>
+      dateChange == null || dateChange == ''
+          ? VaxDate(2999, 12, 31)
+          : change(dateChange);
 
   bool operator <(VaxDate vaxDate) => (DateTime(year, month, day)
       .isBefore(DateTime(vaxDate.year, vaxDate.month, vaxDate.day)));
@@ -75,8 +79,8 @@ class VaxDate extends DateTime {
   VaxDate change(String howMuch) =>
       howMuch == '' ? this : _parseDateString(howMuch);
 
-  VaxDate changeIfNotNull(String howMuch) =>
-      howMuch == '' ? VaxDate(1900, 1, 1) : change(howMuch);
+  VaxDate changeIfNotNull(String? howMuch) =>
+      howMuch == null || howMuch == '' ? VaxDate(1900, 1, 1) : change(howMuch);
 
   VaxDate _parseDateString(String change) {
     var years = 0, months = 0, weeks = 0, days = 0, posNeg = 1;

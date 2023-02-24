@@ -11,3 +11,4 @@ dependencies:
   gsheets: ^0.4.2
   pythia: 
     path: ../pythia
+  riverpod_annotation: ^1.2.1

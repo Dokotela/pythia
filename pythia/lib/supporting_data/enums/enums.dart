@@ -12,5 +12,4 @@ export 'series_preference_enum.dart';
 export 'series_priority_enum.dart';
 export 'set_logic.dart';
 export 'skip_context_enum.dart';
-export 'series_type_enum.dart';
 export 'string_to_enum.dart';

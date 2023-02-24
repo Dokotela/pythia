@@ -8,7 +8,7 @@ class ImmunizationHistory extends _$ImmunizationHistory {
   @override
   List<Immunization> build() => <Immunization>[];
 
-  void addImmunizationsFromParameters(Parameters parameters) {
+  void fromParameters(Parameters parameters) {
     /// New list of immunizations
     final immunizationList = <Immunization>[];
 

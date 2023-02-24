@@ -41,9 +41,6 @@ String? enumToString(Enum? value) {
     case SeriesPriority:
       return seriesPriorityEnumToString[value];
 
-    case SeriesType:
-      return seriesTypeEnumToString[value];
-
     case SkipContext:
       return skipContextEnumToString[value];
 

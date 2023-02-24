@@ -5,10 +5,10 @@ import 'utils/download_sheets.dart';
 
 Future<void> main() async {
   /// Downloads all information from Google Sheets
-  // final supportingStringsList = await downloadSheets();
+  final supportingStringsList = await downloadSheets();
 
-  // /// Creates all necessary supporting data files
-  // await createSupportingData(supportingStringsList);
+  /// Creates all necessary supporting data files
+  await createSupportingData(supportingStringsList);
 
   /// Edit this out if testing generating files, this writes files to the actual program
   final dir = Directory('lib/generated_files');
