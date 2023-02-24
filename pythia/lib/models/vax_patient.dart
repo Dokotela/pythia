@@ -1,37 +1,49 @@
-import 'package:fhir/r4.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:fhir/r4.dart' as fhir;
 
 import '../pythia.dart';
 
-part 'vax_patient.g.dart';
+class VaxPatient {
+  VaxPatient({
+    required this.assessmentDate,
+    required this.patient,
+    required this.conditions,
+    required this.immunizations,
+    required this.observations,
+    required this.vaxes,
+  });
 
-@riverpod
-class VaxPatient extends _$VaxPatient {
-  @override
-  Patient build() => Patient();
+  VaxDate get birthDate => VaxDate.fromDateTime(patient.birthDate!.value!);
 
-  void assignPatient(Patient patient) => state = patient;
+  VaxPatient copyWith({
+    VaxDate? assessmentDate,
+    fhir.Patient? patient,
+    List<fhir.Condition>? conditions,
+    List<fhir.Immunization>? immunizations,
+    List<Observation>? observations,
+    Map<String, Vaxes>? vaxes,
+  }) =>
+      VaxPatient(
+        assessmentDate: assessmentDate ?? this.assessmentDate,
+        patient: patient ?? this.patient,
+        conditions: conditions ?? this.conditions,
+        immunizations: immunizations ?? this.immunizations,
+        observations: observations ?? this.observations,
+        vaxes: vaxes ?? this.vaxes,
+      );
 
-  void fromParameters(Parameters parameters) {
-    final patientIndex = parameters.parameter
-        ?.indexWhere((element) => element.resource is Patient);
-    if (patientIndex == null || patientIndex == -1) {
-      ref
-          .read(operationOutcomesProvider.notifier)
-          .addError('No patient provided in parameters');
-    } else {
-      assignPatient(parameters.parameter![patientIndex].resource as Patient);
-    }
-  }
+  final VaxDate assessmentDate;
+  final fhir.Patient patient;
+  final List<fhir.Condition> conditions;
+  final List<fhir.Immunization> immunizations;
+  final List<Observation> observations;
+  final Map<String, Vaxes> vaxes;
+}
 
-  VaxDate? birthDate() {
-    if (state.birthDate?.value == null || !state.birthDate!.isValid) {
-      ref
-          .read(operationOutcomesProvider.notifier)
-          .addError('Patient does not have a valid birthdate');
-      return null;
-    } else {
-      return VaxDate.fromDateTime(state.birthDate!.value!);
-    }
-  }
+class Vaxes {
+  Vaxes({
+    required this.immunizations,
+    required this.series,
+  });
+  final List<fhir.Immunization> immunizations;
+  final List<Series> series;
 }

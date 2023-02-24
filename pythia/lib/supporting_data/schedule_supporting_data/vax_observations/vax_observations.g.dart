@@ -1,19 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'observations.dart';
+part of 'vax_observations.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Observations _$$_ObservationsFromJson(Map<String, dynamic> json) =>
-    _$_Observations(
+_$_VaxObservations _$$_VaxObservationsFromJson(Map<String, dynamic> json) =>
+    _$_VaxObservations(
       observation: (json['observation'] as List<dynamic>?)
-          ?.map((e) => Observation.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => VaxObservation.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_ObservationsToJson(_$_Observations instance) {
+Map<String, dynamic> _$$_VaxObservationsToJson(_$_VaxObservations instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -27,8 +27,8 @@ Map<String, dynamic> _$$_ObservationsToJson(_$_Observations instance) {
   return val;
 }
 
-_$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
-    _$_Observation(
+_$_VaxObservation _$$_VaxObservationFromJson(Map<String, dynamic> json) =>
+    _$_VaxObservation(
       observationCode: json['observationCode'] as String?,
       observationTitle: json['observationTitle'] as String?,
       group: json['group'] as String?,
@@ -40,7 +40,7 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
           : CodedValues.fromJson(json['codedValues'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
+Map<String, dynamic> _$$_VaxObservationToJson(_$_VaxObservation instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

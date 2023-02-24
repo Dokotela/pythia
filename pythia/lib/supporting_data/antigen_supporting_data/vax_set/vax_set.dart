@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../condition/condition.dart';
+import '../../../pythia.dart';
 
 part 'vax_set.freezed.dart';
 part 'vax_set.g.dart';
@@ -14,7 +14,7 @@ class VaxSet with _$VaxSet {
     String? effectiveDate,
     String? cessationDate,
     String? conditionLogic,
-    List<Condition>? condition,
+    List<VaxCondition>? condition,
   }) = _VaxSet;
 
   factory VaxSet.fromJson(Map<String, dynamic> json) => _$VaxSetFromJson(json);

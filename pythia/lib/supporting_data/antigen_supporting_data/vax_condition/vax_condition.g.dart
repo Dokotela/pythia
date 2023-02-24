@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'condition.dart';
+part of 'vax_condition.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
+_$_VaxCondition _$$_VaxConditionFromJson(Map<String, dynamic> json) =>
+    _$_VaxCondition(
       conditionID: json['conditionID'] as String?,
       conditionType:
           $enumDecodeNullable(_$ConditionTypeEnumMap, json['conditionType']),
@@ -23,7 +24,7 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
       seriesGroups: json['seriesGroups'] as String?,
     );
 
-Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) {
+Map<String, dynamic> _$$_VaxConditionToJson(_$_VaxCondition instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

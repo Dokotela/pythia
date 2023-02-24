@@ -27,7 +27,7 @@ mixin _$ScheduleSupportingData {
   VaccineGroupToAntigenMap? get vaccineGroupToAntigenMap =>
       throw _privateConstructorUsedError;
   CvxToAntigenMap? get cvxToAntigenMap => throw _privateConstructorUsedError;
-  Observations? get observations => throw _privateConstructorUsedError;
+  VaxObservations? get observations => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,13 +46,13 @@ abstract class $ScheduleSupportingDataCopyWith<$Res> {
       VaccineGroups? vaccineGroups,
       VaccineGroupToAntigenMap? vaccineGroupToAntigenMap,
       CvxToAntigenMap? cvxToAntigenMap,
-      Observations? observations});
+      VaxObservations? observations});
 
   $LiveVirusConflictsCopyWith<$Res>? get liveVirusConflicts;
   $VaccineGroupsCopyWith<$Res>? get vaccineGroups;
   $VaccineGroupToAntigenMapCopyWith<$Res>? get vaccineGroupToAntigenMap;
   $CvxToAntigenMapCopyWith<$Res>? get cvxToAntigenMap;
-  $ObservationsCopyWith<$Res>? get observations;
+  $VaxObservationsCopyWith<$Res>? get observations;
 }
 
 /// @nodoc
@@ -95,7 +95,7 @@ class _$ScheduleSupportingDataCopyWithImpl<$Res,
       observations: freezed == observations
           ? _value.observations
           : observations // ignore: cast_nullable_to_non_nullable
-              as Observations?,
+              as VaxObservations?,
     ) as $Val);
   }
 
@@ -151,12 +151,12 @@ class _$ScheduleSupportingDataCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ObservationsCopyWith<$Res>? get observations {
+  $VaxObservationsCopyWith<$Res>? get observations {
     if (_value.observations == null) {
       return null;
     }
 
-    return $ObservationsCopyWith<$Res>(_value.observations!, (value) {
+    return $VaxObservationsCopyWith<$Res>(_value.observations!, (value) {
       return _then(_value.copyWith(observations: value) as $Val);
     });
   }
@@ -175,7 +175,7 @@ abstract class _$$_ScheduleSupportingDataCopyWith<$Res>
       VaccineGroups? vaccineGroups,
       VaccineGroupToAntigenMap? vaccineGroupToAntigenMap,
       CvxToAntigenMap? cvxToAntigenMap,
-      Observations? observations});
+      VaxObservations? observations});
 
   @override
   $LiveVirusConflictsCopyWith<$Res>? get liveVirusConflicts;
@@ -186,7 +186,7 @@ abstract class _$$_ScheduleSupportingDataCopyWith<$Res>
   @override
   $CvxToAntigenMapCopyWith<$Res>? get cvxToAntigenMap;
   @override
-  $ObservationsCopyWith<$Res>? get observations;
+  $VaxObservationsCopyWith<$Res>? get observations;
 }
 
 /// @nodoc
@@ -227,7 +227,7 @@ class __$$_ScheduleSupportingDataCopyWithImpl<$Res>
       observations: freezed == observations
           ? _value.observations
           : observations // ignore: cast_nullable_to_non_nullable
-              as Observations?,
+              as VaxObservations?,
     ));
   }
 }
@@ -255,7 +255,7 @@ class _$_ScheduleSupportingData extends _ScheduleSupportingData {
   @override
   final CvxToAntigenMap? cvxToAntigenMap;
   @override
-  final Observations? observations;
+  final VaxObservations? observations;
 
   @override
   String toString() {
@@ -306,7 +306,7 @@ abstract class _ScheduleSupportingData extends ScheduleSupportingData {
       final VaccineGroups? vaccineGroups,
       final VaccineGroupToAntigenMap? vaccineGroupToAntigenMap,
       final CvxToAntigenMap? cvxToAntigenMap,
-      final Observations? observations}) = _$_ScheduleSupportingData;
+      final VaxObservations? observations}) = _$_ScheduleSupportingData;
   _ScheduleSupportingData._() : super._();
 
   factory _ScheduleSupportingData.fromJson(Map<String, dynamic> json) =
@@ -321,7 +321,7 @@ abstract class _ScheduleSupportingData extends ScheduleSupportingData {
   @override
   CvxToAntigenMap? get cvxToAntigenMap;
   @override
-  Observations? get observations;
+  VaxObservations? get observations;
   @override
   @JsonKey(ignore: true)
   _$$_ScheduleSupportingDataCopyWith<_$_ScheduleSupportingData> get copyWith =>

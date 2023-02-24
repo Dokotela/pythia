@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'condition.dart';
+part of 'vax_condition.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Condition _$ConditionFromJson(Map<String, dynamic> json) {
-  return _Condition.fromJson(json);
+VaxCondition _$VaxConditionFromJson(Map<String, dynamic> json) {
+  return _VaxCondition.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Condition {
+mixin _$VaxCondition {
   String? get conditionID => throw _privateConstructorUsedError;
   ConditionType? get conditionType => throw _privateConstructorUsedError;
   String? get startDate => throw _privateConstructorUsedError;
@@ -35,14 +35,15 @@ mixin _$Condition {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConditionCopyWith<Condition> get copyWith =>
+  $VaxConditionCopyWith<VaxCondition> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ConditionCopyWith<$Res> {
-  factory $ConditionCopyWith(Condition value, $Res Function(Condition) then) =
-      _$ConditionCopyWithImpl<$Res, Condition>;
+abstract class $VaxConditionCopyWith<$Res> {
+  factory $VaxConditionCopyWith(
+          VaxCondition value, $Res Function(VaxCondition) then) =
+      _$VaxConditionCopyWithImpl<$Res, VaxCondition>;
   @useResult
   $Res call(
       {String? conditionID,
@@ -60,9 +61,9 @@ abstract class $ConditionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConditionCopyWithImpl<$Res, $Val extends Condition>
-    implements $ConditionCopyWith<$Res> {
-  _$ConditionCopyWithImpl(this._value, this._then);
+class _$VaxConditionCopyWithImpl<$Res, $Val extends VaxCondition>
+    implements $VaxConditionCopyWith<$Res> {
+  _$VaxConditionCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -139,10 +140,11 @@ class _$ConditionCopyWithImpl<$Res, $Val extends Condition>
 }
 
 /// @nodoc
-abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
-  factory _$$_ConditionCopyWith(
-          _$_Condition value, $Res Function(_$_Condition) then) =
-      __$$_ConditionCopyWithImpl<$Res>;
+abstract class _$$_VaxConditionCopyWith<$Res>
+    implements $VaxConditionCopyWith<$Res> {
+  factory _$$_VaxConditionCopyWith(
+          _$_VaxCondition value, $Res Function(_$_VaxCondition) then) =
+      __$$_VaxConditionCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -161,11 +163,11 @@ abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ConditionCopyWithImpl<$Res>
-    extends _$ConditionCopyWithImpl<$Res, _$_Condition>
-    implements _$$_ConditionCopyWith<$Res> {
-  __$$_ConditionCopyWithImpl(
-      _$_Condition _value, $Res Function(_$_Condition) _then)
+class __$$_VaxConditionCopyWithImpl<$Res>
+    extends _$VaxConditionCopyWithImpl<$Res, _$_VaxCondition>
+    implements _$$_VaxConditionCopyWith<$Res> {
+  __$$_VaxConditionCopyWithImpl(
+      _$_VaxCondition _value, $Res Function(_$_VaxCondition) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -184,7 +186,7 @@ class __$$_ConditionCopyWithImpl<$Res>
     Object? vaccineTypes = freezed,
     Object? seriesGroups = freezed,
   }) {
-    return _then(_$_Condition(
+    return _then(_$_VaxCondition(
       conditionID: freezed == conditionID
           ? _value.conditionID
           : conditionID // ignore: cast_nullable_to_non_nullable
@@ -239,8 +241,8 @@ class __$$_ConditionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Condition extends _Condition {
-  _$_Condition(
+class _$_VaxCondition extends _VaxCondition {
+  _$_VaxCondition(
       {this.conditionID,
       this.conditionType,
       this.startDate,
@@ -255,8 +257,8 @@ class _$_Condition extends _Condition {
       this.seriesGroups})
       : super._();
 
-  factory _$_Condition.fromJson(Map<String, dynamic> json) =>
-      _$$_ConditionFromJson(json);
+  factory _$_VaxCondition.fromJson(Map<String, dynamic> json) =>
+      _$$_VaxConditionFromJson(json);
 
   @override
   final String? conditionID;
@@ -285,14 +287,14 @@ class _$_Condition extends _Condition {
 
   @override
   String toString() {
-    return 'Condition(conditionID: $conditionID, conditionType: $conditionType, startDate: $startDate, endDate: $endDate, beginAge: $beginAge, endAge: $endAge, interval: $interval, doseCount: $doseCount, doseType: $doseType, doseCountLogic: $doseCountLogic, vaccineTypes: $vaccineTypes, seriesGroups: $seriesGroups)';
+    return 'VaxCondition(conditionID: $conditionID, conditionType: $conditionType, startDate: $startDate, endDate: $endDate, beginAge: $beginAge, endAge: $endAge, interval: $interval, doseCount: $doseCount, doseType: $doseType, doseCountLogic: $doseCountLogic, vaccineTypes: $vaccineTypes, seriesGroups: $seriesGroups)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Condition &&
+            other is _$_VaxCondition &&
             (identical(other.conditionID, conditionID) ||
                 other.conditionID == conditionID) &&
             (identical(other.conditionType, conditionType) ||
@@ -337,19 +339,19 @@ class _$_Condition extends _Condition {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConditionCopyWith<_$_Condition> get copyWith =>
-      __$$_ConditionCopyWithImpl<_$_Condition>(this, _$identity);
+  _$$_VaxConditionCopyWith<_$_VaxCondition> get copyWith =>
+      __$$_VaxConditionCopyWithImpl<_$_VaxCondition>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConditionToJson(
+    return _$$_VaxConditionToJson(
       this,
     );
   }
 }
 
-abstract class _Condition extends Condition {
-  factory _Condition(
+abstract class _VaxCondition extends VaxCondition {
+  factory _VaxCondition(
       {final String? conditionID,
       final ConditionType? conditionType,
       final String? startDate,
@@ -361,11 +363,11 @@ abstract class _Condition extends Condition {
       final DoseType? doseType,
       final DoseCountLogic? doseCountLogic,
       final String? vaccineTypes,
-      final String? seriesGroups}) = _$_Condition;
-  _Condition._() : super._();
+      final String? seriesGroups}) = _$_VaxCondition;
+  _VaxCondition._() : super._();
 
-  factory _Condition.fromJson(Map<String, dynamic> json) =
-      _$_Condition.fromJson;
+  factory _VaxCondition.fromJson(Map<String, dynamic> json) =
+      _$_VaxCondition.fromJson;
 
   @override
   String? get conditionID;
@@ -393,6 +395,6 @@ abstract class _Condition extends Condition {
   String? get seriesGroups;
   @override
   @JsonKey(ignore: true)
-  _$$_ConditionCopyWith<_$_Condition> get copyWith =>
+  _$$_VaxConditionCopyWith<_$_VaxCondition> get copyWith =>
       throw _privateConstructorUsedError;
 }

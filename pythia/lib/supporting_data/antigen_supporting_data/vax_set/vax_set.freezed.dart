@@ -25,7 +25,7 @@ mixin _$VaxSet {
   String? get effectiveDate => throw _privateConstructorUsedError;
   String? get cessationDate => throw _privateConstructorUsedError;
   String? get conditionLogic => throw _privateConstructorUsedError;
-  List<Condition>? get condition => throw _privateConstructorUsedError;
+  List<VaxCondition>? get condition => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +43,7 @@ abstract class $VaxSetCopyWith<$Res> {
       String? effectiveDate,
       String? cessationDate,
       String? conditionLogic,
-      List<Condition>? condition});
+      List<VaxCondition>? condition});
 }
 
 /// @nodoc
@@ -90,7 +90,7 @@ class _$VaxSetCopyWithImpl<$Res, $Val extends VaxSet>
       condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as List<Condition>?,
+              as List<VaxCondition>?,
     ) as $Val);
   }
 }
@@ -107,7 +107,7 @@ abstract class _$$_VaxSetCopyWith<$Res> implements $VaxSetCopyWith<$Res> {
       String? effectiveDate,
       String? cessationDate,
       String? conditionLogic,
-      List<Condition>? condition});
+      List<VaxCondition>? condition});
 }
 
 /// @nodoc
@@ -151,7 +151,7 @@ class __$$_VaxSetCopyWithImpl<$Res>
       condition: freezed == condition
           ? _value._condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as List<Condition>?,
+              as List<VaxCondition>?,
     ));
   }
 }
@@ -165,7 +165,7 @@ class _$_VaxSet extends _VaxSet {
       this.effectiveDate,
       this.cessationDate,
       this.conditionLogic,
-      final List<Condition>? condition})
+      final List<VaxCondition>? condition})
       : _condition = condition,
         super._();
 
@@ -182,9 +182,9 @@ class _$_VaxSet extends _VaxSet {
   final String? cessationDate;
   @override
   final String? conditionLogic;
-  final List<Condition>? _condition;
+  final List<VaxCondition>? _condition;
   @override
-  List<Condition>? get condition {
+  List<VaxCondition>? get condition {
     final value = _condition;
     if (value == null) return null;
     if (_condition is EqualUnmodifiableListView) return _condition;
@@ -247,7 +247,7 @@ abstract class _VaxSet extends VaxSet {
       final String? effectiveDate,
       final String? cessationDate,
       final String? conditionLogic,
-      final List<Condition>? condition}) = _$_VaxSet;
+      final List<VaxCondition>? condition}) = _$_VaxSet;
   _VaxSet._() : super._();
 
   factory _VaxSet.fromJson(Map<String, dynamic> json) = _$_VaxSet.fromJson;
@@ -263,7 +263,7 @@ abstract class _VaxSet extends VaxSet {
   @override
   String? get conditionLogic;
   @override
-  List<Condition>? get condition;
+  List<VaxCondition>? get condition;
   @override
   @JsonKey(ignore: true)
   _$$_VaxSetCopyWith<_$_VaxSet> get copyWith =>

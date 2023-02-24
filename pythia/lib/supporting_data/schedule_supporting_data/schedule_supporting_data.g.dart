@@ -27,7 +27,8 @@ _$_ScheduleSupportingData _$$_ScheduleSupportingDataFromJson(
               json['cvxToAntigenMap'] as Map<String, dynamic>),
       observations: json['observations'] == null
           ? null
-          : Observations.fromJson(json['observations'] as Map<String, dynamic>),
+          : VaxObservations.fromJson(
+              json['observations'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_ScheduleSupportingDataToJson(

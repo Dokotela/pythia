@@ -27,5 +27,9 @@ Future<void> forecastFromParameters(Parameters parameters) async {
       .read(antigenAdministeredProvider.notifier)
       .addImmunizations(immList);
 
+  /// Ensure the series are appropriate for the patient gender
   container.read(patientSeriesProvider.notifier).byGender();
+
+  /// Check and be sure that the types are appropriate for the patient
+  container.read(patientSeriesProvider.notifier).byType();
 }

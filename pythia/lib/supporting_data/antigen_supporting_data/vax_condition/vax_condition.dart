@@ -2,13 +2,13 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../pythia.dart';
 
-part 'condition.freezed.dart';
-part 'condition.g.dart';
+part 'vax_condition.freezed.dart';
+part 'vax_condition.g.dart';
 
 @freezed
-class Condition with _$Condition {
-  Condition._();
-  factory Condition({
+class VaxCondition with _$VaxCondition {
+  VaxCondition._();
+  factory VaxCondition({
     String? conditionID,
     ConditionType? conditionType,
     String? startDate,
@@ -21,8 +21,8 @@ class Condition with _$Condition {
     DoseCountLogic? doseCountLogic,
     String? vaccineTypes,
     String? seriesGroups,
-  }) = _Condition;
+  }) = _VaxCondition;
 
-  factory Condition.fromJson(Map<String, dynamic> json) =>
-      _$ConditionFromJson(json);
+  factory VaxCondition.fromJson(Map<String, dynamic> json) =>
+      _$VaxConditionFromJson(json);
 }

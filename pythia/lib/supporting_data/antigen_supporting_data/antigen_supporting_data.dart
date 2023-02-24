@@ -3,7 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../pythia.dart';
 
 export 'clinical_history/clinical_history.dart';
-export 'condition/condition.dart';
 export 'conditional_skip/conditional_skip.dart';
 export 'contraindications/contraindications.dart';
 export 'date_of_birth/date_of_birth.dart';
@@ -20,6 +19,7 @@ export 'vaccine/vaccine.dart';
 export 'vaccine_contraindications/vaccine_contraindications.dart';
 export 'vaccine_group_contraindications/vaccine_group_contraindications.dart';
 export 'vax_age/vax_age.dart';
+export 'vax_condition/vax_condition.dart';
 export 'vax_set/vax_set.dart';
 
 part 'antigen_supporting_data.freezed.dart';

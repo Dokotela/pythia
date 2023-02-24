@@ -13,7 +13,7 @@ _$_VaxSet _$$_VaxSetFromJson(Map<String, dynamic> json) => _$_VaxSet(
       cessationDate: json['cessationDate'] as String?,
       conditionLogic: json['conditionLogic'] as String?,
       condition: (json['condition'] as List<dynamic>?)
-          ?.map((e) => Condition.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => VaxCondition.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

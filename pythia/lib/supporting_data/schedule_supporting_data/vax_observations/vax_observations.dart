@@ -1,23 +1,23 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'observations.freezed.dart';
-part 'observations.g.dart';
+part 'vax_observations.freezed.dart';
+part 'vax_observations.g.dart';
 
 @freezed
-class Observations with _$Observations {
-  Observations._();
-  factory Observations({
-    List<Observation>? observation,
-  }) = _Observations;
+class VaxObservations with _$VaxObservations {
+  VaxObservations._();
+  factory VaxObservations({
+    List<VaxObservation>? observation,
+  }) = _VaxObservations;
 
-  factory Observations.fromJson(Map<String, dynamic> json) =>
-      _$ObservationsFromJson(json);
+  factory VaxObservations.fromJson(Map<String, dynamic> json) =>
+      _$VaxObservationsFromJson(json);
 }
 
 @freezed
-class Observation with _$Observation {
-  Observation._();
-  factory Observation({
+class VaxObservation with _$VaxObservation {
+  VaxObservation._();
+  factory VaxObservation({
     String? observationCode,
     String? observationTitle,
     String? group,
@@ -25,10 +25,10 @@ class Observation with _$Observation {
     String? contraindicationText,
     String? clarifyingText,
     CodedValues? codedValues,
-  }) = _Observation;
+  }) = _VaxObservation;
 
-  factory Observation.fromJson(Map<String, dynamic> json) =>
-      _$ObservationFromJson(json);
+  factory VaxObservation.fromJson(Map<String, dynamic> json) =>
+      _$VaxObservationFromJson(json);
 }
 
 @freezed

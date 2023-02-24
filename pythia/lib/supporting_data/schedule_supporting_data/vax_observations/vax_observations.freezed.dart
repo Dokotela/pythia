@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'observations.dart';
+part of 'vax_observations.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,33 +14,33 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Observations _$ObservationsFromJson(Map<String, dynamic> json) {
-  return _Observations.fromJson(json);
+VaxObservations _$VaxObservationsFromJson(Map<String, dynamic> json) {
+  return _VaxObservations.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Observations {
-  List<Observation>? get observation => throw _privateConstructorUsedError;
+mixin _$VaxObservations {
+  List<VaxObservation>? get observation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ObservationsCopyWith<Observations> get copyWith =>
+  $VaxObservationsCopyWith<VaxObservations> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ObservationsCopyWith<$Res> {
-  factory $ObservationsCopyWith(
-          Observations value, $Res Function(Observations) then) =
-      _$ObservationsCopyWithImpl<$Res, Observations>;
+abstract class $VaxObservationsCopyWith<$Res> {
+  factory $VaxObservationsCopyWith(
+          VaxObservations value, $Res Function(VaxObservations) then) =
+      _$VaxObservationsCopyWithImpl<$Res, VaxObservations>;
   @useResult
-  $Res call({List<Observation>? observation});
+  $Res call({List<VaxObservation>? observation});
 }
 
 /// @nodoc
-class _$ObservationsCopyWithImpl<$Res, $Val extends Observations>
-    implements $ObservationsCopyWith<$Res> {
-  _$ObservationsCopyWithImpl(this._value, this._then);
+class _$VaxObservationsCopyWithImpl<$Res, $Val extends VaxObservations>
+    implements $VaxObservationsCopyWith<$Res> {
+  _$VaxObservationsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -56,28 +56,28 @@ class _$ObservationsCopyWithImpl<$Res, $Val extends Observations>
       observation: freezed == observation
           ? _value.observation
           : observation // ignore: cast_nullable_to_non_nullable
-              as List<Observation>?,
+              as List<VaxObservation>?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_ObservationsCopyWith<$Res>
-    implements $ObservationsCopyWith<$Res> {
-  factory _$$_ObservationsCopyWith(
-          _$_Observations value, $Res Function(_$_Observations) then) =
-      __$$_ObservationsCopyWithImpl<$Res>;
+abstract class _$$_VaxObservationsCopyWith<$Res>
+    implements $VaxObservationsCopyWith<$Res> {
+  factory _$$_VaxObservationsCopyWith(
+          _$_VaxObservations value, $Res Function(_$_VaxObservations) then) =
+      __$$_VaxObservationsCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Observation>? observation});
+  $Res call({List<VaxObservation>? observation});
 }
 
 /// @nodoc
-class __$$_ObservationsCopyWithImpl<$Res>
-    extends _$ObservationsCopyWithImpl<$Res, _$_Observations>
-    implements _$$_ObservationsCopyWith<$Res> {
-  __$$_ObservationsCopyWithImpl(
-      _$_Observations _value, $Res Function(_$_Observations) _then)
+class __$$_VaxObservationsCopyWithImpl<$Res>
+    extends _$VaxObservationsCopyWithImpl<$Res, _$_VaxObservations>
+    implements _$$_VaxObservationsCopyWith<$Res> {
+  __$$_VaxObservationsCopyWithImpl(
+      _$_VaxObservations _value, $Res Function(_$_VaxObservations) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,28 +85,28 @@ class __$$_ObservationsCopyWithImpl<$Res>
   $Res call({
     Object? observation = freezed,
   }) {
-    return _then(_$_Observations(
+    return _then(_$_VaxObservations(
       observation: freezed == observation
           ? _value._observation
           : observation // ignore: cast_nullable_to_non_nullable
-              as List<Observation>?,
+              as List<VaxObservation>?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Observations extends _Observations {
-  _$_Observations({final List<Observation>? observation})
+class _$_VaxObservations extends _VaxObservations {
+  _$_VaxObservations({final List<VaxObservation>? observation})
       : _observation = observation,
         super._();
 
-  factory _$_Observations.fromJson(Map<String, dynamic> json) =>
-      _$$_ObservationsFromJson(json);
+  factory _$_VaxObservations.fromJson(Map<String, dynamic> json) =>
+      _$$_VaxObservationsFromJson(json);
 
-  final List<Observation>? _observation;
+  final List<VaxObservation>? _observation;
   @override
-  List<Observation>? get observation {
+  List<VaxObservation>? get observation {
     final value = _observation;
     if (value == null) return null;
     if (_observation is EqualUnmodifiableListView) return _observation;
@@ -116,14 +116,14 @@ class _$_Observations extends _Observations {
 
   @override
   String toString() {
-    return 'Observations(observation: $observation)';
+    return 'VaxObservations(observation: $observation)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Observations &&
+            other is _$_VaxObservations &&
             const DeepCollectionEquality()
                 .equals(other._observation, _observation));
   }
@@ -136,39 +136,39 @@ class _$_Observations extends _Observations {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ObservationsCopyWith<_$_Observations> get copyWith =>
-      __$$_ObservationsCopyWithImpl<_$_Observations>(this, _$identity);
+  _$$_VaxObservationsCopyWith<_$_VaxObservations> get copyWith =>
+      __$$_VaxObservationsCopyWithImpl<_$_VaxObservations>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationsToJson(
+    return _$$_VaxObservationsToJson(
       this,
     );
   }
 }
 
-abstract class _Observations extends Observations {
-  factory _Observations({final List<Observation>? observation}) =
-      _$_Observations;
-  _Observations._() : super._();
+abstract class _VaxObservations extends VaxObservations {
+  factory _VaxObservations({final List<VaxObservation>? observation}) =
+      _$_VaxObservations;
+  _VaxObservations._() : super._();
 
-  factory _Observations.fromJson(Map<String, dynamic> json) =
-      _$_Observations.fromJson;
+  factory _VaxObservations.fromJson(Map<String, dynamic> json) =
+      _$_VaxObservations.fromJson;
 
   @override
-  List<Observation>? get observation;
+  List<VaxObservation>? get observation;
   @override
   @JsonKey(ignore: true)
-  _$$_ObservationsCopyWith<_$_Observations> get copyWith =>
+  _$$_VaxObservationsCopyWith<_$_VaxObservations> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-Observation _$ObservationFromJson(Map<String, dynamic> json) {
-  return _Observation.fromJson(json);
+VaxObservation _$VaxObservationFromJson(Map<String, dynamic> json) {
+  return _VaxObservation.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Observation {
+mixin _$VaxObservation {
   String? get observationCode => throw _privateConstructorUsedError;
   String? get observationTitle => throw _privateConstructorUsedError;
   String? get group => throw _privateConstructorUsedError;
@@ -179,15 +179,15 @@ mixin _$Observation {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ObservationCopyWith<Observation> get copyWith =>
+  $VaxObservationCopyWith<VaxObservation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ObservationCopyWith<$Res> {
-  factory $ObservationCopyWith(
-          Observation value, $Res Function(Observation) then) =
-      _$ObservationCopyWithImpl<$Res, Observation>;
+abstract class $VaxObservationCopyWith<$Res> {
+  factory $VaxObservationCopyWith(
+          VaxObservation value, $Res Function(VaxObservation) then) =
+      _$VaxObservationCopyWithImpl<$Res, VaxObservation>;
   @useResult
   $Res call(
       {String? observationCode,
@@ -202,9 +202,9 @@ abstract class $ObservationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
-    implements $ObservationCopyWith<$Res> {
-  _$ObservationCopyWithImpl(this._value, this._then);
+class _$VaxObservationCopyWithImpl<$Res, $Val extends VaxObservation>
+    implements $VaxObservationCopyWith<$Res> {
+  _$VaxObservationCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -268,11 +268,11 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
 }
 
 /// @nodoc
-abstract class _$$_ObservationCopyWith<$Res>
-    implements $ObservationCopyWith<$Res> {
-  factory _$$_ObservationCopyWith(
-          _$_Observation value, $Res Function(_$_Observation) then) =
-      __$$_ObservationCopyWithImpl<$Res>;
+abstract class _$$_VaxObservationCopyWith<$Res>
+    implements $VaxObservationCopyWith<$Res> {
+  factory _$$_VaxObservationCopyWith(
+          _$_VaxObservation value, $Res Function(_$_VaxObservation) then) =
+      __$$_VaxObservationCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -289,11 +289,11 @@ abstract class _$$_ObservationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ObservationCopyWithImpl<$Res>
-    extends _$ObservationCopyWithImpl<$Res, _$_Observation>
-    implements _$$_ObservationCopyWith<$Res> {
-  __$$_ObservationCopyWithImpl(
-      _$_Observation _value, $Res Function(_$_Observation) _then)
+class __$$_VaxObservationCopyWithImpl<$Res>
+    extends _$VaxObservationCopyWithImpl<$Res, _$_VaxObservation>
+    implements _$$_VaxObservationCopyWith<$Res> {
+  __$$_VaxObservationCopyWithImpl(
+      _$_VaxObservation _value, $Res Function(_$_VaxObservation) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -307,7 +307,7 @@ class __$$_ObservationCopyWithImpl<$Res>
     Object? clarifyingText = freezed,
     Object? codedValues = freezed,
   }) {
-    return _then(_$_Observation(
+    return _then(_$_VaxObservation(
       observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
@@ -342,8 +342,8 @@ class __$$_ObservationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Observation extends _Observation {
-  _$_Observation(
+class _$_VaxObservation extends _VaxObservation {
+  _$_VaxObservation(
       {this.observationCode,
       this.observationTitle,
       this.group,
@@ -353,8 +353,8 @@ class _$_Observation extends _Observation {
       this.codedValues})
       : super._();
 
-  factory _$_Observation.fromJson(Map<String, dynamic> json) =>
-      _$$_ObservationFromJson(json);
+  factory _$_VaxObservation.fromJson(Map<String, dynamic> json) =>
+      _$$_VaxObservationFromJson(json);
 
   @override
   final String? observationCode;
@@ -373,14 +373,14 @@ class _$_Observation extends _Observation {
 
   @override
   String toString() {
-    return 'Observation(observationCode: $observationCode, observationTitle: $observationTitle, group: $group, indicationText: $indicationText, contraindicationText: $contraindicationText, clarifyingText: $clarifyingText, codedValues: $codedValues)';
+    return 'VaxObservation(observationCode: $observationCode, observationTitle: $observationTitle, group: $group, indicationText: $indicationText, contraindicationText: $contraindicationText, clarifyingText: $clarifyingText, codedValues: $codedValues)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Observation &&
+            other is _$_VaxObservation &&
             (identical(other.observationCode, observationCode) ||
                 other.observationCode == observationCode) &&
             (identical(other.observationTitle, observationTitle) ||
@@ -411,30 +411,30 @@ class _$_Observation extends _Observation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ObservationCopyWith<_$_Observation> get copyWith =>
-      __$$_ObservationCopyWithImpl<_$_Observation>(this, _$identity);
+  _$$_VaxObservationCopyWith<_$_VaxObservation> get copyWith =>
+      __$$_VaxObservationCopyWithImpl<_$_VaxObservation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationToJson(
+    return _$$_VaxObservationToJson(
       this,
     );
   }
 }
 
-abstract class _Observation extends Observation {
-  factory _Observation(
+abstract class _VaxObservation extends VaxObservation {
+  factory _VaxObservation(
       {final String? observationCode,
       final String? observationTitle,
       final String? group,
       final String? indicationText,
       final String? contraindicationText,
       final String? clarifyingText,
-      final CodedValues? codedValues}) = _$_Observation;
-  _Observation._() : super._();
+      final CodedValues? codedValues}) = _$_VaxObservation;
+  _VaxObservation._() : super._();
 
-  factory _Observation.fromJson(Map<String, dynamic> json) =
-      _$_Observation.fromJson;
+  factory _VaxObservation.fromJson(Map<String, dynamic> json) =
+      _$_VaxObservation.fromJson;
 
   @override
   String? get observationCode;
@@ -452,7 +452,7 @@ abstract class _Observation extends Observation {
   CodedValues? get codedValues;
   @override
   @JsonKey(ignore: true)
-  _$$_ObservationCopyWith<_$_Observation> get copyWith =>
+  _$$_VaxObservationCopyWith<_$_VaxObservation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
