@@ -1,4 +1,4 @@
-import 'package:fhir/r4.dart' as fhir;
+import 'package:fhir/r4.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../pythia.dart';
@@ -9,20 +9,43 @@ part 'assessment.g.dart';
 class Assessment extends _$Assessment {
   @override
   VaxPatient build() => VaxPatient(
-        assessmentDate: VaxDate.now(),
-        patient: fhir.Patient(),
+        assessmentDate: VaxDate(1900, 01, 01),
+        patient: Patient(),
+        conditions: [],
+        immunizations: [],
         observations: [],
-        vaxes: {},
+        vaxes: Map.fromIterable(
+          antigenSupportingDataMap.keys,
+          key: (item) => item,
+          value: (item) => Vaxes(immunizations: [], series: []),
+        ),
       );
 
-  void fromParameters(fhir.Parameters parameters) {
-    final assessmentDate =
-        ref.read(assessmentDateProvider(parameters)) ?? VaxDate.now();
-    final patient = ref.read(assessmentPatientProvider(parameters));
+  void fromParameters(Parameters parameters) {
+    final patient = ref.read(vaxPatientFromParametersProvider(parameters));
     if (patient == null) {
       ref
           .read(operationOutcomesProvider.notifier)
           .addError('No Patient found in Parameters');
-    } else {}
+    } else if (patient.patient.birthDate == null ||
+        !patient.patient.birthDate!.isValid) {
+      ref
+          .read(operationOutcomesProvider.notifier)
+          .addError('Patient does not have a birthdate');
+    } else {
+      state = patient;
+
+      for (final disease in state.vaxes.keys) {
+        state.vaxes[disease]!.immunizations.sort((a, b) =>
+            (a.occurrenceDateTime?.value ?? DateTime(1900))
+                .compareTo(b.occurrenceDateTime?.value ?? DateTime(1900)));
+        relevantSeries(
+          genderFromPatient(state.patient),
+          state.vaxes[disease]!.series.toList(),
+          VaxDate.fromDateTime(state.patient.birthDate!.value!),
+          state.assessmentDate,
+        );
+      }
+    }
   }
 }

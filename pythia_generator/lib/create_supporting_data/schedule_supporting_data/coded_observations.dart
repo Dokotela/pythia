@@ -1,8 +1,8 @@
 import 'package:csv/csv.dart';
 import 'package:pythia/pythia.dart';
 
-Observations observations(String? data) {
-  var observations = Observations(observation: []);
+VaxObservations observations(String? data) {
+  var observations = VaxObservations(observation: []);
   if (data == null) {
     return observations;
   }
@@ -16,7 +16,7 @@ Observations observations(String? data) {
         if (observations.observation != null &&
             observations.observation!.isNotEmpty)
           ...observations.observation!,
-        Observation.fromJson(
+        VaxObservation.fromJson(
           {
             'observationCode': i.length < 1 ||
                     i[0] == null ||

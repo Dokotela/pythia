@@ -1,4 +1,4 @@
-import 'package:fhir/r4.dart' as fhir;
+import 'package:fhir/r4.dart';
 
 import '../pythia.dart';
 
@@ -16,10 +16,10 @@ class VaxPatient {
 
   VaxPatient copyWith({
     VaxDate? assessmentDate,
-    fhir.Patient? patient,
-    List<fhir.Condition>? conditions,
-    List<fhir.Immunization>? immunizations,
-    List<Observation>? observations,
+    Patient? patient,
+    List<Condition>? conditions,
+    List<Immunization>? immunizations,
+    List<VaxObservation>? observations,
     Map<String, Vaxes>? vaxes,
   }) =>
       VaxPatient(
@@ -32,10 +32,10 @@ class VaxPatient {
       );
 
   final VaxDate assessmentDate;
-  final fhir.Patient patient;
-  final List<fhir.Condition> conditions;
-  final List<fhir.Immunization> immunizations;
-  final List<Observation> observations;
+  final Patient patient;
+  final List<Condition> conditions;
+  final List<Immunization> immunizations;
+  final List<VaxObservation> observations;
   final Map<String, Vaxes> vaxes;
 }
 
@@ -44,6 +44,7 @@ class Vaxes {
     required this.immunizations,
     required this.series,
   });
-  final List<fhir.Immunization> immunizations;
+
+  final List<Immunization> immunizations;
   final List<Series> series;
 }

@@ -237,7 +237,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                         cessationDate: valueToString(row[6]!),
                         conditionLogic: valueToString(row[7]!),
                         condition: [
-                          Condition(
+                          VaxCondition(
                             conditionID: valueToString(row[8]!),
                             conditionType: _valueToEnum(
                                 row[9]!, conditionTypeStringToEnum),
@@ -283,7 +283,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                         cessationDate: valueToString(row[6]!),
                         conditionLogic: valueToString(row[7]!),
                         condition: [
-                          Condition(
+                          VaxCondition(
                             conditionID: valueToString(row[8]!),
                             conditionType: _valueToEnum(
                                 row[9]!, conditionTypeStringToEnum),
@@ -324,7 +324,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                   cessationDate: valueToString(row[6]!),
                   conditionLogic: valueToString(row[7]!),
                   condition: [
-                    Condition(
+                    VaxCondition(
                       conditionID: valueToString(row[8]!),
                       conditionType:
                           _valueToEnum(row[9]!, conditionTypeStringToEnum),
@@ -366,7 +366,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                 seriesDose.conditionalSkip!.last.set_!.last.copyWith(
                   condition: [
                     ...seriesDose.conditionalSkip!.last.set_!.last.condition!,
-                    Condition(
+                    VaxCondition(
                       conditionID: valueToString(row[8]!),
                       conditionType:
                           _valueToEnum(row[9]!, conditionTypeStringToEnum),

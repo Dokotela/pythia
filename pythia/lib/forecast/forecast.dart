@@ -1,7 +1,6 @@
 import 'package:fhir/r4.dart';
+import 'package:pythia/pythia.dart';
 import 'package:riverpod/riverpod.dart';
-
-import '../pythia.dart';
 
 Future<void> forecastFromMap(Map<String, dynamic> parameters) async {
   if (parameters['resourceType'] == 'Parameters') {
@@ -14,22 +13,5 @@ Future<void> forecastFromParameters(Parameters parameters) async {
   final container = ProviderContainer();
 
   /// Find the patient
-  container.read(vaxPatientProvider.notifier).fromParameters(parameters);
-
-  /// List the patient's immunization history
-  container
-      .read(immunizationHistoryProvider.notifier)
-      .fromParameters(parameters);
-  final immList = container.read(immunizationHistoryProvider);
-
-  /// Break that list up into individual antigens
-  container
-      .read(antigenAdministeredProvider.notifier)
-      .addImmunizations(immList);
-
-  /// Ensure the series are appropriate for the patient gender
-  container.read(patientSeriesProvider.notifier).byGender();
-
-  /// Check and be sure that the types are appropriate for the patient
-  container.read(patientSeriesProvider.notifier).byType();
+  container.read(assessmentProvider.notifier).fromParameters(parameters);
 }

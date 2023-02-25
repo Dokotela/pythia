@@ -6,7 +6,7 @@ part of 'assessment.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$assessmentHash() => r'8ef57636f0d82db1006db1e68c111a06ba376081';
+String _$assessmentHash() => r'436abd0fdc49f7148137178d9174bc5ed269d22e';
 
 /// See also [Assessment].
 @ProviderFor(Assessment)

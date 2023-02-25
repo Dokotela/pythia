@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'assessment_parameters.dart';
+part of 'vax_patient_from_parameters.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$assessmentParametersHash() =>
-    r'431dfc2cef3fd9bdf6a95681ab40ce09015a4cec';
+String _$vaxPatientFromParametersHash() =>
+    r'7a2f76bee6ced8dff934ad7bcb15a7b4cc6ddad7';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -30,7 +30,7 @@ class _SystemHash {
   }
 }
 
-abstract class _$AssessmentParameters
+abstract class _$VaxPatientFromParameters
     extends BuildlessAutoDisposeNotifier<VaxPatient?> {
   late final Parameters parameters;
 
@@ -39,27 +39,27 @@ abstract class _$AssessmentParameters
   );
 }
 
-/// See also [AssessmentParameters].
-@ProviderFor(AssessmentParameters)
-const assessmentParametersProvider = AssessmentParametersFamily();
+/// See also [VaxPatientFromParameters].
+@ProviderFor(VaxPatientFromParameters)
+const vaxPatientFromParametersProvider = VaxPatientFromParametersFamily();
 
-/// See also [AssessmentParameters].
-class AssessmentParametersFamily extends Family<VaxPatient?> {
-  /// See also [AssessmentParameters].
-  const AssessmentParametersFamily();
+/// See also [VaxPatientFromParameters].
+class VaxPatientFromParametersFamily extends Family<VaxPatient?> {
+  /// See also [VaxPatientFromParameters].
+  const VaxPatientFromParametersFamily();
 
-  /// See also [AssessmentParameters].
-  AssessmentParametersProvider call(
+  /// See also [VaxPatientFromParameters].
+  VaxPatientFromParametersProvider call(
     Parameters parameters,
   ) {
-    return AssessmentParametersProvider(
+    return VaxPatientFromParametersProvider(
       parameters,
     );
   }
 
   @override
-  AssessmentParametersProvider getProviderOverride(
-    covariant AssessmentParametersProvider provider,
+  VaxPatientFromParametersProvider getProviderOverride(
+    covariant VaxPatientFromParametersProvider provider,
   ) {
     return call(
       provider.parameters,
@@ -78,33 +78,33 @@ class AssessmentParametersFamily extends Family<VaxPatient?> {
       _allTransitiveDependencies;
 
   @override
-  String? get name => r'assessmentParametersProvider';
+  String? get name => r'vaxPatientFromParametersProvider';
 }
 
-/// See also [AssessmentParameters].
-class AssessmentParametersProvider
-    extends AutoDisposeNotifierProviderImpl<AssessmentParameters, VaxPatient?> {
-  /// See also [AssessmentParameters].
-  AssessmentParametersProvider(
+/// See also [VaxPatientFromParameters].
+class VaxPatientFromParametersProvider extends AutoDisposeNotifierProviderImpl<
+    VaxPatientFromParameters, VaxPatient?> {
+  /// See also [VaxPatientFromParameters].
+  VaxPatientFromParametersProvider(
     this.parameters,
   ) : super.internal(
-          () => AssessmentParameters()..parameters = parameters,
-          from: assessmentParametersProvider,
-          name: r'assessmentParametersProvider',
+          () => VaxPatientFromParameters()..parameters = parameters,
+          from: vaxPatientFromParametersProvider,
+          name: r'vaxPatientFromParametersProvider',
           debugGetCreateSourceHash:
               const bool.fromEnvironment('dart.vm.product')
                   ? null
-                  : _$assessmentParametersHash,
-          dependencies: AssessmentParametersFamily._dependencies,
+                  : _$vaxPatientFromParametersHash,
+          dependencies: VaxPatientFromParametersFamily._dependencies,
           allTransitiveDependencies:
-              AssessmentParametersFamily._allTransitiveDependencies,
+              VaxPatientFromParametersFamily._allTransitiveDependencies,
         );
 
   final Parameters parameters;
 
   @override
   bool operator ==(Object other) {
-    return other is AssessmentParametersProvider &&
+    return other is VaxPatientFromParametersProvider &&
         other.parameters == parameters;
   }
 
@@ -118,7 +118,7 @@ class AssessmentParametersProvider
 
   @override
   VaxPatient? runNotifierBuild(
-    covariant AssessmentParameters notifier,
+    covariant VaxPatientFromParameters notifier,
   ) {
     return notifier.build(
       parameters,
