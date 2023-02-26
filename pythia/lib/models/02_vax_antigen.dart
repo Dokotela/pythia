@@ -23,6 +23,10 @@ class VaxAntigen {
     }
   }
 
+  void evaluate() {
+    series.forEach((element) => element.evaluate());
+  }
+
   String targetDisease;
   String vaccineGroupName;
   List<VaxDose> pastDoses;

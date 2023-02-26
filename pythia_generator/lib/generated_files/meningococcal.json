@@ -384,19 +384,7 @@
                                             "conditionID": "1",
                                             "conditionType": "Age",
                                             "beginAge": "7 months"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient is currently 7 months of age or older AND no doses were administered prior to age 7 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "beginAge": "2 months",
@@ -650,19 +638,7 @@
                                             "doseCount": "2",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if more than 2 doses have been administered between 2 and 7 months OR at least 1 dose on or after 7 months",
-                                    "conditionLogic": "OR",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "beginAge": "7 months",

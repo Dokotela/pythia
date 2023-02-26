@@ -155,19 +155,7 @@ final hpv = AntigenSupportingData.fromJson({
                                             "conditionID": "1",
                                             "conditionType": "Interval",
                                             "interval": "5 months - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not required if current dose was administered at least 5 months - 4 days from the previous dose OR two total doses have already been administered",
-                                    "conditionLogic": "OR",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -193,19 +181,7 @@ final hpv = AntigenSupportingData.fromJson({
                                             "conditionID": "1",
                                             "conditionType": "Interval",
                                             "interval": "5 months"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required once 5 months has passed since dose 1 or two total doses have already been administered.",
-                                    "conditionLogic": "OR",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -763,19 +739,7 @@ final hpv = AntigenSupportingData.fromJson({
                                             "conditionID": "1",
                                             "conditionType": "Interval",
                                             "interval": "5 months - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not required if current dose was administered at least 5 months - 4 das from the previous dose OR two total doses have already been administered",
-                                    "conditionLogic": "OR",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -801,19 +765,7 @@ final hpv = AntigenSupportingData.fromJson({
                                             "conditionID": "1",
                                             "conditionType": "Interval",
                                             "interval": "5 months"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required once 5 months has passed since dose 1 or two total doses have already been administered.",
-                                    "conditionLogic": "OR",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -1384,19 +1336,7 @@ final hpv = AntigenSupportingData.fromJson({
                                             "conditionID": "1",
                                             "conditionType": "Interval",
                                             "interval": "5 months - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not required if current dose was administered at least 5 months - 4 das from the previous dose OR two total doses have already been administered",
-                                    "conditionLogic": "OR",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -1422,19 +1362,7 @@ final hpv = AntigenSupportingData.fromJson({
                                             "conditionID": "1",
                                             "conditionType": "Interval",
                                             "interval": "5 months"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required once 5 months has passed since dose 1 or two total doses have already been administered.",
-                                    "conditionLogic": "OR",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -1638,19 +1566,7 @@ final hpv = AntigenSupportingData.fromJson({
                                             "conditionID": "1",
                                             "conditionType": "Interval",
                                             "interval": "5 months - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not required if current dose was administered at least 5 months - 4 das from the previous dose OR two total doses have already been administered",
-                                    "conditionLogic": "OR",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -1676,19 +1592,7 @@ final hpv = AntigenSupportingData.fromJson({
                                             "conditionID": "1",
                                             "conditionType": "Interval",
                                             "interval": "5 months"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required once 5 months has passed since dose 1 or two total doses have already been administered.",
-                                    "conditionLogic": "OR",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",

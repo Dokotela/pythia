@@ -3992,38 +3992,14 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "conditionID": "1",
                                             "conditionType": "Age",
                                             "endAge": "5 years"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "vaccineTypes": "207; 211; 213; 221; 227; 228"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "endAge": "5 years",
@@ -10693,38 +10669,14 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "conditionID": "1",
                                             "conditionType": "Age",
                                             "endAge": "5 years"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "vaccineTypes": "207; 211; 213; 221; 227; 228"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "endAge": "5 years",

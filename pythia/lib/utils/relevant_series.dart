@@ -3,6 +3,7 @@ import '../pythia.dart';
 List<Series> relevantSeries(
   Gender gender,
   List<Series> series,
+  List<VaxObservation> patientObservations,
   VaxDate dob,
   VaxDate assessmentDate,
 ) {
@@ -21,22 +22,23 @@ List<Series> relevantSeries(
 
     /// If it's a Risk group
     else if (series.seriesType == 'Risk') {
-      /// Get the list of conditions that the patient has, for Vaccine
-      /// Logic these are known as Conditions
-      final obsList =
+      /// Get the list of indications for this series
+      final indicationList =
           series.indication?.map((e) => e.observationCode?.code ?? '').toList();
 
-      /// If the obsList is null, the patient doesn't meet requirements for
-      /// risk series
-      if (obsList == null) {
+      /// If the indicationList is null, it means there are no conditions to
+      /// meet (this is probably an error in the rules), but either way,
+      /// we don't include this series
+      if (indicationList == null) {
         return false;
       } else {
         /// Because in the above mapping, we inserted a '' if there are any
         /// nulls, so we remove those
-        obsList.retainWhere((e) => e != '');
+        indicationList.retainWhere((e) => e != '');
 
-        /// If that leaves an empty list, there are no applicable conditions
-        if (obsList.isEmpty) {
+        /// If that leaves an empty list, there are no indications (again,
+        /// probably an error and we don't include this series)
+        if (indicationList.isEmpty) {
           return false;
         }
 
@@ -44,12 +46,11 @@ List<Series> relevantSeries(
         /// list of the patient's observations, that is also included as
         /// one of the indications for this series
         else {
-          final obsIndex = obsList.indexWhere((obsCode) {
-            final indicationIndex = series.indication?.indexWhere(
-                (indication) =>
-                    indication.observationCode?.code != null &&
-                    indication.observationCode?.code == indication);
-            if (indicationIndex == null || indicationIndex == -1) {
+          final obsIndex = indicationList.indexWhere((obsCode) {
+            final indicationIndex = patientObservations.indexWhere((element) =>
+                element.observationCode != null &&
+                element.observationCode == obsCode);
+            if (indicationIndex == -1) {
               return false;
             } else {
               return dob.minIfNull(

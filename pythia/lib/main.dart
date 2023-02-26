@@ -1,9 +1,9 @@
 import 'package:fhir/r4.dart';
 import 'package:pythia/forecast/forecast.dart';
 
-Future<void> main() async {
-  await forecastFromParameters(simpleTest);
-  await forecastFromParameters(complexTest);
+void main() {
+  forecastFromParameters(simpleTest);
+  forecastFromParameters(complexTest);
 }
 
 final simpleTest = Parameters.fromJson({

@@ -262,8 +262,10 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
         );
       } else if (seriesDose.conditionalSkip?.last.context !=
               _valueToEnum(row[1]!, skipContextStringToEnum) ||
-          seriesDose.conditionalSkip?.last.setLogic !=
-              row[2]!.toString().trim()) {
+          (seriesDose.conditionalSkip?.last.setLogic !=
+                  row[2]!.toString().trim() &&
+              !(seriesDose.conditionalSkip?.last.setLogic == null &&
+                  row[2]!.toString().trim().contains('n/a')))) {
         seriesDose = seriesDose.copyWith(
           conditionalSkip: [
             if (seriesDose.conditionalSkip != null &&
