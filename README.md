@@ -199,3 +199,25 @@ The above series are for individual antigens, not vaccines. There are vaccine gr
 #### Gender - Note that in this logic gender and sex are used synonymously for consistency in the logic. FOR THESE PURPOSES ONLY they refer to the same thing, and that is the genetic sex at birth. If you don't understand why there are be differences in sex and gender (and gender identity), please consider reading any of the following articles by the [AMA](https://journalofethics.ama-assn.org/article/sex-gender-and-why-differences-matter/2008-07), [Stanford](https://stanmed.stanford.edu/2017spring/how-sex-and-gender-which-are-not-the-same-thing-influence-our-health.html), or [Planned Parenthood](https://www.plannedparenthood.org/learn/gender-identity/sex-gender-identity)
 
 - The other part of a relevant series if the type of series. Series can be 'Standard', 'Evaluation Only', or 'Risk'. If it's a 'Standard' or 'Evaluation Only' series, then it applies to everyone (again, assuming the appropriate gender). A 'Risk' series is only appropriate if the patient has certain conditions. Each 'Risk' series has a list of indications that come from the list of 'Observations' (note, these are NOT the same as FHIR Observations). They are in some cases conditions, but in other cases just circumstances (like being a healthcare worker) that imparts a higher risk for certain diseases, and therefore the series will apply.
+
+## 6 Evaluate Vaccine Dose Administered
+
+Table 6-1 Evaluate Process Steps
+|Section|Activity|Goal|
+|-|-|-|
+|6.1|Evaluate Dose Administered Condition|Determine if this dose is expired or subpotent (some reason it shouldn't be evaluated)|
+|6.2|Evaluate Conditional Skip|The goal of this step is to determine if the target dose can be skipped due to a patient’s age or immunization history|
+|6.3|Evaluate For Inadvertent Vaccine|The goal of this step is to determine if the vaccine dose administered was an inadvertent administration due to the vaccine type that was administered.|
+|6.4|Evaluate Age|Was it given at the appropriate age|
+|6.5|Evaluate Preferable Interval|Was it given within the preferred interveral from the last dose|
+|6.6|Evaluate Allowable Interval|Was it given within the allowed interval from the last dose|
+|6.7|Evaluate Live Virus Conflict|Is there a conflict between this dose and any live virus vaccines|
+|6.8|Evaluate For Preferable Vaccine|If there are preferred vaccines available for this dose, is it one of them|
+|6.9|Evaluate For Allowable Vaccine|Is it an allowed vaccine for this dose|
+|6.10|Satisfy Target Dose|Is the target dose satisfied|
+
+### 6.1 Evaluate Dose Administered Condition
+
+This one is pretty easy. Was the vaccine expired before it was given? Is the vaccine subpotent for some reason? If the answer is yes to either of these, the dose can't be evaluated. Of note, we actually do this slightly earlier when we're first sorting the vaccines. When we're first assigning the vaccine doses given to the individual antigens, we bucket them at that point as either subpar or available for evaluation. This just saves us the trouble of looking at them as we evaluate each series, and we only look at the valid ones.
+
+Also, a brief note on how FHIR handles this. It's very similar. With the [Immunization resource] there is a field where it notes the ```expirationDate``` of the vaccine, which can be compared to the ```occurrence[x]``` which is the date the vaccine was given. There is also a boolean field, ```isSubpotent``` that indicates whether or not it is. There is also a list of CodeableConcepts in a field ```subpotentReason``` that can list why. The CDC manual lists examples such as sub-potent and recall, FHIR uses an [Immunization Subpotent Reason ValueSet](https://build.fhir.org/valueset-immunization-subpotent-reason.html) that contains partialdose, coldchainbreak, recall, adversestorage, and expired.

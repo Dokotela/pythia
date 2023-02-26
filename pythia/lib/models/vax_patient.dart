@@ -42,9 +42,38 @@ class VaxPatient {
 class Vaxes {
   Vaxes({
     required this.immunizations,
+    required this.immForEval,
+    required this.substandard,
     required this.series,
   });
 
+  void newImmunization(
+    Immunization immunization,
+    bool isSubstandard,
+    VaxDate dateGiven,
+    String cvx,
+  ) {
+    /// add immunization to all immunizations
+    immunizations.add(immunization);
+
+    if (isSubstandard) {
+      substandard.add(immunization);
+    } else {
+      immForEval.add(SimpleVax(dateGiven, cvx));
+    }
+  }
+
+  /// List of all immunizations adminstered
   final List<Immunization> immunizations;
+
+  /// List of all immunizations that can be evaluated, this is, they were not
+  /// expired when given, and they are not subpotent, for whatever reason
+  final List<SimpleVax> immForEval;
+
+  /// If they were given after they were expired or are subpotent, they are
+  /// not added to the immForEval list, they are instead added to this list
+  final List<Immunization> substandard;
+
+  /// This is the list of all of the series for a particular antigen
   final List<Series> series;
 }
