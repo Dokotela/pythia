@@ -12,7 +12,7 @@ class SelectSeries with _$SelectSeries {
     Binary? defaultSeries,
     Binary? productPath,
     String? seriesGroupName,
-    SeriesGroup? seriesGroup,
+    String? seriesGroup,
     SeriesPriority? seriesPriority,
     SeriesPreference? seriesPreference,
     String? minAgeToStart,

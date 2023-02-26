@@ -239,8 +239,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                         condition: [
                           VaxCondition(
                             conditionID: valueToString(row[8]!),
-                            conditionType: _valueToEnum(
-                                row[9]!, conditionTypeStringToEnum),
+                            conditionType: row[9]!,
                             startDate: valueToString(row[10]!),
                             endDate: valueToString(row[11]!),
                             beginAge: valueToString(row[12]!),
@@ -287,8 +286,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                         condition: [
                           VaxCondition(
                             conditionID: valueToString(row[8]!),
-                            conditionType: _valueToEnum(
-                                row[9]!, conditionTypeStringToEnum),
+                            conditionType: row[9]!,
                             startDate: valueToString(row[10]!),
                             endDate: valueToString(row[11]!),
                             beginAge: valueToString(row[12]!),
@@ -328,8 +326,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                   condition: [
                     VaxCondition(
                       conditionID: valueToString(row[8]!),
-                      conditionType:
-                          _valueToEnum(row[9]!, conditionTypeStringToEnum),
+                      conditionType: row[9]!,
                       startDate: valueToString(row[10]!),
                       endDate: valueToString(row[11]!),
                       beginAge: valueToString(row[12]!),
@@ -370,8 +367,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                     ...seriesDose.conditionalSkip!.last.set_!.last.condition!,
                     VaxCondition(
                       conditionID: valueToString(row[8]!),
-                      conditionType:
-                          _valueToEnum(row[9]!, conditionTypeStringToEnum),
+                      conditionType: row[9]!,
                       startDate: valueToString(row[10]!),
                       endDate: valueToString(row[11]!),
                       beginAge: valueToString(row[12]!),

@@ -8,9 +8,6 @@ String? enumToString(Enum? value) {
     case Binary:
       return binaryEnumToString[value];
 
-    case ConditionType:
-      return conditionTypeEnumToString[value];
-
     case DoseCountLogic:
       return doseCountLogicEnumToString[value];
 
@@ -31,9 +28,6 @@ String? enumToString(Enum? value) {
 
     case Gender:
       return genderEnumToString[value];
-
-    case SeriesGroup:
-      return seriesGroupEnumToString[value];
 
     case SeriesPreference:
       return seriesPreferenceEnumToString[value];

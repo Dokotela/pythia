@@ -9,8 +9,7 @@ part of 'vax_condition.dart';
 _$_VaxCondition _$$_VaxConditionFromJson(Map<String, dynamic> json) =>
     _$_VaxCondition(
       conditionID: json['conditionID'] as String?,
-      conditionType:
-          $enumDecodeNullable(_$ConditionTypeEnumMap, json['conditionType']),
+      conditionType: json['conditionType'] as String?,
       startDate: json['startDate'] as String?,
       endDate: json['endDate'] as String?,
       beginAge: json['beginAge'] as String?,
@@ -34,7 +33,7 @@ Map<String, dynamic> _$$_VaxConditionToJson(_$_VaxCondition instance) {
   }
 
   writeNotNull('conditionID', instance.conditionID);
-  writeNotNull('conditionType', _$ConditionTypeEnumMap[instance.conditionType]);
+  writeNotNull('conditionType', instance.conditionType);
   writeNotNull('startDate', instance.startDate);
   writeNotNull('endDate', instance.endDate);
   writeNotNull('beginAge', instance.beginAge);
@@ -48,14 +47,6 @@ Map<String, dynamic> _$$_VaxConditionToJson(_$_VaxCondition instance) {
   writeNotNull('seriesGroups', instance.seriesGroups);
   return val;
 }
-
-const _$ConditionTypeEnumMap = {
-  ConditionType.age: 'Age',
-  ConditionType.countByAge: 'Vaccine Count by Age',
-  ConditionType.interval: 'Interval',
-  ConditionType.countByDate: 'Vaccine Count by Date',
-  ConditionType.completedSeries: 'Completed Series',
-};
 
 const _$DoseTypeEnumMap = {
   DoseType.total: 'Total',

@@ -12,24 +12,12 @@ Map<String, VaxAntigen> antigenMap(
     if (data.series != null &&
         data.series!.isNotEmpty &&
         data.series!.first.targetDisease != null) {
-      agMap[data.series!.first.targetDisease!] = VaxAntigen(
-        targetDisease: data.series!.first.targetDisease!,
-        vaccineGroupName: data.series!.first.vaccineGroup ??
-            data.series!.first.targetDisease!,
-        series: relevantSeries(
-          gender,
-          data.series!,
-          observations,
-          dob,
-          assessmentDate,
-        )
-            .map((e) => VaxSeries(
-                  series: e,
-                  assessmentDate: assessmentDate,
-                  dob: dob,
-                ))
-            .toList(),
-        pastDoses: [],
+      agMap[data.series!.first.targetDisease!] = VaxAntigen.fromSeries(
+        series: data.series!,
+        gender: gender,
+        observations: observations,
+        dob: dob,
+        assessmentDate: assessmentDate,
       );
     }
   }

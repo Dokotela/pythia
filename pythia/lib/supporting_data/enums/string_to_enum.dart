@@ -5,9 +5,6 @@ Enum? stringToEnum<T>(Type enumType, String value) {
     case Binary:
       return binaryStringToEnum[value];
 
-    case ConditionType:
-      return conditionTypeStringToEnum[value];
-
     case DoseCountLogic:
       return doseCountLogicStringToEnum[value];
 
@@ -28,9 +25,6 @@ Enum? stringToEnum<T>(Type enumType, String value) {
 
     case Gender:
       return genderStringToEnum[value];
-
-    case SeriesGroup:
-      return seriesGroupStringToEnum[value];
 
     case SeriesPreference:
       return seriesPreferenceStringToEnum[value];

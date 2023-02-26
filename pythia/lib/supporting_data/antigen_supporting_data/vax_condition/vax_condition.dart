@@ -10,7 +10,7 @@ class VaxCondition with _$VaxCondition {
   VaxCondition._();
   factory VaxCondition({
     String? conditionID,
-    ConditionType? conditionType,
+    String? conditionType,
     String? startDate,
     String? endDate,
     String? beginAge,

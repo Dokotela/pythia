@@ -1,11 +1,15 @@
+import 'package:riverpod/riverpod.dart';
+
 import '../pythia.dart';
 
 class VaxSeries {
   VaxSeries({
+    required this.targetDisease,
     required this.series,
     required this.assessmentDate,
     required this.dob,
   });
+  String targetDisease;
   int targetDose = 0;
   Map<String, VaxDose> completedTargetDoses = {};
   Series series;
@@ -55,6 +59,16 @@ class VaxSeries {
     /// Check and see if we're using AND or OR logic
     final andLogic = set.conditionLogic == 'AND';
 
+    //     @JsonValue('Age')
+    // age,
+    // @JsonValue('Vaccine Count by Age')
+    // countByAge,
+    // @JsonValue('Interval')
+    // interval,
+    // @JsonValue('Vaccine Count by Date')
+    // countByDate,
+    // @JsonValue('Completed Series')
+
     /// Evaluate each condition in the set
     for (final condition in set.condition ?? <VaxCondition>[]) {
       /// The first date the patient was at an appropriate age for this skip
@@ -85,8 +99,14 @@ class VaxSeries {
       /// condition is NOT met
       if (!isAgeMet && andLogic) {
         return false;
-      } else {}
-      // // TODO(Dokotela) - should this count from subpar doses too?
+      } else {
+        final container = ProviderContainer();
+
+        final conditionalSkipSeriesGroup =
+            container.read(seriesGroupCompleteProvider)[targetDisease]
+                ?[condition.seriesGroups];
+      }
+      // TODO(Dokotela) - should this count from subpar doses too?
       // final conditionalSkipIntervalDate =
       //     lastCompleted?.dateGiven.changeIfNotNull(condition.interval);
 

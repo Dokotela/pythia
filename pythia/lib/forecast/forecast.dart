@@ -23,5 +23,9 @@ Bundle forecastFromParameters(Parameters parameters) {
     patient.birthdate,
     patient.assessmentDate,
   );
+
+  agMap.forEach((k, v) => v.groups.forEach((key, value) => container
+      .read(seriesGroupCompleteProvider.notifier)
+      .newSeriesGroup(k, key)));
   return Bundle();
 }

@@ -12,8 +12,7 @@ _$_SelectSeries _$$_SelectSeriesFromJson(Map<String, dynamic> json) =>
           $enumDecodeNullable(_$BinaryEnumMap, json['defaultSeries']),
       productPath: $enumDecodeNullable(_$BinaryEnumMap, json['productPath']),
       seriesGroupName: json['seriesGroupName'] as String?,
-      seriesGroup:
-          $enumDecodeNullable(_$SeriesGroupEnumMap, json['seriesGroup']),
+      seriesGroup: json['seriesGroup'] as String?,
       seriesPriority:
           $enumDecodeNullable(_$SeriesPriorityEnumMap, json['seriesPriority']),
       seriesPreference: $enumDecodeNullable(
@@ -34,7 +33,7 @@ Map<String, dynamic> _$$_SelectSeriesToJson(_$_SelectSeries instance) {
   writeNotNull('defaultSeries', _$BinaryEnumMap[instance.defaultSeries]);
   writeNotNull('productPath', _$BinaryEnumMap[instance.productPath]);
   writeNotNull('seriesGroupName', instance.seriesGroupName);
-  writeNotNull('seriesGroup', _$SeriesGroupEnumMap[instance.seriesGroup]);
+  writeNotNull('seriesGroup', instance.seriesGroup);
   writeNotNull(
       'seriesPriority', _$SeriesPriorityEnumMap[instance.seriesPriority]);
   writeNotNull(
@@ -48,12 +47,6 @@ const _$BinaryEnumMap = {
   Binary.yes: 'Yes',
   Binary.no: 'No',
   Binary.na: '',
-};
-
-const _$SeriesGroupEnumMap = {
-  SeriesGroup.one: '1',
-  SeriesGroup.two: '2',
-  SeriesGroup.three: '3',
 };
 
 const _$SeriesPriorityEnumMap = {

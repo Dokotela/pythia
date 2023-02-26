@@ -21,7 +21,7 @@ VaxCondition _$VaxConditionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$VaxCondition {
   String? get conditionID => throw _privateConstructorUsedError;
-  ConditionType? get conditionType => throw _privateConstructorUsedError;
+  String? get conditionType => throw _privateConstructorUsedError;
   String? get startDate => throw _privateConstructorUsedError;
   String? get endDate => throw _privateConstructorUsedError;
   String? get beginAge => throw _privateConstructorUsedError;
@@ -47,7 +47,7 @@ abstract class $VaxConditionCopyWith<$Res> {
   @useResult
   $Res call(
       {String? conditionID,
-      ConditionType? conditionType,
+      String? conditionType,
       String? startDate,
       String? endDate,
       String? beginAge,
@@ -94,7 +94,7 @@ class _$VaxConditionCopyWithImpl<$Res, $Val extends VaxCondition>
       conditionType: freezed == conditionType
           ? _value.conditionType
           : conditionType // ignore: cast_nullable_to_non_nullable
-              as ConditionType?,
+              as String?,
       startDate: freezed == startDate
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
@@ -149,7 +149,7 @@ abstract class _$$_VaxConditionCopyWith<$Res>
   @useResult
   $Res call(
       {String? conditionID,
-      ConditionType? conditionType,
+      String? conditionType,
       String? startDate,
       String? endDate,
       String? beginAge,
@@ -194,7 +194,7 @@ class __$$_VaxConditionCopyWithImpl<$Res>
       conditionType: freezed == conditionType
           ? _value.conditionType
           : conditionType // ignore: cast_nullable_to_non_nullable
-              as ConditionType?,
+              as String?,
       startDate: freezed == startDate
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
@@ -263,7 +263,7 @@ class _$_VaxCondition extends _VaxCondition {
   @override
   final String? conditionID;
   @override
-  final ConditionType? conditionType;
+  final String? conditionType;
   @override
   final String? startDate;
   @override
@@ -353,7 +353,7 @@ class _$_VaxCondition extends _VaxCondition {
 abstract class _VaxCondition extends VaxCondition {
   factory _VaxCondition(
       {final String? conditionID,
-      final ConditionType? conditionType,
+      final String? conditionType,
       final String? startDate,
       final String? endDate,
       final String? beginAge,
@@ -372,7 +372,7 @@ abstract class _VaxCondition extends VaxCondition {
   @override
   String? get conditionID;
   @override
-  ConditionType? get conditionType;
+  String? get conditionType;
   @override
   String? get startDate;
   @override
