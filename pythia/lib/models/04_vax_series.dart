@@ -58,64 +58,92 @@ class VaxSeries {
   bool skipCondition(VaxSet set) {
     /// Check and see if we're using AND or OR logic
     final andLogic = set.conditionLogic == 'AND';
-
-    //     @JsonValue('Age')
-    // age,
-    // @JsonValue('Vaccine Count by Age')
-    // countByAge,
-    // @JsonValue('Interval')
-    // interval,
-    // @JsonValue('Vaccine Count by Date')
-    // countByDate,
-    // @JsonValue('Completed Series')
+    var conditionMet = false;
 
     /// Evaluate each condition in the set
     for (final condition in set.condition ?? <VaxCondition>[]) {
-      /// The first date the patient was at an appropriate age for this skip
-      /// condition to possibly apply
-      final conditionalSkipBeginAgeDate = condition.beginAge == null
-          ? VaxDate(1900, 01, 01)
-          : dob.changeIfNotNull(condition.beginAge);
+      switch (condition.conditionType) {
+        case 'Age':
+          {
+            /// The first date the patient was at an appropriate age for this skip
+            /// condition to possibly apply
+            final conditionalSkipBeginAgeDate = condition.beginAge == null
+                ? VaxDate(1900, 01, 01)
+                : dob.changeIfNotNull(condition.beginAge);
 
-      /// The last date the patient was at an appropriate age for this skip
-      /// condition to possibly apply
-      final conditionalSkipEndAgeDate = condition.endAge == null
-          ? VaxDate(29990, 12, 31)
-          : dob.changeIfNotNull(condition.beginAge);
+            /// The last date the patient was at an appropriate age for this skip
+            /// condition to possibly apply
+            final conditionalSkipEndAgeDate = condition.endAge == null
+                ? VaxDate(29990, 12, 31)
+                : dob.changeIfNotNull(condition.beginAge);
 
-      /// The reference date we're going to use to check if this skip condition
-      /// actually DOES apply
-      // TODO(Dokotela) - this needs to be changed for forecasts
-      final conditionalSkipReferenceDate = skipContext == SkipContext.evaluation
-          ? doses.first.dateGiven
-          : VaxDate.now();
+            /// The reference date we're going to use to check if this skip
+            /// condition actually DOES apply
+            // TODO(Dokotela) - this needs to be changed for forecasts
+            final conditionalSkipReferenceDate =
+                skipContext == SkipContext.evaluation
+                    ? doses.first.dateGiven
+                    : VaxDate.now();
 
-      /// Reference TABLE 6-6 CONDITIONAL TYPE OF AGE – IS THE CONDITION MET?
-      final isAgeMet =
-          conditionalSkipEndAgeDate > conditionalSkipReferenceDate &&
-              conditionalSkipReferenceDate >= conditionalSkipBeginAgeDate;
+            /// Reference TABLE 6-6 CONDITIONAL TYPE OF AGE – IS THE CONDITION MET?
+            conditionMet =
+                conditionalSkipEndAgeDate > conditionalSkipReferenceDate &&
+                    conditionalSkipReferenceDate >= conditionalSkipBeginAgeDate;
+          }
+          break;
+        case 'Vaccine Count by Age':
+          null;
+        case 'Interval':
+          {
+            if (completedTargetDoses.isEmpty) {
+              conditionMet = false;
+            } else {
+              final conditionalSkipIntervalDate =
+                  lastCompleted!.dateGiven.changeIfNotNull(condition.interval);
 
-      /// If the age condition is wrong and we're using AND logic, then this
-      /// condition is NOT met
-      if (!isAgeMet && andLogic) {
-        return false;
-      } else {
-        final container = ProviderContainer();
+              /// The reference date we're going to use to check if this skip condition
+              /// actually DOES apply
+              // TODO(Dokotela) - this needs to be changed for forecasts
+              final conditionalSkipReferenceDate =
+                  skipContext == SkipContext.evaluation
+                      ? doses.first.dateGiven
+                      : VaxDate.now();
 
-        final conditionalSkipSeriesGroup =
-            container.read(seriesGroupCompleteProvider)[targetDisease]
-                ?[condition.seriesGroups];
+              /// Reference TABLE 6-8 CONDITIONAL TYPE OF INTERVAL – IS THE CONDITION MET?
+              conditionMet =
+                  conditionalSkipReferenceDate >= conditionalSkipIntervalDate;
+            }
+          }
+          break;
+        case 'Vaccine Count by Date':
+          null;
+        case 'Completed Series':
+          {
+            // TODO(Dokotela) - should this count from subpar doses too?
+            final container = ProviderContainer();
+
+            /// TABLE 6-7 CONDITIONAL TYPE OF COMPLETED SERIES – IS THE CONDITION MET?
+            conditionMet =
+                container.read(seriesGroupCompleteProvider)[targetDisease]
+                        ?[condition.seriesGroups] ??
+                    false;
+          }
+          break;
+        default:
+          break;
       }
-      // TODO(Dokotela) - should this count from subpar doses too?
-      // final conditionalSkipIntervalDate =
-      //     lastCompleted?.dateGiven.changeIfNotNull(condition.interval);
 
-// final conditionalSkipEndDate -
-// final conditionalSkipDoseType -
-// final conditionalSkipDoseCount Logic -
-// final conditionalSkipDoseCount -
-// final conditionalSkipSeriesGroup
+      /// If the condition is NOT met and we're using AND logic, then this set
+      /// is NOT met
+      if (!conditionMet && andLogic) {
+        return false;
+      }
+
+      /// Alternatively, if the condition IS met and we are using OR logic, then
+      /// the containing set is true
+      else if (conditionMet && !andLogic) {
+        return true;
+      }
     }
-    return false;
   }
 }
