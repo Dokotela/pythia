@@ -2,16 +2,18 @@ import 'package:fhir/r4.dart';
 import 'package:pythia/pythia.dart';
 import 'package:riverpod/riverpod.dart';
 
-Future<void> forecastFromMap(Map<String, dynamic> parameters) async {
+void forecastFromMap(Map<String, dynamic> parameters) {
   if (parameters['resourceType'] == 'Parameters') {
     final newParameters = Parameters.fromJson(parameters);
     return forecastFromParameters(newParameters);
   }
 }
 
-Future<void> forecastFromParameters(Parameters parameters) async {
+void forecastFromParameters(Parameters parameters) {
   final container = ProviderContainer();
 
-  /// Find the patient
-  container.read(assessmentProvider.notifier).fromParameters(parameters);
+  /// Parse out and organize all of the information from input parameters
+  final patient = container.read(patientForAssessmentProvider(parameters));
+
+  final agMap = antigenMap();
 }

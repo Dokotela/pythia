@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'eval_immunization.dart';
+part of 'patient_for_assessment.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$evalImmunizationHash() => r'03ccddb70086477c1601d5cc01d94ed5944f5e68';
+String _$patientForAssessmentHash() =>
+    r'ab2d2a39b81bdbb6093239f0e733a809eb66a581';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -29,39 +30,39 @@ class _SystemHash {
   }
 }
 
-abstract class _$EvalImmunization
-    extends BuildlessAutoDisposeNotifier<ImmEval> {
-  late final String id;
+abstract class _$PatientForAssessment
+    extends BuildlessAutoDisposeNotifier<VaxPatient> {
+  late final Parameters parameters;
 
-  ImmEval build(
-    String id,
+  VaxPatient build(
+    Parameters parameters,
   );
 }
 
-/// See also [EvalImmunization].
-@ProviderFor(EvalImmunization)
-const evalImmunizationProvider = EvalImmunizationFamily();
+/// See also [PatientForAssessment].
+@ProviderFor(PatientForAssessment)
+const patientForAssessmentProvider = PatientForAssessmentFamily();
 
-/// See also [EvalImmunization].
-class EvalImmunizationFamily extends Family<ImmEval> {
-  /// See also [EvalImmunization].
-  const EvalImmunizationFamily();
+/// See also [PatientForAssessment].
+class PatientForAssessmentFamily extends Family<VaxPatient> {
+  /// See also [PatientForAssessment].
+  const PatientForAssessmentFamily();
 
-  /// See also [EvalImmunization].
-  EvalImmunizationProvider call(
-    String id,
+  /// See also [PatientForAssessment].
+  PatientForAssessmentProvider call(
+    Parameters parameters,
   ) {
-    return EvalImmunizationProvider(
-      id,
+    return PatientForAssessmentProvider(
+      parameters,
     );
   }
 
   @override
-  EvalImmunizationProvider getProviderOverride(
-    covariant EvalImmunizationProvider provider,
+  PatientForAssessmentProvider getProviderOverride(
+    covariant PatientForAssessmentProvider provider,
   ) {
     return call(
-      provider.id,
+      provider.parameters,
     );
   }
 
@@ -77,49 +78,50 @@ class EvalImmunizationFamily extends Family<ImmEval> {
       _allTransitiveDependencies;
 
   @override
-  String? get name => r'evalImmunizationProvider';
+  String? get name => r'patientForAssessmentProvider';
 }
 
-/// See also [EvalImmunization].
-class EvalImmunizationProvider
-    extends AutoDisposeNotifierProviderImpl<EvalImmunization, ImmEval> {
-  /// See also [EvalImmunization].
-  EvalImmunizationProvider(
-    this.id,
+/// See also [PatientForAssessment].
+class PatientForAssessmentProvider
+    extends AutoDisposeNotifierProviderImpl<PatientForAssessment, VaxPatient> {
+  /// See also [PatientForAssessment].
+  PatientForAssessmentProvider(
+    this.parameters,
   ) : super.internal(
-          () => EvalImmunization()..id = id,
-          from: evalImmunizationProvider,
-          name: r'evalImmunizationProvider',
+          () => PatientForAssessment()..parameters = parameters,
+          from: patientForAssessmentProvider,
+          name: r'patientForAssessmentProvider',
           debugGetCreateSourceHash:
               const bool.fromEnvironment('dart.vm.product')
                   ? null
-                  : _$evalImmunizationHash,
-          dependencies: EvalImmunizationFamily._dependencies,
+                  : _$patientForAssessmentHash,
+          dependencies: PatientForAssessmentFamily._dependencies,
           allTransitiveDependencies:
-              EvalImmunizationFamily._allTransitiveDependencies,
+              PatientForAssessmentFamily._allTransitiveDependencies,
         );
 
-  final String id;
+  final Parameters parameters;
 
   @override
   bool operator ==(Object other) {
-    return other is EvalImmunizationProvider && other.id == id;
+    return other is PatientForAssessmentProvider &&
+        other.parameters == parameters;
   }
 
   @override
   int get hashCode {
     var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, id.hashCode);
+    hash = _SystemHash.combine(hash, parameters.hashCode);
 
     return _SystemHash.finish(hash);
   }
 
   @override
-  ImmEval runNotifierBuild(
-    covariant EvalImmunization notifier,
+  VaxPatient runNotifierBuild(
+    covariant PatientForAssessment notifier,
   ) {
     return notifier.build(
-      id,
+      parameters,
     );
   }
 }
