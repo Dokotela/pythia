@@ -1,4 +1,5 @@
 import 'package:fhir/r4.dart';
+import 'package:pythia/providers/eval_immunization.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../pythia.dart';
@@ -10,20 +11,11 @@ class Assessment extends _$Assessment {
   @override
   VaxPatient build() => VaxPatient(
         assessmentDate: VaxDate(1900, 01, 01),
+        immunizations: [],
         patient: Patient(),
         conditions: [],
-        immunizations: [],
         observations: [],
-        vaxes: Map.fromIterable(
-          antigenSupportingDataMap.keys,
-          key: (item) => item,
-          value: (item) => Vaxes(
-            immunizations: [],
-            immForEval: [],
-            substandard: [],
-            series: [],
-          ),
-        ),
+        allergies: [],
       );
 
   void fromParameters(Parameters parameters) {
@@ -41,8 +33,10 @@ class Assessment extends _$Assessment {
       state = patient;
 
       for (final disease in state.vaxes.keys) {
-        state.vaxes[disease]!.immForEval
-            .sort((a, b) => (a.dateGiven.compareTo(b.dateGiven)));
+        state.vaxes[disease]!.immForEval.sort((a, b) => (ref
+            .read(evalImmunizationProvider(a))
+            .dateGiven!
+            .compareTo(ref.read(evalImmunizationProvider(b)).dateGiven!)));
         relevantSeries(
           genderFromPatient(state.patient),
           state.vaxes[disease]!.series.toList(),
@@ -56,13 +50,13 @@ class Assessment extends _$Assessment {
   VaxPatient? patientFromParameters(Parameters parameters) {
     DateTime? assessmentDate;
     Patient? patient;
-    List<Condition> conditions = <Condition>[];
     List<Immunization> immunizations = <Immunization>[];
+    List<Condition> conditions = <Condition>[];
+    List<AllergyIntolerance> allergies = <AllergyIntolerance>[];
     Map<String, Vaxes> vaxes = Map.fromIterable(
       antigenSupportingData,
       key: (item) => item.targetDisease,
       value: (item) => Vaxes(
-        immunizations: [],
         immForEval: [],
         substandard: [],
         series: item.series,
@@ -79,38 +73,34 @@ class Assessment extends _$Assessment {
           patient = parameter.resource as Patient;
         } else if (parameter.resource is Condition) {
           conditions.add(parameter.resource as Condition);
+        } else if (parameter.resource is AllergyIntolerance) {
+          allergies.add(parameter.resource as AllergyIntolerance);
         } else if (parameter.resource is Immunization) {
-          final immunization = parameter.resource as Immunization;
+          final immunization = (parameter.resource as Immunization)
+              .newIdIfNoId() as Immunization;
           immunizations.add(immunization);
-
-          /// Find the cvx code for the individual vaccine
-          final cvx = cvxFromImmunization(immunization);
-          if (cvx == null) {
+          final immEval = ImmEval.fromImmunization(immunization);
+          ref
+              .read(evalImmunizationProvider(immEval.immunization.id!).notifier)
+              .fromImmEval(immEval);
+          if (immEval.cvx == null) {
             ref.read(operationOutcomesProvider.notifier).addError(
                 'There was no CVX code for immunization ${immunization.id}');
           } else {
-            final diseases = diseasesFromImmunization(cvx);
+            final diseases = diseasesFromImmunization(immEval.cvx!);
             if (diseases.isEmpty) {
               ref.read(operationOutcomesProvider.notifier).addError(
-                  'The CVX for immunization ${immunization.id} ($cvx) '
+                  'The CVX for immunization ${immunization.id} (${immEval.cvx}) '
                   'was not found in the Supporting Data');
             } else {
-              final substandard = isSubstandard(immunization);
-              VaxDate? dateGiven;
-              if (!substandard) {
-                dateGiven = VaxDate.fromDateTime(
-                    immunization.occurrenceDateTime!.value!);
-              }
               for (final disease in diseases) {
                 if (!vaxes.keys.contains(disease)) {
                   ref.read(operationOutcomesProvider.notifier).addError(
                       'The disease $disease is not included in the Supporting Data');
                 } else {
                   vaxes[disease]!.newImmunization(
-                    immunization,
-                    substandard,
-                    dateGiven!,
-                    cvx,
+                    immEval.immunization.id!,
+                    immEval.substandard,
                   );
                 }
               }
@@ -125,14 +115,20 @@ class Assessment extends _$Assessment {
       List<VaxObservation> observations =
           observationsFromConditions(conditions);
       return VaxPatient(
-          assessmentDate: assessmentDate == null
-              ? VaxDate.now()
-              : VaxDate.fromDateTime(assessmentDate),
-          patient: patient,
-          conditions: conditions,
-          immunizations: immunizations,
-          observations: observations,
-          vaxes: vaxes);
+        assessmentDate: assessmentDate == null
+            ? VaxDate.now()
+            : VaxDate.fromDateTime(assessmentDate),
+        patient: patient,
+        conditions: conditions,
+        immunizations: immunizations,
+        observations: observations,
+      );
     }
   }
+
+  // void evaluation() {
+  //   state.vaxes.forEach((key, value) {
+  //     value.series;
+  //   });
+  // }
 }
