@@ -51,14 +51,15 @@ class PatientForAssessment extends _$PatientForAssessment {
           final immunization =
               parameter.resource!.newIdIfNoId() as Immunization;
           immunizations.add(immunization);
-          pastDoses.add(VaxDose.fromImmunization(immunization));
+          pastDoses.add(VaxDose.fromImmunization(
+              immunization, birthdate ?? VaxDate(1900, 01, 01)));
         }
       }
     }
     if (patient == null) {
       ref
           .read(operationOutcomesProvider.notifier)
-          .addError('No Patient wsa found in the parameters');
+          .addError('No Patient was found in the parameters');
       return null;
     } else {
       List<VaxObservation> observations =

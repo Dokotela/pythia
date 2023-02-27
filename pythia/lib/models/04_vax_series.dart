@@ -52,8 +52,25 @@ class VaxSeries {
               evaluatedTargetDose[targetDose] = 'Skipped';
               targetDose++;
               break;
-            }else{
-              seriesDose.inadvertentVaccine
+            } else {
+              /// Next check if it's an inadvertent vaccine, which just means
+              /// check if one of the listed inadvertent vaccines has a CVX code
+              /// that matches the CVX code of the dose being evaluated
+              final inadvertentIndex = seriesDose.inadvertentVaccine
+                  ?.indexWhere((element) =>
+                      element.cvx != null &&
+                      int.tryParse(element.cvx!) != null &&
+                      int.parse(element.cvx!) == int.parse(dose.cvx));
+
+              /// If it is, we mark it as inadvertent, and remove it from the
+              /// list of doses to evaluate, and we'll then move onto the
+              /// next dose
+              if (inadvertentIndex != null && inadvertentIndex != -1) {
+                dose.evalStatus = 'Not Valid';
+                dose.evalReason = 'Inadvertent Administration';
+                evaluatedDoses.add(dose);
+                doses.remove(dose);
+              }
             }
           }
         }

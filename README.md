@@ -228,20 +228,40 @@ Also, a brief note on how FHIR handles this. It's very similar. With the [Immuni
 
 Can the dose be skipped? Not the most complicated logic, but some of the terms, as usual, I found unclear. But the idea behind this is that there are times when you can skip a dose. This may be part of catch-up dosing, or the patient may have aged out. There is also skip logic, at both the set level and the condition level. Sets are lists of conditions. For a list of Conditions, we may have "AND" logic or "OR" logic. This is about what you'd expect. "AND" means that all of the listed conditions have to be true for that Set to be true. "OR" means that if any of the conditions are true, that set is true. Likewise, while it rarely happens, you can have set logic, also "AND" or "OR" with similar specifications. Now, the types of conditions that can define a skip come in 5 choices, so let's look at all the options, shall we?
 
-#### Age
+**CONDITIONAL AGE**
+| Conditions | Rules ||
+|-----|:-----:|:-----:|
+| Is the Conditional Skip End Age Date > Conditional Skip Reference Date >= Conditional Skip Begin Age Date? | Yes | No |
+| Outcomes | Yes, the condition is met | No, the condition is not met |
 
 You should be given a start and end age for this one. I think what confused me about this one is that you need a reference date. Since you're evaluating each targetDose in a series, there's not exactly a reference date. So instead, what you do is take the next dose you're evaluating and use the date administered as the reference date. If that lets you skip, you can skip that targetDose and use THE SAME dose administered that you were just looking at to see if it satisfies the next targetDose.
 
 Still confused? Try this. Dragonpox is a 3-dose vaccine series. Johnny got a dragonpox vaccine when he was 3 years old. For the first dose in the series, there is an age skip condition, with a start age of 2 years and end age of 4 years. Since Johnny's first dose falls within this period, we can mark the 1st targetDose in the series as skipped. Then, using that same vaccine that Johnny got at 3 years old, we can see if that dose satisfies the 2nd targetDose in the series.
 
-#### Series Group
+**CONDITIONAL TYPE OF COMPLETED SERIES**
+| Conditions | Rules ||
+|-----       |:-----:|:-----:|
+| Does the Conditional Skip Series Group identify a Series Group with at least one series with a status of 'Complete'  | Yes | No |
+| Outcomes | Yes, the condition is met | No, the condition is not met |
 
 This condition should specify a Series Group. If there is a series in that series group that is complete, this condition has been met.
 
-#### Interval
+**CONDITIONAL TYPE OF INTERVAL**
+| Conditions | Rules |||
+|-----       |:-----:|:-----:|:----:|
+| Has at least one dose been adminstered to the patient?  | Yes | No | No |
+| Is the Conditional Skip Reference Date >= Conditional Skip Interval Date | Yes | No | - |
+| Outcomes | Yes, the condition is met | No, the condition is not met | No, the condition is not met |
 
 An interval is given. Does the dose that you're evaluating fall within the given interval compared to the last dose given? Note, this does not specify if the last dose needs to be valid or not, so I'm including them.
 
+**CONDITIONAL TYPE OF VACCINE COUNT BY AGE OR DATE**
+
+| Dose Count Logic | # Doses Given > "doseCount" | # Doses Given == "doseCount" | # Doses Given < "doseCount" |
+|-----       |:-----:|:-----:|:----:|
+| Greater Than | Yes, the condition is met | No, the condition is not met | No, the condition is not met |
+| Equal | No, the condition is not met | Yes, the condition is met | No, the condition is not met |
+| Less Than | No, the condition is not met | No, the condition is not met | Yes, the condition is met |
 #### Count by Age
 
 There's a list of CVX codes, a start and end age, a count, a specification of "greater than", "lower than", or "equal to", and a specification of "VALID" or "TOTAL". First, we must look back through the previous doses see if they are included in the list of CVX codes. If they are, we look to see if they have to be valid ("VALID") or we can count any past doses ("TOTAL"). If all of that's true, then we look to see if the dose was given before the end age, or after (or on) the start age. If the answer is yes, then we add that to our total count. Finally, once we have that tally, we check if that count is "greater than", "lower than", or "equal to" the count that is given. If the answer is again yes, then the condition is true.
@@ -259,3 +279,21 @@ administered.
 
 "How much wood could a woodchuck chuck, if a woodchuck could chuck wood?" anyone?
 
+### 6.3 Inadvertent Adminsitration
+
+There's a list of possible inadvertent vaccines for each seriesDose. If the dose you're evaluating is one of them, then it's marked as inadvertent and not valid, and we move onto the next dose that was given.
+
+### 6.4 Valid Age
+
+Probably makes the most sense. It's just calculated given date of birth, plus minimum and maximum ages. If the vaccine was given within that time period, it is valid under the age criteria.
+| Conditions | Rules ||||||
+|------------|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+| Date given < absolute minimum age date? | Yes | No | No | No | No | No | No |
+| Absolute minimum age date <= date given < minimum age date | No | Yes | Yes | Yes | No | No |
+|Minimum age date <= date given < maximum age date | No | No | No | No | Yes | No |
+| Date given >= maximum age date | No | No | No | No | No | Yes |
+|First target dose in series | - | No | No | Yes | - | - |
+| Evaluation of the previous dose 'not valid' due to age or interval recommendations? | - | Yes | No | - | - | - |
+| Outcomes ||||||
+| Age Validity | Invalid | Invalid | Valid | Valid | Valid | Invalid | 
+| Evaluation reason | 'too young' | 'too young' | 'grace period' | 'grace period' | 'valid age' | 'too old' |
