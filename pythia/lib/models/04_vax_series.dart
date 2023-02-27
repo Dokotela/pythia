@@ -30,12 +30,31 @@ class VaxSeries {
     if (doses.isNotEmpty) {
       /// For the evaluation we have to evaluate each dose in the series
       for (final seriesDose in series.seriesDose ?? <SeriesDose>[]) {
+        /// And for each dose in the series, we look at the doses that were
+        /// actually given to the patient to see if any of them are valid
         for (final dose in doses) {
+          /// If the evalStatus of the dose is not null, this should mean that
+          /// during the first step, checking if it was substandard for some
+          /// reason, we found that it was, and thus this dose cannot be
+          /// evaluated
           if (dose.evalStatus != null) {
             evaluatedDoses.add(dose);
             doses.remove(dose);
           } else {
+            /// First we check if this dose can be skipped
             final skip = canSkip(seriesDose, dose.dateGiven);
+
+            /// If it CAN be skipped, we record that targetDose as being
+            /// completed, increment the targetDose by 1, and break from this
+            /// for loop because we are no longer trying to satisfy that target
+            /// dose
+            if (skip) {
+              evaluatedTargetDose[targetDose] = 'Skipped';
+              targetDose++;
+              break;
+            }else{
+              seriesDose.inadvertentVaccine
+            }
           }
         }
       }
