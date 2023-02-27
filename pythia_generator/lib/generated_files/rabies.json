@@ -213,6 +213,7 @@
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -233,6 +234,7 @@
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -510,6 +512,7 @@
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -530,6 +533,7 @@
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -794,6 +798,7 @@
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -814,6 +819,7 @@
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",

@@ -143,6 +143,7 @@
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -152,7 +153,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
+                                            "interval": "5 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -169,6 +171,7 @@
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -178,7 +181,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months"
+                                            "interval": "5 months",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -727,6 +731,7 @@
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -736,7 +741,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
+                                            "interval": "5 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -753,6 +759,7 @@
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -762,7 +769,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months"
+                                            "interval": "5 months",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -1324,6 +1332,7 @@
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1333,7 +1342,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
+                                            "interval": "5 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -1350,6 +1360,7 @@
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -1359,7 +1370,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months"
+                                            "interval": "5 months",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -1554,6 +1566,7 @@
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1563,7 +1576,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
+                                            "interval": "5 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -1580,6 +1594,7 @@
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -1589,7 +1604,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months"
+                                            "interval": "5 months",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",

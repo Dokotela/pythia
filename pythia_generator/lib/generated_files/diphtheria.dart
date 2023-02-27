@@ -336,6 +336,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -344,7 +345,8 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -352,6 +354,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "2",
@@ -360,15 +363,11 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 6 or more total doses to date",
@@ -569,6 +568,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -577,7 +577,8 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -585,6 +586,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "2",
@@ -593,15 +595,11 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 6 or more total doses to date",
@@ -802,6 +800,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -810,7 +809,8 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -818,6 +818,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "2",
@@ -826,15 +827,11 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 6 or more total doses to date",
@@ -1027,6 +1024,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1035,7 +1033,8 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "4 years - 4 days"
+                                            "beginAge": "4 years - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -1043,6 +1042,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "2",
@@ -1051,15 +1051,11 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "4 years"
+                                            "beginAge": "4 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 6 or more total doses to date",
@@ -1248,6 +1244,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1256,7 +1253,8 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -1264,6 +1262,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "2",
@@ -1272,15 +1271,11 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 6 or more total doses to date",
@@ -1458,6 +1453,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1471,12 +1467,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCountLogic": "equal to"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if the patient has received 3 doses",
@@ -1489,12 +1480,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCountLogic": "equal to"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 4 doses with 1 pertussis- containing vaccine on or after 4 years",
@@ -1506,19 +1492,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCount": "4",
                                             "doseType": "Valid",
                                             "doseCountLogic": "equal to"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if the patient has received 4 doses with 1 pertussis- containing vaccine on or after 4 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -1529,12 +1503,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "01;20;22;50;102;106;107;110;115;120;130;132;146;170"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "4",
                                     "setDescription": "Dose is not required if the patient has received more than 4 doses",
@@ -1711,6 +1680,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1888,6 +1858,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2055,6 +2026,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2408,6 +2380,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2416,7 +2389,8 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -2424,6 +2398,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "2",
@@ -2432,15 +2407,11 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 6 or more total doses to date",
@@ -2633,6 +2604,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2641,7 +2613,8 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -2649,6 +2622,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "2",
@@ -2657,15 +2631,11 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 6 or more total doses to date",
@@ -2858,6 +2828,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2866,7 +2837,8 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -2874,6 +2846,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "2",
@@ -2882,15 +2855,11 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 6 or more total doses to date",
@@ -3083,6 +3052,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3091,7 +3061,8 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "4 years - 4 days"
+                                            "beginAge": "4 years - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -3099,6 +3070,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "2",
@@ -3107,15 +3079,11 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "4 years"
+                                            "beginAge": "4 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 6 or more total doses to date",
@@ -3304,6 +3272,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3312,7 +3281,8 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -3320,6 +3290,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "2",
@@ -3328,15 +3299,11 @@ final diphtheria = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 years"
+                                            "beginAge": "7 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 6 or more total doses to date",
@@ -3514,6 +3481,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3526,19 +3494,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCount": "1",
                                             "doseType": "Valid",
                                             "doseCountLogic": "equal to"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 dose and no doses prior to 12 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -3548,12 +3504,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCountLogic": "equal to"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if the patient has received 2 doses and no doses prior to 12 months",
@@ -3565,19 +3516,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCount": "2",
                                             "doseType": "Valid",
                                             "doseCountLogic": "equal to"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has received 2 doses and no doses prior to 12 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -3587,12 +3526,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCountLogic": "equal to"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has recevied 3 doses with 1 dose of Tdap on or after 7 years and no doses prior to 12 months",
@@ -3604,19 +3538,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCount": "3",
                                             "doseType": "Valid",
                                             "doseCountLogic": "equal to"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if the patient has recevied 3 doses with 1 dose of Tdap on or after 7 years and no doses prior to 12 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -3625,19 +3547,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "01;20;22;50;102;106;107;110;115;120;130;132;146;170"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if the patient has recevied 3 doses with 1 dose of Tdap on or after 7 years and no doses prior to 12 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "conditionType": "Vaccine Count by Age",
@@ -3647,12 +3557,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCountLogic": "equal to"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "4",
                                     "setDescription": "Dose is not required if the patient has received 4 doses with 1 pertussis- containing vaccine on or after 4 years and no doses prior to 12 months",
@@ -3664,19 +3569,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCount": "4",
                                             "doseType": "Valid",
                                             "doseCountLogic": "equal to"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "4",
-                                    "setDescription": "Dose is not required if the patient has received 4 doses with 1 pertussis- containing vaccine on or after 4 years and no doses prior to 12 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -3685,19 +3578,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "01;20;22;50;102;106;107;110;115;120;130;132;146;170"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "4",
-                                    "setDescription": "Dose is not required if the patient has received 4 doses with 1 pertussis- containing vaccine on or after 4 years and no doses prior to 12 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "conditionType": "Vaccine Count by Age",
@@ -3707,12 +3588,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCountLogic": "equal to"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "5",
                                     "setDescription": "Dose is not required if the patient has received more than 4 doses and no doses prior to 12 months",
@@ -3724,19 +3600,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                                             "doseCount": "4",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "5",
-                                    "setDescription": "Dose is not required if the patient has received more than 4 doses and no doses prior to 12 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -3910,6 +3774,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4087,6 +3952,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4254,6 +4120,7 @@ final diphtheria = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",

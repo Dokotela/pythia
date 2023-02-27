@@ -2049,6 +2049,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2406,6 +2407,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3806,6 +3808,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4280,6 +4283,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4877,6 +4881,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4885,6 +4890,7 @@ final hepb = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
                                         }
                                     ]
@@ -4923,6 +4929,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4931,6 +4938,7 @@ final hepb = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
                                         }
                                     ]
@@ -4975,6 +4983,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4983,6 +4992,7 @@ final hepb = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
                                         }
                                     ]
@@ -5173,6 +5183,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5181,6 +5192,7 @@ final hepb = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
                                         }
                                     ]
@@ -5287,6 +5299,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5295,6 +5308,7 @@ final hepb = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
                                         }
                                     ]
@@ -5401,6 +5415,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5409,15 +5424,11 @@ final hepb = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient has received 2 doses of Heplisav-B",
@@ -5540,6 +5551,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5548,15 +5560,11 @@ final hepb = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient has received exactly 2 doses of HepB AND both doses were Heplisav-B",
@@ -5569,19 +5577,7 @@ final hepb = AntigenSupportingData.fromJson({
                                             "doseType": "Valid",
                                             "doseCountLogic": "equal to",
                                             "vaccineTypes": "08; 42; 43; 44; 45; 51; 102; 104; 110; 132; 146; 189; 198; 220"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient has received 2 doses of Heplisav-B",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",

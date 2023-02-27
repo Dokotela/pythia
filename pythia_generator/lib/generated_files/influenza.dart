@@ -621,6 +621,7 @@ final influenza = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -629,7 +630,8 @@ final influenza = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "9 years"
+                                            "beginAge": "9 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -891,6 +893,7 @@ final influenza = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -907,12 +910,7 @@ final influenza = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if the patient has received 1 or more doses during the current season AND patient was 9 years or older when the first dose was received.",
@@ -927,19 +925,7 @@ final influenza = AntigenSupportingData.fromJson({
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses during the current season AND patient was 9 years or older when the first dose was received.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Age",
@@ -950,12 +936,7 @@ final influenza = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Dose is not required if the patient has received 1 or more doses during the current season AND patient has received 2 or more doses before July 1, 2022.",
@@ -970,19 +951,7 @@ final influenza = AntigenSupportingData.fromJson({
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses during the current season AND patient has received 2 or more doses before July 1, 2022.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Date",

@@ -438,6 +438,7 @@ final polio = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -446,15 +447,11 @@ final polio = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "4 years"
+                                            "beginAge": "4 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not required if the current dose was administered on or after 4 years - 4 days of age AND at least 6 months - 4 days from the previous dose.",
@@ -463,24 +460,14 @@ final polio = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "4 years - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not required if the current dose was administered on or after 4 years - 4 days of age AND at least 6 months - 4 days from the previous dose.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                            "beginAge": "4 years - 4 days",
+                                            "doseCountLogic": "n/a"
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Interval",
-                                            "interval": "6 months - 4 days"
+                                            "interval": "6 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -488,6 +475,7 @@ final polio = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "3",
@@ -496,7 +484,8 @@ final polio = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "4 years"
+                                            "beginAge": "4 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -1018,6 +1007,7 @@ final polio = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1026,15 +1016,11 @@ final polio = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "4 years"
+                                            "beginAge": "4 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not required if the current dose was administered on or after 4 years - 4 days of age AND at least 6 months - 4 days from the previous dose.",
@@ -1043,24 +1029,14 @@ final polio = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "4 years - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not required if the current dose was administered on or after 4 years - 4 days of age AND at least 6 months - 4 days from the previous dose.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                            "beginAge": "4 years - 4 days",
+                                            "doseCountLogic": "n/a"
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Interval",
-                                            "interval": "6 months - 4 days"
+                                            "interval": "6 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -1068,6 +1044,7 @@ final polio = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "3",
@@ -1076,7 +1053,8 @@ final polio = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "4 years"
+                                            "beginAge": "4 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -1453,6 +1431,7 @@ final polio = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1461,6 +1440,7 @@ final polio = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
                                         }
                                     ]
@@ -1561,6 +1541,7 @@ final polio = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1569,6 +1550,7 @@ final polio = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
                                         }
                                     ]
@@ -1668,7 +1650,8 @@ final polio = AntigenSupportingData.fromJson({
                     ],
                     "conditionalSkip": [
                         {
-                            "context": "Both"
+                            "context": "Both",
+                            "setLogic": "n/a"
                         }
                     ],
                     "recurringDose": "No"

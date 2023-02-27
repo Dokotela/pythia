@@ -341,6 +341,7 @@ final rubella = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -349,7 +350,8 @@ final rubella = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "19 years - 4 days"
+                                            "beginAge": "19 years - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }

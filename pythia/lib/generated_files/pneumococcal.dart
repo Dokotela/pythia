@@ -203,6 +203,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -211,7 +212,8 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "24 months - 4 days"
+                                            "beginAge": "24 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -219,6 +221,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -227,7 +230,8 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "24 months"
+                                            "beginAge": "24 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -313,6 +317,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -321,15 +326,11 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "12 months"
+                                            "beginAge": "12 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not required if the current dose was administered on or after 12 months - 4 days of age AND at least 8 weeks - 4 days from the previous dose",
@@ -338,24 +339,14 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "12 months - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not required if the current dose was administered on or after 12 months - 4 days of age AND at least 8 weeks - 4 days from the previous dose",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                            "beginAge": "12 months - 4 days",
+                                            "doseCountLogic": "n/a"
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Interval",
-                                            "interval": "8 weeks - 4 days"
+                                            "interval": "8 weeks - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -363,6 +354,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "3",
@@ -371,7 +363,8 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "12 months"
+                                            "beginAge": "12 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -509,6 +502,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -692,6 +686,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -700,7 +695,8 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 months - 4 days"
+                                            "beginAge": "7 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -914,6 +910,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1145,6 +1142,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1303,6 +1301,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1467,6 +1466,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1476,20 +1476,9 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
@@ -1499,19 +1488,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Total",
                                             "doseCountLogic": "equal to",
                                             "vaccineTypes": "133; 215"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "conditionType": "Vaccine Count By Age",
@@ -1523,12 +1500,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "133; 215"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
@@ -1537,20 +1509,9 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
@@ -1609,6 +1570,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1618,20 +1580,9 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
@@ -1641,19 +1592,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Total",
                                             "doseCountLogic": "equal to",
                                             "vaccineTypes": "133; 215"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "conditionType": "Vaccine Count By Age",
@@ -1665,12 +1604,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "133; 215"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
@@ -1679,20 +1613,9 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
@@ -1739,6 +1662,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1967,6 +1891,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1976,20 +1901,9 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
@@ -1999,19 +1913,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Total",
                                             "doseCountLogic": "equal to",
                                             "vaccineTypes": "133; 215"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "conditionType": "Vaccine Count By Age",
@@ -2023,12 +1925,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "133; 215"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
@@ -2037,20 +1934,9 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
@@ -2109,6 +1995,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2118,20 +2005,9 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
@@ -2141,19 +2017,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Total",
                                             "doseCountLogic": "equal to",
                                             "vaccineTypes": "133; 215"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "conditionType": "Vaccine Count By Age",
@@ -2165,12 +2029,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "133; 215"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
@@ -2179,20 +2038,9 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Completed Series",
+                                            "doseCountLogic": "n/a",
                                             "seriesGroups": "1"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
@@ -2239,6 +2087,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2289,6 +2138,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2604,6 +2454,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2674,6 +2525,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2685,6 +2537,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "216"
                                         }
                                     ]
@@ -2749,6 +2602,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2760,15 +2614,11 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -2779,6 +2629,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "215; 216"
                                         }
                                     ]
@@ -2900,6 +2751,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2976,6 +2828,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2991,12 +2844,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -3202,6 +3050,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3278,6 +3127,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3293,12 +3143,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -3550,6 +3395,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3620,6 +3466,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3682,6 +3529,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3697,12 +3545,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -3778,6 +3621,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3793,12 +3637,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -4086,6 +3925,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4155,6 +3995,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4170,12 +4011,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -4251,6 +4087,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4266,12 +4103,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -4543,6 +4375,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4612,6 +4445,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4627,12 +4461,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -4708,6 +4537,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4723,12 +4553,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -5044,6 +4869,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5120,6 +4946,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5135,12 +4962,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -5440,6 +5262,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5516,6 +5339,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5531,12 +5355,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -5687,6 +5506,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5763,6 +5583,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5778,12 +5599,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",
@@ -5961,6 +5777,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5976,12 +5793,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "33"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 18 years",

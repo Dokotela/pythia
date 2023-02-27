@@ -583,6 +583,7 @@ final meningococcalB = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -591,7 +592,8 @@ final meningococcalB = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "6 months"
+                                            "interval": "6 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }

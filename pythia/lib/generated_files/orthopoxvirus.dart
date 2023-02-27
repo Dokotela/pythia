@@ -316,6 +316,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -327,6 +328,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                                             "beginAge": "0 days",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "75; 105"
                                         }
                                     ]
@@ -529,6 +531,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -540,6 +543,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                                             "beginAge": "0 days",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "75; 105"
                                         }
                                     ]
@@ -735,6 +739,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -746,6 +751,7 @@ final orthopoxvirus = AntigenSupportingData.fromJson({
                                             "beginAge": "0 days",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "75; 105"
                                         }
                                     ]

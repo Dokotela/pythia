@@ -314,6 +314,7 @@
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -325,6 +326,7 @@
                                             "beginAge": "0 days",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "75; 105"
                                         }
                                     ]
@@ -527,6 +529,7 @@
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -538,6 +541,7 @@
                                             "beginAge": "0 days",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "75; 105"
                                         }
                                     ]
@@ -733,6 +737,7 @@
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -744,6 +749,7 @@
                                             "beginAge": "0 days",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "75; 105"
                                         }
                                     ]

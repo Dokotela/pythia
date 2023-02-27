@@ -215,6 +215,7 @@ final rabies = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -235,6 +236,7 @@ final rabies = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -512,6 +514,7 @@ final rabies = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -532,6 +535,7 @@ final rabies = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -796,6 +800,7 @@ final rabies = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -816,6 +821,7 @@ final rabies = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",

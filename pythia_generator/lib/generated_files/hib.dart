@@ -364,6 +364,7 @@ final hib = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -372,7 +373,8 @@ final hib = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "15 months - 4 days"
+                                            "beginAge": "15 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -380,6 +382,7 @@ final hib = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -388,7 +391,8 @@ final hib = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "15 months"
+                                            "beginAge": "15 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -532,6 +536,7 @@ final hib = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -540,15 +545,11 @@ final hib = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "12 months"
+                                            "beginAge": "12 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not required if the current dose was administered on or after 12 months - 4 days of age AND the previous dose was administered at least 8 weeks - 4 day from the current dose.",
@@ -557,24 +558,14 @@ final hib = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "12 months - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not required if the current dose was administered on or after 12 months - 4 days of age AND the previous dose was administered at least 8 weeks - 4 day from the current dose.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                            "beginAge": "12 months - 4 days",
+                                            "doseCountLogic": "n/a"
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Interval",
-                                            "interval": "8 weeks - 4 days"
+                                            "interval": "8 weeks - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -582,6 +573,7 @@ final hib = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "3",
@@ -590,7 +582,8 @@ final hib = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "12 months"
+                                            "beginAge": "12 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -992,6 +985,7 @@ final hib = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1000,15 +994,11 @@ final hib = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "15 months"
+                                            "beginAge": "15 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not required if the current dose was administered on or after 15 months - 4 days of age AND the previous dose was administered at least 8 weeks - 4 day from the current dose.",
@@ -1017,24 +1007,14 @@ final hib = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "15 months - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not required if the current dose was administered on or after 15 months - 4 days of age AND the previous dose was administered at least 8 weeks - 4 day from the current dose.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                            "beginAge": "15 months - 4 days",
+                                            "doseCountLogic": "n/a"
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Interval",
-                                            "interval": "8 weeks - 4 days"
+                                            "interval": "8 weeks - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -1042,6 +1022,7 @@ final hib = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "3",
@@ -1050,7 +1031,8 @@ final hib = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "15 months"
+                                            "beginAge": "15 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -1964,6 +1946,7 @@ final hib = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2095,6 +2078,7 @@ final hib = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2110,12 +2094,7 @@ final hib = AntigenSupportingData.fromJson({
                                             "doseCountLogic": "greater than"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required if the patient has received 2 or more doses on or after the age of 12 months",

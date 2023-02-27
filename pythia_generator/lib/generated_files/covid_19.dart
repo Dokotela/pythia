@@ -439,6 +439,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -450,6 +451,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "beginAge": "0 days",
                                             "doseCount": "1",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "208; 217; 218; 300; 301"
                                         }
                                     ]
@@ -638,6 +640,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -646,7 +649,8 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -811,6 +815,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -819,15 +824,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -839,32 +840,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -876,25 +862,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -1363,6 +1339,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1374,6 +1351,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 229; 300; 519; 520"
                                         }
                                     ]
@@ -1506,6 +1484,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1517,6 +1496,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 229; 300; 519; 520"
                                         }
                                     ]
@@ -1916,6 +1896,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1924,7 +1905,8 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "6 months"
+                                            "endAge": "6 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -2107,6 +2089,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2115,15 +2098,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "6 months"
+                                            "endAge": "6 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -2135,32 +2114,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -2172,33 +2136,18 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "4",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
@@ -2210,25 +2159,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44903",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "4",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "6 months",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -2403,6 +2342,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2411,15 +2351,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "6 months"
+                                            "endAge": "6 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -2431,32 +2367,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -2468,33 +2389,18 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "4",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
@@ -2506,25 +2412,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44903",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "4",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "6 months",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -2861,6 +2757,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -2872,6 +2769,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 229; 300; 519; 520"
                                         }
                                     ]
@@ -2997,6 +2895,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3008,6 +2907,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 229; 300; 519; 520"
                                         }
                                     ]
@@ -3749,6 +3649,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3760,15 +3661,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "beginAge": "0 days",
                                             "doseCount": "1",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 221; 227; 228"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if the patient has received a complete 2-dose Pfizer series",
@@ -3779,15 +3676,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "beginAge": "0 days",
                                             "doseCount": "1",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "208; 217; 218; 300; 301"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if the patient began vaccination at 5 years or older",
@@ -3798,6 +3691,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "beginAge": "5 years",
                                             "doseCount": "1",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 219; 221; 227; 228; 300; 301; 302"
                                         }
                                     ]
@@ -3986,6 +3880,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -3995,7 +3890,8 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -4003,6 +3899,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 211; 213; 221; 227; 228"
                                         },
                                         {
@@ -4011,6 +3908,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "208; 211; 213; 217; 218; 219; 300; 301; 302"
                                         }
                                     ]
@@ -4184,6 +4082,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4193,55 +4092,29 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 211; 213; 221; 227; 228"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "208; 211; 213; 217; 218; 219; 300; 301; 302"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -4253,32 +4126,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -4290,33 +4148,18 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "4",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
@@ -4328,25 +4171,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44903",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "4",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "6 months",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -4511,6 +4344,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4520,55 +4354,29 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 211; 213; 221; 227; 228"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "208; 211; 213; 217; 218; 219; 300; 301; 302"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -4580,32 +4388,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -4617,33 +4410,18 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "4",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
@@ -4655,25 +4433,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44903",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "4",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "6 months",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -4889,6 +4657,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -4900,6 +4669,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "beginAge": "0 days",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "506"
                                         }
                                     ]
@@ -5086,6 +4856,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5094,7 +4865,8 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -5264,6 +5036,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5272,15 +5045,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -5292,32 +5061,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -5329,25 +5083,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -5510,6 +5254,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5518,15 +5263,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -5538,32 +5279,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -5575,25 +5301,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -5909,6 +5625,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -5917,7 +5634,8 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -6087,6 +5805,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -6095,15 +5814,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -6115,32 +5830,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -6152,25 +5852,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -6333,6 +6023,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -6341,15 +6032,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -6361,32 +6048,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -6398,25 +6070,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -7069,6 +6731,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -7077,7 +6740,8 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -7249,6 +6913,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -7257,15 +6922,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -7277,32 +6938,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -7314,25 +6960,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -7496,6 +7132,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -7504,15 +7141,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -7524,32 +7157,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -7561,25 +7179,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -8178,6 +7786,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -8186,7 +7795,8 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "6 months"
+                                            "endAge": "6 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -8369,6 +7979,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -8377,15 +7988,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "6 months"
+                                            "endAge": "6 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -8397,32 +8004,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -8434,33 +8026,18 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "4",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
@@ -8472,25 +8049,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44903",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "4",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "6 months",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -8665,6 +8232,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -8673,15 +8241,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "6 months"
+                                            "endAge": "6 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -8693,32 +8257,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -8730,33 +8279,18 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "4",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
@@ -8768,25 +8302,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44903",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "4",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "6 months",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -9340,6 +8864,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -9351,6 +8876,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 229; 300; 519; 520"
                                         }
                                     ]
@@ -9483,6 +9009,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -9494,6 +9021,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 229; 300; 519; 520"
                                         }
                                     ]
@@ -10669,6 +10197,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -10678,7 +10207,8 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -10686,6 +10216,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 211; 213; 221; 227; 228"
                                         },
                                         {
@@ -10694,6 +10225,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "208; 211; 213; 217; 218; 219; 300; 301; 302"
                                         }
                                     ]
@@ -10867,6 +10399,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -10876,55 +10409,29 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 211; 213; 221; 227; 228"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "208; 211; 213; 217; 218; 219; 300; 301; 302"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -10936,32 +10443,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -10973,33 +10465,18 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "4",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
@@ -11011,25 +10488,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44903",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "4",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "6 months",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -11194,6 +10661,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -11203,55 +10671,29 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 211; 213; 221; 227; 228"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not needed for anyone under 5 years of age who received a mixed product series.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "3",
                                             "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "208; 211; 213; 217; 218; 219; 300; 301; 302"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -11263,32 +10705,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -11300,33 +10727,18 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "4",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
@@ -11338,25 +10750,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44903",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 230; 300; 301; 302; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "4",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 12/08/2022 AND the patient is between the ages of 6 months and 5 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "6 months",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -11673,6 +11075,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -11684,6 +11087,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "beginAge": "0 days",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "506"
                                         }
                                     ]
@@ -11998,6 +11402,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -12006,7 +11411,8 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -12177,6 +11583,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -12185,15 +11592,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -12205,32 +11608,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -12242,25 +11630,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -12423,6 +11801,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -12431,15 +11810,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -12451,32 +11826,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -12488,25 +11848,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -13050,6 +12400,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -13058,7 +12409,8 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -13228,6 +12580,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -13236,15 +12589,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -13256,32 +12605,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -13293,25 +12627,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -13474,6 +12798,7 @@ final covid19 = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Forecast",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -13482,15 +12807,11 @@ final covid19 = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "endAge": "5 years"
+                                            "endAge": "5 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
@@ -13502,32 +12823,17 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44806",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not needed if a booster on or after 09/02/2022 AND the patient is 12 years of age or older",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
-                                            "beginAge": "12 years"
+                                            "beginAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
+                                },
                                 {
                                     "setID": "3",
                                     "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
@@ -13539,25 +12845,15 @@ final covid19 = AntigenSupportingData.fromJson({
                                             "startDate": "44846",
                                             "doseCount": "0",
                                             "doseType": "Valid",
+                                            "doseCountLogic": "Greater Than",
                                             "vaccineTypes": "207; 208; 211; 212; 213; 217; 218; 221; 227; 228; 229; 300; 301; 519; 520"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Target Dose is not needed if a booster was administered on or after 10/12/2022 AND the patient is between the ages of 5 years and 12 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
+                                        },
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Age",
                                             "beginAge": "5 years",
-                                            "endAge": "12 years"
+                                            "endAge": "12 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }

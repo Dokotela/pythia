@@ -175,6 +175,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -183,7 +184,8 @@ final meningococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "16 years - 4 days"
+                                            "beginAge": "16 years - 4 days",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -191,6 +193,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -199,7 +202,8 @@ final meningococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "16 years"
+                                            "beginAge": "16 years",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -376,6 +380,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -385,7 +390,8 @@ final meningococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 months"
+                                            "beginAge": "7 months",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -468,6 +474,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -476,7 +483,8 @@ final meningococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 months"
+                                            "beginAge": "7 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -548,6 +556,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -556,7 +565,8 @@ final meningococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "7 months"
+                                            "beginAge": "7 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -628,6 +638,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -780,6 +791,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -946,6 +958,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -954,7 +967,8 @@ final meningococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "19 months"
+                                            "beginAge": "19 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -989,6 +1003,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1004,12 +1019,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                                             "doseCountLogic": "equal to"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required for those 19 months or older",
@@ -1017,7 +1027,8 @@ final meningococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "19 months"
+                                            "beginAge": "19 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -1052,6 +1063,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1067,12 +1079,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                                             "doseCountLogic": "equal to"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "set": [
+                                },
                                 {
                                     "setID": "2",
                                     "setDescription": "Dose is not required for those 19 months or older",
@@ -1080,7 +1087,8 @@ final meningococcal = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Age",
-                                            "beginAge": "19 months"
+                                            "beginAge": "19 months",
+                                            "doseCountLogic": "n/a"
                                         }
                                     ]
                                 }
@@ -1147,6 +1155,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1446,6 +1455,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1711,6 +1721,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Both",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",

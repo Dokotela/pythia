@@ -225,8 +225,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
           conditionalSkip: [
             ConditionalSkip(
               context: skipContextStringToEnum[row[1]!.toString().trim()],
-              setLogic: stringToEnum(SetLogic, row[2]!.toString().trim())
-                  as SetLogic?,
+              setLogic: row[2]!.toString().trim(),
               set_: index == -1
                   ? null
                   : [
@@ -271,8 +270,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
               ...seriesDose.conditionalSkip!,
             ConditionalSkip(
               context: skipContextStringToEnum[row[1]!.toString().trim()],
-              setLogic: stringToEnum(SetLogic, row[2]!.toString().trim())
-                  as SetLogic?,
+              setLogic: row[2]!.toString().trim(),
               set_: index == -1
                   ? null
                   : [

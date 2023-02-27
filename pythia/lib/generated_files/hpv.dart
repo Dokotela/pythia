@@ -145,6 +145,7 @@ final hpv = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -154,7 +155,8 @@ final hpv = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
+                                            "interval": "5 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -171,6 +173,7 @@ final hpv = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -180,7 +183,8 @@ final hpv = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months"
+                                            "interval": "5 months",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -729,6 +733,7 @@ final hpv = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -738,7 +743,8 @@ final hpv = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
+                                            "interval": "5 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -755,6 +761,7 @@ final hpv = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -764,7 +771,8 @@ final hpv = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months"
+                                            "interval": "5 months",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -1326,6 +1334,7 @@ final hpv = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1335,7 +1344,8 @@ final hpv = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
+                                            "interval": "5 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -1352,6 +1362,7 @@ final hpv = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -1361,7 +1372,8 @@ final hpv = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months"
+                                            "interval": "5 months",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -1556,6 +1568,7 @@ final hpv = AntigenSupportingData.fromJson({
                     "conditionalSkip": [
                         {
                             "context": "Evaluation",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "1",
@@ -1565,7 +1578,8 @@ final hpv = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
+                                            "interval": "5 months - 4 days",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
@@ -1582,6 +1596,7 @@ final hpv = AntigenSupportingData.fromJson({
                         },
                         {
                             "context": "Forecast",
+                            "setLogic": "n/a",
                             "set": [
                                 {
                                     "setID": "2",
@@ -1591,7 +1606,8 @@ final hpv = AntigenSupportingData.fromJson({
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Interval",
-                                            "interval": "5 months"
+                                            "interval": "5 months",
+                                            "doseCountLogic": "n/a"
                                         },
                                         {
                                             "conditionID": "2",
