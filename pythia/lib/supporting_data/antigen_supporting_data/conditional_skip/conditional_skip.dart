@@ -10,7 +10,7 @@ class ConditionalSkip with _$ConditionalSkip {
   ConditionalSkip._();
   factory ConditionalSkip({
     SkipContext? context,
-    SetLogic? setLogic,
+    String? setLogic,
     @JsonKey(name: 'set') List<VaxSet>? set_,
   }) = _ConditionalSkip;
 

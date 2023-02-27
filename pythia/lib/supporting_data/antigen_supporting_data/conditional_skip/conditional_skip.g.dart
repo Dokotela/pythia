@@ -9,7 +9,7 @@ part of 'conditional_skip.dart';
 _$_ConditionalSkip _$$_ConditionalSkipFromJson(Map<String, dynamic> json) =>
     _$_ConditionalSkip(
       context: $enumDecodeNullable(_$SkipContextEnumMap, json['context']),
-      setLogic: $enumDecodeNullable(_$SetLogicEnumMap, json['setLogic']),
+      setLogic: json['setLogic'] as String?,
       set_: (json['set'] as List<dynamic>?)
           ?.map((e) => VaxSet.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -25,7 +25,7 @@ Map<String, dynamic> _$$_ConditionalSkipToJson(_$_ConditionalSkip instance) {
   }
 
   writeNotNull('context', _$SkipContextEnumMap[instance.context]);
-  writeNotNull('setLogic', _$SetLogicEnumMap[instance.setLogic]);
+  writeNotNull('setLogic', instance.setLogic);
   writeNotNull('set', instance.set_?.map((e) => e.toJson()).toList());
   return val;
 }
@@ -34,9 +34,4 @@ const _$SkipContextEnumMap = {
   SkipContext.evaluation: 'Evaluation',
   SkipContext.forecast: 'Forecast',
   SkipContext.both: 'Both',
-};
-
-const _$SetLogicEnumMap = {
-  SetLogic.and: 'AND',
-  SetLogic.or: 'OR',
 };

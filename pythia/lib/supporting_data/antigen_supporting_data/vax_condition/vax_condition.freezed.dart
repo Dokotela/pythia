@@ -29,7 +29,7 @@ mixin _$VaxCondition {
   String? get interval => throw _privateConstructorUsedError;
   String? get doseCount => throw _privateConstructorUsedError;
   DoseType? get doseType => throw _privateConstructorUsedError;
-  DoseCountLogic? get doseCountLogic => throw _privateConstructorUsedError;
+  String? get doseCountLogic => throw _privateConstructorUsedError;
   String? get vaccineTypes => throw _privateConstructorUsedError;
   String? get seriesGroups => throw _privateConstructorUsedError;
 
@@ -55,7 +55,7 @@ abstract class $VaxConditionCopyWith<$Res> {
       String? interval,
       String? doseCount,
       DoseType? doseType,
-      DoseCountLogic? doseCountLogic,
+      String? doseCountLogic,
       String? vaccineTypes,
       String? seriesGroups});
 }
@@ -126,7 +126,7 @@ class _$VaxConditionCopyWithImpl<$Res, $Val extends VaxCondition>
       doseCountLogic: freezed == doseCountLogic
           ? _value.doseCountLogic
           : doseCountLogic // ignore: cast_nullable_to_non_nullable
-              as DoseCountLogic?,
+              as String?,
       vaccineTypes: freezed == vaccineTypes
           ? _value.vaccineTypes
           : vaccineTypes // ignore: cast_nullable_to_non_nullable
@@ -157,7 +157,7 @@ abstract class _$$_VaxConditionCopyWith<$Res>
       String? interval,
       String? doseCount,
       DoseType? doseType,
-      DoseCountLogic? doseCountLogic,
+      String? doseCountLogic,
       String? vaccineTypes,
       String? seriesGroups});
 }
@@ -226,7 +226,7 @@ class __$$_VaxConditionCopyWithImpl<$Res>
       doseCountLogic: freezed == doseCountLogic
           ? _value.doseCountLogic
           : doseCountLogic // ignore: cast_nullable_to_non_nullable
-              as DoseCountLogic?,
+              as String?,
       vaccineTypes: freezed == vaccineTypes
           ? _value.vaccineTypes
           : vaccineTypes // ignore: cast_nullable_to_non_nullable
@@ -279,7 +279,7 @@ class _$_VaxCondition extends _VaxCondition {
   @override
   final DoseType? doseType;
   @override
-  final DoseCountLogic? doseCountLogic;
+  final String? doseCountLogic;
   @override
   final String? vaccineTypes;
   @override
@@ -361,7 +361,7 @@ abstract class _VaxCondition extends VaxCondition {
       final String? interval,
       final String? doseCount,
       final DoseType? doseType,
-      final DoseCountLogic? doseCountLogic,
+      final String? doseCountLogic,
       final String? vaccineTypes,
       final String? seriesGroups}) = _$_VaxCondition;
   _VaxCondition._() : super._();
@@ -388,7 +388,7 @@ abstract class _VaxCondition extends VaxCondition {
   @override
   DoseType? get doseType;
   @override
-  DoseCountLogic? get doseCountLogic;
+  String? get doseCountLogic;
   @override
   String? get vaccineTypes;
   @override

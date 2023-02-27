@@ -389,6 +389,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                                         },
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "2 months",
                                             "endAge": "7 months",
                                             "doseCount": "0",
@@ -635,6 +636,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "2 months",
                                             "endAge": "7 months",
                                             "doseCount": "2",
@@ -643,6 +645,7 @@ final meningococcal = AntigenSupportingData.fromJson({
                                         },
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "7 months",
                                             "doseCount": "0",
                                             "doseType": "Valid",

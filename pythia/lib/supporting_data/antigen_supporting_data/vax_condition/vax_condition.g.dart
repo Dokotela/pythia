@@ -17,8 +17,7 @@ _$_VaxCondition _$$_VaxConditionFromJson(Map<String, dynamic> json) =>
       interval: json['interval'] as String?,
       doseCount: json['doseCount'] as String?,
       doseType: $enumDecodeNullable(_$DoseTypeEnumMap, json['doseType']),
-      doseCountLogic:
-          $enumDecodeNullable(_$DoseCountLogicEnumMap, json['doseCountLogic']),
+      doseCountLogic: json['doseCountLogic'] as String?,
       vaccineTypes: json['vaccineTypes'] as String?,
       seriesGroups: json['seriesGroups'] as String?,
     );
@@ -41,8 +40,7 @@ Map<String, dynamic> _$$_VaxConditionToJson(_$_VaxCondition instance) {
   writeNotNull('interval', instance.interval);
   writeNotNull('doseCount', instance.doseCount);
   writeNotNull('doseType', _$DoseTypeEnumMap[instance.doseType]);
-  writeNotNull(
-      'doseCountLogic', _$DoseCountLogicEnumMap[instance.doseCountLogic]);
+  writeNotNull('doseCountLogic', instance.doseCountLogic);
   writeNotNull('vaccineTypes', instance.vaccineTypes);
   writeNotNull('seriesGroups', instance.seriesGroups);
   return val;
@@ -52,10 +50,4 @@ const _$DoseTypeEnumMap = {
   DoseType.total: 'Total',
   DoseType.valid: 'Valid',
   DoseType.none: '',
-};
-
-const _$DoseCountLogicEnumMap = {
-  DoseCountLogic.none: '',
-  DoseCountLogic.greaterThan: 'greater than',
-  DoseCountLogic.equalTo: 'equal to',
 };

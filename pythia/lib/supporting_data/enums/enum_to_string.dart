@@ -8,9 +8,6 @@ String? enumToString(Enum? value) {
     case Binary:
       return binaryEnumToString[value];
 
-    case DoseCountLogic:
-      return doseCountLogicEnumToString[value];
-
     case DoseNumber:
       return doseNumberEnumToString[value];
 

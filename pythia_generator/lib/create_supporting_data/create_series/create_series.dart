@@ -70,7 +70,7 @@ Series createSeries(String? seriesString) {
             defaultSeries: binaryStringToEnum[valueToString(row[1]!)],
             productPath: binaryStringToEnum[valueToString(row[2]!)],
             seriesGroupName: valueToString(row[3]!),
-            seriesGroup: row[4]!,
+            seriesGroup: row[4]!.toString(),
             seriesPriority: seriesPriorityStringToEnum[valueToString(row[5]!)],
             seriesPreference:
                 seriesPreferenceStringToEnum[valueToString(row[6]!)],

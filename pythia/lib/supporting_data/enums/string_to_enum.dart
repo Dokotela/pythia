@@ -5,9 +5,6 @@ Enum? stringToEnum<T>(Type enumType, String value) {
     case Binary:
       return binaryStringToEnum[value];
 
-    case DoseCountLogic:
-      return doseCountLogicStringToEnum[value];
-
     case DoseNumber:
       return doseNumberStringToEnum[value];
 

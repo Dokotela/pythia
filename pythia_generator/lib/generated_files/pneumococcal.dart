@@ -1492,6 +1492,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "6 weeks - 4 days",
                                             "endAge": "12 months - 4 days",
                                             "doseCount": "0",
@@ -1513,6 +1514,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "12 months - 4 days",
                                             "endAge": "24 months",
                                             "doseCount": "1",
@@ -1551,6 +1553,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "6 weeks - 4 days",
                                             "endAge": "24 months",
                                             "doseCount": "2",
@@ -1631,6 +1634,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "6 weeks - 4 days",
                                             "endAge": "12 months - 4 days",
                                             "doseCount": "0",
@@ -1652,6 +1656,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "12 months - 4 days",
                                             "endAge": "24 months",
                                             "doseCount": "1",
@@ -1690,6 +1695,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "6 weeks - 4 days",
                                             "endAge": "24 months",
                                             "doseCount": "2",
@@ -1986,6 +1992,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "6 weeks - 4 days",
                                             "endAge": "12 months - 4 days",
                                             "doseCount": "0",
@@ -2007,6 +2014,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "12 months - 4 days",
                                             "endAge": "24 months",
                                             "doseCount": "1",
@@ -2045,6 +2053,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "6 weeks - 4 days",
                                             "endAge": "24 months",
                                             "doseCount": "2",
@@ -2125,6 +2134,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "6 weeks - 4 days",
                                             "endAge": "12 months - 4 days",
                                             "doseCount": "0",
@@ -2146,6 +2156,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "12 months - 4 days",
                                             "endAge": "24 months",
                                             "doseCount": "1",
@@ -2184,6 +2195,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "6 weeks - 4 days",
                                             "endAge": "24 months",
                                             "doseCount": "2",
@@ -2669,6 +2681,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -2743,6 +2756,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -2761,6 +2775,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -2968,6 +2983,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -2987,6 +3003,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -3268,6 +3285,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -3287,6 +3305,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -3608,6 +3627,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -3669,6 +3689,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -3688,6 +3709,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -3763,6 +3785,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -3782,6 +3805,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -4138,6 +4162,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -4157,6 +4182,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -4232,6 +4258,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -4251,6 +4278,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -4591,6 +4619,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -4610,6 +4639,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -4685,6 +4715,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -4704,6 +4735,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -5095,6 +5127,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -5114,6 +5147,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -5489,6 +5523,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -5508,6 +5543,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -5658,6 +5694,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -5733,6 +5770,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -5752,6 +5790,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -5929,6 +5968,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "65 years",
                                             "doseCount": "0",
                                             "doseType": "Total",
@@ -5948,6 +5988,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "18 years - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",

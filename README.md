@@ -37,6 +37,8 @@ All I've done is take all of their hard work, guidance and expertise and make it
 - Because I can never find it, this is the workgroup around [Immunization Decision Support](http://hl7.org/fhir/us/immds/)
 - Again all data and logic used in this forecaster is from the CDC, their manual can be found [here](https://www.cdc.gov/vaccines/programs/iis/interop-proj/downloads/logic-spec-acip-rec-4.3.pdf)
 - While the logic is well thought-out and complete, it's complicated, and I found it difficult to decipher at times. Therefore, I've decided to go through the whole thing step by step and explain how I've interpreted it, in the hopes that maybe someday it will help someone else (although it's most likely just going to help me)
+- I may keep some notes up here for me (or whomever)
+- You will often see in the code that I parse CVX codes into ints, this is to allow comparisons, because sometimes CVX codes are represented by 2 or 3 digits, and sometimes have leading zeroes, this just saves me from having to deal with that
 
 ## 3 Logical Specification Concepts
 
@@ -221,3 +223,39 @@ Table 6-1 Evaluate Process Steps
 This one is pretty easy. Was the vaccine expired before it was given? Is the vaccine subpotent for some reason? If the answer is yes to either of these, the dose can't be evaluated. Of note, we actually do this slightly earlier when we're first sorting the vaccines. When we're first assigning the vaccine doses given to the individual antigens, we bucket them at that point as either subpar or available for evaluation. This just saves us the trouble of looking at them as we evaluate each series, and we only look at the valid ones.
 
 Also, a brief note on how FHIR handles this. It's very similar. With the [Immunization resource] there is a field where it notes the ```expirationDate``` of the vaccine, which can be compared to the ```occurrence[x]``` which is the date the vaccine was given. There is also a boolean field, ```isSubpotent``` that indicates whether or not it is. There is also a list of CodeableConcepts in a field ```subpotentReason``` that can list why. The CDC manual lists examples such as sub-potent and recall, FHIR uses an [Immunization Subpotent Reason ValueSet](https://build.fhir.org/valueset-immunization-subpotent-reason.html) that contains partialdose, coldchainbreak, recall, adversestorage, and expired.
+
+### 6.2 Evaluate Skip Condition
+
+Can the dose be skipped? Not the most complicated logic, but some of the terms, as usual, I found unclear. But the idea behind this is that there are times when you can skip a dose. This may be part of catch-up dosing, or the patient may have aged out. There is also skip logic, at both the set level and the condition level. Sets are lists of conditions. For a list of Conditions, we may have "AND" logic or "OR" logic. This is about what you'd expect. "AND" means that all of the listed conditions have to be true for that Set to be true. "OR" means that if any of the conditions are true, that set is true. Likewise, while it rarely happens, you can have set logic, also "AND" or "OR" with similar specifications. Now, the types of conditions that can define a skip come in 5 choices, so let's look at all the options, shall we?
+
+#### Age
+
+You should be given a start and end age for this one. I think what confused me about this one is that you need a reference date. Since you're evaluating each targetDose in a series, there's not exactly a reference date. So instead, what you do is take the next dose you're evaluating and use the date administered as the reference date. If that lets you skip, you can skip that targetDose and use THE SAME dose administered that you were just looking at to see if it satisfies the next targetDose.
+
+Still confused? Try this. Dragonpox is a 3-dose vaccine series. Johnny got a dragonpox vaccine when he was 3 years old. For the first dose in the series, there is an age skip condition, with a start age of 2 years and end age of 4 years. Since Johnny's first dose falls within this period, we can mark the 1st targetDose in the series as skipped. Then, using that same vaccine that Johnny got at 3 years old, we can see if that dose satisfies the 2nd targetDose in the series.
+
+#### Series Group
+
+This condition should specify a Series Group. If there is a series in that series group that is complete, this condition has been met.
+
+#### Interval
+
+An interval is given. Does the dose that you're evaluating fall within the given interval compared to the last dose given? Note, this does not specify if the last dose needs to be valid or not, so I'm including them.
+
+#### Count by Age
+
+There's a list of CVX codes, a start and end age, a count, a specification of "greater than", "lower than", or "equal to", and a specification of "VALID" or "TOTAL". First, we must look back through the previous doses see if they are included in the list of CVX codes. If they are, we look to see if they have to be valid ("VALID") or we can count any past doses ("TOTAL"). If all of that's true, then we look to see if the dose was given before the end age, or after (or on) the start age. If the answer is yes, then we add that to our total count. Finally, once we have that tally, we check if that count is "greater than", "lower than", or "equal to" the count that is given. If the answer is again yes, then the condition is true.
+
+#### Count by Date
+
+Exactly the same as above, except that instead of specifying ages, it specifies dates. Otherwise, the
+logic is the same.
+
+#### Consistency in terms
+
+This is one of my favorite things about the manual. While trying to maintain exact consistency in terminology, they have ended up with sentences such as:
+The Date Administered of the vaccine dose administered when evaluating a vaccine dose
+administered.
+
+"How much wood could a woodchuck chuck, if a woodchuck could chuck wood?" anyone?
+

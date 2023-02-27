@@ -446,6 +446,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "0 days",
                                             "doseCount": "1",
                                             "doseType": "Valid",
@@ -3755,6 +3756,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "0 days",
                                             "doseCount": "1",
                                             "doseType": "Valid",
@@ -3773,6 +3775,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "0 days",
                                             "doseCount": "1",
                                             "doseType": "Valid",
@@ -3791,6 +3794,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "5 years",
                                             "doseCount": "1",
                                             "doseType": "Valid",
@@ -3995,6 +3999,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                         },
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -4002,6 +4007,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                         },
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -4203,6 +4209,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -4222,6 +4229,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -4528,6 +4536,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -4547,6 +4556,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -10672,6 +10682,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                         },
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -10679,6 +10690,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                         },
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -10880,6 +10892,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -10899,6 +10912,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -11205,6 +11219,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -11224,6 +11239,7 @@ final covid19 = AntigenSupportingData.fromJson({
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",

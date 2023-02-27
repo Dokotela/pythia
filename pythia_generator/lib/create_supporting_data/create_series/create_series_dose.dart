@@ -248,8 +248,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                             doseCount: valueToString(row[15]!),
                             doseType:
                                 _valueToEnum(row[16]!, doseTypeStringToEnum),
-                            doseCountLogic: _valueToEnum(
-                                row[17]!, doseCountLogicStringToEnum),
+                            doseCountLogic: row[17]!,
                             vaccineTypes: valueToString(row[18]!),
                             seriesGroups: valueToString(row[19]!),
                           ),
@@ -295,8 +294,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                             doseCount: valueToString(row[15]!),
                             doseType:
                                 _valueToEnum(row[16]!, doseTypeStringToEnum),
-                            doseCountLogic: _valueToEnum(
-                                row[17]!, doseCountLogicStringToEnum),
+                            doseCountLogic: row[17]!,
                             vaccineTypes: valueToString(row[18]!),
                             seriesGroups: valueToString(row[19]!),
                           ),
@@ -334,8 +332,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                       interval: valueToString(row[14]!),
                       doseCount: valueToString(row[15]!),
                       doseType: _valueToEnum(row[16]!, doseTypeStringToEnum),
-                      doseCountLogic:
-                          _valueToEnum(row[17]!, doseCountLogicStringToEnum),
+                      doseCountLogic: row[17]!,
                       vaccineTypes: valueToString(row[18]!),
                       seriesGroups: valueToString(row[19]!),
                     ),
@@ -375,8 +372,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                       interval: valueToString(row[14]!),
                       doseCount: valueToString(row[15]!),
                       doseType: _valueToEnum(row[16]!, doseTypeStringToEnum),
-                      doseCountLogic:
-                          _valueToEnum(row[17]!, doseCountLogicStringToEnum),
+                      doseCountLogic: row[17]!,
                       vaccineTypes: valueToString(row[18]!),
                       seriesGroups: valueToString(row[19]!),
                     ),

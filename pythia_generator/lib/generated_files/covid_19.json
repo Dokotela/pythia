@@ -444,6 +444,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "0 days",
                                             "doseCount": "1",
                                             "doseType": "Valid",
@@ -3753,6 +3754,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "0 days",
                                             "doseCount": "1",
                                             "doseType": "Valid",
@@ -3771,6 +3773,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "0 days",
                                             "doseCount": "1",
                                             "doseType": "Valid",
@@ -3789,6 +3792,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "1",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "5 years",
                                             "doseCount": "1",
                                             "doseType": "Valid",
@@ -3993,6 +3997,7 @@
                                         },
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -4000,6 +4005,7 @@
                                         },
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -4201,6 +4207,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -4220,6 +4227,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -4526,6 +4534,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -4545,6 +4554,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -10670,6 +10680,7 @@
                                         },
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -10677,6 +10688,7 @@
                                         },
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -10878,6 +10890,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -10897,6 +10910,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -11203,6 +11217,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",
@@ -11222,6 +11237,7 @@
                                     "condition": [
                                         {
                                             "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
                                             "endAge": "5 years",
                                             "doseCount": "0",
                                             "doseType": "Valid",

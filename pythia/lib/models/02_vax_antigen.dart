@@ -4,7 +4,6 @@ class VaxAntigen {
   VaxAntigen._({
     required this.targetDisease,
     required this.vaccineGroupName,
-    required this.pastDoses,
     required this.groups,
   });
 
@@ -37,23 +36,13 @@ class VaxAntigen {
       targetDisease: series.first.targetDisease!,
       vaccineGroupName:
           series.first.vaccineGroup ?? series.first.targetDisease!,
-      pastDoses: [],
       groups: groups,
     );
   }
 
   void newDose(VaxDose dose) {
-    /// For each dose appropriate for this antigen, we add it to the complete
-    /// list of doses
-    pastDoses.add(dose);
-
-    /// If the evalStatus is null (meaning it has a CVX code, an administered
-    /// date, is not expired, and is not subpotent, we had it to the list of
-    /// vaccines that we should evaluate)
-    if (dose.evalStatus == null) {
-      for (final key in groups.keys) {
-        groups[key]!.newDose(dose);
-      }
+    for (final key in groups.keys) {
+      groups[key]!.newDose(dose);
     }
   }
 
@@ -65,6 +54,5 @@ class VaxAntigen {
 
   String targetDisease;
   String vaccineGroupName;
-  List<VaxDose> pastDoses;
   Map<String, VaxGroup> groups;
 }

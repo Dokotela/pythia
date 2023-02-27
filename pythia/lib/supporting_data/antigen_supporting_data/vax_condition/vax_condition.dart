@@ -18,7 +18,7 @@ class VaxCondition with _$VaxCondition {
     String? interval,
     String? doseCount,
     DoseType? doseType,
-    DoseCountLogic? doseCountLogic,
+    String? doseCountLogic,
     String? vaccineTypes,
     String? seriesGroups,
   }) = _VaxCondition;

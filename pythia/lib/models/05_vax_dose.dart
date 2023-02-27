@@ -73,4 +73,5 @@ class VaxDose {
   List<String> antigens;
   String? evalStatus;
   String? evalReason;
+  int targetDoseSatisfied = -1;
 }
