@@ -503,7 +503,7 @@ final polio = AntigenSupportingData.fromJson({
                             "earliestRecAge": "4 years",
                             "latestRecAge": "7 years + 4 weeks",
                             "maxAge": "18 years",
-                            "cessationDate": "40031"
+                            "cessationDate": "2009-08-06"
                         },
                         {
                             "absMinAge": "4 years - 4 days",
@@ -511,7 +511,7 @@ final polio = AntigenSupportingData.fromJson({
                             "earliestRecAge": "4 years",
                             "latestRecAge": "7 years + 4 weeks",
                             "maxAge": "18 years",
-                            "effectiveDate": "40032"
+                            "effectiveDate": "2009-08-07"
                         }
                     ],
                     "interval": [
@@ -521,7 +521,7 @@ final polio = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "3 years",
                             "latestRecInt": "6 years + 4 weeks",
-                            "cessationDate": "40031"
+                            "cessationDate": "2009-08-06"
                         },
                         {
                             "fromPrevious": "Y",
@@ -529,7 +529,7 @@ final polio = AntigenSupportingData.fromJson({
                             "minInt": "6 months",
                             "earliestRecInt": "3 years",
                             "latestRecInt": "6 years + 4 weeks",
-                            "effectiveDate": "40032"
+                            "effectiveDate": "2009-08-07"
                         }
                     ],
                     "preferableVaccine": [

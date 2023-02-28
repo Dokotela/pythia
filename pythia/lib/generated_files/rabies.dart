@@ -220,7 +220,7 @@ final rabies = AntigenSupportingData.fromJson({
                                 {
                                     "setID": "1",
                                     "setDescription": "Target dose can be skipped if 1 or more previous doses have been adminisetered on or after May 6, 2022",
-                                    "effectiveDate": "44687",
+                                    "effectiveDate": "2022-05-06",
                                     "condition": [
                                         {
                                             "conditionID": "1",
@@ -241,7 +241,7 @@ final rabies = AntigenSupportingData.fromJson({
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose can be skipped on or after May 6, 2022",
-                                    "effectiveDate": "44687",
+                                    "effectiveDate": "2022-05-06",
                                     "condition": [
                                         {
                                             "conditionID": "1",
@@ -519,7 +519,7 @@ final rabies = AntigenSupportingData.fromJson({
                                 {
                                     "setID": "1",
                                     "setDescription": "Target dose can be skipped if 1 or more previous doses have been adminisetered on or after May 6, 2022",
-                                    "effectiveDate": "44687",
+                                    "effectiveDate": "2022-05-06",
                                     "condition": [
                                         {
                                             "conditionID": "1",
@@ -540,7 +540,7 @@ final rabies = AntigenSupportingData.fromJson({
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose can be skipped on or after May 6, 2022",
-                                    "effectiveDate": "44687",
+                                    "effectiveDate": "2022-05-06",
                                     "condition": [
                                         {
                                             "conditionID": "1",
@@ -805,7 +805,7 @@ final rabies = AntigenSupportingData.fromJson({
                                 {
                                     "setID": "1",
                                     "setDescription": "Target dose can be skipped if 1 or more previous doses have been adminisetered on or after May 6, 2022",
-                                    "effectiveDate": "44687",
+                                    "effectiveDate": "2022-05-06",
                                     "condition": [
                                         {
                                             "conditionID": "1",
@@ -826,7 +826,7 @@ final rabies = AntigenSupportingData.fromJson({
                                 {
                                     "setID": "2",
                                     "setDescription": "Target Dose can be skipped on or after May 6, 2022",
-                                    "effectiveDate": "44687",
+                                    "effectiveDate": "2022-05-06",
                                     "condition": [
                                         {
                                             "conditionID": "1",

@@ -295,5 +295,21 @@ Probably makes the most sense. It's just calculated given date of birth, plus mi
 |First target dose in series | - | No | No | Yes | - | - |
 | Evaluation of the previous dose 'not valid' due to age or interval recommendations? | - | Yes | No | - | - | - |
 | Outcomes ||||||
-| Age Validity | Invalid | Invalid | Valid | Valid | Valid | Invalid | 
+| Age Validity | Invalid | Invalid | Valid | Valid | Valid | Invalid |
 | Evaluation reason | 'too young' | 'too young' | 'grace period' | 'grace period' | 'valid age' | 'too old' |
+
+### 6.5 Evalute Preferable Interval
+
+Intervals also make sense, they're just more complicated. Currently I only perform logic for previous vaccine doses, not observations. There are certain conditions (such as pregnancy) that effect when to give certain vaccines. And the vaccines are supposed to be given a certain time period after the condition.
+| Conditions | Rules |||||
+|------------|:---------:|:---------:|:---------:|:---------:|:---------:|
+| Date Given < absolute minimum interval date* | Yes | No | No | No | No |
+| Absolute minimum interval date <= <br> date given < minimum interval date | No | Yes | Yes | Yes | No |
+| Minimum Interval date <= date given | - | No | No | Yes | - |
+| Evaluation of the previous dose 'not valid' due to age or interval recommendations? | - | Yes | No | - | - |
+| Interval Validity | Invalid | Invalid | Valid | Valid | Valid |
+| Evaluation reason | 'too soon' | 'too soon' | 'grace period' | 'grace period' | 'preferable interval'
+
+*As long as this requirement is met, the dose has an allowable interval, even if it is not a preferable interval.
+
+This is certainly more complicated logic. If the interval for that dose is null, then the interval is valid. If it is the first in the series it is also valid. Otherwise, it loops through the list of intervals, and first checks to see if the interval listed is from the previous dose or another dose, then checks the interval compared to that dose. Allowable and preferable intervals are closely intertwined, so the logic for both is encapsulated in the same function.

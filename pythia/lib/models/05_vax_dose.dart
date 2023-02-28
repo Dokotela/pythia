@@ -10,9 +10,10 @@ class VaxDose {
     required this.cvx,
     this.mvx,
     required this.antigens,
+    required this.dob,
+    this.targetDisease,
     this.evalStatus,
     this.evalReason,
-    required this.dob,
   });
 
   factory VaxDose.fromImmunization(
@@ -49,13 +50,13 @@ class VaxDose {
       mvx: mvxFromImmunization(immunization),
       antigens: antigensFromCvx(cvx),
       evalStatus: dateGiven == null
-          ? 'Not Valid'
+          ? EvalStatus.not_valid
           : cvx == null
-              ? 'Not Valid'
+              ? EvalStatus.not_valid
               : expired
-                  ? 'Sub-standard'
+                  ? EvalStatus.sub_standard
                   : immunization.isSubpotent?.value ?? false
-                      ? 'Sub-standard'
+                      ? EvalStatus.sub_standard
                       : null,
       evalReason: dateGiven == null
           ? 'No Date Given'
@@ -70,79 +71,169 @@ class VaxDose {
     );
   }
 
+  bool notInadvertent(SeriesDose seriesDose) {
+    /// Next check if it's an inadvertent vaccine, which just means
+    /// check if one of the listed inadvertent vaccines has a CVX code
+    /// that matches the CVX code of the dose being evaluated
+    final inadvertentIndex = seriesDose.inadvertentVaccine?.indexWhere(
+        (element) =>
+            element.cvx != null &&
+            int.tryParse(element.cvx!) != null &&
+            int.parse(element.cvx!) == int.parse(cvx));
+
+    /// If it is, we mark it as inadvertent, and remove it from the
+    /// list of doses to evaluate, and we'll then move onto the
+    /// next dose
+    if (inadvertentIndex != null && inadvertentIndex != -1) {
+      inadvertent = true;
+      evalStatus = EvalStatus.not_valid;
+      evalReason = 'Inadvertent Administration';
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   bool validByAge(
-    String? maximumAge,
-    String? minimumAge,
-    String? absoluteMinimumAge,
+    List<VaxAge>? vaxAge,
     VaxDose? previousDose,
     int targetDose,
   ) {
-    final absoluteMinimumAgeDate = absoluteMinimumAge == null
-        ? VaxDate(1900, 01, 01)
-        : dob.change(absoluteMinimumAge);
-
-    /// If the date administered is less than the absolute minimum age, this
-    /// dose is not valid, it was given too young
-    if (dateGiven < absoluteMinimumAgeDate) {
-      evalStatus = 'Not Valid';
-      evalReason = 'Too Young';
-      return false;
+    if (vaxAge == null || vaxAge.isEmpty) {
+      validAge = true;
+      return true;
     } else {
-      final minimumAgeDate =
-          minimumAge == null ? VaxDate(1900, 01, 01) : dob.change(minimumAge);
-
-      /// If the dose was given between the absolute minimum age and the
-      /// minimum age, we have to check if it's the first dose, or if the
-      /// previous dose is invalid due to age or interval conditions
-      if (dateGiven < minimumAgeDate) {
-        /// If it's the first targetDose, then it's valid
-        // TODO(Dokotela) - they say first targetDose, but I think they mean
-        // if any doses have been given previously
-        if (targetDose == 0 || previousDose == null) {
-          evalReason = 'Grace Period';
-          return true;
-        }
-
-        /// If the previous dose in invalid due to age or interval concerns,
-        /// and given less than a year before the current dose
-        else if (previousDose.evalStatus == 'Not Valid' &&
-            (previousDose.evalReason == 'Too Old' ||
-                previousDose.evalReason == 'Too Young' ||
-                previousDose.evalReason == 'Too Soon') &&
-            previousDose.dateGiven.change('1 year') > dateGiven) {
-          evalStatus = 'Not Valid';
-          evalReason = 'Too Young';
-          return false;
-        } else {
-          evalReason = 'Grace Period';
-          return true;
-        }
+      final ageIndex = vaxAge.length == 1
+          ? 0
+          : vaxAge.indexWhere((element) =>
+              VaxDate.fromString(element.effectiveDate ?? '1900-01-01') <=
+                  dateGiven &&
+              VaxDate.fromString(element.cessationDate ?? '2999-12-31') >=
+                  dateGiven);
+      if (ageIndex == -1) {
+        throw 'More than 1 age restriction, but no appropriate effective or '
+            'cessation dates found';
       } else {
-        final maximumAgeDate =
-            maximumAge == null ? VaxDate(2999, 12, 31) : dob.change(maximumAge);
-        if (dateGiven < maximumAgeDate) {
-          evalReason = 'Grace Period';
-          return true;
-        } else {
-          evalStatus = 'Not Valid';
-          evalReason = 'Too Old';
+        final age = vaxAge[ageIndex];
+        final absoluteMinimumAgeDate = age.absMinAge == null
+            ? VaxDate(1900, 01, 01)
+            : dob.change(age.absMinAge!);
+
+        /// If the date administered is less than the absolute minimum age, this
+        /// dose is not valid, it was given too young
+        if (dateGiven < absoluteMinimumAgeDate) {
+          validAge = false;
+          validAgeReason = 'Too Young';
+          evalStatus = EvalStatus.not_valid;
           return false;
+        } else {
+          final minimumAgeDate = age.minAge == null
+              ? VaxDate(1900, 01, 01)
+              : dob.change(age.minAge!);
+
+          /// If the dose was given between the absolute minimum age and the
+          /// minimum age, we have to check if it's the first dose, or if the
+          /// previous dose is invalid due to age or interval conditions
+          if (dateGiven < minimumAgeDate) {
+            /// If it's the first targetDose, then it's valid
+            // TODO(Dokotela) - they say first targetDose, but I think they mean
+            // if any doses have been given previously
+            if (targetDose == 0 || previousDose == null) {
+              validAge = true;
+              validAgeReason = 'Grace Period';
+              return true;
+            }
+
+            /// If the previous dose is invalid due to age or interval concerns,
+            /// and given less than a year before the current dose
+            else if (!(previousDose.evalStatus == EvalStatus.not_valid) &&
+                (!(previousDose.validAge ?? false) ||
+                    !(previousDose.allowedInterval ?? false)) &&
+                previousDose.dateGiven.change('1 year') > dateGiven) {
+              validAge = false;
+              validAgeReason = 'Too Young';
+              evalStatus = EvalStatus.not_valid;
+              return false;
+            } else {
+              validAgeReason = 'Grace Period';
+              return true;
+            }
+          } else {
+            final maximumAgeDate = age.maxAge == null
+                ? VaxDate(2999, 12, 31)
+                : dob.change(age.maxAge!);
+            if (dateGiven < maximumAgeDate) {
+              validAge = true;
+              validAgeReason = 'Grace Period';
+              return true;
+            } else {
+              validAge = false;
+              validAgeReason = 'Too Old';
+              evalStatus = EvalStatus.not_valid;
+              return false;
+            }
+          }
         }
       }
     }
   }
 
-// Maximum Age Date12/31/2999
-// Calculated date (CALCDTAGE-4)Minimum Age Date01/01/1900
+  bool isPreferableInterval(
+    List<Interval>? intervals,
+    List<VaxDose> doses,
+    int targetDose,
+  ) {
+    /// Like age, if there are no intervals, then the preferred interval is true
+    if (intervals == null || intervals.isEmpty) {
+      preferredInterval = true;
+      return true;
+    } else {
+      /// Otherwise, we have to evaluate each interval in the list
+      for (final interval in intervals) {
+        VaxDate referenceDate;
 
-  String doseId;
-  String? volume;
-  VaxDate dateGiven;
-  String cvx;
-  String? mvx;
-  List<String> antigens;
-  String? evalStatus;
-  String? evalReason;
-  int targetDoseSatisfied = -1;
+        /// If, we are supposed to get it from the most recent, AND the previous
+        /// dose given was "Valid" or "Not Valid" (NOT "Substandard") AND the
+        /// previous dose was not inadvertent, then we use the previous dose's
+        /// dateGiven as the reference date.
+        if ((interval.fromMostRecent?.toLowerCase().contains('y') ?? false) &&
+            index != null &&
+            index != 0 &&
+            doses[index! - 1].evalStatus != null &&
+            doses[index! - 1].evalStatus != EvalStatus.sub_standard &&
+            !doses[index! - 1].inadvertent) {
+          referenceDate = doses[index! - 1].dateGiven;
+        } else {
+          
+        }
+      }
+    }
+    return true;
+  }
+
+  final String doseId;
+  final String? volume;
+  final VaxDate dateGiven;
+  final String cvx;
+  final String? mvx;
+  final List<String> antigens;
   final VaxDate dob;
+  String? targetDisease;
+  int targetDoseSatisfied = -1;
+  int? index;
+  bool inadvertent = false;
+  bool? validAge;
+  String? validAgeReason;
+  bool? preferredInterval;
+  String? preferredIntervalReason;
+  bool? allowedInterval;
+  String? allowedIntervalReason;
+  bool? conflict;
+  String? conflictReason;
+  bool? preferredVaccine;
+  String? preferredVaccineReason;
+  bool? allowedVaccine;
+  String? allowedVaccineReason;
+  EvalStatus? evalStatus;
+  String? evalReason;
 }

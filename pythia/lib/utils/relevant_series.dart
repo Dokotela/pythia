@@ -2,11 +2,12 @@ import '../pythia.dart';
 
 List<Series> relevantSeries(
   Gender gender,
-  List<Series> series,
+  List<Series> oldSeries,
   List<VaxObservation> patientObservations,
   VaxDate dob,
   VaxDate assessmentDate,
 ) {
+  final series = oldSeries.toList();
   series.retainWhere((element) =>
       element.requiredGender == null ||
       element.requiredGender!.isEmpty ||

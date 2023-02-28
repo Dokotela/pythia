@@ -101,14 +101,14 @@ final meningococcalB = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "cessationDate": "42873"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "effectiveDate": "42874"
+                            "effectiveDate": "2017-05-19"
                         }
                     ],
                     "preferableVaccine": [
@@ -352,14 +352,14 @@ final meningococcalB = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "cessationDate": "42873"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "effectiveDate": "42874"
+                            "effectiveDate": "2017-05-19"
                         }
                     ],
                     "preferableVaccine": [
@@ -551,7 +551,7 @@ final meningococcalB = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "8 weeks",
-                            "cessationDate": "42873"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
@@ -559,7 +559,7 @@ final meningococcalB = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "8 weeks",
-                            "effectiveDate": "42874"
+                            "effectiveDate": "2017-05-19"
                         }
                     ],
                     "preferableVaccine": [
@@ -610,14 +610,14 @@ final meningococcalB = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "42873"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 months - 4 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "effectiveDate": "42874"
+                            "effectiveDate": "2017-05-19"
                         },
                         {
                             "fromPrevious": "N",

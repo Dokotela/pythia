@@ -259,7 +259,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "21 days",
                             "earliestRecInt": "21 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
@@ -267,7 +267,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "21 days",
                             "earliestRecInt": "21 days",
                             "latestRecInt": "8 weeks",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -483,22 +483,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -995,7 +995,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "21 days",
                             "earliestRecInt": "21 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
@@ -1003,7 +1003,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "21 days",
                             "earliestRecInt": "21 days",
                             "latestRecInt": "8 weeks",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -1078,22 +1078,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -1223,14 +1223,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -1634,7 +1634,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
@@ -1642,7 +1642,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "8 weeks",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -1729,22 +1729,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -1937,14 +1937,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -2511,14 +2511,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44731"
+                            "effectiveDate": "2022-06-19"
                         }
                     ],
                     "preferableVaccine": [
@@ -2641,14 +2641,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -2990,7 +2990,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "3 weeks",
                             "earliestRecInt": "3 weeks",
-                            "cessationDate": "44761"
+                            "cessationDate": "2022-07-19"
                         },
                         {
                             "fromPrevious": "Y",
@@ -2998,7 +2998,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "3 weeks",
                             "earliestRecInt": "3 weeks",
                             "latestRecInt": "8 weeks",
-                            "effectiveDate": "44762"
+                            "effectiveDate": "2022-07-20"
                         }
                     ],
                     "preferableVaccine": [
@@ -3370,7 +3370,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
@@ -3378,7 +3378,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "8 weeks",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -3723,22 +3723,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -3940,14 +3940,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -4701,22 +4701,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -4896,14 +4896,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -5470,22 +5470,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -5665,14 +5665,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -6337,14 +6337,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "21 days",
                             "earliestRecInt": "21 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "21 days - 4 days",
                             "minInt": "21 days",
                             "earliestRecInt": "21 days",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -6460,14 +6460,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "28 days - 4 days",
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -6574,22 +6574,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -6771,14 +6771,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -7430,14 +7430,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "28 days - 4 days",
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -7525,14 +7525,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "28 days - 4 days",
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -7619,22 +7619,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "12 weeks",
                             "earliestRecInt": "12 weeks",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "12 weeks",
                             "earliestRecInt": "12 weeks",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -7827,14 +7827,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -8509,14 +8509,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "28 days - 4 days",
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -8618,14 +8618,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44731"
+                            "effectiveDate": "2022-06-19"
                         }
                     ],
                     "preferableVaccine": [
@@ -8748,14 +8748,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -9204,14 +9204,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "3 weeks",
                             "earliestRecInt": "3 weeks",
-                            "cessationDate": "44761"
+                            "cessationDate": "2022-07-19"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "3 weeks - 4 days",
                             "minInt": "3 weeks",
                             "earliestRecInt": "3 weeks",
-                            "effectiveDate": "44762"
+                            "effectiveDate": "2022-07-20"
                         }
                     ],
                     "preferableVaccine": [
@@ -9689,14 +9689,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "28 days - 4 days",
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -9876,14 +9876,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "28 days - 4 days",
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -10040,22 +10040,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "12 weeks",
                             "earliestRecInt": "12 weeks",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "12 weeks",
                             "earliestRecInt": "12 weeks",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -10257,14 +10257,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -11119,14 +11119,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "28 days - 4 days",
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -11247,22 +11247,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "12 weeks",
                             "earliestRecInt": "12 weeks",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "12 weeks",
                             "earliestRecInt": "12 weeks",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -11443,14 +11443,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "44805"
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -12117,14 +12117,14 @@ final covid19 = AntigenSupportingData.fromJson({
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
                             "latestRecInt": "42 days",
-                            "cessationDate": "44493"
+                            "cessationDate": "2021-10-24"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "28 days - 4 days",
                             "minInt": "28 days",
                             "earliestRecInt": "28 days",
-                            "effectiveDate": "44494"
+                            "effectiveDate": "2021-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -12245,22 +12245,22 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "12 weeks",
                             "earliestRecInt": "12 weeks",
-                            "cessationDate": "44730"
+                            "cessationDate": "2022-06-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "12 weeks - 4 days",
                             "minInt": "12 weeks",
                             "earliestRecInt": "12 weeks",
-                            "effectiveDate": "44731",
-                            "cessationDate": "44805"
+                            "effectiveDate": "2022-06-19",
+                            "cessationDate": "2022-09-01"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [
@@ -12447,7 +12447,7 @@ final covid19 = AntigenSupportingData.fromJson({
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
-                            "effectiveDate": "44806"
+                            "effectiveDate": "2022-09-02"
                         }
                     ],
                     "preferableVaccine": [

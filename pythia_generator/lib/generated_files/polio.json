@@ -501,7 +501,7 @@
                             "earliestRecAge": "4 years",
                             "latestRecAge": "7 years + 4 weeks",
                             "maxAge": "18 years",
-                            "cessationDate": "40031"
+                            "cessationDate": "2009-08-06"
                         },
                         {
                             "absMinAge": "4 years - 4 days",
@@ -509,7 +509,7 @@
                             "earliestRecAge": "4 years",
                             "latestRecAge": "7 years + 4 weeks",
                             "maxAge": "18 years",
-                            "effectiveDate": "40032"
+                            "effectiveDate": "2009-08-07"
                         }
                     ],
                     "interval": [
@@ -519,7 +519,7 @@
                             "minInt": "4 weeks",
                             "earliestRecInt": "3 years",
                             "latestRecInt": "6 years + 4 weeks",
-                            "cessationDate": "40031"
+                            "cessationDate": "2009-08-06"
                         },
                         {
                             "fromPrevious": "Y",
@@ -527,7 +527,7 @@
                             "minInt": "6 months",
                             "earliestRecInt": "3 years",
                             "latestRecInt": "6 years + 4 weeks",
-                            "effectiveDate": "40032"
+                            "effectiveDate": "2009-08-07"
                         }
                     ],
                     "preferableVaccine": [

@@ -27,5 +27,6 @@ Bundle forecastFromParameters(Parameters parameters) {
   agMap.forEach((k, v) => v.groups.forEach((key, value) => container
       .read(seriesGroupCompleteProvider.notifier)
       .newSeriesGroup(k, key)));
+  agMap.forEach((k, v) => v.evaluate());
   return Bundle();
 }

@@ -24,6 +24,7 @@ Map<String, VaxAntigen> antigenMap(
   for (final dose in doses) {
     for (final ag in dose.antigens) {
       if (agMap.keys.contains(ag)) {
+        dose.targetDisease = ag;
         agMap[ag]!.newDose(dose);
       }
     }

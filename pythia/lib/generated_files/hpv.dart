@@ -288,7 +288,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "earliestRecAge": "11 years",
                             "latestRecAge": "13 years + 4 weeks",
                             "maxAge": "27 years",
-                            "cessationDate": "42719"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "absMinAge": "15 years",
@@ -296,7 +296,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "earliestRecAge": "15 years",
                             "latestRecAge": "15 years",
                             "maxAge": "27 years",
-                            "effectiveDate": "42720"
+                            "effectiveDate": "2016-12-16"
                         }
                     ],
                     "preferableVaccine": [
@@ -388,7 +388,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "42719"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "fromPrevious": "N",
@@ -397,7 +397,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "42720"
+                            "effectiveDate": "2016-12-16"
                         },
                         {
                             "fromPrevious": "Y",
@@ -563,7 +563,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "42719"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "fromPrevious": "N",
@@ -572,7 +572,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "42720"
+                            "effectiveDate": "2016-12-16"
                         },
                         {
                             "fromPrevious": "Y",
@@ -875,7 +875,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "earliestRecAge": "11 years",
                             "latestRecAge": "13 years + 4 weeks",
                             "maxAge": "27 years",
-                            "cessationDate": "42719"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "absMinAge": "15 years",
@@ -883,7 +883,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "earliestRecAge": "15 years",
                             "latestRecAge": "15 years",
                             "maxAge": "27 years",
-                            "effectiveDate": "42720"
+                            "effectiveDate": "2016-12-16"
                         }
                     ],
                     "preferableVaccine": [
@@ -977,7 +977,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "42719"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "fromPrevious": "N",
@@ -986,7 +986,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "42720"
+                            "effectiveDate": "2016-12-16"
                         },
                         {
                             "fromPrevious": "Y",
@@ -1154,7 +1154,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "42719"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "fromPrevious": "N",
@@ -1163,7 +1163,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "42720"
+                            "effectiveDate": "2016-12-16"
                         },
                         {
                             "fromPrevious": "Y",
@@ -1902,7 +1902,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "42719"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "fromPrevious": "N",
@@ -1911,7 +1911,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "42720"
+                            "effectiveDate": "2016-12-16"
                         },
                         {
                             "fromPrevious": "Y",
@@ -2180,7 +2180,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "42719"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "fromPrevious": "N",
@@ -2189,7 +2189,7 @@ final hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "42720"
+                            "effectiveDate": "2016-12-16"
                         },
                         {
                             "fromPrevious": "Y",

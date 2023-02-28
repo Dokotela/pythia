@@ -28,6 +28,11 @@ class VaxSeries {
   void evaluate() {
     /// We can't evaluate if there are no doses
     if (doses.isNotEmpty) {
+      /// Keep track of what the dose's index is in all of the doses given
+      for (var i = 0; i < doses.length; i++) {
+        doses[i].index = i;
+      }
+
       /// For the evaluation we have to evaluate each dose in the series
       for (final seriesDose in series.seriesDose ?? <SeriesDose>[]) {
         /// And for each dose in the series, we look at the doses that were
@@ -37,39 +42,26 @@ class VaxSeries {
           /// during the first step, checking if it was substandard for some
           /// reason, we found that it was, and thus this dose cannot be
           /// evaluated
-          if (dose.evalStatus != null) {
-            evaluatedDoses.add(dose);
-            doses.remove(dose);
-          } else {
-            /// First we check if this dose can be skipped
-            final skip = canSkip(seriesDose, dose.dateGiven);
-
-            /// If it CAN be skipped, we record that targetDose as being
-            /// completed, increment the targetDose by 1, and break from this
-            /// for loop because we are no longer trying to satisfy that target
-            /// dose
-            if (skip) {
+          if (dose.evalStatus == null) {
+            /// First we check if this dose can be skipped, if it CAN be
+            /// skipped, we record that targetDose as being completed,
+            /// increment the targetDose by 1, and break from this for loop
+            /// because we are no longer trying to satisfy that target dose
+            if (canSkip(seriesDose, dose.dateGiven)) {
               evaluatedTargetDose[targetDose] = 'Skipped';
               targetDose++;
               break;
             } else {
-              /// Next check if it's an inadvertent vaccine, which just means
-              /// check if one of the listed inadvertent vaccines has a CVX code
-              /// that matches the CVX code of the dose being evaluated
-              final inadvertentIndex = seriesDose.inadvertentVaccine
-                  ?.indexWhere((element) =>
-                      element.cvx != null &&
-                      int.tryParse(element.cvx!) != null &&
-                      int.parse(element.cvx!) == int.parse(dose.cvx));
-
-              /// If it is, we mark it as inadvertent, and remove it from the
-              /// list of doses to evaluate, and we'll then move onto the
-              /// next dose
-              if (inadvertentIndex != null && inadvertentIndex != -1) {
-                dose.evalStatus = 'Not Valid';
-                dose.evalReason = 'Inadvertent Administration';
-                evaluatedDoses.add(dose);
-                doses.remove(dose);
+              /// Check if it's an Inadvertent vaccine, as long as it IS NOT
+              if (dose.notInadvertent(seriesDose)) {
+                /// Ensure that it's valid by age
+                if (dose.validByAge(
+                  seriesDose.age,
+                  evaluatedDoses.isEmpty ? null : evaluatedDoses.last,
+                  targetDose,
+                )) {
+                  // seriesDose.interval
+                }
               }
             }
           }
