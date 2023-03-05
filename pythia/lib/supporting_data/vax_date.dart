@@ -1,4 +1,5 @@
 import 'package:date_utils/date_utils.dart';
+import 'package:fhir/primitive_types/primitive_types.dart';
 
 class VaxDate extends DateTime {
   VaxDate(int year, int month, int day) : super(year, month, day);
@@ -46,6 +47,12 @@ class VaxDate extends DateTime {
   String toString() => '$year/$month/$day';
 
   String toJson() => this.toString();
+
+  DateTime toDateTime() => DateTime.parse(toString());
+
+  FhirDateTime toFhirDateTime() => FhirDateTime(toDateTime());
+
+  Date toFhirDate() => Date(toDateTime());
 
   VaxDate minIfNull(String? dateChange) =>
       dateChange == null || dateChange == ''
