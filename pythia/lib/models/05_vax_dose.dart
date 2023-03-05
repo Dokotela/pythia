@@ -203,8 +203,7 @@ class VaxDose {
             doses[index! - 1].evalStatus != EvalStatus.sub_standard &&
             !doses[index! - 1].inadvertent) {
           referenceDate = doses[index! - 1].dateGiven;
-        } else {
-          
+          // } else if(interval.fromPrevious?.to{
         }
       }
     }

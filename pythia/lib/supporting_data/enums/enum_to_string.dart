@@ -17,9 +17,6 @@ String? enumToString(Enum? value) {
     case EquivalentSeriesGroups:
       return equivalentSeriesGroupsEnumToString[value];
 
-    case FromPrevious:
-      return fromPreviousEnumToString[value];
-
     case FromTarget:
       return fromTargetEnumToString[value];
 

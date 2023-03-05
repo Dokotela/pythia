@@ -14,9 +14,6 @@ Enum? stringToEnum<T>(Type enumType, String value) {
     case EquivalentSeriesGroups:
       return equivalentSeriesGroupsStringToEnum[value];
 
-    case FromPrevious:
-      return fromPreviousStringToEnum[value];
-
     case FromTarget:
       return fromTargetStringToEnum[value];
 

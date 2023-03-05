@@ -7,7 +7,7 @@ part of 'patient_for_assessment.dart';
 // **************************************************************************
 
 String _$patientForAssessmentHash() =>
-    r'ab2d2a39b81bdbb6093239f0e733a809eb66a581';
+    r'bc1938330be97979634f4862ef29e5b56e77695b';
 
 /// Copied from Dart SDK
 class _SystemHash {

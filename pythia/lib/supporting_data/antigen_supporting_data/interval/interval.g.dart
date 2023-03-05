@@ -7,8 +7,7 @@ part of 'interval.dart';
 // **************************************************************************
 
 _$_Interval _$$_IntervalFromJson(Map<String, dynamic> json) => _$_Interval(
-      fromPrevious:
-          $enumDecodeNullable(_$FromPreviousEnumMap, json['fromPrevious']),
+      fromPrevious: json['fromPrevious'] as String?,
       fromTargetDose:
           $enumDecodeNullable(_$FromTargetEnumMap, json['fromTargetDose']),
       fromMostRecent: json['fromMostRecent'] as String?,
@@ -34,7 +33,7 @@ Map<String, dynamic> _$$_IntervalToJson(_$_Interval instance) {
     }
   }
 
-  writeNotNull('fromPrevious', _$FromPreviousEnumMap[instance.fromPrevious]);
+  writeNotNull('fromPrevious', instance.fromPrevious);
   writeNotNull('fromTargetDose', _$FromTargetEnumMap[instance.fromTargetDose]);
   writeNotNull('fromMostRecent', instance.fromMostRecent);
   writeNotNull('fromRelevantObs', instance.fromRelevantObs?.toJson());
@@ -47,11 +46,6 @@ Map<String, dynamic> _$$_IntervalToJson(_$_Interval instance) {
   writeNotNull('cessationDate', instance.cessationDate);
   return val;
 }
-
-const _$FromPreviousEnumMap = {
-  FromPrevious.yes: 'Y',
-  FromPrevious.no: 'N',
-};
 
 const _$FromTargetEnumMap = {
   FromTarget.dose1: '1',

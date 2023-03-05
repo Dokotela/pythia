@@ -20,7 +20,7 @@ Interval _$IntervalFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Interval {
-  FromPrevious? get fromPrevious => throw _privateConstructorUsedError;
+  String? get fromPrevious => throw _privateConstructorUsedError;
   FromTarget? get fromTargetDose => throw _privateConstructorUsedError;
   String? get fromMostRecent => throw _privateConstructorUsedError;
   ObservationCode? get fromRelevantObs => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $IntervalCopyWith<$Res> {
       _$IntervalCopyWithImpl<$Res, Interval>;
   @useResult
   $Res call(
-      {FromPrevious? fromPrevious,
+      {String? fromPrevious,
       FromTarget? fromTargetDose,
       String? fromMostRecent,
       ObservationCode? fromRelevantObs,
@@ -88,7 +88,7 @@ class _$IntervalCopyWithImpl<$Res, $Val extends Interval>
       fromPrevious: freezed == fromPrevious
           ? _value.fromPrevious
           : fromPrevious // ignore: cast_nullable_to_non_nullable
-              as FromPrevious?,
+              as String?,
       fromTargetDose: freezed == fromTargetDose
           ? _value.fromTargetDose
           : fromTargetDose // ignore: cast_nullable_to_non_nullable
@@ -153,7 +153,7 @@ abstract class _$$_IntervalCopyWith<$Res> implements $IntervalCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {FromPrevious? fromPrevious,
+      {String? fromPrevious,
       FromTarget? fromTargetDose,
       String? fromMostRecent,
       ObservationCode? fromRelevantObs,
@@ -196,7 +196,7 @@ class __$$_IntervalCopyWithImpl<$Res>
       fromPrevious: freezed == fromPrevious
           ? _value.fromPrevious
           : fromPrevious // ignore: cast_nullable_to_non_nullable
-              as FromPrevious?,
+              as String?,
       fromTargetDose: freezed == fromTargetDose
           ? _value.fromTargetDose
           : fromTargetDose // ignore: cast_nullable_to_non_nullable
@@ -262,7 +262,7 @@ class _$_Interval extends _Interval {
       _$$_IntervalFromJson(json);
 
   @override
-  final FromPrevious? fromPrevious;
+  final String? fromPrevious;
   @override
   final FromTarget? fromTargetDose;
   @override
@@ -349,7 +349,7 @@ class _$_Interval extends _Interval {
 
 abstract class _Interval extends Interval {
   factory _Interval(
-      {final FromPrevious? fromPrevious,
+      {final String? fromPrevious,
       final FromTarget? fromTargetDose,
       final String? fromMostRecent,
       final ObservationCode? fromRelevantObs,
@@ -365,7 +365,7 @@ abstract class _Interval extends Interval {
   factory _Interval.fromJson(Map<String, dynamic> json) = _$_Interval.fromJson;
 
   @override
-  FromPrevious? get fromPrevious;
+  String? get fromPrevious;
   @override
   FromTarget? get fromTargetDose;
   @override

@@ -9,7 +9,7 @@ part 'interval.g.dart';
 class Interval with _$Interval {
   Interval._();
   factory Interval({
-    FromPrevious? fromPrevious,
+    String? fromPrevious,
     FromTarget? fromTargetDose,
     String? fromMostRecent,
     ObservationCode? fromRelevantObs,
