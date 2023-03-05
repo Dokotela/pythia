@@ -17,6 +17,8 @@ class Vaccine with _$Vaccine {
     String? forecastVaccineType,
   }) = _Vaccine;
 
+  int? get cvxAsInt => cvx == null ? null : int.tryParse(cvx!);
+
   factory Vaccine.fromJson(Map<String, dynamic> json) =>
       _$VaccineFromJson(json);
 }

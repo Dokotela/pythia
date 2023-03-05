@@ -22,7 +22,7 @@ Interval _$IntervalFromJson(Map<String, dynamic> json) {
 mixin _$Interval {
   String? get fromPrevious => throw _privateConstructorUsedError;
   int? get fromTargetDose => throw _privateConstructorUsedError;
-  List<String>? get fromMostRecent => throw _privateConstructorUsedError;
+  String? get fromMostRecent => throw _privateConstructorUsedError;
   ObservationCode? get fromRelevantObs => throw _privateConstructorUsedError;
   String? get absMinInt => throw _privateConstructorUsedError;
   String? get minInt => throw _privateConstructorUsedError;
@@ -46,7 +46,7 @@ abstract class $IntervalCopyWith<$Res> {
   $Res call(
       {String? fromPrevious,
       int? fromTargetDose,
-      List<String>? fromMostRecent,
+      String? fromMostRecent,
       ObservationCode? fromRelevantObs,
       String? absMinInt,
       String? minInt,
@@ -96,7 +96,7 @@ class _$IntervalCopyWithImpl<$Res, $Val extends Interval>
       fromMostRecent: freezed == fromMostRecent
           ? _value.fromMostRecent
           : fromMostRecent // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as String?,
       fromRelevantObs: freezed == fromRelevantObs
           ? _value.fromRelevantObs
           : fromRelevantObs // ignore: cast_nullable_to_non_nullable
@@ -155,7 +155,7 @@ abstract class _$$_IntervalCopyWith<$Res> implements $IntervalCopyWith<$Res> {
   $Res call(
       {String? fromPrevious,
       int? fromTargetDose,
-      List<String>? fromMostRecent,
+      String? fromMostRecent,
       ObservationCode? fromRelevantObs,
       String? absMinInt,
       String? minInt,
@@ -202,9 +202,9 @@ class __$$_IntervalCopyWithImpl<$Res>
           : fromTargetDose // ignore: cast_nullable_to_non_nullable
               as int?,
       fromMostRecent: freezed == fromMostRecent
-          ? _value._fromMostRecent
+          ? _value.fromMostRecent
           : fromMostRecent // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as String?,
       fromRelevantObs: freezed == fromRelevantObs
           ? _value.fromRelevantObs
           : fromRelevantObs // ignore: cast_nullable_to_non_nullable
@@ -247,7 +247,7 @@ class _$_Interval extends _Interval {
   _$_Interval(
       {this.fromPrevious,
       this.fromTargetDose,
-      final List<String>? fromMostRecent,
+      this.fromMostRecent,
       this.fromRelevantObs,
       this.absMinInt,
       this.minInt,
@@ -256,8 +256,7 @@ class _$_Interval extends _Interval {
       this.intervalPriority,
       this.effectiveDate,
       this.cessationDate})
-      : _fromMostRecent = fromMostRecent,
-        super._();
+      : super._();
 
   factory _$_Interval.fromJson(Map<String, dynamic> json) =>
       _$$_IntervalFromJson(json);
@@ -266,16 +265,8 @@ class _$_Interval extends _Interval {
   final String? fromPrevious;
   @override
   final int? fromTargetDose;
-  final List<String>? _fromMostRecent;
   @override
-  List<String>? get fromMostRecent {
-    final value = _fromMostRecent;
-    if (value == null) return null;
-    if (_fromMostRecent is EqualUnmodifiableListView) return _fromMostRecent;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final String? fromMostRecent;
   @override
   final ObservationCode? fromRelevantObs;
   @override
@@ -307,8 +298,8 @@ class _$_Interval extends _Interval {
                 other.fromPrevious == fromPrevious) &&
             (identical(other.fromTargetDose, fromTargetDose) ||
                 other.fromTargetDose == fromTargetDose) &&
-            const DeepCollectionEquality()
-                .equals(other._fromMostRecent, _fromMostRecent) &&
+            (identical(other.fromMostRecent, fromMostRecent) ||
+                other.fromMostRecent == fromMostRecent) &&
             (identical(other.fromRelevantObs, fromRelevantObs) ||
                 other.fromRelevantObs == fromRelevantObs) &&
             (identical(other.absMinInt, absMinInt) ||
@@ -332,7 +323,7 @@ class _$_Interval extends _Interval {
       runtimeType,
       fromPrevious,
       fromTargetDose,
-      const DeepCollectionEquality().hash(_fromMostRecent),
+      fromMostRecent,
       fromRelevantObs,
       absMinInt,
       minInt,
@@ -360,7 +351,7 @@ abstract class _Interval extends Interval {
   factory _Interval(
       {final String? fromPrevious,
       final int? fromTargetDose,
-      final List<String>? fromMostRecent,
+      final String? fromMostRecent,
       final ObservationCode? fromRelevantObs,
       final String? absMinInt,
       final String? minInt,
@@ -378,7 +369,7 @@ abstract class _Interval extends Interval {
   @override
   int? get fromTargetDose;
   @override
-  List<String>? get fromMostRecent;
+  String? get fromMostRecent;
   @override
   ObservationCode? get fromRelevantObs;
   @override

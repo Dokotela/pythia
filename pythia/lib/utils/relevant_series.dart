@@ -3,7 +3,7 @@ import '../pythia.dart';
 List<Series> relevantSeries(
   Gender gender,
   List<Series> oldSeries,
-  List<VaxObservation> patientObservations,
+  VaxObservations patientObservations,
   VaxDate dob,
   VaxDate assessmentDate,
 ) {
@@ -48,9 +48,7 @@ List<Series> relevantSeries(
         /// one of the indications for this series
         else {
           final obsIndex = indicationList.indexWhere((obsCode) {
-            final indicationIndex = patientObservations.indexWhere((element) =>
-                element.observationCode != null &&
-                element.observationCode == obsCode);
+            final indicationIndex = patientObservations.codeIndex(obsCode);
             if (indicationIndex == -1) {
               return false;
             } else {

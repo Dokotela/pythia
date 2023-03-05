@@ -9,9 +9,7 @@ part of 'interval.dart';
 _$_Interval _$$_IntervalFromJson(Map<String, dynamic> json) => _$_Interval(
       fromPrevious: json['fromPrevious'] as String?,
       fromTargetDose: json['fromTargetDose'] as int?,
-      fromMostRecent: (json['fromMostRecent'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
+      fromMostRecent: json['fromMostRecent'] as String?,
       fromRelevantObs: json['fromRelevantObs'] == null
           ? null
           : ObservationCode.fromJson(

@@ -11,6 +11,8 @@ class ObservationCode with _$ObservationCode {
     String? code,
   }) = _ObservationCode;
 
+  int? get codeAsInt => code == null ? null : int.tryParse(code!);
+
   factory ObservationCode.fromJson(Map<String, dynamic> json) =>
       _$ObservationCodeFromJson(json);
 }

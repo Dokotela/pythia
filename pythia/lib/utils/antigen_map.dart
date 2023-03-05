@@ -3,7 +3,7 @@ import '../pythia.dart';
 Map<String, VaxAntigen> antigenMap(
   List<VaxDose> doses,
   Gender gender,
-  List<VaxObservation> observations,
+  VaxObservations observations,
   VaxDate dob,
   VaxDate assessmentDate,
 ) {

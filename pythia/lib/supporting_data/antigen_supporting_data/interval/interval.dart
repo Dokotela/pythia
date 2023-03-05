@@ -11,7 +11,7 @@ class Interval with _$Interval {
   factory Interval({
     String? fromPrevious,
     int? fromTargetDose,
-    List<String>? fromMostRecent,
+    String? fromMostRecent,
     ObservationCode? fromRelevantObs,
     String? absMinInt,
     String? minInt,
@@ -21,6 +21,19 @@ class Interval with _$Interval {
     String? effectiveDate,
     String? cessationDate,
   }) = _Interval;
+
+  List<int>? get mostRecent {
+    if (fromMostRecent == null) {
+      return null;
+    } else {
+      final codes = fromMostRecent!
+          .split(';')
+          .map((e) => int.tryParse(e.trim()) ?? -1)
+          .toList();
+      codes.removeWhere((element) => element == -1);
+      return codes;
+    }
+  }
 
   factory Interval.fromJson(Map<String, dynamic> json) =>
       _$IntervalFromJson(json);

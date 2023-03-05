@@ -12,6 +12,16 @@ class VaccineContraindications with _$VaccineContraindications {
     List<VaccineContraindication>? contraindication,
   }) = _VaccineContraindications;
 
+  List<int>? get codesAsInt {
+    if (contraindication == null) {
+      return null;
+    } else {
+      final codes = contraindication!.map((e) => e.codeAsInt ?? -1).toList();
+      codes.removeWhere((element) => element == -1);
+      return codes;
+    }
+  }
+
   factory VaccineContraindications.fromJson(Map<String, dynamic> json) =>
       _$VaccineContraindicationsFromJson(json);
 }
@@ -26,6 +36,9 @@ class VaccineContraindication with _$VaccineContraindication {
     String? contraindicationGuidance,
     List<Vaccine>? contraindicatedVaccine,
   }) = _VaccineContraindication;
+
+  int? get codeAsInt =>
+      observationCode == null ? null : int.tryParse(observationCode!);
 
   factory VaccineContraindication.fromJson(Map<String, dynamic> json) =>
       _$VaccineContraindicationFromJson(json);
