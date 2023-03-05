@@ -176,6 +176,7 @@ mixin _$VaxObservation {
   String? get contraindicationText => throw _privateConstructorUsedError;
   String? get clarifyingText => throw _privateConstructorUsedError;
   CodedValues? get codedValues => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -196,9 +197,11 @@ abstract class $VaxObservationCopyWith<$Res> {
       String? indicationText,
       String? contraindicationText,
       String? clarifyingText,
-      CodedValues? codedValues});
+      CodedValues? codedValues,
+      Period? period});
 
   $CodedValuesCopyWith<$Res>? get codedValues;
+  $PeriodCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -221,6 +224,7 @@ class _$VaxObservationCopyWithImpl<$Res, $Val extends VaxObservation>
     Object? contraindicationText = freezed,
     Object? clarifyingText = freezed,
     Object? codedValues = freezed,
+    Object? period = freezed,
   }) {
     return _then(_value.copyWith(
       observationCode: freezed == observationCode
@@ -251,6 +255,10 @@ class _$VaxObservationCopyWithImpl<$Res, $Val extends VaxObservation>
           ? _value.codedValues
           : codedValues // ignore: cast_nullable_to_non_nullable
               as CodedValues?,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ) as $Val);
   }
 
@@ -263,6 +271,18 @@ class _$VaxObservationCopyWithImpl<$Res, $Val extends VaxObservation>
 
     return $CodedValuesCopyWith<$Res>(_value.codedValues!, (value) {
       return _then(_value.copyWith(codedValues: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value) as $Val);
     });
   }
 }
@@ -282,10 +302,13 @@ abstract class _$$_VaxObservationCopyWith<$Res>
       String? indicationText,
       String? contraindicationText,
       String? clarifyingText,
-      CodedValues? codedValues});
+      CodedValues? codedValues,
+      Period? period});
 
   @override
   $CodedValuesCopyWith<$Res>? get codedValues;
+  @override
+  $PeriodCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -306,6 +329,7 @@ class __$$_VaxObservationCopyWithImpl<$Res>
     Object? contraindicationText = freezed,
     Object? clarifyingText = freezed,
     Object? codedValues = freezed,
+    Object? period = freezed,
   }) {
     return _then(_$_VaxObservation(
       observationCode: freezed == observationCode
@@ -336,6 +360,10 @@ class __$$_VaxObservationCopyWithImpl<$Res>
           ? _value.codedValues
           : codedValues // ignore: cast_nullable_to_non_nullable
               as CodedValues?,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 }
@@ -350,7 +378,8 @@ class _$_VaxObservation extends _VaxObservation {
       this.indicationText,
       this.contraindicationText,
       this.clarifyingText,
-      this.codedValues})
+      this.codedValues,
+      this.period})
       : super._();
 
   factory _$_VaxObservation.fromJson(Map<String, dynamic> json) =>
@@ -370,10 +399,12 @@ class _$_VaxObservation extends _VaxObservation {
   final String? clarifyingText;
   @override
   final CodedValues? codedValues;
+  @override
+  final Period? period;
 
   @override
   String toString() {
-    return 'VaxObservation(observationCode: $observationCode, observationTitle: $observationTitle, group: $group, indicationText: $indicationText, contraindicationText: $contraindicationText, clarifyingText: $clarifyingText, codedValues: $codedValues)';
+    return 'VaxObservation(observationCode: $observationCode, observationTitle: $observationTitle, group: $group, indicationText: $indicationText, contraindicationText: $contraindicationText, clarifyingText: $clarifyingText, codedValues: $codedValues, period: $period)';
   }
 
   @override
@@ -393,7 +424,8 @@ class _$_VaxObservation extends _VaxObservation {
             (identical(other.clarifyingText, clarifyingText) ||
                 other.clarifyingText == clarifyingText) &&
             (identical(other.codedValues, codedValues) ||
-                other.codedValues == codedValues));
+                other.codedValues == codedValues) &&
+            (identical(other.period, period) || other.period == period));
   }
 
   @JsonKey(ignore: true)
@@ -406,7 +438,8 @@ class _$_VaxObservation extends _VaxObservation {
       indicationText,
       contraindicationText,
       clarifyingText,
-      codedValues);
+      codedValues,
+      period);
 
   @JsonKey(ignore: true)
   @override
@@ -430,7 +463,8 @@ abstract class _VaxObservation extends VaxObservation {
       final String? indicationText,
       final String? contraindicationText,
       final String? clarifyingText,
-      final CodedValues? codedValues}) = _$_VaxObservation;
+      final CodedValues? codedValues,
+      final Period? period}) = _$_VaxObservation;
   _VaxObservation._() : super._();
 
   factory _VaxObservation.fromJson(Map<String, dynamic> json) =
@@ -450,6 +484,8 @@ abstract class _VaxObservation extends VaxObservation {
   String? get clarifyingText;
   @override
   CodedValues? get codedValues;
+  @override
+  Period? get period;
   @override
   @JsonKey(ignore: true)
   _$$_VaxObservationCopyWith<_$_VaxObservation> get copyWith =>

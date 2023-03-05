@@ -38,6 +38,9 @@ _$_VaxObservation _$$_VaxObservationFromJson(Map<String, dynamic> json) =>
       codedValues: json['codedValues'] == null
           ? null
           : CodedValues.fromJson(json['codedValues'] as Map<String, dynamic>),
+      period: json['period'] == null
+          ? null
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_VaxObservationToJson(_$_VaxObservation instance) {
@@ -56,6 +59,7 @@ Map<String, dynamic> _$$_VaxObservationToJson(_$_VaxObservation instance) {
   writeNotNull('contraindicationText', instance.contraindicationText);
   writeNotNull('clarifyingText', instance.clarifyingText);
   writeNotNull('codedValues', instance.codedValues?.toJson());
+  writeNotNull('period', instance.period?.toJson());
   return val;
 }
 

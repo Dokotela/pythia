@@ -2,7 +2,8 @@ import 'package:fhir/r4.dart';
 
 import '../pythia.dart';
 
-List<VaxObservation> observationsFromConditions(List<Condition> conditions) {
+List<VaxObservation> observationsFromConditions(
+    List<Condition> conditions, VaxDate birthdate) {
   final observations = <VaxObservation>[];
   // TODO(Dokotela) look at other systems besides Snomed
   for (var condition in conditions) {
@@ -20,8 +21,9 @@ List<VaxObservation> observationsFromConditions(List<Condition> conditions) {
         return !(snomedCodeIndex == null || snomedCodeIndex == -1);
       });
       if (obsCodeIndex != null && obsCodeIndex != -1) {
-        observations.add(
-            scheduleSupportingData.observations!.observation![obsCodeIndex]);
+        observations.add(scheduleSupportingData
+            .observations!.observation![obsCodeIndex]
+            .copyWith(period: periodOfCondition(condition, birthdate)));
       }
     }
   }
