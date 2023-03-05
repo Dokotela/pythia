@@ -150,7 +150,7 @@ final hepa = AntigenSupportingData.fromJson({
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "1",
+                        "fromTargetDose": 1,
                         "absMinInt": "6 months"
                     },
                     "preferableVaccine": [
@@ -470,7 +470,7 @@ final hepa = AntigenSupportingData.fromJson({
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "1",
+                        "fromTargetDose": 1,
                         "absMinInt": "6 months"
                     },
                     "preferableVaccine": [
@@ -740,7 +740,7 @@ final hepa = AntigenSupportingData.fromJson({
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "6 months - 4 days",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
@@ -997,7 +997,7 @@ final hepa = AntigenSupportingData.fromJson({
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "12 months - 4 days",
                             "minInt": "12 months",
                             "earliestRecInt": "12 months"

@@ -98,7 +98,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
             ...seriesDose.interval!,
           Interval(
             fromPrevious: row[1]!,
-            fromTargetDose: _valueToEnum(row[2]!, fromTargetStringToEnum),
+            fromTargetDose: int.tryParse(row[2]!.toString()),
             fromMostRecent: valueToString(row[3]!),
             fromRelevantObs: open == -1 || close == -1
                 ? null
@@ -131,7 +131,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
       seriesDose = seriesDose.copyWith(
           allowableInterval: Interval(
         fromPrevious: row[1]!,
-        fromTargetDose: _valueToEnum(row[2]!, fromTargetStringToEnum),
+        fromTargetDose: int.tryParse(row[2]!.toString()),
         absMinInt: valueToString(row[3]!),
         effectiveDate: valueToString(row[4]!) == null
             ? null

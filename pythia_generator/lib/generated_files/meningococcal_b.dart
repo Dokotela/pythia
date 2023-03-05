@@ -225,7 +225,7 @@ final meningococcalB = AntigenSupportingData.fromJson({
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "6 months - 4 days",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
@@ -621,7 +621,7 @@ final meningococcalB = AntigenSupportingData.fromJson({
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "0 days",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"

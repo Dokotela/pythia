@@ -428,7 +428,7 @@
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks"
                         }
@@ -979,13 +979,13 @@
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "2",
+                            "fromTargetDose": 2,
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks"
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks"
                         }
@@ -1482,7 +1482,7 @@
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks",
                             "earliestRecInt": "6 months"
@@ -1685,7 +1685,7 @@
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "1",
+                        "fromTargetDose": 1,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -2012,20 +2012,20 @@
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "2",
+                            "fromTargetDose": 2,
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks"
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks"
                         }
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "2",
+                        "fromTargetDose": 2,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -2383,7 +2383,7 @@
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "1",
+                        "fromTargetDose": 1,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -2512,7 +2512,7 @@
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "6 months",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
@@ -2651,7 +2651,7 @@
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "12 months - 4 days",
                             "minInt": "12 months",
                             "earliestRecInt": "12 months"
@@ -3038,7 +3038,7 @@
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks",
                             "earliestRecInt": "6 months"
@@ -3327,7 +3327,7 @@
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "1",
+                        "fromTargetDose": 1,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -3771,20 +3771,20 @@
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "2",
+                            "fromTargetDose": 2,
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks"
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks"
                         }
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "2",
+                        "fromTargetDose": 2,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -4259,7 +4259,7 @@
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "1",
+                        "fromTargetDose": 1,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -4526,7 +4526,7 @@
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "6 months",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
@@ -4796,7 +4796,7 @@
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "12 months - 4 days",
                             "minInt": "12 months",
                             "earliestRecInt": "12 months"
@@ -4956,7 +4956,7 @@
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks",
                             "earliestRecInt": "6 months"
@@ -5456,7 +5456,7 @@
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks",
                             "earliestRecInt": "6 months"

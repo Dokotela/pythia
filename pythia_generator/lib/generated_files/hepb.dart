@@ -430,7 +430,7 @@ final hepb = AntigenSupportingData.fromJson({
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks"
                         }
@@ -981,13 +981,13 @@ final hepb = AntigenSupportingData.fromJson({
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "2",
+                            "fromTargetDose": 2,
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks"
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks"
                         }
@@ -1484,7 +1484,7 @@ final hepb = AntigenSupportingData.fromJson({
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks",
                             "earliestRecInt": "6 months"
@@ -1687,7 +1687,7 @@ final hepb = AntigenSupportingData.fromJson({
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "1",
+                        "fromTargetDose": 1,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -2014,20 +2014,20 @@ final hepb = AntigenSupportingData.fromJson({
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "2",
+                            "fromTargetDose": 2,
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks"
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks"
                         }
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "2",
+                        "fromTargetDose": 2,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -2385,7 +2385,7 @@ final hepb = AntigenSupportingData.fromJson({
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "1",
+                        "fromTargetDose": 1,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -2514,7 +2514,7 @@ final hepb = AntigenSupportingData.fromJson({
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "6 months",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
@@ -2653,7 +2653,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "12 months - 4 days",
                             "minInt": "12 months",
                             "earliestRecInt": "12 months"
@@ -3040,7 +3040,7 @@ final hepb = AntigenSupportingData.fromJson({
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks",
                             "earliestRecInt": "6 months"
@@ -3329,7 +3329,7 @@ final hepb = AntigenSupportingData.fromJson({
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "1",
+                        "fromTargetDose": 1,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -3773,20 +3773,20 @@ final hepb = AntigenSupportingData.fromJson({
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "2",
+                            "fromTargetDose": 2,
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks"
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks"
                         }
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "2",
+                        "fromTargetDose": 2,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -4261,7 +4261,7 @@ final hepb = AntigenSupportingData.fromJson({
                     ],
                     "allowableInterval": {
                         "fromPrevious": "N",
-                        "fromTargetDose": "1",
+                        "fromTargetDose": 1,
                         "absMinInt": "4 weeks - 4 days"
                     },
                     "preferableVaccine": [
@@ -4528,7 +4528,7 @@ final hepb = AntigenSupportingData.fromJson({
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "6 months",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
@@ -4798,7 +4798,7 @@ final hepb = AntigenSupportingData.fromJson({
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "12 months - 4 days",
                             "minInt": "12 months",
                             "earliestRecInt": "12 months"
@@ -4958,7 +4958,7 @@ final hepb = AntigenSupportingData.fromJson({
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks",
                             "earliestRecInt": "6 months"
@@ -5458,7 +5458,7 @@ final hepb = AntigenSupportingData.fromJson({
                         },
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks",
                             "earliestRecInt": "6 months"

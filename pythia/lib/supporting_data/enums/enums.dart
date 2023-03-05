@@ -2,7 +2,6 @@ export 'binary_enum.dart';
 export 'dose_number_enum.dart';
 export 'dose_type_enum.dart';
 export 'equivalent_series_groups_enum.dart';
-export 'from_target_enum.dart';
 export 'gender_enum.dart';
 export 'series_preference_enum.dart';
 export 'series_priority_enum.dart';

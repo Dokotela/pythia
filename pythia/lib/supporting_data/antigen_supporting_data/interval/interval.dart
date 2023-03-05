@@ -10,8 +10,8 @@ class Interval with _$Interval {
   Interval._();
   factory Interval({
     String? fromPrevious,
-    FromTarget? fromTargetDose,
-    String? fromMostRecent,
+    int? fromTargetDose,
+    List<String>? fromMostRecent,
     ObservationCode? fromRelevantObs,
     String? absMinInt,
     String? minInt,

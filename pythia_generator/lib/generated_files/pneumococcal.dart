@@ -3952,7 +3952,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "0 days",
                             "minInt": "5 years",
                             "earliestRecInt": "5 years"
@@ -4402,7 +4402,7 @@ final pneumococcal = AntigenSupportingData.fromJson({
                     "interval": [
                         {
                             "fromPrevious": "N",
-                            "fromTargetDose": "1",
+                            "fromTargetDose": 1,
                             "absMinInt": "0 days",
                             "minInt": "5 years",
                             "earliestRecInt": "5 years"
