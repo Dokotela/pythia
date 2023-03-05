@@ -10,7 +10,7 @@ class VaxAntigen {
   factory VaxAntigen.fromSeries({
     required List<Series> series,
     required Gender gender,
-    required List<VaxObservation> observations,
+    required VaxObservations observations,
     required VaxDate dob,
     required VaxDate assessmentDate,
   }) {

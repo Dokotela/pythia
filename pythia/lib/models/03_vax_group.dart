@@ -10,11 +10,14 @@ class VaxGroup {
     required this.dob,
   });
 
-  void newSeries(Series newSeries) => series.add(VaxSeries(
-      targetDisease: targetDisease,
-      series: newSeries,
-      assessmentDate: assessmentDate,
-      dob: dob));
+  void newSeries(Series newSeries) => series.add(
+        VaxSeries(
+          targetDisease: targetDisease,
+          series: newSeries,
+          assessmentDate: assessmentDate,
+          dob: dob,
+        ),
+      );
 
   void newDose(VaxDose dose) =>
       series.forEach((element) => element.doses.add(dose));

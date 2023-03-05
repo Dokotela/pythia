@@ -22,7 +22,7 @@ class VaxPatient {
     Gender? gender,
     List<Condition>? conditions,
     List<Immunization>? immunizations,
-    List<VaxObservation>? observations,
+    VaxObservations? observations,
     List<AllergyIntolerance>? allergies,
     List<VaxDose>? pastDoses,
   }) =>
@@ -44,7 +44,7 @@ class VaxPatient {
   final Gender gender;
   final List<Immunization> immunizations;
   final List<Condition> conditions;
-  final List<VaxObservation> observations;
+  final VaxObservations observations;
   final List<AllergyIntolerance> allergies;
   final List<VaxDose> pastDoses;
 }

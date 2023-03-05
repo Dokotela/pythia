@@ -62,8 +62,8 @@ class PatientForAssessment extends _$PatientForAssessment {
           .addError('No Patient was found in the parameters');
       return null;
     } else {
-      List<VaxObservation> observations =
-          observationsFromConditions(conditions);
+      List<VaxObservation> observations = observationsFromConditions(
+          conditions, birthdate ?? VaxDate(1900, 01, 01));
       return VaxPatient(
         assessmentDate: assessmentDate == null
             ? VaxDate.now()
@@ -73,7 +73,7 @@ class PatientForAssessment extends _$PatientForAssessment {
         gender: genderFromPatient(patient),
         conditions: conditions,
         immunizations: immunizations,
-        observations: observations,
+        observations: VaxObservations(observation: observations),
         allergies: allergies,
         pastDoses: pastDoses,
       );

@@ -9,15 +9,6 @@ class VaxSeries {
     required this.assessmentDate,
     required this.dob,
   });
-  String targetDisease;
-  int targetDose = 0;
-  Series series;
-  List<VaxDose> doses = [];
-  List<VaxDose> evaluatedDoses = [];
-  Map<int, String> evaluatedTargetDose = {};
-  VaxDate assessmentDate;
-  VaxDate dob;
-  SkipContext skipContext = SkipContext.evaluation;
 
   VaxDose? get lastCompleted {
     final index = evaluatedDoses
@@ -359,4 +350,14 @@ class VaxSeries {
     /// using OR logic and found no true conditions, so the set is false
     return andLogic ? true : false;
   }
+
+  String targetDisease;
+  int targetDose = 0;
+  Series series;
+  List<VaxDose> doses = [];
+  List<VaxDose> evaluatedDoses = [];
+  Map<int, String> evaluatedTargetDose = {};
+  VaxDate assessmentDate;
+  VaxDate dob;
+  SkipContext skipContext = SkipContext.evaluation;
 }
