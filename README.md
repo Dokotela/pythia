@@ -313,3 +313,18 @@ Intervals also make sense, they're just more complicated. Currently I only perfo
 *As long as this requirement is met, the dose has an allowable interval, even if it is not a preferable interval.
 
 This is certainly more complicated logic. If the interval for that dose is null, then the interval is valid. If it is the first in the series it is also valid. Otherwise, it loops through the list of intervals, and first checks to see if the interval listed is from the previous dose or another dose, then checks the interval compared to that dose. Allowable and preferable intervals are closely intertwined, so the logic for both is encapsulated in the same function.
+
+### 6.6 Evalute Allowable Interval
+
+This one's easy. Is the date given less than the absolute minimum interval date? If so, then you're good to go. The CDC instructions only refer to previous doses given for this one, not observations, so for the time being intervals from observations are not part of this logic. This logic IS however, baked into the above logic, since it's part of that process as well.
+
+### 6.7 Evaluate Live Virus Conflicts
+
+So now we get into where the manual relies too heavily on consistent terminology to make any sense:
+1. *Is the current vaccine type of the vaccine dose administered one of the supporting data defined live virus conflict current vaccine types?* Seriously? Who writes like that?
+2. *Is the vaccine type of the previous vaccine dose administered the same as one of the supporting data defined live virus conflict previous vaccine types when the current vaccine dose administered type is the same as the live virus conflict current vaccine type?* Drowning...in...adjectives...
+
+First, it's helpful to know about the supporting data. In the supporting data, there is a list of live virus conflicts. Each of these has a current type and a previous type. And we apply these to the dose being evaluated.
+
+1. So, the supporting data has a list of live virus conflict types. Is the type of the current dose being evaluated included in this list?
+2. Make a list of each entry where the current type is the same as the dose being evaluated. For each of entry in this list, look at the type defined in the previous field. If it is indeed the same as the previously given dose, then you have to check if there is a conflict using the dates given in that entry.

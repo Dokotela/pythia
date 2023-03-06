@@ -73,7 +73,7 @@ class VaxDose {
     );
   }
 
-  int get cvxInt => int.parse(cvx);
+  int get cvxAsInt => int.parse(cvx);
 
   bool notInadvertent(SeriesDose seriesDose) {
     /// Next check if it's an inadvertent vaccine, which just means
@@ -182,19 +182,40 @@ class VaxDose {
     }
   }
 
-  bool isPreferableInterval(
+  updatePreferredInterval({required bool valid, String? status}) {
+    preferredInterval = preferredInterval == false ? false : valid;
+    if (status != null) {
+      preferredIntervalReason =
+          preferredIntervalReason == null || preferredIntervalReason == ''
+              ? status
+              : '$preferredIntervalReason, $status';
+    }
+  }
+
+  updateAllowedInterval({required bool valid, String? status}) {
+    allowedInterval = allowedInterval == false ? false : valid;
+    if (status != null) {
+      allowedIntervalReason =
+          allowedIntervalReason == null || allowedIntervalReason == ''
+              ? status
+              : '$allowedIntervalReason, $status';
+    }
+  }
+
+  bool isAllowedInterval(
     List<Interval>? intervals,
     List<VaxDose> doses,
     int targetDose,
   ) {
     /// Like age, if there are no intervals, then the preferred interval is true
     if (intervals == null || intervals.isEmpty) {
-      preferredInterval = true;
+      updatePreferredInterval(valid: true);
+      updateAllowedInterval(valid: true);
       return true;
     } else {
       /// Otherwise, we have to evaluate each interval in the list
       for (final interval in intervals) {
-        VaxDate? referenceDate;
+        VaxDate? referenceDate = null;
 
         /// If, we are supposed to get it from the most recent, AND the previous
         /// dose given was "Valid" or "Not Valid" (NOT "Substandard") AND the
@@ -222,7 +243,7 @@ class VaxDose {
 
           /// If it doesn't, then we return false, this condition is not met
           if (doseIndex == -1) {
-            return false;
+            updatePreferredInterval(valid: false);
           } else {
             referenceDate = doses[doseIndex].dateGiven;
           }
@@ -243,16 +264,16 @@ class VaxDose {
           /// If there is no fromPrevious list (this is probably an error) but
           /// it would also mean this condition is not met, and we return false
           if (fromPrevious == null) {
-            return false;
+            updatePreferredInterval(valid: false);
           } else {
             /// Otherwise, we look for the most recent dose satisfies the
             /// condition (i.e. it's CVX code is in the list)
             final mostRecentIndex = doses.lastIndexWhere(
-                (element) => fromPrevious.contains(element.cvxInt));
+                (element) => fromPrevious.contains(element.cvxAsInt));
 
             /// If we don't find one, again, this condition is false
             if (mostRecentIndex == -1) {
-              return false;
+              preferredInterval = false;
             } else {
               /// Otherwise we use that date administered as the referenceDate
               referenceDate = doses[mostRecentIndex].dateGiven;
@@ -270,7 +291,7 @@ class VaxDose {
 
           /// If we don't find the observation, then this condtion is false
           if (index == null || index == -1) {
-            return false;
+            updatePreferredInterval(valid: false);
           } else {
             /// Otherwise, the reference date is the most recent active date of
             /// the appropriate observation
@@ -284,7 +305,7 @@ class VaxDose {
         /// If we never found a referenceDate, then this interval doesn't meet
         /// the requirements
         if (referenceDate == null) {
-          return false;
+          updatePreferredInterval(valid: false);
         } else {
           final absoluteMinimumIntervalDate =
               referenceDate.changeIfNotNull(interval.absMinInt);
@@ -294,8 +315,10 @@ class VaxDose {
           /// If it's prior to the absoluteMinimumIntervalDate then it's not
           /// a valid inteval
           if (dateGiven < absoluteMinimumIntervalDate) {
-            preferredInterval = false;
-            preferredIntervalReason = 'Too Soon';
+            /// if this is the case, we can stop evaluation, this dose is not
+            /// valid
+            updatePreferredInterval(valid: false, status: 'Too Soon');
+            updateAllowedInterval(valid: false, status: 'Too Soon');
             return false;
 
             /// If it's between the absoluteMinimumIntervalDate and the
@@ -305,9 +328,7 @@ class VaxDose {
             /// If it's the first targetDose, then it's valid due to the
             /// Grace Period
             if (targetDose == 0) {
-              preferredIntervalReason = preferredIntervalReason == null
-                  ? 'Grace Period'
-                  : '$preferredIntervalReason, Grace Period';
+              updatePreferredInterval(valid: true, status: 'Grace Period');
             }
 
             /// Otherwise, Is the evaluation status of the previous dose given
@@ -318,39 +339,84 @@ class VaxDose {
               if ((!(previousDose.validAge ?? true) ||
                       !(previousDose.allowedInterval ?? true)) &&
                   previousDose.dateGiven.change('1 year') > dateGiven) {
-                preferredInterval = false;
-                preferredIntervalReason = 'Too Soon';
-                return false;
+                updatePreferredInterval(valid: false, status: 'Too Soon');
               } else {
-                preferredIntervalReason = preferredIntervalReason == null
-                    ? 'Grace Period'
-                    : '$preferredIntervalReason, Grace Period';
+                updatePreferredInterval(valid: true, status: 'Grace Period');
               }
             }
 
             /// If there are no previous doses to compare to, then this is
             /// not a valid interval, it was given too soon
             else {
-              preferredInterval = false;
-              preferredIntervalReason = 'Too Soon';
-              return false;
+              updatePreferredInterval(valid: false, status: 'Too Soon');
             }
           }
 
           /// If it's given after the minimumIntervalDate then it's not valid
           else if (dateGiven > minimumIntervaldate) {
-            preferredInterval = false;
-            preferredIntervalReason = 'Too Late';
-            return false;
+            updatePreferredInterval(valid: false, status: 'Too Late');
           }
         }
       }
     }
 
-    /// We should have caught all of the incorrect Intervals above. Therefore,
-    /// this should counted as a preferredInterval dose
-    preferredInterval = true;
+    /// If we haven't set the preferredInterval yet, it means we didn't find
+    /// any that didn't fit, so it's valid, and we haven't already returned,
+    /// so all of the absolute values are also true
+    updatePreferredInterval(valid: true);
+    updateAllowedInterval(valid: true);
     return true;
+  }
+
+  bool isLiveVirusConflict(
+    List<VaxDose> doses,
+  ) {
+    /// If there are no previous doses to look at, there can be no conflicts
+    if (doses.isEmpty) {
+      conflict = false;
+      return false;
+    }
+
+    /// Look to see if the current cvx type is one of the conflict types listed
+    /// in the supporting data
+    final liveVirusConflicts = scheduleSupportingData
+        .liveVirusConflicts?.liveVirusConflict
+        ?.where((element) => element.current?.cvxAsInt == cvxAsInt)
+        .toList();
+
+    /// If it is not, then there can be no conflicts, and we return false
+    if (liveVirusConflicts?.isEmpty ?? true) {
+      conflict = false;
+      return false;
+    } else {
+      /// We evaluate the previous dose, and we look to see if one of the
+      /// live virus conflicts for the current dose has a previous type that
+      /// matches the type of the previous dose that was actually given
+      final previousDose = doses[index! - 1];
+      final previousIndex = liveVirusConflicts!.indexWhere(
+          (element) => element.previous?.cvxAsInt == previousDose.cvxAsInt);
+
+      /// If not, no conflict, we return false
+      if (previousIndex == -1) {
+        conflict = false;
+        return false;
+      } else {
+        final conflictBeginIntervalDate = previousDose.dateGiven
+            .changeIfNotNull(
+                liveVirusConflicts[previousIndex].conflictBeginInterval);
+        final conflictEndIntervalDate = previousDose.dateGiven.changeIfNotNull(
+            liveVirusConflicts[previousIndex].conflictEndInterval);
+        if (conflictBeginIntervalDate <= dateGiven &&
+            dateGiven < conflictEndIntervalDate) {
+          conflict = true;
+          conflictReason = 'Live Virus Conflict';
+          return true;
+        } else {
+          conflict = false;
+          return false;
+        }
+      }
+    }
   }
 
   final String doseId;

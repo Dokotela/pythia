@@ -51,7 +51,10 @@ class VaxSeries {
                   evaluatedDoses.isEmpty ? null : evaluatedDoses.last,
                   targetDose,
                 )) {
-                  // seriesDose.interval
+                  if (dose.isAllowedInterval(
+                      seriesDose.interval, doses, targetDose)) {
+                    if (dose.isLiveVirusConflict(doses)) {}
+                  }
                 }
               }
             }
