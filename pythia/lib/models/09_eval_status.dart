@@ -1,1 +1,1 @@
-enum EvalStatus { valid, not_valid, sub_standard }
+enum EvalStatus { valid, not_valid, extraneous, sub_standard }

@@ -46,7 +46,15 @@ class VaxDose {
 
     return VaxDose(
       doseId: immunization.id!,
-      volume: null,
+
+      /// Currently we only check if it's obvious in milliliters, anything else
+      /// is ignored
+      /// TODO: check for other measurements
+      volume:
+          immunization.doseQuantity?.code?.toString().toLowerCase() == 'ml' &&
+                  immunization.doseQuantity?.value?.value != null
+              ? immunization.doseQuantity?.value?.value
+              : null,
       dateGiven: dateGiven ?? VaxDate(2999, 01, 01),
       cvx: cvx ?? 'none',
       mvx: mvxFromImmunization(immunization),
@@ -173,7 +181,7 @@ class VaxDose {
             } else {
               validAge = false;
               validAgeReason = 'Too Old';
-              evalStatus = EvalStatus.not_valid;
+              evalStatus = EvalStatus.extraneous;
               return false;
             }
           }
@@ -319,6 +327,7 @@ class VaxDose {
             /// valid
             updatePreferredInterval(valid: false, status: 'Too Soon');
             updateAllowedInterval(valid: false, status: 'Too Soon');
+            evalStatus = EvalStatus.not_valid;
             return false;
 
             /// If it's between the absoluteMinimumIntervalDate and the
@@ -410,6 +419,7 @@ class VaxDose {
             dateGiven < conflictEndIntervalDate) {
           conflict = true;
           conflictReason = 'Live Virus Conflict';
+          evalStatus = EvalStatus.not_valid;
           return true;
         } else {
           conflict = false;
@@ -419,8 +429,107 @@ class VaxDose {
     }
   }
 
+  bool isPreferredType(
+    List<Vaccine>? vaccines,
+    VaxDate birthdate,
+  ) {
+    if (vaccines == null || vaccines.isEmpty) {
+      preferredVaccine = false;
+      preferredVaccineReason = 'No preferred types';
+      return false;
+    } else {
+      final preferredList = vaccines.toList();
+      preferredList.retainWhere((element) => element.cvxAsInt == cvx);
+      if (preferredList.isEmpty) {
+        preferredVaccine = false;
+        preferredVaccineReason = 'Not preferred type';
+        return false;
+      } else {
+        preferredList.retainWhere(
+            (element) => element.mvx?.toLowerCase() == mvx?.toLowerCase());
+        if (preferredList.isEmpty) {
+          preferredVaccine = false;
+          preferredVaccineReason = 'Wrong trade name';
+          return false;
+        } else if (preferredList.length != 1) {
+          throw 'Something wrong with the preferred list';
+        } else {
+          final preferredVax = preferredList.first;
+          final preferableVaccineTypeBeginAgeDate =
+              preferredVax.beginAge == null
+                  ? VaxDate.min()
+                  : birthdate.changeIfNotNull(preferredVax.beginAge);
+          final preferableVaccineTypeEndAgeDate = preferredVax.endAge == null
+              ? VaxDate.max()
+              : birthdate.changeIfNotNull(preferredVax.endAge);
+          final preferableVaccineVolume = preferredVax.volume == null
+              ? null
+              : double.tryParse(preferredVax.volume!);
+          if (preferableVaccineTypeBeginAgeDate <= dateGiven &&
+              dateGiven < preferableVaccineTypeEndAgeDate) {
+            if (preferableVaccineVolume == null || volume == null) {
+              preferredVaccine = true;
+              return true;
+            } else if (volume! >= preferableVaccineVolume) {
+              preferredVaccine = true;
+              return true;
+            } else {
+              preferredVaccine = true;
+              preferredVaccineReason = 'Less Than Recommended Volume';
+              return true;
+            }
+          } else {
+            preferredVaccine = false;
+            preferredVaccineReason =
+                'Administered outside of preferred age range';
+            return false;
+          }
+        }
+      }
+    }
+  }
+
+  bool isAllowedType(
+    List<Vaccine>? vaccines,
+    VaxDate birthdate,
+  ) {
+    if (vaccines == null || vaccines.isEmpty) {
+      allowedVaccine = false;
+      allowedVaccineReason = 'No allowed types';
+      evalStatus = EvalStatus.not_valid;
+      return false;
+    } else {
+      final allowedList = vaccines.toList();
+      allowedList.retainWhere((element) => element.cvxAsInt == cvx);
+      if (allowedList.isEmpty) {
+        allowedVaccine = false;
+        allowedVaccineReason = 'Not allowed type';
+        evalStatus = EvalStatus.not_valid;
+        return false;
+      } else {
+        final allowedVax = allowedList.first;
+        final allowableVaccineTypeBeginAgeDate = allowedVax.beginAge == null
+            ? VaxDate.min()
+            : birthdate.changeIfNotNull(allowedVax.beginAge);
+        final allowableVaccineTypeEndAgeDate = allowedVax.endAge == null
+            ? VaxDate.max()
+            : birthdate.changeIfNotNull(allowedVax.endAge);
+        if (allowableVaccineTypeBeginAgeDate <= dateGiven &&
+            dateGiven < allowableVaccineTypeEndAgeDate) {
+          allowedVaccine = true;
+          return true;
+        } else {
+          allowedVaccine = false;
+          allowedVaccineReason = 'Not allowed type';
+          evalStatus = EvalStatus.not_valid;
+          return false;
+        }
+      }
+    }
+  }
+
   final String doseId;
-  final String? volume;
+  final double? volume;
   final VaxDate dateGiven;
   final String cvx;
   final String? mvx;

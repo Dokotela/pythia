@@ -53,7 +53,15 @@ class VaxSeries {
                 )) {
                   if (dose.isAllowedInterval(
                       seriesDose.interval, doses, targetDose)) {
-                    if (dose.isLiveVirusConflict(doses)) {}
+                    if (!dose.isLiveVirusConflict(doses)) {
+                      dose.isPreferredType(seriesDose.preferableVaccine, dob);
+                      if (dose.isAllowedType(
+                          seriesDose.allowableVaccine, dob)) {
+                        dose.evalStatus = EvalStatus.valid;
+                        dose.targetDoseSatisfied = targetDose;
+                        targetDose++;
+                      }
+                    }
                   }
                 }
               }

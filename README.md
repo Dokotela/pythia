@@ -97,7 +97,7 @@ TABLE 3-6 GENERAL DATE RULES
 | When adding only years, <br> month and days stay constant | 01/01/2000 + 3 years = 01/01/2003 |
 | When adding months, <br> day must stay constant | 01/01/2000 + 6 months = 07/01/2000 <br> 11/01/2000 + 6 months = 05/01/2001 |
 | When adding weeks or days, <br> add that total number of days <br> to the existing date | 01/01/2000 + 3 days = 01/04/2000 <br> 01/01/2000 + 3 weeks = 01/22/2000 <br> 02/01/2000 + 5 weeks = 03/07/2000 (leap year) <br> 02/01/2001 + 5 weeks = 03/08/2001 (not a leap year) |
-| Subtracting days is just subtracting <br> days from the date (I've implemented <br> it as just negative addition | 01/15/2000 – 4 days = 01/11/2000 |
+| Subtracting days is just subtracting <br> days from the date I've implemented <br> it as just negative addition | 01/15/2000 – 4 days = 01/11/2000 |
 | If the calculated date isn't a real date, <br> it is moved to the first of the next month | 03/31/2000 + 6 months = 10/01/2000 (September 31 does not exist) <br> 08/31/20010 + 6 months = 03/01/2001 (February 31 does not exist) |
 | Date must be calculated by first years, <br> then months, then weeks/days <br> (ToDo: not sure I completely did this) | 01/31/2000 + 6 months – 4 days = 07/27/2000 |
 
@@ -228,7 +228,8 @@ Also, a brief note on how FHIR handles this. It's very similar. With the [Immuni
 
 Can the dose be skipped? Not the most complicated logic, but some of the terms, as usual, I found unclear. But the idea behind this is that there are times when you can skip a dose. This may be part of catch-up dosing, or the patient may have aged out. There is also skip logic, at both the set level and the condition level. Sets are lists of conditions. For a list of Conditions, we may have "AND" logic or "OR" logic. This is about what you'd expect. "AND" means that all of the listed conditions have to be true for that Set to be true. "OR" means that if any of the conditions are true, that set is true. Likewise, while it rarely happens, you can have set logic, also "AND" or "OR" with similar specifications. Now, the types of conditions that can define a skip come in 5 choices, so let's look at all the options, shall we?
 
-**CONDITIONAL AGE**
+#### **CONDITIONAL AGE**
+
 | Conditions | Rules ||
 |-----|:-----:|:-----:|
 | Is the Conditional Skip End Age Date > Conditional Skip Reference Date >= Conditional Skip Begin Age Date? | Yes | No |
@@ -238,7 +239,8 @@ You should be given a start and end age for this one. I think what confused me a
 
 Still confused? Try this. Dragonpox is a 3-dose vaccine series. Johnny got a dragonpox vaccine when he was 3 years old. For the first dose in the series, there is an age skip condition, with a start age of 2 years and end age of 4 years. Since Johnny's first dose falls within this period, we can mark the 1st targetDose in the series as skipped. Then, using that same vaccine that Johnny got at 3 years old, we can see if that dose satisfies the 2nd targetDose in the series.
 
-**CONDITIONAL TYPE OF COMPLETED SERIES**
+#### **CONDITIONAL TYPE OF COMPLETED SERIES**
+
 | Conditions | Rules ||
 |-----       |:-----:|:-----:|
 | Does the Conditional Skip Series Group identify a Series Group with at least one series with a status of 'Complete'  | Yes | No |
@@ -246,7 +248,8 @@ Still confused? Try this. Dragonpox is a 3-dose vaccine series. Johnny got a dra
 
 This condition should specify a Series Group. If there is a series in that series group that is complete, this condition has been met.
 
-**CONDITIONAL TYPE OF INTERVAL**
+#### **CONDITIONAL TYPE OF INTERVAL**
+
 | Conditions | Rules |||
 |-----       |:-----:|:-----:|:----:|
 | Has at least one dose been adminstered to the patient?  | Yes | No | No |
@@ -255,13 +258,14 @@ This condition should specify a Series Group. If there is a series in that serie
 
 An interval is given. Does the dose that you're evaluating fall within the given interval compared to the last dose given? Note, this does not specify if the last dose needs to be valid or not, so I'm including them.
 
-**CONDITIONAL TYPE OF VACCINE COUNT BY AGE OR DATE**
+#### **CONDITIONAL TYPE OF VACCINE COUNT BY AGE OR DATE**
 
 | Dose Count Logic | # Doses Given > "doseCount" | # Doses Given == "doseCount" | # Doses Given < "doseCount" |
 |-----       |:-----:|:-----:|:----:|
 | Greater Than | Yes, the condition is met | No, the condition is not met | No, the condition is not met |
 | Equal | No, the condition is not met | Yes, the condition is met | No, the condition is not met |
 | Less Than | No, the condition is not met | No, the condition is not met | Yes, the condition is met |
+
 #### Count by Age
 
 There's a list of CVX codes, a start and end age, a count, a specification of "greater than", "lower than", or "equal to", and a specification of "VALID" or "TOTAL". First, we must look back through the previous doses see if they are included in the list of CVX codes. If they are, we look to see if they have to be valid ("VALID") or we can count any past doses ("TOTAL"). If all of that's true, then we look to see if the dose was given before the end age, or after (or on) the start age. If the answer is yes, then we add that to our total count. Finally, once we have that tally, we check if that count is "greater than", "lower than", or "equal to" the count that is given. If the answer is again yes, then the condition is true.
@@ -321,6 +325,7 @@ This one's easy. Is the date given less than the absolute minimum interval date?
 ### 6.7 Evaluate Live Virus Conflicts
 
 So now we get into where the manual relies too heavily on consistent terminology to make any sense:
+
 1. *Is the current vaccine type of the vaccine dose administered one of the supporting data defined live virus conflict current vaccine types?* Seriously? Who writes like that?
 2. *Is the vaccine type of the previous vaccine dose administered the same as one of the supporting data defined live virus conflict previous vaccine types when the current vaccine dose administered type is the same as the live virus conflict current vaccine type?* Drowning...in...adjectives...
 
@@ -328,3 +333,29 @@ First, it's helpful to know about the supporting data. In the supporting data, t
 
 1. So, the supporting data has a list of live virus conflict types. Is the type of the current dose being evaluated included in this list?
 2. Make a list of each entry where the current type is the same as the dose being evaluated. For each of entry in this list, look at the type defined in the previous field. If it is indeed the same as the previously given dose, then you have to check if there is a conflict using the dates given in that entry.
+
+### 6.8 Evaluate for Preferable Vaccine
+
+There are vaccines that are allowed, and those that are preferred. This checks if the dose being evaluated is one of the latter. It's mostly used for scoring the series during the next few steps, and it DOES makes use of the MVX codes.
+
+| Conditions | Rules |||||
+|------------|:-------:|:-------:|:-------:|:-------:|:-------:|
+| Is the dose given a preferable vaccine for the current target dose in the series? (cvx) | Yes | Yes | Yes | Yes | No |
+| Preferable vaccine type begin age date <= date administered < preferable vaccine type end age date? | Yes | Yes | Yes | No | - |
+| Is the trade name of the current dose the same as the trade name of the preferable vaccine? (mvx) | Yes | Yes | No | - | - |
+| Is the volume of the current dose >= volume of the preferable vaccine | Yes | No | - | - | - |
+| Outcomes | Preferable vaccine | Preferable Vaccine, but <br> Eval Reason: volume administered < than recommended volume | Not preferable, wrong trade name | Not preferable, given out of preferred age range | Not preferable vaccine |
+
+### 6.9 Evaluate for Allowable Vaccine
+
+Similar to the above, except this time it has to be one of these to be considered a valid dose.
+
+| Conditions | Rules |||
+|------------|:-------:|:-------:|:-------:|
+| Is the dose given an allowable vaccine for the current target dose in the series? (cvx) | Yes | Yes | No |
+| Allowable vaccine type begin age date <= date administered < Allowable vaccine type end age date? | Yes | No | - |
+| Outcomes | Allowable vaccine | Not allowable, given outside of allowable age range | Not allowable |
+
+## 7 Forecast Dates and Reasons
+
+Made it through the evaluation process. Next up, creating the forecast.
