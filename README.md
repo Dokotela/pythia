@@ -359,3 +359,25 @@ Similar to the above, except this time it has to be one of these to be considere
 ## 7 Forecast Dates and Reasons
 
 Made it through the evaluation process. Next up, creating the forecast.
+
+### 7.1 Evaluate Conditional Skip
+
+We've already gone through this. There's a couple of rule changes, like the context is Forecast instaed of Evaluation, and we use a different reference date. Otherwise, it's the same logic we used during the Evaluation process.
+
+### 7.2 Determine Evidence of Immunity
+
+We use this information to determine if the patient has evidence of immunity. It's important to note, the *guidelineCode* and *exclusionCode* are the same as *observationCode*. Why they decided to give them different names is beyond me. Anyway, we use these codes to see if the patient has any conditions that apply for immunity.
+
+| Conditions | Rules |||||
+|------------|:-----:|:-----:|:----:|:----:|:----:|
+| Does the patient have a condition that's identified in one of the guidelineCodes for that series? | Yes | No | No | No | No |
+| Is the patient's DOB < immunity birth date? | - | Yes | Yes | Yes | No |
+|Does the patient have an exclusion condition? | - | Yes | No | No | - |
+|Is the patient's country of birth the same as the birthCountry? | - | - | Yes | No | - |
+|||||||
+| Evidence of Immunity? | Yes | No | Yes | No | No | 
+
+I think there are two things to note about this logic (please let me know if you disagree with it). Also, the order here is important, but aligns with the CDC guidelines. The first is that if the patient has **ANY** immunity defined condition, then they have evidence of immunity. Otherwise, they **MUST** have been born prior to the defined birthdate. The immunity exclusion criteria must then be reviewed. If the patient has **ANY** of these criteria, then they **DO NOT** have evidence of immunity. Lastly, they must be born in the designated country. 
+
+### 7.3 Determine Contraindications
+

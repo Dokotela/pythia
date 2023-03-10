@@ -18,6 +18,8 @@ Map<String, VaxAntigen> antigenMap(
         observations: observations,
         dob: dob,
         assessmentDate: assessmentDate,
+        contraindications:
+            data.contraindications?.vaccineGroup?.contraindication ?? [],
       );
     }
   }

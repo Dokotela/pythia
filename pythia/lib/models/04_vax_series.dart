@@ -16,6 +16,9 @@ class VaxSeries {
     return index == -1 ? null : evaluatedDoses[index];
   }
 
+  VaxDose? get currentDose =>
+      doses.isEmpty ? null : doses[evaluatedDoses.length];
+
   void evaluate() {
     /// We can't evaluate if there are no doses
     if (doses.isNotEmpty) {
@@ -26,9 +29,19 @@ class VaxSeries {
 
       /// For the evaluation we have to evaluate each dose in the series
       for (final seriesDose in series.seriesDose ?? <SeriesDose>[]) {
+        /// We only run through this while we still have doses to evaluate
+        if (evaluatedDoses.length == doses.length) {
+          break;
+        }
+
         /// And for each dose in the series, we look at the doses that were
         /// actually given to the patient to see if any of them are valid
-        for (final dose in doses) {
+        /// We start at the next dose, so if evaluatedDoses has a length of 2,
+        /// meaning 2 doses have been evaluated, we look at index 2 of doses,
+        /// which is the third dose given
+        for (var i = evaluatedDoses.length; i < doses.length; i++) {
+          final dose = doses[i];
+
           /// If the evalStatus of the dose is not null, this should mean that
           /// during the first step, checking if it was substandard for some
           /// reason, we found that it was, and thus this dose cannot be
@@ -38,7 +51,7 @@ class VaxSeries {
             /// skipped, we record that targetDose as being completed,
             /// increment the targetDose by 1, and break from this for loop
             /// because we are no longer trying to satisfy that target dose
-            if (canSkip(seriesDose, dose.dateGiven)) {
+            if (canSkip(seriesDose, SkipContext.evaluation, dose.dateGiven)) {
               evaluatedTargetDose[targetDose] = 'Skipped';
               targetDose++;
               break;
@@ -59,12 +72,16 @@ class VaxSeries {
                           seriesDose.allowableVaccine, dob)) {
                         dose.evalStatus = EvalStatus.valid;
                         dose.targetDoseSatisfied = targetDose;
+                        evaluatedDoses.add(dose);
+                        evaluatedTargetDose[targetDose] = 'Satisfied';
                         targetDose++;
+                        break;
                       }
                     }
                   }
                 }
               }
+              evaluatedDoses.add(dose);
             }
           }
         }
@@ -72,11 +89,50 @@ class VaxSeries {
     }
   }
 
-  bool canSkip(SeriesDose seriesDose, VaxDate dateGiven) {
+  void forecast(
+      {VaxDate? assessmentDate,
+      required List<GroupContraindication> contraindications}) {
+    assessmentDate ??= VaxDate.now();
+    for (var i = targetDose; i < (series.seriesDose?.length ?? 0); i++) {
+      final seriesDose = series.seriesDose![i];
+
+      /// Normal skip check, except this time for forecast
+      if (canSkip(seriesDose, SkipContext.forecast, assessmentDate)) {
+        evaluatedTargetDose[targetDose] = 'Skipped';
+        targetDose++;
+      } else {
+        break;
+      }
+    }
+    contraindicated(assessmentDate, contraindications);
+  }
+
+  void contraindicated(
+      VaxDate assessmentDate, List<GroupContraindication> contraindications) {
+    /// Check each of the contraindications (we already ensured they apply
+    /// to the patient in a previous step)
+    for (final contraindication in contraindications) {
+      /// If the dates are appropriate to apply to a patient, we note that
+      /// this dose is contraindicated, and stop checking
+      if (dob.changeIfNotNullElseMin(contraindication.beginAge) <=
+              assessmentDate &&
+          assessmentDate <
+              dob.changeIfNotNullElseMax(contraindication.endAge)) {
+        isContraindicated = true;
+        break;
+      }
+    }
+  }
+
+  bool canSkip(
+    SeriesDose seriesDose,
+    SkipContext skipContext,
+    VaxDate evalDate,
+  ) {
     /// Look in the skip conditions, just a note, because I'm trying to mirror
     /// what the XML would like like if transformed to JSON, I've left this as
     /// a list. What it should really be is a map. It's possible there could
-    /// be a conditionalSkip entry for evaluation, forecase, and/or both.
+    /// be a conditionalSkip entry for evaluation, forecast, and/or both.
     /// The outcome of that though, is that if there is a conditionalSkip entry
     /// that is true, then that means we can skip the dose for what we're doing,
     /// at least as long as it's a context that applies
@@ -92,9 +148,9 @@ class VaxSeries {
         /// logic, it means ALL sets sets must b true
         final andLogic = conditionalSkip.setLogic?.toLowerCase() == 'and';
         for (final conditionSet in conditionalSkip.set_ ?? <VaxSet>[]) {
-          final skip = skipSet(conditionSet);
+          final skip = skipSet(conditionSet, skipContext, evalDate);
 
-          /// If that set DOES NOT qualifty to skip and we're using AND logic,
+          /// If that set DOES NOT qualify to skip and we're using AND logic,
           /// then this whole conditional skip is false,
           if (!skip && andLogic) {
             return false;
@@ -117,7 +173,7 @@ class VaxSeries {
     return false;
   }
 
-  bool skipSet(VaxSet set) {
+  bool skipSet(VaxSet set, SkipContext skipContext, VaxDate evalDate) {
     /// Check and see if we're using AND or OR logic
     final andLogic = set.conditionLogic?.toLowerCase() == 'and';
 
@@ -141,23 +197,17 @@ class VaxSeries {
           {
             /// The first date the patient was at an appropriate age for this skip
             /// condition to possibly apply
-            final conditionalSkipBeginAgeDate = condition.beginAge == null
-                ? VaxDate(1900, 01, 01)
-                : dob.changeIfNotNull(condition.beginAge);
+            final conditionalSkipBeginAgeDate =
+                dob.changeIfNotNullElseMin(condition.beginAge);
 
             /// The last date the patient was at an appropriate age for this skip
             /// condition to possibly apply
-            final conditionalSkipEndAgeDate = condition.endAge == null
-                ? VaxDate(29990, 12, 31)
-                : dob.changeIfNotNull(condition.beginAge);
+            final conditionalSkipEndAgeDate =
+                dob.changeIfNotNullElseMax(condition.beginAge);
 
             /// The reference date we're going to use to check if this skip
             /// condition actually DOES apply
-            // TODO(Dokotela) - this needs to be changed for forecasts
-            final conditionalSkipReferenceDate =
-                skipContext == SkipContext.evaluation
-                    ? doses.first.dateGiven
-                    : VaxDate.now();
+            final conditionalSkipReferenceDate = evalDate;
 
             /// Reference TABLE 6-6 CONDITIONAL TYPE OF AGE – IS THE CONDITION MET?
             conditionMet =
@@ -181,16 +231,15 @@ class VaxSeries {
             if (targetDose == 0) {
               conditionMet = false;
             } else {
-              final conditionalSkipIntervalDate =
-                  lastCompleted!.dateGiven.changeIfNotNull(condition.interval);
+              /// If we can't find a date to compare to, then we assume this
+              /// skip condition doesn't apply, and we set the compare date
+              /// to maximum
+              final conditionalSkipIntervalDate = lastCompleted!.dateGiven
+                  .changeIfNotNullElseMax(condition.interval);
 
               /// The reference date we're going to use to check if this skip condition
               /// actually DOES apply
-              // TODO(Dokotela) - this needs to be changed for forecasts
-              final conditionalSkipReferenceDate =
-                  skipContext == SkipContext.evaluation
-                      ? evaluatedDoses.last.dateGiven
-                      : VaxDate.now();
+              final conditionalSkipReferenceDate = evalDate;
 
               /// Reference TABLE 6-8 CONDITIONAL TYPE OF INTERVAL – IS THE CONDITION MET?
               conditionMet =
@@ -201,12 +250,10 @@ class VaxSeries {
         case 'Vaccine Count by Age':
           {
             /// Dates we need for calculations
-            final conditionalSkipBeginAgeDate = condition.beginAge == null
-                ? VaxDate(1900, 01, 01)
-                : dob.changeIfNotNull(condition.beginAge);
-            final conditionalSkipEndAgeDate = condition.endAge == null
-                ? VaxDate(29990, 12, 31)
-                : dob.changeIfNotNull(condition.beginAge);
+            final conditionalSkipBeginAgeDate =
+                dob.changeIfNotNullElseMin(condition.beginAge);
+            final conditionalSkipEndAgeDate =
+                dob.changeIfNotNullElseMax(condition.beginAge);
 
             /// Total count
             int totalCount = 0;
@@ -370,5 +417,5 @@ class VaxSeries {
   Map<int, String> evaluatedTargetDose = {};
   VaxDate assessmentDate;
   VaxDate dob;
-  SkipContext skipContext = SkipContext.evaluation;
+  bool isContraindicated = false;
 }

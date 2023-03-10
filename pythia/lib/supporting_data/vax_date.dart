@@ -86,8 +86,14 @@ class VaxDate extends DateTime {
   VaxDate change(String howMuch) =>
       howMuch == '' ? this : _parseDateString(howMuch);
 
-  VaxDate changeIfNotNull(String? howMuch) =>
-      howMuch == null || howMuch == '' ? VaxDate(1900, 1, 1) : change(howMuch);
+  VaxDate changeIfNotNullElse(String? howMuch, VaxDate otherwise) =>
+      howMuch == null || howMuch == '' ? otherwise : change(howMuch);
+
+  VaxDate changeIfNotNullElseMax(String? howMuch) =>
+      changeIfNotNullElse(howMuch, VaxDate.max());
+
+  VaxDate changeIfNotNullElseMin(String? howMuch) =>
+      changeIfNotNullElse(howMuch, VaxDate.min());
 
   VaxDate _parseDateString(String change) {
     var years = 0, months = 0, weeks = 0, days = 0, posNeg = 1;

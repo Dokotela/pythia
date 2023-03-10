@@ -1,5 +1,4 @@
 import 'package:fhir/r4.dart';
-import 'package:pythia/providers/observations.dart';
 import 'package:riverpod/riverpod.dart';
 
 import '../pythia.dart';
@@ -49,7 +48,7 @@ class VaxDose {
 
       /// Currently we only check if it's obvious in milliliters, anything else
       /// is ignored
-      /// TODO: check for other measurements
+      /// TODO(Dokotela): check for other measurements
       volume:
           immunization.doseQuantity?.code?.toString().toLowerCase() == 'ml' &&
                   immunization.doseQuantity?.value?.value != null
@@ -316,9 +315,9 @@ class VaxDose {
           updatePreferredInterval(valid: false);
         } else {
           final absoluteMinimumIntervalDate =
-              referenceDate.changeIfNotNull(interval.absMinInt);
+              referenceDate.changeIfNotNullElseMin(interval.absMinInt);
           final minimumIntervaldate =
-              referenceDate.changeIfNotNull(interval.minInt);
+              referenceDate.changeIfNotNullElseMin(interval.minInt);
 
           /// If it's prior to the absoluteMinimumIntervalDate then it's not
           /// a valid inteval
@@ -411,10 +410,11 @@ class VaxDose {
         return false;
       } else {
         final conflictBeginIntervalDate = previousDose.dateGiven
-            .changeIfNotNull(
+            .changeIfNotNullElseMin(
                 liveVirusConflicts[previousIndex].conflictBeginInterval);
-        final conflictEndIntervalDate = previousDose.dateGiven.changeIfNotNull(
-            liveVirusConflicts[previousIndex].conflictEndInterval);
+        final conflictEndIntervalDate = previousDose.dateGiven
+            .changeIfNotNullElseMax(
+                liveVirusConflicts[previousIndex].conflictEndInterval);
         if (conflictBeginIntervalDate <= dateGiven &&
             dateGiven < conflictEndIntervalDate) {
           conflict = true;
@@ -458,10 +458,10 @@ class VaxDose {
           final preferableVaccineTypeBeginAgeDate =
               preferredVax.beginAge == null
                   ? VaxDate.min()
-                  : birthdate.changeIfNotNull(preferredVax.beginAge);
+                  : birthdate.changeIfNotNullElseMin(preferredVax.beginAge);
           final preferableVaccineTypeEndAgeDate = preferredVax.endAge == null
               ? VaxDate.max()
-              : birthdate.changeIfNotNull(preferredVax.endAge);
+              : birthdate.changeIfNotNullElseMax(preferredVax.endAge);
           final preferableVaccineVolume = preferredVax.volume == null
               ? null
               : double.tryParse(preferredVax.volume!);
@@ -510,10 +510,10 @@ class VaxDose {
         final allowedVax = allowedList.first;
         final allowableVaccineTypeBeginAgeDate = allowedVax.beginAge == null
             ? VaxDate.min()
-            : birthdate.changeIfNotNull(allowedVax.beginAge);
+            : birthdate.changeIfNotNullElseMin(allowedVax.beginAge);
         final allowableVaccineTypeEndAgeDate = allowedVax.endAge == null
             ? VaxDate.max()
-            : birthdate.changeIfNotNull(allowedVax.endAge);
+            : birthdate.changeIfNotNullElseMax(allowedVax.endAge);
         if (allowableVaccineTypeBeginAgeDate <= dateGiven &&
             dateGiven < allowableVaccineTypeEndAgeDate) {
           allowedVaccine = true;

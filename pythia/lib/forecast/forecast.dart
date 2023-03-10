@@ -1,5 +1,4 @@
 import 'package:fhir/r4.dart';
-import 'package:pythia/providers/observations.dart';
 import 'package:pythia/pythia.dart';
 import 'package:riverpod/riverpod.dart';
 

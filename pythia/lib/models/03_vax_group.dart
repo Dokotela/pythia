@@ -26,10 +26,18 @@ class VaxGroup {
     series.forEach((element) => element.evaluate());
   }
 
+  void forecast(
+      bool evidenceOfImmunity, List<GroupContraindication> contraindications) {
+    this.evidenceOfImmunity = evidenceOfImmunity;
+    series.forEach(
+        (element) => element.forecast(contraindications: contraindications));
+  }
+
   String targetDisease;
   String vaccineGroup;
   String vaccineGroupName;
   List<VaxSeries> series;
   VaxDate assessmentDate;
   VaxDate dob;
+  bool evidenceOfImmunity = false;
 }

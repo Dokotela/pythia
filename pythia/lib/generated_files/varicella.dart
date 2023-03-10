@@ -19,7 +19,7 @@ final varicella = AntigenSupportingData.fromJson({
             }
         ],
         "dateOfBirth": {
-            "immunityBirthDate": "01/01/1980",
+            "immunityBirthDate": "1980-01-01",
             "birthCountry": "U.S.",
             "exclusion": [
                 {

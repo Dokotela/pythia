@@ -55,12 +55,31 @@ Immunity? immunity(String? immunityString) {
       if (VaxDate.fromYYYYMMDD(i[1]!.toString()) != VaxDate.max()) {
         if (date != i[1]!.toString()) {
           date = valueToString(i[1]!);
+          print(date);
+          var dateTime =
+              date == null || date == '' ? null : DateTime.tryParse(date);
+          print(dateTime);
+          if (dateTime == null && date != null) {
+            var dateList = date.split('-');
+            print(dateList);
+            if (dateList.length != 3) {
+              dateList = date.split('/');
+            }
+            print(dateList);
+            print(dateList.length == 3);
+            print('${dateList[2]}/${dateList[0]}/${dateList[1]}');
+            if (dateList.length == 3) {
+              dateTime = DateTime.tryParse(
+                  '${dateList[2]}-${dateList[0]}-${dateList[1]}');
+            }
+            print(dateTime);
+          }
           country = valueToString(i[2]!);
 
           /// add the immunity data
           immunity = immunity.copyWith(
             dateOfBirth: DateOfBirth(
-              immunityBirthDate: date,
+              immunityBirthDate: dateTime?.toString().substring(0, 10),
               birthCountry: country,
               exclusion: [],
             ),

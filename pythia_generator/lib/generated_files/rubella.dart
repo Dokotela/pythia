@@ -11,7 +11,7 @@ final rubella = AntigenSupportingData.fromJson({
             }
         ],
         "dateOfBirth": {
-            "immunityBirthDate": "01/01/1957",
+            "immunityBirthDate": "1957-01-01",
             "exclusion": [
                 {
                     "exclusionCode": "055",
