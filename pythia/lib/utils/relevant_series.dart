@@ -52,11 +52,12 @@ List<Series> relevantSeries(
             if (indicationIndex == -1) {
               return false;
             } else {
-              return dob.minIfNull(
+              return dob.changeIfNotNullElseMin(
                           series.indication![indicationIndex].beginAge) <=
                       assessmentDate &&
                   assessmentDate <
-                      dob.maxIfNull(series.indication![indicationIndex].endAge);
+                      dob.changeIfNotNullElseMax(
+                          series.indication![indicationIndex].endAge);
             }
           });
           return obsIndex != -1;

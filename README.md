@@ -375,9 +375,25 @@ We use this information to determine if the patient has evidence of immunity. It
 |Does the patient have an exclusion condition? | - | Yes | No | No | - |
 |Is the patient's country of birth the same as the birthCountry? | - | - | Yes | No | - |
 |||||||
-| Evidence of Immunity? | Yes | No | Yes | No | No | 
+| Evidence of Immunity? | Yes | No | Yes | No | No |
 
-I think there are two things to note about this logic (please let me know if you disagree with it). Also, the order here is important, but aligns with the CDC guidelines. The first is that if the patient has **ANY** immunity defined condition, then they have evidence of immunity. Otherwise, they **MUST** have been born prior to the defined birthdate. The immunity exclusion criteria must then be reviewed. If the patient has **ANY** of these criteria, then they **DO NOT** have evidence of immunity. Lastly, they must be born in the designated country. 
+I think there are two things to note about this logic (please let me know if you disagree with it). Also, the order here is important, but aligns with the CDC guidelines. The first is that if the patient has **ANY** immunity defined condition, then they have evidence of immunity. Otherwise, they **MUST** have been born prior to the defined birthdate. The immunity exclusion criteria must then be reviewed. If the patient has **ANY** of these criteria, then they **DO NOT** have evidence of immunity. Lastly, they must be born in the designated country.
 
 ### 7.3 Determine Contraindications
 
+This one actually isn't too bad either. There are just a few things to note. The first is that contraindications come in Groups or Vaccines. If a patient has a contraindication at the group level, that means any vaccine that pertains to that Antigen is contraindicated. Contraindications at the vaccine level only apply to a single Vaccine, so just because one is contraindicated doesn't mean taht they all are. Also, for the logic is slightly out of order compared to the CDC booklet, and I don't calculate any vaccine contraindications if there's already a group/antigen level contraindication.
+
+### 7.4 Determine Forecast Need
+
+This is summarizing the information we have up to this point about each of the series and using it to decide if the patient needs another dose.
+| Conditions | Rules |||||||
+|------------|:-----:|:-----:|:----:|:----:|:----:|:----:|:----:|
+| Has the patient completed all doses in the series? <br> Is there at least one target dose 'not satisfied'? | Yes | No | No | - | - | - | - |
+| Is there at least one dose with a status of satisfied? | - | Yes | No | - | - | - | - |
+| Is there evidence of immunity? | No | - | - | Yes | - | - | - |
+| Is the series contraindicated? | No | - | - | - | Yes | - | - |
+| Is the assessment date < maximum age date? | Yes | - | - | - | - | No | - |
+Is the assessment date <= seasonal recommendation end date? | Yes | - | - | - | - | - |
+| Needs another dose? | Yes | No | No | No | No | No | No |
+| Series Status | 'not complete' | 'complete' | 'not recommended' | 'immune' | 'contraindicated' | 'aged out' | 'not complete' |
+| Forecast Reason | - | 'series is complete' | 'not recommended due to past immunization hx' | 'patient has evidence of immunity' | 'patient has contraindication' | 'patient has exceeded maximum age' | 'past seasonal recommendation end date' |

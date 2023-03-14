@@ -20,6 +20,10 @@ class VaxSeries {
       doses.isEmpty ? null : doses[evaluatedDoses.length];
 
   void evaluate() {
+    for (var i = 0; i < (series.seriesDose?.length ?? 0); i++) {
+      evaluatedTargetDose[i] = 'Not Satisfied';
+    }
+
     /// We can't evaluate if there are no doses
     if (doses.isNotEmpty) {
       /// Keep track of what the dose's index is in all of the doses given
@@ -89,9 +93,7 @@ class VaxSeries {
     }
   }
 
-  void forecast(
-      {VaxDate? assessmentDate,
-      required List<GroupContraindication> contraindications}) {
+  void evaluateConditionalSkip({VaxDate? assessmentDate}) {
     assessmentDate ??= VaxDate.now();
     for (var i = targetDose; i < (series.seriesDose?.length ?? 0); i++) {
       final seriesDose = series.seriesDose![i];
@@ -104,22 +106,56 @@ class VaxSeries {
         break;
       }
     }
-    contraindicated(assessmentDate, contraindications);
   }
 
-  void contraindicated(
-      VaxDate assessmentDate, List<GroupContraindication> contraindications) {
+  void determineContraindications({
+    VaxDate? assessmentDate,
+    required List<VaccineContraindication> vaccineContraindications,
+  }) {
+    assessmentDate ??= VaxDate.now();
+    final preferableVaccines =
+        series.seriesDose?[targetDose].preferableVaccine ?? <Vaccine>[];
+
     /// Check each of the contraindications (we already ensured they apply
     /// to the patient in a previous step)
-    for (final contraindication in contraindications) {
+    final container = ProviderContainer();
+    final currentObservations =
+        container.read(observationsProvider).observation?.toList() ??
+            <VaxObservation>[];
+    // TODO(Dokotela): if there's no date associated with an observation, do
+    // we assume it's active and apply it? Currently, we do.
+    /// We check and see which of the patient's observations are applicable for
+    /// the given assessmentDate
+    currentObservations.retainWhere((element) =>
+        VaxDate.minIfNullDateTime(element.period?.start?.value) <=
+            assessmentDate! &&
+        assessmentDate < VaxDate.maxIfNullDateTime(element.period?.end?.value));
+
+    /// Get the list of the ints associated with the observations
+    final obsInts = currentObservations.map((e) => e.codeAsInt ?? -1).toList();
+    obsInts.removeWhere((element) => element == -1);
+
+    /// We remove any contraindications that are not applicable, by ensuring that
+    /// their code appears in the list of current observations of the patient
+    final currentContraindications = vaccineContraindications
+        .where((element) => obsInts.contains(element.codeAsInt));
+    final contraindicatedVaccines = currentContraindications
+        .expand((element) => element.contraindicatedVaccine ?? <Vaccine>[])
+        .toSet();
+
+    for (final vaccineContraindication in contraindicatedVaccines) {
       /// If the dates are appropriate to apply to a patient, we note that
       /// this dose is contraindicated, and stop checking
-      if (dob.changeIfNotNullElseMin(contraindication.beginAge) <=
+      if (dob.changeIfNotNullElseMin(vaccineContraindication.beginAge) <=
               assessmentDate &&
           assessmentDate <
-              dob.changeIfNotNullElseMax(contraindication.endAge)) {
-        isContraindicated = true;
-        break;
+              dob.changeIfNotNullElseMax(vaccineContraindication.endAge)) {
+        preferableVaccines.removeWhere(
+            (element) => element.cvxAsInt == vaccineContraindication.cvxAsInt);
+        if (preferableVaccines.isEmpty) {
+          isContraindicated = true;
+          break;
+        }
       }
     }
   }
@@ -317,10 +353,10 @@ class VaxSeries {
           {
             final conditionalSkipStartDate = condition.startDate == null
                 ? null
-                : VaxDate.fromString(condition.startDate!);
+                : VaxDate.fromStringMax(condition.startDate!);
             final conditionalSkipEndDate = condition.endDate == null
                 ? null
-                : VaxDate.fromString(condition.endDate!);
+                : VaxDate.fromStringMin(condition.endDate!);
 
             /// Total count
             int totalCount = 0;
@@ -409,6 +445,8 @@ class VaxSeries {
     return andLogic ? true : false;
   }
 
+  void determineForecastNeed() {}
+
   String targetDisease;
   int targetDose = 0;
   Series series;
@@ -418,4 +456,7 @@ class VaxSeries {
   VaxDate assessmentDate;
   VaxDate dob;
   bool isContraindicated = false;
+  String seriesStatus = 'Not Complete';
+  bool shouldRecieveAnotherDose = true;
+  String forecastReason = '';
 }

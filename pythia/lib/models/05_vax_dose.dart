@@ -117,10 +117,8 @@ class VaxDose {
       final ageIndex = vaxAge.length == 1
           ? 0
           : vaxAge.indexWhere((element) =>
-              VaxDate.fromString(element.effectiveDate ?? '1900-01-01') <=
-                  dateGiven &&
-              VaxDate.fromString(element.cessationDate ?? '2999-12-31') >=
-                  dateGiven);
+              VaxDate.maxIfNullString(element.effectiveDate) <= dateGiven &&
+              VaxDate.maxIfNullString(element.cessationDate) >= dateGiven);
       if (ageIndex == -1) {
         throw 'More than 1 age restriction, but no appropriate effective or '
             'cessation dates found';

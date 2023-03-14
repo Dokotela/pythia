@@ -8,7 +8,8 @@ class VaxAntigen {
     required this.vaccineGroupName,
     required this.groups,
     required this.dob,
-    required this.contraindications,
+    required this.groupContraindications,
+    required this.vaccineContraindications,
     required this.assessmentDate,
   });
 
@@ -18,7 +19,8 @@ class VaxAntigen {
     required VaxObservations observations,
     required VaxDate dob,
     required VaxDate assessmentDate,
-    required List<GroupContraindication> contraindications,
+    required List<GroupContraindication> groupContraindications,
+    required List<VaccineContraindication> vaccineContraindications,
   }) {
     final Map<String, VaxGroup> groups = <String, VaxGroup>{};
     relevantSeries(gender, series, observations, dob, assessmentDate)
@@ -38,17 +40,14 @@ class VaxAntigen {
       groups[nextGroup]!.newSeries(element);
     });
 
-    final newContraindications = contraindications.toList();
-    newContraindications.retainWhere((element) =>
-        observations.codesAsInt?.contains(element.codeAsInt) ?? false);
-
     return VaxAntigen._(
       targetDisease: series.first.targetDisease!,
       vaccineGroupName:
           series.first.vaccineGroup ?? series.first.targetDisease!,
       groups: groups,
       dob: dob,
-      contraindications: newContraindications,
+      groupContraindications: groupContraindications,
+      vaccineContraindications: vaccineContraindications,
       assessmentDate: assessmentDate,
     );
   }
@@ -69,23 +68,24 @@ class VaxAntigen {
     /// We do these slightly out of order because they don't impact each other
     /// and it lets me pass the immunity and contraindication during the forcast
     immunity();
-
-    for (final key in groups.keys) {
-      groups[key]!.forecast(evidenceOfImmunity, contraindications);
-    }
+    contraindicated();
+    if (!contraindication)
+      for (final key in groups.keys) {
+        groups[key]!.forecast(evidenceOfImmunity, vaccineContraindications);
+      }
   }
 
   void contraindicated() {
     /// Check each of the contraindications (we already ensured they apply
     /// to the patient in a previous step)
-    for (final contraindication in contraindications) {
+    for (final contraindication in groupContraindications) {
       /// If the dates are appropriate to apply to a patient, we note that
       /// this dose is contraindicated, and stop checking
       if (dob.changeIfNotNullElseMin(contraindication.beginAge) <=
               assessmentDate &&
           assessmentDate <
               dob.changeIfNotNullElseMax(contraindication.endAge)) {
-        isContraindicated = true;
+        this.contraindication = true;
         break;
       }
     }
@@ -118,7 +118,7 @@ class VaxAntigen {
       if (dob <
           (immunityBirthdate == null
               ? VaxDate.max()
-              : VaxDate.fromString(
+              : VaxDate.fromStringMax(
                   ag!.immunity!.dateOfBirth!.immunityBirthDate!))) {
         /// If it does, then we have to check and see if they have
         /// any exclusion criteria
@@ -150,7 +150,8 @@ class VaxAntigen {
   Map<String, VaxGroup> groups;
   VaxDate dob;
   bool evidenceOfImmunity = false;
-  List<GroupContraindication> contraindications;
+  List<GroupContraindication> groupContraindications;
+  List<VaccineContraindication> vaccineContraindications;
   VaxDate assessmentDate;
-  bool isContraindicated = false;
+  bool contraindication = false;
 }

@@ -27,10 +27,15 @@ class VaxGroup {
   }
 
   void forecast(
-      bool evidenceOfImmunity, List<GroupContraindication> contraindications) {
+    bool evidenceOfImmunity,
+    List<VaccineContraindication> vaccineContraindications,
+  ) {
     this.evidenceOfImmunity = evidenceOfImmunity;
-    series.forEach(
-        (element) => element.forecast(contraindications: contraindications));
+    series.forEach((element) {
+      element.evaluateConditionalSkip();
+      element.determineContraindications(
+          vaccineContraindications: vaccineContraindications);
+    });
   }
 
   String targetDisease;

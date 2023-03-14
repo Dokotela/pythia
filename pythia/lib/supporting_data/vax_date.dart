@@ -7,25 +7,61 @@ class VaxDate extends DateTime {
   VaxDate.fromDateTime(DateTime dateTime)
       : super(dateTime.year, dateTime.month, dateTime.day);
 
-  VaxDate.fromString(String date)
+  VaxDate.fromStringMax(String date)
       : super(
           DateTime.tryParse(date)?.year ?? 2999,
           DateTime.tryParse(date)?.month ?? 12,
           DateTime.tryParse(date)?.day ?? 31,
         );
 
-  VaxDate.fromJson(String date)
-      : super(DateTime.parse(date).year, DateTime.parse(date).month,
-            DateTime.parse(date).day);
-
-  VaxDate.fromMMDDYYYY(String date)
+  VaxDate.fromStringMin(String date)
       : super(
-          int.tryParse(date.split('/')[2]) ?? 2999,
-          int.tryParse(date.split('/')[0]) ?? 12,
-          int.tryParse(date.split('/')[1]) ?? 31,
+          DateTime.tryParse(date)?.year ?? 1900,
+          DateTime.tryParse(date)?.month ?? 01,
+          DateTime.tryParse(date)?.day ?? 01,
         );
 
-  VaxDate.fromYYYYMMDD(String date)
+  VaxDate.fromJson(String date)
+      : super(
+          DateTime.parse(date).year,
+          DateTime.parse(date).month,
+          DateTime.parse(date).day,
+        );
+
+  VaxDate.fromMMDDYYYYMax(String date)
+      : super(
+          int.tryParse(date.split('/')[2]) ??
+              int.tryParse(date.split('-')[2]) ??
+              2999,
+          int.tryParse(date.split('/')[0]) ??
+              int.tryParse(date.split('-')[0]) ??
+              12,
+          int.tryParse(date.split('/')[1]) ??
+              int.tryParse(date.split('-')[1]) ??
+              31,
+        );
+
+  VaxDate.fromMMDDYYYYMin(String date)
+      : super(
+          int.tryParse(date.split('/')[2]) ??
+              int.tryParse(date.split('-')[2]) ??
+              1900,
+          int.tryParse(date.split('/')[0]) ??
+              int.tryParse(date.split('-')[0]) ??
+              01,
+          int.tryParse(date.split('/')[1]) ??
+              int.tryParse(date.split('-')[1]) ??
+              01,
+        );
+
+  VaxDate.fromYYYYMMDDMax(String date)
+      : super(
+          int.tryParse(date.substring(0, 4)) ?? 2999,
+          int.tryParse(date.substring(4, 6)) ?? 12,
+          int.tryParse(date.substring(6, 8)) ?? 31,
+        );
+
+  VaxDate.fromYYYYMMDDMin(String date)
       : super(
           int.tryParse(date.substring(0, 4)) ?? 1900,
           int.tryParse(date.substring(4, 6)) ?? 01,
@@ -54,16 +90,33 @@ class VaxDate extends DateTime {
 
   Date toFhirDate() => Date(toDateTime());
 
-  VaxDate minIfNull(String? dateChange) =>
-      dateChange == null || dateChange == ''
-          ? VaxDate(1900, 1, 1)
-          : change(dateChange);
+  VaxDate.minIfNullString(String? date)
+      : super(
+          date == null ? 1900 : DateTime.tryParse(date)?.year ?? 1900,
+          date == null ? 01 : DateTime.tryParse(date)?.month ?? 01,
+          date == null ? 01 : DateTime.tryParse(date)?.day ?? 01,
+        );
 
-  VaxDate maxIfNull(String? dateChange) =>
-      dateChange == null || dateChange == ''
-          ? VaxDate(2999, 12, 31)
-          : change(dateChange);
+  VaxDate.minIfNullDateTime(DateTime? date)
+      : super(
+          date == null ? 1900 : date.year,
+          date == null ? 01 : date.month,
+          date == null ? 01 : date.day,
+        );
 
+  VaxDate.maxIfNullString(String? date)
+      : super(
+          date == null ? 2999 : DateTime.tryParse(date)?.year ?? 2999,
+          date == null ? 12 : DateTime.tryParse(date)?.month ?? 12,
+          date == null ? 31 : DateTime.tryParse(date)?.day ?? 31,
+        );
+
+  VaxDate.maxIfNullDateTime(DateTime? date)
+      : super(
+          date == null ? 2999 : date.year,
+          date == null ? 12 : date.month,
+          date == null ? 31 : date.day,
+        );
   bool operator <(VaxDate vaxDate) => (DateTime(year, month, day)
       .isBefore(DateTime(vaxDate.year, vaxDate.month, vaxDate.day)));
 
