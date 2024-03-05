@@ -1,4 +1,4 @@
-import 'package:fhir/r4.dart';
+import 'package:fhir/r5.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'vax_observations.freezed.dart';

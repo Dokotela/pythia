@@ -1,4 +1,4 @@
-import 'package:fhir/r4.dart';
+import 'package:fhir/r5.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../pythia.dart';
@@ -30,7 +30,7 @@ class PatientForAssessment extends _$PatientForAssessment {
       if (parameter.name == 'assesmentDate' &&
           parameter.valueDate != null &&
           parameter.valueDate!.isValid) {
-        assessmentDate = parameter.valueDate!.value!;
+        assessmentDate = parameter.valueDate!.value;
       } else if (parameter.resource != null) {
         if (parameter.resource is Patient) {
           patient = parameter.resource!.newIdIfNoId() as Patient;
@@ -40,7 +40,7 @@ class PatientForAssessment extends _$PatientForAssessment {
                 .addError('There was no birthdate given for the patient');
             return null;
           } else {
-            birthdate = VaxDate.fromDateTime(patient.birthDate!.value!);
+            birthdate = VaxDate.fromDateTime(patient.birthDate!.value);
           }
         } else if (parameter.resource is Condition) {
           conditions.add(parameter.resource!.newIdIfNoId() as Condition);

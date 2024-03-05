@@ -1,4 +1,4 @@
-import 'package:fhir/r4.dart';
+import 'package:fhir/r5.dart';
 
 import '../pythia.dart';
 
@@ -8,14 +8,14 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
 
   /// Check to see if it's active, if it is, then we know we don't have to look
   /// for an end time
-  final activeIndex = condition.clinicalStatus?.coding?.indexWhere((element) =>
+  final activeIndex = condition.clinicalStatus.coding?.indexWhere((element) =>
       element.system ==
           FhirUri('http://terminology.hl7.org/CodeSystem/condition-clinical') &&
       element.code.toString().toLowerCase() == 'active');
 
   /// If there's a valid onsetDateTime it's easy
   if (condition.onsetDateTime != null && condition.onsetDateTime!.isValid) {
-    startDate = VaxDate.fromDateTime(condition.onsetDateTime!.value!);
+    startDate = VaxDate.fromDateTime(condition.onsetDateTime!.value);
   }
 
   /// If it's an age, we have to look through the age Object
@@ -30,7 +30,7 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
   } else if (condition.onsetString != null) {
     if (FhirDateTime(condition.onsetString).isValid) {
       startDate =
-          VaxDate.fromDateTime(FhirDateTime(condition.onsetString!).value!);
+          VaxDate.fromDateTime(FhirDateTime(condition.onsetString!).value);
     }
   }
 
@@ -38,7 +38,7 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
     /// If there's a valid abatementDateTime it's easy
     if (condition.abatementDateTime != null &&
         condition.abatementDateTime!.isValid) {
-      endDate = VaxDate.fromDateTime(condition.abatementDateTime!.value!);
+      endDate = VaxDate.fromDateTime(condition.abatementDateTime!.value);
     }
 
     /// If it's an age, we have to look through the age Object
@@ -53,7 +53,7 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
     } else if (condition.abatementString != null) {
       if (FhirDateTime(condition.abatementString).isValid) {
         endDate = VaxDate.fromDateTime(
-            FhirDateTime(condition.abatementString!).value!);
+            FhirDateTime(condition.abatementString!).value);
       }
     }
   }

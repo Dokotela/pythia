@@ -1,4 +1,4 @@
-import 'package:fhir/r4.dart';
+import 'package:fhir/r5.dart';
 import 'package:riverpod/riverpod.dart';
 
 import '../pythia.dart';

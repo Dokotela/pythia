@@ -1,4 +1,4 @@
-import 'package:fhir/r4.dart';
+import 'package:fhir/r5.dart';
 
 bool isSubstandard(Immunization immunization) {
   /// We require that an occurrenceDateTime be available, otherwise for now
