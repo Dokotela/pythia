@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:csv/csv.dart';
-import 'package:fhir/r4.dart';
+import 'package:fhir/r5.dart';
 import 'package:pythia/pythia.dart' as pythia;
 
 import '../supporting_strings.dart';
@@ -33,14 +33,14 @@ Future<void> createPatients(
   for (var v in values) {
     if (!v[0].contains('CDC')) {
       final patient = Patient(
-        id: v[0],
+        fhirId: FhirId(v[0].toString()),
         name: [HumanName(family: v[1])],
-        birthDate: Date(epoch.add(Duration(days: v[2]))),
+        birthDate: FhirDate(epoch.add(Duration(days: v[2]))),
         gender: v[3].contains('F')
-            ? Code('female')
+            ? FhirCode('female')
             : v[3].contains('M')
-                ? Code('male')
-                : Code('unknown'),
+                ? FhirCode('male')
+                : FhirCode('unknown'),
       );
 
       final immunizationList = <Immunization>[];
@@ -49,19 +49,19 @@ Future<void> createPatients(
         final index = doseIndexes[i];
         if (v[index] != null && v[index] != '' && v[index] != '-') {
           immunizationList.add(Immunization(
-            id: '${patient.id}_dose${i + 1}',
+            fhirId: FhirId('${patient.fhirId}_dose${i + 1}'),
             patient: patient.thisReference,
             vaccineCode: CodeableConcept(
               coding: [
                 Coding(
                   system: FhirUri('http://hl7.org/fhir/sid/cvx'),
-                  code: Code(v[index + 2]),
+                  code: FhirCode(v[index + 2]),
                   display: v[index + 1],
                 ),
                 if (v[index + 3] != null && v[index + 3] != '')
                   Coding(
                     system: FhirUri('http://hl7.org/fhir/sid/mvx'),
-                    code: Code(v[index + 3]),
+                    code: FhirCode(v[index + 3]),
                     display: v[index + 1],
                   ),
               ],
@@ -86,6 +86,15 @@ Future<void> createPatients(
                 ?.indexWhere((element) => element.codeSystem == 'SNOMED');
 
             conditionList.add(Condition(
+              clinicalStatus: CodeableConcept(
+                coding: [
+                  Coding(
+                    system: FhirUri(
+                        'http://terminology.hl7.org/CodeSystem/condition-clinical'),
+                    code: FhirCode('active'),
+                  ),
+                ],
+              ),
               subject: patient.thisReference,
               onsetDateTime: v[index + 2] != null && v[index + 2] != ''
                   ? FhirDateTime(epoch.add(Duration(days: v[index + 2])))
@@ -98,15 +107,15 @@ Future<void> createPatients(
                   Coding(
                       system: FhirUri(
                           'https://www.cdc.gov/vaccines/programs/iis/cdsi.html'),
-                      code: Code(obsCode),
+                      code: FhirCode(obsCode),
                       display: v[index + 1]),
                   if (snomedIndex != null &&
                       snomedIndex != -1 &&
                       obs.codedValues!.codedValue![snomedIndex].code != null)
                     Coding(
                       system: FhirUri('http://snomed.info/sct'),
-                      code:
-                          Code(obs.codedValues!.codedValue![snomedIndex].code),
+                      code: FhirCode(
+                          obs.codedValues!.codedValue![snomedIndex].code),
                       display: obs.codedValues!.codedValue![snomedIndex].text ==
                                   null ||
                               obs.codedValues!.codedValue![snomedIndex].text ==
@@ -122,11 +131,12 @@ Future<void> createPatients(
       }
       parametersList.add(
         Parameters(
-          id: 'parameters-${patient.id}',
+          fhirId: FhirId('parameters-${patient.fhirId}'),
           parameter: [
             ParametersParameter(
-                name: Date(epoch.add(Duration(days: v[assessmentDateIndex])))
-                    .toString()),
+                name:
+                    FhirDate(epoch.add(Duration(days: v[assessmentDateIndex])))
+                        .toString()),
             ParametersParameter(name: 'Patient', resource: patient),
             ...immunizationList.map(
                 (e) => ParametersParameter(name: 'immunization', resource: e)),

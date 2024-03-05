@@ -4,6 +4,7 @@ import 'package:gsheets/gsheets.dart';
 
 import '../supporting_strings.dart';
 import 'api.dart';
+import 'spreadsheets.dart';
 
 Future<List<SupportingStrings>> downloadSheets() async {
   /// Assign the gsheets credentials
