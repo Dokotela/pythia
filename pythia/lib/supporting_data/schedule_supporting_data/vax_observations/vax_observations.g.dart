@@ -6,14 +6,16 @@ part of 'vax_observations.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VaxObservations _$$_VaxObservationsFromJson(Map<String, dynamic> json) =>
-    _$_VaxObservations(
+_$VaxObservationsImpl _$$VaxObservationsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$VaxObservationsImpl(
       observation: (json['observation'] as List<dynamic>?)
           ?.map((e) => VaxObservation.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_VaxObservationsToJson(_$_VaxObservations instance) {
+Map<String, dynamic> _$$VaxObservationsImplToJson(
+    _$VaxObservationsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -27,8 +29,8 @@ Map<String, dynamic> _$$_VaxObservationsToJson(_$_VaxObservations instance) {
   return val;
 }
 
-_$_VaxObservation _$$_VaxObservationFromJson(Map<String, dynamic> json) =>
-    _$_VaxObservation(
+_$VaxObservationImpl _$$VaxObservationImplFromJson(Map<String, dynamic> json) =>
+    _$VaxObservationImpl(
       observationCode: json['observationCode'] as String?,
       observationTitle: json['observationTitle'] as String?,
       group: json['group'] as String?,
@@ -43,7 +45,8 @@ _$_VaxObservation _$$_VaxObservationFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_VaxObservationToJson(_$_VaxObservation instance) {
+Map<String, dynamic> _$$VaxObservationImplToJson(
+    _$VaxObservationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -63,14 +66,14 @@ Map<String, dynamic> _$$_VaxObservationToJson(_$_VaxObservation instance) {
   return val;
 }
 
-_$_CodedValues _$$_CodedValuesFromJson(Map<String, dynamic> json) =>
-    _$_CodedValues(
+_$CodedValuesImpl _$$CodedValuesImplFromJson(Map<String, dynamic> json) =>
+    _$CodedValuesImpl(
       codedValue: (json['codedValue'] as List<dynamic>?)
           ?.map((e) => CodedValue.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_CodedValuesToJson(_$_CodedValues instance) {
+Map<String, dynamic> _$$CodedValuesImplToJson(_$CodedValuesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -84,14 +87,14 @@ Map<String, dynamic> _$$_CodedValuesToJson(_$_CodedValues instance) {
   return val;
 }
 
-_$_CodedValue _$$_CodedValueFromJson(Map<String, dynamic> json) =>
-    _$_CodedValue(
+_$CodedValueImpl _$$CodedValueImplFromJson(Map<String, dynamic> json) =>
+    _$CodedValueImpl(
       code: json['code'] as String?,
       codeSystem: json['codeSystem'] as String?,
       text: json['text'] as String?,
     );
 
-Map<String, dynamic> _$$_CodedValueToJson(_$_CodedValue instance) {
+Map<String, dynamic> _$$CodedValueImplToJson(_$CodedValueImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

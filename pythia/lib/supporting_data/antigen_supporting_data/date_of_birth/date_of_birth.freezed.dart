@@ -12,7 +12,7 @@ part of 'date_of_birth.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 DateOfBirth _$DateOfBirthFromJson(Map<String, dynamic> json) {
   return _DateOfBirth.fromJson(json);
@@ -77,11 +77,11 @@ class _$DateOfBirthCopyWithImpl<$Res, $Val extends DateOfBirth>
 }
 
 /// @nodoc
-abstract class _$$_DateOfBirthCopyWith<$Res>
+abstract class _$$DateOfBirthImplCopyWith<$Res>
     implements $DateOfBirthCopyWith<$Res> {
-  factory _$$_DateOfBirthCopyWith(
-          _$_DateOfBirth value, $Res Function(_$_DateOfBirth) then) =
-      __$$_DateOfBirthCopyWithImpl<$Res>;
+  factory _$$DateOfBirthImplCopyWith(
+          _$DateOfBirthImpl value, $Res Function(_$DateOfBirthImpl) then) =
+      __$$DateOfBirthImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -91,11 +91,11 @@ abstract class _$$_DateOfBirthCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DateOfBirthCopyWithImpl<$Res>
-    extends _$DateOfBirthCopyWithImpl<$Res, _$_DateOfBirth>
-    implements _$$_DateOfBirthCopyWith<$Res> {
-  __$$_DateOfBirthCopyWithImpl(
-      _$_DateOfBirth _value, $Res Function(_$_DateOfBirth) _then)
+class __$$DateOfBirthImplCopyWithImpl<$Res>
+    extends _$DateOfBirthCopyWithImpl<$Res, _$DateOfBirthImpl>
+    implements _$$DateOfBirthImplCopyWith<$Res> {
+  __$$DateOfBirthImplCopyWithImpl(
+      _$DateOfBirthImpl _value, $Res Function(_$DateOfBirthImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -105,7 +105,7 @@ class __$$_DateOfBirthCopyWithImpl<$Res>
     Object? birthCountry = freezed,
     Object? exclusion = freezed,
   }) {
-    return _then(_$_DateOfBirth(
+    return _then(_$DateOfBirthImpl(
       immunityBirthDate: freezed == immunityBirthDate
           ? _value.immunityBirthDate
           : immunityBirthDate // ignore: cast_nullable_to_non_nullable
@@ -124,16 +124,16 @@ class __$$_DateOfBirthCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DateOfBirth extends _DateOfBirth {
-  _$_DateOfBirth(
+class _$DateOfBirthImpl extends _DateOfBirth {
+  _$DateOfBirthImpl(
       {this.immunityBirthDate,
       this.birthCountry,
       final List<Exclusion>? exclusion})
       : _exclusion = exclusion,
         super._();
 
-  factory _$_DateOfBirth.fromJson(Map<String, dynamic> json) =>
-      _$$_DateOfBirthFromJson(json);
+  factory _$DateOfBirthImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DateOfBirthImplFromJson(json);
 
   @override
   final String? immunityBirthDate;
@@ -155,10 +155,10 @@ class _$_DateOfBirth extends _DateOfBirth {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DateOfBirth &&
+            other is _$DateOfBirthImpl &&
             (identical(other.immunityBirthDate, immunityBirthDate) ||
                 other.immunityBirthDate == immunityBirthDate) &&
             (identical(other.birthCountry, birthCountry) ||
@@ -175,12 +175,12 @@ class _$_DateOfBirth extends _DateOfBirth {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DateOfBirthCopyWith<_$_DateOfBirth> get copyWith =>
-      __$$_DateOfBirthCopyWithImpl<_$_DateOfBirth>(this, _$identity);
+  _$$DateOfBirthImplCopyWith<_$DateOfBirthImpl> get copyWith =>
+      __$$DateOfBirthImplCopyWithImpl<_$DateOfBirthImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DateOfBirthToJson(
+    return _$$DateOfBirthImplToJson(
       this,
     );
   }
@@ -190,11 +190,11 @@ abstract class _DateOfBirth extends DateOfBirth {
   factory _DateOfBirth(
       {final String? immunityBirthDate,
       final String? birthCountry,
-      final List<Exclusion>? exclusion}) = _$_DateOfBirth;
+      final List<Exclusion>? exclusion}) = _$DateOfBirthImpl;
   _DateOfBirth._() : super._();
 
   factory _DateOfBirth.fromJson(Map<String, dynamic> json) =
-      _$_DateOfBirth.fromJson;
+      _$DateOfBirthImpl.fromJson;
 
   @override
   String? get immunityBirthDate;
@@ -204,6 +204,6 @@ abstract class _DateOfBirth extends DateOfBirth {
   List<Exclusion>? get exclusion;
   @override
   @JsonKey(ignore: true)
-  _$$_DateOfBirthCopyWith<_$_DateOfBirth> get copyWith =>
+  _$$DateOfBirthImplCopyWith<_$DateOfBirthImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

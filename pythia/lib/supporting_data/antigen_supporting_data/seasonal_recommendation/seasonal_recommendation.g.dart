@@ -6,15 +6,15 @@ part of 'seasonal_recommendation.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SeasonalRecommendation _$$_SeasonalRecommendationFromJson(
+_$SeasonalRecommendationImpl _$$SeasonalRecommendationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SeasonalRecommendation(
+    _$SeasonalRecommendationImpl(
       startDate: json['startDate'] as String?,
       endDate: json['endDate'] as String?,
     );
 
-Map<String, dynamic> _$$_SeasonalRecommendationToJson(
-    _$_SeasonalRecommendation instance) {
+Map<String, dynamic> _$$SeasonalRecommendationImplToJson(
+    _$SeasonalRecommendationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

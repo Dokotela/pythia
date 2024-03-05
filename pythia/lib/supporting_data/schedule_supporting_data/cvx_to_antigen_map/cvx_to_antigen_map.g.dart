@@ -6,14 +6,16 @@ part of 'cvx_to_antigen_map.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CvxToAntigenMap _$$_CvxToAntigenMapFromJson(Map<String, dynamic> json) =>
-    _$_CvxToAntigenMap(
+_$CvxToAntigenMapImpl _$$CvxToAntigenMapImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CvxToAntigenMapImpl(
       cvxMap: (json['cvxMap'] as List<dynamic>?)
           ?.map((e) => CvxMap.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_CvxToAntigenMapToJson(_$_CvxToAntigenMap instance) {
+Map<String, dynamic> _$$CvxToAntigenMapImplToJson(
+    _$CvxToAntigenMapImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -26,7 +28,7 @@ Map<String, dynamic> _$$_CvxToAntigenMapToJson(_$_CvxToAntigenMap instance) {
   return val;
 }
 
-_$_CvxMap _$$_CvxMapFromJson(Map<String, dynamic> json) => _$_CvxMap(
+_$CvxMapImpl _$$CvxMapImplFromJson(Map<String, dynamic> json) => _$CvxMapImpl(
       cvx: json['cvx'] as String?,
       shortDescription: json['shortDescription'] as String?,
       association: (json['association'] as List<dynamic>?)
@@ -34,7 +36,7 @@ _$_CvxMap _$$_CvxMapFromJson(Map<String, dynamic> json) => _$_CvxMap(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CvxMapToJson(_$_CvxMap instance) {
+Map<String, dynamic> _$$CvxMapImplToJson(_$CvxMapImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -50,14 +52,14 @@ Map<String, dynamic> _$$_CvxMapToJson(_$_CvxMap instance) {
   return val;
 }
 
-_$_Association _$$_AssociationFromJson(Map<String, dynamic> json) =>
-    _$_Association(
+_$AssociationImpl _$$AssociationImplFromJson(Map<String, dynamic> json) =>
+    _$AssociationImpl(
       antigen: json['antigen'] as String?,
       associationBeginAge: json['associationBeginAge'] as String?,
       associationEndAge: json['associationEndAge'] as String?,
     );
 
-Map<String, dynamic> _$$_AssociationToJson(_$_Association instance) {
+Map<String, dynamic> _$$AssociationImplToJson(_$AssociationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

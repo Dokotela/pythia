@@ -12,7 +12,7 @@ part of 'select_series.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SelectSeries _$SelectSeriesFromJson(Map<String, dynamic> json) {
   return _SelectSeries.fromJson(json);
@@ -112,11 +112,11 @@ class _$SelectSeriesCopyWithImpl<$Res, $Val extends SelectSeries>
 }
 
 /// @nodoc
-abstract class _$$_SelectSeriesCopyWith<$Res>
+abstract class _$$SelectSeriesImplCopyWith<$Res>
     implements $SelectSeriesCopyWith<$Res> {
-  factory _$$_SelectSeriesCopyWith(
-          _$_SelectSeries value, $Res Function(_$_SelectSeries) then) =
-      __$$_SelectSeriesCopyWithImpl<$Res>;
+  factory _$$SelectSeriesImplCopyWith(
+          _$SelectSeriesImpl value, $Res Function(_$SelectSeriesImpl) then) =
+      __$$SelectSeriesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -131,11 +131,11 @@ abstract class _$$_SelectSeriesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SelectSeriesCopyWithImpl<$Res>
-    extends _$SelectSeriesCopyWithImpl<$Res, _$_SelectSeries>
-    implements _$$_SelectSeriesCopyWith<$Res> {
-  __$$_SelectSeriesCopyWithImpl(
-      _$_SelectSeries _value, $Res Function(_$_SelectSeries) _then)
+class __$$SelectSeriesImplCopyWithImpl<$Res>
+    extends _$SelectSeriesCopyWithImpl<$Res, _$SelectSeriesImpl>
+    implements _$$SelectSeriesImplCopyWith<$Res> {
+  __$$SelectSeriesImplCopyWithImpl(
+      _$SelectSeriesImpl _value, $Res Function(_$SelectSeriesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -150,7 +150,7 @@ class __$$_SelectSeriesCopyWithImpl<$Res>
     Object? minAgeToStart = freezed,
     Object? maxAgeToStart = freezed,
   }) {
-    return _then(_$_SelectSeries(
+    return _then(_$SelectSeriesImpl(
       defaultSeries: freezed == defaultSeries
           ? _value.defaultSeries
           : defaultSeries // ignore: cast_nullable_to_non_nullable
@@ -189,8 +189,8 @@ class __$$_SelectSeriesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SelectSeries extends _SelectSeries {
-  _$_SelectSeries(
+class _$SelectSeriesImpl extends _SelectSeries {
+  _$SelectSeriesImpl(
       {this.defaultSeries,
       this.productPath,
       this.seriesGroupName,
@@ -201,8 +201,8 @@ class _$_SelectSeries extends _SelectSeries {
       this.maxAgeToStart})
       : super._();
 
-  factory _$_SelectSeries.fromJson(Map<String, dynamic> json) =>
-      _$$_SelectSeriesFromJson(json);
+  factory _$SelectSeriesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SelectSeriesImplFromJson(json);
 
   @override
   final Binary? defaultSeries;
@@ -227,10 +227,10 @@ class _$_SelectSeries extends _SelectSeries {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SelectSeries &&
+            other is _$SelectSeriesImpl &&
             (identical(other.defaultSeries, defaultSeries) ||
                 other.defaultSeries == defaultSeries) &&
             (identical(other.productPath, productPath) ||
@@ -265,12 +265,12 @@ class _$_SelectSeries extends _SelectSeries {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SelectSeriesCopyWith<_$_SelectSeries> get copyWith =>
-      __$$_SelectSeriesCopyWithImpl<_$_SelectSeries>(this, _$identity);
+  _$$SelectSeriesImplCopyWith<_$SelectSeriesImpl> get copyWith =>
+      __$$SelectSeriesImplCopyWithImpl<_$SelectSeriesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SelectSeriesToJson(
+    return _$$SelectSeriesImplToJson(
       this,
     );
   }
@@ -285,11 +285,11 @@ abstract class _SelectSeries extends SelectSeries {
       final SeriesPriority? seriesPriority,
       final SeriesPreference? seriesPreference,
       final String? minAgeToStart,
-      final String? maxAgeToStart}) = _$_SelectSeries;
+      final String? maxAgeToStart}) = _$SelectSeriesImpl;
   _SelectSeries._() : super._();
 
   factory _SelectSeries.fromJson(Map<String, dynamic> json) =
-      _$_SelectSeries.fromJson;
+      _$SelectSeriesImpl.fromJson;
 
   @override
   Binary? get defaultSeries;
@@ -309,6 +309,6 @@ abstract class _SelectSeries extends SelectSeries {
   String? get maxAgeToStart;
   @override
   @JsonKey(ignore: true)
-  _$$_SelectSeriesCopyWith<_$_SelectSeries> get copyWith =>
+  _$$SelectSeriesImplCopyWith<_$SelectSeriesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,7 +6,7 @@ part of 'vax_set.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VaxSet _$$_VaxSetFromJson(Map<String, dynamic> json) => _$_VaxSet(
+_$VaxSetImpl _$$VaxSetImplFromJson(Map<String, dynamic> json) => _$VaxSetImpl(
       setID: json['setID'] as String?,
       setDescription: json['setDescription'] as String?,
       effectiveDate: json['effectiveDate'] as String?,
@@ -17,7 +17,7 @@ _$_VaxSet _$$_VaxSetFromJson(Map<String, dynamic> json) => _$_VaxSet(
           .toList(),
     );
 
-Map<String, dynamic> _$$_VaxSetToJson(_$_VaxSet instance) {
+Map<String, dynamic> _$$VaxSetImplToJson(_$VaxSetImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

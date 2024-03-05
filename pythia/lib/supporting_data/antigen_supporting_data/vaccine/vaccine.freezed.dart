@@ -12,7 +12,7 @@ part of 'vaccine.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Vaccine _$VaccineFromJson(Map<String, dynamic> json) {
   return _Vaccine.fromJson(json);
@@ -110,10 +110,10 @@ class _$VaccineCopyWithImpl<$Res, $Val extends Vaccine>
 }
 
 /// @nodoc
-abstract class _$$_VaccineCopyWith<$Res> implements $VaccineCopyWith<$Res> {
-  factory _$$_VaccineCopyWith(
-          _$_Vaccine value, $Res Function(_$_Vaccine) then) =
-      __$$_VaccineCopyWithImpl<$Res>;
+abstract class _$$VaccineImplCopyWith<$Res> implements $VaccineCopyWith<$Res> {
+  factory _$$VaccineImplCopyWith(
+          _$VaccineImpl value, $Res Function(_$VaccineImpl) then) =
+      __$$VaccineImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -128,10 +128,11 @@ abstract class _$$_VaccineCopyWith<$Res> implements $VaccineCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_VaccineCopyWithImpl<$Res>
-    extends _$VaccineCopyWithImpl<$Res, _$_Vaccine>
-    implements _$$_VaccineCopyWith<$Res> {
-  __$$_VaccineCopyWithImpl(_$_Vaccine _value, $Res Function(_$_Vaccine) _then)
+class __$$VaccineImplCopyWithImpl<$Res>
+    extends _$VaccineCopyWithImpl<$Res, _$VaccineImpl>
+    implements _$$VaccineImplCopyWith<$Res> {
+  __$$VaccineImplCopyWithImpl(
+      _$VaccineImpl _value, $Res Function(_$VaccineImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -146,7 +147,7 @@ class __$$_VaccineCopyWithImpl<$Res>
     Object? volume = freezed,
     Object? forecastVaccineType = freezed,
   }) {
-    return _then(_$_Vaccine(
+    return _then(_$VaccineImpl(
       vaccineType: freezed == vaccineType
           ? _value.vaccineType
           : vaccineType // ignore: cast_nullable_to_non_nullable
@@ -185,8 +186,8 @@ class __$$_VaccineCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Vaccine extends _Vaccine {
-  _$_Vaccine(
+class _$VaccineImpl extends _Vaccine {
+  _$VaccineImpl(
       {this.vaccineType,
       this.cvx,
       this.beginAge,
@@ -197,8 +198,8 @@ class _$_Vaccine extends _Vaccine {
       this.forecastVaccineType})
       : super._();
 
-  factory _$_Vaccine.fromJson(Map<String, dynamic> json) =>
-      _$$_VaccineFromJson(json);
+  factory _$VaccineImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VaccineImplFromJson(json);
 
   @override
   final String? vaccineType;
@@ -223,10 +224,10 @@ class _$_Vaccine extends _Vaccine {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Vaccine &&
+            other is _$VaccineImpl &&
             (identical(other.vaccineType, vaccineType) ||
                 other.vaccineType == vaccineType) &&
             (identical(other.cvx, cvx) || other.cvx == cvx) &&
@@ -249,12 +250,12 @@ class _$_Vaccine extends _Vaccine {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VaccineCopyWith<_$_Vaccine> get copyWith =>
-      __$$_VaccineCopyWithImpl<_$_Vaccine>(this, _$identity);
+  _$$VaccineImplCopyWith<_$VaccineImpl> get copyWith =>
+      __$$VaccineImplCopyWithImpl<_$VaccineImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VaccineToJson(
+    return _$$VaccineImplToJson(
       this,
     );
   }
@@ -269,10 +270,10 @@ abstract class _Vaccine extends Vaccine {
       final String? tradeName,
       final String? mvx,
       final String? volume,
-      final String? forecastVaccineType}) = _$_Vaccine;
+      final String? forecastVaccineType}) = _$VaccineImpl;
   _Vaccine._() : super._();
 
-  factory _Vaccine.fromJson(Map<String, dynamic> json) = _$_Vaccine.fromJson;
+  factory _Vaccine.fromJson(Map<String, dynamic> json) = _$VaccineImpl.fromJson;
 
   @override
   String? get vaccineType;
@@ -292,6 +293,6 @@ abstract class _Vaccine extends Vaccine {
   String? get forecastVaccineType;
   @override
   @JsonKey(ignore: true)
-  _$$_VaccineCopyWith<_$_Vaccine> get copyWith =>
+  _$$VaccineImplCopyWith<_$VaccineImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

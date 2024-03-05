@@ -6,7 +6,7 @@ part of 'vax_age.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VaxAge _$$_VaxAgeFromJson(Map<String, dynamic> json) => _$_VaxAge(
+_$VaxAgeImpl _$$VaxAgeImplFromJson(Map<String, dynamic> json) => _$VaxAgeImpl(
       absMinAge: json['absMinAge'] as String?,
       minAge: json['minAge'] as String?,
       earliestRecAge: json['earliestRecAge'] as String?,
@@ -16,7 +16,7 @@ _$_VaxAge _$$_VaxAgeFromJson(Map<String, dynamic> json) => _$_VaxAge(
       cessationDate: json['cessationDate'] as String?,
     );
 
-Map<String, dynamic> _$$_VaxAgeToJson(_$_VaxAge instance) {
+Map<String, dynamic> _$$VaxAgeImplToJson(_$VaxAgeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

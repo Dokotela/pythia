@@ -6,16 +6,16 @@ part of 'live_virus_conflicts.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LiveVirusConflicts _$$_LiveVirusConflictsFromJson(
+_$LiveVirusConflictsImpl _$$LiveVirusConflictsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_LiveVirusConflicts(
+    _$LiveVirusConflictsImpl(
       liveVirusConflict: (json['liveVirusConflict'] as List<dynamic>?)
           ?.map((e) => LiveVirusConflict.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_LiveVirusConflictsToJson(
-    _$_LiveVirusConflicts instance) {
+Map<String, dynamic> _$$LiveVirusConflictsImplToJson(
+    _$LiveVirusConflictsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -29,8 +29,9 @@ Map<String, dynamic> _$$_LiveVirusConflictsToJson(
   return val;
 }
 
-_$_LiveVirusConflict _$$_LiveVirusConflictFromJson(Map<String, dynamic> json) =>
-    _$_LiveVirusConflict(
+_$LiveVirusConflictImpl _$$LiveVirusConflictImplFromJson(
+        Map<String, dynamic> json) =>
+    _$LiveVirusConflictImpl(
       previous: json['previous'] == null
           ? null
           : Vaccine.fromJson(json['previous'] as Map<String, dynamic>),
@@ -42,8 +43,8 @@ _$_LiveVirusConflict _$$_LiveVirusConflictFromJson(Map<String, dynamic> json) =>
       conflictEndInterval: json['conflictEndInterval'] as String?,
     );
 
-Map<String, dynamic> _$$_LiveVirusConflictToJson(
-    _$_LiveVirusConflict instance) {
+Map<String, dynamic> _$$LiveVirusConflictImplToJson(
+    _$LiveVirusConflictImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

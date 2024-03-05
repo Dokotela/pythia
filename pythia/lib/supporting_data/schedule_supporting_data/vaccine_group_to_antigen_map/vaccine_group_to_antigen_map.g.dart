@@ -6,16 +6,16 @@ part of 'vaccine_group_to_antigen_map.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VaccineGroupToAntigenMap _$$_VaccineGroupToAntigenMapFromJson(
+_$VaccineGroupToAntigenMapImpl _$$VaccineGroupToAntigenMapImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VaccineGroupToAntigenMap(
+    _$VaccineGroupToAntigenMapImpl(
       vaccineGroupMap: (json['vaccineGroupMap'] as List<dynamic>?)
           ?.map((e) => VaccineGroupMap.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_VaccineGroupToAntigenMapToJson(
-    _$_VaccineGroupToAntigenMap instance) {
+Map<String, dynamic> _$$VaccineGroupToAntigenMapImplToJson(
+    _$VaccineGroupToAntigenMapImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -29,14 +29,16 @@ Map<String, dynamic> _$$_VaccineGroupToAntigenMapToJson(
   return val;
 }
 
-_$_VaccineGroupMap _$$_VaccineGroupMapFromJson(Map<String, dynamic> json) =>
-    _$_VaccineGroupMap(
+_$VaccineGroupMapImpl _$$VaccineGroupMapImplFromJson(
+        Map<String, dynamic> json) =>
+    _$VaccineGroupMapImpl(
       name: json['name'] as String?,
       antigen:
           (json['antigen'] as List<dynamic>?)?.map((e) => e as String).toList(),
     );
 
-Map<String, dynamic> _$$_VaccineGroupMapToJson(_$_VaccineGroupMap instance) {
+Map<String, dynamic> _$$VaccineGroupMapImplToJson(
+    _$VaccineGroupMapImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

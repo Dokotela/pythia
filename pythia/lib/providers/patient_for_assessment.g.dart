@@ -86,8 +86,8 @@ class PatientForAssessmentProvider
     extends AutoDisposeNotifierProviderImpl<PatientForAssessment, VaxPatient> {
   /// See also [PatientForAssessment].
   PatientForAssessmentProvider(
-    this.parameters,
-  ) : super.internal(
+    Parameters parameters,
+  ) : this._internal(
           () => PatientForAssessment()..parameters = parameters,
           from: patientForAssessmentProvider,
           name: r'patientForAssessmentProvider',
@@ -98,9 +98,51 @@ class PatientForAssessmentProvider
           dependencies: PatientForAssessmentFamily._dependencies,
           allTransitiveDependencies:
               PatientForAssessmentFamily._allTransitiveDependencies,
+          parameters: parameters,
         );
 
+  PatientForAssessmentProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.parameters,
+  }) : super.internal();
+
   final Parameters parameters;
+
+  @override
+  VaxPatient runNotifierBuild(
+    covariant PatientForAssessment notifier,
+  ) {
+    return notifier.build(
+      parameters,
+    );
+  }
+
+  @override
+  Override overrideWith(PatientForAssessment Function() create) {
+    return ProviderOverride(
+      origin: this,
+      override: PatientForAssessmentProvider._internal(
+        () => create()..parameters = parameters,
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        parameters: parameters,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeNotifierProviderElement<PatientForAssessment, VaxPatient>
+      createElement() {
+    return _PatientForAssessmentProviderElement(this);
+  }
 
   @override
   bool operator ==(Object other) {
@@ -115,14 +157,21 @@ class PatientForAssessmentProvider
 
     return _SystemHash.finish(hash);
   }
+}
+
+mixin PatientForAssessmentRef on AutoDisposeNotifierProviderRef<VaxPatient> {
+  /// The parameter `parameters` of this provider.
+  Parameters get parameters;
+}
+
+class _PatientForAssessmentProviderElement
+    extends AutoDisposeNotifierProviderElement<PatientForAssessment, VaxPatient>
+    with PatientForAssessmentRef {
+  _PatientForAssessmentProviderElement(super.provider);
 
   @override
-  VaxPatient runNotifierBuild(
-    covariant PatientForAssessment notifier,
-  ) {
-    return notifier.build(
-      parameters,
-    );
-  }
+  Parameters get parameters =>
+      (origin as PatientForAssessmentProvider).parameters;
 }
-// ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

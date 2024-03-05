@@ -12,7 +12,7 @@ part of 'vaccine_groups.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 VaccineGroups _$VaccineGroupsFromJson(Map<String, dynamic> json) {
   return _VaccineGroups.fromJson(json);
@@ -62,22 +62,22 @@ class _$VaccineGroupsCopyWithImpl<$Res, $Val extends VaccineGroups>
 }
 
 /// @nodoc
-abstract class _$$_VaccineGroupsCopyWith<$Res>
+abstract class _$$VaccineGroupsImplCopyWith<$Res>
     implements $VaccineGroupsCopyWith<$Res> {
-  factory _$$_VaccineGroupsCopyWith(
-          _$_VaccineGroups value, $Res Function(_$_VaccineGroups) then) =
-      __$$_VaccineGroupsCopyWithImpl<$Res>;
+  factory _$$VaccineGroupsImplCopyWith(
+          _$VaccineGroupsImpl value, $Res Function(_$VaccineGroupsImpl) then) =
+      __$$VaccineGroupsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<VaccineGroup>? vaccineGroup});
 }
 
 /// @nodoc
-class __$$_VaccineGroupsCopyWithImpl<$Res>
-    extends _$VaccineGroupsCopyWithImpl<$Res, _$_VaccineGroups>
-    implements _$$_VaccineGroupsCopyWith<$Res> {
-  __$$_VaccineGroupsCopyWithImpl(
-      _$_VaccineGroups _value, $Res Function(_$_VaccineGroups) _then)
+class __$$VaccineGroupsImplCopyWithImpl<$Res>
+    extends _$VaccineGroupsCopyWithImpl<$Res, _$VaccineGroupsImpl>
+    implements _$$VaccineGroupsImplCopyWith<$Res> {
+  __$$VaccineGroupsImplCopyWithImpl(
+      _$VaccineGroupsImpl _value, $Res Function(_$VaccineGroupsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_VaccineGroupsCopyWithImpl<$Res>
   $Res call({
     Object? vaccineGroup = freezed,
   }) {
-    return _then(_$_VaccineGroups(
+    return _then(_$VaccineGroupsImpl(
       vaccineGroup: freezed == vaccineGroup
           ? _value._vaccineGroup
           : vaccineGroup // ignore: cast_nullable_to_non_nullable
@@ -96,13 +96,13 @@ class __$$_VaccineGroupsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VaccineGroups extends _VaccineGroups {
-  _$_VaccineGroups({final List<VaccineGroup>? vaccineGroup})
+class _$VaccineGroupsImpl extends _VaccineGroups {
+  _$VaccineGroupsImpl({final List<VaccineGroup>? vaccineGroup})
       : _vaccineGroup = vaccineGroup,
         super._();
 
-  factory _$_VaccineGroups.fromJson(Map<String, dynamic> json) =>
-      _$$_VaccineGroupsFromJson(json);
+  factory _$VaccineGroupsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VaccineGroupsImplFromJson(json);
 
   final List<VaccineGroup>? _vaccineGroup;
   @override
@@ -120,10 +120,10 @@ class _$_VaccineGroups extends _VaccineGroups {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VaccineGroups &&
+            other is _$VaccineGroupsImpl &&
             const DeepCollectionEquality()
                 .equals(other._vaccineGroup, _vaccineGroup));
   }
@@ -136,12 +136,12 @@ class _$_VaccineGroups extends _VaccineGroups {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VaccineGroupsCopyWith<_$_VaccineGroups> get copyWith =>
-      __$$_VaccineGroupsCopyWithImpl<_$_VaccineGroups>(this, _$identity);
+  _$$VaccineGroupsImplCopyWith<_$VaccineGroupsImpl> get copyWith =>
+      __$$VaccineGroupsImplCopyWithImpl<_$VaccineGroupsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VaccineGroupsToJson(
+    return _$$VaccineGroupsImplToJson(
       this,
     );
   }
@@ -149,17 +149,17 @@ class _$_VaccineGroups extends _VaccineGroups {
 
 abstract class _VaccineGroups extends VaccineGroups {
   factory _VaccineGroups({final List<VaccineGroup>? vaccineGroup}) =
-      _$_VaccineGroups;
+      _$VaccineGroupsImpl;
   _VaccineGroups._() : super._();
 
   factory _VaccineGroups.fromJson(Map<String, dynamic> json) =
-      _$_VaccineGroups.fromJson;
+      _$VaccineGroupsImpl.fromJson;
 
   @override
   List<VaccineGroup>? get vaccineGroup;
   @override
   @JsonKey(ignore: true)
-  _$$_VaccineGroupsCopyWith<_$_VaccineGroups> get copyWith =>
+  _$$VaccineGroupsImplCopyWith<_$VaccineGroupsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -217,22 +217,22 @@ class _$VaccineGroupCopyWithImpl<$Res, $Val extends VaccineGroup>
 }
 
 /// @nodoc
-abstract class _$$_VaccineGroupCopyWith<$Res>
+abstract class _$$VaccineGroupImplCopyWith<$Res>
     implements $VaccineGroupCopyWith<$Res> {
-  factory _$$_VaccineGroupCopyWith(
-          _$_VaccineGroup value, $Res Function(_$_VaccineGroup) then) =
-      __$$_VaccineGroupCopyWithImpl<$Res>;
+  factory _$$VaccineGroupImplCopyWith(
+          _$VaccineGroupImpl value, $Res Function(_$VaccineGroupImpl) then) =
+      __$$VaccineGroupImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? name, Binary? administerFullVaccineGroup});
 }
 
 /// @nodoc
-class __$$_VaccineGroupCopyWithImpl<$Res>
-    extends _$VaccineGroupCopyWithImpl<$Res, _$_VaccineGroup>
-    implements _$$_VaccineGroupCopyWith<$Res> {
-  __$$_VaccineGroupCopyWithImpl(
-      _$_VaccineGroup _value, $Res Function(_$_VaccineGroup) _then)
+class __$$VaccineGroupImplCopyWithImpl<$Res>
+    extends _$VaccineGroupCopyWithImpl<$Res, _$VaccineGroupImpl>
+    implements _$$VaccineGroupImplCopyWith<$Res> {
+  __$$VaccineGroupImplCopyWithImpl(
+      _$VaccineGroupImpl _value, $Res Function(_$VaccineGroupImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -241,7 +241,7 @@ class __$$_VaccineGroupCopyWithImpl<$Res>
     Object? name = freezed,
     Object? administerFullVaccineGroup = freezed,
   }) {
-    return _then(_$_VaccineGroup(
+    return _then(_$VaccineGroupImpl(
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -256,11 +256,11 @@ class __$$_VaccineGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VaccineGroup extends _VaccineGroup {
-  _$_VaccineGroup({this.name, this.administerFullVaccineGroup}) : super._();
+class _$VaccineGroupImpl extends _VaccineGroup {
+  _$VaccineGroupImpl({this.name, this.administerFullVaccineGroup}) : super._();
 
-  factory _$_VaccineGroup.fromJson(Map<String, dynamic> json) =>
-      _$$_VaccineGroupFromJson(json);
+  factory _$VaccineGroupImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VaccineGroupImplFromJson(json);
 
   @override
   final String? name;
@@ -273,10 +273,10 @@ class _$_VaccineGroup extends _VaccineGroup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VaccineGroup &&
+            other is _$VaccineGroupImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.administerFullVaccineGroup,
                     administerFullVaccineGroup) ||
@@ -292,12 +292,12 @@ class _$_VaccineGroup extends _VaccineGroup {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VaccineGroupCopyWith<_$_VaccineGroup> get copyWith =>
-      __$$_VaccineGroupCopyWithImpl<_$_VaccineGroup>(this, _$identity);
+  _$$VaccineGroupImplCopyWith<_$VaccineGroupImpl> get copyWith =>
+      __$$VaccineGroupImplCopyWithImpl<_$VaccineGroupImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VaccineGroupToJson(
+    return _$$VaccineGroupImplToJson(
       this,
     );
   }
@@ -306,11 +306,11 @@ class _$_VaccineGroup extends _VaccineGroup {
 abstract class _VaccineGroup extends VaccineGroup {
   factory _VaccineGroup(
       {final String? name,
-      final Binary? administerFullVaccineGroup}) = _$_VaccineGroup;
+      final Binary? administerFullVaccineGroup}) = _$VaccineGroupImpl;
   _VaccineGroup._() : super._();
 
   factory _VaccineGroup.fromJson(Map<String, dynamic> json) =
-      _$_VaccineGroup.fromJson;
+      _$VaccineGroupImpl.fromJson;
 
   @override
   String? get name;
@@ -318,6 +318,6 @@ abstract class _VaccineGroup extends VaccineGroup {
   Binary? get administerFullVaccineGroup;
   @override
   @JsonKey(ignore: true)
-  _$$_VaccineGroupCopyWith<_$_VaccineGroup> get copyWith =>
+  _$$VaccineGroupImplCopyWith<_$VaccineGroupImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

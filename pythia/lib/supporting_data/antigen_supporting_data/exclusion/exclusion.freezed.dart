@@ -12,7 +12,7 @@ part of 'exclusion.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Exclusion _$ExclusionFromJson(Map<String, dynamic> json) {
   return _Exclusion.fromJson(json);
@@ -67,21 +67,22 @@ class _$ExclusionCopyWithImpl<$Res, $Val extends Exclusion>
 }
 
 /// @nodoc
-abstract class _$$_ExclusionCopyWith<$Res> implements $ExclusionCopyWith<$Res> {
-  factory _$$_ExclusionCopyWith(
-          _$_Exclusion value, $Res Function(_$_Exclusion) then) =
-      __$$_ExclusionCopyWithImpl<$Res>;
+abstract class _$$ExclusionImplCopyWith<$Res>
+    implements $ExclusionCopyWith<$Res> {
+  factory _$$ExclusionImplCopyWith(
+          _$ExclusionImpl value, $Res Function(_$ExclusionImpl) then) =
+      __$$ExclusionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? exclusionCode, String? exclusionTitle});
 }
 
 /// @nodoc
-class __$$_ExclusionCopyWithImpl<$Res>
-    extends _$ExclusionCopyWithImpl<$Res, _$_Exclusion>
-    implements _$$_ExclusionCopyWith<$Res> {
-  __$$_ExclusionCopyWithImpl(
-      _$_Exclusion _value, $Res Function(_$_Exclusion) _then)
+class __$$ExclusionImplCopyWithImpl<$Res>
+    extends _$ExclusionCopyWithImpl<$Res, _$ExclusionImpl>
+    implements _$$ExclusionImplCopyWith<$Res> {
+  __$$ExclusionImplCopyWithImpl(
+      _$ExclusionImpl _value, $Res Function(_$ExclusionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +91,7 @@ class __$$_ExclusionCopyWithImpl<$Res>
     Object? exclusionCode = freezed,
     Object? exclusionTitle = freezed,
   }) {
-    return _then(_$_Exclusion(
+    return _then(_$ExclusionImpl(
       exclusionCode: freezed == exclusionCode
           ? _value.exclusionCode
           : exclusionCode // ignore: cast_nullable_to_non_nullable
@@ -105,11 +106,11 @@ class __$$_ExclusionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Exclusion extends _Exclusion {
-  _$_Exclusion({this.exclusionCode, this.exclusionTitle}) : super._();
+class _$ExclusionImpl extends _Exclusion {
+  _$ExclusionImpl({this.exclusionCode, this.exclusionTitle}) : super._();
 
-  factory _$_Exclusion.fromJson(Map<String, dynamic> json) =>
-      _$$_ExclusionFromJson(json);
+  factory _$ExclusionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExclusionImplFromJson(json);
 
   @override
   final String? exclusionCode;
@@ -122,10 +123,10 @@ class _$_Exclusion extends _Exclusion {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Exclusion &&
+            other is _$ExclusionImpl &&
             (identical(other.exclusionCode, exclusionCode) ||
                 other.exclusionCode == exclusionCode) &&
             (identical(other.exclusionTitle, exclusionTitle) ||
@@ -139,12 +140,12 @@ class _$_Exclusion extends _Exclusion {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExclusionCopyWith<_$_Exclusion> get copyWith =>
-      __$$_ExclusionCopyWithImpl<_$_Exclusion>(this, _$identity);
+  _$$ExclusionImplCopyWith<_$ExclusionImpl> get copyWith =>
+      __$$ExclusionImplCopyWithImpl<_$ExclusionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExclusionToJson(
+    return _$$ExclusionImplToJson(
       this,
     );
   }
@@ -153,11 +154,11 @@ class _$_Exclusion extends _Exclusion {
 abstract class _Exclusion extends Exclusion {
   factory _Exclusion(
       {final String? exclusionCode,
-      final String? exclusionTitle}) = _$_Exclusion;
+      final String? exclusionTitle}) = _$ExclusionImpl;
   _Exclusion._() : super._();
 
   factory _Exclusion.fromJson(Map<String, dynamic> json) =
-      _$_Exclusion.fromJson;
+      _$ExclusionImpl.fromJson;
 
   @override
   String? get exclusionCode;
@@ -165,6 +166,6 @@ abstract class _Exclusion extends Exclusion {
   String? get exclusionTitle;
   @override
   @JsonKey(ignore: true)
-  _$$_ExclusionCopyWith<_$_Exclusion> get copyWith =>
+  _$$ExclusionImplCopyWith<_$ExclusionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

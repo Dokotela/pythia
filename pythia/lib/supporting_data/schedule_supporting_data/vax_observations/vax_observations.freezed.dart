@@ -12,7 +12,7 @@ part of 'vax_observations.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 VaxObservations _$VaxObservationsFromJson(Map<String, dynamic> json) {
   return _VaxObservations.fromJson(json);
@@ -62,22 +62,22 @@ class _$VaxObservationsCopyWithImpl<$Res, $Val extends VaxObservations>
 }
 
 /// @nodoc
-abstract class _$$_VaxObservationsCopyWith<$Res>
+abstract class _$$VaxObservationsImplCopyWith<$Res>
     implements $VaxObservationsCopyWith<$Res> {
-  factory _$$_VaxObservationsCopyWith(
-          _$_VaxObservations value, $Res Function(_$_VaxObservations) then) =
-      __$$_VaxObservationsCopyWithImpl<$Res>;
+  factory _$$VaxObservationsImplCopyWith(_$VaxObservationsImpl value,
+          $Res Function(_$VaxObservationsImpl) then) =
+      __$$VaxObservationsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<VaxObservation>? observation});
 }
 
 /// @nodoc
-class __$$_VaxObservationsCopyWithImpl<$Res>
-    extends _$VaxObservationsCopyWithImpl<$Res, _$_VaxObservations>
-    implements _$$_VaxObservationsCopyWith<$Res> {
-  __$$_VaxObservationsCopyWithImpl(
-      _$_VaxObservations _value, $Res Function(_$_VaxObservations) _then)
+class __$$VaxObservationsImplCopyWithImpl<$Res>
+    extends _$VaxObservationsCopyWithImpl<$Res, _$VaxObservationsImpl>
+    implements _$$VaxObservationsImplCopyWith<$Res> {
+  __$$VaxObservationsImplCopyWithImpl(
+      _$VaxObservationsImpl _value, $Res Function(_$VaxObservationsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_VaxObservationsCopyWithImpl<$Res>
   $Res call({
     Object? observation = freezed,
   }) {
-    return _then(_$_VaxObservations(
+    return _then(_$VaxObservationsImpl(
       observation: freezed == observation
           ? _value._observation
           : observation // ignore: cast_nullable_to_non_nullable
@@ -96,13 +96,13 @@ class __$$_VaxObservationsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VaxObservations extends _VaxObservations {
-  _$_VaxObservations({final List<VaxObservation>? observation})
+class _$VaxObservationsImpl extends _VaxObservations {
+  _$VaxObservationsImpl({final List<VaxObservation>? observation})
       : _observation = observation,
         super._();
 
-  factory _$_VaxObservations.fromJson(Map<String, dynamic> json) =>
-      _$$_VaxObservationsFromJson(json);
+  factory _$VaxObservationsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VaxObservationsImplFromJson(json);
 
   final List<VaxObservation>? _observation;
   @override
@@ -120,10 +120,10 @@ class _$_VaxObservations extends _VaxObservations {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VaxObservations &&
+            other is _$VaxObservationsImpl &&
             const DeepCollectionEquality()
                 .equals(other._observation, _observation));
   }
@@ -136,12 +136,13 @@ class _$_VaxObservations extends _VaxObservations {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VaxObservationsCopyWith<_$_VaxObservations> get copyWith =>
-      __$$_VaxObservationsCopyWithImpl<_$_VaxObservations>(this, _$identity);
+  _$$VaxObservationsImplCopyWith<_$VaxObservationsImpl> get copyWith =>
+      __$$VaxObservationsImplCopyWithImpl<_$VaxObservationsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VaxObservationsToJson(
+    return _$$VaxObservationsImplToJson(
       this,
     );
   }
@@ -149,17 +150,17 @@ class _$_VaxObservations extends _VaxObservations {
 
 abstract class _VaxObservations extends VaxObservations {
   factory _VaxObservations({final List<VaxObservation>? observation}) =
-      _$_VaxObservations;
+      _$VaxObservationsImpl;
   _VaxObservations._() : super._();
 
   factory _VaxObservations.fromJson(Map<String, dynamic> json) =
-      _$_VaxObservations.fromJson;
+      _$VaxObservationsImpl.fromJson;
 
   @override
   List<VaxObservation>? get observation;
   @override
   @JsonKey(ignore: true)
-  _$$_VaxObservationsCopyWith<_$_VaxObservations> get copyWith =>
+  _$$VaxObservationsImplCopyWith<_$VaxObservationsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -288,11 +289,11 @@ class _$VaxObservationCopyWithImpl<$Res, $Val extends VaxObservation>
 }
 
 /// @nodoc
-abstract class _$$_VaxObservationCopyWith<$Res>
+abstract class _$$VaxObservationImplCopyWith<$Res>
     implements $VaxObservationCopyWith<$Res> {
-  factory _$$_VaxObservationCopyWith(
-          _$_VaxObservation value, $Res Function(_$_VaxObservation) then) =
-      __$$_VaxObservationCopyWithImpl<$Res>;
+  factory _$$VaxObservationImplCopyWith(_$VaxObservationImpl value,
+          $Res Function(_$VaxObservationImpl) then) =
+      __$$VaxObservationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -312,11 +313,11 @@ abstract class _$$_VaxObservationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_VaxObservationCopyWithImpl<$Res>
-    extends _$VaxObservationCopyWithImpl<$Res, _$_VaxObservation>
-    implements _$$_VaxObservationCopyWith<$Res> {
-  __$$_VaxObservationCopyWithImpl(
-      _$_VaxObservation _value, $Res Function(_$_VaxObservation) _then)
+class __$$VaxObservationImplCopyWithImpl<$Res>
+    extends _$VaxObservationCopyWithImpl<$Res, _$VaxObservationImpl>
+    implements _$$VaxObservationImplCopyWith<$Res> {
+  __$$VaxObservationImplCopyWithImpl(
+      _$VaxObservationImpl _value, $Res Function(_$VaxObservationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -331,7 +332,7 @@ class __$$_VaxObservationCopyWithImpl<$Res>
     Object? codedValues = freezed,
     Object? period = freezed,
   }) {
-    return _then(_$_VaxObservation(
+    return _then(_$VaxObservationImpl(
       observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
@@ -370,8 +371,8 @@ class __$$_VaxObservationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VaxObservation extends _VaxObservation {
-  _$_VaxObservation(
+class _$VaxObservationImpl extends _VaxObservation {
+  _$VaxObservationImpl(
       {this.observationCode,
       this.observationTitle,
       this.group,
@@ -382,8 +383,8 @@ class _$_VaxObservation extends _VaxObservation {
       this.period})
       : super._();
 
-  factory _$_VaxObservation.fromJson(Map<String, dynamic> json) =>
-      _$$_VaxObservationFromJson(json);
+  factory _$VaxObservationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VaxObservationImplFromJson(json);
 
   @override
   final String? observationCode;
@@ -408,10 +409,10 @@ class _$_VaxObservation extends _VaxObservation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VaxObservation &&
+            other is _$VaxObservationImpl &&
             (identical(other.observationCode, observationCode) ||
                 other.observationCode == observationCode) &&
             (identical(other.observationTitle, observationTitle) ||
@@ -444,12 +445,13 @@ class _$_VaxObservation extends _VaxObservation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VaxObservationCopyWith<_$_VaxObservation> get copyWith =>
-      __$$_VaxObservationCopyWithImpl<_$_VaxObservation>(this, _$identity);
+  _$$VaxObservationImplCopyWith<_$VaxObservationImpl> get copyWith =>
+      __$$VaxObservationImplCopyWithImpl<_$VaxObservationImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VaxObservationToJson(
+    return _$$VaxObservationImplToJson(
       this,
     );
   }
@@ -464,11 +466,11 @@ abstract class _VaxObservation extends VaxObservation {
       final String? contraindicationText,
       final String? clarifyingText,
       final CodedValues? codedValues,
-      final Period? period}) = _$_VaxObservation;
+      final Period? period}) = _$VaxObservationImpl;
   _VaxObservation._() : super._();
 
   factory _VaxObservation.fromJson(Map<String, dynamic> json) =
-      _$_VaxObservation.fromJson;
+      _$VaxObservationImpl.fromJson;
 
   @override
   String? get observationCode;
@@ -488,7 +490,7 @@ abstract class _VaxObservation extends VaxObservation {
   Period? get period;
   @override
   @JsonKey(ignore: true)
-  _$$_VaxObservationCopyWith<_$_VaxObservation> get copyWith =>
+  _$$VaxObservationImplCopyWith<_$VaxObservationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -540,22 +542,22 @@ class _$CodedValuesCopyWithImpl<$Res, $Val extends CodedValues>
 }
 
 /// @nodoc
-abstract class _$$_CodedValuesCopyWith<$Res>
+abstract class _$$CodedValuesImplCopyWith<$Res>
     implements $CodedValuesCopyWith<$Res> {
-  factory _$$_CodedValuesCopyWith(
-          _$_CodedValues value, $Res Function(_$_CodedValues) then) =
-      __$$_CodedValuesCopyWithImpl<$Res>;
+  factory _$$CodedValuesImplCopyWith(
+          _$CodedValuesImpl value, $Res Function(_$CodedValuesImpl) then) =
+      __$$CodedValuesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<CodedValue>? codedValue});
 }
 
 /// @nodoc
-class __$$_CodedValuesCopyWithImpl<$Res>
-    extends _$CodedValuesCopyWithImpl<$Res, _$_CodedValues>
-    implements _$$_CodedValuesCopyWith<$Res> {
-  __$$_CodedValuesCopyWithImpl(
-      _$_CodedValues _value, $Res Function(_$_CodedValues) _then)
+class __$$CodedValuesImplCopyWithImpl<$Res>
+    extends _$CodedValuesCopyWithImpl<$Res, _$CodedValuesImpl>
+    implements _$$CodedValuesImplCopyWith<$Res> {
+  __$$CodedValuesImplCopyWithImpl(
+      _$CodedValuesImpl _value, $Res Function(_$CodedValuesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -563,7 +565,7 @@ class __$$_CodedValuesCopyWithImpl<$Res>
   $Res call({
     Object? codedValue = freezed,
   }) {
-    return _then(_$_CodedValues(
+    return _then(_$CodedValuesImpl(
       codedValue: freezed == codedValue
           ? _value._codedValue
           : codedValue // ignore: cast_nullable_to_non_nullable
@@ -574,13 +576,13 @@ class __$$_CodedValuesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CodedValues extends _CodedValues {
-  _$_CodedValues({final List<CodedValue>? codedValue})
+class _$CodedValuesImpl extends _CodedValues {
+  _$CodedValuesImpl({final List<CodedValue>? codedValue})
       : _codedValue = codedValue,
         super._();
 
-  factory _$_CodedValues.fromJson(Map<String, dynamic> json) =>
-      _$$_CodedValuesFromJson(json);
+  factory _$CodedValuesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CodedValuesImplFromJson(json);
 
   final List<CodedValue>? _codedValue;
   @override
@@ -598,10 +600,10 @@ class _$_CodedValues extends _CodedValues {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CodedValues &&
+            other is _$CodedValuesImpl &&
             const DeepCollectionEquality()
                 .equals(other._codedValue, _codedValue));
   }
@@ -614,29 +616,30 @@ class _$_CodedValues extends _CodedValues {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CodedValuesCopyWith<_$_CodedValues> get copyWith =>
-      __$$_CodedValuesCopyWithImpl<_$_CodedValues>(this, _$identity);
+  _$$CodedValuesImplCopyWith<_$CodedValuesImpl> get copyWith =>
+      __$$CodedValuesImplCopyWithImpl<_$CodedValuesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodedValuesToJson(
+    return _$$CodedValuesImplToJson(
       this,
     );
   }
 }
 
 abstract class _CodedValues extends CodedValues {
-  factory _CodedValues({final List<CodedValue>? codedValue}) = _$_CodedValues;
+  factory _CodedValues({final List<CodedValue>? codedValue}) =
+      _$CodedValuesImpl;
   _CodedValues._() : super._();
 
   factory _CodedValues.fromJson(Map<String, dynamic> json) =
-      _$_CodedValues.fromJson;
+      _$CodedValuesImpl.fromJson;
 
   @override
   List<CodedValue>? get codedValue;
   @override
   @JsonKey(ignore: true)
-  _$$_CodedValuesCopyWith<_$_CodedValues> get copyWith =>
+  _$$CodedValuesImplCopyWith<_$CodedValuesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -700,22 +703,22 @@ class _$CodedValueCopyWithImpl<$Res, $Val extends CodedValue>
 }
 
 /// @nodoc
-abstract class _$$_CodedValueCopyWith<$Res>
+abstract class _$$CodedValueImplCopyWith<$Res>
     implements $CodedValueCopyWith<$Res> {
-  factory _$$_CodedValueCopyWith(
-          _$_CodedValue value, $Res Function(_$_CodedValue) then) =
-      __$$_CodedValueCopyWithImpl<$Res>;
+  factory _$$CodedValueImplCopyWith(
+          _$CodedValueImpl value, $Res Function(_$CodedValueImpl) then) =
+      __$$CodedValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? code, String? codeSystem, String? text});
 }
 
 /// @nodoc
-class __$$_CodedValueCopyWithImpl<$Res>
-    extends _$CodedValueCopyWithImpl<$Res, _$_CodedValue>
-    implements _$$_CodedValueCopyWith<$Res> {
-  __$$_CodedValueCopyWithImpl(
-      _$_CodedValue _value, $Res Function(_$_CodedValue) _then)
+class __$$CodedValueImplCopyWithImpl<$Res>
+    extends _$CodedValueCopyWithImpl<$Res, _$CodedValueImpl>
+    implements _$$CodedValueImplCopyWith<$Res> {
+  __$$CodedValueImplCopyWithImpl(
+      _$CodedValueImpl _value, $Res Function(_$CodedValueImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -725,7 +728,7 @@ class __$$_CodedValueCopyWithImpl<$Res>
     Object? codeSystem = freezed,
     Object? text = freezed,
   }) {
-    return _then(_$_CodedValue(
+    return _then(_$CodedValueImpl(
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -744,11 +747,11 @@ class __$$_CodedValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CodedValue extends _CodedValue {
-  _$_CodedValue({this.code, this.codeSystem, this.text}) : super._();
+class _$CodedValueImpl extends _CodedValue {
+  _$CodedValueImpl({this.code, this.codeSystem, this.text}) : super._();
 
-  factory _$_CodedValue.fromJson(Map<String, dynamic> json) =>
-      _$$_CodedValueFromJson(json);
+  factory _$CodedValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CodedValueImplFromJson(json);
 
   @override
   final String? code;
@@ -763,10 +766,10 @@ class _$_CodedValue extends _CodedValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CodedValue &&
+            other is _$CodedValueImpl &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.codeSystem, codeSystem) ||
                 other.codeSystem == codeSystem) &&
@@ -780,12 +783,12 @@ class _$_CodedValue extends _CodedValue {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CodedValueCopyWith<_$_CodedValue> get copyWith =>
-      __$$_CodedValueCopyWithImpl<_$_CodedValue>(this, _$identity);
+  _$$CodedValueImplCopyWith<_$CodedValueImpl> get copyWith =>
+      __$$CodedValueImplCopyWithImpl<_$CodedValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodedValueToJson(
+    return _$$CodedValueImplToJson(
       this,
     );
   }
@@ -795,11 +798,11 @@ abstract class _CodedValue extends CodedValue {
   factory _CodedValue(
       {final String? code,
       final String? codeSystem,
-      final String? text}) = _$_CodedValue;
+      final String? text}) = _$CodedValueImpl;
   _CodedValue._() : super._();
 
   factory _CodedValue.fromJson(Map<String, dynamic> json) =
-      _$_CodedValue.fromJson;
+      _$CodedValueImpl.fromJson;
 
   @override
   String? get code;
@@ -809,6 +812,6 @@ abstract class _CodedValue extends CodedValue {
   String? get text;
   @override
   @JsonKey(ignore: true)
-  _$$_CodedValueCopyWith<_$_CodedValue> get copyWith =>
+  _$$CodedValueImplCopyWith<_$CodedValueImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,7 +6,7 @@ part of 'series.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Series _$$_SeriesFromJson(Map<String, dynamic> json) => _$_Series(
+_$SeriesImpl _$$SeriesImplFromJson(Map<String, dynamic> json) => _$SeriesImpl(
       seriesName: json['seriesName'] as String?,
       targetDisease: json['targetDisease'] as String?,
       vaccineGroup: json['vaccineGroup'] as String?,
@@ -30,7 +30,7 @@ _$_Series _$$_SeriesFromJson(Map<String, dynamic> json) => _$_Series(
           .toList(),
     );
 
-Map<String, dynamic> _$$_SeriesToJson(_$_Series instance) {
+Map<String, dynamic> _$$SeriesImplToJson(_$SeriesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

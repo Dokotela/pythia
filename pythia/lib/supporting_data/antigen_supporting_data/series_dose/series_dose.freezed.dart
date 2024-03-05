@@ -12,7 +12,7 @@ part of 'series_dose.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SeriesDose _$SeriesDoseFromJson(Map<String, dynamic> json) {
   return _SeriesDose.fromJson(json);
@@ -156,11 +156,11 @@ class _$SeriesDoseCopyWithImpl<$Res, $Val extends SeriesDose>
 }
 
 /// @nodoc
-abstract class _$$_SeriesDoseCopyWith<$Res>
+abstract class _$$SeriesDoseImplCopyWith<$Res>
     implements $SeriesDoseCopyWith<$Res> {
-  factory _$$_SeriesDoseCopyWith(
-          _$_SeriesDose value, $Res Function(_$_SeriesDose) then) =
-      __$$_SeriesDoseCopyWithImpl<$Res>;
+  factory _$$SeriesDoseImplCopyWith(
+          _$SeriesDoseImpl value, $Res Function(_$SeriesDoseImpl) then) =
+      __$$SeriesDoseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -182,11 +182,11 @@ abstract class _$$_SeriesDoseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SeriesDoseCopyWithImpl<$Res>
-    extends _$SeriesDoseCopyWithImpl<$Res, _$_SeriesDose>
-    implements _$$_SeriesDoseCopyWith<$Res> {
-  __$$_SeriesDoseCopyWithImpl(
-      _$_SeriesDose _value, $Res Function(_$_SeriesDose) _then)
+class __$$SeriesDoseImplCopyWithImpl<$Res>
+    extends _$SeriesDoseCopyWithImpl<$Res, _$SeriesDoseImpl>
+    implements _$$SeriesDoseImplCopyWith<$Res> {
+  __$$SeriesDoseImplCopyWithImpl(
+      _$SeriesDoseImpl _value, $Res Function(_$SeriesDoseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -203,7 +203,7 @@ class __$$_SeriesDoseCopyWithImpl<$Res>
     Object? recurringDose = freezed,
     Object? seasonalRecommendation = freezed,
   }) {
-    return _then(_$_SeriesDose(
+    return _then(_$SeriesDoseImpl(
       doseNumber: freezed == doseNumber
           ? _value.doseNumber
           : doseNumber // ignore: cast_nullable_to_non_nullable
@@ -250,8 +250,8 @@ class __$$_SeriesDoseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SeriesDose extends _SeriesDose {
-  _$_SeriesDose(
+class _$SeriesDoseImpl extends _SeriesDose {
+  _$SeriesDoseImpl(
       {this.doseNumber,
       final List<VaxAge>? age,
       final List<Interval>? interval,
@@ -270,8 +270,8 @@ class _$_SeriesDose extends _SeriesDose {
         _conditionalSkip = conditionalSkip,
         super._();
 
-  factory _$_SeriesDose.fromJson(Map<String, dynamic> json) =>
-      _$$_SeriesDoseFromJson(json);
+  factory _$SeriesDoseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SeriesDoseImplFromJson(json);
 
   @override
   final DoseNumber? doseNumber;
@@ -351,10 +351,10 @@ class _$_SeriesDose extends _SeriesDose {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SeriesDose &&
+            other is _$SeriesDoseImpl &&
             (identical(other.doseNumber, doseNumber) ||
                 other.doseNumber == doseNumber) &&
             const DeepCollectionEquality().equals(other._age, _age) &&
@@ -393,12 +393,12 @@ class _$_SeriesDose extends _SeriesDose {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SeriesDoseCopyWith<_$_SeriesDose> get copyWith =>
-      __$$_SeriesDoseCopyWithImpl<_$_SeriesDose>(this, _$identity);
+  _$$SeriesDoseImplCopyWith<_$SeriesDoseImpl> get copyWith =>
+      __$$SeriesDoseImplCopyWithImpl<_$SeriesDoseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SeriesDoseToJson(
+    return _$$SeriesDoseImplToJson(
       this,
     );
   }
@@ -415,11 +415,11 @@ abstract class _SeriesDose extends SeriesDose {
       final List<Vaccine>? inadvertentVaccine,
       final List<ConditionalSkip>? conditionalSkip,
       final Binary? recurringDose,
-      final SeasonalRecommendation? seasonalRecommendation}) = _$_SeriesDose;
+      final SeasonalRecommendation? seasonalRecommendation}) = _$SeriesDoseImpl;
   _SeriesDose._() : super._();
 
   factory _SeriesDose.fromJson(Map<String, dynamic> json) =
-      _$_SeriesDose.fromJson;
+      _$SeriesDoseImpl.fromJson;
 
   @override
   DoseNumber? get doseNumber;
@@ -443,6 +443,6 @@ abstract class _SeriesDose extends SeriesDose {
   SeasonalRecommendation? get seasonalRecommendation;
   @override
   @JsonKey(ignore: true)
-  _$$_SeriesDoseCopyWith<_$_SeriesDose> get copyWith =>
+  _$$SeriesDoseImplCopyWith<_$SeriesDoseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

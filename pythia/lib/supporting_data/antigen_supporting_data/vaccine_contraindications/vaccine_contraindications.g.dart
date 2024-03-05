@@ -6,17 +6,17 @@ part of 'vaccine_contraindications.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VaccineContraindications _$$_VaccineContraindicationsFromJson(
+_$VaccineContraindicationsImpl _$$VaccineContraindicationsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VaccineContraindications(
+    _$VaccineContraindicationsImpl(
       contraindication: (json['contraindication'] as List<dynamic>?)
           ?.map((e) =>
               VaccineContraindication.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_VaccineContraindicationsToJson(
-    _$_VaccineContraindications instance) {
+Map<String, dynamic> _$$VaccineContraindicationsImplToJson(
+    _$VaccineContraindicationsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -30,9 +30,9 @@ Map<String, dynamic> _$$_VaccineContraindicationsToJson(
   return val;
 }
 
-_$_VaccineContraindication _$$_VaccineContraindicationFromJson(
+_$VaccineContraindicationImpl _$$VaccineContraindicationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VaccineContraindication(
+    _$VaccineContraindicationImpl(
       observationCode: json['observationCode'] as String?,
       observationTitle: json['observationTitle'] as String?,
       contraindicationText: json['contraindicationText'] as String?,
@@ -42,8 +42,8 @@ _$_VaccineContraindication _$$_VaccineContraindicationFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_VaccineContraindicationToJson(
-    _$_VaccineContraindication instance) {
+Map<String, dynamic> _$$VaccineContraindicationImplToJson(
+    _$VaccineContraindicationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

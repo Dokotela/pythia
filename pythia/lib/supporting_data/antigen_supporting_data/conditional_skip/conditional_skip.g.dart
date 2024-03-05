@@ -6,8 +6,9 @@ part of 'conditional_skip.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ConditionalSkip _$$_ConditionalSkipFromJson(Map<String, dynamic> json) =>
-    _$_ConditionalSkip(
+_$ConditionalSkipImpl _$$ConditionalSkipImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ConditionalSkipImpl(
       context: $enumDecodeNullable(_$SkipContextEnumMap, json['context']),
       setLogic: json['setLogic'] as String?,
       set_: (json['set'] as List<dynamic>?)
@@ -15,7 +16,8 @@ _$_ConditionalSkip _$$_ConditionalSkipFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConditionalSkipToJson(_$_ConditionalSkip instance) {
+Map<String, dynamic> _$$ConditionalSkipImplToJson(
+    _$ConditionalSkipImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

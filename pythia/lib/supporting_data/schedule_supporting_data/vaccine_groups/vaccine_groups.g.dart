@@ -6,14 +6,14 @@ part of 'vaccine_groups.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VaccineGroups _$$_VaccineGroupsFromJson(Map<String, dynamic> json) =>
-    _$_VaccineGroups(
+_$VaccineGroupsImpl _$$VaccineGroupsImplFromJson(Map<String, dynamic> json) =>
+    _$VaccineGroupsImpl(
       vaccineGroup: (json['vaccineGroup'] as List<dynamic>?)
           ?.map((e) => VaccineGroup.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_VaccineGroupsToJson(_$_VaccineGroups instance) {
+Map<String, dynamic> _$$VaccineGroupsImplToJson(_$VaccineGroupsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -27,14 +27,14 @@ Map<String, dynamic> _$$_VaccineGroupsToJson(_$_VaccineGroups instance) {
   return val;
 }
 
-_$_VaccineGroup _$$_VaccineGroupFromJson(Map<String, dynamic> json) =>
-    _$_VaccineGroup(
+_$VaccineGroupImpl _$$VaccineGroupImplFromJson(Map<String, dynamic> json) =>
+    _$VaccineGroupImpl(
       name: json['name'] as String?,
       administerFullVaccineGroup: $enumDecodeNullable(
           _$BinaryEnumMap, json['administerFullVaccineGroup']),
     );
 
-Map<String, dynamic> _$$_VaccineGroupToJson(_$_VaccineGroup instance) {
+Map<String, dynamic> _$$VaccineGroupImplToJson(_$VaccineGroupImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

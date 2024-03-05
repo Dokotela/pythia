@@ -6,13 +6,15 @@ part of 'clinical_history.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ClinicalHistory _$$_ClinicalHistoryFromJson(Map<String, dynamic> json) =>
-    _$_ClinicalHistory(
+_$ClinicalHistoryImpl _$$ClinicalHistoryImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ClinicalHistoryImpl(
       guidelineCode: json['guidelineCode'] as String?,
       guidelineTitle: json['guidelineTitle'] as String?,
     );
 
-Map<String, dynamic> _$$_ClinicalHistoryToJson(_$_ClinicalHistory instance) {
+Map<String, dynamic> _$$ClinicalHistoryImplToJson(
+    _$ClinicalHistoryImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

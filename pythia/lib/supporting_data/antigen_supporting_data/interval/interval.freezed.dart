@@ -12,7 +12,7 @@ part of 'interval.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Interval _$IntervalFromJson(Map<String, dynamic> json) {
   return _Interval.fromJson(json);
@@ -146,10 +146,11 @@ class _$IntervalCopyWithImpl<$Res, $Val extends Interval>
 }
 
 /// @nodoc
-abstract class _$$_IntervalCopyWith<$Res> implements $IntervalCopyWith<$Res> {
-  factory _$$_IntervalCopyWith(
-          _$_Interval value, $Res Function(_$_Interval) then) =
-      __$$_IntervalCopyWithImpl<$Res>;
+abstract class _$$IntervalImplCopyWith<$Res>
+    implements $IntervalCopyWith<$Res> {
+  factory _$$IntervalImplCopyWith(
+          _$IntervalImpl value, $Res Function(_$IntervalImpl) then) =
+      __$$IntervalImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -170,11 +171,11 @@ abstract class _$$_IntervalCopyWith<$Res> implements $IntervalCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_IntervalCopyWithImpl<$Res>
-    extends _$IntervalCopyWithImpl<$Res, _$_Interval>
-    implements _$$_IntervalCopyWith<$Res> {
-  __$$_IntervalCopyWithImpl(
-      _$_Interval _value, $Res Function(_$_Interval) _then)
+class __$$IntervalImplCopyWithImpl<$Res>
+    extends _$IntervalCopyWithImpl<$Res, _$IntervalImpl>
+    implements _$$IntervalImplCopyWith<$Res> {
+  __$$IntervalImplCopyWithImpl(
+      _$IntervalImpl _value, $Res Function(_$IntervalImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -192,7 +193,7 @@ class __$$_IntervalCopyWithImpl<$Res>
     Object? effectiveDate = freezed,
     Object? cessationDate = freezed,
   }) {
-    return _then(_$_Interval(
+    return _then(_$IntervalImpl(
       fromPrevious: freezed == fromPrevious
           ? _value.fromPrevious
           : fromPrevious // ignore: cast_nullable_to_non_nullable
@@ -243,8 +244,8 @@ class __$$_IntervalCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Interval extends _Interval {
-  _$_Interval(
+class _$IntervalImpl extends _Interval {
+  _$IntervalImpl(
       {this.fromPrevious,
       this.fromTargetDose,
       this.fromMostRecent,
@@ -258,8 +259,8 @@ class _$_Interval extends _Interval {
       this.cessationDate})
       : super._();
 
-  factory _$_Interval.fromJson(Map<String, dynamic> json) =>
-      _$$_IntervalFromJson(json);
+  factory _$IntervalImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IntervalImplFromJson(json);
 
   @override
   final String? fromPrevious;
@@ -290,10 +291,10 @@ class _$_Interval extends _Interval {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Interval &&
+            other is _$IntervalImpl &&
             (identical(other.fromPrevious, fromPrevious) ||
                 other.fromPrevious == fromPrevious) &&
             (identical(other.fromTargetDose, fromTargetDose) ||
@@ -336,12 +337,12 @@ class _$_Interval extends _Interval {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IntervalCopyWith<_$_Interval> get copyWith =>
-      __$$_IntervalCopyWithImpl<_$_Interval>(this, _$identity);
+  _$$IntervalImplCopyWith<_$IntervalImpl> get copyWith =>
+      __$$IntervalImplCopyWithImpl<_$IntervalImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IntervalToJson(
+    return _$$IntervalImplToJson(
       this,
     );
   }
@@ -359,10 +360,11 @@ abstract class _Interval extends Interval {
       final String? latestRecInt,
       final String? intervalPriority,
       final String? effectiveDate,
-      final String? cessationDate}) = _$_Interval;
+      final String? cessationDate}) = _$IntervalImpl;
   _Interval._() : super._();
 
-  factory _Interval.fromJson(Map<String, dynamic> json) = _$_Interval.fromJson;
+  factory _Interval.fromJson(Map<String, dynamic> json) =
+      _$IntervalImpl.fromJson;
 
   @override
   String? get fromPrevious;
@@ -388,6 +390,6 @@ abstract class _Interval extends Interval {
   String? get cessationDate;
   @override
   @JsonKey(ignore: true)
-  _$$_IntervalCopyWith<_$_Interval> get copyWith =>
+  _$$IntervalImplCopyWith<_$IntervalImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

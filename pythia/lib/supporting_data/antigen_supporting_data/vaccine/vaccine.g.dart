@@ -6,7 +6,8 @@ part of 'vaccine.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Vaccine _$$_VaccineFromJson(Map<String, dynamic> json) => _$_Vaccine(
+_$VaccineImpl _$$VaccineImplFromJson(Map<String, dynamic> json) =>
+    _$VaccineImpl(
       vaccineType: json['vaccineType'] as String?,
       cvx: json['cvx'] as String?,
       beginAge: json['beginAge'] as String?,
@@ -17,7 +18,7 @@ _$_Vaccine _$$_VaccineFromJson(Map<String, dynamic> json) => _$_Vaccine(
       forecastVaccineType: json['forecastVaccineType'] as String?,
     );
 
-Map<String, dynamic> _$$_VaccineToJson(_$_Vaccine instance) {
+Map<String, dynamic> _$$VaccineImplToJson(_$VaccineImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

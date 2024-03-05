@@ -12,7 +12,7 @@ part of 'schedule_supporting_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ScheduleSupportingData _$ScheduleSupportingDataFromJson(
     Map<String, dynamic> json) {
@@ -163,11 +163,12 @@ class _$ScheduleSupportingDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ScheduleSupportingDataCopyWith<$Res>
+abstract class _$$ScheduleSupportingDataImplCopyWith<$Res>
     implements $ScheduleSupportingDataCopyWith<$Res> {
-  factory _$$_ScheduleSupportingDataCopyWith(_$_ScheduleSupportingData value,
-          $Res Function(_$_ScheduleSupportingData) then) =
-      __$$_ScheduleSupportingDataCopyWithImpl<$Res>;
+  factory _$$ScheduleSupportingDataImplCopyWith(
+          _$ScheduleSupportingDataImpl value,
+          $Res Function(_$ScheduleSupportingDataImpl) then) =
+      __$$ScheduleSupportingDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -190,12 +191,13 @@ abstract class _$$_ScheduleSupportingDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ScheduleSupportingDataCopyWithImpl<$Res>
+class __$$ScheduleSupportingDataImplCopyWithImpl<$Res>
     extends _$ScheduleSupportingDataCopyWithImpl<$Res,
-        _$_ScheduleSupportingData>
-    implements _$$_ScheduleSupportingDataCopyWith<$Res> {
-  __$$_ScheduleSupportingDataCopyWithImpl(_$_ScheduleSupportingData _value,
-      $Res Function(_$_ScheduleSupportingData) _then)
+        _$ScheduleSupportingDataImpl>
+    implements _$$ScheduleSupportingDataImplCopyWith<$Res> {
+  __$$ScheduleSupportingDataImplCopyWithImpl(
+      _$ScheduleSupportingDataImpl _value,
+      $Res Function(_$ScheduleSupportingDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -207,7 +209,7 @@ class __$$_ScheduleSupportingDataCopyWithImpl<$Res>
     Object? cvxToAntigenMap = freezed,
     Object? observations = freezed,
   }) {
-    return _then(_$_ScheduleSupportingData(
+    return _then(_$ScheduleSupportingDataImpl(
       liveVirusConflicts: freezed == liveVirusConflicts
           ? _value.liveVirusConflicts
           : liveVirusConflicts // ignore: cast_nullable_to_non_nullable
@@ -234,8 +236,8 @@ class __$$_ScheduleSupportingDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ScheduleSupportingData extends _ScheduleSupportingData {
-  _$_ScheduleSupportingData(
+class _$ScheduleSupportingDataImpl extends _ScheduleSupportingData {
+  _$ScheduleSupportingDataImpl(
       {this.liveVirusConflicts,
       this.vaccineGroups,
       this.vaccineGroupToAntigenMap,
@@ -243,8 +245,8 @@ class _$_ScheduleSupportingData extends _ScheduleSupportingData {
       this.observations})
       : super._();
 
-  factory _$_ScheduleSupportingData.fromJson(Map<String, dynamic> json) =>
-      _$$_ScheduleSupportingDataFromJson(json);
+  factory _$ScheduleSupportingDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScheduleSupportingDataImplFromJson(json);
 
   @override
   final LiveVirusConflicts? liveVirusConflicts;
@@ -263,10 +265,10 @@ class _$_ScheduleSupportingData extends _ScheduleSupportingData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScheduleSupportingData &&
+            other is _$ScheduleSupportingDataImpl &&
             (identical(other.liveVirusConflicts, liveVirusConflicts) ||
                 other.liveVirusConflicts == liveVirusConflicts) &&
             (identical(other.vaccineGroups, vaccineGroups) ||
@@ -288,13 +290,13 @@ class _$_ScheduleSupportingData extends _ScheduleSupportingData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheduleSupportingDataCopyWith<_$_ScheduleSupportingData> get copyWith =>
-      __$$_ScheduleSupportingDataCopyWithImpl<_$_ScheduleSupportingData>(
-          this, _$identity);
+  _$$ScheduleSupportingDataImplCopyWith<_$ScheduleSupportingDataImpl>
+      get copyWith => __$$ScheduleSupportingDataImplCopyWithImpl<
+          _$ScheduleSupportingDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduleSupportingDataToJson(
+    return _$$ScheduleSupportingDataImplToJson(
       this,
     );
   }
@@ -306,11 +308,11 @@ abstract class _ScheduleSupportingData extends ScheduleSupportingData {
       final VaccineGroups? vaccineGroups,
       final VaccineGroupToAntigenMap? vaccineGroupToAntigenMap,
       final CvxToAntigenMap? cvxToAntigenMap,
-      final VaxObservations? observations}) = _$_ScheduleSupportingData;
+      final VaxObservations? observations}) = _$ScheduleSupportingDataImpl;
   _ScheduleSupportingData._() : super._();
 
   factory _ScheduleSupportingData.fromJson(Map<String, dynamic> json) =
-      _$_ScheduleSupportingData.fromJson;
+      _$ScheduleSupportingDataImpl.fromJson;
 
   @override
   LiveVirusConflicts? get liveVirusConflicts;
@@ -324,6 +326,6 @@ abstract class _ScheduleSupportingData extends ScheduleSupportingData {
   VaxObservations? get observations;
   @override
   @JsonKey(ignore: true)
-  _$$_ScheduleSupportingDataCopyWith<_$_ScheduleSupportingData> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ScheduleSupportingDataImplCopyWith<_$ScheduleSupportingDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

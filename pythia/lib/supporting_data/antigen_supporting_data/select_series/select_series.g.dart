@@ -6,8 +6,8 @@ part of 'select_series.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SelectSeries _$$_SelectSeriesFromJson(Map<String, dynamic> json) =>
-    _$_SelectSeries(
+_$SelectSeriesImpl _$$SelectSeriesImplFromJson(Map<String, dynamic> json) =>
+    _$SelectSeriesImpl(
       defaultSeries:
           $enumDecodeNullable(_$BinaryEnumMap, json['defaultSeries']),
       productPath: $enumDecodeNullable(_$BinaryEnumMap, json['productPath']),
@@ -21,7 +21,7 @@ _$_SelectSeries _$$_SelectSeriesFromJson(Map<String, dynamic> json) =>
       maxAgeToStart: json['maxAgeToStart'] as String?,
     );
 
-Map<String, dynamic> _$$_SelectSeriesToJson(_$_SelectSeries instance) {
+Map<String, dynamic> _$$SelectSeriesImplToJson(_$SelectSeriesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

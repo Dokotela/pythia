@@ -6,8 +6,9 @@ part of 'contraindications.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Contraindications _$$_ContraindicationsFromJson(Map<String, dynamic> json) =>
-    _$_Contraindications(
+_$ContraindicationsImpl _$$ContraindicationsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ContraindicationsImpl(
       vaccineGroup: json['vaccineGroup'] == null
           ? null
           : VaccineGroupContraindications.fromJson(
@@ -18,8 +19,8 @@ _$_Contraindications _$$_ContraindicationsFromJson(Map<String, dynamic> json) =>
               json['vaccine'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ContraindicationsToJson(
-    _$_Contraindications instance) {
+Map<String, dynamic> _$$ContraindicationsImplToJson(
+    _$ContraindicationsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

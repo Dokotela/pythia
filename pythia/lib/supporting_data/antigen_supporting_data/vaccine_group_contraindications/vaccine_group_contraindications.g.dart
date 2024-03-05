@@ -6,17 +6,17 @@ part of 'vaccine_group_contraindications.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VaccineGroupContraindications _$$_VaccineGroupContraindicationsFromJson(
-        Map<String, dynamic> json) =>
-    _$_VaccineGroupContraindications(
-      contraindication: (json['contraindication'] as List<dynamic>?)
-          ?.map(
-              (e) => GroupContraindication.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_$VaccineGroupContraindicationsImpl
+    _$$VaccineGroupContraindicationsImplFromJson(Map<String, dynamic> json) =>
+        _$VaccineGroupContraindicationsImpl(
+          contraindication: (json['contraindication'] as List<dynamic>?)
+              ?.map((e) =>
+                  GroupContraindication.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_VaccineGroupContraindicationsToJson(
-    _$_VaccineGroupContraindications instance) {
+Map<String, dynamic> _$$VaccineGroupContraindicationsImplToJson(
+    _$VaccineGroupContraindicationsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -30,9 +30,9 @@ Map<String, dynamic> _$$_VaccineGroupContraindicationsToJson(
   return val;
 }
 
-_$_GroupContraindication _$$_GroupContraindicationFromJson(
+_$GroupContraindicationImpl _$$GroupContraindicationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GroupContraindication(
+    _$GroupContraindicationImpl(
       observationCode: json['observationCode'] as String?,
       observationTitle: json['observationTitle'] as String?,
       contraindicationText: json['contraindicationText'] as String?,
@@ -41,8 +41,8 @@ _$_GroupContraindication _$$_GroupContraindicationFromJson(
       endAge: json['endAge'] as String?,
     );
 
-Map<String, dynamic> _$$_GroupContraindicationToJson(
-    _$_GroupContraindication instance) {
+Map<String, dynamic> _$$GroupContraindicationImplToJson(
+    _$GroupContraindicationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

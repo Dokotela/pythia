@@ -6,7 +6,8 @@ part of 'interval.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Interval _$$_IntervalFromJson(Map<String, dynamic> json) => _$_Interval(
+_$IntervalImpl _$$IntervalImplFromJson(Map<String, dynamic> json) =>
+    _$IntervalImpl(
       fromPrevious: json['fromPrevious'] as String?,
       fromTargetDose: json['fromTargetDose'] as int?,
       fromMostRecent: json['fromMostRecent'] as String?,
@@ -23,7 +24,7 @@ _$_Interval _$$_IntervalFromJson(Map<String, dynamic> json) => _$_Interval(
       cessationDate: json['cessationDate'] as String?,
     );
 
-Map<String, dynamic> _$$_IntervalToJson(_$_Interval instance) {
+Map<String, dynamic> _$$IntervalImplToJson(_$IntervalImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

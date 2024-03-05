@@ -12,7 +12,7 @@ part of 'series.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Series _$SeriesFromJson(Map<String, dynamic> json) {
   return _Series.fromJson(json);
@@ -139,9 +139,10 @@ class _$SeriesCopyWithImpl<$Res, $Val extends Series>
 }
 
 /// @nodoc
-abstract class _$$_SeriesCopyWith<$Res> implements $SeriesCopyWith<$Res> {
-  factory _$$_SeriesCopyWith(_$_Series value, $Res Function(_$_Series) then) =
-      __$$_SeriesCopyWithImpl<$Res>;
+abstract class _$$SeriesImplCopyWith<$Res> implements $SeriesCopyWith<$Res> {
+  factory _$$SeriesImplCopyWith(
+          _$SeriesImpl value, $Res Function(_$SeriesImpl) then) =
+      __$$SeriesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -161,10 +162,11 @@ abstract class _$$_SeriesCopyWith<$Res> implements $SeriesCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SeriesCopyWithImpl<$Res>
-    extends _$SeriesCopyWithImpl<$Res, _$_Series>
-    implements _$$_SeriesCopyWith<$Res> {
-  __$$_SeriesCopyWithImpl(_$_Series _value, $Res Function(_$_Series) _then)
+class __$$SeriesImplCopyWithImpl<$Res>
+    extends _$SeriesCopyWithImpl<$Res, _$SeriesImpl>
+    implements _$$SeriesImplCopyWith<$Res> {
+  __$$SeriesImplCopyWithImpl(
+      _$SeriesImpl _value, $Res Function(_$SeriesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -181,7 +183,7 @@ class __$$_SeriesCopyWithImpl<$Res>
     Object? indication = freezed,
     Object? seriesDose = freezed,
   }) {
-    return _then(_$_Series(
+    return _then(_$SeriesImpl(
       seriesName: freezed == seriesName
           ? _value.seriesName
           : seriesName // ignore: cast_nullable_to_non_nullable
@@ -228,8 +230,8 @@ class __$$_SeriesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Series extends _Series {
-  _$_Series(
+class _$SeriesImpl extends _Series {
+  _$SeriesImpl(
       {this.seriesName,
       this.targetDisease,
       this.vaccineGroup,
@@ -246,8 +248,8 @@ class _$_Series extends _Series {
         _seriesDose = seriesDose,
         super._();
 
-  factory _$_Series.fromJson(Map<String, dynamic> json) =>
-      _$$_SeriesFromJson(json);
+  factory _$SeriesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SeriesImplFromJson(json);
 
   @override
   final String? seriesName;
@@ -308,10 +310,10 @@ class _$_Series extends _Series {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Series &&
+            other is _$SeriesImpl &&
             (identical(other.seriesName, seriesName) ||
                 other.seriesName == seriesName) &&
             (identical(other.targetDisease, targetDisease) ||
@@ -352,12 +354,12 @@ class _$_Series extends _Series {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SeriesCopyWith<_$_Series> get copyWith =>
-      __$$_SeriesCopyWithImpl<_$_Series>(this, _$identity);
+  _$$SeriesImplCopyWith<_$SeriesImpl> get copyWith =>
+      __$$SeriesImplCopyWithImpl<_$SeriesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SeriesToJson(
+    return _$$SeriesImplToJson(
       this,
     );
   }
@@ -374,10 +376,10 @@ abstract class _Series extends Series {
       final List<Gender>? requiredGender,
       final SelectSeries? selectSeries,
       final List<Indication>? indication,
-      final List<SeriesDose>? seriesDose}) = _$_Series;
+      final List<SeriesDose>? seriesDose}) = _$SeriesImpl;
   _Series._() : super._();
 
-  factory _Series.fromJson(Map<String, dynamic> json) = _$_Series.fromJson;
+  factory _Series.fromJson(Map<String, dynamic> json) = _$SeriesImpl.fromJson;
 
   @override
   String? get seriesName;
@@ -401,6 +403,6 @@ abstract class _Series extends Series {
   List<SeriesDose>? get seriesDose;
   @override
   @JsonKey(ignore: true)
-  _$$_SeriesCopyWith<_$_Series> get copyWith =>
+  _$$SeriesImplCopyWith<_$SeriesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

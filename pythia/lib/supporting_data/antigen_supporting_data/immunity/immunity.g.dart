@@ -6,7 +6,8 @@ part of 'immunity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Immunity _$$_ImmunityFromJson(Map<String, dynamic> json) => _$_Immunity(
+_$ImmunityImpl _$$ImmunityImplFromJson(Map<String, dynamic> json) =>
+    _$ImmunityImpl(
       clinicalHistory: (json['clinicalHistory'] as List<dynamic>?)
           ?.map((e) => ClinicalHistory.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -15,7 +16,7 @@ _$_Immunity _$$_ImmunityFromJson(Map<String, dynamic> json) => _$_Immunity(
           : DateOfBirth.fromJson(json['dateOfBirth'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ImmunityToJson(_$_Immunity instance) {
+Map<String, dynamic> _$$ImmunityImplToJson(_$ImmunityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

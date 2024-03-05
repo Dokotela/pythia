@@ -12,7 +12,7 @@ part of 'live_virus_conflicts.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LiveVirusConflicts _$LiveVirusConflictsFromJson(Map<String, dynamic> json) {
   return _LiveVirusConflicts.fromJson(json);
@@ -63,22 +63,22 @@ class _$LiveVirusConflictsCopyWithImpl<$Res, $Val extends LiveVirusConflicts>
 }
 
 /// @nodoc
-abstract class _$$_LiveVirusConflictsCopyWith<$Res>
+abstract class _$$LiveVirusConflictsImplCopyWith<$Res>
     implements $LiveVirusConflictsCopyWith<$Res> {
-  factory _$$_LiveVirusConflictsCopyWith(_$_LiveVirusConflicts value,
-          $Res Function(_$_LiveVirusConflicts) then) =
-      __$$_LiveVirusConflictsCopyWithImpl<$Res>;
+  factory _$$LiveVirusConflictsImplCopyWith(_$LiveVirusConflictsImpl value,
+          $Res Function(_$LiveVirusConflictsImpl) then) =
+      __$$LiveVirusConflictsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<LiveVirusConflict>? liveVirusConflict});
 }
 
 /// @nodoc
-class __$$_LiveVirusConflictsCopyWithImpl<$Res>
-    extends _$LiveVirusConflictsCopyWithImpl<$Res, _$_LiveVirusConflicts>
-    implements _$$_LiveVirusConflictsCopyWith<$Res> {
-  __$$_LiveVirusConflictsCopyWithImpl(
-      _$_LiveVirusConflicts _value, $Res Function(_$_LiveVirusConflicts) _then)
+class __$$LiveVirusConflictsImplCopyWithImpl<$Res>
+    extends _$LiveVirusConflictsCopyWithImpl<$Res, _$LiveVirusConflictsImpl>
+    implements _$$LiveVirusConflictsImplCopyWith<$Res> {
+  __$$LiveVirusConflictsImplCopyWithImpl(_$LiveVirusConflictsImpl _value,
+      $Res Function(_$LiveVirusConflictsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -86,7 +86,7 @@ class __$$_LiveVirusConflictsCopyWithImpl<$Res>
   $Res call({
     Object? liveVirusConflict = freezed,
   }) {
-    return _then(_$_LiveVirusConflicts(
+    return _then(_$LiveVirusConflictsImpl(
       liveVirusConflict: freezed == liveVirusConflict
           ? _value._liveVirusConflict
           : liveVirusConflict // ignore: cast_nullable_to_non_nullable
@@ -97,13 +97,13 @@ class __$$_LiveVirusConflictsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LiveVirusConflicts extends _LiveVirusConflicts {
-  _$_LiveVirusConflicts({final List<LiveVirusConflict>? liveVirusConflict})
+class _$LiveVirusConflictsImpl extends _LiveVirusConflicts {
+  _$LiveVirusConflictsImpl({final List<LiveVirusConflict>? liveVirusConflict})
       : _liveVirusConflict = liveVirusConflict,
         super._();
 
-  factory _$_LiveVirusConflicts.fromJson(Map<String, dynamic> json) =>
-      _$$_LiveVirusConflictsFromJson(json);
+  factory _$LiveVirusConflictsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LiveVirusConflictsImplFromJson(json);
 
   final List<LiveVirusConflict>? _liveVirusConflict;
   @override
@@ -122,10 +122,10 @@ class _$_LiveVirusConflicts extends _LiveVirusConflicts {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LiveVirusConflicts &&
+            other is _$LiveVirusConflictsImpl &&
             const DeepCollectionEquality()
                 .equals(other._liveVirusConflict, _liveVirusConflict));
   }
@@ -138,13 +138,13 @@ class _$_LiveVirusConflicts extends _LiveVirusConflicts {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LiveVirusConflictsCopyWith<_$_LiveVirusConflicts> get copyWith =>
-      __$$_LiveVirusConflictsCopyWithImpl<_$_LiveVirusConflicts>(
+  _$$LiveVirusConflictsImplCopyWith<_$LiveVirusConflictsImpl> get copyWith =>
+      __$$LiveVirusConflictsImplCopyWithImpl<_$LiveVirusConflictsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LiveVirusConflictsToJson(
+    return _$$LiveVirusConflictsImplToJson(
       this,
     );
   }
@@ -153,17 +153,17 @@ class _$_LiveVirusConflicts extends _LiveVirusConflicts {
 abstract class _LiveVirusConflicts extends LiveVirusConflicts {
   factory _LiveVirusConflicts(
           {final List<LiveVirusConflict>? liveVirusConflict}) =
-      _$_LiveVirusConflicts;
+      _$LiveVirusConflictsImpl;
   _LiveVirusConflicts._() : super._();
 
   factory _LiveVirusConflicts.fromJson(Map<String, dynamic> json) =
-      _$_LiveVirusConflicts.fromJson;
+      _$LiveVirusConflictsImpl.fromJson;
 
   @override
   List<LiveVirusConflict>? get liveVirusConflict;
   @override
   @JsonKey(ignore: true)
-  _$$_LiveVirusConflictsCopyWith<_$_LiveVirusConflicts> get copyWith =>
+  _$$LiveVirusConflictsImplCopyWith<_$LiveVirusConflictsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -271,11 +271,11 @@ class _$LiveVirusConflictCopyWithImpl<$Res, $Val extends LiveVirusConflict>
 }
 
 /// @nodoc
-abstract class _$$_LiveVirusConflictCopyWith<$Res>
+abstract class _$$LiveVirusConflictImplCopyWith<$Res>
     implements $LiveVirusConflictCopyWith<$Res> {
-  factory _$$_LiveVirusConflictCopyWith(_$_LiveVirusConflict value,
-          $Res Function(_$_LiveVirusConflict) then) =
-      __$$_LiveVirusConflictCopyWithImpl<$Res>;
+  factory _$$LiveVirusConflictImplCopyWith(_$LiveVirusConflictImpl value,
+          $Res Function(_$LiveVirusConflictImpl) then) =
+      __$$LiveVirusConflictImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -292,11 +292,11 @@ abstract class _$$_LiveVirusConflictCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LiveVirusConflictCopyWithImpl<$Res>
-    extends _$LiveVirusConflictCopyWithImpl<$Res, _$_LiveVirusConflict>
-    implements _$$_LiveVirusConflictCopyWith<$Res> {
-  __$$_LiveVirusConflictCopyWithImpl(
-      _$_LiveVirusConflict _value, $Res Function(_$_LiveVirusConflict) _then)
+class __$$LiveVirusConflictImplCopyWithImpl<$Res>
+    extends _$LiveVirusConflictCopyWithImpl<$Res, _$LiveVirusConflictImpl>
+    implements _$$LiveVirusConflictImplCopyWith<$Res> {
+  __$$LiveVirusConflictImplCopyWithImpl(_$LiveVirusConflictImpl _value,
+      $Res Function(_$LiveVirusConflictImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -308,7 +308,7 @@ class __$$_LiveVirusConflictCopyWithImpl<$Res>
     Object? minConflictEndInterval = freezed,
     Object? conflictEndInterval = freezed,
   }) {
-    return _then(_$_LiveVirusConflict(
+    return _then(_$LiveVirusConflictImpl(
       previous: freezed == previous
           ? _value.previous
           : previous // ignore: cast_nullable_to_non_nullable
@@ -335,8 +335,8 @@ class __$$_LiveVirusConflictCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LiveVirusConflict extends _LiveVirusConflict {
-  _$_LiveVirusConflict(
+class _$LiveVirusConflictImpl extends _LiveVirusConflict {
+  _$LiveVirusConflictImpl(
       {this.previous,
       this.current,
       this.conflictBeginInterval,
@@ -344,8 +344,8 @@ class _$_LiveVirusConflict extends _LiveVirusConflict {
       this.conflictEndInterval})
       : super._();
 
-  factory _$_LiveVirusConflict.fromJson(Map<String, dynamic> json) =>
-      _$$_LiveVirusConflictFromJson(json);
+  factory _$LiveVirusConflictImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LiveVirusConflictImplFromJson(json);
 
   @override
   final Vaccine? previous;
@@ -364,10 +364,10 @@ class _$_LiveVirusConflict extends _LiveVirusConflict {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LiveVirusConflict &&
+            other is _$LiveVirusConflictImpl &&
             (identical(other.previous, previous) ||
                 other.previous == previous) &&
             (identical(other.current, current) || other.current == current) &&
@@ -387,13 +387,13 @@ class _$_LiveVirusConflict extends _LiveVirusConflict {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LiveVirusConflictCopyWith<_$_LiveVirusConflict> get copyWith =>
-      __$$_LiveVirusConflictCopyWithImpl<_$_LiveVirusConflict>(
+  _$$LiveVirusConflictImplCopyWith<_$LiveVirusConflictImpl> get copyWith =>
+      __$$LiveVirusConflictImplCopyWithImpl<_$LiveVirusConflictImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LiveVirusConflictToJson(
+    return _$$LiveVirusConflictImplToJson(
       this,
     );
   }
@@ -405,11 +405,11 @@ abstract class _LiveVirusConflict extends LiveVirusConflict {
       final Vaccine? current,
       final String? conflictBeginInterval,
       final String? minConflictEndInterval,
-      final String? conflictEndInterval}) = _$_LiveVirusConflict;
+      final String? conflictEndInterval}) = _$LiveVirusConflictImpl;
   _LiveVirusConflict._() : super._();
 
   factory _LiveVirusConflict.fromJson(Map<String, dynamic> json) =
-      _$_LiveVirusConflict.fromJson;
+      _$LiveVirusConflictImpl.fromJson;
 
   @override
   Vaccine? get previous;
@@ -423,6 +423,6 @@ abstract class _LiveVirusConflict extends LiveVirusConflict {
   String? get conflictEndInterval;
   @override
   @JsonKey(ignore: true)
-  _$$_LiveVirusConflictCopyWith<_$_LiveVirusConflict> get copyWith =>
+  _$$LiveVirusConflictImplCopyWith<_$LiveVirusConflictImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

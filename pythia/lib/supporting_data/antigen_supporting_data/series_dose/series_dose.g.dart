@@ -6,8 +6,8 @@ part of 'series_dose.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SeriesDose _$$_SeriesDoseFromJson(Map<String, dynamic> json) =>
-    _$_SeriesDose(
+_$SeriesDoseImpl _$$SeriesDoseImplFromJson(Map<String, dynamic> json) =>
+    _$SeriesDoseImpl(
       doseNumber: $enumDecodeNullable(_$DoseNumberEnumMap, json['doseNumber']),
       age: (json['age'] as List<dynamic>?)
           ?.map((e) => VaxAge.fromJson(e as Map<String, dynamic>))
@@ -39,7 +39,7 @@ _$_SeriesDose _$$_SeriesDoseFromJson(Map<String, dynamic> json) =>
               json['seasonalRecommendation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SeriesDoseToJson(_$_SeriesDose instance) {
+Map<String, dynamic> _$$SeriesDoseImplToJson(_$SeriesDoseImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

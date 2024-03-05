@@ -12,7 +12,7 @@ part of 'antigen_supporting_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AntigenSupportingData _$AntigenSupportingDataFromJson(
     Map<String, dynamic> json) {
@@ -121,11 +121,12 @@ class _$AntigenSupportingDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AntigenSupportingDataCopyWith<$Res>
+abstract class _$$AntigenSupportingDataImplCopyWith<$Res>
     implements $AntigenSupportingDataCopyWith<$Res> {
-  factory _$$_AntigenSupportingDataCopyWith(_$_AntigenSupportingData value,
-          $Res Function(_$_AntigenSupportingData) then) =
-      __$$_AntigenSupportingDataCopyWithImpl<$Res>;
+  factory _$$AntigenSupportingDataImplCopyWith(
+          _$AntigenSupportingDataImpl value,
+          $Res Function(_$AntigenSupportingDataImpl) then) =
+      __$$AntigenSupportingDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -142,11 +143,12 @@ abstract class _$$_AntigenSupportingDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AntigenSupportingDataCopyWithImpl<$Res>
-    extends _$AntigenSupportingDataCopyWithImpl<$Res, _$_AntigenSupportingData>
-    implements _$$_AntigenSupportingDataCopyWith<$Res> {
-  __$$_AntigenSupportingDataCopyWithImpl(_$_AntigenSupportingData _value,
-      $Res Function(_$_AntigenSupportingData) _then)
+class __$$AntigenSupportingDataImplCopyWithImpl<$Res>
+    extends _$AntigenSupportingDataCopyWithImpl<$Res,
+        _$AntigenSupportingDataImpl>
+    implements _$$AntigenSupportingDataImplCopyWith<$Res> {
+  __$$AntigenSupportingDataImplCopyWithImpl(_$AntigenSupportingDataImpl _value,
+      $Res Function(_$AntigenSupportingDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -158,7 +160,7 @@ class __$$_AntigenSupportingDataCopyWithImpl<$Res>
     Object? contraindications = freezed,
     Object? series = freezed,
   }) {
-    return _then(_$_AntigenSupportingData(
+    return _then(_$AntigenSupportingDataImpl(
       targetDisease: freezed == targetDisease
           ? _value.targetDisease
           : targetDisease // ignore: cast_nullable_to_non_nullable
@@ -185,8 +187,8 @@ class __$$_AntigenSupportingDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AntigenSupportingData extends _AntigenSupportingData {
-  _$_AntigenSupportingData(
+class _$AntigenSupportingDataImpl extends _AntigenSupportingData {
+  _$AntigenSupportingDataImpl(
       {this.targetDisease,
       this.vaccineGroup,
       this.immunity,
@@ -195,8 +197,8 @@ class _$_AntigenSupportingData extends _AntigenSupportingData {
       : _series = series,
         super._();
 
-  factory _$_AntigenSupportingData.fromJson(Map<String, dynamic> json) =>
-      _$$_AntigenSupportingDataFromJson(json);
+  factory _$AntigenSupportingDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AntigenSupportingDataImplFromJson(json);
 
   @override
   final String? targetDisease;
@@ -222,10 +224,10 @@ class _$_AntigenSupportingData extends _AntigenSupportingData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AntigenSupportingData &&
+            other is _$AntigenSupportingDataImpl &&
             (identical(other.targetDisease, targetDisease) ||
                 other.targetDisease == targetDisease) &&
             (identical(other.vaccineGroup, vaccineGroup) ||
@@ -250,13 +252,13 @@ class _$_AntigenSupportingData extends _AntigenSupportingData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AntigenSupportingDataCopyWith<_$_AntigenSupportingData> get copyWith =>
-      __$$_AntigenSupportingDataCopyWithImpl<_$_AntigenSupportingData>(
-          this, _$identity);
+  _$$AntigenSupportingDataImplCopyWith<_$AntigenSupportingDataImpl>
+      get copyWith => __$$AntigenSupportingDataImplCopyWithImpl<
+          _$AntigenSupportingDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AntigenSupportingDataToJson(
+    return _$$AntigenSupportingDataImplToJson(
       this,
     );
   }
@@ -268,11 +270,11 @@ abstract class _AntigenSupportingData extends AntigenSupportingData {
       final String? vaccineGroup,
       final Immunity? immunity,
       final Contraindications? contraindications,
-      final List<Series>? series}) = _$_AntigenSupportingData;
+      final List<Series>? series}) = _$AntigenSupportingDataImpl;
   _AntigenSupportingData._() : super._();
 
   factory _AntigenSupportingData.fromJson(Map<String, dynamic> json) =
-      _$_AntigenSupportingData.fromJson;
+      _$AntigenSupportingDataImpl.fromJson;
 
   @override
   String? get targetDisease;
@@ -286,6 +288,6 @@ abstract class _AntigenSupportingData extends AntigenSupportingData {
   List<Series>? get series;
   @override
   @JsonKey(ignore: true)
-  _$$_AntigenSupportingDataCopyWith<_$_AntigenSupportingData> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AntigenSupportingDataImplCopyWith<_$AntigenSupportingDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

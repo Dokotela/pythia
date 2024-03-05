@@ -12,7 +12,7 @@ part of 'vax_set.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 VaxSet _$VaxSetFromJson(Map<String, dynamic> json) {
   return _VaxSet.fromJson(json);
@@ -96,9 +96,10 @@ class _$VaxSetCopyWithImpl<$Res, $Val extends VaxSet>
 }
 
 /// @nodoc
-abstract class _$$_VaxSetCopyWith<$Res> implements $VaxSetCopyWith<$Res> {
-  factory _$$_VaxSetCopyWith(_$_VaxSet value, $Res Function(_$_VaxSet) then) =
-      __$$_VaxSetCopyWithImpl<$Res>;
+abstract class _$$VaxSetImplCopyWith<$Res> implements $VaxSetCopyWith<$Res> {
+  factory _$$VaxSetImplCopyWith(
+          _$VaxSetImpl value, $Res Function(_$VaxSetImpl) then) =
+      __$$VaxSetImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -111,10 +112,11 @@ abstract class _$$_VaxSetCopyWith<$Res> implements $VaxSetCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_VaxSetCopyWithImpl<$Res>
-    extends _$VaxSetCopyWithImpl<$Res, _$_VaxSet>
-    implements _$$_VaxSetCopyWith<$Res> {
-  __$$_VaxSetCopyWithImpl(_$_VaxSet _value, $Res Function(_$_VaxSet) _then)
+class __$$VaxSetImplCopyWithImpl<$Res>
+    extends _$VaxSetCopyWithImpl<$Res, _$VaxSetImpl>
+    implements _$$VaxSetImplCopyWith<$Res> {
+  __$$VaxSetImplCopyWithImpl(
+      _$VaxSetImpl _value, $Res Function(_$VaxSetImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -127,7 +129,7 @@ class __$$_VaxSetCopyWithImpl<$Res>
     Object? conditionLogic = freezed,
     Object? condition = freezed,
   }) {
-    return _then(_$_VaxSet(
+    return _then(_$VaxSetImpl(
       setID: freezed == setID
           ? _value.setID
           : setID // ignore: cast_nullable_to_non_nullable
@@ -158,8 +160,8 @@ class __$$_VaxSetCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VaxSet extends _VaxSet {
-  _$_VaxSet(
+class _$VaxSetImpl extends _VaxSet {
+  _$VaxSetImpl(
       {this.setID,
       this.setDescription,
       this.effectiveDate,
@@ -169,8 +171,8 @@ class _$_VaxSet extends _VaxSet {
       : _condition = condition,
         super._();
 
-  factory _$_VaxSet.fromJson(Map<String, dynamic> json) =>
-      _$$_VaxSetFromJson(json);
+  factory _$VaxSetImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VaxSetImplFromJson(json);
 
   @override
   final String? setID;
@@ -198,10 +200,10 @@ class _$_VaxSet extends _VaxSet {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VaxSet &&
+            other is _$VaxSetImpl &&
             (identical(other.setID, setID) || other.setID == setID) &&
             (identical(other.setDescription, setDescription) ||
                 other.setDescription == setDescription) &&
@@ -229,12 +231,12 @@ class _$_VaxSet extends _VaxSet {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VaxSetCopyWith<_$_VaxSet> get copyWith =>
-      __$$_VaxSetCopyWithImpl<_$_VaxSet>(this, _$identity);
+  _$$VaxSetImplCopyWith<_$VaxSetImpl> get copyWith =>
+      __$$VaxSetImplCopyWithImpl<_$VaxSetImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VaxSetToJson(
+    return _$$VaxSetImplToJson(
       this,
     );
   }
@@ -247,10 +249,10 @@ abstract class _VaxSet extends VaxSet {
       final String? effectiveDate,
       final String? cessationDate,
       final String? conditionLogic,
-      final List<VaxCondition>? condition}) = _$_VaxSet;
+      final List<VaxCondition>? condition}) = _$VaxSetImpl;
   _VaxSet._() : super._();
 
-  factory _VaxSet.fromJson(Map<String, dynamic> json) = _$_VaxSet.fromJson;
+  factory _VaxSet.fromJson(Map<String, dynamic> json) = _$VaxSetImpl.fromJson;
 
   @override
   String? get setID;
@@ -266,6 +268,6 @@ abstract class _VaxSet extends VaxSet {
   List<VaxCondition>? get condition;
   @override
   @JsonKey(ignore: true)
-  _$$_VaxSetCopyWith<_$_VaxSet> get copyWith =>
+  _$$VaxSetImplCopyWith<_$VaxSetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

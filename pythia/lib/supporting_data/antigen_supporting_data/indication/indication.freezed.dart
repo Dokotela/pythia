@@ -12,7 +12,7 @@ part of 'indication.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Indication _$IndicationFromJson(Map<String, dynamic> json) {
   return _Indication.fromJson(json);
@@ -105,11 +105,11 @@ class _$IndicationCopyWithImpl<$Res, $Val extends Indication>
 }
 
 /// @nodoc
-abstract class _$$_IndicationCopyWith<$Res>
+abstract class _$$IndicationImplCopyWith<$Res>
     implements $IndicationCopyWith<$Res> {
-  factory _$$_IndicationCopyWith(
-          _$_Indication value, $Res Function(_$_Indication) then) =
-      __$$_IndicationCopyWithImpl<$Res>;
+  factory _$$IndicationImplCopyWith(
+          _$IndicationImpl value, $Res Function(_$IndicationImpl) then) =
+      __$$IndicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,11 +124,11 @@ abstract class _$$_IndicationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_IndicationCopyWithImpl<$Res>
-    extends _$IndicationCopyWithImpl<$Res, _$_Indication>
-    implements _$$_IndicationCopyWith<$Res> {
-  __$$_IndicationCopyWithImpl(
-      _$_Indication _value, $Res Function(_$_Indication) _then)
+class __$$IndicationImplCopyWithImpl<$Res>
+    extends _$IndicationCopyWithImpl<$Res, _$IndicationImpl>
+    implements _$$IndicationImplCopyWith<$Res> {
+  __$$IndicationImplCopyWithImpl(
+      _$IndicationImpl _value, $Res Function(_$IndicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -140,7 +140,7 @@ class __$$_IndicationCopyWithImpl<$Res>
     Object? endAge = freezed,
     Object? guidance = freezed,
   }) {
-    return _then(_$_Indication(
+    return _then(_$IndicationImpl(
       observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
@@ -167,8 +167,8 @@ class __$$_IndicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Indication extends _Indication {
-  _$_Indication(
+class _$IndicationImpl extends _Indication {
+  _$IndicationImpl(
       {this.observationCode,
       this.description,
       this.beginAge,
@@ -176,8 +176,8 @@ class _$_Indication extends _Indication {
       this.guidance})
       : super._();
 
-  factory _$_Indication.fromJson(Map<String, dynamic> json) =>
-      _$$_IndicationFromJson(json);
+  factory _$IndicationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IndicationImplFromJson(json);
 
   @override
   final ObservationCode? observationCode;
@@ -196,10 +196,10 @@ class _$_Indication extends _Indication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Indication &&
+            other is _$IndicationImpl &&
             (identical(other.observationCode, observationCode) ||
                 other.observationCode == observationCode) &&
             (identical(other.description, description) ||
@@ -219,12 +219,12 @@ class _$_Indication extends _Indication {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IndicationCopyWith<_$_Indication> get copyWith =>
-      __$$_IndicationCopyWithImpl<_$_Indication>(this, _$identity);
+  _$$IndicationImplCopyWith<_$IndicationImpl> get copyWith =>
+      __$$IndicationImplCopyWithImpl<_$IndicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IndicationToJson(
+    return _$$IndicationImplToJson(
       this,
     );
   }
@@ -236,11 +236,11 @@ abstract class _Indication extends Indication {
       final String? description,
       final String? beginAge,
       final String? endAge,
-      final String? guidance}) = _$_Indication;
+      final String? guidance}) = _$IndicationImpl;
   _Indication._() : super._();
 
   factory _Indication.fromJson(Map<String, dynamic> json) =
-      _$_Indication.fromJson;
+      _$IndicationImpl.fromJson;
 
   @override
   ObservationCode? get observationCode;
@@ -254,6 +254,6 @@ abstract class _Indication extends Indication {
   String? get guidance;
   @override
   @JsonKey(ignore: true)
-  _$$_IndicationCopyWith<_$_Indication> get copyWith =>
+  _$$IndicationImplCopyWith<_$IndicationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

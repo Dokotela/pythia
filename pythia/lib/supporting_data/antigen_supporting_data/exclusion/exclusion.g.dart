@@ -6,12 +6,13 @@ part of 'exclusion.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Exclusion _$$_ExclusionFromJson(Map<String, dynamic> json) => _$_Exclusion(
+_$ExclusionImpl _$$ExclusionImplFromJson(Map<String, dynamic> json) =>
+    _$ExclusionImpl(
       exclusionCode: json['exclusionCode'] as String?,
       exclusionTitle: json['exclusionTitle'] as String?,
     );
 
-Map<String, dynamic> _$$_ExclusionToJson(_$_Exclusion instance) {
+Map<String, dynamic> _$$ExclusionImplToJson(_$ExclusionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

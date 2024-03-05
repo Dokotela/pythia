@@ -12,7 +12,7 @@ part of 'vaccine_contraindications.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 VaccineContraindications _$VaccineContraindicationsFromJson(
     Map<String, dynamic> json) {
@@ -65,24 +65,25 @@ class _$VaccineContraindicationsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_VaccineContraindicationsCopyWith<$Res>
+abstract class _$$VaccineContraindicationsImplCopyWith<$Res>
     implements $VaccineContraindicationsCopyWith<$Res> {
-  factory _$$_VaccineContraindicationsCopyWith(
-          _$_VaccineContraindications value,
-          $Res Function(_$_VaccineContraindications) then) =
-      __$$_VaccineContraindicationsCopyWithImpl<$Res>;
+  factory _$$VaccineContraindicationsImplCopyWith(
+          _$VaccineContraindicationsImpl value,
+          $Res Function(_$VaccineContraindicationsImpl) then) =
+      __$$VaccineContraindicationsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<VaccineContraindication>? contraindication});
 }
 
 /// @nodoc
-class __$$_VaccineContraindicationsCopyWithImpl<$Res>
+class __$$VaccineContraindicationsImplCopyWithImpl<$Res>
     extends _$VaccineContraindicationsCopyWithImpl<$Res,
-        _$_VaccineContraindications>
-    implements _$$_VaccineContraindicationsCopyWith<$Res> {
-  __$$_VaccineContraindicationsCopyWithImpl(_$_VaccineContraindications _value,
-      $Res Function(_$_VaccineContraindications) _then)
+        _$VaccineContraindicationsImpl>
+    implements _$$VaccineContraindicationsImplCopyWith<$Res> {
+  __$$VaccineContraindicationsImplCopyWithImpl(
+      _$VaccineContraindicationsImpl _value,
+      $Res Function(_$VaccineContraindicationsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +91,7 @@ class __$$_VaccineContraindicationsCopyWithImpl<$Res>
   $Res call({
     Object? contraindication = freezed,
   }) {
-    return _then(_$_VaccineContraindications(
+    return _then(_$VaccineContraindicationsImpl(
       contraindication: freezed == contraindication
           ? _value._contraindication
           : contraindication // ignore: cast_nullable_to_non_nullable
@@ -101,14 +102,14 @@ class __$$_VaccineContraindicationsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VaccineContraindications extends _VaccineContraindications {
-  _$_VaccineContraindications(
+class _$VaccineContraindicationsImpl extends _VaccineContraindications {
+  _$VaccineContraindicationsImpl(
       {final List<VaccineContraindication>? contraindication})
       : _contraindication = contraindication,
         super._();
 
-  factory _$_VaccineContraindications.fromJson(Map<String, dynamic> json) =>
-      _$$_VaccineContraindicationsFromJson(json);
+  factory _$VaccineContraindicationsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VaccineContraindicationsImplFromJson(json);
 
   final List<VaccineContraindication>? _contraindication;
   @override
@@ -127,10 +128,10 @@ class _$_VaccineContraindications extends _VaccineContraindications {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VaccineContraindications &&
+            other is _$VaccineContraindicationsImpl &&
             const DeepCollectionEquality()
                 .equals(other._contraindication, _contraindication));
   }
@@ -143,13 +144,13 @@ class _$_VaccineContraindications extends _VaccineContraindications {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VaccineContraindicationsCopyWith<_$_VaccineContraindications>
-      get copyWith => __$$_VaccineContraindicationsCopyWithImpl<
-          _$_VaccineContraindications>(this, _$identity);
+  _$$VaccineContraindicationsImplCopyWith<_$VaccineContraindicationsImpl>
+      get copyWith => __$$VaccineContraindicationsImplCopyWithImpl<
+          _$VaccineContraindicationsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VaccineContraindicationsToJson(
+    return _$$VaccineContraindicationsImplToJson(
       this,
     );
   }
@@ -158,17 +159,17 @@ class _$_VaccineContraindications extends _VaccineContraindications {
 abstract class _VaccineContraindications extends VaccineContraindications {
   factory _VaccineContraindications(
           {final List<VaccineContraindication>? contraindication}) =
-      _$_VaccineContraindications;
+      _$VaccineContraindicationsImpl;
   _VaccineContraindications._() : super._();
 
   factory _VaccineContraindications.fromJson(Map<String, dynamic> json) =
-      _$_VaccineContraindications.fromJson;
+      _$VaccineContraindicationsImpl.fromJson;
 
   @override
   List<VaccineContraindication>? get contraindication;
   @override
   @JsonKey(ignore: true)
-  _$$_VaccineContraindicationsCopyWith<_$_VaccineContraindications>
+  _$$VaccineContraindicationsImplCopyWith<_$VaccineContraindicationsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -252,11 +253,12 @@ class _$VaccineContraindicationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_VaccineContraindicationCopyWith<$Res>
+abstract class _$$VaccineContraindicationImplCopyWith<$Res>
     implements $VaccineContraindicationCopyWith<$Res> {
-  factory _$$_VaccineContraindicationCopyWith(_$_VaccineContraindication value,
-          $Res Function(_$_VaccineContraindication) then) =
-      __$$_VaccineContraindicationCopyWithImpl<$Res>;
+  factory _$$VaccineContraindicationImplCopyWith(
+          _$VaccineContraindicationImpl value,
+          $Res Function(_$VaccineContraindicationImpl) then) =
+      __$$VaccineContraindicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -268,12 +270,13 @@ abstract class _$$_VaccineContraindicationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_VaccineContraindicationCopyWithImpl<$Res>
+class __$$VaccineContraindicationImplCopyWithImpl<$Res>
     extends _$VaccineContraindicationCopyWithImpl<$Res,
-        _$_VaccineContraindication>
-    implements _$$_VaccineContraindicationCopyWith<$Res> {
-  __$$_VaccineContraindicationCopyWithImpl(_$_VaccineContraindication _value,
-      $Res Function(_$_VaccineContraindication) _then)
+        _$VaccineContraindicationImpl>
+    implements _$$VaccineContraindicationImplCopyWith<$Res> {
+  __$$VaccineContraindicationImplCopyWithImpl(
+      _$VaccineContraindicationImpl _value,
+      $Res Function(_$VaccineContraindicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -285,7 +288,7 @@ class __$$_VaccineContraindicationCopyWithImpl<$Res>
     Object? contraindicationGuidance = freezed,
     Object? contraindicatedVaccine = freezed,
   }) {
-    return _then(_$_VaccineContraindication(
+    return _then(_$VaccineContraindicationImpl(
       observationCode: freezed == observationCode
           ? _value.observationCode
           : observationCode // ignore: cast_nullable_to_non_nullable
@@ -312,8 +315,8 @@ class __$$_VaccineContraindicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VaccineContraindication extends _VaccineContraindication {
-  _$_VaccineContraindication(
+class _$VaccineContraindicationImpl extends _VaccineContraindication {
+  _$VaccineContraindicationImpl(
       {this.observationCode,
       this.observationTitle,
       this.contraindicationText,
@@ -322,8 +325,8 @@ class _$_VaccineContraindication extends _VaccineContraindication {
       : _contraindicatedVaccine = contraindicatedVaccine,
         super._();
 
-  factory _$_VaccineContraindication.fromJson(Map<String, dynamic> json) =>
-      _$$_VaccineContraindicationFromJson(json);
+  factory _$VaccineContraindicationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VaccineContraindicationImplFromJson(json);
 
   @override
   final String? observationCode;
@@ -350,10 +353,10 @@ class _$_VaccineContraindication extends _VaccineContraindication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VaccineContraindication &&
+            other is _$VaccineContraindicationImpl &&
             (identical(other.observationCode, observationCode) ||
                 other.observationCode == observationCode) &&
             (identical(other.observationTitle, observationTitle) ||
@@ -380,14 +383,13 @@ class _$_VaccineContraindication extends _VaccineContraindication {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VaccineContraindicationCopyWith<_$_VaccineContraindication>
-      get copyWith =>
-          __$$_VaccineContraindicationCopyWithImpl<_$_VaccineContraindication>(
-              this, _$identity);
+  _$$VaccineContraindicationImplCopyWith<_$VaccineContraindicationImpl>
+      get copyWith => __$$VaccineContraindicationImplCopyWithImpl<
+          _$VaccineContraindicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VaccineContraindicationToJson(
+    return _$$VaccineContraindicationImplToJson(
       this,
     );
   }
@@ -400,11 +402,11 @@ abstract class _VaccineContraindication extends VaccineContraindication {
           final String? contraindicationText,
           final String? contraindicationGuidance,
           final List<Vaccine>? contraindicatedVaccine}) =
-      _$_VaccineContraindication;
+      _$VaccineContraindicationImpl;
   _VaccineContraindication._() : super._();
 
   factory _VaccineContraindication.fromJson(Map<String, dynamic> json) =
-      _$_VaccineContraindication.fromJson;
+      _$VaccineContraindicationImpl.fromJson;
 
   @override
   String? get observationCode;
@@ -418,6 +420,6 @@ abstract class _VaccineContraindication extends VaccineContraindication {
   List<Vaccine>? get contraindicatedVaccine;
   @override
   @JsonKey(ignore: true)
-  _$$_VaccineContraindicationCopyWith<_$_VaccineContraindication>
+  _$$VaccineContraindicationImplCopyWith<_$VaccineContraindicationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

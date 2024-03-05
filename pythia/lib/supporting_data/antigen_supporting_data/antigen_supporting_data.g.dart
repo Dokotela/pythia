@@ -6,9 +6,9 @@ part of 'antigen_supporting_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AntigenSupportingData _$$_AntigenSupportingDataFromJson(
+_$AntigenSupportingDataImpl _$$AntigenSupportingDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AntigenSupportingData(
+    _$AntigenSupportingDataImpl(
       targetDisease: json['targetDisease'] as String?,
       vaccineGroup: json['vaccineGroup'] as String?,
       immunity: json['immunity'] == null
@@ -23,8 +23,8 @@ _$_AntigenSupportingData _$$_AntigenSupportingDataFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_AntigenSupportingDataToJson(
-    _$_AntigenSupportingData instance) {
+Map<String, dynamic> _$$AntigenSupportingDataImplToJson(
+    _$AntigenSupportingDataImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

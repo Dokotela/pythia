@@ -12,7 +12,7 @@ part of 'vax_age.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 VaxAge _$VaxAgeFromJson(Map<String, dynamic> json) {
   return _VaxAge.fromJson(json);
@@ -103,9 +103,10 @@ class _$VaxAgeCopyWithImpl<$Res, $Val extends VaxAge>
 }
 
 /// @nodoc
-abstract class _$$_VaxAgeCopyWith<$Res> implements $VaxAgeCopyWith<$Res> {
-  factory _$$_VaxAgeCopyWith(_$_VaxAge value, $Res Function(_$_VaxAge) then) =
-      __$$_VaxAgeCopyWithImpl<$Res>;
+abstract class _$$VaxAgeImplCopyWith<$Res> implements $VaxAgeCopyWith<$Res> {
+  factory _$$VaxAgeImplCopyWith(
+          _$VaxAgeImpl value, $Res Function(_$VaxAgeImpl) then) =
+      __$$VaxAgeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -119,10 +120,11 @@ abstract class _$$_VaxAgeCopyWith<$Res> implements $VaxAgeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_VaxAgeCopyWithImpl<$Res>
-    extends _$VaxAgeCopyWithImpl<$Res, _$_VaxAge>
-    implements _$$_VaxAgeCopyWith<$Res> {
-  __$$_VaxAgeCopyWithImpl(_$_VaxAge _value, $Res Function(_$_VaxAge) _then)
+class __$$VaxAgeImplCopyWithImpl<$Res>
+    extends _$VaxAgeCopyWithImpl<$Res, _$VaxAgeImpl>
+    implements _$$VaxAgeImplCopyWith<$Res> {
+  __$$VaxAgeImplCopyWithImpl(
+      _$VaxAgeImpl _value, $Res Function(_$VaxAgeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -136,7 +138,7 @@ class __$$_VaxAgeCopyWithImpl<$Res>
     Object? effectiveDate = freezed,
     Object? cessationDate = freezed,
   }) {
-    return _then(_$_VaxAge(
+    return _then(_$VaxAgeImpl(
       absMinAge: freezed == absMinAge
           ? _value.absMinAge
           : absMinAge // ignore: cast_nullable_to_non_nullable
@@ -171,8 +173,8 @@ class __$$_VaxAgeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VaxAge extends _VaxAge {
-  _$_VaxAge(
+class _$VaxAgeImpl extends _VaxAge {
+  _$VaxAgeImpl(
       {this.absMinAge,
       this.minAge,
       this.earliestRecAge,
@@ -182,8 +184,8 @@ class _$_VaxAge extends _VaxAge {
       this.cessationDate})
       : super._();
 
-  factory _$_VaxAge.fromJson(Map<String, dynamic> json) =>
-      _$$_VaxAgeFromJson(json);
+  factory _$VaxAgeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VaxAgeImplFromJson(json);
 
   @override
   final String? absMinAge;
@@ -206,10 +208,10 @@ class _$_VaxAge extends _VaxAge {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VaxAge &&
+            other is _$VaxAgeImpl &&
             (identical(other.absMinAge, absMinAge) ||
                 other.absMinAge == absMinAge) &&
             (identical(other.minAge, minAge) || other.minAge == minAge) &&
@@ -232,12 +234,12 @@ class _$_VaxAge extends _VaxAge {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VaxAgeCopyWith<_$_VaxAge> get copyWith =>
-      __$$_VaxAgeCopyWithImpl<_$_VaxAge>(this, _$identity);
+  _$$VaxAgeImplCopyWith<_$VaxAgeImpl> get copyWith =>
+      __$$VaxAgeImplCopyWithImpl<_$VaxAgeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VaxAgeToJson(
+    return _$$VaxAgeImplToJson(
       this,
     );
   }
@@ -251,10 +253,10 @@ abstract class _VaxAge extends VaxAge {
       final String? latestRecAge,
       final String? maxAge,
       final String? effectiveDate,
-      final String? cessationDate}) = _$_VaxAge;
+      final String? cessationDate}) = _$VaxAgeImpl;
   _VaxAge._() : super._();
 
-  factory _VaxAge.fromJson(Map<String, dynamic> json) = _$_VaxAge.fromJson;
+  factory _VaxAge.fromJson(Map<String, dynamic> json) = _$VaxAgeImpl.fromJson;
 
   @override
   String? get absMinAge;
@@ -272,6 +274,6 @@ abstract class _VaxAge extends VaxAge {
   String? get cessationDate;
   @override
   @JsonKey(ignore: true)
-  _$$_VaxAgeCopyWith<_$_VaxAge> get copyWith =>
+  _$$VaxAgeImplCopyWith<_$VaxAgeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

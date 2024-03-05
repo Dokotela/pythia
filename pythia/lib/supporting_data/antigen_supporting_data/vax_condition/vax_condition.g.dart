@@ -6,8 +6,8 @@ part of 'vax_condition.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VaxCondition _$$_VaxConditionFromJson(Map<String, dynamic> json) =>
-    _$_VaxCondition(
+_$VaxConditionImpl _$$VaxConditionImplFromJson(Map<String, dynamic> json) =>
+    _$VaxConditionImpl(
       conditionID: json['conditionID'] as String?,
       conditionType: json['conditionType'] as String?,
       startDate: json['startDate'] as String?,
@@ -22,7 +22,7 @@ _$_VaxCondition _$$_VaxConditionFromJson(Map<String, dynamic> json) =>
       seriesGroups: json['seriesGroups'] as String?,
     );
 
-Map<String, dynamic> _$$_VaxConditionToJson(_$_VaxCondition instance) {
+Map<String, dynamic> _$$VaxConditionImplToJson(_$VaxConditionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

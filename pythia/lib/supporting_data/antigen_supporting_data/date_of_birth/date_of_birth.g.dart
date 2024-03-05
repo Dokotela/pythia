@@ -6,8 +6,8 @@ part of 'date_of_birth.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DateOfBirth _$$_DateOfBirthFromJson(Map<String, dynamic> json) =>
-    _$_DateOfBirth(
+_$DateOfBirthImpl _$$DateOfBirthImplFromJson(Map<String, dynamic> json) =>
+    _$DateOfBirthImpl(
       immunityBirthDate: json['immunityBirthDate'] as String?,
       birthCountry: json['birthCountry'] as String?,
       exclusion: (json['exclusion'] as List<dynamic>?)
@@ -15,7 +15,7 @@ _$_DateOfBirth _$$_DateOfBirthFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DateOfBirthToJson(_$_DateOfBirth instance) {
+Map<String, dynamic> _$$DateOfBirthImplToJson(_$DateOfBirthImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

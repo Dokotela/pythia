@@ -12,7 +12,7 @@ part of 'conditional_skip.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ConditionalSkip _$ConditionalSkipFromJson(Map<String, dynamic> json) {
   return _ConditionalSkip.fromJson(json);
@@ -78,11 +78,11 @@ class _$ConditionalSkipCopyWithImpl<$Res, $Val extends ConditionalSkip>
 }
 
 /// @nodoc
-abstract class _$$_ConditionalSkipCopyWith<$Res>
+abstract class _$$ConditionalSkipImplCopyWith<$Res>
     implements $ConditionalSkipCopyWith<$Res> {
-  factory _$$_ConditionalSkipCopyWith(
-          _$_ConditionalSkip value, $Res Function(_$_ConditionalSkip) then) =
-      __$$_ConditionalSkipCopyWithImpl<$Res>;
+  factory _$$ConditionalSkipImplCopyWith(_$ConditionalSkipImpl value,
+          $Res Function(_$ConditionalSkipImpl) then) =
+      __$$ConditionalSkipImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -92,11 +92,11 @@ abstract class _$$_ConditionalSkipCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ConditionalSkipCopyWithImpl<$Res>
-    extends _$ConditionalSkipCopyWithImpl<$Res, _$_ConditionalSkip>
-    implements _$$_ConditionalSkipCopyWith<$Res> {
-  __$$_ConditionalSkipCopyWithImpl(
-      _$_ConditionalSkip _value, $Res Function(_$_ConditionalSkip) _then)
+class __$$ConditionalSkipImplCopyWithImpl<$Res>
+    extends _$ConditionalSkipCopyWithImpl<$Res, _$ConditionalSkipImpl>
+    implements _$$ConditionalSkipImplCopyWith<$Res> {
+  __$$ConditionalSkipImplCopyWithImpl(
+      _$ConditionalSkipImpl _value, $Res Function(_$ConditionalSkipImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -106,7 +106,7 @@ class __$$_ConditionalSkipCopyWithImpl<$Res>
     Object? setLogic = freezed,
     Object? set_ = freezed,
   }) {
-    return _then(_$_ConditionalSkip(
+    return _then(_$ConditionalSkipImpl(
       context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
@@ -125,16 +125,16 @@ class __$$_ConditionalSkipCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ConditionalSkip extends _ConditionalSkip {
-  _$_ConditionalSkip(
+class _$ConditionalSkipImpl extends _ConditionalSkip {
+  _$ConditionalSkipImpl(
       {this.context,
       this.setLogic,
       @JsonKey(name: 'set') final List<VaxSet>? set_})
       : _set_ = set_,
         super._();
 
-  factory _$_ConditionalSkip.fromJson(Map<String, dynamic> json) =>
-      _$$_ConditionalSkipFromJson(json);
+  factory _$ConditionalSkipImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ConditionalSkipImplFromJson(json);
 
   @override
   final SkipContext? context;
@@ -157,10 +157,10 @@ class _$_ConditionalSkip extends _ConditionalSkip {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ConditionalSkip &&
+            other is _$ConditionalSkipImpl &&
             (identical(other.context, context) || other.context == context) &&
             (identical(other.setLogic, setLogic) ||
                 other.setLogic == setLogic) &&
@@ -175,12 +175,13 @@ class _$_ConditionalSkip extends _ConditionalSkip {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConditionalSkipCopyWith<_$_ConditionalSkip> get copyWith =>
-      __$$_ConditionalSkipCopyWithImpl<_$_ConditionalSkip>(this, _$identity);
+  _$$ConditionalSkipImplCopyWith<_$ConditionalSkipImpl> get copyWith =>
+      __$$ConditionalSkipImplCopyWithImpl<_$ConditionalSkipImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConditionalSkipToJson(
+    return _$$ConditionalSkipImplToJson(
       this,
     );
   }
@@ -190,11 +191,11 @@ abstract class _ConditionalSkip extends ConditionalSkip {
   factory _ConditionalSkip(
       {final SkipContext? context,
       final String? setLogic,
-      @JsonKey(name: 'set') final List<VaxSet>? set_}) = _$_ConditionalSkip;
+      @JsonKey(name: 'set') final List<VaxSet>? set_}) = _$ConditionalSkipImpl;
   _ConditionalSkip._() : super._();
 
   factory _ConditionalSkip.fromJson(Map<String, dynamic> json) =
-      _$_ConditionalSkip.fromJson;
+      _$ConditionalSkipImpl.fromJson;
 
   @override
   SkipContext? get context;
@@ -205,6 +206,6 @@ abstract class _ConditionalSkip extends ConditionalSkip {
   List<VaxSet>? get set_;
   @override
   @JsonKey(ignore: true)
-  _$$_ConditionalSkipCopyWith<_$_ConditionalSkip> get copyWith =>
+  _$$ConditionalSkipImplCopyWith<_$ConditionalSkipImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,8 +6,8 @@ part of 'indication.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Indication _$$_IndicationFromJson(Map<String, dynamic> json) =>
-    _$_Indication(
+_$IndicationImpl _$$IndicationImplFromJson(Map<String, dynamic> json) =>
+    _$IndicationImpl(
       observationCode: json['observationCode'] == null
           ? null
           : ObservationCode.fromJson(
@@ -18,7 +18,7 @@ _$_Indication _$$_IndicationFromJson(Map<String, dynamic> json) =>
       guidance: json['guidance'] as String?,
     );
 
-Map<String, dynamic> _$$_IndicationToJson(_$_Indication instance) {
+Map<String, dynamic> _$$IndicationImplToJson(_$IndicationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -6,9 +6,9 @@ part of 'schedule_supporting_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ScheduleSupportingData _$$_ScheduleSupportingDataFromJson(
+_$ScheduleSupportingDataImpl _$$ScheduleSupportingDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ScheduleSupportingData(
+    _$ScheduleSupportingDataImpl(
       liveVirusConflicts: json['liveVirusConflicts'] == null
           ? null
           : LiveVirusConflicts.fromJson(
@@ -31,8 +31,8 @@ _$_ScheduleSupportingData _$$_ScheduleSupportingDataFromJson(
               json['observations'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ScheduleSupportingDataToJson(
-    _$_ScheduleSupportingData instance) {
+Map<String, dynamic> _$$ScheduleSupportingDataImplToJson(
+    _$ScheduleSupportingDataImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
