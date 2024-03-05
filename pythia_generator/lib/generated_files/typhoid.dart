@@ -121,7 +121,7 @@ final typhoid = AntigenSupportingData.fromJson({
                 {
                     "observationCode": "154",
                     "observationTitle": "HIV/AIDS - severely immunocompromised",
-                    "contraindicationText": "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has HIV/AIDS and is severely immunocompromised (See the CDC general recommendations for a definition of severely immunocompromised).",
+                    "contraindicationText": "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has HIV/AIDS and is severely immunocompromised (See the CDC general recommendations for a definition of \"severely immunocompromised\").",
                     "contraindicatedVaccine": [
                         {
                             "vaccineType": "Typhoid oral, live, attenuated",

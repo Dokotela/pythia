@@ -12163,9 +12163,9 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
                 "observationCode": "154",
                 "observationTitle": "HIV/AIDS - severely immunocompromised",
-                "indicationText": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
-                "contraindicationText": "Do not vaccinate if the patient has HIV/AIDS and is severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
-                "clarifyingText": "See CDC general recommendations for guidance on defining severely immunocompromised",
+                "indicationText": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                "contraindicationText": "Do not vaccinate if the patient has HIV/AIDS and is severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                "clarifyingText": "See CDC general recommendations for guidance on defining \"severely immunocompromised\"",
                 "codedValues": {
                     "codedValue": [
                         {
@@ -12179,8 +12179,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
                 "observationCode": "155",
                 "observationTitle": "HIV/AIDS - not severely immunocompromised",
-                "indicationText": "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
-                "clarifyingText": "See CDC general recommendations for guidance on defining not severely immunocompromised",
+                "indicationText": "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                "clarifyingText": "See CDC general recommendations for guidance on defining \"not severely immunocompromised\"",
                 "codedValues": {
                     "codedValue": [
                         {

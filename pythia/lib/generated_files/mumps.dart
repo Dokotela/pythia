@@ -171,7 +171,7 @@ final mumps = AntigenSupportingData.fromJson({
                 {
                     "observationCode": "154",
                     "observationTitle": "HIV/AIDS - severely immunocompromised",
-                    "contraindicationText": "Do not vaccinate if the patient has HIV/AIDS and is severely immunocompromised (See the CDC general recommendations for a definition of severely immunocompromised)."
+                    "contraindicationText": "Do not vaccinate if the patient has HIV/AIDS and is severely immunocompromised (See the CDC general recommendations for a definition of \"severely immunocompromised\")."
                 },
                 {
                     "observationCode": "156",
@@ -485,7 +485,7 @@ final mumps = AntigenSupportingData.fromJson({
                         "text": "HIV/AIDS - not severely immunocompromised",
                         "code": "155"
                     },
-                    "description": "Administer to persons who have HIV/AIDS but are not severely immunocompromised (See the CDC general recommendations for a definition of severely immunocompromised).",
+                    "description": "Administer to persons who have HIV/AIDS but are not severely immunocompromised (See the CDC general recommendations for a definition of \"severely immunocompromised\").",
                     "beginAge": "18 years"
                 }
             ],

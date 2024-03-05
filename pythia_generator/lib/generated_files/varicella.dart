@@ -188,7 +188,7 @@ final varicella = AntigenSupportingData.fromJson({
                 {
                     "observationCode": "154",
                     "observationTitle": "HIV/AIDS - severely immunocompromised",
-                    "contraindicationText": "Do not vaccinate if the patient has HIV/AIDS and is severely immunocompromised (See the CDC general recommendations for a definition of severely immunocompromised)."
+                    "contraindicationText": "Do not vaccinate if the patient has HIV/AIDS and is severely immunocompromised (See the CDC general recommendations for a definition of \"severely immunocompromised\")."
                 },
                 {
                     "observationCode": "156",

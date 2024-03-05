@@ -193,7 +193,7 @@ final influenza = AntigenSupportingData.fromJson({
                 {
                     "observationCode": "154",
                     "observationTitle": "HIV/AIDS - severely immunocompromised",
-                    "contraindicationText": "Do not vaccinate with live attenuated influenza virus (LAIV) if the patient has HIV/AIDS and is severely immunocompromised (See the CDC general recommendations for a definition of severely immunocompromised).",
+                    "contraindicationText": "Do not vaccinate with live attenuated influenza virus (LAIV) if the patient has HIV/AIDS and is severely immunocompromised (See the CDC general recommendations for a definition of \"severely immunocompromised\").",
                     "contraindicatedVaccine": [
                         {
                             "vaccineType": "Influenza, live, intranasal, quadrivalent",
@@ -204,7 +204,7 @@ final influenza = AntigenSupportingData.fromJson({
                 {
                     "observationCode": "155",
                     "observationTitle": "HIV/AIDS - not severely immunocompromised",
-                    "contraindicationText": "Do not vaccinate with live attenuated influenza virus (LAIV) if the patient has HIV/AIDS even if not severely immunocompromised (See the CDC general recommendations for a definition of severely immunocompromised).",
+                    "contraindicationText": "Do not vaccinate with live attenuated influenza virus (LAIV) if the patient has HIV/AIDS even if not severely immunocompromised (See the CDC general recommendations for a definition of \"severely immunocompromised\").",
                     "contraindicatedVaccine": [
                         {
                             "vaccineType": "Influenza, live, intranasal, quadrivalent",

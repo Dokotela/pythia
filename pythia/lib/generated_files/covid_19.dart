@@ -6156,7 +6156,7 @@ final covid19 = AntigenSupportingData.fromJson({
                         "text": "HIV/AIDS - Severely immunocompromised",
                         "code": "154"
                     },
-                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
                     "beginAge": "6 months"
                 },
                 {
@@ -7265,7 +7265,7 @@ final covid19 = AntigenSupportingData.fromJson({
                         "text": "HIV/AIDS - Severely immunocompromised",
                         "code": "154"
                     },
-                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
                     "beginAge": "6 months"
                 },
                 {
@@ -8388,7 +8388,7 @@ final covid19 = AntigenSupportingData.fromJson({
                         "text": "HIV/AIDS - Severely immunocompromised",
                         "code": "154"
                     },
-                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
                     "beginAge": "18 years"
                 },
                 {
@@ -9100,7 +9100,7 @@ final covid19 = AntigenSupportingData.fromJson({
                         "text": "HIV/AIDS - Severely immunocompromised",
                         "code": "154"
                     },
-                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
                     "beginAge": "12 years"
                 },
                 {
@@ -9446,7 +9446,7 @@ final covid19 = AntigenSupportingData.fromJson({
                         "text": "HIV/AIDS - Severely immunocompromised",
                         "code": "154"
                     },
-                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
                     "beginAge": "6 months"
                 },
                 {
@@ -10837,7 +10837,7 @@ final covid19 = AntigenSupportingData.fromJson({
                         "text": "HIV/AIDS - Severely immunocompromised",
                         "code": "154"
                     },
-                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
                     "beginAge": "6 months"
                 },
                 {
@@ -11934,7 +11934,7 @@ final covid19 = AntigenSupportingData.fromJson({
                         "text": "HIV/AIDS - Severely immunocompromised",
                         "code": "154"
                     },
-                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of severely immunocompromised].",
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
                     "beginAge": "6 months"
                 },
                 {

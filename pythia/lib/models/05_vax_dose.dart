@@ -30,7 +30,7 @@ class VaxDose {
     /// if there is a date given
     if (immunization.occurrenceDateTime != null ||
         immunization.occurrenceDateTime!.isValid) {
-      dateGiven = VaxDate.fromDateTime(immunization.occurrenceDateTime!.value!);
+      dateGiven = VaxDate.fromDateTime(immunization.occurrenceDateTime!.value);
 
       /// as long as there's a date given, we also see if there's an expiration
       /// date, if not, we assume the vaccine was valid, if there is an
@@ -39,12 +39,12 @@ class VaxDose {
       expired = immunization.expirationDate == null ||
               !immunization.expirationDate!.isValid
           ? false
-          : immunization.expirationDate!.value!
-              .isBefore(immunization.occurrenceDateTime!.value!);
+          : immunization.expirationDate!.value
+              .isBefore(immunization.occurrenceDateTime!.value);
     }
 
     return VaxDose(
-      doseId: immunization.id!,
+      doseId: immunization.fhirId!,
 
       /// Currently we only check if it's obvious in milliliters, anything else
       /// is ignored
@@ -303,7 +303,7 @@ class VaxDose {
             final obs = observations.observation![index];
             referenceDate = obs.period?.end == null || !obs.period!.end!.isValid
                 ? VaxDate.now()
-                : VaxDate.fromDateTime(obs.period!.end!.value!);
+                : VaxDate.fromDateTime(obs.period!.end!.value);
           }
         }
 

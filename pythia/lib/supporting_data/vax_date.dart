@@ -1,4 +1,3 @@
-import 'package:date_utils/date_utils.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
 
 class VaxDate extends DateTime {
@@ -88,7 +87,7 @@ class VaxDate extends DateTime {
 
   FhirDateTime toFhirDateTime() => FhirDateTime(toDateTime());
 
-  Date toFhirDate() => Date(toDateTime());
+  FhirDate toFhirDate() => FhirDate(toDateTime());
 
   VaxDate.minIfNullString(String? date)
       : super(
@@ -176,13 +175,14 @@ class VaxDate extends DateTime {
   }
 
   VaxDate _calculateTime(int years, int months, int days) {
-    var newDate = DateTime(year + years, month + months, 1);
-    if (DateUtils.lastDayOfMonth(newDate).day < day) {
-      newDate = DateTime(newDate.year, newDate.month + 1, 1);
-    } else {
-      newDate = DateTime(newDate.year, newDate.month, day);
-    }
-    return VaxDate(newDate.year, newDate.month, newDate.day + days);
+    // var newDate = DateTime(year + years, month + months, 1);
+    // if (DateUtils.lastDayOfMonth(newDate).day < day) {
+    //   newDate = DateTime(newDate.year, newDate.month + 1, 1);
+    // } else {
+    //   newDate = DateTime(newDate.year, newDate.month, day);
+    // }
+    // return VaxDate(newDate.year, newDate.month, newDate.day + days);
+    return VaxDate(1, 1, 1);
   }
 }
 

@@ -20,7 +20,10 @@ All I've done is take all of their hard work, guidance and expertise and make it
 - All of the XLSX files I've transferred into Gsheets, [the link can be found here](https://drive.google.com/drive/folders/1LUDu9y85qd0aJwFtvwv0h3fQUafqfTDq?usp=sharing)
 - The Coded Observations sheets I had to remove all of the carriage returns ("\n" in Regex) because they screw up the Gsheets TSV parser in Dart
 - I had to do the same for most of the Antigen spreadsheets as well (I replaced all ```"\n"``` with ```" "```)
+- All of the links to the spreadsheets are in the spreadsheets file, let me know if you would like access to them
+- the ```api.dart``` file are credentials for a service acccount
 - So run the pythia generator (just be in the same directory as the project and run "```./generate.sh```")
+- There is a time limit about how often you can request data from spreadsheets, so sometimes you do have to edit the sleep time in download_sheets
 - I added in test case generation as well
 - Pulls from the spreadsheets to create test cases
 - Once again, had to replace all ```"\n"``` with ```" "``` for the generation
@@ -31,7 +34,7 @@ All I've done is take all of their hard work, guidance and expertise and make it
 ### 2.1 Evaluation
 
 - Because I can never find it, this is the workgroup around [Immunization Decision Support](http://hl7.org/fhir/us/immds/)
-- Again all data and logic used in this forecaster is from the CDC, their manual can be found [here](https://www.cdc.gov/vaccines/programs/iis/interop-proj/downloads/logic-spec-acip-rec-4.3.pdf)
+- Again all data and logic used in this forecaster is from the CDC, their manual can be found [here](https://www.cdc.gov/vaccines/programs/iis/interop-proj/downloads/logic-spec-acip-rec-4.5.pdf)
 - While the logic is well thought-out and complete, it's complicated, and I found it difficult to decipher at times. Therefore, I've decided to go through the whole thing step by step and explain how I've interpreted it, in the hopes that maybe someday it will help someone else (although it's most likely just going to help me)
 - I may keep some notes up here for me (or whomever)
 - You will often see in the code that I parse CVX codes into ints, this is to allow comparisons, because sometimes CVX codes are represented by 2 or 3 digits, and sometimes have leading zeroes, this just saves me from having to deal with that
