@@ -13,11 +13,12 @@ Map<String, VaxAntigen> antigenMap(
         data.series!.isNotEmpty &&
         data.series!.first.targetDisease != null) {
       final groupContraindications =
-          data.contraindications?.vaccineGroup?.contraindication ?? [];
+          data.contraindications?.vaccineGroup?.contraindication?.toList() ??
+              [];
       groupContraindications.retainWhere((element) =>
           observations.codesAsInt?.contains(element.codeAsInt) ?? false);
       final vaccineContraindications =
-          data.contraindications?.vaccine?.contraindication ?? [];
+          data.contraindications?.vaccine?.contraindication?.toList() ?? [];
       vaccineContraindications.retainWhere((element) =>
           observations.codesAsInt?.contains(element.codeAsInt) ?? false);
       agMap[data.series!.first.targetDisease!] = VaxAntigen.fromSeries(

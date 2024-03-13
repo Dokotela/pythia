@@ -34,5 +34,19 @@ Bundle forecastFromParameters(Parameters parameters) {
 
   /// Evaluate
   agMap.forEach((k, v) => v.evaluate());
+
+  // agMap.forEach((k, v) {
+  //   print(k);
+  //   v.groups.forEach((key, value) {
+  //     print('  $key');
+  //     value.series.forEach((element) {
+  //       print('    ${element.series.toJson()}');
+  //       element.doses.forEach((dose) {
+  //         print('      ${dose.cvx}');
+  //       });
+  //     });
+  //   });
+  // });
+
   return Bundle();
 }

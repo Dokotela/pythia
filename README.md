@@ -160,7 +160,7 @@ Many of the diagrams from the CDC manual I didn't think made sense when I first 
 
 ### 4.2 Organize Immunization History
 
-### This is pretty self explanatory. After obtaining all of the immunization a patient has received, break them down into their [antigenic components](lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json)
+### This is pretty self explanatory. After obtaining all of the immunizations a patient has received, break them down into their [antigenic components](lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json)
 
 ### 4.3 Create Relevant Patient Series
 

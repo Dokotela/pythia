@@ -44,7 +44,7 @@ class VaxDose {
     }
 
     return VaxDose(
-      doseId: immunization.fhirId!,
+      doseId: immunization.fhirId!.toString(),
 
       /// Currently we only check if it's obvious in milliliters, anything else
       /// is ignored
