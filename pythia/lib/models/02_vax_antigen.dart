@@ -15,26 +15,22 @@ class VaxAntigen {
 
   factory VaxAntigen.fromSeries({
     required List<Series> series,
-    required Gender gender,
-    required VaxObservations observations,
-    required VaxDate dob,
-    required VaxDate assessmentDate,
     required List<GroupContraindication> groupContraindications,
     required List<VaccineContraindication> vaccineContraindications,
+    required VaxPatient patient,
   }) {
     final Map<String, VaxGroup> groups = <String, VaxGroup>{};
-    relevantSeries(gender, series, observations, dob, assessmentDate)
-        .forEach((element) {
-      final nextGroup = element.selectSeries?.seriesGroup ?? 'none';
+    relevantSeries(patient, series).forEach((Series element) {
+      final String nextGroup = element.selectSeries?.seriesGroup ?? 'none';
       if (!groups.keys.contains(nextGroup)) {
         groups[nextGroup] = VaxGroup(
           targetDisease: series.first.targetDisease!,
           vaccineGroup: nextGroup,
           vaccineGroupName:
               series.first.vaccineGroup ?? series.first.targetDisease!,
-          series: [],
-          assessmentDate: assessmentDate,
-          dob: dob,
+          series: <VaxSeries>[],
+          assessmentDate: patient.assessmentDate,
+          dob: patient.birthdate,
         );
       }
       groups[nextGroup]!.newSeries(element);
@@ -45,46 +41,47 @@ class VaxAntigen {
       vaccineGroupName:
           series.first.vaccineGroup ?? series.first.targetDisease!,
       groups: groups,
-      dob: dob,
+      dob: patient.birthdate,
       groupContraindications: groupContraindications,
       vaccineContraindications: vaccineContraindications,
-      assessmentDate: assessmentDate,
+      assessmentDate: patient.assessmentDate,
     );
   }
 
   void newDose(VaxDose dose) {
-    for (final key in groups.keys) {
+    for (final String key in groups.keys) {
       groups[key]!.newDose(dose);
     }
   }
 
   void evaluate() {
-    for (final key in groups.keys) {
+    for (final String key in groups.keys) {
       groups[key]!.evaluate();
     }
   }
 
   void forecast() {
     /// We do these slightly out of order because they don't impact each other
-    /// and it lets me pass the immunity and contraindication during the forcast
+    /// and it lets me pass the immunity and contraindication during the forecast
     immunity();
     contraindicated();
-    if (!contraindication)
-      for (final key in groups.keys) {
+    if (!contraindication) {
+      for (final String key in groups.keys) {
         groups[key]!.forecast(evidenceOfImmunity, vaccineContraindications);
       }
+    }
   }
 
   void contraindicated() {
     /// Check each of the contraindications (we already ensured they apply
     /// to the patient in a previous step)
-    for (final contraindication in groupContraindications) {
+    for (final GroupContraindication contraindication
+        in groupContraindications) {
       /// If the dates are appropriate to apply to a patient, we note that
       /// this dose is contraindicated, and stop checking
-      if (dob.changeIfNotNullElseMin(contraindication.beginAge) <=
+      if (dob.changeNullable(contraindication.beginAge, false)! <=
               assessmentDate &&
-          assessmentDate <
-              dob.changeIfNotNullElseMax(contraindication.endAge)) {
+          assessmentDate < dob.changeNullable(contraindication.endAge, true)!) {
         this.contraindication = true;
         break;
       }
@@ -92,14 +89,15 @@ class VaxAntigen {
   }
 
   void immunity() {
-    final container = ProviderContainer();
-    final obsInts = container.read(observationsProvider).codesAsInt;
-    final ag = antigenSupportingDataMap[targetDisease];
+    final ProviderContainer container = ProviderContainer();
+    final List<int>? obsInts = container.read(observationsProvider).codesAsInt;
+    final AntigenSupportingData? ag = antigenSupportingDataMap[targetDisease];
 
     /// We check to see if the patient has any listed conditions that could
     /// make them immune
-    final index = ag?.immunity?.clinicalHistory?.indexWhere((element) {
-      final code = element.guidelineCode == null
+    final int? index =
+        ag?.immunity?.clinicalHistory?.indexWhere((ClinicalHistory element) {
+      final int? code = element.guidelineCode == null
           ? null
           : int.tryParse(element.guidelineCode!);
       if (code == null) {
@@ -114,17 +112,18 @@ class VaxAntigen {
       evidenceOfImmunity = true;
     } else {
       /// Otherwise, we check and see if their birthdate affords them immunity
-      final immunityBirthdate = ag?.immunity?.dateOfBirth?.immunityBirthDate;
+      final String? immunityBirthdate =
+          ag?.immunity?.dateOfBirth?.immunityBirthDate;
       if (dob <
           (immunityBirthdate == null
               ? VaxDate.max()
-              : VaxDate.fromStringMax(
-                  ag!.immunity!.dateOfBirth!.immunityBirthDate!))) {
+              : VaxDate.fromNullableString(
+                  ag!.immunity!.dateOfBirth!.immunityBirthDate, true))) {
         /// If it does, then we have to check and see if they have
         /// any exclusion criteria
-        final index =
-            ag?.immunity?.dateOfBirth?.exclusion?.indexWhere((element) {
-          final code = element.exclusionCode == null
+        final int? index = ag?.immunity?.dateOfBirth?.exclusion
+            ?.indexWhere((Exclusion element) {
+          final int? code = element.exclusionCode == null
               ? null
               : int.tryParse(element.exclusionCode!);
           if (code == null) {

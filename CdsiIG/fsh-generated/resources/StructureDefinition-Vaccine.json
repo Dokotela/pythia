@@ -1,0 +1,137 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Vaccine",
+  "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/Vaccine",
+  "name": "Vaccine",
+  "title": "Vaccine",
+  "status": "draft",
+  "description": "Simple vaccine to easily obtain needed information for forecasting",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Vaccine",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Vaccine",
+        "path": "Vaccine",
+        "short": "Vaccine",
+        "definition": "Simple vaccine to easily obtain needed information for forecasting"
+      },
+      {
+        "id": "Vaccine.vaccineType",
+        "path": "Vaccine.vaccineType",
+        "short": "vaccineType",
+        "definition": "vaccineType",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Vaccine.cvx",
+        "path": "Vaccine.cvx",
+        "short": "cvx",
+        "definition": "cvx",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Vaccine.beginAge",
+        "path": "Vaccine.beginAge",
+        "short": "beginAge",
+        "definition": "beginAge",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Vaccine.endAge",
+        "path": "Vaccine.endAge",
+        "short": "endAge",
+        "definition": "endAge",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Vaccine.tradeName",
+        "path": "Vaccine.tradeName",
+        "short": "tradeName",
+        "definition": "tradeName",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Vaccine.mvx",
+        "path": "Vaccine.mvx",
+        "short": "mvx",
+        "definition": "mvx",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Vaccine.volume",
+        "path": "Vaccine.volume",
+        "short": "volume",
+        "definition": "volume",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Vaccine.forecastVaccineType",
+        "path": "Vaccine.forecastVaccineType",
+        "short": "forecastVaccineType",
+        "definition": "forecastVaccineType",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      }
+    ]
+  }
+}

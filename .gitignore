@@ -125,3 +125,6 @@ ios/GoogleService-Info.plist
 **google-services.json
 # Fastlane builds for iOS
 **/ios/fastlane/builds*
+
+*.jar
+*publisher.jar

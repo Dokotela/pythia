@@ -1,4 +1,5 @@
 import 'package:fhir/r5.dart';
+import '../pythia.dart';
 
 String? cvxFromImmunization(Immunization immunization) =>
     codeFromImmunization(immunization, FhirUri('http://hl7.org/fhir/sid/cvx'));
@@ -7,8 +8,8 @@ String? mvxFromImmunization(Immunization immunization) => codeFromImmunization(
     immunization, FhirUri('http://terminology.hl7.org/NamingSystem/MVX'));
 
 String? codeFromImmunization(Immunization immunization, FhirUri url) {
-  final index = immunization.vaccineCode.coding
-      ?.indexWhere((element) => element.system == url && element.code != null);
+  final int? index = immunization.vaccineCode.coding
+      ?.indexWhere((Coding element) => element.system == url && element.code != null);
   if (index == null || index == -1) {
     return null;
   } else {
@@ -16,11 +17,11 @@ String? codeFromImmunization(Immunization immunization, FhirUri url) {
   }
 }
 
-String? subpotentReason(Immunization immunization) {
+EvalReason? subpotentReason(Immunization immunization) {
   int? codingIndex;
-  final subpotentIndex =
-      immunization.subpotentReason?.indexWhere((codeableConcept) {
-    codingIndex = codeableConcept.coding?.indexWhere((coding) =>
+  final int? subpotentIndex =
+      immunization.subpotentReason?.indexWhere((CodeableConcept codeableConcept) {
+    codingIndex = codeableConcept.coding?.indexWhere((Coding coding) =>
         coding.system ==
             FhirUri(
                 'http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason') &&
@@ -33,9 +34,19 @@ String? subpotentReason(Immunization immunization) {
       codingIndex == -1) {
     return null;
   } else {
-    return immunization
-            .subpotentReason![subpotentIndex].coding![codingIndex!].display ??
-        immunization.subpotentReason![subpotentIndex].coding![codingIndex!].code
-            .toString();
+    if (immunization
+            .subpotentReason![subpotentIndex].coding![codingIndex!].code !=
+        null) {
+      final EvalReason? evalReason = EvalReason.fromCode(immunization
+          .subpotentReason![subpotentIndex].coding![codingIndex!].code?.value);
+      if (evalReason != null) {
+        return evalReason;
+      } else {
+        return EvalReason.fromJson(immunization
+            .subpotentReason![subpotentIndex].coding![codingIndex!].display);
+      }
+    } else {
+      return null;
+    }
   }
 }

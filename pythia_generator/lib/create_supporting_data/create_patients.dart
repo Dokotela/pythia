@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:csv/csv.dart';
 import 'package:fhir/r5.dart';
 import 'package:pythia/pythia.dart' as pythia;
+import 'package:pythia/pythia.dart';
 
 import '../supporting_strings.dart';
 
@@ -14,6 +15,8 @@ Future<void> createPatients(
   final values = const CsvToListConverter()
       .convert(string.cases, fieldDelimiter: '\t', eol: '\n');
   final parametersList = <Parameters>[];
+  final Map<String, List<Map<String, dynamic>>> testDoses =
+      <String, List<Map<String, dynamic>>>{};
 
   /// Because gsheets changes dates to ints and starts all epochs at this date
   /// https://stackoverflow.com/questions/65700906/google-sheets-get-date-value-as-number-problem
@@ -34,8 +37,9 @@ Future<void> createPatients(
     if (!v[0].contains('CDC')) {
       final patient = Patient(
         fhirId: FhirId(v[0].toString()),
-        name: [HumanName(family: v[1])],
-        birthDate: FhirDate(epoch.add(Duration(days: v[2]))),
+        name: [HumanName(family: v[1]?.toString())],
+        birthDate: FhirDate(
+            epoch.add(Duration(days: int.tryParse(v[2].toString()) ?? 0))),
         gender: v[3].contains('F')
             ? FhirCode('female')
             : v[3].contains('M')
@@ -45,10 +49,11 @@ Future<void> createPatients(
 
       final immunizationList = <Immunization>[];
       final conditionList = <Condition>[];
+      final vaxDoses = <VaxDose>[];
       for (var i = 0; i < doseIndexes.length; i++) {
         final index = doseIndexes[i];
         if (v[index] != null && v[index] != '' && v[index] != '-') {
-          immunizationList.add(Immunization(
+          final immunization = Immunization(
             fhirId: FhirId('${patient.fhirId}_dose${i + 1}'),
             patient: patient.thisReference,
             vaccineCode: CodeableConcept(
@@ -68,9 +73,21 @@ Future<void> createPatients(
             ),
             occurrenceDateTime:
                 FhirDateTime(epoch.add(Duration(days: v[index]))),
-          ));
+          );
+          immunizationList.add(immunization);
+          final vaxDose = VaxDose.fromImmunization(
+              immunization, VaxDate.fromDateTime(patient.birthDate!.value));
+          if (v[index + 4] != null) {
+            vaxDose.evalStatus = EvalStatus.fromJson(v[index + 4]);
+          }
+          if (v[index + 5] != null) {
+            vaxDose.evalReason = EvalReason.fromJson(v[index + 5]);
+          }
+          vaxDoses.add(vaxDose);
         }
       }
+      testDoses[patient.fhirId!.toString()] =
+          vaxDoses.map((e) => e.toJson()).toList();
       for (var i = 0; i < cdsiObservationIndexes.length; i++) {
         final index = cdsiObservationIndexes[i];
         if (v[index] != null && v[index] != '') {
@@ -152,10 +169,70 @@ Future<void> createPatients(
     writeString += '${jsonEncode(element.toJson())}\n';
   });
   if (string.isHealthy ?? false) {
-    await File('lib/generated_files/healthyTestCases.ndjson')
+    await File('pythia_generator/lib/generated_files/healthyTestCases.ndjson')
         .writeAsString(writeString);
   } else {
-    await File('lib/generated_files/underlyingConditionTestCases.ndjson')
+    await File(
+            'pythia_generator/lib/generated_files/underlyingConditionTestCases.ndjson')
         .writeAsString(writeString);
+  }
+  await File('pythia_generator/lib/generated_files/test_doses.json')
+      .writeAsString(jsonEncode(testDoses));
+}
+
+List<String> diseaseFromDescription(String description) {
+  if (description.contains('cholera')) {
+    return ['Cholera'];
+  } else if (description.contains('covid')) {
+    return ['Covid-19'];
+  } else if (description.contains('dengue')) {
+    return ['Dengue'];
+  } else if (description.contains('ebola')) {
+    return ['Ebola'];
+  } else if (description.contains('hep a') || description.contains('hepa')) {
+    return ['Hepatitis A'];
+  } else if (description.contains('hep b') || description.contains('hepb')) {
+    return ['Hepatitis B'];
+  } else if (description.contains('hib')) {
+    return ['Hib'];
+  } else if (description.contains('hpv')) {
+    return ['HPV'];
+  } else if (description.contains('japan') ||
+      description.contains('encephalitis')) {
+    return ['Japanese Encephalitis'];
+  } else if (description.contains('measles') ||
+      description.contains('mump') ||
+      description.contains('rubella') ||
+      description.contains('mmr')) {
+    return ['Measles', 'Mumps', 'Rubella'];
+  } else if (description.contains('mening')) {
+    return ['Meningococcal B', 'Meningococcal'];
+  } else if (description.contains('ortho')) {
+    return ['Orthopoxvirus'];
+  } else if (description.contains('pertussis') ||
+      description.contains('diphth') ||
+      description.contains('tetanus') ||
+      description.contains('dtap') ||
+      description.contains('tdap')) {
+    return ['Tetanus', 'Diphtheria', 'Pertussis'];
+  } else if (description.contains('pneumo')) {
+    return ['Pneumococcal'];
+  } else if (description.contains('polio')) {
+    return ['Polio'];
+  } else if (description.contains('rabies')) {
+    return ['Rabies'];
+  } else if (description.contains('rota')) {
+    return ['Rotavirus'];
+  } else if (description.contains('typhoid')) {
+    return ['Typhoid'];
+  } else if (description.contains('varicella')) {
+    return ['Varicella'];
+  } else if (description.contains('yellow')) {
+    return ['Yellow Fever'];
+  } else if (description.contains('zoster')) {
+    return ['Zoster'];
+  } else {
+    print('Description: $description');
+    return [];
   }
 }

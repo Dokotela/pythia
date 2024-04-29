@@ -8,19 +8,39 @@ enum Gender {
   @JsonValue('Unknown')
   unknown,
   @JsonValue('Male')
-  male,
+  male;
+
+  static Gender? fromString(String? string) {
+    switch (string) {
+      case 'Female':
+        return Gender.female;
+      case 'Transgender':
+        return Gender.male;
+      case 'Unknown':
+        return Gender.unknown;
+      case 'Male':
+        return Gender.male;
+      default:
+        return null;
+    }
+  }
+
+  static Gender? fromJson(Object? json) =>
+      json is String ? fromString(json) : null;
+
+  @override
+  String toString() {
+    switch (this) {
+      case Gender.female:
+        return 'Female';
+      case Gender.transgender:
+        return 'Transgender';
+      case Gender.unknown:
+        return 'Unknown';
+      case Gender.male:
+        return 'Male';
+    }
+  }
+
+  String toJson() => toString();
 }
-
-const genderStringToEnum = {
-  'Female': Gender.female,
-  'Transgender': Gender.transgender,
-  'Unknown': Gender.unknown,
-  'Male': Gender.male,
-};
-
-const genderEnumToString = {
-  Gender.female: 'Female',
-  Gender.transgender: 'Transgender',
-  Gender.unknown: 'Unknown',
-  Gender.male: 'Male',
-};

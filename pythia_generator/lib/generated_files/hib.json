@@ -63,25 +63,6 @@
                     ]
                 },
                 {
-                    "observationCode": "104",
-                    "observationTitle": "Allergic reaction to latex",
-                    "contraindicationText": "Do not vaccinate if the patient has an allergy to latex.",
-                    "contraindicatedVaccine": [
-                        {
-                            "vaccineType": "PRP-T",
-                            "cvx": "48"
-                        },
-                        {
-                            "vaccineType": "PRP-OMP",
-                            "cvx": "49"
-                        },
-                        {
-                            "vaccineType": "Hib-Hep B",
-                            "cvx": "51"
-                        }
-                    ]
-                },
-                {
                     "observationCode": "110",
                     "observationTitle": "Hypersensitivity to yeast",
                     "contraindicationText": "Do not vaccinate if the patient has a hypersensitivity to yeast.",
@@ -101,14 +82,12 @@
             "targetDisease": "Hib",
             "vaccineGroup": "Hib",
             "seriesType": "Standard",
-            "equivalentSeriesGroups": "2",
             "selectSeries": {
                 "defaultSeries": "Yes",
                 "productPath": "No",
                 "seriesGroupName": "Standard",
                 "seriesGroup": "1",
                 "seriesPriority": "A",
-                "seriesPreference": "1",
                 "maxAgeToStart": "7 months - 4 days"
             },
             "seriesDose": [
@@ -243,7 +222,7 @@
                             "maxAge": "5 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -410,7 +389,7 @@
                             "maxAge": "5 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -601,7 +580,7 @@
                             "maxAge": "5 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
@@ -723,14 +702,12 @@
             "targetDisease": "Hib",
             "vaccineGroup": "Hib",
             "seriesType": "Standard",
-            "equivalentSeriesGroups": "2",
             "selectSeries": {
                 "defaultSeries": "No",
                 "productPath": "No",
                 "seriesGroupName": "Standard",
                 "seriesGroup": "1",
                 "seriesPriority": "A",
-                "seriesPreference": "3",
                 "maxAgeToStart": "12 months - 4 days"
             },
             "seriesDose": [
@@ -741,6 +718,13 @@
                             "absMinAge": "7 months - 4 days",
                             "minAge": "7 months",
                             "maxAge": "5 years"
+                        }
+                    ],
+                    "preferableInterval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -859,7 +843,7 @@
                             "maxAge": "5 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -1050,7 +1034,7 @@
                             "maxAge": "5 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
@@ -1172,14 +1156,12 @@
             "targetDisease": "Hib",
             "vaccineGroup": "Hib",
             "seriesType": "Standard",
-            "equivalentSeriesGroups": "2",
             "selectSeries": {
                 "defaultSeries": "No",
                 "productPath": "No",
                 "seriesGroupName": "Standard",
                 "seriesGroup": "1",
                 "seriesPriority": "A",
-                "seriesPreference": "4",
                 "maxAgeToStart": "15 months - 4 days"
             },
             "seriesDose": [
@@ -1190,6 +1172,13 @@
                             "absMinAge": "12 months - 4 days",
                             "minAge": "12 months",
                             "maxAge": "5 years"
+                        }
+                    ],
+                    "preferableInterval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -1313,7 +1302,7 @@
                             "maxAge": "5 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
@@ -1435,14 +1424,12 @@
             "targetDisease": "Hib",
             "vaccineGroup": "Hib",
             "seriesType": "Standard",
-            "equivalentSeriesGroups": "2",
             "selectSeries": {
                 "defaultSeries": "No",
                 "productPath": "No",
                 "seriesGroupName": "Standard",
                 "seriesGroup": "1",
-                "seriesPriority": "A",
-                "seriesPreference": "5"
+                "seriesPriority": "A"
             },
             "seriesDose": [
                 {
@@ -1452,6 +1439,13 @@
                             "absMinAge": "15 months - 4 days",
                             "minAge": "15 months",
                             "maxAge": "5 years"
+                        }
+                    ],
+                    "preferableInterval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "8 weeks - 4 days",
+                            "minInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -1567,14 +1561,12 @@
             "targetDisease": "Hib",
             "vaccineGroup": "Hib",
             "seriesType": "Standard",
-            "equivalentSeriesGroups": "2",
             "selectSeries": {
                 "defaultSeries": "No",
                 "productPath": "Yes",
                 "seriesGroupName": "Standard",
                 "seriesGroup": "1",
-                "seriesPriority": "A",
-                "seriesPreference": "2"
+                "seriesPriority": "A"
             },
             "seriesDose": [
                 {
@@ -1623,7 +1615,7 @@
                             "maxAge": "5 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -1665,7 +1657,7 @@
                             "maxAge": "5 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
@@ -1793,7 +1785,6 @@
                 "seriesGroupName": "Increased Risk",
                 "seriesGroup": "2",
                 "seriesPriority": "B",
-                "seriesPreference": "1",
                 "minAgeToStart": "12 months",
                 "maxAgeToStart": "5 years"
             },
@@ -1824,6 +1815,33 @@
                     "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
                     "beginAge": "12 months",
                     "endAge": "5 years"
+                },
+                {
+                    "observationCode": {
+                        "text": "Radiation therapy",
+                        "code": "159"
+                    },
+                    "description": "Administer to persons who are undergoing radiation therapy.",
+                    "beginAge": "12 months",
+                    "endAge": "5 years"
+                },
+                {
+                    "observationCode": {
+                        "text": "Chemotherapy",
+                        "code": "168"
+                    },
+                    "description": "Administer to persons who are undergoing chemotherapy.",
+                    "beginAge": "12 months",
+                    "endAge": "5 years"
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV Infection",
+                        "code": "186"
+                    },
+                    "description": "Administer to persons with HIV Infection",
+                    "beginAge": "12 months",
+                    "endAge": "5 years"
                 }
             ],
             "seriesDose": [
@@ -1835,7 +1853,7 @@
                             "minAge": "12 months"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
@@ -1948,13 +1966,14 @@
                             "set": [
                                 {
                                     "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses on or after the age of 12 months",
+                                    "setDescription": "Dose is not required if the patient has received 2 or more doses before the age of 12 months",
                                     "condition": [
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "12 months",
-                                            "doseCount": "0",
+                                            "beginAge": "6 weeks - 4 days",
+                                            "endAge": "12 months",
+                                            "doseCount": "1",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than"
                                         }
@@ -1967,7 +1986,7 @@
                 },
                 {
                     "doseNumber": "Dose 2",
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
@@ -2073,43 +2092,6 @@
                             "beginAge": "6 weeks - 4 days"
                         }
                     ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 2 or more doses before the age of 12 months",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "12 months",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has received 2 or more doses on or after the age of 12 months",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "12 months",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
                     "recurringDose": "No"
                 }
             ]
@@ -2119,14 +2101,12 @@
             "targetDisease": "Hib",
             "vaccineGroup": "Hib",
             "seriesType": "Risk",
-            "equivalentSeriesGroups": "1",
             "selectSeries": {
                 "defaultSeries": "No",
                 "productPath": "No",
                 "seriesGroupName": "Increased Risk",
                 "seriesGroup": "2",
                 "seriesPriority": "C",
-                "seriesPreference": "1",
                 "minAgeToStart": "15 months"
             },
             "indication": [
@@ -2270,7 +2250,6 @@
                 "seriesGroupName": "Increased Risk",
                 "seriesGroup": "2",
                 "seriesPriority": "A",
-                "seriesPreference": "1",
                 "minAgeToStart": "6 weeks"
             },
             "indication": [
@@ -2293,7 +2272,7 @@
                             "minAge": "6 weeks"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "N",
                             "fromRelevantObs": {
@@ -2346,7 +2325,7 @@
                 },
                 {
                     "doseNumber": "Dose 2",
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -2396,7 +2375,7 @@
                 },
                 {
                     "doseNumber": "Dose 3",
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",

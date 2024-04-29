@@ -12,7 +12,7 @@ _$SeriesDoseImpl _$$SeriesDoseImplFromJson(Map<String, dynamic> json) =>
       age: (json['age'] as List<dynamic>?)
           ?.map((e) => VaxAge.fromJson(e as Map<String, dynamic>))
           .toList(),
-      interval: (json['interval'] as List<dynamic>?)
+      preferableInterval: (json['preferableInterval'] as List<dynamic>?)
           ?.map((e) => Interval.fromJson(e as Map<String, dynamic>))
           .toList(),
       allowableInterval: json['allowableInterval'] == null
@@ -48,9 +48,10 @@ Map<String, dynamic> _$$SeriesDoseImplToJson(_$SeriesDoseImpl instance) {
     }
   }
 
-  writeNotNull('doseNumber', _$DoseNumberEnumMap[instance.doseNumber]);
+  writeNotNull('doseNumber', instance.doseNumber?.toJson());
   writeNotNull('age', instance.age?.map((e) => e.toJson()).toList());
-  writeNotNull('interval', instance.interval?.map((e) => e.toJson()).toList());
+  writeNotNull('preferableInterval',
+      instance.preferableInterval?.map((e) => e.toJson()).toList());
   writeNotNull('allowableInterval', instance.allowableInterval?.toJson());
   writeNotNull('preferableVaccine',
       instance.preferableVaccine?.map((e) => e.toJson()).toList());
@@ -60,7 +61,7 @@ Map<String, dynamic> _$$SeriesDoseImplToJson(_$SeriesDoseImpl instance) {
       instance.inadvertentVaccine?.map((e) => e.toJson()).toList());
   writeNotNull('conditionalSkip',
       instance.conditionalSkip?.map((e) => e.toJson()).toList());
-  writeNotNull('recurringDose', _$BinaryEnumMap[instance.recurringDose]);
+  writeNotNull('recurringDose', instance.recurringDose?.toJson());
   writeNotNull(
       'seasonalRecommendation', instance.seasonalRecommendation?.toJson());
   return val;

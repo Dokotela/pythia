@@ -159,7 +159,6 @@
                 "seriesGroupName": "Standard",
                 "seriesGroup": "1",
                 "seriesPriority": "A",
-                "seriesPreference": "1",
                 "maxAgeToStart": "12 months - 4 days"
             },
             "seriesDose": [
@@ -335,11 +334,10 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
                                             "doseCount": "5",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 }
@@ -358,7 +356,7 @@
                             "latestRecAge": "5 months + 4 weeks"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -530,11 +528,10 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
                                             "doseCount": "5",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 }
@@ -553,7 +550,7 @@
                             "latestRecAge": "7 months + 4 weeks"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -725,11 +722,10 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
                                             "doseCount": "5",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 }
@@ -748,7 +744,7 @@
                             "latestRecAge": "19 months + 4 weeks"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "6 months - 4 days",
@@ -907,11 +903,10 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
                                             "doseCount": "5",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 }
@@ -930,7 +925,7 @@
                             "latestRecAge": "7 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "6 months - 4 days",
@@ -1085,11 +1080,10 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
                                             "doseCount": "5",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 }
@@ -1108,7 +1102,7 @@
                             "latestRecAge": "7 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -1253,7 +1247,7 @@
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 },
@@ -1285,7 +1279,7 @@
                             "latestRecAge": "7 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -1417,7 +1411,7 @@
                         },
                         {
                             "context": "Forecast",
-                            "setLogic": "n/a",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "3",
@@ -1448,7 +1442,7 @@
                             "latestRecAge": "7 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "6 months - 4 days",
@@ -1611,7 +1605,7 @@
                             "latestRecAge": "13 years + 4 weeks"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "N",
                             "fromMostRecent": "09;28;35;113;138;139",
@@ -1754,7 +1748,7 @@
                             "latestRecAge": "13 years + 4 weeks"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "N",
                             "fromMostRecent": "09;28;35;113;138;139",
@@ -1885,8 +1879,7 @@
                 "productPath": "No",
                 "seriesGroupName": "Standard",
                 "seriesGroup": "1",
-                "seriesPriority": "A",
-                "seriesPreference": "2"
+                "seriesPriority": "A"
             },
             "seriesDose": [
                 {
@@ -2059,11 +2052,10 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
                                             "doseCount": "5",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 }
@@ -2074,7 +2066,7 @@
                 },
                 {
                     "doseNumber": "Dose 2",
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -2246,11 +2238,10 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
                                             "doseCount": "5",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 }
@@ -2261,7 +2252,7 @@
                 },
                 {
                     "doseNumber": "Dose 3",
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -2433,11 +2424,10 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
                                             "doseCount": "5",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 }
@@ -2456,7 +2446,7 @@
                             "latestRecAge": "19 months + 4 weeks"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "6 months - 4 days",
@@ -2615,11 +2605,10 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
                                             "doseCount": "5",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 }
@@ -2638,7 +2627,7 @@
                             "latestRecAge": "7 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "6 months - 4 days",
@@ -2793,11 +2782,10 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
                                             "doseCount": "5",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         }
                                     ]
                                 }
@@ -2816,7 +2804,7 @@
                             "latestRecAge": "7 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -2979,7 +2967,7 @@
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         },
                                         {
                                             "conditionID": "3",
@@ -3010,7 +2998,7 @@
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "01;20;22;50;102;106;107;110;115;120;130;132;146;170"
+                                            "vaccineTypes": "01;11;20;22;50;102;106;107;110;115;120;130;132;146;170;198"
                                         },
                                         {
                                             "conditionID": "3",
@@ -3059,7 +3047,7 @@
                             "latestRecAge": "7 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -3191,7 +3179,7 @@
                         },
                         {
                             "context": "Forecast",
-                            "setLogic": "n/a",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "3",
@@ -3222,7 +3210,7 @@
                             "latestRecAge": "7 years"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "6 months - 4 days",
@@ -3385,7 +3373,7 @@
                             "latestRecAge": "13 years + 4 weeks"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "N",
                             "fromMostRecent": "09;28;35;113;138;139",
@@ -3528,7 +3516,7 @@
                             "latestRecAge": "13 years + 4 weeks"
                         }
                     ],
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "N",
                             "fromMostRecent": "09;28;35;113;138;139",
@@ -3663,8 +3651,7 @@
                 "productPath": "No",
                 "seriesGroupName": "Increased Risk",
                 "seriesGroup": "2",
-                "seriesPriority": "A",
-                "seriesPreference": "1"
+                "seriesPriority": "A"
             },
             "indication": [
                 {
@@ -3679,13 +3666,15 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
-                    "interval": [
+                    "preferableInterval": [
                         {
                             "fromPrevious": "N",
                             "fromRelevantObs": {
                                 "text": "Onset of pregnancy",
                                 "code": "170"
                             },
+                            "absMinInt": "0 days",
+                            "minInt": "27 weeks",
                             "earliestRecInt": "27 weeks",
                             "latestRecInt": "36 weeks"
                         }

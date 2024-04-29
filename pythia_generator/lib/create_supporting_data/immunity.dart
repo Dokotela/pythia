@@ -52,27 +52,27 @@ Immunity? immunity(String? immunityString) {
         !i[1]!.contains('n/a')) {
       /// Checks if the data field is the max date (which means it was blank, null or
       /// incorrectly formatted)
-      if (VaxDate.fromYYYYMMDDMax(i[1]!.toString()) != VaxDate.max()) {
+      if (VaxDate.fromYYYYMMDD(i[1]!.toString(), true) != VaxDate.max()) {
         if (date != i[1]!.toString()) {
           date = valueToString(i[1]!);
-          print(date);
+          // print(date);
           var dateTime =
               date == null || date == '' ? null : DateTime.tryParse(date);
-          print(dateTime);
+          // print(dateTime);
           if (dateTime == null && date != null) {
             var dateList = date.split('-');
-            print(dateList);
+            // print(dateList);
             if (dateList.length != 3) {
               dateList = date.split('/');
             }
-            print(dateList);
-            print(dateList.length == 3);
-            print('${dateList[2]}/${dateList[0]}/${dateList[1]}');
+            // print(dateList);
+            // print(dateList.length == 3);
+            // print('${dateList[2]}/${dateList[0]}/${dateList[1]}');
             if (dateList.length == 3) {
               dateTime = DateTime.tryParse(
                   '${dateList[2]}-${dateList[0]}-${dateList[1]}');
             }
-            print(dateTime);
+            // print(dateTime);
           }
           country = valueToString(i[2]!);
 

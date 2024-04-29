@@ -1,0 +1,74 @@
+[
+  {
+    "outputFile": "Patient-PatientExample.json",
+    "fshName": "PatientExample",
+    "fshType": "Instance",
+    "fshFile": "patient.fsh",
+    "startLine": 9,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-CvxToAntigenMap.json",
+    "fshName": "CvxToAntigenMap",
+    "fshType": "Resource",
+    "fshFile": "cvx_to_antigen_map.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-MyPatient.json",
+    "fshName": "MyPatient",
+    "fshType": "Profile",
+    "fshFile": "patient.fsh",
+    "startLine": 4,
+    "endLine": 7
+  },
+  {
+    "outputFile": "StructureDefinition-Vaccine.json",
+    "fshName": "Vaccine",
+    "fshType": "Resource",
+    "fshFile": "vaccine.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-antigen-supporting-data.json",
+    "fshName": "AntigenSupportingData",
+    "fshType": "Resource",
+    "fshFile": "antigen_supporting_data.fsh",
+    "startLine": 1,
+    "endLine": 75
+  },
+  {
+    "outputFile": "StructureDefinition-live-virus-conflict.json",
+    "fshName": "LiveVirusConflict",
+    "fshType": "Resource",
+    "fshFile": "live_virus_conflicts.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-vaccination-observation-map.json",
+    "fshName": "VaccinationObservationMap",
+    "fshType": "Resource",
+    "fshFile": "vaccine_observation_map.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-vaccine-group-map.json",
+    "fshName": "VaccineGroupMap",
+    "fshType": "Resource",
+    "fshFile": "vaccine_group_map.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-vaccine-group-to-antigen-map.json",
+    "fshName": "VaccineGroupToAntigenMap",
+    "fshType": "Resource",
+    "fshFile": "vaccine_group_to_antigen_map.fsh",
+    "startLine": 1,
+    "endLine": 8
+  }
+]

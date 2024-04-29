@@ -1,31 +1,28 @@
 import '../pythia.dart';
 
 List<Series> relevantSeries(
-  Gender gender,
+  VaxPatient patient,
   List<Series> oldSeries,
-  VaxObservations patientObservations,
-  VaxDate dob,
-  VaxDate assessmentDate,
 ) {
-  final series = oldSeries.toList();
-  series.retainWhere((element) =>
+  final List<Series> series = oldSeries.toList();
+  series.retainWhere((Series element) =>
       element.requiredGender == null ||
       element.requiredGender!.isEmpty ||
-      element.requiredGender!.contains(gender));
+      element.requiredGender!.contains(patient.gender));
 
   /// Keep each series where....
-  series.retainWhere((series) {
+  series.retainWhere((Series series) {
     /// If it's a Standard or Evaluation Only Series
-    if (series.seriesType == 'Standard' ||
-        series.seriesType == 'Evaluation Only') {
+    if (series.seriesType == SeriesType.standard ||
+        series.seriesType == SeriesType.evaluationOnly) {
       return true;
     }
 
     /// If it's a Risk group
-    else if (series.seriesType == 'Risk') {
+    else if (series.seriesType == SeriesType.risk) {
       /// Get the list of indications for this series
-      final indicationList =
-          series.indication?.map((e) => e.observationCode?.code ?? '').toList();
+      final List<String>? indicationList =
+          series.indication?.map((Indication e) => e.observationCode?.code ?? '').toList();
 
       /// If the indicationList is null, it means there are no conditions to
       /// meet (this is probably an error in the rules), but either way,
@@ -35,7 +32,7 @@ List<Series> relevantSeries(
       } else {
         /// Because in the above mapping, we inserted a '' if there are any
         /// nulls, so we remove those
-        indicationList.retainWhere((e) => e != '');
+        indicationList.retainWhere((String e) => e != '');
 
         /// If that leaves an empty list, there are no indications (again,
         /// probably an error and we don't include this series)
@@ -47,17 +44,18 @@ List<Series> relevantSeries(
         /// list of the patient's observations, that is also included as
         /// one of the indications for this series
         else {
-          final obsIndex = indicationList.indexWhere((obsCode) {
-            final indicationIndex = patientObservations.codeIndex(obsCode);
+          final int obsIndex = indicationList.indexWhere((String obsCode) {
+            final int indicationIndex = patient.observations.codeIndex(obsCode);
             if (indicationIndex == -1) {
               return false;
             } else {
-              return dob.changeIfNotNullElseMin(
-                          series.indication![indicationIndex].beginAge) <=
-                      assessmentDate &&
-                  assessmentDate <
-                      dob.changeIfNotNullElseMax(
-                          series.indication![indicationIndex].endAge);
+              return patient.birthdate.changeNullable(
+                          series.indication![indicationIndex].beginAge,
+                          false)! <=
+                      patient.assessmentDate &&
+                  patient.assessmentDate <
+                      patient.birthdate.changeNullable(
+                          series.indication![indicationIndex].endAge, true)!;
             }
           });
           return obsIndex != -1;
