@@ -3,7 +3,7 @@
   "id": "cdsi.ig",
   "url": "http://fhirfli.dev/fhir/ig/cdsi/ImplementationGuide/cdsi.ig",
   "version": "0.1.0",
-  "name": "CdsiIG",
+  "name": "PythiaIG",
   "status": "draft",
   "publisher": "FHIR-FLI",
   "contact": [

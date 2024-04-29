@@ -1,1 +1,120 @@
-<?xml version="1.0" encoding="UTF-8"?><ImplementationGuide xmlns="http://hl7.org/fhir"><id value="cdsi.ig"/><url value="http://fhirfli.dev/fhir/ig/cdsi/ImplementationGuide/cdsi.ig"/><version value="0.1.0"/><name value="CdsiIG"/><status value="draft"/><publisher value="FHIR-FLI"/><contact><name value="FHIR-FLI"/><telecom><system value="url"/><value value="http://fhirfli.dev"/></telecom></contact><packageId value="cdsi.ig"/><fhirVersion value="4.0.1"/><definition><resource><reference><reference value="StructureDefinition/MyPatient"/></reference><name value="MyPatient"/><description value="An example profile of the Patient resource."/><exampleBoolean value="false"/></resource><resource><reference><reference value="Patient/PatientExample"/></reference><name value="PatientExample"/><description value="An example of a patient with a license to krill."/><exampleCanonical value="http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/MyPatient"/></resource><page><extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"><valueUrl value="toc.html"/></extension><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/><page><extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"><valueUrl value="index.html"/></extension><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/></page><page><extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"><valueUrl value="decision-support-wg.html"/></extension><nameUrl value="decision-support-wg.html"/><title value="Decision Support Wg"/><generation value="markdown"/></page><page><extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"><valueUrl value="evaluate-vaccine-dose-administered.html"/></extension><nameUrl value="evaluate-vaccine-dose-administered.html"/><title value="Evaluate Vaccine Dose Administered"/><generation value="markdown"/></page><page><extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"><valueUrl value="forecast-dates-and-reasons.html"/></extension><nameUrl value="forecast-dates-and-reasons.html"/><title value="Forecast Dates and Reasons"/><generation value="markdown"/></page><page><extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"><valueUrl value="logical-specification-concepts.html"/></extension><nameUrl value="logical-specification-concepts.html"/><title value="Logical Specification Concepts"/><generation value="markdown"/></page><page><extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"><valueUrl value="preparation.html"/></extension><nameUrl value="preparation.html"/><title value="Preparation"/><generation value="markdown"/></page><page><extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"><valueUrl value="processing-model.html"/></extension><nameUrl value="processing-model.html"/><title value="Processing Model"/><generation value="markdown"/></page><page><extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"><valueUrl value="relevant-series.html"/></extension><nameUrl value="relevant-series.html"/><title value="Relevant Series"/><generation value="markdown"/></page></page><parameter><code value="copyrightyear"/><value value="2024+"/></parameter><parameter><code value="releaselabel"/><value value="ci-build"/></parameter><parameter><code value="autoload-resources"/><value value="false"/></parameter></definition></ImplementationGuide>
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+    <id value="cdsi.ig" />
+    <url value="http://fhirfli.dev/fhir/ig/cdsi/ImplementationGuide/cdsi.ig" />
+    <version value="0.1.0" />
+    <name value="PythiaIG" />
+    <status value="draft" />
+    <publisher value="FHIR-FLI" />
+    <contact>
+        <name value="FHIR-FLI" />
+        <telecom>
+            <system value="url" />
+            <value value="http://fhirfli.dev" />
+        </telecom>
+    </contact>
+    <packageId value="cdsi.ig" />
+    <fhirVersion value="4.0.1" />
+    <definition>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/MyPatient" />
+            </reference>
+            <name value="MyPatient" />
+            <description value="An example profile of the Patient resource." />
+            <exampleBoolean value="false" />
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Patient/PatientExample" />
+            </reference>
+            <name value="PatientExample" />
+            <description value="An example of a patient with a license to krill." />
+            <exampleCanonical value="http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/MyPatient" />
+        </resource>
+        <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+                <valueUrl value="toc.html" />
+            </extension>
+            <nameUrl value="toc.html" />
+            <title value="Table of Contents" />
+            <generation value="html" />
+            <page>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+                    <valueUrl value="index.html" />
+                </extension>
+                <nameUrl value="index.html" />
+                <title value="Home" />
+                <generation value="markdown" />
+            </page>
+            <page>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+                    <valueUrl value="decision-support-wg.html" />
+                </extension>
+                <nameUrl value="decision-support-wg.html" />
+                <title value="Decision Support Wg" />
+                <generation value="markdown" />
+            </page>
+            <page>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+                    <valueUrl value="evaluate-vaccine-dose-administered.html" />
+                </extension>
+                <nameUrl value="evaluate-vaccine-dose-administered.html" />
+                <title value="Evaluate Vaccine Dose Administered" />
+                <generation value="markdown" />
+            </page>
+            <page>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+                    <valueUrl value="forecast-dates-and-reasons.html" />
+                </extension>
+                <nameUrl value="forecast-dates-and-reasons.html" />
+                <title value="Forecast Dates and Reasons" />
+                <generation value="markdown" />
+            </page>
+            <page>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+                    <valueUrl value="logical-specification-concepts.html" />
+                </extension>
+                <nameUrl value="logical-specification-concepts.html" />
+                <title value="Logical Specification Concepts" />
+                <generation value="markdown" />
+            </page>
+            <page>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+                    <valueUrl value="preparation.html" />
+                </extension>
+                <nameUrl value="preparation.html" />
+                <title value="Preparation" />
+                <generation value="markdown" />
+            </page>
+            <page>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+                    <valueUrl value="processing-model.html" />
+                </extension>
+                <nameUrl value="processing-model.html" />
+                <title value="Processing Model" />
+                <generation value="markdown" />
+            </page>
+            <page>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+                    <valueUrl value="relevant-series.html" />
+                </extension>
+                <nameUrl value="relevant-series.html" />
+                <title value="Relevant Series" />
+                <generation value="markdown" />
+            </page>
+        </page>
+        <parameter>
+            <code value="copyrightyear" />
+            <value value="2024+" />
+        </parameter>
+        <parameter>
+            <code value="releaselabel" />
+            <value value="ci-build" />
+        </parameter>
+        <parameter>
+            <code value="autoload-resources" />
+            <value value="false" />
+        </parameter>
+    </definition>
+</ImplementationGuide>

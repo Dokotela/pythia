@@ -1,23 +1,23 @@
-CdsiIG : Validation Results
+PythiaIG : Validation Results
 =========================================
 
 err = 14, warn = 236, info = 0
 IG Publisher Version: 1.6.4 Out of date - current version is 1.6.5
 Generated Thu Apr 18 10:38:48 SAST 2024. FHIR version 4.0.1 for cdsi.ig#0.1.0 (canonical = http://fhirfli.dev/fhir/ig/cdsi)
  Build Errors : 1 / 4 / 0
- /home/grey/dev/ig_cdsi/CdsiIG/fsh-generated/resources/ImplementationGuide-cdsi.ig : 0 / 0 / 1
- /home/grey/dev/ig_cdsi/CdsiIG/fsh-generated/resources/Patient-PatientExample : 0 / 0 / 1
- /home/grey/dev/ig_cdsi/CdsiIG/fsh-generated/resources/StructureDefinition-CvxToAntigenMap : 2 / 1 / 1
- /home/grey/dev/ig_cdsi/CdsiIG/fsh-generated/resources/StructureDefinition-MyPatient : 0 / 0 / 1
- /home/grey/dev/ig_cdsi/CdsiIG/fsh-generated/resources/StructureDefinition-Vaccine : 2 / 1 / 1
- /home/grey/dev/ig_cdsi/CdsiIG/fsh-generated/resources/StructureDefinition-antigen-supporting-data : 2 / 157 / 1
- /home/grey/dev/ig_cdsi/CdsiIG/fsh-generated/resources/StructureDefinition-live-virus-conflict : 2 / 29 / 1
- /home/grey/dev/ig_cdsi/CdsiIG/fsh-generated/resources/StructureDefinition-vaccination-observation-map : 2 / 26 / 1
- /home/grey/dev/ig_cdsi/CdsiIG/fsh-generated/resources/StructureDefinition-vaccine-group-map : 2 / 9 / 1
- /home/grey/dev/ig_cdsi/CdsiIG/fsh-generated/resources/StructureDefinition-vaccine-group-to-antigen-map : 2 / 9 / 1
+ /home/grey/dev/pythia/PythiaIG/fsh-generated/resources/ImplementationGuide-cdsi.ig : 0 / 0 / 1
+ /home/grey/dev/pythia/PythiaIG/fsh-generated/resources/Patient-PatientExample : 0 / 0 / 1
+ /home/grey/dev/pythia/PythiaIG/fsh-generated/resources/StructureDefinition-CvxToAntigenMap : 2 / 1 / 1
+ /home/grey/dev/pythia/PythiaIG/fsh-generated/resources/StructureDefinition-MyPatient : 0 / 0 / 1
+ /home/grey/dev/pythia/PythiaIG/fsh-generated/resources/StructureDefinition-Vaccine : 2 / 1 / 1
+ /home/grey/dev/pythia/PythiaIG/fsh-generated/resources/StructureDefinition-antigen-supporting-data : 2 / 157 / 1
+ /home/grey/dev/pythia/PythiaIG/fsh-generated/resources/StructureDefinition-live-virus-conflict : 2 / 29 / 1
+ /home/grey/dev/pythia/PythiaIG/fsh-generated/resources/StructureDefinition-vaccination-observation-map : 2 / 26 / 1
+ /home/grey/dev/pythia/PythiaIG/fsh-generated/resources/StructureDefinition-vaccine-group-map : 2 / 9 / 1
+ /home/grey/dev/pythia/PythiaIG/fsh-generated/resources/StructureDefinition-vaccine-group-to-antigen-map : 2 / 9 / 1
 </table>
 == n/a ==
-ERROR: /home/grey/dev/ig_cdsi/CdsiIG/output/processing-model.html#/html/body/div/div/div/div/div/h3/a at Line 175, column 280: The link 'lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json' for "antigenic components" cannot be resolved
+ERROR: /home/grey/dev/pythia/PythiaIG/output/processing-model.html#/html/body/div/div/div/div/div/h3/a at Line 175, column 280: The link 'lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json' for "antigenic components" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide

@@ -1,782 +1,721 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-   <id value="cdsi.ig"/>
+   <id value="cdsi.ig" />
    <text>
-      <status value="extensions"/>
+      <status value="extensions" />
       <div xmlns="http://www.w3.org/1999/xhtml">
-         <h2>CdsiIG</h2>
+         <h2>PythiaIG</h2>
          <p>The official URL for this implementation guide is: </p>
          <pre>http://fhirfli.dev/fhir/ig/cdsi/ImplementationGuide/cdsi.ig</pre>
       </div>
    </text>
-   <url value="http://fhirfli.dev/fhir/ig/cdsi/ImplementationGuide/cdsi.ig"/>
-   <version value="0.1.0"/>
-   <name value="CdsiIG"/>
-   <status value="draft"/>
-   <date value="2024-04-18T10:38:20+02:00"/>
-   <publisher value="FHIR-FLI"/>
+   <url value="http://fhirfli.dev/fhir/ig/cdsi/ImplementationGuide/cdsi.ig" />
+   <version value="0.1.0" />
+   <name value="PythiaIG" />
+   <status value="draft" />
+   <date value="2024-04-18T10:38:20+02:00" />
+   <publisher value="FHIR-FLI" />
    <contact>
-      <name value="FHIR-FLI"/>
+      <name value="FHIR-FLI" />
       <telecom>
-         <system value="url"/>
-         <value value="http://fhirfli.dev"/>
+         <system value="url" />
+         <value value="http://fhirfli.dev" />
       </telecom>
    </contact>
-   <packageId value="cdsi.ig"/>
-   <license value="CC0-1.0"/>
-   <fhirVersion value="4.0.1"/>
+   <packageId value="cdsi.ig" />
+   <license value="CC0-1.0" />
+   <fhirVersion value="4.0.1" />
    <dependsOn id="hl7tx">
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
-         <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+      <extension
+         url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+         <valueMarkdown
+            value="Automatically added as a dependency - all IGs depend on HL7 Terminology" />
       </extension>
-      <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
-      <packageId value="hl7.terminology.r4"/>
-      <version value="5.3.0"/>
+      <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology" />
+      <packageId value="hl7.terminology.r4" />
+      <version value="5.3.0" />
    </dependsOn>
    <dependsOn id="hl7ext">
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
-         <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+      <extension
+         url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+         <valueMarkdown
+            value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" />
       </extension>
-      <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
-      <packageId value="hl7.fhir.uv.extensions.r4"/>
-      <version value="1.0.0"/>
+      <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions" />
+      <packageId value="hl7.fhir.uv.extensions.r4" />
+      <version value="1.0.0" />
    </dependsOn>
    <definition>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="copyrightyear"/>
+            <valueString value="copyrightyear" />
          </extension>
          <extension url="value">
-            <valueString value="2024+"/>
+            <valueString value="2024+" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="releaselabel"/>
+            <valueString value="releaselabel" />
          </extension>
          <extension url="value">
-            <valueString value="ci-build"/>
+            <valueString value="ci-build" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="autoload-resources"/>
+            <valueString value="autoload-resources" />
          </extension>
          <extension url="value">
-            <valueString value="false"/>
+            <valueString value="false" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="autoload-resources"/>
+            <valueString value="autoload-resources" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="path-liquid"/>
+            <valueString value="path-liquid" />
          </extension>
          <extension url="value">
-            <valueString value="template/liquid"/>
+            <valueString value="template/liquid" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="path-liquid"/>
+            <valueString value="path-liquid" />
          </extension>
          <extension url="value">
-            <valueString value="input/liquid"/>
+            <valueString value="input/liquid" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="path-qa"/>
+            <valueString value="path-qa" />
          </extension>
          <extension url="value">
-            <valueString value="temp/qa"/>
+            <valueString value="temp/qa" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="path-temp"/>
+            <valueString value="path-temp" />
          </extension>
          <extension url="value">
-            <valueString value="temp/pages"/>
+            <valueString value="temp/pages" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="path-output"/>
+            <valueString value="path-output" />
          </extension>
          <extension url="value">
-            <valueString value="output"/>
+            <valueString value="output" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="path-suppressed-warnings"/>
+            <valueString value="path-suppressed-warnings" />
          </extension>
          <extension url="value">
-            <valueString value="input/ignoreWarnings.txt"/>
+            <valueString value="input/ignoreWarnings.txt" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="path-history"/>
+            <valueString value="path-history" />
          </extension>
          <extension url="value">
-            <valueString value="http://fhirfli.dev/fhir/ig/cdsi/history.html"/>
+            <valueString value="http://fhirfli.dev/fhir/ig/cdsi/history.html" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="template-html"/>
+            <valueString value="template-html" />
          </extension>
          <extension url="value">
-            <valueString value="template-page.html"/>
+            <valueString value="template-page.html" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="template-md"/>
+            <valueString value="template-md" />
          </extension>
          <extension url="value">
-            <valueString value="template-page-md.html"/>
+            <valueString value="template-page-md.html" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="apply-contact"/>
+            <valueString value="apply-contact" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="apply-context"/>
+            <valueString value="apply-context" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="apply-copyright"/>
+            <valueString value="apply-copyright" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="apply-jurisdiction"/>
+            <valueString value="apply-jurisdiction" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="apply-license"/>
+            <valueString value="apply-license" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="apply-publisher"/>
+            <valueString value="apply-publisher" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="apply-version"/>
+            <valueString value="apply-version" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="apply-wg"/>
+            <valueString value="apply-wg" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="active-tables"/>
+            <valueString value="active-tables" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="fmm-definition"/>
+            <valueString value="fmm-definition" />
          </extension>
          <extension url="value">
-            <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+            <valueString value="http://hl7.org/fhir/versions.html#maturity" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="propagate-status"/>
+            <valueString value="propagate-status" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="excludelogbinaryformat"/>
+            <valueString value="excludelogbinaryformat" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="tabbed-snapshots"/>
+            <valueString value="tabbed-snapshots" />
          </extension>
          <extension url="value">
-            <valueString value="true"/>
+            <valueString value="true" />
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-         <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+         <valueCode value="hl7.fhir.uv.tools#0.1.0" />
       </extension>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
       <grouping id="-str-profile">
-         <name value="Structures: Resource Profiles"/>
-         <description value="These define constraints on FHIR resources for systems conforming to this implementation guide."/>
+         <name value="Structures: Resource Profiles" />
+         <description
+            value="These define constraints on FHIR resources for systems conforming to this implementation guide." />
       </grouping>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
       <grouping id="-ex-example">
-         <name value="Example: Example Instances"/>
-         <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."/>
+         <name value="Example: Example Instances" />
+         <description
+            value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like." />
       </grouping>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
+            <valueInteger value="999999999" />
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="StructureDefinition:resource" />
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-antigen-supporting-data.html"/>
+            <valueUri value="StructureDefinition-antigen-supporting-data.html" />
          </extension>
          <reference>
-            <reference value="StructureDefinition/antigen-supporting-data"/>
+            <reference value="StructureDefinition/antigen-supporting-data" />
          </reference>
-         <name value="Antigen Supporting Data"/>
-         <description value="A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series."/>
-         <groupingId value="-str-profile"/>
+         <name value="Antigen Supporting Data" />
+         <description
+            value="A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series." />
+         <groupingId value="-str-profile" />
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
+            <valueInteger value="999999999" />
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="StructureDefinition:resource" />
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-CvxToAntigenMap.html"/>
+            <valueUri value="StructureDefinition-CvxToAntigenMap.html" />
          </extension>
          <reference>
-            <reference value="StructureDefinition/CvxToAntigenMap"/>
+            <reference value="StructureDefinition/CvxToAntigenMap" />
          </reference>
-         <name value="CVX Map"/>
-         <description value="Maps CVX Codes to Antigens and Ages"/>
-         <groupingId value="-str-profile"/>
+         <name value="CVX Map" />
+         <description value="Maps CVX Codes to Antigens and Ages" />
+         <groupingId value="-str-profile" />
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
+            <valueInteger value="999999999" />
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="StructureDefinition:resource" />
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-live-virus-conflict.html"/>
+            <valueUri value="StructureDefinition-live-virus-conflict.html" />
          </extension>
          <reference>
-            <reference value="StructureDefinition/live-virus-conflict"/>
+            <reference value="StructureDefinition/live-virus-conflict" />
          </reference>
-         <name value="Live Virus Conflict"/>
-         <description value="This profile captures potential conflicts between live virus vaccines based on previous and current vaccinations and the required time intervals to avoid interference."/>
-         <groupingId value="-str-profile"/>
+         <name value="Live Virus Conflict" />
+         <description
+            value="This profile captures potential conflicts between live virus vaccines based on previous and current vaccinations and the required time intervals to avoid interference." />
+         <groupingId value="-str-profile" />
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
+            <valueInteger value="999999999" />
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="StructureDefinition:resource" />
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-MyPatient.html"/>
+            <valueUri value="StructureDefinition-MyPatient.html" />
          </extension>
          <reference>
-            <reference value="StructureDefinition/MyPatient"/>
+            <reference value="StructureDefinition/MyPatient" />
          </reference>
-         <name value="MyPatient"/>
-         <description value="An example profile of the Patient resource."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
+         <name value="MyPatient" />
+         <description value="An example profile of the Patient resource." />
+         <exampleBoolean value="false" />
+         <groupingId value="-str-profile" />
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
+            <valueInteger value="999999999" />
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="StructureDefinition:resource" />
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-vaccination-observation-map.html"/>
+            <valueUri value="StructureDefinition-vaccination-observation-map.html" />
          </extension>
          <reference>
-            <reference value="StructureDefinition/vaccination-observation-map"/>
+            <reference value="StructureDefinition/vaccination-observation-map" />
          </reference>
-         <name value="Vaccination Observation Map"/>
-         <description value="This profile describes the observation rules for vaccination based on specific patient conditions."/>
-         <groupingId value="-str-profile"/>
+         <name value="Vaccination Observation Map" />
+         <description
+            value="This profile describes the observation rules for vaccination based on specific patient conditions." />
+         <groupingId value="-str-profile" />
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
+            <valueInteger value="999999999" />
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="StructureDefinition:resource" />
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Vaccine.html"/>
+            <valueUri value="StructureDefinition-Vaccine.html" />
          </extension>
          <reference>
-            <reference value="StructureDefinition/Vaccine"/>
+            <reference value="StructureDefinition/Vaccine" />
          </reference>
-         <name value="Vaccine"/>
-         <description value="Simple vaccine to easily obtain needed information for forecasting"/>
-         <groupingId value="-str-profile"/>
+         <name value="Vaccine" />
+         <description value="Simple vaccine to easily obtain needed information for forecasting" />
+         <groupingId value="-str-profile" />
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
+            <valueInteger value="999999999" />
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="StructureDefinition:resource" />
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-vaccine-group-map.html"/>
+            <valueUri value="StructureDefinition-vaccine-group-map.html" />
          </extension>
          <reference>
-            <reference value="StructureDefinition/vaccine-group-map"/>
+            <reference value="StructureDefinition/vaccine-group-map" />
          </reference>
-         <name value="Vaccine Group Map"/>
-         <description value="This profile maps vaccine groups to their specific attributes such as whether the entire group should be administered."/>
-         <groupingId value="-str-profile"/>
+         <name value="Vaccine Group Map" />
+         <description
+            value="This profile maps vaccine groups to their specific attributes such as whether the entire group should be administered." />
+         <groupingId value="-str-profile" />
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
+            <valueInteger value="999999999" />
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="StructureDefinition:resource" />
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-vaccine-group-to-antigen-map.html"/>
+            <valueUri value="StructureDefinition-vaccine-group-to-antigen-map.html" />
          </extension>
          <reference>
-            <reference value="StructureDefinition/vaccine-group-to-antigen-map"/>
+            <reference value="StructureDefinition/vaccine-group-to-antigen-map" />
          </reference>
-         <name value="Vaccine Group to Antigen Map"/>
-         <description value="This resource maps vaccine groups to their associated antigens."/>
-         <groupingId value="-str-profile"/>
+         <name value="Vaccine Group to Antigen Map" />
+         <description value="This resource maps vaccine groups to their associated antigens." />
+         <groupingId value="-str-profile" />
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
+            <valueInteger value="999999999" />
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Patient"/>
+            <valueString value="Patient" />
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Patient-PatientExample.html"/>
+            <valueUri value="Patient-PatientExample.html" />
          </extension>
          <reference>
-            <reference value="Patient/PatientExample"/>
+            <reference value="Patient/PatientExample" />
          </reference>
-         <name value="PatientExample"/>
-         <description value="An example of a patient with a license to krill."/>
-         <exampleCanonical value="http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/MyPatient"/>
-         <groupingId value="-ex-example"/>
+         <name value="PatientExample" />
+         <description value="An example of a patient with a license to krill." />
+         <exampleCanonical value="http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/MyPatient" />
+         <groupingId value="-ex-example" />
       </resource>
       <page>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="toc.html"/>
+            <valueUrl value="toc.html" />
          </extension>
-         <nameUrl value="toc.html"/>
-         <title value="Table of Contents"/>
-         <generation value="html"/>
+         <nameUrl value="toc.html" />
+         <title value="Table of Contents" />
+         <generation value="html" />
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="index.html"/>
+               <valueUrl value="index.html" />
             </extension>
-            <nameUrl value="index.html"/>
-            <title value="Home"/>
-            <generation value="markdown"/>
+            <nameUrl value="index.html" />
+            <title value="Home" />
+            <generation value="markdown" />
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="decision-support-wg.html"/>
+               <valueUrl value="decision-support-wg.html" />
             </extension>
-            <nameUrl value="decision-support-wg.html"/>
-            <title value="Decision Support Wg"/>
-            <generation value="markdown"/>
+            <nameUrl value="decision-support-wg.html" />
+            <title value="Decision Support Wg" />
+            <generation value="markdown" />
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="evaluate-vaccine-dose-administered.html"/>
+               <valueUrl value="evaluate-vaccine-dose-administered.html" />
             </extension>
-            <nameUrl value="evaluate-vaccine-dose-administered.html"/>
-            <title value="Evaluate Vaccine Dose Administered"/>
-            <generation value="markdown"/>
+            <nameUrl value="evaluate-vaccine-dose-administered.html" />
+            <title value="Evaluate Vaccine Dose Administered" />
+            <generation value="markdown" />
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="forecast-dates-and-reasons.html"/>
+               <valueUrl value="forecast-dates-and-reasons.html" />
             </extension>
-            <nameUrl value="forecast-dates-and-reasons.html"/>
-            <title value="Forecast Dates and Reasons"/>
-            <generation value="markdown"/>
+            <nameUrl value="forecast-dates-and-reasons.html" />
+            <title value="Forecast Dates and Reasons" />
+            <generation value="markdown" />
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="logical-specification-concepts.html"/>
+               <valueUrl value="logical-specification-concepts.html" />
             </extension>
-            <nameUrl value="logical-specification-concepts.html"/>
-            <title value="Logical Specification Concepts"/>
-            <generation value="markdown"/>
+            <nameUrl value="logical-specification-concepts.html" />
+            <title value="Logical Specification Concepts" />
+            <generation value="markdown" />
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="preparation.html"/>
+               <valueUrl value="preparation.html" />
             </extension>
-            <nameUrl value="preparation.html"/>
-            <title value="Preparation"/>
-            <generation value="markdown"/>
+            <nameUrl value="preparation.html" />
+            <title value="Preparation" />
+            <generation value="markdown" />
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="processing-model.html"/>
+               <valueUrl value="processing-model.html" />
             </extension>
-            <nameUrl value="processing-model.html"/>
-            <title value="Processing Model"/>
-            <generation value="markdown"/>
+            <nameUrl value="processing-model.html" />
+            <title value="Processing Model" />
+            <generation value="markdown" />
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="relevant-series.html"/>
+               <valueUrl value="relevant-series.html" />
             </extension>
-            <nameUrl value="relevant-series.html"/>
-            <title value="Relevant Series"/>
-            <generation value="markdown"/>
+            <nameUrl value="relevant-series.html" />
+            <title value="Relevant Series" />
+            <generation value="markdown" />
          </page>
          <page>
-            <nameUrl value="artifacts.html"/>
-            <title value="Artifacts Summary"/>
-            <generation value="html"/>
+            <nameUrl value="artifacts.html" />
+            <title value="Artifacts Summary" />
+            <generation value="html" />
             <page>
-               <nameUrl value="StructureDefinition-MyPatient.html"/>
-               <title value="MyPatient"/>
-               <generation value="generated"/>
+               <nameUrl value="StructureDefinition-MyPatient.html" />
+               <title value="MyPatient" />
+               <generation value="generated" />
             </page>
             <page>
-               <nameUrl value="StructureDefinition-CvxToAntigenMap.html"/>
-               <title value="CVX Map"/>
-               <generation value="generated"/>
+               <nameUrl value="StructureDefinition-CvxToAntigenMap.html" />
+               <title value="CVX Map" />
+               <generation value="generated" />
             </page>
             <page>
-               <nameUrl value="StructureDefinition-Vaccine.html"/>
-               <title value="Vaccine"/>
-               <generation value="generated"/>
+               <nameUrl value="StructureDefinition-Vaccine.html" />
+               <title value="Vaccine" />
+               <generation value="generated" />
             </page>
             <page>
-               <nameUrl value="StructureDefinition-antigen-supporting-data.html"/>
-               <title value="Antigen Supporting Data"/>
-               <generation value="generated"/>
+               <nameUrl value="StructureDefinition-antigen-supporting-data.html" />
+               <title value="Antigen Supporting Data" />
+               <generation value="generated" />
             </page>
             <page>
-               <nameUrl value="StructureDefinition-live-virus-conflict.html"/>
-               <title value="Live Virus Conflict"/>
-               <generation value="generated"/>
+               <nameUrl value="StructureDefinition-live-virus-conflict.html" />
+               <title value="Live Virus Conflict" />
+               <generation value="generated" />
             </page>
             <page>
-               <nameUrl value="StructureDefinition-vaccination-observation-map.html"/>
-               <title value="Vaccination Observation Map"/>
-               <generation value="generated"/>
+               <nameUrl value="StructureDefinition-vaccination-observation-map.html" />
+               <title value="Vaccination Observation Map" />
+               <generation value="generated" />
             </page>
             <page>
-               <nameUrl value="StructureDefinition-vaccine-group-map.html"/>
-               <title value="Vaccine Group Map"/>
-               <generation value="generated"/>
+               <nameUrl value="StructureDefinition-vaccine-group-map.html" />
+               <title value="Vaccine Group Map" />
+               <generation value="generated" />
             </page>
             <page>
-               <nameUrl value="StructureDefinition-vaccine-group-to-antigen-map.html"/>
-               <title value="Vaccine Group to Antigen Map"/>
-               <generation value="generated"/>
+               <nameUrl value="StructureDefinition-vaccine-group-to-antigen-map.html" />
+               <title value="Vaccine Group to Antigen Map" />
+               <generation value="generated" />
             </page>
             <page>
-               <nameUrl value="Patient-PatientExample.html"/>
-               <title value="PatientExample"/>
-               <generation value="generated"/>
+               <nameUrl value="Patient-PatientExample.html" />
+               <title value="PatientExample" />
+               <generation value="generated" />
             </page>
          </page>
       </page>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/capabilities"/>
+         <code value="path-resource" />
+         <value value="input/capabilities" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/examples"/>
+         <code value="path-resource" />
+         <value value="input/examples" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/extensions"/>
+         <code value="path-resource" />
+         <value value="input/extensions" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/models"/>
+         <code value="path-resource" />
+         <value value="input/models" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/operations"/>
+         <code value="path-resource" />
+         <value value="input/operations" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/profiles"/>
+         <code value="path-resource" />
+         <value value="input/profiles" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/resources"/>
+         <code value="path-resource" />
+         <value value="input/resources" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/vocabulary"/>
+         <code value="path-resource" />
+         <value value="input/vocabulary" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/maps"/>
+         <code value="path-resource" />
+         <value value="input/maps" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/testing"/>
+         <code value="path-resource" />
+         <value value="input/testing" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="input/history"/>
+         <code value="path-resource" />
+         <value value="input/history" />
       </parameter>
       <parameter>
-         <code value="path-resource"/>
-         <value value="fsh-generated/resources"/>
+         <code value="path-resource" />
+         <value value="fsh-generated/resources" />
       </parameter>
       <parameter>
-         <code value="path-pages"/>
-         <value value="template/config"/>
+         <code value="path-pages" />
+         <value value="template/config" />
       </parameter>
       <parameter>
-         <code value="path-pages"/>
-         <value value="input/images"/>
+         <code value="path-pages" />
+         <value value="input/images" />
       </parameter>
       <parameter>
-         <code value="path-tx-cache"/>
-         <value value="input-cache/txcache"/>
+         <code value="path-tx-cache" />
+         <value value="input-cache/txcache" />
       </parameter>
       <parameter>
-         <code value="copyrightyear"/>
-         <value value="2024+"/>
+         <code value="copyrightyear" />
+         <value value="2024+" />
       </parameter>
       <parameter>
-         <code value="releaselabel"/>
-         <value value="ci-build"/>
+         <code value="releaselabel" />
+         <value value="ci-build" />
       </parameter>
       <parameter>
-         <code value="autoload-resources"/>
-         <value value="false"/>
+         <code value="autoload-resources" />
+         <value value="false" />
       </parameter>
       <parameter>
-         <code value="autoload-resources"/>
-         <value value="true"/>
+         <code value="autoload-resources" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="path-liquid"/>
-         <value value="template/liquid"/>
+         <code value="path-liquid" />
+         <value value="template/liquid" />
       </parameter>
       <parameter>
-         <code value="path-liquid"/>
-         <value value="input/liquid"/>
+         <code value="path-liquid" />
+         <value value="input/liquid" />
       </parameter>
       <parameter>
-         <code value="path-qa"/>
-         <value value="temp/qa"/>
+         <code value="path-qa" />
+         <value value="temp/qa" />
       </parameter>
       <parameter>
-         <code value="path-temp"/>
-         <value value="temp/pages"/>
+         <code value="path-temp" />
+         <value value="temp/pages" />
       </parameter>
       <parameter>
-         <code value="path-output"/>
-         <value value="output"/>
+         <code value="path-output" />
+         <value value="output" />
       </parameter>
       <parameter>
-         <code value="path-suppressed-warnings"/>
-         <value value="input/ignoreWarnings.txt"/>
+         <code value="path-suppressed-warnings" />
+         <value value="input/ignoreWarnings.txt" />
       </parameter>
       <parameter>
-         <code value="path-history"/>
-         <value value="http://fhirfli.dev/fhir/ig/cdsi/history.html"/>
+         <code value="path-history" />
+         <value value="http://fhirfli.dev/fhir/ig/cdsi/history.html" />
       </parameter>
       <parameter>
-         <code value="template-html"/>
-         <value value="template-page.html"/>
+         <code value="template-html" />
+         <value value="template-page.html" />
       </parameter>
       <parameter>
-         <code value="template-md"/>
-         <value value="template-page-md.html"/>
+         <code value="template-md" />
+         <value value="template-page-md.html" />
       </parameter>
       <parameter>
-         <code value="apply-contact"/>
-         <value value="true"/>
+         <code value="apply-contact" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="apply-context"/>
-         <value value="true"/>
+         <code value="apply-context" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="apply-copyright"/>
-         <value value="true"/>
+         <code value="apply-copyright" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="apply-jurisdiction"/>
-         <value value="true"/>
+         <code value="apply-jurisdiction" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="apply-license"/>
-         <value value="true"/>
+         <code value="apply-license" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="apply-publisher"/>
-         <value value="true"/>
+         <code value="apply-publisher" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="apply-version"/>
-         <value value="true"/>
+         <code value="apply-version" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="apply-wg"/>
-         <value value="true"/>
+         <code value="apply-wg" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="active-tables"/>
-         <value value="true"/>
+         <code value="active-tables" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="fmm-definition"/>
-         <value value="http://hl7.org/fhir/versions.html#maturity"/>
+         <code value="fmm-definition" />
+         <value value="http://hl7.org/fhir/versions.html#maturity" />
       </parameter>
       <parameter>
-         <code value="propagate-status"/>
-         <value value="true"/>
+         <code value="propagate-status" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="excludelogbinaryformat"/>
-         <value value="true"/>
+         <code value="excludelogbinaryformat" />
+         <value value="true" />
       </parameter>
       <parameter>
-         <code value="tabbed-snapshots"/>
-         <value value="true"/>
+         <code value="tabbed-snapshots" />
+         <value value="true" />
       </parameter>
    </definition>
 </ImplementationGuide>
