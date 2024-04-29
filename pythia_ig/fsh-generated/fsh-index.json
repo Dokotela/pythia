@@ -1,11 +1,11 @@
 [
   {
-    "outputFile": "Patient-2013-0034.json",
-    "fshName": "ExampleVaxPatient",
-    "fshType": "Instance",
-    "fshFile": "patient.fsh",
-    "startLine": 55,
-    "endLine": 63
+    "outputFile": "CodeSystem-vaccine-observation-codes.json",
+    "fshName": "VaccineObservationCodes",
+    "fshType": "CodeSystem",
+    "fshFile": "vaccine_observation_codes.fsh",
+    "startLine": 1,
+    "endLine": 506
   },
   {
     "outputFile": "StructureDefinition-Vaccine.json",
@@ -32,28 +32,12 @@
     "endLine": 12
   },
   {
-    "outputFile": "StructureDefinition-gender-extension.json",
-    "fshName": "GenderExtension",
-    "fshType": "Extension",
-    "fshFile": "patient.fsh",
-    "startLine": 14,
-    "endLine": 18
-  },
-  {
     "outputFile": "StructureDefinition-schedule-supporting-data.json",
     "fshName": "ScheduleSupportingData",
     "fshType": "Resource",
     "fshFile": "schedule_supporting_data.fsh",
     "startLine": 1,
     "endLine": 51
-  },
-  {
-    "outputFile": "StructureDefinition-vax-observation.json",
-    "fshName": "VaxObservation",
-    "fshType": "Profile",
-    "fshFile": "patient.fsh",
-    "startLine": 34,
-    "endLine": 43
   },
   {
     "outputFile": "StructureDefinition-vax-patient.json",
@@ -64,19 +48,11 @@
     "endLine": 6
   },
   {
-    "outputFile": "ValueSet-gender-values.json",
-    "fshName": "GenderValueSet",
+    "outputFile": "ValueSet-vaccine-gender.json",
+    "fshName": "VaccineGender",
     "fshType": "ValueSet",
-    "fshFile": "patient.fsh",
-    "startLine": 21,
-    "endLine": 31
-  },
-  {
-    "outputFile": "ValueSet-vax-observation-codes.json",
-    "fshName": "VaxObservationCodes",
-    "fshType": "ValueSet",
-    "fshFile": "patient.fsh",
-    "startLine": 48,
-    "endLine": 52
+    "fshFile": "vaccine_gender.fsh",
+    "startLine": 1,
+    "endLine": 28
   }
 ]

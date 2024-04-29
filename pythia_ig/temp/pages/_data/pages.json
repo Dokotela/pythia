@@ -69,179 +69,115 @@
     "label" : "9.0",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>",
     "previous" : "relevant-series.html",
-    "next" : "StructureDefinition-MyPatient.html"
+    "next" : "StructureDefinition-vax-patient.html"
   },
-  "StructureDefinition-MyPatient.html" : {
-    "title" : "MyPatient",
+  "StructureDefinition-vax-patient.html" : {
+    "title" : "Vaccination Patient",
     "label" : "9.1",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MyPatient</b></li>",
-    "examples" : [
-      {
-        "url" : "Patient-PatientExample.html",
-        "title" : "PatientExample"
-      }
-    ],
-    "testplans" : [],
-    "testscripts" : [],
-    "previous" : "artifacts.html",
-    "next" : "StructureDefinition-MyPatient-definitions.html"
-  },
-  "StructureDefinition-MyPatient-definitions.html" : {
-    "title" : "MyPatient - Definitions",
-    "label" : "9.1",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MyPatient</b></li>",
-    "previous" : "StructureDefinition-MyPatient.html",
-    "next" : "StructureDefinition-MyPatient-mappings.html"
-  },
-  "StructureDefinition-MyPatient-mappings.html" : {
-    "title" : "MyPatient - Mappings",
-    "label" : "9.1",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MyPatient</b></li>",
-    "previous" : "StructureDefinition-MyPatient-definitions.html",
-    "next" : "StructureDefinition-MyPatient-testing.html"
-  },
-  "StructureDefinition-MyPatient-testing.html" : {
-    "title" : "MyPatient - Testing",
-    "label" : "9.1",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MyPatient</b></li>",
-    "previous" : "StructureDefinition-MyPatient-mappings.html",
-    "next" : "StructureDefinition-MyPatient-examples.html"
-  },
-  "StructureDefinition-MyPatient-examples.html" : {
-    "title" : "MyPatient - Examples",
-    "label" : "9.1",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MyPatient</b></li>",
-    "previous" : "StructureDefinition-MyPatient-testing.html",
-    "next" : "StructureDefinition-MyPatient.profile.xml.html"
-  },
-  "StructureDefinition-MyPatient.profile.xml.html" : {
-    "title" : "MyPatient - XML Representation",
-    "label" : "9.1",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MyPatient</b></li>",
-    "previous" : "StructureDefinition-MyPatient-examples.html",
-    "next" : "StructureDefinition-MyPatient.profile.json.html"
-  },
-  "StructureDefinition-MyPatient.profile.json.html" : {
-    "title" : "MyPatient - JSON Representation",
-    "label" : "9.1",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MyPatient</b></li>",
-    "previous" : "StructureDefinition-MyPatient.profile.xml.html",
-    "next" : "StructureDefinition-MyPatient.profile.ttl.html"
-  },
-  "StructureDefinition-MyPatient.profile.ttl.html" : {
-    "title" : "MyPatient - TTL Representation",
-    "label" : "9.1",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MyPatient</b></li>",
-    "previous" : "StructureDefinition-MyPatient.profile.json.html",
-    "next" : "StructureDefinition-CvxToAntigenMap.html"
-  },
-  "StructureDefinition-CvxToAntigenMap.html" : {
-    "title" : "CVX Map",
-    "label" : "9.2",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>CVX Map</b></li>",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
     "examples" : [],
     "testplans" : [],
     "testscripts" : [],
-    "previous" : "StructureDefinition-MyPatient.profile.ttl.html",
-    "next" : "StructureDefinition-CvxToAntigenMap-definitions.html"
+    "previous" : "artifacts.html",
+    "next" : "StructureDefinition-vax-patient-definitions.html"
   },
-  "StructureDefinition-CvxToAntigenMap-definitions.html" : {
-    "title" : "CVX Map - Definitions",
-    "label" : "9.2",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>CVX Map</b></li>",
-    "previous" : "StructureDefinition-CvxToAntigenMap.html",
-    "next" : "StructureDefinition-CvxToAntigenMap-mappings.html"
+  "StructureDefinition-vax-patient-definitions.html" : {
+    "title" : "Vaccination Patient - Definitions",
+    "label" : "9.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
+    "previous" : "StructureDefinition-vax-patient.html",
+    "next" : "StructureDefinition-vax-patient-mappings.html"
   },
-  "StructureDefinition-CvxToAntigenMap-mappings.html" : {
-    "title" : "CVX Map - Mappings",
-    "label" : "9.2",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>CVX Map</b></li>",
-    "previous" : "StructureDefinition-CvxToAntigenMap-definitions.html",
-    "next" : "StructureDefinition-CvxToAntigenMap-testing.html"
+  "StructureDefinition-vax-patient-mappings.html" : {
+    "title" : "Vaccination Patient - Mappings",
+    "label" : "9.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
+    "previous" : "StructureDefinition-vax-patient-definitions.html",
+    "next" : "StructureDefinition-vax-patient-testing.html"
   },
-  "StructureDefinition-CvxToAntigenMap-testing.html" : {
-    "title" : "CVX Map - Testing",
-    "label" : "9.2",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>CVX Map</b></li>",
-    "previous" : "StructureDefinition-CvxToAntigenMap-mappings.html",
-    "next" : "StructureDefinition-CvxToAntigenMap.profile.xml.html"
+  "StructureDefinition-vax-patient-testing.html" : {
+    "title" : "Vaccination Patient - Testing",
+    "label" : "9.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
+    "previous" : "StructureDefinition-vax-patient-mappings.html",
+    "next" : "StructureDefinition-vax-patient.profile.xml.html"
   },
-  "StructureDefinition-CvxToAntigenMap.profile.xml.html" : {
-    "title" : "CVX Map - XML Representation",
-    "label" : "9.2",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>CVX Map</b></li>",
-    "previous" : "StructureDefinition-CvxToAntigenMap-testing.html",
-    "next" : "StructureDefinition-CvxToAntigenMap.profile.json.html"
+  "StructureDefinition-vax-patient.profile.xml.html" : {
+    "title" : "Vaccination Patient - XML Representation",
+    "label" : "9.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
+    "previous" : "StructureDefinition-vax-patient-testing.html",
+    "next" : "StructureDefinition-vax-patient.profile.json.html"
   },
-  "StructureDefinition-CvxToAntigenMap.profile.json.html" : {
-    "title" : "CVX Map - JSON Representation",
-    "label" : "9.2",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>CVX Map</b></li>",
-    "previous" : "StructureDefinition-CvxToAntigenMap.profile.xml.html",
-    "next" : "StructureDefinition-CvxToAntigenMap.profile.ttl.html"
+  "StructureDefinition-vax-patient.profile.json.html" : {
+    "title" : "Vaccination Patient - JSON Representation",
+    "label" : "9.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
+    "previous" : "StructureDefinition-vax-patient.profile.xml.html",
+    "next" : "StructureDefinition-vax-patient.profile.ttl.html"
   },
-  "StructureDefinition-CvxToAntigenMap.profile.ttl.html" : {
-    "title" : "CVX Map - TTL Representation",
-    "label" : "9.2",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>CVX Map</b></li>",
-    "previous" : "StructureDefinition-CvxToAntigenMap.profile.json.html",
+  "StructureDefinition-vax-patient.profile.ttl.html" : {
+    "title" : "Vaccination Patient - TTL Representation",
+    "label" : "9.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
+    "previous" : "StructureDefinition-vax-patient.profile.json.html",
     "next" : "StructureDefinition-Vaccine.html"
   },
   "StructureDefinition-Vaccine.html" : {
     "title" : "Vaccine",
-    "label" : "9.3",
+    "label" : "9.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "examples" : [],
     "testplans" : [],
     "testscripts" : [],
-    "previous" : "StructureDefinition-CvxToAntigenMap.profile.ttl.html",
+    "previous" : "StructureDefinition-vax-patient.profile.ttl.html",
     "next" : "StructureDefinition-Vaccine-definitions.html"
   },
   "StructureDefinition-Vaccine-definitions.html" : {
     "title" : "Vaccine - Definitions",
-    "label" : "9.3",
+    "label" : "9.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine.html",
     "next" : "StructureDefinition-Vaccine-mappings.html"
   },
   "StructureDefinition-Vaccine-mappings.html" : {
     "title" : "Vaccine - Mappings",
-    "label" : "9.3",
+    "label" : "9.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine-definitions.html",
     "next" : "StructureDefinition-Vaccine-testing.html"
   },
   "StructureDefinition-Vaccine-testing.html" : {
     "title" : "Vaccine - Testing",
-    "label" : "9.3",
+    "label" : "9.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine-mappings.html",
     "next" : "StructureDefinition-Vaccine.profile.xml.html"
   },
   "StructureDefinition-Vaccine.profile.xml.html" : {
     "title" : "Vaccine - XML Representation",
-    "label" : "9.3",
+    "label" : "9.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine-testing.html",
     "next" : "StructureDefinition-Vaccine.profile.json.html"
   },
   "StructureDefinition-Vaccine.profile.json.html" : {
     "title" : "Vaccine - JSON Representation",
-    "label" : "9.3",
+    "label" : "9.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine.profile.xml.html",
     "next" : "StructureDefinition-Vaccine.profile.ttl.html"
   },
   "StructureDefinition-Vaccine.profile.ttl.html" : {
     "title" : "Vaccine - TTL Representation",
-    "label" : "9.3",
+    "label" : "9.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine.profile.json.html",
     "next" : "StructureDefinition-antigen-supporting-data.html"
   },
   "StructureDefinition-antigen-supporting-data.html" : {
     "title" : "Antigen Supporting Data",
-    "label" : "9.4",
+    "label" : "9.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "examples" : [],
     "testplans" : [],
@@ -251,282 +187,223 @@
   },
   "StructureDefinition-antigen-supporting-data-definitions.html" : {
     "title" : "Antigen Supporting Data - Definitions",
-    "label" : "9.4",
+    "label" : "9.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data.html",
     "next" : "StructureDefinition-antigen-supporting-data-mappings.html"
   },
   "StructureDefinition-antigen-supporting-data-mappings.html" : {
     "title" : "Antigen Supporting Data - Mappings",
-    "label" : "9.4",
+    "label" : "9.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data-definitions.html",
     "next" : "StructureDefinition-antigen-supporting-data-testing.html"
   },
   "StructureDefinition-antigen-supporting-data-testing.html" : {
     "title" : "Antigen Supporting Data - Testing",
-    "label" : "9.4",
+    "label" : "9.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data-mappings.html",
     "next" : "StructureDefinition-antigen-supporting-data.profile.xml.html"
   },
   "StructureDefinition-antigen-supporting-data.profile.xml.html" : {
     "title" : "Antigen Supporting Data - XML Representation",
-    "label" : "9.4",
+    "label" : "9.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data-testing.html",
     "next" : "StructureDefinition-antigen-supporting-data.profile.json.html"
   },
   "StructureDefinition-antigen-supporting-data.profile.json.html" : {
     "title" : "Antigen Supporting Data - JSON Representation",
-    "label" : "9.4",
+    "label" : "9.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data.profile.xml.html",
     "next" : "StructureDefinition-antigen-supporting-data.profile.ttl.html"
   },
   "StructureDefinition-antigen-supporting-data.profile.ttl.html" : {
     "title" : "Antigen Supporting Data - TTL Representation",
-    "label" : "9.4",
+    "label" : "9.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data.profile.json.html",
-    "next" : "StructureDefinition-live-virus-conflict.html"
+    "next" : "StructureDefinition-schedule-supporting-data.html"
   },
-  "StructureDefinition-live-virus-conflict.html" : {
-    "title" : "Live Virus Conflict",
-    "label" : "9.5",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Live Virus Conflict</b></li>",
+  "StructureDefinition-schedule-supporting-data.html" : {
+    "title" : "Schedule Supporting Data",
+    "label" : "9.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
     "examples" : [],
     "testplans" : [],
     "testscripts" : [],
     "previous" : "StructureDefinition-antigen-supporting-data.profile.ttl.html",
-    "next" : "StructureDefinition-live-virus-conflict-definitions.html"
+    "next" : "StructureDefinition-schedule-supporting-data-definitions.html"
   },
-  "StructureDefinition-live-virus-conflict-definitions.html" : {
-    "title" : "Live Virus Conflict - Definitions",
+  "StructureDefinition-schedule-supporting-data-definitions.html" : {
+    "title" : "Schedule Supporting Data - Definitions",
+    "label" : "9.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
+    "previous" : "StructureDefinition-schedule-supporting-data.html",
+    "next" : "StructureDefinition-schedule-supporting-data-mappings.html"
+  },
+  "StructureDefinition-schedule-supporting-data-mappings.html" : {
+    "title" : "Schedule Supporting Data - Mappings",
+    "label" : "9.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
+    "previous" : "StructureDefinition-schedule-supporting-data-definitions.html",
+    "next" : "StructureDefinition-schedule-supporting-data-testing.html"
+  },
+  "StructureDefinition-schedule-supporting-data-testing.html" : {
+    "title" : "Schedule Supporting Data - Testing",
+    "label" : "9.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
+    "previous" : "StructureDefinition-schedule-supporting-data-mappings.html",
+    "next" : "StructureDefinition-schedule-supporting-data.profile.xml.html"
+  },
+  "StructureDefinition-schedule-supporting-data.profile.xml.html" : {
+    "title" : "Schedule Supporting Data - XML Representation",
+    "label" : "9.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
+    "previous" : "StructureDefinition-schedule-supporting-data-testing.html",
+    "next" : "StructureDefinition-schedule-supporting-data.profile.json.html"
+  },
+  "StructureDefinition-schedule-supporting-data.profile.json.html" : {
+    "title" : "Schedule Supporting Data - JSON Representation",
+    "label" : "9.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
+    "previous" : "StructureDefinition-schedule-supporting-data.profile.xml.html",
+    "next" : "StructureDefinition-schedule-supporting-data.profile.ttl.html"
+  },
+  "StructureDefinition-schedule-supporting-data.profile.ttl.html" : {
+    "title" : "Schedule Supporting Data - TTL Representation",
+    "label" : "9.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
+    "previous" : "StructureDefinition-schedule-supporting-data.profile.json.html",
+    "next" : "StructureDefinition-assessment-date.html"
+  },
+  "StructureDefinition-assessment-date.html" : {
+    "title" : "AssessmentDate",
     "label" : "9.5",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Live Virus Conflict</b></li>",
-    "previous" : "StructureDefinition-live-virus-conflict.html",
-    "next" : "StructureDefinition-live-virus-conflict-mappings.html"
-  },
-  "StructureDefinition-live-virus-conflict-mappings.html" : {
-    "title" : "Live Virus Conflict - Mappings",
-    "label" : "9.5",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Live Virus Conflict</b></li>",
-    "previous" : "StructureDefinition-live-virus-conflict-definitions.html",
-    "next" : "StructureDefinition-live-virus-conflict-testing.html"
-  },
-  "StructureDefinition-live-virus-conflict-testing.html" : {
-    "title" : "Live Virus Conflict - Testing",
-    "label" : "9.5",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Live Virus Conflict</b></li>",
-    "previous" : "StructureDefinition-live-virus-conflict-mappings.html",
-    "next" : "StructureDefinition-live-virus-conflict.profile.xml.html"
-  },
-  "StructureDefinition-live-virus-conflict.profile.xml.html" : {
-    "title" : "Live Virus Conflict - XML Representation",
-    "label" : "9.5",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Live Virus Conflict</b></li>",
-    "previous" : "StructureDefinition-live-virus-conflict-testing.html",
-    "next" : "StructureDefinition-live-virus-conflict.profile.json.html"
-  },
-  "StructureDefinition-live-virus-conflict.profile.json.html" : {
-    "title" : "Live Virus Conflict - JSON Representation",
-    "label" : "9.5",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Live Virus Conflict</b></li>",
-    "previous" : "StructureDefinition-live-virus-conflict.profile.xml.html",
-    "next" : "StructureDefinition-live-virus-conflict.profile.ttl.html"
-  },
-  "StructureDefinition-live-virus-conflict.profile.ttl.html" : {
-    "title" : "Live Virus Conflict - TTL Representation",
-    "label" : "9.5",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Live Virus Conflict</b></li>",
-    "previous" : "StructureDefinition-live-virus-conflict.profile.json.html",
-    "next" : "StructureDefinition-vaccination-observation-map.html"
-  },
-  "StructureDefinition-vaccination-observation-map.html" : {
-    "title" : "Vaccination Observation Map",
-    "label" : "9.6",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Observation Map</b></li>",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
     "examples" : [],
     "testplans" : [],
     "testscripts" : [],
-    "previous" : "StructureDefinition-live-virus-conflict.profile.ttl.html",
-    "next" : "StructureDefinition-vaccination-observation-map-definitions.html"
+    "previous" : "StructureDefinition-schedule-supporting-data.profile.ttl.html",
+    "next" : "StructureDefinition-assessment-date-definitions.html"
   },
-  "StructureDefinition-vaccination-observation-map-definitions.html" : {
-    "title" : "Vaccination Observation Map - Definitions",
+  "StructureDefinition-assessment-date-definitions.html" : {
+    "title" : "AssessmentDate - Definitions",
+    "label" : "9.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
+    "previous" : "StructureDefinition-assessment-date.html",
+    "next" : "StructureDefinition-assessment-date-mappings.html"
+  },
+  "StructureDefinition-assessment-date-mappings.html" : {
+    "title" : "AssessmentDate - Mappings",
+    "label" : "9.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
+    "previous" : "StructureDefinition-assessment-date-definitions.html",
+    "next" : "StructureDefinition-assessment-date-testing.html"
+  },
+  "StructureDefinition-assessment-date-testing.html" : {
+    "title" : "AssessmentDate - Testing",
+    "label" : "9.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
+    "previous" : "StructureDefinition-assessment-date-mappings.html",
+    "next" : "StructureDefinition-assessment-date.profile.xml.html"
+  },
+  "StructureDefinition-assessment-date.profile.xml.html" : {
+    "title" : "AssessmentDate - XML Representation",
+    "label" : "9.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
+    "previous" : "StructureDefinition-assessment-date-testing.html",
+    "next" : "StructureDefinition-assessment-date.profile.json.html"
+  },
+  "StructureDefinition-assessment-date.profile.json.html" : {
+    "title" : "AssessmentDate - JSON Representation",
+    "label" : "9.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
+    "previous" : "StructureDefinition-assessment-date.profile.xml.html",
+    "next" : "StructureDefinition-assessment-date.profile.ttl.html"
+  },
+  "StructureDefinition-assessment-date.profile.ttl.html" : {
+    "title" : "AssessmentDate - TTL Representation",
+    "label" : "9.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
+    "previous" : "StructureDefinition-assessment-date.profile.json.html",
+    "next" : "ValueSet-vaccine-gender.html"
+  },
+  "ValueSet-vaccine-gender.html" : {
+    "title" : "Vaccine Gender",
     "label" : "9.6",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Observation Map</b></li>",
-    "previous" : "StructureDefinition-vaccination-observation-map.html",
-    "next" : "StructureDefinition-vaccination-observation-map-mappings.html"
-  },
-  "StructureDefinition-vaccination-observation-map-mappings.html" : {
-    "title" : "Vaccination Observation Map - Mappings",
-    "label" : "9.6",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Observation Map</b></li>",
-    "previous" : "StructureDefinition-vaccination-observation-map-definitions.html",
-    "next" : "StructureDefinition-vaccination-observation-map-testing.html"
-  },
-  "StructureDefinition-vaccination-observation-map-testing.html" : {
-    "title" : "Vaccination Observation Map - Testing",
-    "label" : "9.6",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Observation Map</b></li>",
-    "previous" : "StructureDefinition-vaccination-observation-map-mappings.html",
-    "next" : "StructureDefinition-vaccination-observation-map.profile.xml.html"
-  },
-  "StructureDefinition-vaccination-observation-map.profile.xml.html" : {
-    "title" : "Vaccination Observation Map - XML Representation",
-    "label" : "9.6",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Observation Map</b></li>",
-    "previous" : "StructureDefinition-vaccination-observation-map-testing.html",
-    "next" : "StructureDefinition-vaccination-observation-map.profile.json.html"
-  },
-  "StructureDefinition-vaccination-observation-map.profile.json.html" : {
-    "title" : "Vaccination Observation Map - JSON Representation",
-    "label" : "9.6",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Observation Map</b></li>",
-    "previous" : "StructureDefinition-vaccination-observation-map.profile.xml.html",
-    "next" : "StructureDefinition-vaccination-observation-map.profile.ttl.html"
-  },
-  "StructureDefinition-vaccination-observation-map.profile.ttl.html" : {
-    "title" : "Vaccination Observation Map - TTL Representation",
-    "label" : "9.6",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Observation Map</b></li>",
-    "previous" : "StructureDefinition-vaccination-observation-map.profile.json.html",
-    "next" : "StructureDefinition-vaccine-group-map.html"
-  },
-  "StructureDefinition-vaccine-group-map.html" : {
-    "title" : "Vaccine Group Map",
-    "label" : "9.7",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group Map</b></li>",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Gender</b></li>",
     "examples" : [],
     "testplans" : [],
     "testscripts" : [],
-    "previous" : "StructureDefinition-vaccination-observation-map.profile.ttl.html",
-    "next" : "StructureDefinition-vaccine-group-map-definitions.html"
+    "previous" : "StructureDefinition-assessment-date.profile.ttl.html",
+    "next" : "ValueSet-vaccine-gender-testing.html"
   },
-  "StructureDefinition-vaccine-group-map-definitions.html" : {
-    "title" : "Vaccine Group Map - Definitions",
+  "ValueSet-vaccine-gender-testing.html" : {
+    "title" : "Vaccine Gender - Testing",
+    "label" : "9.6",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Gender</b></li>",
+    "previous" : "ValueSet-vaccine-gender.html",
+    "next" : "ValueSet-vaccine-gender.xml.html"
+  },
+  "ValueSet-vaccine-gender.xml.html" : {
+    "title" : "Vaccine Gender - XML Representation",
+    "label" : "9.6",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Gender</b></li>",
+    "previous" : "ValueSet-vaccine-gender-testing.html",
+    "next" : "ValueSet-vaccine-gender.json.html"
+  },
+  "ValueSet-vaccine-gender.json.html" : {
+    "title" : "Vaccine Gender - JSON Representation",
+    "label" : "9.6",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Gender</b></li>",
+    "previous" : "ValueSet-vaccine-gender.xml.html",
+    "next" : "ValueSet-vaccine-gender.ttl.html"
+  },
+  "ValueSet-vaccine-gender.ttl.html" : {
+    "title" : "Vaccine Gender - TTL Representation",
+    "label" : "9.6",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Gender</b></li>",
+    "previous" : "ValueSet-vaccine-gender.json.html",
+    "next" : "CodeSystem-vaccine-observation-codes.html"
+  },
+  "CodeSystem-vaccine-observation-codes.html" : {
+    "title" : "Vaccine Observation Codes",
     "label" : "9.7",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-map.html",
-    "next" : "StructureDefinition-vaccine-group-map-mappings.html"
-  },
-  "StructureDefinition-vaccine-group-map-mappings.html" : {
-    "title" : "Vaccine Group Map - Mappings",
-    "label" : "9.7",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-map-definitions.html",
-    "next" : "StructureDefinition-vaccine-group-map-testing.html"
-  },
-  "StructureDefinition-vaccine-group-map-testing.html" : {
-    "title" : "Vaccine Group Map - Testing",
-    "label" : "9.7",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-map-mappings.html",
-    "next" : "StructureDefinition-vaccine-group-map.profile.xml.html"
-  },
-  "StructureDefinition-vaccine-group-map.profile.xml.html" : {
-    "title" : "Vaccine Group Map - XML Representation",
-    "label" : "9.7",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-map-testing.html",
-    "next" : "StructureDefinition-vaccine-group-map.profile.json.html"
-  },
-  "StructureDefinition-vaccine-group-map.profile.json.html" : {
-    "title" : "Vaccine Group Map - JSON Representation",
-    "label" : "9.7",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-map.profile.xml.html",
-    "next" : "StructureDefinition-vaccine-group-map.profile.ttl.html"
-  },
-  "StructureDefinition-vaccine-group-map.profile.ttl.html" : {
-    "title" : "Vaccine Group Map - TTL Representation",
-    "label" : "9.7",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-map.profile.json.html",
-    "next" : "StructureDefinition-vaccine-group-to-antigen-map.html"
-  },
-  "StructureDefinition-vaccine-group-to-antigen-map.html" : {
-    "title" : "Vaccine Group to Antigen Map",
-    "label" : "9.8",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group to Antigen Map</b></li>",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Observation Codes</b></li>",
     "examples" : [],
     "testplans" : [],
     "testscripts" : [],
-    "previous" : "StructureDefinition-vaccine-group-map.profile.ttl.html",
-    "next" : "StructureDefinition-vaccine-group-to-antigen-map-definitions.html"
+    "previous" : "ValueSet-vaccine-gender.ttl.html",
+    "next" : "CodeSystem-vaccine-observation-codes-testing.html"
   },
-  "StructureDefinition-vaccine-group-to-antigen-map-definitions.html" : {
-    "title" : "Vaccine Group to Antigen Map - Definitions",
-    "label" : "9.8",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group to Antigen Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-to-antigen-map.html",
-    "next" : "StructureDefinition-vaccine-group-to-antigen-map-mappings.html"
+  "CodeSystem-vaccine-observation-codes-testing.html" : {
+    "title" : "Vaccine Observation Codes - Testing",
+    "label" : "9.7",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Observation Codes</b></li>",
+    "previous" : "CodeSystem-vaccine-observation-codes.html",
+    "next" : "CodeSystem-vaccine-observation-codes.xml.html"
   },
-  "StructureDefinition-vaccine-group-to-antigen-map-mappings.html" : {
-    "title" : "Vaccine Group to Antigen Map - Mappings",
-    "label" : "9.8",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group to Antigen Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-to-antigen-map-definitions.html",
-    "next" : "StructureDefinition-vaccine-group-to-antigen-map-testing.html"
+  "CodeSystem-vaccine-observation-codes.xml.html" : {
+    "title" : "Vaccine Observation Codes - XML Representation",
+    "label" : "9.7",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Observation Codes</b></li>",
+    "previous" : "CodeSystem-vaccine-observation-codes-testing.html",
+    "next" : "CodeSystem-vaccine-observation-codes.json.html"
   },
-  "StructureDefinition-vaccine-group-to-antigen-map-testing.html" : {
-    "title" : "Vaccine Group to Antigen Map - Testing",
-    "label" : "9.8",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group to Antigen Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-to-antigen-map-mappings.html",
-    "next" : "StructureDefinition-vaccine-group-to-antigen-map.profile.xml.html"
+  "CodeSystem-vaccine-observation-codes.json.html" : {
+    "title" : "Vaccine Observation Codes - JSON Representation",
+    "label" : "9.7",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Observation Codes</b></li>",
+    "previous" : "CodeSystem-vaccine-observation-codes.xml.html",
+    "next" : "CodeSystem-vaccine-observation-codes.ttl.html"
   },
-  "StructureDefinition-vaccine-group-to-antigen-map.profile.xml.html" : {
-    "title" : "Vaccine Group to Antigen Map - XML Representation",
-    "label" : "9.8",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group to Antigen Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-to-antigen-map-testing.html",
-    "next" : "StructureDefinition-vaccine-group-to-antigen-map.profile.json.html"
-  },
-  "StructureDefinition-vaccine-group-to-antigen-map.profile.json.html" : {
-    "title" : "Vaccine Group to Antigen Map - JSON Representation",
-    "label" : "9.8",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group to Antigen Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-to-antigen-map.profile.xml.html",
-    "next" : "StructureDefinition-vaccine-group-to-antigen-map.profile.ttl.html"
-  },
-  "StructureDefinition-vaccine-group-to-antigen-map.profile.ttl.html" : {
-    "title" : "Vaccine Group to Antigen Map - TTL Representation",
-    "label" : "9.8",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Group to Antigen Map</b></li>",
-    "previous" : "StructureDefinition-vaccine-group-to-antigen-map.profile.json.html",
-    "next" : "Patient-PatientExample.html"
-  },
-  "Patient-PatientExample.html" : {
-    "title" : "PatientExample",
-    "label" : "9.9",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PatientExample</b></li>",
-    "examples" : [],
-    "testplans" : [],
-    "testscripts" : [],
-    "previous" : "StructureDefinition-vaccine-group-to-antigen-map.profile.ttl.html",
-    "next" : "Patient-PatientExample.xml.html"
-  },
-  "Patient-PatientExample.xml.html" : {
-    "title" : "PatientExample - XML Representation",
-    "label" : "9.9",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PatientExample</b></li>",
-    "previous" : "Patient-PatientExample.html",
-    "next" : "Patient-PatientExample.json.html"
-  },
-  "Patient-PatientExample.json.html" : {
-    "title" : "PatientExample - JSON Representation",
-    "label" : "9.9",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PatientExample</b></li>",
-    "previous" : "Patient-PatientExample.xml.html",
-    "next" : "Patient-PatientExample.ttl.html"
-  },
-  "Patient-PatientExample.ttl.html" : {
-    "title" : "PatientExample - TTL Representation",
-    "label" : "9.9",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PatientExample</b></li>",
-    "previous" : "Patient-PatientExample.json.html"
+  "CodeSystem-vaccine-observation-codes.ttl.html" : {
+    "title" : "Vaccine Observation Codes - TTL Representation",
+    "label" : "9.7",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Observation Codes</b></li>",
+    "previous" : "CodeSystem-vaccine-observation-codes.json.html"
   }
 }

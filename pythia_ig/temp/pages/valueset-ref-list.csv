@@ -1,1 +1,2 @@
 URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender,0.1.0,draft,,VaccineGender,Vaccine Gender,"A value set that groups detailed genders from SNOMED CT and LOINC into broader categories (male, female, transgender, other) for use in vaccine predictions.",,"SCT,LOINC,FHIR"

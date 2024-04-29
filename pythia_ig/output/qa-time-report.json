@@ -1,523 +1,416 @@
 {
-  "date" : "Thu, 18 Apr, 2024 10:38:20 +0200",
+  "date" : "Mon, 29 Apr, 2024 11:15:56 -0400",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
-      "name" : "/fsh-generated/resources/ImplementationGuide-cdsi.ig.json",
-      "size" : 2619,
+      "name" : "/fsh-generated/resources/ImplementationGuide-pythia.ig.json",
+      "size" : 3334,
       "processes" : [
         {
-          "activity" : "scan",
-          "start" : 24,
-          "length" : 1
-        },
-        {
           "activity" : "load",
-          "start" : 24,
-          "length" : 10
+          "start" : 14,
+          "length" : 19
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 24,
-          "length" : 5
+          "start" : 14,
+          "length" : 3
         },
         {
           "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 56
+          "start" : 14,
+          "length" : 36
         },
         {
           "activity" : "validate",
-          "start" : 25,
-          "length" : 276
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 26,
-          "length" : 1
+          "start" : 16,
+          "length" : 235
         },
         {
           "activity" : "generate1",
-          "start" : 26,
-          "length" : 89
+          "start" : 16,
+          "length" : 68
         },
         {
           "activity" : "generate2",
-          "start" : 37,
-          "length" : 118
-        },
-        {
-          "activity" : "generateExampleZip",
-          "start" : 46,
-          "length" : 1
+          "start" : 18,
+          "length" : 94
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 47,
+          "start" : 27,
           "length" : 2
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 51,
-          "length" : 1
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/Patient-PatientExample.json",
-      "size" : 262,
+      "name" : "fsh-generated/resources/CodeSystem-vaccine-observation-codes.json",
+      "size" : 33619,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 23,
-          "length" : 9
+          "start" : 13,
+          "length" : 23
         },
         {
           "activity" : "load-configure",
-          "start" : 23,
-          "length" : 1
-        },
-        {
-          "activity" : "loadInfo",
-          "start" : 24,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 18
-        },
-        {
-          "activity" : "validate",
-          "start" : 26,
-          "length" : 4
-        },
-        {
-          "activity" : "generate1",
-          "start" : 26,
-          "length" : 9
-        },
-        {
-          "activity" : "generate2",
-          "start" : 37,
-          "length" : 24
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-CvxToAntigenMap.json",
-      "size" : 3109,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 23,
-          "length" : 6
-        },
-        {
-          "activity" : "loadDepInfo",
-          "start" : 24,
+          "start" : 13,
           "length" : 1
         },
         {
           "activity" : "load",
-          "start" : 24,
-          "length" : 18
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 24,
-          "length" : 18
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 31
-        },
-        {
-          "activity" : "validate",
-          "start" : 24,
-          "length" : 435
-        },
-        {
-          "activity" : "checkConformanceResources",
-          "start" : 26,
-          "length" : 1
-        },
-        {
-          "activity" : "generate1",
-          "start" : 26,
-          "length" : 97
-        },
-        {
-          "activity" : "generate2",
-          "start" : 37,
-          "length" : 1532
-        },
-        {
-          "activity" : "makeDependencies",
-          "start" : 42,
-          "length" : 1
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 47,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-MyPatient.json",
-      "size" : 610,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 23,
-          "length" : 9
-        },
-        {
-          "activity" : "load",
-          "start" : 24,
-          "length" : 11
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 24,
-          "length" : 50
+          "start" : 13,
+          "length" : 25
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 24,
-          "length" : 1
+          "start" : 14,
+          "length" : 2
         },
         {
           "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 27
+          "start" : 14,
+          "length" : 46
         },
         {
           "activity" : "validate",
-          "start" : 24,
-          "length" : 370
+          "start" : 14,
+          "length" : 154
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 16,
+          "length" : 1
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 26,
+          "start" : 16,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 26,
-          "length" : 241
+          "start" : 16,
+          "length" : 152
         },
         {
           "activity" : "generate2",
-          "start" : 38,
-          "length" : 492
+          "start" : 18,
+          "length" : 1022
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 47,
-          "length" : 4
-        },
-        {
-          "activity" : "scanProfilesForR5",
-          "start" : 51,
-          "length" : 1
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 51,
-          "length" : 1
+          "start" : 27,
+          "length" : 3
         }
       ]
     },
     {
       "name" : "fsh-generated/resources/StructureDefinition-Vaccine.json",
-      "size" : 3088,
+      "size" : 3090,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 23,
-          "length" : 6
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 24,
-          "length" : 1
+          "start" : 13,
+          "length" : 15
         },
         {
           "activity" : "load",
-          "start" : 24,
-          "length" : 9
+          "start" : 13,
+          "length" : 10
         },
         {
           "activity" : "generateSnapshots",
-          "start" : 24,
-          "length" : 14
+          "start" : 14,
+          "length" : 18
         },
         {
           "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 19
+          "start" : 14,
+          "length" : 32
         },
         {
           "activity" : "validate",
-          "start" : 25,
-          "length" : 41
+          "start" : 15,
+          "length" : 137
         },
         {
           "activity" : "generate1",
-          "start" : 26,
-          "length" : 82
+          "start" : 16,
+          "length" : 56
         },
         {
           "activity" : "generate2",
-          "start" : 39,
-          "length" : 130
+          "start" : 19,
+          "length" : 491
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 47,
+          "start" : 27,
           "length" : 2
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 31,
+          "length" : 1
         }
       ]
     },
     {
       "name" : "fsh-generated/resources/StructureDefinition-antigen-supporting-data.json",
-      "size" : 23632,
+      "size" : 23634,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 23,
-          "length" : 8
-        },
-        {
-          "activity" : "load",
-          "start" : 24,
-          "length" : 13
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 24,
-          "length" : 47
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 70
-        },
-        {
-          "activity" : "validate",
-          "start" : 25,
-          "length" : 308
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 26,
-          "length" : 2
-        },
-        {
-          "activity" : "generate1",
-          "start" : 26,
-          "length" : 647
-        },
-        {
-          "activity" : "generate2",
-          "start" : 39,
-          "length" : 484
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 47,
-          "length" : 8
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 51,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-live-virus-conflict.json",
-      "size" : 4656,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 23,
-          "length" : 5
-        },
-        {
-          "activity" : "load",
-          "start" : 24,
-          "length" : 5
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 24,
-          "length" : 17
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 12
-        },
-        {
-          "activity" : "validate",
-          "start" : 25,
-          "length" : 59
-        },
-        {
-          "activity" : "generate1",
-          "start" : 27,
-          "length" : 151
-        },
-        {
-          "activity" : "generate2",
-          "start" : 39,
-          "length" : 124
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 47,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-vaccination-observation-map.json",
-      "size" : 4881,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 23,
-          "length" : 6
-        },
-        {
-          "activity" : "load",
-          "start" : 24,
-          "length" : 3
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 24,
+          "start" : 13,
           "length" : 14
         },
         {
-          "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 12
-        },
-        {
-          "activity" : "validate",
-          "start" : 25,
-          "length" : 47
-        },
-        {
-          "activity" : "generate1",
-          "start" : 27,
-          "length" : 132
-        },
-        {
-          "activity" : "generate2",
-          "start" : 39,
-          "length" : 140
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 47,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-vaccine-group-map.json",
-      "size" : 1711,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 23,
-          "length" : 5
-        },
-        {
           "activity" : "load",
-          "start" : 24,
-          "length" : 3
+          "start" : 13,
+          "length" : 16
         },
         {
           "activity" : "generateSnapshots",
-          "start" : 24,
-          "length" : 11
+          "start" : 14,
+          "length" : 38
         },
         {
           "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 8
-        },
-        {
-          "activity" : "validate",
-          "start" : 25,
-          "length" : 24
-        },
-        {
-          "activity" : "generate1",
-          "start" : 27,
+          "start" : 14,
           "length" : 55
         },
         {
+          "activity" : "validate",
+          "start" : 15,
+          "length" : 554
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 16,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 16,
+          "length" : 369
+        },
+        {
           "activity" : "generate2",
-          "start" : 40,
-          "length" : 88
+          "start" : 20,
+          "length" : 658
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 47,
+          "start" : 27,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-assessment-date.json",
+      "size" : 1221,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 13,
+          "length" : 8
+        },
+        {
+          "activity" : "load",
+          "start" : 14,
+          "length" : 11
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 14,
+          "length" : 13
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 14,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 15,
+          "length" : 49
+        },
+        {
+          "activity" : "generate1",
+          "start" : 17,
+          "length" : 32
+        },
+        {
+          "activity" : "generate2",
+          "start" : 20,
+          "length" : 111
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 27,
+          "length" : 2
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 31,
           "length" : 1
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/StructureDefinition-vaccine-group-to-antigen-map.json",
-      "size" : 1670,
+      "name" : "fsh-generated/resources/StructureDefinition-schedule-supporting-data.json",
+      "size" : 15487,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 23,
-          "length" : 8
+          "start" : 13,
+          "length" : 11
         },
         {
           "activity" : "load",
-          "start" : 24,
-          "length" : 2
+          "start" : 14,
+          "length" : 14
         },
         {
           "activity" : "generateSnapshots",
-          "start" : 24,
-          "length" : 10
+          "start" : 14,
+          "length" : 34
         },
         {
           "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 7
+          "start" : 14,
+          "length" : 39
         },
         {
           "activity" : "validate",
-          "start" : 25,
-          "length" : 20
+          "start" : 15,
+          "length" : 239
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 16,
+          "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 27,
-          "length" : 52
+          "start" : 17,
+          "length" : 237
         },
         {
           "activity" : "generate2",
-          "start" : 40,
-          "length" : 79
+          "start" : 21,
+          "length" : 315
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 47,
+          "start" : 27,
+          "length" : 7
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 31,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-vax-patient.json",
+      "size" : 657,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 13,
+          "length" : 9
+        },
+        {
+          "activity" : "load",
+          "start" : 14,
+          "length" : 12
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 14,
+          "length" : 49
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 14,
+          "length" : 34
+        },
+        {
+          "activity" : "validate",
+          "start" : 16,
+          "length" : 195
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 16,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 17,
+          "length" : 131
+        },
+        {
+          "activity" : "generate2",
+          "start" : 21,
+          "length" : 311
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 27,
+          "length" : 5
+        },
+        {
+          "activity" : "scanProfilesForR5",
+          "start" : 31,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-vaccine-gender.json",
+      "size" : 2298,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 13,
+          "length" : 9
+        },
+        {
+          "activity" : "load",
+          "start" : 13,
+          "length" : 9
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 14,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 14,
+          "length" : 101
+        },
+        {
+          "activity" : "validate",
+          "start" : 14,
+          "length" : 334
+        },
+        {
+          "activity" : "generate1",
+          "start" : 17,
+          "length" : 15
+        },
+        {
+          "activity" : "generate2",
+          "start" : 21,
+          "length" : 2869
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 27,
           "length" : 1
         }
       ]

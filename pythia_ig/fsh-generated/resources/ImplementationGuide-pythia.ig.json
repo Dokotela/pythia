@@ -33,47 +33,26 @@
       },
       {
         "reference": {
-          "reference": "Patient/2013-0034"
-        },
-        "name": "ExampleVaxPatient",
-        "exampleCanonical": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/gender-values"
-        },
-        "name": "Gender Value Set",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/gender-extension"
-        },
-        "name": "GenderExtension",
-        "description": "An extension to provide detailed information on gender, including non-binary and transgender options.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/vax-observation"
-        },
-        "name": "Vaccination Observation",
-        "description": "Observation items specifically for vaccination details and related clinical considerations.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/vax-observation-codes"
-        },
-        "name": "Vaccination Observation Codes",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/vax-patient"
         },
         "name": "Vaccination Patient",
         "description": "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vaccine-gender"
+        },
+        "name": "Vaccine Gender",
+        "description": "A value set that groups detailed genders from SNOMED CT and LOINC into broader categories (male, female, transgender, other) for use in vaccine predictions.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/vaccine-observation-codes"
+        },
+        "name": "Vaccine Observation Codes",
+        "description": "Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
         "exampleBoolean": false
       }
     ],

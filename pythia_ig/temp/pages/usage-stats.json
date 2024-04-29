@@ -1,55 +1,39 @@
 {
-  "package": "cdsi.ig",
+  "package": "pythia.ig",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
-  "extensions": [],
+  "extensions": [
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/assessment-date",
+      "title": "AssessmentDate",
+      "types": [
+        "dateTime"
+      ]
+    }
+  ],
   "profiles": {
-    "CvxToAntigenMap": [
-      {
-        "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/CvxToAntigenMap",
-        "title": "CVX Map"
-      }
-    ],
-    "Patient": [
-      {
-        "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/MyPatient",
-        "title": "MyPatient"
-      }
-    ],
     "Vaccine": [
       {
-        "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/Vaccine",
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/Vaccine",
         "title": "Vaccine"
       }
     ],
     "antigen-supporting-data": [
       {
-        "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/antigen-supporting-data",
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/antigen-supporting-data",
         "title": "Antigen Supporting Data"
       }
     ],
-    "live-virus-conflict": [
+    "schedule-supporting-data": [
       {
-        "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/live-virus-conflict",
-        "title": "Live Virus Conflict"
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/schedule-supporting-data",
+        "title": "Schedule Supporting Data"
       }
     ],
-    "vaccination-observation-map": [
+    "Patient": [
       {
-        "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/vaccination-observation-map",
-        "title": "Vaccination Observation Map"
-      }
-    ],
-    "vaccine-group-map": [
-      {
-        "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/vaccine-group-map",
-        "title": "Vaccine Group Map"
-      }
-    ],
-    "vaccine-group-to-antigen-map": [
-      {
-        "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/vaccine-group-to-antigen-map",
-        "title": "Vaccine Group to Antigen Map"
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient",
+        "title": "Vaccination Patient"
       }
     ]
   },

@@ -1,65 +1,58 @@
 [
   {
-    "id": "cdsi.ig",
-    "type": "ImplementationGuide",
-    "url": "http://fhirfli.dev/fhir/ig/cdsi/ImplementationGuide/cdsi.ig",
-    "version": "0.1.0",
-    "name": "PythiaIG"
+    "id" : "vaccine-observation-codes",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes",
+    "version" : "0.1.0",
+    "name" : "VaccineObservationCodes"
   },
   {
-    "id": "CvxToAntigenMap",
-    "type": "StructureDefinition",
-    "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/CvxToAntigenMap",
-    "version": "0.1.0",
-    "name": "CvxToAntigenMap"
+    "id" : "pythia.ig",
+    "type" : "ImplementationGuide",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig",
+    "version" : "0.1.0",
+    "name" : "PythiaIG"
   },
   {
-    "id": "MyPatient",
-    "type": "StructureDefinition",
-    "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/MyPatient",
-    "version": "0.1.0",
-    "name": "MyPatient"
+    "id" : "Vaccine",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/Vaccine",
+    "version" : "0.1.0",
+    "name" : "Vaccine"
   },
   {
-    "id": "Vaccine",
-    "type": "StructureDefinition",
-    "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/Vaccine",
-    "version": "0.1.0",
-    "name": "Vaccine"
+    "id" : "antigen-supporting-data",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/antigen-supporting-data",
+    "version" : "0.1.0",
+    "name" : "AntigenSupportingData"
   },
   {
-    "id": "antigen-supporting-data",
-    "type": "StructureDefinition",
-    "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/antigen-supporting-data",
-    "version": "0.1.0",
-    "name": "AntigenSupportingData"
+    "id" : "assessment-date",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/assessment-date",
+    "version" : "0.1.0",
+    "name" : "AssessmentDate"
   },
   {
-    "id": "live-virus-conflict",
-    "type": "StructureDefinition",
-    "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/live-virus-conflict",
-    "version": "0.1.0",
-    "name": "LiveVirusConflict"
+    "id" : "schedule-supporting-data",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/schedule-supporting-data",
+    "version" : "0.1.0",
+    "name" : "ScheduleSupportingData"
   },
   {
-    "id": "vaccination-observation-map",
-    "type": "StructureDefinition",
-    "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/vaccination-observation-map",
-    "version": "0.1.0",
-    "name": "VaccinationObservationMap"
+    "id" : "vax-patient",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient",
+    "version" : "0.1.0",
+    "name" : "VaxPatient"
   },
   {
-    "id": "vaccine-group-map",
-    "type": "StructureDefinition",
-    "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/vaccine-group-map",
-    "version": "0.1.0",
-    "name": "VaccineGroupMap"
-  },
-  {
-    "id": "vaccine-group-to-antigen-map",
-    "type": "StructureDefinition",
-    "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/vaccine-group-to-antigen-map",
-    "version": "0.1.0",
-    "name": "VaccineGroupToAntigenMap"
+    "id" : "vaccine-gender",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender",
+    "version" : "0.1.0",
+    "name" : "VaccineGender"
   }
 ]

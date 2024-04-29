@@ -1,1 +1,2 @@
 URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes,0.1.0,draft,,VaccineObservationCodes,Vaccine Observation Codes,"Observations and Conditions that are important to indications or contraindications in vaccine forecasting",

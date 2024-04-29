@@ -1,3 +1,12 @@
 {
-  "codeSystems" : []
+  "codeSystems" : [
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineObservationCodes",
+      "title" : "Vaccine Observation Codes",
+      "description" : "Observations and Conditions that are important to indications or contraindications in vaccine forecasting"
+    }
+  ]
 }
