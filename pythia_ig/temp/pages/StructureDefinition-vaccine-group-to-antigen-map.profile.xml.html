@@ -1,0 +1,39 @@
+---
+---
+<!-- get modelType -->
+{% include fragment-modelType.html id='vaccine-group-to-antigen-map' %}
+
+{% assign format = page.path | split: '.html'| first | split: '.' | last %}
+
+{% if format == 'xml' %}
+{% assign section = '7' %}
+{% elsif format == 'json' %}
+{% assign section = '8' %}
+{% else %}
+{% assign section = '9' %}
+{% endif %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section {{section}}" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='vaccine-group-to-antigen-map' active=format %}
+
+<a name="root"> </a>
+<h2 id="root">{{modelType}}: VaccineGroupToAntigenMap - {{format | upcase}} Profile</h2>
+{% include fragment-simpletable.html %}
+
+<p>{{format | upcase}} representation of the vaccine-group-to-antigen-map {{modelType | downcase }}.</p>
+
+<p><a href="StructureDefinition-vaccine-group-to-antigen-map.{{format}}" no-download="true">Raw {{format}}</a> | <a href="StructureDefinition-vaccine-group-to-antigen-map.{{format}}" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='StructureDefinition' id='vaccine-group-to-antigen-map' %}
+
+  {%include StructureDefinition-vaccine-group-to-antigen-map-{{format}}-html.xhtml%}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='StructureDefinition' id='vaccine-group-to-antigen-map' %}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

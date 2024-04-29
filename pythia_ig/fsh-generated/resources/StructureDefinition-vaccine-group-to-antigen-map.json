@@ -1,0 +1,53 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vaccine-group-to-antigen-map",
+  "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/vaccine-group-to-antigen-map",
+  "name": "VaccineGroupToAntigenMap",
+  "title": "Vaccine Group to Antigen Map",
+  "status": "draft",
+  "description": "This resource maps vaccine groups to their associated antigens.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "vaccine-group-to-antigen-map",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "vaccine-group-to-antigen-map",
+        "path": "vaccine-group-to-antigen-map",
+        "short": "Vaccine Group to Antigen Map",
+        "definition": "This resource maps vaccine groups to their associated antigens."
+      },
+      {
+        "id": "vaccine-group-to-antigen-map.name",
+        "path": "vaccine-group-to-antigen-map.name",
+        "short": "The name of the vaccine group.",
+        "definition": "The name of the vaccine group.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "vaccine-group-to-antigen-map.antigen",
+        "path": "vaccine-group-to-antigen-map.antigen",
+        "short": "List of antigens associated with the vaccine group.",
+        "definition": "List of antigens associated with the vaccine group.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      }
+    ]
+  }
+}

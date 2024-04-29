@@ -1,0 +1,151 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vaccination-observation-map",
+  "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/vaccination-observation-map",
+  "name": "VaccinationObservationMap",
+  "title": "Vaccination Observation Map",
+  "status": "draft",
+  "description": "This profile describes the observation rules for vaccination based on specific patient conditions.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "vaccination-observation-map",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "vaccination-observation-map",
+        "path": "vaccination-observation-map",
+        "short": "Vaccination Observation Map",
+        "definition": "This profile describes the observation rules for vaccination based on specific patient conditions."
+      },
+      {
+        "id": "vaccination-observation-map.observationCode",
+        "path": "vaccination-observation-map.observationCode",
+        "short": "Unique code for the observation.",
+        "definition": "Unique code for the observation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "vaccination-observation-map.observationTitle",
+        "path": "vaccination-observation-map.observationTitle",
+        "short": "Title of the observation.",
+        "definition": "Title of the observation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "vaccination-observation-map.indicationText",
+        "path": "vaccination-observation-map.indicationText",
+        "short": "Text indicating why the vaccine should be administered.",
+        "definition": "Text indicating why the vaccine should be administered.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "vaccination-observation-map.contraindicationText",
+        "path": "vaccination-observation-map.contraindicationText",
+        "short": "Text indicating why the vaccine should not be administered.",
+        "definition": "Text indicating why the vaccine should not be administered.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "vaccination-observation-map.clarifyingText",
+        "path": "vaccination-observation-map.clarifyingText",
+        "short": "Additional clarifications for the vaccination rule.",
+        "definition": "Additional clarifications for the vaccination rule.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "vaccination-observation-map.codedValues",
+        "path": "vaccination-observation-map.codedValues",
+        "short": "List of associated SNOMED or other coded values relevant to the observation.",
+        "definition": "List of associated SNOMED or other coded values relevant to the observation.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "vaccination-observation-map.codedValues.code",
+        "path": "vaccination-observation-map.codedValues.code",
+        "short": "Code identifying the condition or observation.",
+        "definition": "Code identifying the condition or observation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "vaccination-observation-map.codedValues.codeSystem",
+        "path": "vaccination-observation-map.codedValues.codeSystem",
+        "short": "The system in which the code is valid (e.g., SNOMED, CDCPHINVS).",
+        "definition": "The system in which the code is valid (e.g., SNOMED, CDCPHINVS).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "vaccination-observation-map.codedValues.text",
+        "path": "vaccination-observation-map.codedValues.text",
+        "short": "Human-readable name or description of the code.",
+        "definition": "Human-readable name or description of the code.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      }
+    ]
+  }
+}
