@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "antigen-supporting-data",
-  "url": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/antigen-supporting-data",
+  "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/antigen-supporting-data",
   "name": "AntigenSupportingData",
   "title": "Antigen Supporting Data",
   "status": "draft",

@@ -1,0 +1,16 @@
+{
+  "resourceType": "Patient",
+  "id": "2013-0034",
+  "meta": {
+    "profile": [
+      "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient"
+    ]
+  },
+  "name": [
+    {
+      "family": "# 6 DTaP before age 4.  Nothing more until Tdap at age 7 even if some are invalid."
+    }
+  ],
+  "gender": "female",
+  "birthDate": "2020-09-20"
+}

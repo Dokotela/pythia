@@ -1,0 +1,9 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "GenderValueSet",
+  "id": "gender-values",
+  "title": "Gender Value Set",
+  "url": "http://fhirfli.dev/fhir/ig/pythia/ValueSet/gender-values",
+  "compose": null
+}

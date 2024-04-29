@@ -1,0 +1,9 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "VaxObservationCodes",
+  "id": "vax-observation-codes",
+  "title": "Vaccination Observation Codes",
+  "url": "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vax-observation-codes",
+  "compose": null
+}

@@ -1,0 +1,23 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vax-patient",
+  "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient",
+  "name": "VaxPatient",
+  "title": "Vaccination Patient",
+  "status": "draft",
+  "description": "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient",
+        "path": "Patient"
+      }
+    ]
+  }
+}

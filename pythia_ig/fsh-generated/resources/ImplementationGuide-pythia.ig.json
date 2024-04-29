@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "cdsi.ig",
-  "url": "http://fhirfli.dev/fhir/ig/cdsi/ImplementationGuide/cdsi.ig",
+  "id": "pythia.ig",
+  "url": "http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig",
   "version": "0.1.0",
   "name": "PythiaIG",
   "status": "draft",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "packageId": "cdsi.ig",
+  "packageId": "pythia.ig",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -25,19 +25,56 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/MyPatient"
+          "reference": "StructureDefinition/assessment-date"
         },
-        "name": "MyPatient",
-        "description": "An example profile of the Patient resource.",
+        "name": "AssessmentDate",
+        "description": "The date on which the vaccination assessment was made.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "Patient/PatientExample"
+          "reference": "Patient/2013-0034"
         },
-        "name": "PatientExample",
-        "description": "An example of a patient with a license to krill.",
-        "exampleCanonical": "http://fhirfli.dev/fhir/ig/cdsi/StructureDefinition/MyPatient"
+        "name": "ExampleVaxPatient",
+        "exampleCanonical": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/gender-values"
+        },
+        "name": "Gender Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/gender-extension"
+        },
+        "name": "GenderExtension",
+        "description": "An extension to provide detailed information on gender, including non-binary and transgender options.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/vax-observation"
+        },
+        "name": "Vaccination Observation",
+        "description": "Observation items specifically for vaccination details and related clinical considerations.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vax-observation-codes"
+        },
+        "name": "Vaccination Observation Codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/vax-patient"
+        },
+        "name": "Vaccination Patient",
+        "description": "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information.",
+        "exampleBoolean": false
       }
     ],
     "page": {

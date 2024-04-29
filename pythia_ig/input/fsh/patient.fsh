@@ -15,24 +15,11 @@ Extension: GenderExtension
 Id: gender-extension
 Description: "An extension to provide detailed information on gender, including non-binary and transgender options."
 * value[x] only code
-* valueCode from Gender (required)
-
-// Bind the Gender to custom valueset
-ValueSet: Gender
-Id: gender-values
-Title: "Gender Value Set"
-* #female "Female"
-* #male "Male"
-* #transgender "Transgender"
-* #unknown "Unknown"
+* valueCode from GenderValueSet (required)
 
 // Apply extensions to the VaxPatient
 * extension contains AssessmentDate named assessmentDate 0..1
 * extension contains GenderExtension named extendedGender 0..1
-
-// Contained resources for immunizations, conditions, and observations
-* contained only Resource
-* contained ResourceType contains [Immunization, Condition, AllergyIntolerance, Observation] 0..*
 
 // Define specific observations related to vaccinations
 Profile: VaxObservation
@@ -44,29 +31,84 @@ Description: "Observation items specifically for vaccination details and related
 * component only BackboneElement
 * component.value[x] only string
 * component.extension contains
-    IndicationText named indication 0..1,
-    ContraindicationText named contraindication 0..1,
+    IndicationText named indication 0..1
+    ContraindicationText named contraindication 0..1
     ClarifyingText named clarification 0..1
 
-// Define a simple valueset for observation codes
+// Define a simple ValueSet for observation codes
 ValueSet: VaxObservationCodes
 Id: vax-observation-codes
 Title: "Vaccination Observation Codes"
-* #obs1 "Observation Code 1"
-* #obs2 "Observation Code 2"
+* #obs1 "Observation Code 1" from http://example.org/fhir/CodeSystem/vax-observations
+* #obs2 "Observation Code 2" from http://example.org/fhir/CodeSystem/vax-observations
 
-// Extensions for textual clarifications
-Extension: IndicationText
-Id: indication-text
-Description: "Text indicating why the vaccine should be administered."
-* value[x] only string
+// Define an instance of a VaxPatient with contained Immunizations
+Instance: ExampleVaxPatient
+InstanceOf: VaxPatient
+Usage: #example
+* id = "2013-0034"
+* gender = #female
+* birthDate = "2020-09-20"
+* assessmentDate.valueDateTime = "2024-03-20"
+* name.family = "# 6 DTaP before age 4.  Nothing more until Tdap at age 7 even if some are invalid."
+* contained += Immunization1
+* contained += Immunization2
+* contained += Immunization3
+* contained += Immunization4
+* contained += Immunization5
+* contained += Immunization6
 
-Extension: ContraindicationText
-Id: contraindication-text
-Description: "Text indicating why the vaccine should not be administered."
-* value[x] only string
+// Define contained immunization instances
+Instance: Immunization1
+InstanceOf: Immunization
+Usage: #inline
+* id = "dose1"
+* vaccineCode.coding[0].system = "http://hl7.org/fhir/sid/cvx"
+* vaccineCode.coding[0].code = "107"
+* vaccineCode.coding[0].display = "DTaP, unspecified formulation"
+* occurrenceDateTime = "2020-11-20"
 
-Extension: ClarifyingText
-Id: clarifying-text
-Description: "Additional clarifications for the vaccination rule."
-* value[x] only string
+Instance: Immunization2
+InstanceOf: Immunization
+Usage: #inline
+* id = "dose2"
+* vaccineCode.coding[0].system = "http://hl7.org/fhir/sid/cvx"
+* vaccineCode.coding[0].code = "107"
+* vaccineCode.coding[0].display = "DTaP, unspecified formulation"
+* occurrenceDateTime = "2021-01-20"
+
+Instance: Immunization3
+InstanceOf: Immunization
+Usage: #inline
+* id = "dose3"
+* vaccineCode.coding[0].system = "http://hl7.org/fhir/sid/cvx"
+* vaccineCode.coding[0].code = "107"
+* vaccineCode.coding[0].display = "DTaP, unspecified formulation"
+* occurrenceDateTime = "2021-03-20"
+
+Instance: Immunization4
+InstanceOf: Immunization
+Usage: #inline
+* id = "dose4"
+* vaccineCode.coding[0].system = "http://hl7.org/fhir/sid/cvx"
+* vaccineCode.coding[0].code = "107"
+* vaccineCode.coding[0].display = "DTaP, unspecified formulation"
+* occurrenceDateTime = "2022-09-20"
+
+Instance: Immunization5
+InstanceOf: Immunization
+Usage: #inline
+* id = "dose5"
+* vaccineCode.coding[0].system = "http://hl7.org/fhir/sid/cvx"
+* vaccineCode.coding[0].code = "107"
+* vaccineCode.coding[0].display = "DTaP, unspecified formulation"
+* occurrenceDateTime = "2022-12-20"
+
+Instance: Immunization6
+InstanceOf: Immunization
+Usage: #inline
+* id = "dose6"
+* vaccineCode.coding[0].system = "http://hl7.org/fhir/sid/cvx"
+* vaccineCode.coding[0].code = "107"
+* vaccineCode.coding[0].display = "DTaP, unspecified formulation"
+* occurrenceDateTime = "2024-03-20"

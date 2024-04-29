@@ -1,27 +1,11 @@
 [
   {
-    "outputFile": "Patient-PatientExample.json",
-    "fshName": "PatientExample",
+    "outputFile": "Patient-2013-0034.json",
+    "fshName": "ExampleVaxPatient",
     "fshType": "Instance",
     "fshFile": "patient.fsh",
-    "startLine": 9,
-    "endLine": 14
-  },
-  {
-    "outputFile": "StructureDefinition-CvxToAntigenMap.json",
-    "fshName": "CvxToAntigenMap",
-    "fshType": "Resource",
-    "fshFile": "cvx_to_antigen_map.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
-    "outputFile": "StructureDefinition-MyPatient.json",
-    "fshName": "MyPatient",
-    "fshType": "Profile",
-    "fshFile": "patient.fsh",
-    "startLine": 4,
-    "endLine": 7
+    "startLine": 55,
+    "endLine": 63
   },
   {
     "outputFile": "StructureDefinition-Vaccine.json",
@@ -40,35 +24,59 @@
     "endLine": 75
   },
   {
-    "outputFile": "StructureDefinition-live-virus-conflict.json",
-    "fshName": "LiveVirusConflict",
-    "fshType": "Resource",
-    "fshFile": "live_virus_conflicts.fsh",
-    "startLine": 1,
-    "endLine": 15
+    "outputFile": "StructureDefinition-assessment-date.json",
+    "fshName": "AssessmentDate",
+    "fshType": "Extension",
+    "fshFile": "patient.fsh",
+    "startLine": 9,
+    "endLine": 12
   },
   {
-    "outputFile": "StructureDefinition-vaccination-observation-map.json",
-    "fshName": "VaccinationObservationMap",
-    "fshType": "Resource",
-    "fshFile": "vaccine_observation_map.fsh",
-    "startLine": 1,
-    "endLine": 15
+    "outputFile": "StructureDefinition-gender-extension.json",
+    "fshName": "GenderExtension",
+    "fshType": "Extension",
+    "fshFile": "patient.fsh",
+    "startLine": 14,
+    "endLine": 18
   },
   {
-    "outputFile": "StructureDefinition-vaccine-group-map.json",
-    "fshName": "VaccineGroupMap",
+    "outputFile": "StructureDefinition-schedule-supporting-data.json",
+    "fshName": "ScheduleSupportingData",
     "fshType": "Resource",
-    "fshFile": "vaccine_group_map.fsh",
+    "fshFile": "schedule_supporting_data.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 51
   },
   {
-    "outputFile": "StructureDefinition-vaccine-group-to-antigen-map.json",
-    "fshName": "VaccineGroupToAntigenMap",
-    "fshType": "Resource",
-    "fshFile": "vaccine_group_to_antigen_map.fsh",
-    "startLine": 1,
-    "endLine": 8
+    "outputFile": "StructureDefinition-vax-observation.json",
+    "fshName": "VaxObservation",
+    "fshType": "Profile",
+    "fshFile": "patient.fsh",
+    "startLine": 34,
+    "endLine": 43
+  },
+  {
+    "outputFile": "StructureDefinition-vax-patient.json",
+    "fshName": "VaxPatient",
+    "fshType": "Profile",
+    "fshFile": "patient.fsh",
+    "startLine": 2,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-gender-values.json",
+    "fshName": "GenderValueSet",
+    "fshType": "ValueSet",
+    "fshFile": "patient.fsh",
+    "startLine": 21,
+    "endLine": 31
+  },
+  {
+    "outputFile": "ValueSet-vax-observation-codes.json",
+    "fshName": "VaxObservationCodes",
+    "fshType": "ValueSet",
+    "fshFile": "patient.fsh",
+    "startLine": 48,
+    "endLine": 52
   }
 ]
