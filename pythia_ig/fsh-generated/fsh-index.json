@@ -40,6 +40,14 @@
     "endLine": 51
   },
   {
+    "outputFile": "StructureDefinition-vaccine-observation-concept-map.json",
+    "fshName": "ConceptMap",
+    "fshType": "Resource",
+    "fshFile": "codes_to_observation_codes.fsh",
+    "startLine": 1,
+    "endLine": 2
+  },
+  {
     "outputFile": "StructureDefinition-vax-patient.json",
     "fshName": "VaxPatient",
     "fshType": "Profile",

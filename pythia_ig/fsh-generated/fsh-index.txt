@@ -1,8 +1,9 @@
-Output File                                        Name                     Type        FSH File                       Lines
-CodeSystem-vaccine-observation-codes.json          VaccineObservationCodes  CodeSystem  vaccine_observation_codes.fsh  1 - 506
-StructureDefinition-Vaccine.json                   Vaccine                  Resource    vaccine.fsh                    1 - 14
-StructureDefinition-antigen-supporting-data.json   AntigenSupportingData    Resource    antigen_supporting_data.fsh    1 - 75
-StructureDefinition-assessment-date.json           AssessmentDate           Extension   patient.fsh                    9 - 12
-StructureDefinition-schedule-supporting-data.json  ScheduleSupportingData   Resource    schedule_supporting_data.fsh   1 - 51
-StructureDefinition-vax-patient.json               VaxPatient               Profile     patient.fsh                    2 - 6
-ValueSet-vaccine-gender.json                       VaccineGender            ValueSet    vaccine_gender.fsh             1 - 28
+Output File                                               Name                     Type        FSH File                        Lines
+CodeSystem-vaccine-observation-codes.json                 VaccineObservationCodes  CodeSystem  vaccine_observation_codes.fsh   1 - 506
+StructureDefinition-Vaccine.json                          Vaccine                  Resource    vaccine.fsh                     1 - 14
+StructureDefinition-antigen-supporting-data.json          AntigenSupportingData    Resource    antigen_supporting_data.fsh     1 - 75
+StructureDefinition-assessment-date.json                  AssessmentDate           Extension   patient.fsh                     9 - 12
+StructureDefinition-schedule-supporting-data.json         ScheduleSupportingData   Resource    schedule_supporting_data.fsh    1 - 51
+StructureDefinition-vaccine-observation-concept-map.json  ConceptMap               Resource    codes_to_observation_codes.fsh  1 - 2
+StructureDefinition-vax-patient.json                      VaxPatient               Profile     patient.fsh                     2 - 6
+ValueSet-vaccine-gender.json                              VaccineGender            ValueSet    vaccine_gender.fsh              1 - 28

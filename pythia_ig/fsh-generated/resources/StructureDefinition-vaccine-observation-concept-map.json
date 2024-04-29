@@ -1,0 +1,21 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vaccine-observation-concept-map",
+  "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccine-observation-concept-map",
+  "name": "ConceptMap",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "vaccine-observation-concept-map",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DomainResource",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "vaccine-observation-concept-map",
+        "path": "vaccine-observation-concept-map"
+      }
+    ]
+  }
+}
