@@ -3,7 +3,7 @@ PythiaIG : Validation Results
 
 err = 8, warn = 271, info = 1
 IG Publisher Version: 1.6.6
-Generated Tue Apr 30 11:57:49 EDT 2024. FHIR version 4.0.1 for pythia.ig#0.1.0 (canonical = http://fhirfli.dev/fhir/ig/pythia)
+Generated Tue Apr 30 13:37:55 EDT 2024. FHIR version 4.0.1 for pythia.ig#0.1.0 (canonical = http://fhirfli.dev/fhir/ig/pythia)
  Build Errors : 1 / 4 / 0
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-vaccine-observation-codes : 0 / 3 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ImplementationGuide-pythia.ig : 0 / 0 / 1
@@ -15,7 +15,7 @@ Generated Tue Apr 30 11:57:49 EDT 2024. FHIR version 4.0.1 for pythia.ig#0.1.0 (
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-vaccine-gender : 2 / 5 / 1
 </table>
 == n/a ==
-ERROR: /home/grey/dev/pythia/pythia_ig/output/processing-model.html#/html/body/div/div/div/div/div/h3/a at Line 175, column 280: The link 'lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json' for "antigenic components" cannot be resolved
+ERROR: /home/grey/dev/pythia/pythia_ig/output/processing-model.html#/html/body/div/div/div/div/div/h3/a at Line 170, column 280: The link 'lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json' for "antigenic components" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide

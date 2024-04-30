@@ -172,10 +172,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#pythia-ig" id="markdown-toc-pythia-ig">Pythia IG</a>    <ul>
-      <li><a href="#preparation" id="markdown-toc-preparation">Preparation</a></li>
-      <li><a href="#immunization-decision-support-forecast-working-group" id="markdown-toc-immunization-decision-support-forecast-working-group">Immunization Decision Support Forecast Working Group</a></li>
-      <li><a href="#logical-specification-concepts" id="markdown-toc-logical-specification-concepts">Logical Specification Concepts</a></li>
-      <li><a href="#processing-model" id="markdown-toc-processing-model">Processing Model</a></li>
+      <li><a href="#100-credit-goes-to-the-cdc-and-their-clinical-decision-support-for-immunization-cdsi" id="markdown-toc-100-credit-goes-to-the-cdc-and-their-clinical-decision-support-for-immunization-cdsi">100% Credit goes to the CDC and their Clinical Decision Support for Immunization (CDSi)</a>        <ul>
+          <li><a href="#preparation" id="markdown-toc-preparation">Preparation</a></li>
+          <li><a href="#immunization-decision-support-forecast-working-group" id="markdown-toc-immunization-decision-support-forecast-working-group">Immunization Decision Support Forecast Working Group</a></li>
+          <li><a href="#logical-specification-concepts" id="markdown-toc-logical-specification-concepts">Logical Specification Concepts</a></li>
+          <li><a href="#processing-model" id="markdown-toc-processing-model">Processing Model</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -183,12 +186,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h1 id="pythia-ig">Pythia IG</h1>
 
-<h4 id="welcome-to-my-implementation-guide-for-immunization-forecasting-first-a-warning">Welcome to my implementation guide for Immunization Forecasting. First, a warning:</h4>
-<h4 id="this-is-not-completely-fhir-compliant-as-part-of-this-was-to-help-myself-get-more-familiar-with-fhir-shorthand-commonly-known-as-fsh-there-are-some-resources-ive-defined-eg-antigen-supporting-data-and-schedule-supporting-data-that-are-certainly-not-fhir-however-they-are-an-accurate-representation-at-least-in-json-for-the-data-used-in-the-cdcs-clinical-decision-support-for-immunization-cdsi-logic-specification-for-acip-recommendations">This is not completely FHIR compliant. As part of this was to help myself get more familiar with <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand (commonly known as FSH)</a>, there are some “Resources” I’ve defined (e.g. <a href="StructureDefinition-antigen-supporting-data.html">Antigen Supporting Data</a> and <a href="StructureDefinition-schedule-supporting-data.html">Schedule Supporting Data</a>), that are certainly NOT FHIR. However, they are an accurate representation (at least in JSON) for the data used in the CDC’s “CLINICAL DECISION SUPPORT FOR IMMUNIZATION (CDSI): LOGIC SPECIFICATION FOR ACIP RECOMMENDATIONS”.</h4>
+<h2 id="100-credit-goes-to-the-cdc-and-their-clinical-decision-support-for-immunization-cdsi">100% Credit goes to the CDC and their <a href="https://www.cdc.gov/vaccines/programs/iis/cdsi.html">Clinical Decision Support for Immunization (CDSi)</a></h2>
+
+<p>All I’ve done is take all of their hard work, guidance and expertise and make it computable (well, perhaps it’s already computable, I made a computer actually do it).</p>
+
+<p>The CDC manual can be found <a href="https://www.cdc.gov/vaccines/programs/iis/interop-proj/downloads/logic-spec-acip-rec-4.5.pdf">here</a></p>
+
+<p>First, a warning:
+This is not completely FHIR compliant. As part of this was to help myself get more familiar with <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand (commonly known as FSH)</a>, there are some “Resources” I’ve defined (e.g. <a href="StructureDefinition-antigen-supporting-data.html">Antigen Supporting Data</a> and <a href="StructureDefinition-schedule-supporting-data.html">Schedule Supporting Data</a>), that are certainly NOT FHIR. However, they are an accurate representation (at least in JSON) for the data used in the CDC’s “CLINICAL DECISION SUPPORT FOR IMMUNIZATION (CDSI): LOGIC SPECIFICATION FOR ACIP RECOMMENDATIONS”.</p>
 
 <h3 id="preparation"><a href="preparation.html">Preparation</a></h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- This is some technical background in case anyone is interested on working on this themselves.
+</code></pre></div></div>
 
-<h3 id="immunization-decision-support-forecast-working-group"><a href="decision-support-wg.html">Immunization Decision Support Forecast Working Group</a></h3>
+<h3 id="immunization-decision-support-forecast-working-group"><a href="http://hl7.org/fhir/us/immds/">Immunization Decision Support Forecast Working Group</a></h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Because I can never find it
+- Official HL7 working group
+</code></pre></div></div>
 
 <h3 id="logical-specification-concepts"><a href="logical-specification-concepts.html">Logical Specification Concepts</a></h3>
 
@@ -212,7 +226,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package pythia.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 30, 2024 11:57-0400">2024-04-30</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package pythia.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 30, 2024 13:37-0400">2024-04-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

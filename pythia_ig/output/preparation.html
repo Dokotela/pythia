@@ -39,8 +39,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6"}
-    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -135,16 +135,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="this-is-only-if-youre-interested-in-the-actual-code-ive-written-behind-this-process">This is only if you’re interested in the actual code I’ve written behind this process</h3>
 
-<h4 id="the-full-github-repo-is-here">The full <a href="https://github.com/Dokotela/pythia">Github Repo is here</a></h4>
-<h4 id="the-generator-is-designed-to-turn-the-supporting-data-from-clinical-decision-support-for-immunization-cdsi-into-json-and-dart-classes">The generator is designed to turn the <a href="https://www.cdc.gov/vaccines/programs/iis/downloads/supporting-data-4.53-508.zip">Supporting Data</a> from <a href="https://www.cdc.gov/vaccines/programs/iis/cdsi.html">Clinical Decision Support for Immunization (CDSi)</a> into JSON and Dart Classes.</h4>
-<h4 id="youll-notice-in-those-downloaded-files-they-include-both-xml-and-xlsx-files-unfortunately-at-least-for-me-i-dont-like-either-of-these-formats">You’ll notice in those downloaded files, they include both XML and XLSX files. Unfortunately (at least for me) I don’t like either of these formats.</h4>
-<h4 id="all-of-the-xlsx-files-ive-transferred-into-gsheets-the-link-can-be-found-here">All of the XLSX files I’ve transferred into Gsheets, <a href="https://drive.google.com/drive/folders/1NL3xJH2Yl98-IvrWMp-Jf2kxMMiYzehj">the link can be found here</a></h4>
-<h4 id="after-converting-them-all-to-gsheets-format-i-then-went-through-and-did-a-regex-replace---for-n">After converting them all to Gsheets format, I then went through and did a regex replace (<code class="language-plaintext highlighter-rouge">" "</code> for <code class="language-plaintext highlighter-rouge">"\n"</code>)</h4>
-<h4 id="this-is-due-because-the-carriage-return-n-in-regex-screw-up-the-gsheets-tsv-parser-in-dart">This is due because the carriage return (<code class="language-plaintext highlighter-rouge">"\n"</code> in Regex) screw up the Gsheets TSV parser in Dart</h4>
-<h4 id="the-apidart-file-are-credentials-for-a-service-account-let-me-know-if-youd-like-help-to-do-this-on-your-own">The <code class="language-plaintext highlighter-rouge">api.dart</code> file are credentials for a service account (let me know if you’d like help to do this on your own)</h4>
-<h4 id="you-can-then-run-the-pythia-generator-root-directory-of-the-project-and-run-generatesh">You can then run the pythia generator (root directory of the project, and run <code class="language-plaintext highlighter-rouge">./generate.sh</code>)</h4>
-<h4 id="there-is-a-time-limit-about-how-often-you-can-request-data-from-spreadsheets-so-sometimes-you-do-have-to-edit-the-sleep-time-in-download_sheets">There is a time limit about how often you can request data from spreadsheets, so sometimes you do have to edit the sleep time in <a href="https://github.com/Dokotela/pythia/blob/main/pythia_generator/lib/utils/download_sheets.dart#L16">download_sheets</a></h4>
-<h4 id="this-generator-also-creates-two-sets-of-test-cases-one-with-conditions-observations-etc-and-one-without">This generator also creates two sets of test cases. One with conditions, observations, etc. and one without</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- The full [Github Repo is here](https://github.com/Dokotela/pythia)
+- The generator is designed to turn the [Supporting Data](https://www.cdc.gov/vaccines/programs/iis/downloads/supporting-data-4.53-508.zip) from [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/vaccines/programs/iis/cdsi.html) into JSON and Dart Classes.
+- You'll notice in those downloaded files, they include both XML and XLSX files. Unfortunately (at least for me) I don't like either of these formats.
+- All of the XLSX files I've transferred into Gsheets, [the link can be found here](https://drive.google.com/drive/folders/1NL3xJH2Yl98-IvrWMp-Jf2kxMMiYzehj)
+- After converting them all to Gsheets format, I then went through and did a regex replace (`" "` for `"\n"`)
+- This is due because the carriage return (`"\n"` in Regex) screw up the Gsheets TSV parser in Dart
+- The `api.dart` file are credentials for a service account (let me know if you'd like help to do this on your own)
+- You can then run the pythia generator (root directory of the project, and run `./generate.sh`)
+- There is a time limit about how often you can request data from spreadsheets, so sometimes you do have to edit the sleep time in [download_sheets](https://github.com/Dokotela/pythia/blob/main/pythia_generator/lib/utils/download_sheets.dart#L16)
+- This generator also creates two sets of test cases. One with conditions, observations, etc. and one without
+</code></pre></div></div>
 
 
 
@@ -165,7 +166,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package pythia.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 30, 2024 11:57-0400">2024-04-30</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package pythia.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 30, 2024 13:37-0400">2024-04-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -13,67 +13,60 @@
     "testplans" : [],
     "testscripts" : [],
     "previous" : "toc.html",
-    "next" : "decision-support-wg.html"
-  },
-  "decision-support-wg.html" : {
-    "title" : "Decision Support Wg",
-    "label" : "2",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Decision Support Wg</b></li>",
-    "previous" : "index.html",
     "next" : "evaluate-vaccine-dose-administered.html"
   },
   "evaluate-vaccine-dose-administered.html" : {
     "title" : "Evaluate Vaccine Dose Administered",
-    "label" : "3",
+    "label" : "2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Evaluate Vaccine Dose Administered</b></li>",
-    "previous" : "decision-support-wg.html",
+    "previous" : "index.html",
     "next" : "forecast-dates-and-reasons.html"
   },
   "forecast-dates-and-reasons.html" : {
     "title" : "Forecast Dates and Reasons",
-    "label" : "4",
+    "label" : "3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Forecast Dates and Reasons</b></li>",
     "previous" : "evaluate-vaccine-dose-administered.html",
     "next" : "logical-specification-concepts.html"
   },
   "logical-specification-concepts.html" : {
     "title" : "Logical Specification Concepts",
-    "label" : "5",
+    "label" : "4",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Logical Specification Concepts</b></li>",
     "previous" : "forecast-dates-and-reasons.html",
     "next" : "preparation.html"
   },
   "preparation.html" : {
     "title" : "Preparation",
-    "label" : "6",
+    "label" : "5",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Preparation</b></li>",
     "previous" : "logical-specification-concepts.html",
     "next" : "processing-model.html"
   },
   "processing-model.html" : {
     "title" : "Processing Model",
-    "label" : "7",
+    "label" : "6",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Processing Model</b></li>",
     "previous" : "preparation.html",
     "next" : "relevant-series.html"
   },
   "relevant-series.html" : {
     "title" : "Relevant Series",
-    "label" : "8",
+    "label" : "7",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Relevant Series</b></li>",
     "previous" : "processing-model.html",
     "next" : "artifacts.html"
   },
   "artifacts.html" : {
     "title" : "Artifacts Summary",
-    "label" : "9.0",
+    "label" : "8.0",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>",
     "previous" : "relevant-series.html",
     "next" : "StructureDefinition-vax-patient.html"
   },
   "StructureDefinition-vax-patient.html" : {
     "title" : "Vaccination Patient",
-    "label" : "9.1",
+    "label" : "8.1",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
     "examples" : [],
     "testplans" : [],
@@ -83,49 +76,49 @@
   },
   "StructureDefinition-vax-patient-definitions.html" : {
     "title" : "Vaccination Patient - Definitions",
-    "label" : "9.1",
+    "label" : "8.1",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
     "previous" : "StructureDefinition-vax-patient.html",
     "next" : "StructureDefinition-vax-patient-mappings.html"
   },
   "StructureDefinition-vax-patient-mappings.html" : {
     "title" : "Vaccination Patient - Mappings",
-    "label" : "9.1",
+    "label" : "8.1",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
     "previous" : "StructureDefinition-vax-patient-definitions.html",
     "next" : "StructureDefinition-vax-patient-testing.html"
   },
   "StructureDefinition-vax-patient-testing.html" : {
     "title" : "Vaccination Patient - Testing",
-    "label" : "9.1",
+    "label" : "8.1",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
     "previous" : "StructureDefinition-vax-patient-mappings.html",
     "next" : "StructureDefinition-vax-patient.profile.xml.html"
   },
   "StructureDefinition-vax-patient.profile.xml.html" : {
     "title" : "Vaccination Patient - XML Representation",
-    "label" : "9.1",
+    "label" : "8.1",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
     "previous" : "StructureDefinition-vax-patient-testing.html",
     "next" : "StructureDefinition-vax-patient.profile.json.html"
   },
   "StructureDefinition-vax-patient.profile.json.html" : {
     "title" : "Vaccination Patient - JSON Representation",
-    "label" : "9.1",
+    "label" : "8.1",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
     "previous" : "StructureDefinition-vax-patient.profile.xml.html",
     "next" : "StructureDefinition-vax-patient.profile.ttl.html"
   },
   "StructureDefinition-vax-patient.profile.ttl.html" : {
     "title" : "Vaccination Patient - TTL Representation",
-    "label" : "9.1",
+    "label" : "8.1",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccination Patient</b></li>",
     "previous" : "StructureDefinition-vax-patient.profile.json.html",
     "next" : "StructureDefinition-Vaccine.html"
   },
   "StructureDefinition-Vaccine.html" : {
     "title" : "Vaccine",
-    "label" : "9.2",
+    "label" : "8.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "examples" : [],
     "testplans" : [],
@@ -135,49 +128,49 @@
   },
   "StructureDefinition-Vaccine-definitions.html" : {
     "title" : "Vaccine - Definitions",
-    "label" : "9.2",
+    "label" : "8.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine.html",
     "next" : "StructureDefinition-Vaccine-mappings.html"
   },
   "StructureDefinition-Vaccine-mappings.html" : {
     "title" : "Vaccine - Mappings",
-    "label" : "9.2",
+    "label" : "8.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine-definitions.html",
     "next" : "StructureDefinition-Vaccine-testing.html"
   },
   "StructureDefinition-Vaccine-testing.html" : {
     "title" : "Vaccine - Testing",
-    "label" : "9.2",
+    "label" : "8.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine-mappings.html",
     "next" : "StructureDefinition-Vaccine.profile.xml.html"
   },
   "StructureDefinition-Vaccine.profile.xml.html" : {
     "title" : "Vaccine - XML Representation",
-    "label" : "9.2",
+    "label" : "8.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine-testing.html",
     "next" : "StructureDefinition-Vaccine.profile.json.html"
   },
   "StructureDefinition-Vaccine.profile.json.html" : {
     "title" : "Vaccine - JSON Representation",
-    "label" : "9.2",
+    "label" : "8.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine.profile.xml.html",
     "next" : "StructureDefinition-Vaccine.profile.ttl.html"
   },
   "StructureDefinition-Vaccine.profile.ttl.html" : {
     "title" : "Vaccine - TTL Representation",
-    "label" : "9.2",
+    "label" : "8.2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine</b></li>",
     "previous" : "StructureDefinition-Vaccine.profile.json.html",
     "next" : "StructureDefinition-antigen-supporting-data.html"
   },
   "StructureDefinition-antigen-supporting-data.html" : {
     "title" : "Antigen Supporting Data",
-    "label" : "9.3",
+    "label" : "8.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "examples" : [],
     "testplans" : [],
@@ -187,49 +180,49 @@
   },
   "StructureDefinition-antigen-supporting-data-definitions.html" : {
     "title" : "Antigen Supporting Data - Definitions",
-    "label" : "9.3",
+    "label" : "8.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data.html",
     "next" : "StructureDefinition-antigen-supporting-data-mappings.html"
   },
   "StructureDefinition-antigen-supporting-data-mappings.html" : {
     "title" : "Antigen Supporting Data - Mappings",
-    "label" : "9.3",
+    "label" : "8.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data-definitions.html",
     "next" : "StructureDefinition-antigen-supporting-data-testing.html"
   },
   "StructureDefinition-antigen-supporting-data-testing.html" : {
     "title" : "Antigen Supporting Data - Testing",
-    "label" : "9.3",
+    "label" : "8.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data-mappings.html",
     "next" : "StructureDefinition-antigen-supporting-data.profile.xml.html"
   },
   "StructureDefinition-antigen-supporting-data.profile.xml.html" : {
     "title" : "Antigen Supporting Data - XML Representation",
-    "label" : "9.3",
+    "label" : "8.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data-testing.html",
     "next" : "StructureDefinition-antigen-supporting-data.profile.json.html"
   },
   "StructureDefinition-antigen-supporting-data.profile.json.html" : {
     "title" : "Antigen Supporting Data - JSON Representation",
-    "label" : "9.3",
+    "label" : "8.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data.profile.xml.html",
     "next" : "StructureDefinition-antigen-supporting-data.profile.ttl.html"
   },
   "StructureDefinition-antigen-supporting-data.profile.ttl.html" : {
     "title" : "Antigen Supporting Data - TTL Representation",
-    "label" : "9.3",
+    "label" : "8.3",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Antigen Supporting Data</b></li>",
     "previous" : "StructureDefinition-antigen-supporting-data.profile.json.html",
     "next" : "StructureDefinition-schedule-supporting-data.html"
   },
   "StructureDefinition-schedule-supporting-data.html" : {
     "title" : "Schedule Supporting Data",
-    "label" : "9.4",
+    "label" : "8.4",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
     "examples" : [],
     "testplans" : [],
@@ -239,49 +232,49 @@
   },
   "StructureDefinition-schedule-supporting-data-definitions.html" : {
     "title" : "Schedule Supporting Data - Definitions",
-    "label" : "9.4",
+    "label" : "8.4",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
     "previous" : "StructureDefinition-schedule-supporting-data.html",
     "next" : "StructureDefinition-schedule-supporting-data-mappings.html"
   },
   "StructureDefinition-schedule-supporting-data-mappings.html" : {
     "title" : "Schedule Supporting Data - Mappings",
-    "label" : "9.4",
+    "label" : "8.4",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
     "previous" : "StructureDefinition-schedule-supporting-data-definitions.html",
     "next" : "StructureDefinition-schedule-supporting-data-testing.html"
   },
   "StructureDefinition-schedule-supporting-data-testing.html" : {
     "title" : "Schedule Supporting Data - Testing",
-    "label" : "9.4",
+    "label" : "8.4",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
     "previous" : "StructureDefinition-schedule-supporting-data-mappings.html",
     "next" : "StructureDefinition-schedule-supporting-data.profile.xml.html"
   },
   "StructureDefinition-schedule-supporting-data.profile.xml.html" : {
     "title" : "Schedule Supporting Data - XML Representation",
-    "label" : "9.4",
+    "label" : "8.4",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
     "previous" : "StructureDefinition-schedule-supporting-data-testing.html",
     "next" : "StructureDefinition-schedule-supporting-data.profile.json.html"
   },
   "StructureDefinition-schedule-supporting-data.profile.json.html" : {
     "title" : "Schedule Supporting Data - JSON Representation",
-    "label" : "9.4",
+    "label" : "8.4",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
     "previous" : "StructureDefinition-schedule-supporting-data.profile.xml.html",
     "next" : "StructureDefinition-schedule-supporting-data.profile.ttl.html"
   },
   "StructureDefinition-schedule-supporting-data.profile.ttl.html" : {
     "title" : "Schedule Supporting Data - TTL Representation",
-    "label" : "9.4",
+    "label" : "8.4",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Schedule Supporting Data</b></li>",
     "previous" : "StructureDefinition-schedule-supporting-data.profile.json.html",
     "next" : "StructureDefinition-assessment-date.html"
   },
   "StructureDefinition-assessment-date.html" : {
     "title" : "AssessmentDate",
-    "label" : "9.5",
+    "label" : "8.5",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
     "examples" : [],
     "testplans" : [],
@@ -291,49 +284,49 @@
   },
   "StructureDefinition-assessment-date-definitions.html" : {
     "title" : "AssessmentDate - Definitions",
-    "label" : "9.5",
+    "label" : "8.5",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
     "previous" : "StructureDefinition-assessment-date.html",
     "next" : "StructureDefinition-assessment-date-mappings.html"
   },
   "StructureDefinition-assessment-date-mappings.html" : {
     "title" : "AssessmentDate - Mappings",
-    "label" : "9.5",
+    "label" : "8.5",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
     "previous" : "StructureDefinition-assessment-date-definitions.html",
     "next" : "StructureDefinition-assessment-date-testing.html"
   },
   "StructureDefinition-assessment-date-testing.html" : {
     "title" : "AssessmentDate - Testing",
-    "label" : "9.5",
+    "label" : "8.5",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
     "previous" : "StructureDefinition-assessment-date-mappings.html",
     "next" : "StructureDefinition-assessment-date.profile.xml.html"
   },
   "StructureDefinition-assessment-date.profile.xml.html" : {
     "title" : "AssessmentDate - XML Representation",
-    "label" : "9.5",
+    "label" : "8.5",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
     "previous" : "StructureDefinition-assessment-date-testing.html",
     "next" : "StructureDefinition-assessment-date.profile.json.html"
   },
   "StructureDefinition-assessment-date.profile.json.html" : {
     "title" : "AssessmentDate - JSON Representation",
-    "label" : "9.5",
+    "label" : "8.5",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
     "previous" : "StructureDefinition-assessment-date.profile.xml.html",
     "next" : "StructureDefinition-assessment-date.profile.ttl.html"
   },
   "StructureDefinition-assessment-date.profile.ttl.html" : {
     "title" : "AssessmentDate - TTL Representation",
-    "label" : "9.5",
+    "label" : "8.5",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AssessmentDate</b></li>",
     "previous" : "StructureDefinition-assessment-date.profile.json.html",
     "next" : "ValueSet-vaccine-gender.html"
   },
   "ValueSet-vaccine-gender.html" : {
     "title" : "Vaccine Gender",
-    "label" : "9.6",
+    "label" : "8.6",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Gender</b></li>",
     "examples" : [],
     "testplans" : [],
@@ -343,35 +336,35 @@
   },
   "ValueSet-vaccine-gender-testing.html" : {
     "title" : "Vaccine Gender - Testing",
-    "label" : "9.6",
+    "label" : "8.6",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Gender</b></li>",
     "previous" : "ValueSet-vaccine-gender.html",
     "next" : "ValueSet-vaccine-gender.xml.html"
   },
   "ValueSet-vaccine-gender.xml.html" : {
     "title" : "Vaccine Gender - XML Representation",
-    "label" : "9.6",
+    "label" : "8.6",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Gender</b></li>",
     "previous" : "ValueSet-vaccine-gender-testing.html",
     "next" : "ValueSet-vaccine-gender.json.html"
   },
   "ValueSet-vaccine-gender.json.html" : {
     "title" : "Vaccine Gender - JSON Representation",
-    "label" : "9.6",
+    "label" : "8.6",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Gender</b></li>",
     "previous" : "ValueSet-vaccine-gender.xml.html",
     "next" : "ValueSet-vaccine-gender.ttl.html"
   },
   "ValueSet-vaccine-gender.ttl.html" : {
     "title" : "Vaccine Gender - TTL Representation",
-    "label" : "9.6",
+    "label" : "8.6",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Gender</b></li>",
     "previous" : "ValueSet-vaccine-gender.json.html",
     "next" : "CodeSystem-vaccine-observation-codes.html"
   },
   "CodeSystem-vaccine-observation-codes.html" : {
     "title" : "Vaccine Observation Codes",
-    "label" : "9.7",
+    "label" : "8.7",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Observation Codes</b></li>",
     "examples" : [],
     "testplans" : [],
@@ -381,28 +374,28 @@
   },
   "CodeSystem-vaccine-observation-codes-testing.html" : {
     "title" : "Vaccine Observation Codes - Testing",
-    "label" : "9.7",
+    "label" : "8.7",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Observation Codes</b></li>",
     "previous" : "CodeSystem-vaccine-observation-codes.html",
     "next" : "CodeSystem-vaccine-observation-codes.xml.html"
   },
   "CodeSystem-vaccine-observation-codes.xml.html" : {
     "title" : "Vaccine Observation Codes - XML Representation",
-    "label" : "9.7",
+    "label" : "8.7",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Observation Codes</b></li>",
     "previous" : "CodeSystem-vaccine-observation-codes-testing.html",
     "next" : "CodeSystem-vaccine-observation-codes.json.html"
   },
   "CodeSystem-vaccine-observation-codes.json.html" : {
     "title" : "Vaccine Observation Codes - JSON Representation",
-    "label" : "9.7",
+    "label" : "8.7",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Observation Codes</b></li>",
     "previous" : "CodeSystem-vaccine-observation-codes.xml.html",
     "next" : "CodeSystem-vaccine-observation-codes.ttl.html"
   },
   "CodeSystem-vaccine-observation-codes.ttl.html" : {
     "title" : "Vaccine Observation Codes - TTL Representation",
-    "label" : "9.7",
+    "label" : "8.7",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Observation Codes</b></li>",
     "previous" : "CodeSystem-vaccine-observation-codes.json.html"
   }

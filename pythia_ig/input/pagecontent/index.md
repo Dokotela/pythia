@@ -17,5 +17,9 @@ This is not completely FHIR compliant. As part of this was to help myself get mo
     - Official HL7 working group
 
 ### [Logical Specification Concepts](logical-specification-concepts.html)
+    - There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here's a description of some of them. Again, this was all taken from the [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/vaccines/programs/iis/cdsi.html).
 
 ### [Processing Model](processing-model.html)
+    - Brief overview of the analysis and forecasting process prior to a detailed discussion
+
+### []

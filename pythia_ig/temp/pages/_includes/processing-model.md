@@ -1,5 +1,3 @@
-## 4 - Processing Model
-
 ### A quick overview of the basic logic because I think it helps makes more sense of what is to come
 
 - Most of the logic is at the level of the antigen, and most vaccines are broken down into their antigenic components and the logic is applied using them
@@ -14,17 +12,17 @@
 - The series are then grouped together in Vaccine groups (MMR, DTAP, etc) to provide final recommendations for vaccines
 - While not supplied in the official logic, these Vaccine groups should then be combined to actual Vaccines, with CVX/MVX codes and names, although this is somewhat more challenging as it usually has to do with which vaccines are available, rather than true preferences or recommendations
 
-### 4.1 Gathering Necessary Data
+### Gathering Necessary Data
 
 Many of the diagrams from the CDC manual I didn't think made sense when I first when through them, and are still not terribly helpful to understanding the process, at least for me, so I'm going to leave them out. Although this one isn't bad:
 
 TODO - add figure
 
-### 4.2 Organize Immunization History
+### Organize Immunization History
 
 ### This is pretty self explanatory. After obtaining all of the immunizations a patient has received, break them down into their [antigenic components](lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json)
 
-### 4.3 Create Relevant Patient Series
+### Create Relevant Patient Series
 
 This is a bit confusing at first. Later on in the logic it makes a bit more sense. At this stage there are just a couple of things to remember:
 
@@ -38,7 +36,7 @@ This is a bit confusing at first. Later on in the logic it makes a bit more sens
 
 4. Risk Series: appropriate for those with certain 'conditions' (in this context, conditions do not just refer to medical conditions, but may also refer to exposure, travel to endemic areas, etc). If a Risk series cannot be definitely applied to a patient, then it is not used in the forecast (but a notification should be sent to the clinician alerting them to this fact).
 
-### 4.4 Evaluate and Forecast all Patient Series
+### Evaluate and Forecast all Patient Series
 
 1. For each antigen, we evaluate all of the relevant series.
 2. For each series, we evaluate each required dose, the dose IN THE SERIES that we're trying to satisfy is called the target dose
@@ -50,10 +48,10 @@ This is a bit confusing at first. Later on in the logic it makes a bit more sens
 8. If we have evaluated all of the patient's injections against the series, or the series has no more target doses (meaning we have successfully completed it), then we are done and can move onto the next series
 9. The one exception is for recurring series (such as Flu or Tetanus). For these, anytime a target dose is met, a new target dose, identical to the original is created, and then compared against the previous vaccines.
 
-### 4.5 Select Patient Series
+### Select Patient Series
 
 We're going to look through all of the series we just evaluated and find the one (or occasionally more than one) that is the best recommendation to get the patient fully immunized.
 
-### 4.6 Identify and Evaluate Vaccine Group
+### Identify and Evaluate Vaccine Group
 
 The above series are for individual antigens, not vaccines. There are vaccine groups that go together (notably MMR and DTaP/Tdap/Td) and generally you don't give one without the others. Because of this, we have to join the individual antigens together and evaluate them as a group. It's similar to the process for individual antigens, but we'll get to that towards the end.

@@ -39,8 +39,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"5"}
-    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -132,20 +132,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#logical-specification-concepts" id="markdown-toc-logical-specification-concepts">Logical Specification Concepts</a>    <ul>
-      <li><a href="#target-dose" id="markdown-toc-target-dose">Target Dose</a>        <ul>
-          <li><a href="#statuses" id="markdown-toc-statuses">Statuses</a></li>
-          <li><a href="#selecting-supporting-data" id="markdown-toc-selecting-supporting-data">Selecting Supporting Data</a></li>
-          <li><a href="#date-calculations" id="markdown-toc-date-calculations">Date Calculations</a></li>
-        </ul>
-      </li>
+  <li><a href="#target-dose" id="markdown-toc-target-dose">Target Dose</a>    <ul>
+      <li><a href="#statuses" id="markdown-toc-statuses">Statuses</a></li>
+      <li><a href="#selecting-supporting-data" id="markdown-toc-selecting-supporting-data">Selecting Supporting Data</a></li>
+      <li><a href="#date-calculations" id="markdown-toc-date-calculations">Date Calculations</a></li>
     </ul>
   </li>
 </ul>
 
 </div>
-<h1 id="logical-specification-concepts">Logical Specification Concepts</h1>
-
 <p>There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here’s a description of some of them. Again, this was all taken from the <a href="https://www.cdc.gov/vaccines/programs/iis/cdsi.html">Clinical Decision Support for Immunization (CDSi)</a>.</p>
 
 <h2 id="target-dose">Target Dose</h2>
@@ -164,7 +159,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-1 DOSE STATUS: recorded for each dose within each series</caption>
+        <caption>TABLE DOSE STATUS: recorded for each dose within each series</caption>
         <tr>
             <th>Status</th>
             <th>Meaning</th>
@@ -190,7 +185,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-2 TARGET DOSE STATUSES: recorded for each dose within each series.</caption>
+        <caption>TABLE DOSE STATUSES: recorded for each dose within each series.</caption>
         <tr>
             <th>Status</th>
             <th>Meaning</th>
@@ -212,7 +207,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-3 PATIENT SERIES STATUSES: recorded for each series within the antigen group.</caption>
+        <caption>TABLE PATIENT SERIES STATUSES: recorded for each series within the antigen group.</caption>
         <tr>
             <th>Status</th>
             <th>Meaning</th>
@@ -248,7 +243,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-5 Is the Logical Component Relevant?</caption>
+        <caption>TABLE Is the Logical Component Relevant?</caption>
         <tr>
             <th>Business Rule ID</th>
             <th>Business Rule</th>
@@ -270,7 +265,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-6 GENERAL DATE RULES</caption>
+        <caption>TABLE DATE RULES</caption>
         <tr>
             <th>Business Rule</th>
             <th>Example</th>
@@ -306,7 +301,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-7 LOGICAL COMPONENT DATE RULES</caption>
+        <caption>TABLE DATE RULES</caption>
         <tr>
             <th>Business Rule</th>
             <th>Calculation</th>
@@ -445,7 +440,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package pythia.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 30, 2024 11:57-0400">2024-04-30</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package pythia.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 30, 2024 13:37-0400">2024-04-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

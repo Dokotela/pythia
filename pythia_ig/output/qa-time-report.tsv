@@ -1,9 +1,9 @@
 Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
-/fsh-generated/resources/ImplementationGuide-pythia.ig.json	3334	-	0	0	0	0	0	0	2	35	0	0	0	0	0	0	0	0	0	0	79	53	0	0	0	2	0	0
-fsh-generated/resources/CodeSystem-vaccine-observation-codes.json	33619	19	0	0	0	0	0	0	2	34	0	0	0	0	0	0	0	1	0	0	227	1057	1	0	0	3	0	1
-fsh-generated/resources/StructureDefinition-Vaccine.json	3090	11	1	0	0	0	0	9	0	24	0	0	0	0	0	0	0	0	0	0	87	509	0	0	0	1	0	1
-fsh-generated/resources/StructureDefinition-antigen-supporting-data.json	23634	11	0	0	0	0	0	36	0	61	0	0	1	0	0	0	0	2	0	0	672	529	0	1	0	7	1	1
-fsh-generated/resources/StructureDefinition-assessment-date.json	1221	8	0	0	0	0	0	12	0	13	0	0	0	0	0	0	0	0	0	0	62	99	0	0	0	1	0	0
-fsh-generated/resources/StructureDefinition-schedule-supporting-data.json	15487	9	0	0	0	0	0	25	0	22	0	0	0	0	0	0	0	1	0	0	428	356	0	0	0	4	0	3
-fsh-generated/resources/StructureDefinition-vax-patient.json	657	7	0	0	0	0	0	26	0	14	0	0	0	0	0	0	0	1	0	0	239	260	0	0	0	4	1	2
-fsh-generated/resources/ValueSet-vaccine-gender.json	2298	7	0	0	0	0	0	0	0	52	0	0	0	0	0	0	0	0	0	0	21	1870	0	0	0	1	0	0
+/fsh-generated/resources/ImplementationGuide-pythia.ig.json	3187	-	0	0	0	0	0	0	3	34	0	0	0	0	0	0	0	0	0	0	89	53	0	0	0	2	1	0
+fsh-generated/resources/CodeSystem-vaccine-observation-codes.json	33619	19	0	0	0	0	0	0	3	39	0	0	0	0	0	0	0	1	0	0	207	986	0	0	0	3	0	1
+fsh-generated/resources/StructureDefinition-Vaccine.json	3090	15	0	0	0	0	0	11	0	27	0	0	1	0	0	0	0	0	0	0	83	463	0	1	0	1	0	0
+fsh-generated/resources/StructureDefinition-antigen-supporting-data.json	23634	12	1	0	0	0	0	55	0	35	0	0	0	0	0	0	0	2	0	0	671	544	0	0	0	7	0	0
+fsh-generated/resources/StructureDefinition-assessment-date.json	1221	8	0	0	0	0	0	12	0	12	0	0	0	0	0	0	0	0	0	0	53	96	0	0	0	1	0	0
+fsh-generated/resources/StructureDefinition-schedule-supporting-data.json	15487	10	0	0	0	0	0	34	0	26	0	0	0	0	0	0	0	1	0	0	414	261	0	0	0	4	0	1
+fsh-generated/resources/StructureDefinition-vax-patient.json	657	8	0	0	0	0	0	36	0	18	0	0	0	0	0	0	0	1	0	0	224	235	0	0	0	4	0	1
+fsh-generated/resources/ValueSet-vaccine-gender.json	2298	7	0	0	0	0	0	0	0	61	0	0	0	0	0	0	0	0	0	0	24	1988	0	0	0	0	0	0

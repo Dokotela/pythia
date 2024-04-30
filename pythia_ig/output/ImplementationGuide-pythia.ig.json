@@ -9,7 +9,7 @@
   "version" : "0.1.0",
   "name" : "PythiaIG",
   "status" : "draft",
-  "date" : "2024-04-30T11:57:33-04:00",
+  "date" : "2024-04-30T13:37:40-04:00",
   "publisher" : "FHIR-FLI",
   "contact" : [{
     "name" : "FHIR-FLI",
@@ -714,15 +714,6 @@
         }],
         "nameUrl" : "index.html",
         "title" : "Home",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "decision-support-wg.html"
-        }],
-        "nameUrl" : "decision-support-wg.html",
-        "title" : "Decision Support Wg",
         "generation" : "markdown"
       },
       {
