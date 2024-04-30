@@ -1,13 +1,12 @@
-# Preparation
+### This is only if you're interested in the actual code I've written behind this process
 
-- First thing is to download all of the [Supporting Data](https://www.cdc.gov/vaccines/programs/iis/downloads/supporting-data-4.53-508.zip) from [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/vaccines/programs/iis/cdsi.html)
-- You'll notice they have both XML and XLSX files. Unfortunately (at least for me) I don't like either of these formats. So to fix this, I've created a generator that runs on google sheets.
-- All of the XLSX files I've transferred into Gsheets, [the link can be found here](https://drive.google.com/drive/folders/1LUDu9y85qd0aJwFtvwv0h3fQUafqfTDq)
-- The Coded Observations sheets I had to remove all of the carriage returns ("\n" in Regex) because they screw up the Gsheets TSV parser in Dart
-- I had to do the same for most of the Antigen spreadsheets as well (I replaced all ```"\n"``` with ```" "```)
-- the ```api.dart``` file are credentials for a service acccount (let me know if you'd like help with this)
-- So run the pythia generator (just be in the same directory as the project and run "```./generate.sh```")
-- There is a time limit about how often you can request data from spreadsheets, so sometimes you do have to edit the sleep time in download_sheets
-- I added in test case generation as well
-- Pulls from the spreadsheets to create test cases
-- Once again, had to replace all ```"\n"``` with ```" "``` for the generation
+    - The full [Github Repo is here](https://github.com/Dokotela/pythia)
+    - The generator is designed to turn the [Supporting Data](https://www.cdc.gov/vaccines/programs/iis/downloads/supporting-data-4.53-508.zip) from [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/vaccines/programs/iis/cdsi.html) into JSON and Dart Classes.
+    - You'll notice in those downloaded files, they include both XML and XLSX files. Unfortunately (at least for me) I don't like either of these formats.
+    - All of the XLSX files I've transferred into Gsheets, [the link can be found here](https://drive.google.com/drive/folders/1NL3xJH2Yl98-IvrWMp-Jf2kxMMiYzehj)
+    - After converting them all to Gsheets format, I then went through and did a regex replace (`" "` for `"\n"`)
+    - This is due because the carriage return (`"\n"` in Regex) screw up the Gsheets TSV parser in Dart
+    - The `api.dart` file are credentials for a service account (let me know if you'd like help to do this on your own)
+    - You can then run the pythia generator (root directory of the project, and run `./generate.sh`)
+    - There is a time limit about how often you can request data from spreadsheets, so sometimes you do have to edit the sleep time in [download_sheets](https://github.com/Dokotela/pythia/blob/main/pythia_generator/lib/utils/download_sheets.dart#L16)
+    - This generator also creates two sets of test cases. One with conditions, observations, etc. and one without

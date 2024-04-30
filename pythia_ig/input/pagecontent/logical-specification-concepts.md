@@ -1,5 +1,3 @@
-# Logical Specification Concepts
-
 There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here's a description of some of them. Again, this was all taken from the [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/vaccines/programs/iis/cdsi.html).
 
 ## Target Dose
@@ -16,7 +14,7 @@ How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image)
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-1 DOSE STATUS: recorded for each dose within each series</caption>
+        <caption>TABLE DOSE STATUS: recorded for each dose within each series</caption>
         <tr>
             <th>Status</th>
             <th>Meaning</th>
@@ -43,7 +41,7 @@ How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image)
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-2 TARGET DOSE STATUSES: recorded for each dose within each series.</caption>
+        <caption>TABLE DOSE STATUSES: recorded for each dose within each series.</caption>
         <tr>
             <th>Status</th>
             <th>Meaning</th>
@@ -66,7 +64,7 @@ How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image)
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-3 PATIENT SERIES STATUSES: recorded for each series within the antigen group.</caption>
+        <caption>TABLE PATIENT SERIES STATUSES: recorded for each series within the antigen group.</caption>
         <tr>
             <th>Status</th>
             <th>Meaning</th>
@@ -103,7 +101,7 @@ How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image)
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-5 Is the Logical Component Relevant?</caption>
+        <caption>TABLE Is the Logical Component Relevant?</caption>
         <tr>
             <th>Business Rule ID</th>
             <th>Business Rule</th>
@@ -126,7 +124,7 @@ As anyone who has worked with dates can tell you, they're a huge pain in the ass
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-6 GENERAL DATE RULES</caption>
+        <caption>TABLE DATE RULES</caption>
         <tr>
             <th>Business Rule</th>
             <th>Example</th>
@@ -163,7 +161,7 @@ It's important to note, and it took me a while to catch onto their wording, ther
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE 3-7 LOGICAL COMPONENT DATE RULES</caption>
+        <caption>TABLE DATE RULES</caption>
         <tr>
             <th>Business Rule</th>
             <th>Calculation</th>

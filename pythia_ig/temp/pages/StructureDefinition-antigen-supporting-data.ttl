@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "AntigenSupportingData"] ; # 
   fhir:title [ fhir:v "Antigen Supporting Data"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-04-29T11:15:56-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-30T11:57:33-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "FHIR-FLI" ] ;

@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="PythiaIG"/>
   <status value="draft"/>
-  <date value="2024-04-29T11:15:56-04:00"/>
+  <date value="2024-04-30T11:57:33-04:00"/>
   <publisher value="FHIR-FLI"/>
   <contact>
     <name value="FHIR-FLI"/>
@@ -35,7 +35,7 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="1.0.0"/>
+    <version value="5.1.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">

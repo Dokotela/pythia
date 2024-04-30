@@ -10,7 +10,7 @@
     "url" : "http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig",
     "version" : "0.1.0",
     "name" : "PythiaIG",
-    "date" : "2024-04-29T11:15:56-04:00",
+    "date" : "2024-04-30T11:57:33-04:00",
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -30,7 +30,7 @@
     "version" : "0.1.0",
     "name" : "VaccineObservationCodes",
     "title" : "Vaccine Observation Codes",
-    "date" : "2024-04-29T11:15:56-04:00",
+    "date" : "2024-04-30T11:57:33-04:00",
     "description" : "Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
     "status" : {
       "class" : "colsd",
@@ -51,7 +51,7 @@
     "version" : "0.1.0",
     "name" : "Vaccine",
     "title" : "Vaccine",
-    "date" : "2024-04-29T11:15:56-04:00",
+    "date" : "2024-04-30T11:57:33-04:00",
     "description" : "Simple vaccine to easily obtain needed information for forecasting",
     "status" : {
       "class" : "colsd",
@@ -72,7 +72,7 @@
     "version" : "0.1.0",
     "name" : "AntigenSupportingData",
     "title" : "Antigen Supporting Data",
-    "date" : "2024-04-29T11:15:56-04:00",
+    "date" : "2024-04-30T11:57:33-04:00",
     "description" : "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series.",
     "status" : {
       "class" : "colsd",
@@ -92,7 +92,7 @@
     "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/assessment-date",
     "version" : "0.1.0",
     "name" : "AssessmentDate",
-    "date" : "2024-04-29T11:15:56-04:00",
+    "date" : "2024-04-30T11:57:33-04:00",
     "description" : "The date on which the vaccination assessment was made.",
     "status" : {
       "class" : "colsd",
@@ -113,7 +113,7 @@
     "version" : "0.1.0",
     "name" : "ScheduleSupportingData",
     "title" : "Schedule Supporting Data",
-    "date" : "2024-04-29T11:15:56-04:00",
+    "date" : "2024-04-30T11:57:33-04:00",
     "description" : "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes.",
     "status" : {
       "class" : "colsd",
@@ -134,7 +134,7 @@
     "version" : "0.1.0",
     "name" : "VaxPatient",
     "title" : "Vaccination Patient",
-    "date" : "2024-04-29T11:15:56-04:00",
+    "date" : "2024-04-30T11:57:33-04:00",
     "description" : "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information.",
     "status" : {
       "class" : "colsd",
@@ -155,7 +155,7 @@
     "version" : "0.1.0",
     "name" : "VaccineGender",
     "title" : "Vaccine Gender",
-    "date" : "2024-04-29T11:15:56-04:00",
+    "date" : "2024-04-30T11:57:33-04:00",
     "description" : "A value set that groups detailed genders from SNOMED CT and LOINC into broader categories (male, female, transgender, other) for use in vaccine predictions.",
     "status" : {
       "class" : "colsd",
