@@ -1,4 +1,11 @@
 [AssessmentDate]: StructureDefinition-assessment-date.html
+[EvalReason]: CodeSystem-EvalReason.html
+[EvalStatus]: CodeSystem-EvalStatus.html
+[EvalStatusValueSet]: ValueSet-eval-status-value-set.html
+[IntervalReason]: CodeSystem-interval-reason.html
+[PreferredAllowedReason]: CodeSystem-PreferredAllowedReason.html
 [VaxPatient]: StructureDefinition-vax-patient.html
 [VaccineGender]: ValueSet-vaccine-gender.html
+[VaccineGender]: CodeSystem-vaccine-gender.html
 [VaccineObservationCodes]: CodeSystem-vaccine-observation-codes.html
+[ValidAgeReason]: CodeSystem-valid-age-reason.html

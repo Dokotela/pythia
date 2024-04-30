@@ -132,26 +132,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#7-forecast-dates-and-reasons" id="markdown-toc-7-forecast-dates-and-reasons">7 Forecast Dates and Reasons</a>    <ul>
-      <li><a href="#71-evaluate-conditional-skip" id="markdown-toc-71-evaluate-conditional-skip">7.1 Evaluate Conditional Skip</a></li>
-      <li><a href="#72-determine-evidence-of-immunity" id="markdown-toc-72-determine-evidence-of-immunity">7.2 Determine Evidence of Immunity</a></li>
-      <li><a href="#73-determine-contraindications" id="markdown-toc-73-determine-contraindications">7.3 Determine Contraindications</a></li>
-      <li><a href="#74-determine-forecast-need" id="markdown-toc-74-determine-forecast-need">7.4 Determine Forecast Need</a></li>
-      <li><a href="#75-generate-forecast-dates-and-recommended-vaccines" id="markdown-toc-75-generate-forecast-dates-and-recommended-vaccines">7.5 Generate Forecast Dates and Recommended Vaccines</a></li>
-    </ul>
-  </li>
+  <li><a href="#evaluate-conditional-skip" id="markdown-toc-evaluate-conditional-skip">Evaluate Conditional Skip</a></li>
+  <li><a href="#determine-evidence-of-immunity" id="markdown-toc-determine-evidence-of-immunity">Determine Evidence of Immunity</a></li>
+  <li><a href="#determine-contraindications" id="markdown-toc-determine-contraindications">Determine Contraindications</a></li>
+  <li><a href="#determine-forecast-need" id="markdown-toc-determine-forecast-need">Determine Forecast Need</a></li>
+  <li><a href="#generate-forecast-dates-and-recommended-vaccines" id="markdown-toc-generate-forecast-dates-and-recommended-vaccines">Generate Forecast Dates and Recommended Vaccines</a></li>
 </ul>
 
 </div>
-<h2 id="7-forecast-dates-and-reasons">7 Forecast Dates and Reasons</h2>
-
-<p>Made it through the evaluation process. Next up, creating the forecast.</p>
-
-<h3 id="71-evaluate-conditional-skip">7.1 Evaluate Conditional Skip</h3>
+<h3 id="evaluate-conditional-skip">Evaluate Conditional Skip</h3>
 
 <p>We’ve already gone through this. There’s a couple of rule changes, like the context is Forecast instead of Evaluation, and we use a different reference date. Otherwise, it’s the same logic we used during the Evaluation process.</p>
 
-<h3 id="72-determine-evidence-of-immunity">7.2 Determine Evidence of Immunity</h3>
+<h3 id="determine-evidence-of-immunity">Determine Evidence of Immunity</h3>
 
 <p>We use this information to determine if the patient has evidence of immunity. It’s important to note, the <em>guidelineCode</em> and <em>exclusionCode</em> are the same as <em>observationCode</em>. Why they decided to give them different names is beyond me. Anyway, we use these codes to see if the patient has any conditions that apply for immunity.</p>
 
@@ -204,11 +197,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>I think there are two things to note about this logic (please let me know if you disagree with it). Also, the order here is important, but aligns with the CDC guidelines. The first is that if the patient has <strong>ANY</strong> immunity defined condition, then they have evidence of immunity. Otherwise, they <strong>MUST</strong> have been born prior to the defined birthdate. The immunity exclusion criteria must then be reviewed. If the patient has <strong>ANY</strong> of these criteria, then they <strong>DO NOT</strong> have evidence of immunity. Lastly, they must be born in the designated country.</p>
 
-<h3 id="73-determine-contraindications">7.3 Determine Contraindications</h3>
+<h3 id="determine-contraindications">Determine Contraindications</h3>
 
 <p>This one actually isn’t too bad either. There are just a few things to note. The first is that contraindications come in Groups or Vaccines. If a patient has a contraindication at the group level, that means any vaccine that pertains to that Antigen is contraindicated. Contraindications at the vaccine level only apply to a single Vaccine, so just because one is contraindicated doesn’t mean taht they all are. Also, for the logic is slightly out of order compared to the CDC booklet, and I don’t calculate any vaccine contraindications if there’s already a group/antigen level contraindication.</p>
 
-<h3 id="74-determine-forecast-need">7.4 Determine Forecast Need</h3>
+<h3 id="determine-forecast-need">Determine Forecast Need</h3>
 
 <p>This is summarizing the information we have up to this point about each of the series and using it to decide if the patient needs another dose.</p>
 <table border="1">
@@ -310,7 +303,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Most of these are straight forward except the final one. Also, I chose to do my logic in a slightly different order to the official questions. I start out asking if someone is immune. If they are, nothing else matters, they’re finished that series. After, I look if it’s contraindicated. If it is, they shouldn’t get any more. Then I go through the rest of the branching logic. As I said, it’s only the final one that I have trouble with. Mostly because some of what they’re asking (such as intervals and ages) are lists, and it wasn’t clear to me if I choose the first one in the list, or go through and test it for each entry in the list. I went with the latter.</p>
 
-<h3 id="75-generate-forecast-dates-and-recommended-vaccines">7.5 Generate Forecast Dates and Recommended Vaccines</h3>
+<h3 id="generate-forecast-dates-and-recommended-vaccines">Generate Forecast Dates and Recommended Vaccines</h3>
 
 <p>There are some of these that have been defined I’m not convinced are actually needed. That probably means I haven’t figured it out completely yet.</p>
 
@@ -396,7 +389,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package pythia.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 30, 2024 13:37-0400">2024-04-30</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package pythia.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 30, 2024 19:45-0400">2024-04-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

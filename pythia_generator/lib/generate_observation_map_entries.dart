@@ -4,22 +4,40 @@ import 'package:pythia/pythia.dart';
 
 Future<void> main() async {
   final VaxObservations? observations = scheduleSupportingData.observations;
+  String snomedEntries = '';
+  String cvxEntries = '';
+  String phinvadsEntries = '';
   for (final observation in observations?.observation ?? <VaxObservation>[]) {
     if (observation.codedValues != null) {
       for (final CodedValue codedValue
           in observation.codedValues?.codedValue ?? <CodedValue>[]) {
-        final url = codedValue.codeSystem == 'SNOMED'
-            ? 'http://snomed.info/sct'
-            : codedValue.codeSystem == 'CVX'
-                ? 'http://hl7.org/fhir/sid/cvx'
-                : 'http://phinvads.cdc.gov';
-        entries += '  // ${codedValue.text}\n';
-        entries +=
-            "  src.code.coding.where(system = '$url', code = '${codedValue.code}') -> tgt.code = createCode('${observation.observationCode}', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes');\n\n";
+        if (codedValue.codeSystem == 'SNOMED') {
+          snomedEntries += '    // ${codedValue.text}\n';
+          snomedEntries +=
+              "    '${codedValue.code}': ('${observation.observationCode}', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),\n";
+        } else if (codedValue.codeSystem == 'CVX') {
+          cvxEntries += '    // ${codedValue.text}\n';
+          cvxEntries +=
+              "    '${codedValue.code}': ('${observation.observationCode}', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),\n";
+        } else if (codedValue.codeSystem == 'CDCPHINVS') {
+          phinvadsEntries += '    // ${codedValue.text}\n';
+          phinvadsEntries +=
+              "    '${codedValue.code}': ('${observation.observationCode}', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),\n";
+        }
       }
     }
   }
-  entries += '}';
+  entries += "    'http://snomed.info/sct': {\n";
+  entries += snomedEntries;
+  entries += '    },\n';
+  entries += "    'http://hl7.org/fhir/sid/cvx': {\n";
+  entries += cvxEntries;
+  entries += '    },\n';
+  entries += "    'http://phinvads.cdc.gov': {\n";
+  entries += phinvadsEntries;
+  entries += '    }\n';
+  entries += '  };\n\n';
+  entries += fileEnd;
   await File('lib/generated_files/vaccine_observation_codes_map.map')
       .writeAsString(entries);
 }
@@ -106,5 +124,27 @@ function createCode(codeValue : string, systemValue : string) -> Coding {
   }
 }
 
-function ApplyCommonMappings(sourceCoding : Coding, targetCondition : targetCondition) {
+function ApplyCommonMappings(sourceCodings : List<Coding>, targetCondition : targetCondition) {
+  // Define a map of source system codes to target codes and systems
+  const mappings = {
 ''';
+
+const fileEnd = '''
+  // Process each coding in the sourceCodings list
+  sourceCodings.forEach((coding) => {
+    if (mappings[coding.system] && mappings[coding.system][coding.code]) {
+      const [targetCode, targetSystem] = mappings[coding.system][coding.code];
+      if (targetCode && targetSystem) {
+        // Create a new Coding for the target Condition
+        tgt.code = createCode(targetCode, targetSystem);
+      }
+    }
+  });
+}
+
+function createCode(codeValue : string, systemValue : string) -> Coding {
+  return Coding {
+    system = systemValue,
+    code = codeValue
+  };
+}''';

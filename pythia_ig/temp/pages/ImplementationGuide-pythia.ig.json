@@ -9,7 +9,7 @@
   "version" : "0.1.0",
   "name" : "PythiaIG",
   "status" : "draft",
-  "date" : "2024-04-30T13:37:40-04:00",
+  "date" : "2024-04-30T19:45:10-04:00",
   "publisher" : "FHIR-FLI",
   "contact" : [{
     "name" : "FHIR-FLI",
@@ -633,6 +633,66 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/EvalReason"
+      },
+      "name" : "Evaluation Reason",
+      "description" : "The reason for the evaluation.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/EvalStatus"
+      },
+      "name" : "Evaluation Status",
+      "description" : "The status of the result of an evaluation.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/eval-status-value-set"
+      },
+      "name" : "Evaluation Status Value Set",
+      "description" : "Value Set for the status of the result of an evaluation.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/interval-reason"
+      },
+      "name" : "IntervalReason",
+      "description" : "This value set includes codes for the reason an interval is considered to be invalid.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/PreferredAllowedReason"
+      },
+      "name" : "Reasons why certain doses are Preferred or Allowed doses",
+      "description" : "Reasons why certain doses are Preferred or Allowed doses",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -651,7 +711,19 @@
         "reference" : "ValueSet/vaccine-gender"
       },
       "name" : "Vaccine Gender",
-      "description" : "A value set that groups detailed genders from SNOMED CT and LOINC into broader categories (male, female, transgender, other) for use in vaccine predictions.",
+      "description" : "Value set for gender categories relevant to vaccination data.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/vaccine-gender"
+      },
+      "name" : "Vaccine Gender",
+      "description" : "Value set for gender categories relevant to vaccination data.",
       "exampleBoolean" : false
     },
     {
@@ -664,6 +736,18 @@
       },
       "name" : "Vaccine Observation Codes",
       "description" : "Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/valid-age-reason"
+      },
+      "name" : "Valid Age Reason",
+      "description" : "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
       "exampleBoolean" : false
     },
     {
@@ -759,15 +843,6 @@
         }],
         "nameUrl" : "processing-model.html",
         "title" : "Processing Model",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "relevant-series.html"
-        }],
-        "nameUrl" : "relevant-series.html",
-        "title" : "Relevant Series",
         "generation" : "markdown"
       }]
     },

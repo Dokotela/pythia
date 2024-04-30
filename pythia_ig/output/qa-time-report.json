@@ -1,55 +1,260 @@
 {
-  "date" : "Tue, 30 Apr, 2024 13:37:40 -0400",
+  "date" : "Tue, 30 Apr, 2024 19:45:10 -0400",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
       "name" : "/fsh-generated/resources/ImplementationGuide-pythia.ig.json",
-      "size" : 3187,
+      "size" : 4803,
       "processes" : [
         {
-          "activity" : "scan",
-          "start" : 11,
+          "activity" : "load",
+          "start" : 16,
+          "length" : 6
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 16,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 16,
+          "length" : 32
+        },
+        {
+          "activity" : "validate",
+          "start" : 18,
+          "length" : 351
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 18,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 18,
+          "length" : 232
+        },
+        {
+          "activity" : "generate2",
+          "start" : 27,
+          "length" : 50
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 37,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 37,
+          "length" : 2
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 41,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-EvalReason.json",
+      "size" : 2224,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 16,
+          "length" : 9
+        },
+        {
+          "activity" : "load",
+          "start" : 16,
+          "length" : 7
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 16,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 16,
+          "length" : 14
+        },
+        {
+          "activity" : "validate",
+          "start" : 17,
+          "length" : 47
+        },
+        {
+          "activity" : "generate1",
+          "start" : 18,
+          "length" : 62
+        },
+        {
+          "activity" : "generate2",
+          "start" : 27,
+          "length" : 1095
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-EvalStatus.json",
+      "size" : 729,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 16,
+          "length" : 8
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 16,
           "length" : 1
         },
         {
           "activity" : "load",
-          "start" : 11,
-          "length" : 15
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 12,
+          "start" : 16,
           "length" : 3
         },
         {
           "activity" : "generateNarratives",
-          "start" : 12,
-          "length" : 34
+          "start" : 16,
+          "length" : 9
         },
         {
           "activity" : "validate",
-          "start" : 13,
-          "length" : 368
+          "start" : 17,
+          "length" : 6
         },
         {
           "activity" : "generate1",
-          "start" : 14,
-          "length" : 89
+          "start" : 19,
+          "length" : 29
         },
         {
           "activity" : "generate2",
-          "start" : 17,
-          "length" : 53
+          "start" : 28,
+          "length" : 38
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-PreferredAllowedReason.json",
+      "size" : 1317,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 16,
+          "length" : 8
         },
         {
-          "activity" : "generateValidationPack",
-          "start" : 24,
+          "activity" : "load",
+          "start" : 16,
           "length" : 2
         },
         {
-          "activity" : "scanProfilesForR5",
-          "start" : 27,
+          "activity" : "generateNarratives",
+          "start" : 16,
+          "length" : 8
+        },
+        {
+          "activity" : "validate",
+          "start" : 17,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 19,
+          "length" : 44
+        },
+        {
+          "activity" : "generate2",
+          "start" : 28,
+          "length" : 33
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 37,
           "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-interval-reason.json",
+      "size" : 746,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 16,
+          "length" : 8
+        },
+        {
+          "activity" : "load",
+          "start" : 16,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 16,
+          "length" : 9
+        },
+        {
+          "activity" : "validate",
+          "start" : 17,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 19,
+          "length" : 30
+        },
+        {
+          "activity" : "generate2",
+          "start" : 28,
+          "length" : 34
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-vaccine-gender.json",
+      "size" : 734,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 16,
+          "length" : 9
+        },
+        {
+          "activity" : "scan",
+          "start" : 16,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 16,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 16,
+          "length" : 8
+        },
+        {
+          "activity" : "validate",
+          "start" : 17,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 19,
+          "length" : 29
+        },
+        {
+          "activity" : "generate2",
+          "start" : 28,
+          "length" : 28
         }
       ]
     },
@@ -59,57 +264,98 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 11,
-          "length" : 19
+          "start" : 16,
+          "length" : 6
         },
         {
           "activity" : "load",
-          "start" : 11,
-          "length" : 27
+          "start" : 16,
+          "length" : 12
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 12,
-          "length" : 3
+          "start" : 16,
+          "length" : 2
         },
         {
           "activity" : "generateNarratives",
-          "start" : 12,
-          "length" : 39
+          "start" : 16,
+          "length" : 30
         },
         {
           "activity" : "validate",
-          "start" : 12,
-          "length" : 122
+          "start" : 17,
+          "length" : 77
         },
         {
-          "activity" : "validate",
-          "start" : 13,
+          "activity" : "checkConformanceResources",
+          "start" : 18,
           "length" : 1
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 14,
+          "start" : 18,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 14,
-          "length" : 207
+          "start" : 19,
+          "length" : 714
         },
         {
           "activity" : "generate2",
-          "start" : 17,
-          "length" : 986
+          "start" : 28,
+          "length" : 113
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 24,
+          "start" : 37,
           "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 27,
+          "start" : 41,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-valid-age-reason.json",
+      "size" : 716,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 16,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 16,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 16,
+          "length" : 9
+        },
+        {
+          "activity" : "validate",
+          "start" : 17,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 19,
+          "length" : 30
+        },
+        {
+          "activity" : "generate2",
+          "start" : 29,
+          "length" : 27
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 37,
           "length" : 1
         }
       ]
@@ -120,52 +366,52 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 11,
-          "length" : 15
+          "start" : 16,
+          "length" : 2
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 16,
+          "length" : 1
         },
         {
           "activity" : "load",
-          "start" : 11,
-          "length" : 11
+          "start" : 16,
+          "length" : 4
         },
         {
           "activity" : "generateSnapshots",
-          "start" : 11,
-          "length" : 11
+          "start" : 16,
+          "length" : 8
         },
         {
           "activity" : "generateNarratives",
-          "start" : 12,
-          "length" : 27
+          "start" : 16,
+          "length" : 20
         },
         {
           "activity" : "validate",
-          "start" : 12,
-          "length" : 96
+          "start" : 17,
+          "length" : 340
         },
         {
-          "activity" : "checkConformanceResources",
-          "start" : 14,
+          "activity" : "validate",
+          "start" : 18,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 14,
-          "length" : 83
+          "start" : 19,
+          "length" : 297
         },
         {
           "activity" : "generate2",
-          "start" : 18,
-          "length" : 463
-        },
-        {
-          "activity" : "makeDependencies",
-          "start" : 22,
-          "length" : 1
+          "start" : 29,
+          "length" : 681
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 24,
+          "start" : 37,
           "length" : 1
         }
       ]
@@ -176,53 +422,53 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 11,
-          "length" : 12
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 11,
-          "length" : 1
+          "start" : 16,
+          "length" : 5
         },
         {
           "activity" : "load",
-          "start" : 11,
-          "length" : 18
+          "start" : 16,
+          "length" : 8
         },
         {
           "activity" : "generateSnapshots",
-          "start" : 11,
-          "length" : 55
+          "start" : 16,
+          "length" : 40
         },
         {
           "activity" : "generateNarratives",
-          "start" : 12,
-          "length" : 35
+          "start" : 16,
+          "length" : 55
         },
         {
           "activity" : "validate",
-          "start" : 12,
-          "length" : 438
+          "start" : 17,
+          "length" : 333
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 14,
-          "length" : 2
+          "start" : 18,
+          "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 14,
-          "length" : 671
+          "start" : 20,
+          "length" : 2644
         },
         {
           "activity" : "generate2",
-          "start" : 18,
-          "length" : 544
+          "start" : 29,
+          "length" : 606
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 24,
-          "length" : 7
+          "start" : 37,
+          "length" : 8
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 41,
+          "length" : 1
         }
       ]
     },
@@ -232,42 +478,42 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 11,
-          "length" : 8
+          "start" : 16,
+          "length" : 2
         },
         {
           "activity" : "load",
-          "start" : 11,
-          "length" : 10
+          "start" : 16,
+          "length" : 3
         },
         {
           "activity" : "generateSnapshots",
-          "start" : 11,
-          "length" : 12
+          "start" : 16,
+          "length" : 11
         },
         {
           "activity" : "generateNarratives",
-          "start" : 12,
-          "length" : 12
+          "start" : 16,
+          "length" : 9
         },
         {
           "activity" : "validate",
-          "start" : 13,
-          "length" : 33
+          "start" : 17,
+          "length" : 26
         },
         {
           "activity" : "generate1",
-          "start" : 15,
-          "length" : 53
+          "start" : 22,
+          "length" : 187
         },
         {
           "activity" : "generate2",
-          "start" : 19,
-          "length" : 96
+          "start" : 30,
+          "length" : 94
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 24,
+          "start" : 37,
           "length" : 1
         }
       ]
@@ -278,145 +524,186 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 11,
-          "length" : 10
+          "start" : 16,
+          "length" : 5
         },
         {
           "activity" : "load",
-          "start" : 11,
-          "length" : 15
+          "start" : 16,
+          "length" : 5
         },
         {
           "activity" : "generateSnapshots",
-          "start" : 11,
-          "length" : 34
+          "start" : 16,
+          "length" : 23
         },
         {
           "activity" : "generateNarratives",
-          "start" : 12,
-          "length" : 26
+          "start" : 16,
+          "length" : 32
         },
         {
           "activity" : "validate",
-          "start" : 13,
-          "length" : 186
+          "start" : 17,
+          "length" : 165
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 14,
+          "start" : 18,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 15,
-          "length" : 414
+          "start" : 23,
+          "length" : 1684
         },
         {
           "activity" : "generate2",
-          "start" : 19,
-          "length" : 261
+          "start" : 30,
+          "length" : 316
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 24,
-          "length" : 4
+          "start" : 37,
+          "length" : 5
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 27,
+          "start" : 41,
           "length" : 1
         }
       ]
     },
     {
       "name" : "fsh-generated/resources/StructureDefinition-vax-patient.json",
-      "size" : 657,
+      "size" : 1513,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 11,
-          "length" : 8
+          "start" : 16,
+          "length" : 2
         },
         {
           "activity" : "load",
-          "start" : 11,
-          "length" : 9
+          "start" : 16,
+          "length" : 3
         },
         {
           "activity" : "generateSnapshots",
-          "start" : 12,
-          "length" : 36
+          "start" : 16,
+          "length" : 49
         },
         {
           "activity" : "generateNarratives",
-          "start" : 12,
-          "length" : 18
+          "start" : 16,
+          "length" : 21
         },
         {
           "activity" : "validate",
-          "start" : 13,
-          "length" : 328
+          "start" : 18,
+          "length" : 156
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 14,
+          "start" : 18,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 15,
-          "length" : 224
+          "start" : 24,
+          "length" : 859
         },
         {
           "activity" : "generate2",
-          "start" : 19,
-          "length" : 235
+          "start" : 30,
+          "length" : 293
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 24,
-          "length" : 4
+          "start" : 37,
+          "length" : 5
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 27,
+          "start" : 41,
           "length" : 1
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/ValueSet-vaccine-gender.json",
-      "size" : 2298,
+      "name" : "fsh-generated/resources/ValueSet-eval-status-value-set.json",
+      "size" : 852,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 11,
-          "length" : 7
+          "start" : 16,
+          "length" : 2
         },
         {
           "activity" : "load",
-          "start" : 11,
-          "length" : 11
+          "start" : 16,
+          "length" : 3
         },
         {
           "activity" : "generateNarratives",
-          "start" : 12,
-          "length" : 61
+          "start" : 16,
+          "length" : 64
         },
         {
           "activity" : "validate",
-          "start" : 12,
-          "length" : 256
+          "start" : 17,
+          "length" : 11
         },
         {
           "activity" : "generate1",
-          "start" : 16,
-          "length" : 24
+          "start" : 25,
+          "length" : 32
         },
         {
           "activity" : "generate2",
-          "start" : 19,
-          "length" : 1988
+          "start" : 31,
+          "length" : 2393
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-vaccine-gender.json",
+      "size" : 814,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 16,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 16,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 17,
+          "length" : 5
+        },
+        {
+          "activity" : "validate",
+          "start" : 17,
+          "length" : 5
+        },
+        {
+          "activity" : "validate",
+          "start" : 18,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 25,
+          "length" : 32
+        },
+        {
+          "activity" : "generate2",
+          "start" : 33,
+          "length" : 47
         }
       ]
     }

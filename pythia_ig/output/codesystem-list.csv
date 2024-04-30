@@ -1,2 +1,8 @@
 URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason,0.1.0,draft,,EvalReason,Evaluation Reason,"The reason for the evaluation.",
+http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus,0.1.0,draft,,EvalStatus,Evaluation Status,"The status of the result of an evaluation.",
+http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason,0.1.0,draft,,PreferredAllowedReason,Reasons why certain doses are Preferred or Allowed doses,"Reasons why certain doses are Preferred or Allowed doses",
+http://fhirfli.dev/fhir/ig/pythia/CodeSystem/interval-reason,0.1.0,draft,,IntervalReason,IntervalReason,"This value set includes codes for the reason an interval is considered to be invalid.",
+http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender,0.1.0,draft,,VaccineGender,Vaccine Gender,"Value set for gender categories relevant to vaccination data.",
 http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes,0.1.0,draft,,VaccineObservationCodes,Vaccine Observation Codes,"Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
+http://fhirfli.dev/fhir/ig/pythia/CodeSystem/valid-age-reason,0.1.0,draft,,ValidAgeReason,Valid Age Reason,"Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",

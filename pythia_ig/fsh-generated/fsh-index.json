@@ -1,11 +1,59 @@
 [
   {
+    "outputFile": "CodeSystem-EvalReason.json",
+    "fshName": "EvalReason",
+    "fshType": "CodeSystem",
+    "fshFile": "eval_reason.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "CodeSystem-EvalStatus.json",
+    "fshName": "EvalStatus",
+    "fshType": "CodeSystem",
+    "fshFile": "eval_status.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "CodeSystem-PreferredAllowedReason.json",
+    "fshName": "PreferredAllowedReason",
+    "fshType": "CodeSystem",
+    "fshFile": "preferred_allowed_reason.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "CodeSystem-interval-reason.json",
+    "fshName": "IntervalReason",
+    "fshType": "CodeSystem",
+    "fshFile": "interval_reason.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "CodeSystem-vaccine-gender.json",
+    "fshName": "VaccineGender",
+    "fshType": "CodeSystem",
+    "fshFile": "vaccine_gender.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
     "outputFile": "CodeSystem-vaccine-observation-codes.json",
     "fshName": "VaccineObservationCodes",
     "fshType": "CodeSystem",
     "fshFile": "vaccine_observation_codes.fsh",
     "startLine": 1,
     "endLine": 506
+  },
+  {
+    "outputFile": "CodeSystem-valid-age-reason.json",
+    "fshName": "ValidAgeReason",
+    "fshType": "CodeSystem",
+    "fshFile": "valid_age_reason.fsh",
+    "startLine": 2,
+    "endLine": 8
   },
   {
     "outputFile": "StructureDefinition-Vaccine.json",
@@ -27,9 +75,9 @@
     "outputFile": "StructureDefinition-assessment-date.json",
     "fshName": "AssessmentDate",
     "fshType": "Extension",
-    "fshFile": "patient.fsh",
-    "startLine": 9,
-    "endLine": 12
+    "fshFile": "assessment_date.fsh",
+    "startLine": 2,
+    "endLine": 5
   },
   {
     "outputFile": "StructureDefinition-schedule-supporting-data.json",
@@ -45,14 +93,22 @@
     "fshType": "Profile",
     "fshFile": "patient.fsh",
     "startLine": 2,
-    "endLine": 6
+    "endLine": 15
+  },
+  {
+    "outputFile": "ValueSet-eval-status-value-set.json",
+    "fshName": "EvalStatusValueSet",
+    "fshType": "ValueSet",
+    "fshFile": "eval_status.fsh",
+    "startLine": 10,
+    "endLine": 17
   },
   {
     "outputFile": "ValueSet-vaccine-gender.json",
     "fshName": "VaccineGender",
     "fshType": "ValueSet",
     "fshFile": "vaccine_gender.fsh",
-    "startLine": 1,
-    "endLine": 28
+    "startLine": 12,
+    "endLine": 19
   }
 ]

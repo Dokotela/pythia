@@ -1,12 +1,8 @@
-## 7 Forecast Dates and Reasons
-
-Made it through the evaluation process. Next up, creating the forecast.
-
-### 7.1 Evaluate Conditional Skip
+### Evaluate Conditional Skip
 
 We've already gone through this. There's a couple of rule changes, like the context is Forecast instead of Evaluation, and we use a different reference date. Otherwise, it's the same logic we used during the Evaluation process.
 
-### 7.2 Determine Evidence of Immunity
+### Determine Evidence of Immunity
 
 We use this information to determine if the patient has evidence of immunity. It's important to note, the *guidelineCode* and *exclusionCode* are the same as *observationCode*. Why they decided to give them different names is beyond me. Anyway, we use these codes to see if the patient has any conditions that apply for immunity.
 
@@ -60,11 +56,11 @@ We use this information to determine if the patient has evidence of immunity. It
 
 I think there are two things to note about this logic (please let me know if you disagree with it). Also, the order here is important, but aligns with the CDC guidelines. The first is that if the patient has **ANY** immunity defined condition, then they have evidence of immunity. Otherwise, they **MUST** have been born prior to the defined birthdate. The immunity exclusion criteria must then be reviewed. If the patient has **ANY** of these criteria, then they **DO NOT** have evidence of immunity. Lastly, they must be born in the designated country.
 
-### 7.3 Determine Contraindications
+### Determine Contraindications
 
 This one actually isn't too bad either. There are just a few things to note. The first is that contraindications come in Groups or Vaccines. If a patient has a contraindication at the group level, that means any vaccine that pertains to that Antigen is contraindicated. Contraindications at the vaccine level only apply to a single Vaccine, so just because one is contraindicated doesn't mean taht they all are. Also, for the logic is slightly out of order compared to the CDC booklet, and I don't calculate any vaccine contraindications if there's already a group/antigen level contraindication.
 
-### 7.4 Determine Forecast Need
+### Determine Forecast Need
 
 This is summarizing the information we have up to this point about each of the series and using it to decide if the patient needs another dose.
 <table border="1">
@@ -166,7 +162,7 @@ This is summarizing the information we have up to this point about each of the s
 
 Most of these are straight forward except the final one. Also, I chose to do my logic in a slightly different order to the official questions. I start out asking if someone is immune. If they are, nothing else matters, they're finished that series. After, I look if it's contraindicated. If it is, they shouldn't get any more. Then I go through the rest of the branching logic. As I said, it's only the final one that I have trouble with. Mostly because some of what they're asking (such as intervals and ages) are lists, and it wasn't clear to me if I choose the first one in the list, or go through and test it for each entry in the list. I went with the latter.
 
-### 7.5 Generate Forecast Dates and Recommended Vaccines
+### Generate Forecast Dates and Recommended Vaccines
 
 There are some of these that have been defined I'm not convinced are actually needed. That probably means I haven't figured it out completely yet.
 

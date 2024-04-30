@@ -1,71 +1,58 @@
-## 6 Evaluate Vaccine Dose Administered
-
-Table 6-1 Evaluate Process Steps
+Table Evaluate Process Steps
 <table border="1">
   <tr>
-    <th>Section</th>
     <th>Activity</th>
     <th>Goal</th>
   </tr>
   <tr>
-    <td>6.1</td>
     <td>Evaluate Dose Administered Condition</td>
     <td>Determine if this dose is expired or subpotent (some reason it shouldn't be evaluated)</td>
   </tr>
   <tr>
-    <td>6.2</td>
     <td>Evaluate Conditional Skip</td>
     <td>The goal of this step is to determine if the target dose can be skipped due to a patient’s age or immunization history</td>
   </tr>
   <tr>
-    <td>6.3</td>
     <td>Evaluate For Inadvertent Vaccine</td>
     <td>The goal of this step is to determine if the vaccine dose administered was an inadvertent administration due to the vaccine type that was administered.</td>
   </tr>
   <tr>
-    <td>6.4</td>
     <td>Evaluate Age</td>
     <td>Was it given at the appropriate age</td>
   </tr>
   <tr>
-    <td>6.5</td>
     <td>Evaluate Preferable Interval</td>
     <td>Was it given within the preferred interval from the last dose</td>
   </tr>
   <tr>
-    <td>6.6</td>
     <td>Evaluate Allowable Interval</td>
     <td>Was it given within the allowed interval from the last dose</td>
   </tr>
   <tr>
-    <td>6.7</td>
     <td>Evaluate Live Virus Conflict</td>
     <td>Is there a conflict between this dose and any live virus vaccines</td>
   </tr>
   <tr>
-    <td>6.8</td>
     <td>Evaluate For Preferable Vaccine</td>
     <td>If there are preferred vaccines available for this dose, is it one of them</td>
   </tr>
   <tr>
-    <td>6.9</td>
     <td>Evaluate For Allowable Vaccine</td>
     <td>Is it an allowed vaccine for this dose</td>
   </tr>
   <tr>
-    <td>6.10</td>
     <td>Satisfy Target Dose</td>
     <td>Is the target dose satisfied</td>
   </tr>
 </table>
 
-### 6.1 Evaluate Dose Administered Condition
+###  Evaluate Dose Administered Condition
 
 This one is pretty easy. Was the vaccine expired before it was given? Is the vaccine subpotent for some reason? If the answer is yes to either of these, the dose can't be evaluated. Of note, we actually do this slightly earlier when we're first sorting the vaccines. When we're first assigning the vaccine doses given to the individual antigens, we bucket them at that point as either subpar or available for evaluation. This just saves us the trouble of looking at them as we evaluate each series, and we only look at the valid ones.
 
 Also, a brief note on how FHIR handles this. It's very similar. With the [Immunization resource] there is a field where it notes the ```expirationDate``` of the vaccine, which can be compared to the ```occurrence[x]``` which is the date the vaccine was given. There is also a boolean field, ```isSubpotent``` that indicates whether or not it is. There is also a list of CodeableConcepts in a field ```subpotentReason``` that can list why. The CDC manual lists examples such as sub-potent and recall, FHIR uses an [Immunization Subpotent Reason ValueSet](https://build.fhir.org/valueset-immunization-subpotent-reason.html) that contains partialdose, coldchainbreak, recall, adversestorage, and expired.
 
-### 6.2 Evaluate Skip Condition
+###  Evaluate Skip Condition
 
 Can the dose be skipped? Not the most complicated logic, but some of the terms, as usual, I found unclear. But the idea behind this is that there are times when you can skip a dose. This may be part of catch-up dosing, or the patient may have aged out. There is also skip logic, at both the set level and the condition level. Sets are lists of conditions. For a list of Conditions, we may have "AND" logic or "OR" logic. This is about what you'd expect. "AND" means that all of the listed conditions have to be true for that Set to be true. "OR" means that if any of the conditions are true, that set is true. Likewise, while it rarely happens, you can have set logic, also "AND" or "OR" with similar specifications. Now, the types of conditions that can define a skip come in 5 choices, so let's look at all the options, shall we?
 
@@ -194,11 +181,11 @@ administered.
 
 "How much wood could a woodchuck chuck, if a woodchuck could chuck wood?" anyone?
 
-### 6.3 Inadvertent Adminsitration
+###  Inadvertent Adminsitration
 
 There's a list of possible inadvertent vaccines for each seriesDose. If the dose you're evaluating is one of them, then it's marked as inadvertent and not valid, and we move onto the next dose that was given.
 
-### 6.4 Valid Age
+###  Valid Age
 
 Probably makes the most sense. It's just calculated given date of birth, plus minimum and maximum ages. If the vaccine was given within that time period, it is valid under the age criteria.
 <table border="1">
@@ -287,7 +274,7 @@ Probably makes the most sense. It's just calculated given date of birth, plus mi
 </table>
 
 
-### 6.5 Evalute Preferable Interval
+###  Evalute Preferable Interval
 
 Intervals also make sense, they're just more complicated. Currently I only perform logic for previous vaccine doses, not observations. There are certain conditions (such as pregnancy) that effect when to give certain vaccines. And the vaccines are supposed to be given a certain time period after the condition.
 <table border="1">
@@ -350,11 +337,11 @@ Intervals also make sense, they're just more complicated. Currently I only perfo
 
 This is certainly more complicated logic. If the interval for that dose is null, then the interval is valid. If it is the first in the series it is also valid. Otherwise, it loops through the list of intervals, and first checks to see if the interval listed is from the previous dose or another dose, then checks the interval compared to that dose. Allowable and preferable intervals are closely intertwined, so the logic for both is encapsulated in the same function.
 
-### 6.6 Evalute Allowable Interval
+###  Evalute Allowable Interval
 
 This one's easy. Is the date given less than the absolute minimum interval date? If so, then you're good to go. The CDC instructions only refer to previous doses given for this one, not observations, so for the time being intervals from observations are not part of this logic. This logic IS however, baked into the above logic, since it's part of that process as well.
 
-### 6.7 Evaluate Live Virus Conflicts
+###  Evaluate Live Virus Conflicts
 
 So now we get into where the manual relies too heavily on consistent terminology to make any sense:
 
@@ -366,7 +353,7 @@ First, it's helpful to know about the supporting data. In the supporting data, t
 1. So, the supporting data has a list of live virus conflict types. Is the type of the current dose being evaluated included in this list?
 2. Make a list of each entry where the current type is the same as the dose being evaluated. For each of entry in this list, look at the type defined in the previous field. If it is indeed the same as the previously given dose, then you have to check if there is a conflict using the dates given in that entry.
 
-### 6.8 Evaluate for Preferable Vaccine
+###  Evaluate for Preferable Vaccine
 
 There are vaccines that are allowed, and those that are preferred. This checks if the dose being evaluated is one of the latter. It's mostly used for scoring the series during the next few steps, and it DOES makes use of the MVX codes.
 
@@ -418,7 +405,7 @@ There are vaccines that are allowed, and those that are preferred. This checks i
 </table>
 
 
-### 6.9 Evaluate for Allowable Vaccine
+###  Evaluate for Allowable Vaccine
 
 Similar to the above, except this time it has to be one of these to be considered a valid dose.
 

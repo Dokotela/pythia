@@ -5,3 +5,9 @@ e: {
   "error" : "Error from http://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/v3/NullFlavor"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender", "version": "0.1.0"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from http://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/v3/NullFlavor"
+}
+-------------------------------------------------------------------------------------

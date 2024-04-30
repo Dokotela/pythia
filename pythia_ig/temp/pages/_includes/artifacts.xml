@@ -83,9 +83,17 @@
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-eval-status-value-set.html"
+                  title="ValueSet/eval-status-value-set">Evaluation Status Value Set</a>
+            </td>
+            <td>{% capture desc %}Value Set for the status of the result of an evaluation.{% endcapture %}
+{{ desc | markdownify}}</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-vaccine-gender.html" title="ValueSet/vaccine-gender">Vaccine Gender</a>
             </td>
-            <td>{% capture desc %}A value set that groups detailed genders from SNOMED CT and LOINC into broader categories (male, female, transgender, other) for use in vaccine predictions.{% endcapture %}
+            <td>{% capture desc %}Value set for gender categories relevant to vaccination data.{% endcapture %}
 {{ desc | markdownify}}</td>
          </tr>
       </tbody>
@@ -97,10 +105,55 @@
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-EvalReason.html" title="CodeSystem/EvalReason">Evaluation Reason</a>
+            </td>
+            <td>{% capture desc %}The reason for the evaluation.{% endcapture %}
+{{ desc | markdownify}}</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-EvalStatus.html" title="CodeSystem/EvalStatus">Evaluation Status</a>
+            </td>
+            <td>{% capture desc %}The status of the result of an evaluation.{% endcapture %}
+{{ desc | markdownify}}</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-interval-reason.html"
+                  title="CodeSystem/interval-reason">IntervalReason</a>
+            </td>
+            <td>{% capture desc %}This value set includes codes for the reason an interval is considered to be invalid.{% endcapture %}
+{{ desc | markdownify}}</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-PreferredAllowedReason.html"
+                  title="CodeSystem/PreferredAllowedReason">Reasons why certain doses are Preferred or Allowed doses</a>
+            </td>
+            <td>{% capture desc %}Reasons why certain doses are Preferred or Allowed doses{% endcapture %}
+{{ desc | markdownify}}</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vaccine-gender.html" title="CodeSystem/vaccine-gender">Vaccine Gender</a>
+            </td>
+            <td>{% capture desc %}Value set for gender categories relevant to vaccination data.{% endcapture %}
+{{ desc | markdownify}}</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-vaccine-observation-codes.html"
                   title="CodeSystem/vaccine-observation-codes">Vaccine Observation Codes</a>
             </td>
             <td>{% capture desc %}Observations and Conditions that are important to indications or contraindications in vaccine forecasting{% endcapture %}
+{{ desc | markdownify}}</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-valid-age-reason.html"
+                  title="CodeSystem/valid-age-reason">Valid Age Reason</a>
+            </td>
+            <td>{% capture desc %}Value set for reasons why a patient's age is considered valid/invalid for a vaccine.{% endcapture %}
 {{ desc | markdownify}}</td>
          </tr>
       </tbody>

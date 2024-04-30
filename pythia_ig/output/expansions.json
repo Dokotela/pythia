@@ -1,8 +1,124 @@
 {
   "resourceType" : "Bundle",
-  "id" : "dfedd523-137e-4af8-85a1-01d8d6e6eccd",
+  "id" : "433c2319-fdea-4947-ba6b-b65baec5a517",
   "meta" : {
-    "lastUpdated" : "2024-04-30T13:37:40.205-04:00"
+    "lastUpdated" : "2024-04-30T19:45:10.327-04:00"
   },
-  "type" : "collection"
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-EvalStatus.html\">codesystem Evaluation Status v0.1.0 (CodeSystem)</a></p><p>This value set contains 4 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-valid\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalStatus.html#EvalStatus-valid\">valid</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td><td>Valid</td><td><div><p>Valid</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-not-valid\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalStatus.html#EvalStatus-not_valid\">not_valid</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td><td>Not Valid</td><td><div><p>Not Valid</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-extraneous\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalStatus.html#EvalStatus-extraneous\">extraneous</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td><td>Extraneous</td><td><div><p>Extraneous</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-sub-standard\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalStatus.html#EvalStatus-sub_standard\">sub_standard</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td><td>Substandard</td><td><div><p>Substandard</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status-value-set",
+      "version" : "0.1.0",
+      "name" : "EvalStatusValueSet",
+      "title" : "Evaluation Status Value Set",
+      "status" : "draft",
+      "date" : "2024-04-30T19:45:10-04:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:9c3923f5-feb3-4224-b79c-4302d3417fdd",
+        "timestamp" : "2024-04-30T19:45:27-04:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus",
+          "code" : "valid",
+          "display" : "Valid"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus",
+          "code" : "not_valid",
+          "display" : "Not Valid"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus",
+          "code" : "extraneous",
+          "display" : "Extraneous"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus",
+          "code" : "sub_standard",
+          "display" : "Substandard"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-vaccine-gender.html\">codesystem Vaccine Gender v0.1.0 (CodeSystem)</a></p><p>This value set contains 4 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-female\"> </a>\u00a0\u00a0<a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-female\">female</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td><td>Female</td><td><div><p>Female</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-transgender\"> </a>\u00a0\u00a0<a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-transgender\">transgender</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td><td>Transgender</td><td><div><p>Transgender</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-unknown\"> </a>\u00a0\u00a0<a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-unknown\">unknown</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td><td>Unknown</td><td><div><p>Unknown</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-male\"> </a>\u00a0\u00a0<a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-male\">male</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td><td>Male</td><td><div><p>Male</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender",
+      "version" : "0.1.0",
+      "name" : "VaccineGender",
+      "title" : "Vaccine Gender",
+      "status" : "draft",
+      "date" : "2024-04-30T19:45:10-04:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:ea0aa89c-000c-4595-bdb2-a2371245f05c",
+        "timestamp" : "2024-04-30T19:45:27-04:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender",
+          "code" : "female",
+          "display" : "Female"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender",
+          "code" : "transgender",
+          "display" : "Transgender"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender",
+          "code" : "unknown",
+          "display" : "Unknown"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender",
+          "code" : "male",
+          "display" : "Male"
+        }]
+      }
+    }
+  }]
 }

@@ -1,18 +1,27 @@
 {
   "codeSystems" : [
     {
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status-value-set",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "EvalStatusValueSet",
+      "title" : "Evaluation Status Value Set",
+      "description" : "Value Set for the status of the result of an evaluation.",
+      "systems" : ["http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus"]
+    },
+    {
       "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "VaccineGender",
       "title" : "Vaccine Gender",
-      "description" : "A value set that groups detailed genders from SNOMED CT and LOINC into broader categories (male, female, transgender, other) for use in vaccine predictions.",
+      "description" : "Value set for gender categories relevant to vaccination data.",
       "systems" : [
-        "http://hl7.org/fhir/v3/NullFlavor",
-        "http://hl7.org/fhir/valueset-data-absent-reason",
-        "http://loinc.org",
-        "http://snomed.info/sct"
-      ]
+        "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-vax-patient.html" : "Vaccination Patient"
     }
   ]
 }

@@ -1,10 +1,52 @@
 [
   {
+    "id" : "EvalReason",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+    "version" : "0.1.0",
+    "name" : "EvalReason"
+  },
+  {
+    "id" : "EvalStatus",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus",
+    "version" : "0.1.0",
+    "name" : "EvalStatus"
+  },
+  {
+    "id" : "PreferredAllowedReason",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason",
+    "version" : "0.1.0",
+    "name" : "PreferredAllowedReason"
+  },
+  {
+    "id" : "interval-reason",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/interval-reason",
+    "version" : "0.1.0",
+    "name" : "IntervalReason"
+  },
+  {
+    "id" : "vaccine-gender",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender",
+    "version" : "0.1.0",
+    "name" : "VaccineGender"
+  },
+  {
     "id" : "vaccine-observation-codes",
     "type" : "CodeSystem",
     "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes",
     "version" : "0.1.0",
     "name" : "VaccineObservationCodes"
+  },
+  {
+    "id" : "valid-age-reason",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/valid-age-reason",
+    "version" : "0.1.0",
+    "name" : "ValidAgeReason"
   },
   {
     "id" : "pythia.ig",
@@ -47,6 +89,13 @@
     "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient",
     "version" : "0.1.0",
     "name" : "VaxPatient"
+  },
+  {
+    "id" : "eval-status-value-set",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status-value-set",
+    "version" : "0.1.0",
+    "name" : "EvalStatusValueSet"
   },
   {
     "id" : "vaccine-gender",

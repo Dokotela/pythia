@@ -1,30 +1,60 @@
 PythiaIG : Validation Results
 =========================================
 
-err = 8, warn = 271, info = 1
+err = 7, warn = 280, info = 7
 IG Publisher Version: 1.6.6
-Generated Tue Apr 30 13:37:55 EDT 2024. FHIR version 4.0.1 for pythia.ig#0.1.0 (canonical = http://fhirfli.dev/fhir/ig/pythia)
- Build Errors : 1 / 4 / 0
+Generated Tue Apr 30 19:45:35 EDT 2024. FHIR version 4.0.1 for pythia.ig#0.1.0 (canonical = http://fhirfli.dev/fhir/ig/pythia)
+ Build Errors : 0 / 4 / 0
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-EvalReason : 0 / 2 / 2
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-EvalStatus : 0 / 2 / 2
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-PreferredAllowedReason : 0 / 2 / 2
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-interval-reason : 0 / 2 / 2
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-vaccine-gender : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-vaccine-observation-codes : 0 / 3 / 2
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-valid-age-reason : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ImplementationGuide-pythia.ig : 0 / 0 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-Vaccine : 2 / 1 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-antigen-supporting-data : 2 / 157 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-assessment-date : 0 / 2 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-schedule-supporting-data : 2 / 98 / 1
- /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vax-patient : 0 / 1 / 1
- /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-vaccine-gender : 2 / 5 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vax-patient : 1 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-eval-status-value-set : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-vaccine-gender : 0 / 1 / 1
 </table>
 == n/a ==
-ERROR: /home/grey/dev/pythia/pythia_ig/output/processing-model.html#/html/body/div/div/div/div/div/h3/a at Line 170, column 280: The link 'lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json' for "antigenic components" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CodeSystem-EvalReason.json ==
+INFORMATION: CodeSystem/EvalReason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/EvalReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/EvalReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-EvalStatus.json ==
+INFORMATION: CodeSystem/EvalStatus: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/EvalStatus: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/EvalStatus: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-PreferredAllowedReason.json ==
+INFORMATION: CodeSystem/PreferredAllowedReason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/PreferredAllowedReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/PreferredAllowedReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-interval-reason.json ==
+INFORMATION: CodeSystem/interval-reason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/interval-reason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/interval-reason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-vaccine-gender.json ==
+INFORMATION: CodeSystem/vaccine-gender: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/vaccine-gender: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/vaccine-gender: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
 == fsh-generated/resources/CodeSystem-vaccine-observation-codes.json ==
 WARNING: CodeSystem/vaccine-observation-codes: CodeSystem.concept[122].definition: value should not start or finish with whitespace 'Severe allergic reaction to rice protein '
 INFORMATION: CodeSystem/vaccine-observation-codes: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 WARNING: CodeSystem/vaccine-observation-codes: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 WARNING: CodeSystem/vaccine-observation-codes: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-valid-age-reason.json ==
+INFORMATION: CodeSystem/valid-age-reason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/valid-age-reason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/valid-age-reason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
 == fsh-generated/resources/ImplementationGuide-pythia.ig.json ==
 == fsh-generated/resources/StructureDefinition-Vaccine.json ==
 ERROR: StructureDefinition/Vaccine: StructureDefinition.type: The type Vaccine is not legal because it is not defined in the FHIR specification. Other types must have a namespace on them
@@ -295,12 +325,9 @@ WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.diffe
 WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/schedule-supporting-data'): The Implementation Guide contains no examples for this profile
 ERROR: StructureDefinition: Error Rendering Resource: Not the right kind of structure to generate schematrons for
 == fsh-generated/resources/StructureDefinition-vax-patient.json ==
+ERROR: Vaccination Patient.Patient.gender: Binding http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender is not a subset of binding http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1
 WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/ValueSet-eval-status-value-set.json ==
+WARNING: ValueSet/eval-status-value-set: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-vaccine-gender.json ==
-ERROR: ValueSet/vaccine-gender: ValueSet.compose.include[2].system: URL value 'http://hl7.org/fhir/v3/NullFlavor' does not resolve
-ERROR: ValueSet/vaccine-gender: ValueSet.compose.include[3].system: URL value 'http://hl7.org/fhir/valueset-data-absent-reason' does not resolve
-WARNING: ValueSet/vaccine-gender: ValueSet.compose.include[0].concept[5]: The code '446131000124102' is not valid in the system http://snomed.info/sct (Unknown code '446131000124102' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
-WARNING: ValueSet/vaccine-gender: ValueSet.compose.include[2]: Unknown System 'http://hl7.org/fhir/v3/NullFlavor' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://hl7.org/fhir/v3/NullFlavor' could not be found, so the code cannot be validated)
-WARNING: ValueSet/vaccine-gender: ValueSet.compose.include[3]: Unknown System 'http://hl7.org/fhir/valueset-data-absent-reason' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://hl7.org/fhir/valueset-data-absent-reason' could not be found, so the code cannot be validated)
 WARNING: ValueSet/vaccine-gender: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
-WARNING: ValueSet.where(id = 'vaccine-gender'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/v3/NullFlavor

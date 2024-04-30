@@ -9,15 +9,15 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "vaccine-gender"] ; # 
   fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/446151000124109\">446151000124109</a></td><td>Male</td></tr><tr><td><a href=\"http://snomed.info/id/446141000124107\">446141000124107</a></td><td>Female</td></tr><tr><td><a href=\"http://snomed.info/id/407376001\">407376001</a></td><td>Transgender</td></tr><tr><td><a href=\"http://snomed.info/id/407377005\">407377005</a></td><td>Transgender</td></tr><tr><td><a href=\"http://snomed.info/id/33791000087105\">33791000087105</a></td><td>Transgender</td></tr><tr><td><a href=\"http://snomed.info/id/446131000124102\">446131000124102</a></td><td>Transgender</td></tr></table></li><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/LA22878-5/\">LA22878-5</a></td><td>Male</td></tr><tr><td><a href=\"https://loinc.org/LA22879-3/\">LA22879-3</a></td><td>Female</td></tr><tr><td><a href=\"https://loinc.org/LA22880-1/\">LA22880-1</a></td><td>Transgender</td></tr><tr><td><a href=\"https://loinc.org/LA22881-9/\">LA22881-9</a></td><td>Transgender</td></tr><tr><td><a href=\"https://loinc.org/LA22882-7/\">LA22882-7</a></td><td>Transgender</td></tr><tr><td><a href=\"https://loinc.org/LA46-8/\">LA46-8</a></td><td>Other</td></tr><tr><td><a href=\"https://loinc.org/LA20384-6/\">LA20384-6</a></td><td>Other</td></tr></table></li><li>Include these codes as defined in <code>http://hl7.org/fhir/v3/NullFlavor</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>OTH</td><td>Other</td></tr><tr><td>UNK</td><td>Other</td></tr></table></li><li>Include these codes as defined in <code>http://hl7.org/fhir/valueset-data-absent-reason</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>asked-declined</td><td>Other</td></tr></table></li></ul></div>"
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-vaccine-gender.html\"><code>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-female\">female</a></td><td>Female</td><td>Female</td></tr><tr><td><a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-transgender\">transgender</a></td><td>Transgender</td><td>Transgender</td></tr><tr><td><a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-unknown\">unknown</a></td><td>Unknown</td><td>Unknown</td></tr><tr><td><a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-male\">male</a></td><td>Male</td><td>Male</td></tr></table></li></ul></div>"
   ] ; # 
   fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "VaccineGender"] ; # 
   fhir:title [ fhir:v "Vaccine Gender"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-04-30T13:37:40-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-30T19:45:10-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "FHIR-FLI" ] ;
@@ -26,67 +26,22 @@
        fhir:value [ fhir:v "http://fhirfli.dev" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "A value set that groups detailed genders from SNOMED CT and LOINC into broader categories (male, female, transgender, other) for use in vaccine predictions."] ; # 
+  fhir:description [ fhir:v "Value set for gender categories relevant to vaccination data."] ; # 
   fhir:compose [
      fhir:include ( [
-       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:system [ fhir:v "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender"^^xsd:anyURI ] ;
        fhir:concept ( [
-         fhir:code [ fhir:v "446151000124109" ] ;
-         fhir:display [ fhir:v "Male" ]
-       ] [
-         fhir:code [ fhir:v "446141000124107" ] ;
+         fhir:code [ fhir:v "female" ] ;
          fhir:display [ fhir:v "Female" ]
        ] [
-         fhir:code [ fhir:v "407376001" ] ;
+         fhir:code [ fhir:v "transgender" ] ;
          fhir:display [ fhir:v "Transgender" ]
        ] [
-         fhir:code [ fhir:v "407377005" ] ;
-         fhir:display [ fhir:v "Transgender" ]
+         fhir:code [ fhir:v "unknown" ] ;
+         fhir:display [ fhir:v "Unknown" ]
        ] [
-         fhir:code [ fhir:v "33791000087105" ] ;
-         fhir:display [ fhir:v "Transgender" ]
-       ] [
-         fhir:code [ fhir:v "446131000124102" ] ;
-         fhir:display [ fhir:v "Transgender" ]
-       ] )
-     ] [
-       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
-       fhir:concept ( [
-         fhir:code [ fhir:v "LA22878-5" ] ;
+         fhir:code [ fhir:v "male" ] ;
          fhir:display [ fhir:v "Male" ]
-       ] [
-         fhir:code [ fhir:v "LA22879-3" ] ;
-         fhir:display [ fhir:v "Female" ]
-       ] [
-         fhir:code [ fhir:v "LA22880-1" ] ;
-         fhir:display [ fhir:v "Transgender" ]
-       ] [
-         fhir:code [ fhir:v "LA22881-9" ] ;
-         fhir:display [ fhir:v "Transgender" ]
-       ] [
-         fhir:code [ fhir:v "LA22882-7" ] ;
-         fhir:display [ fhir:v "Transgender" ]
-       ] [
-         fhir:code [ fhir:v "LA46-8" ] ;
-         fhir:display [ fhir:v "Other" ]
-       ] [
-         fhir:code [ fhir:v "LA20384-6" ] ;
-         fhir:display [ fhir:v "Other" ]
-       ] )
-     ] [
-       fhir:system [ fhir:v "http://hl7.org/fhir/v3/NullFlavor"^^xsd:anyURI ] ;
-       fhir:concept ( [
-         fhir:code [ fhir:v "OTH" ] ;
-         fhir:display [ fhir:v "Other" ]
-       ] [
-         fhir:code [ fhir:v "UNK" ] ;
-         fhir:display [ fhir:v "Other" ]
-       ] )
-     ] [
-       fhir:system [ fhir:v "http://hl7.org/fhir/valueset-data-absent-reason"^^xsd:anyURI ] ;
-       fhir:concept ( [
-         fhir:code [ fhir:v "asked-declined" ] ;
-         fhir:display [ fhir:v "Other" ]
        ] )
      ] )
   ] . # 

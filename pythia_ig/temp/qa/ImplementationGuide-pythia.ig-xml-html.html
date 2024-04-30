@@ -17,7 +17,7 @@
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PythiaIG&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-04-30T13:37:40-04:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-04-30T19:45:10-04:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FHIR-FLI&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FHIR-FLI&quot;/&gt;
@@ -540,6 +540,69 @@
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;<a href="CodeSystem-EvalReason.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem/EvalReason&quot;/&gt;
+      &lt;/reference&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Evaluation Reason&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The reason for the evaluation.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;<a href="CodeSystem-EvalStatus.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem/EvalStatus&quot;/&gt;
+      &lt;/reference&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Evaluation Status&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The status of the result of an evaluation.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ValueSet&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;<a href="ValueSet-eval-status-value-set.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ValueSet/eval-status-value-set&quot;/&gt;
+      &lt;/reference&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Evaluation Status Value Set&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value Set for the status of the result of an evaluation.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;<a href="CodeSystem-interval-reason.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem/interval-reason&quot;/&gt;
+      &lt;/reference&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;IntervalReason&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;This value set includes codes for the reason an interval is considered to be invalid.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;<a href="CodeSystem-PreferredAllowedReason.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem/PreferredAllowedReason&quot;/&gt;
+      &lt;/reference&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Reasons why certain doses are Preferred or Allowed doses&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Reasons why certain doses are Preferred or Allowed doses&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;StructureDefinition:resource&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;<a href="StructureDefinition-vax-patient.html" style="color: Maroon">&#x1F517;</a> 
@@ -560,7 +623,20 @@
       &lt;/reference&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Vaccine Gender&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>
-                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;A value set that groups detailed genders from SNOMED CT and LOINC into broader categories (male, female, transgender, other) for use in vaccine predictions.&quot;/&gt;
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set for gender categories relevant to vaccination data.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;<a href="CodeSystem-vaccine-gender.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem/vaccine-gender&quot;/&gt;
+      &lt;/reference&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Vaccine Gender&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set for gender categories relevant to vaccination data.&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
@@ -574,6 +650,19 @@
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Vaccine Observation Codes&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>
                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observations and Conditions that are important to indications or contraindications in vaccine forecasting&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;<a href="CodeSystem-valid-age-reason.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CodeSystem/valid-age-reason&quot;/&gt;
+      &lt;/reference&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Valid Age Reason&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set for reasons why a patient's age is considered valid/invalid for a vaccine.&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
@@ -672,15 +761,6 @@
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;processing-model.html&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Processing Model&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;markdown&quot;/&gt;
-      &lt;/page&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.extension">extension</a>
-                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/ig-page-name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;relevant-series.html&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;relevant-series.html&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Relevant Series&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;markdown&quot;/&gt;
       &lt;/page&gt;
     &lt;/page&gt;

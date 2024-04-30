@@ -20,7 +20,7 @@ TODO - add figure
 
 ### Organize Immunization History
 
-### This is pretty self explanatory. After obtaining all of the immunizations a patient has received, break them down into their [antigenic components](lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json)
+### This is pretty self explanatory. After obtaining all of the immunizations a patient has received, break them down into their [antigenic components](https://github.com/Dokotela/pythia/blob/main/pythia/lib/generated_files/schedule_supporting_data.dart#L5711)
 
 ### Create Relevant Patient Series
 
@@ -34,7 +34,7 @@ This is a bit confusing at first. Later on in the logic it makes a bit more sens
 
 #### Gender - Note that in this logic gender and sex are used synonymously for consistency in the logic. FOR THESE PURPOSES ONLY they refer to the same thing, and that is the genetic sex at birth. If you don't understand why there are differences in sex and gender (and gender identity), please consider reading any of the following articles by the [AMA](https://journalofethics.ama-assn.org/article/sex-gender-and-why-differences-matter/2008-07), [Stanford](https://stanmed.stanford.edu/2017spring/how-sex-and-gender-which-are-not-the-same-thing-influence-our-health.html), or [Planned Parenthood](https://www.plannedparenthood.org/learn/gender-identity/sex-gender-identity)
 
-4. Risk Series: appropriate for those with certain 'conditions' (in this context, conditions do not just refer to medical conditions, but may also refer to exposure, travel to endemic areas, etc). If a Risk series cannot be definitely applied to a patient, then it is not used in the forecast (but a notification should be sent to the clinician alerting them to this fact).
+4. Risk Series: Series can be 'Standard', 'Evaluation Only', or 'Risk'. Each 'Risk' series has a list of indications that come from a list of 'Observations' (note, these are NOT the same as FHIR Observations). In some cases they are Conditions or Observations, but in some cases, they are Procedures, Immunizations, or just circumstances (like being a healthcare worker, or travel to endemic areas, etc.) that imparts a higher risk for certain diseases, and therefore the series will apply. If a Risk series cannot be definitely applied to a patient, then it is not used in the forecast (but a notification should be sent to the clinician alerting them to this fact).
 
 ### Evaluate and Forecast all Patient Series
 

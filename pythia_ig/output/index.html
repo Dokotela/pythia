@@ -177,6 +177,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           <li><a href="#immunization-decision-support-forecast-working-group" id="markdown-toc-immunization-decision-support-forecast-working-group">Immunization Decision Support Forecast Working Group</a></li>
           <li><a href="#logical-specification-concepts" id="markdown-toc-logical-specification-concepts">Logical Specification Concepts</a></li>
           <li><a href="#processing-model" id="markdown-toc-processing-model">Processing Model</a></li>
+          <li><a href="#evaluate-vaccine-dose-administered" id="markdown-toc-evaluate-vaccine-dose-administered">Evaluate Vaccine Dose Administered</a></li>
+          <li><a href="#forecast-dates-and-reasons" id="markdown-toc-forecast-dates-and-reasons">Forecast Dates and Reasons</a></li>
         </ul>
       </li>
     </ul>
@@ -196,17 +198,35 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 This is not completely FHIR compliant. As part of this was to help myself get more familiar with <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand (commonly known as FSH)</a>, there are some “Resources” I’ve defined (e.g. <a href="StructureDefinition-antigen-supporting-data.html">Antigen Supporting Data</a> and <a href="StructureDefinition-schedule-supporting-data.html">Schedule Supporting Data</a>), that are certainly NOT FHIR. However, they are an accurate representation (at least in JSON) for the data used in the CDC’s “CLINICAL DECISION SUPPORT FOR IMMUNIZATION (CDSI): LOGIC SPECIFICATION FOR ACIP RECOMMENDATIONS”.</p>
 
 <h3 id="preparation"><a href="preparation.html">Preparation</a></h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- This is some technical background in case anyone is interested on working on this themselves.
-</code></pre></div></div>
+<ul>
+  <li>This is some technical background in case anyone is interested on working on this themselves.</li>
+</ul>
 
 <h3 id="immunization-decision-support-forecast-working-group"><a href="http://hl7.org/fhir/us/immds/">Immunization Decision Support Forecast Working Group</a></h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Because I can never find it
-- Official HL7 working group
-</code></pre></div></div>
+<ul>
+  <li>Because I can never find it</li>
+  <li>Official HL7 working group</li>
+</ul>
 
 <h3 id="logical-specification-concepts"><a href="logical-specification-concepts.html">Logical Specification Concepts</a></h3>
+<ul>
+  <li>There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here’s a description of some of them. Again, this was all taken from the <a href="https://www.cdc.gov/vaccines/programs/iis/cdsi.html">Clinical Decision Support for Immunization (CDSi)</a>.</li>
+</ul>
 
 <h3 id="processing-model"><a href="processing-model.html">Processing Model</a></h3>
+<ul>
+  <li>Brief overview of the analysis and forecasting process prior to a detailed discussion</li>
+</ul>
+
+<h3 id="evaluate-vaccine-dose-administered"><a href="evaluate-vaccine-dose-administered.html">Evaluate Vaccine Dose Administered</a></h3>
+<ul>
+  <li>Summarizes the steps to evaluate every vaccine within every series to which it applies</li>
+</ul>
+
+<h3 id="forecast-dates-and-reasons"><a href="forecast-dates-and-reasons.html">Forecast Dates and Reasons</a></h3>
+<ul>
+  <li>Made it through the evaluation process. Next up, creating the forecast.</li>
+</ul>
 
 
 
@@ -226,7 +246,7 @@ This is not completely FHIR compliant. As part of this was to help myself get mo
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package pythia.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 30, 2024 13:37-0400">2024-04-30</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package pythia.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 30, 2024 19:45-0400">2024-04-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

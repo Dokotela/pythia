@@ -1,9 +1,281 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="dfedd523-137e-4af8-85a1-01d8d6e6eccd"/>
+  <id value="433c2319-fdea-4947-ba6b-b65baec5a517"/>
   <meta>
-    <lastUpdated value="2024-04-30T13:37:40.205-04:00"/>
+    <lastUpdated value="2024-04-30T19:45:10.327-04:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status-value-set"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-EvalStatus.html">codesystem Evaluation Status v0.1.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 4 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-valid"> </a>  
+                  <a href="CodeSystem-EvalStatus.html#EvalStatus-valid">valid</a>
+                </td>
+                <td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td>
+                <td>Valid</td>
+                <td>
+                  <div>
+                    <p>Valid</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-not-valid"> </a>  
+                  <a href="CodeSystem-EvalStatus.html#EvalStatus-not_valid">not_valid</a>
+                </td>
+                <td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td>
+                <td>Not Valid</td>
+                <td>
+                  <div>
+                    <p>Not Valid</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-extraneous"> </a>  
+                  <a href="CodeSystem-EvalStatus.html#EvalStatus-extraneous">extraneous</a>
+                </td>
+                <td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td>
+                <td>Extraneous</td>
+                <td>
+                  <div>
+                    <p>Extraneous</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-sub-standard"> </a>  
+                  <a href="CodeSystem-EvalStatus.html#EvalStatus-sub_standard">sub_standard</a>
+                </td>
+                <td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td>
+                <td>Substandard</td>
+                <td>
+                  <div>
+                    <p>Substandard</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status-value-set"/>
+        <version value="0.1.0"/>
+        <name value="EvalStatusValueSet"/>
+        <title value="Evaluation Status Value Set"/>
+        <status value="draft"/>
+        <date value="2024-04-30T19:45:10-04:00"/>
+        <expansion>
+          <identifier value="urn:uuid:9c3923f5-feb3-4224-b79c-4302d3417fdd"/>
+          <timestamp value="2024-04-30T19:45:27-04:00"/>
+          <total value="4"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus"/>
+            <code value="valid"/>
+            <display value="Valid"/>
+          </contains>
+          <contains>
+            <system value="http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus"/>
+            <code value="not_valid"/>
+            <display value="Not Valid"/>
+          </contains>
+          <contains>
+            <system value="http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus"/>
+            <code value="extraneous"/>
+            <display value="Extraneous"/>
+          </contains>
+          <contains>
+            <system value="http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus"/>
+            <code value="sub_standard"/>
+            <display value="Substandard"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-vaccine-gender.html">codesystem Vaccine Gender v0.1.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 4 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-female"> </a>  
+                  <a href="CodeSystem-vaccine-gender.html#vaccine-gender-female">female</a>
+                </td>
+                <td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td>
+                <td>Female</td>
+                <td>
+                  <div>
+                    <p>Female</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-transgender"> </a>  
+                  <a href="CodeSystem-vaccine-gender.html#vaccine-gender-transgender">transgender</a>
+                </td>
+                <td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td>
+                <td>Transgender</td>
+                <td>
+                  <div>
+                    <p>Transgender</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-unknown"> </a>  
+                  <a href="CodeSystem-vaccine-gender.html#vaccine-gender-unknown">unknown</a>
+                </td>
+                <td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td>
+                <td>Unknown</td>
+                <td>
+                  <div>
+                    <p>Unknown</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-male"> </a>  
+                  <a href="CodeSystem-vaccine-gender.html#vaccine-gender-male">male</a>
+                </td>
+                <td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td>
+                <td>Male</td>
+                <td>
+                  <div>
+                    <p>Male</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender"/>
+        <version value="0.1.0"/>
+        <name value="VaccineGender"/>
+        <title value="Vaccine Gender"/>
+        <status value="draft"/>
+        <date value="2024-04-30T19:45:10-04:00"/>
+        <expansion>
+          <identifier value="urn:uuid:ea0aa89c-000c-4595-bdb2-a2371245f05c"/>
+          <timestamp value="2024-04-30T19:45:27-04:00"/>
+          <total value="4"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender"/>
+            <code value="female"/>
+            <display value="Female"/>
+          </contains>
+          <contains>
+            <system value="http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender"/>
+            <code value="transgender"/>
+            <display value="Transgender"/>
+          </contains>
+          <contains>
+            <system value="http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender"/>
+            <code value="unknown"/>
+            <display value="Unknown"/>
+          </contains>
+          <contains>
+            <system value="http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender"/>
+            <code value="male"/>
+            <display value="Male"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
 </Bundle>

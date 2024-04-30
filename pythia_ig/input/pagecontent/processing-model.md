@@ -20,7 +20,7 @@ TODO - add figure
 
 ### Organize Immunization History
 
-### This is pretty self explanatory. After obtaining all of the immunizations a patient has received, break them down into their [antigenic components](lib/features/immunizationForecast/data/datasources/scheduleSupportingData/cvxToAntigenMap.json)
+### This is pretty self explanatory. After obtaining all of the immunizations a patient has received, break them down into their [antigenic components](https://github.com/Dokotela/pythia/blob/main/pythia/lib/generated_files/schedule_supporting_data.dart#L5711)
 
 ### Create Relevant Patient Series
 

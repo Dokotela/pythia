@@ -38,6 +38,9 @@
     ]
   },
   "usage": {
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/assessment-date": [
+      "Patient"
+    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],

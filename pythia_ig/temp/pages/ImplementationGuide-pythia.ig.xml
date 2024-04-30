@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="PythiaIG"/>
   <status value="draft"/>
-  <date value="2024-04-30T13:37:40-04:00"/>
+  <date value="2024-04-30T19:45:10-04:00"/>
   <publisher value="FHIR-FLI"/>
   <contact>
     <name value="FHIR-FLI"/>
@@ -470,6 +470,61 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/EvalReason"/>
+      </reference>
+      <name value="Evaluation Reason"/>
+      <description value="The reason for the evaluation."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/EvalStatus"/>
+      </reference>
+      <name value="Evaluation Status"/>
+      <description value="The status of the result of an evaluation."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eval-status-value-set"/>
+      </reference>
+      <name value="Evaluation Status Value Set"/>
+      <description value="Value Set for the status of the result of an evaluation."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/interval-reason"/>
+      </reference>
+      <name value="IntervalReason"/>
+      <description value="This value set includes codes for the reason an interval is considered to be invalid."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/PreferredAllowedReason"/>
+      </reference>
+      <name value="Reasons why certain doses are Preferred or Allowed doses"/>
+      <description value="Reasons why certain doses are Preferred or Allowed doses"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -487,7 +542,18 @@
         <reference value="ValueSet/vaccine-gender"/>
       </reference>
       <name value="Vaccine Gender"/>
-      <description value="A value set that groups detailed genders from SNOMED CT and LOINC into broader categories (male, female, transgender, other) for use in vaccine predictions."/>
+      <description value="Value set for gender categories relevant to vaccination data."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vaccine-gender"/>
+      </reference>
+      <name value="Vaccine Gender"/>
+      <description value="Value set for gender categories relevant to vaccination data."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -499,6 +565,17 @@
       </reference>
       <name value="Vaccine Observation Codes"/>
       <description value="Observations and Conditions that are important to indications or contraindications in vaccine forecasting"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/valid-age-reason"/>
+      </reference>
+      <name value="Valid Age Reason"/>
+      <description value="Value set for reasons why a patient's age is considered valid/invalid for a vaccine."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -584,14 +661,6 @@
         </extension>
         <nameUrl value="processing-model.html"/>
         <title value="Processing Model"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="relevant-series.html"/>
-        </extension>
-        <nameUrl value="relevant-series.html"/>
-        <title value="Relevant Series"/>
         <generation value="markdown"/>
       </page>
     </page>

@@ -5,8 +5,12 @@ Id: vax-patient
 Title: "Vaccination Patient"
 Description: "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information."
 
-// Define extensions for additional dates and attributes not typically in Patient
-Extension: AssessmentDate
-Id: assessment-date
-Description: "The date on which the vaccination assessment was made."
-* value[x] only dateTime
+// Assuming VaccineGender is a ValueSet that exists
+* gender from VaccineGender (required)
+
+// Apply the AssessmentDate extension to the VaxPatient profile
+* extension contains AssessmentDate named assessmentDate 0..1
+
+// Correctly defining references to other resources
+* contained only Resource
+
