@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "EvalReason",
+  "name": "EvalReasonCS",
   "id": "EvalReason",
   "title": "Evaluation Reason",
   "description": "The reason for the evaluation.",

@@ -1,7 +1,7 @@
 [
   {
     "outputFile": "CodeSystem-EvalReason.json",
-    "fshName": "EvalReason",
+    "fshName": "EvalReasonCS",
     "fshType": "CodeSystem",
     "fshFile": "eval_reason.fsh",
     "startLine": 1,
@@ -9,35 +9,43 @@
   },
   {
     "outputFile": "CodeSystem-EvalStatus.json",
-    "fshName": "EvalStatus",
+    "fshName": "EvalStatusCS",
     "fshType": "CodeSystem",
     "fshFile": "eval_status.fsh",
     "startLine": 1,
     "endLine": 8
   },
   {
-    "outputFile": "CodeSystem-PreferredAllowedReason.json",
-    "fshName": "PreferredAllowedReason",
-    "fshType": "CodeSystem",
-    "fshFile": "preferred_allowed_reason.fsh",
-    "startLine": 1,
-    "endLine": 10
-  },
-  {
-    "outputFile": "CodeSystem-interval-reason.json",
-    "fshName": "IntervalReason",
+    "outputFile": "CodeSystem-IntervalReason.json",
+    "fshName": "IntervalReasonCS",
     "fshType": "CodeSystem",
     "fshFile": "interval_reason.fsh",
     "startLine": 1,
     "endLine": 7
   },
   {
-    "outputFile": "CodeSystem-vaccine-gender.json",
-    "fshName": "VaccineGender",
+    "outputFile": "CodeSystem-PreferredAllowedReason.json",
+    "fshName": "PreferredAllowedReasonCS",
+    "fshType": "CodeSystem",
+    "fshFile": "preferred_allowed_reason.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "CodeSystem-VaccineGender.json",
+    "fshName": "VaccineGenderCS",
     "fshType": "CodeSystem",
     "fshFile": "vaccine_gender.fsh",
     "startLine": 2,
     "endLine": 9
+  },
+  {
+    "outputFile": "CodeSystem-ValidAgeReason.json",
+    "fshName": "ValidAgeReasonCS",
+    "fshType": "CodeSystem",
+    "fshFile": "valid_age_reason.fsh",
+    "startLine": 2,
+    "endLine": 8
   },
   {
     "outputFile": "CodeSystem-vaccine-observation-codes.json",
@@ -46,14 +54,6 @@
     "fshFile": "vaccine_observation_codes.fsh",
     "startLine": 1,
     "endLine": 506
-  },
-  {
-    "outputFile": "CodeSystem-valid-age-reason.json",
-    "fshName": "ValidAgeReason",
-    "fshType": "CodeSystem",
-    "fshFile": "valid_age_reason.fsh",
-    "startLine": 2,
-    "endLine": 8
   },
   {
     "outputFile": "StructureDefinition-Vaccine.json",
@@ -88,6 +88,14 @@
     "endLine": 51
   },
   {
+    "outputFile": "StructureDefinition-vax-dose.json",
+    "fshName": "VaxDose",
+    "fshType": "Resource",
+    "fshFile": "vax_dose.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
     "outputFile": "StructureDefinition-vax-patient.json",
     "fshName": "VaxPatient",
     "fshType": "Profile",
@@ -96,19 +104,51 @@
     "endLine": 15
   },
   {
-    "outputFile": "ValueSet-eval-status-value-set.json",
-    "fshName": "EvalStatusValueSet",
+    "outputFile": "ValueSet-eval-reason.json",
+    "fshName": "EvalReasonVS",
+    "fshType": "ValueSet",
+    "fshFile": "eval_reason.fsh",
+    "startLine": 21,
+    "endLine": 39
+  },
+  {
+    "outputFile": "ValueSet-eval-status.json",
+    "fshName": "EvalStatusVS",
     "fshType": "ValueSet",
     "fshFile": "eval_status.fsh",
     "startLine": 10,
     "endLine": 17
   },
   {
+    "outputFile": "ValueSet-interval-reason.json",
+    "fshName": "IntervalReasonVS",
+    "fshType": "ValueSet",
+    "fshFile": "interval_reason.fsh",
+    "startLine": 9,
+    "endLine": 15
+  },
+  {
+    "outputFile": "ValueSet-preferred-allowed-reason.json",
+    "fshName": "PreferredAllowedReasonVS",
+    "fshType": "ValueSet",
+    "fshFile": "preferred_allowed_reason.fsh",
+    "startLine": 12,
+    "endLine": 21
+  },
+  {
     "outputFile": "ValueSet-vaccine-gender.json",
-    "fshName": "VaccineGender",
+    "fshName": "VaccineGenderVS",
     "fshType": "ValueSet",
     "fshFile": "vaccine_gender.fsh",
     "startLine": 12,
     "endLine": 19
+  },
+  {
+    "outputFile": "ValueSet-valid-age-reason.json",
+    "fshName": "ValidAgeReasonVS",
+    "fshType": "ValueSet",
+    "fshFile": "valid_age_reason.fsh",
+    "startLine": 10,
+    "endLine": 16
   }
 ]

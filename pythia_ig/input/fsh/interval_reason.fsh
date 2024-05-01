@@ -1,4 +1,4 @@
-CodeSystem: IntervalReason
+CodeSystem: IntervalReasonCS
 Id: IntervalReason
 Title: "Interval Reason"
 Description: "This value set includes codes for the reason an interval is considered to be invalid."
@@ -6,7 +6,7 @@ Description: "This value set includes codes for the reason an interval is consid
 * #tooShort "Interval: too short" "Interval: too short"
 * #gracePeriod "Interval: grace period" "Interval: grace period"
 
-ValueSet: IntervalReason
+ValueSet: IntervalReasonVS
 Id: interval-reason
 Title: "Interval Reason"
 Description: "This value set includes codes for the reason an interval is considered to be invalid."

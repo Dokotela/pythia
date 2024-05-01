@@ -33,6 +33,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/eval-reason"
+        },
+        "name": "Evaluation Reason",
+        "description": "The reason for the evaluation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/EvalReason"
         },
         "name": "Evaluation Reason",
@@ -49,7 +57,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/eval-status-value-set"
+          "reference": "ValueSet/eval-status"
         },
         "name": "Evaluation Status Value Set",
         "description": "Value Set for the status of the result of an evaluation.",
@@ -57,10 +65,26 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/interval-reason"
+          "reference": "ValueSet/interval-reason"
         },
-        "name": "IntervalReason",
+        "name": "Interval Reason",
         "description": "This value set includes codes for the reason an interval is considered to be invalid.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/IntervalReason"
+        },
+        "name": "Interval Reason",
+        "description": "This value set includes codes for the reason an interval is considered to be invalid.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/preferred-allowed-reason"
+        },
+        "name": "Reasons why certain doses are Preferred or Allowed doses",
+        "description": "Reasons why certain doses are Preferred or Allowed doses",
         "exampleBoolean": false
       },
       {
@@ -89,7 +113,7 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/vaccine-gender"
+          "reference": "CodeSystem/VaccineGender"
         },
         "name": "Vaccine Gender",
         "description": "Value set for gender categories relevant to vaccination data.",
@@ -105,7 +129,15 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/valid-age-reason"
+          "reference": "ValueSet/valid-age-reason"
+        },
+        "name": "Valid Age Reason",
+        "description": "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ValidAgeReason"
         },
         "name": "Valid Age Reason",
         "description": "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",

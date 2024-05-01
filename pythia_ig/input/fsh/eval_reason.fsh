@@ -1,4 +1,4 @@
-CodeSystem: EvalReason
+CodeSystem: EvalReasonCS
 Id: EvalReason
 Title: "Evaluation Reason"
 Description: "The reason for the evaluation."
@@ -18,7 +18,7 @@ Description: "The reason for the evaluation."
 * #seriesAlreadyCompleted "Series Already Completed" "Series Already Completed"
 * #liveVirusConflict "Live Virus Conflict" "Live Virus Conflict"
 
-ValueSet: EvalReason
+ValueSet: EvalReasonVS
 Id: eval-reason
 Title: "Evaluation Reason"
 Description: "The reason for the evaluation."

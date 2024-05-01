@@ -1,5 +1,5 @@
 // Define CodeSystems for various aspects of VaxDose
-CodeSystem: ValidAgeReason
+CodeSystem: ValidAgeReasonCS
 Id: ValidAgeReason
 Title: "Valid Age Reason"
 Description: "Value set for reasons why a patient's age is considered valid/invalid for a vaccine."
@@ -7,7 +7,7 @@ Description: "Value set for reasons why a patient's age is considered valid/inva
 * #tooYoung "Age: Too Young" "Age: Too Young"
 * #tooOld "Age: Too Old" "Age: Too Old"
 
-ValueSet: ValidAgeReason
+ValueSet: ValidAgeReasonVS
 Id: valid-age-reason
 Title: "Valid Age Reason"
 Description: "Value set for reasons why a patient's age is considered valid/invalid for a vaccine."

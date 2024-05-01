@@ -1,25 +1,30 @@
 PythiaIG : Validation Results
 =========================================
 
-err = 7, warn = 280, info = 7
+err = 9, warn = 337, info = 7
 IG Publisher Version: 1.6.6
-Generated Tue Apr 30 19:45:35 EDT 2024. FHIR version 4.0.1 for pythia.ig#0.1.0 (canonical = http://fhirfli.dev/fhir/ig/pythia)
+Generated Tue Apr 30 22:06:52 EDT 2024. FHIR version 4.0.1 for pythia.ig#0.1.0 (canonical = http://fhirfli.dev/fhir/ig/pythia)
  Build Errors : 0 / 4 / 0
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-EvalReason : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-EvalStatus : 0 / 2 / 2
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-IntervalReason : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-PreferredAllowedReason : 0 / 2 / 2
- /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-interval-reason : 0 / 2 / 2
- /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-vaccine-gender : 0 / 2 / 2
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-VaccineGender : 0 / 2 / 2
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-ValidAgeReason : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-vaccine-observation-codes : 0 / 3 / 2
- /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-valid-age-reason : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ImplementationGuide-pythia.ig : 0 / 0 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-Vaccine : 2 / 1 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-antigen-supporting-data : 2 / 157 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-assessment-date : 0 / 2 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-schedule-supporting-data : 2 / 98 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vax-dose : 2 / 53 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vax-patient : 1 / 1 / 1
- /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-eval-status-value-set : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-eval-reason : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-eval-status : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-interval-reason : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-preferred-allowed-reason : 0 / 1 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-vaccine-gender : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-valid-age-reason : 0 / 1 / 1
 </table>
 == n/a ==
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
@@ -34,27 +39,27 @@ WARNING: CodeSystem/EvalReason: CodeSystem: Published code systems SHOULD confor
 INFORMATION: CodeSystem/EvalStatus: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 WARNING: CodeSystem/EvalStatus: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 WARNING: CodeSystem/EvalStatus: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-IntervalReason.json ==
+INFORMATION: CodeSystem/IntervalReason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/IntervalReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/IntervalReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
 == fsh-generated/resources/CodeSystem-PreferredAllowedReason.json ==
 INFORMATION: CodeSystem/PreferredAllowedReason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 WARNING: CodeSystem/PreferredAllowedReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 WARNING: CodeSystem/PreferredAllowedReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
-== fsh-generated/resources/CodeSystem-interval-reason.json ==
-INFORMATION: CodeSystem/interval-reason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
-WARNING: CodeSystem/interval-reason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
-WARNING: CodeSystem/interval-reason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
-== fsh-generated/resources/CodeSystem-vaccine-gender.json ==
-INFORMATION: CodeSystem/vaccine-gender: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
-WARNING: CodeSystem/vaccine-gender: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
-WARNING: CodeSystem/vaccine-gender: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-VaccineGender.json ==
+INFORMATION: CodeSystem/VaccineGender: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/VaccineGender: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/VaccineGender: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-ValidAgeReason.json ==
+INFORMATION: CodeSystem/ValidAgeReason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/ValidAgeReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/ValidAgeReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
 == fsh-generated/resources/CodeSystem-vaccine-observation-codes.json ==
 WARNING: CodeSystem/vaccine-observation-codes: CodeSystem.concept[122].definition: value should not start or finish with whitespace 'Severe allergic reaction to rice protein '
 INFORMATION: CodeSystem/vaccine-observation-codes: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 WARNING: CodeSystem/vaccine-observation-codes: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 WARNING: CodeSystem/vaccine-observation-codes: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
-== fsh-generated/resources/CodeSystem-valid-age-reason.json ==
-INFORMATION: CodeSystem/valid-age-reason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
-WARNING: CodeSystem/valid-age-reason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
-WARNING: CodeSystem/valid-age-reason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
 == fsh-generated/resources/ImplementationGuide-pythia.ig.json ==
 == fsh-generated/resources/StructureDefinition-Vaccine.json ==
 ERROR: StructureDefinition/Vaccine: StructureDefinition.type: The type Vaccine is not legal because it is not defined in the FHIR specification. Other types must have a namespace on them
@@ -324,10 +329,74 @@ WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.diffe
 WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[33]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/schedule-supporting-data'): The Implementation Guide contains no examples for this profile
 ERROR: StructureDefinition: Error Rendering Resource: Not the right kind of structure to generate schematrons for
+== fsh-generated/resources/StructureDefinition-vax-dose.json ==
+ERROR: StructureDefinition/vax-dose: StructureDefinition.type: The type vax-dose is not legal because it is not defined in the FHIR specification. Other types must have a namespace on them
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[7]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[8]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[9]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[11]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[12]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[13]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[14]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[16]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[17]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[18]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[19]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[20]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[24]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[25]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[26]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[7]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[8]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[9]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[11]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[12]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[13]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[14]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[16]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[17]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[18]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[19]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[20]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[24]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose'): The Implementation Guide contains no examples for this profile
+ERROR: StructureDefinition: Error Rendering Resource: Not the right kind of structure to generate schematrons for
 == fsh-generated/resources/StructureDefinition-vax-patient.json ==
 ERROR: Vaccination Patient.Patient.gender: Binding http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender is not a subset of binding http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1
 WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient'): The Implementation Guide contains no examples for this profile
-== fsh-generated/resources/ValueSet-eval-status-value-set.json ==
-WARNING: ValueSet/eval-status-value-set: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-eval-reason.json ==
+WARNING: ValueSet/eval-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-eval-status.json ==
+WARNING: ValueSet/eval-status: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-interval-reason.json ==
+WARNING: ValueSet/interval-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-preferred-allowed-reason.json ==
+WARNING: ValueSet/preferred-allowed-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-vaccine-gender.json ==
 WARNING: ValueSet/vaccine-gender: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-valid-age-reason.json ==
+WARNING: ValueSet/valid-age-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present

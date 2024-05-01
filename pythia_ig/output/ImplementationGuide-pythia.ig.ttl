@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PythiaIG"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-04-30T19:45:10-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-30T22:06:35-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "FHIR-FLI" ] ;
@@ -541,6 +541,18 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-reason> ;
+         fhir:reference [ fhir:v "ValueSet/eval-reason" ]
+       ] ;
+       fhir:name [ fhir:v "Evaluation Reason" ] ;
+       fhir:description [ fhir:v "The reason for the evaluation." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
@@ -568,8 +580,8 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status-value-set> ;
-         fhir:reference [ fhir:v "ValueSet/eval-status-value-set" ]
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status> ;
+         fhir:reference [ fhir:v "ValueSet/eval-status" ]
        ] ;
        fhir:name [ fhir:v "Evaluation Status Value Set" ] ;
        fhir:description [ fhir:v "Value Set for the status of the result of an evaluation." ] ;
@@ -577,14 +589,38 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/ValueSet/interval-reason> ;
+         fhir:reference [ fhir:v "ValueSet/interval-reason" ]
+       ] ;
+       fhir:name [ fhir:v "Interval Reason" ] ;
+       fhir:description [ fhir:v "This value set includes codes for the reason an interval is considered to be invalid." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://fhirfli.dev/fhir/ig/pythia/CodeSystem/interval-reason> ;
-         fhir:reference [ fhir:v "CodeSystem/interval-reason" ]
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/CodeSystem/IntervalReason> ;
+         fhir:reference [ fhir:v "CodeSystem/IntervalReason" ]
        ] ;
-       fhir:name [ fhir:v "IntervalReason" ] ;
+       fhir:name [ fhir:v "Interval Reason" ] ;
        fhir:description [ fhir:v "This value set includes codes for the reason an interval is considered to be invalid." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/ValueSet/preferred-allowed-reason> ;
+         fhir:reference [ fhir:v "ValueSet/preferred-allowed-reason" ]
+       ] ;
+       fhir:name [ fhir:v "Reasons why certain doses are Preferred or Allowed doses" ] ;
+       fhir:description [ fhir:v "Reasons why certain doses are Preferred or Allowed doses" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -628,8 +664,8 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender> ;
-         fhir:reference [ fhir:v "CodeSystem/vaccine-gender" ]
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender> ;
+         fhir:reference [ fhir:v "CodeSystem/VaccineGender" ]
        ] ;
        fhir:name [ fhir:v "Vaccine Gender" ] ;
        fhir:description [ fhir:v "Value set for gender categories relevant to vaccination data." ] ;
@@ -649,11 +685,23 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/ValueSet/valid-age-reason> ;
+         fhir:reference [ fhir:v "ValueSet/valid-age-reason" ]
+       ] ;
+       fhir:name [ fhir:v "Valid Age Reason" ] ;
+       fhir:description [ fhir:v "Value set for reasons why a patient's age is considered valid/invalid for a vaccine." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://fhirfli.dev/fhir/ig/pythia/CodeSystem/valid-age-reason> ;
-         fhir:reference [ fhir:v "CodeSystem/valid-age-reason" ]
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/CodeSystem/ValidAgeReason> ;
+         fhir:reference [ fhir:v "CodeSystem/ValidAgeReason" ]
        ] ;
        fhir:name [ fhir:v "Valid Age Reason" ] ;
        fhir:description [ fhir:v "Value set for reasons why a patient's age is considered valid/invalid for a vaccine." ] ;
@@ -691,6 +739,17 @@
        ] ;
        fhir:name [ fhir:v "Schedule Supporting Data" ] ;
        fhir:description [ fhir:v "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose> ;
+         fhir:reference [ fhir:v "StructureDefinition/vax-dose" ]
+       ] ;
+       fhir:name [ fhir:v "Dose of a Vaccine" ] ;
+       fhir:description [ fhir:v "Detailed information about each vaccination dose." ]
      ] ) ;
      fhir:page [
        fhir:extension ( [

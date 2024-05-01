@@ -1,27 +1,140 @@
 {
   "resourceType" : "Bundle",
-  "id" : "433c2319-fdea-4947-ba6b-b65baec5a517",
+  "id" : "5824de0f-a5b9-47fe-a708-b880ce5c9888",
   "meta" : {
-    "lastUpdated" : "2024-04-30T19:45:10.327-04:00"
+    "lastUpdated" : "2024-04-30T22:06:35.266-04:00"
   },
   "type" : "collection",
   "entry" : [{
-    "fullUrl" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status-value-set",
+    "fullUrl" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-reason",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-EvalReason.html\">codesystem Evaluation Reason v0.1.0 (CodeSystem)</a></p><p>This value set contains 15 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-noDateGiven\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-noDateGiven\">noDateGiven</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>No Date Given</td><td><div><p>No Date Given</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-noCvx\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-noCvx\">noCvx</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>No Cvx</td><td><div><p>No Cvx</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-expired\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-expired\">expired</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Expired Product</td><td><div><p>Expired Product</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-ageTooOld\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-ageTooOld\">ageTooOld</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Age: Too Old</td><td><div><p>Age: Too Old</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-ageTooYoung\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-ageTooYoung\">ageTooYoung</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Age: Too Young</td><td><div><p>Age: Too Young</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-inadvertentVaccine\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-inadvertentVaccine\">inadvertentVaccine</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Inadvertent Vaccine</td><td><div><p>Inadvertent Vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-notPreferableOrAllowable\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-notPreferableOrAllowable\">notPreferableOrAllowable</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Not a preferable or allowable vaccine</td><td><div><p>Not a preferable or allowable vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-notRecommendedVolume\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-notRecommendedVolume\">notRecommendedVolume</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Volume administered is less than recommended volume</td><td><div><p>Volume administered is less than recommended volume</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-partialDose\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-partialDose\">partialDose</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Partial Dose</td><td><div><p>Partial Dose</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-coldChainBreak\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-coldChainBreak\">coldChainBreak</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Cold Chain Break</td><td><div><p>Cold Chain Break</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-recall\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-recall\">recall</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Manufacturer Recall</td><td><div><p>Manufacturer Recall</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-adverseStorage\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-adverseStorage\">adverseStorage</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Adverse Storage</td><td><div><p>Adverse Storage</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-intervalTooShort\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-intervalTooShort\">intervalTooShort</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Interval: too short</td><td><div><p>Interval: too short</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-seriesAlreadyCompleted\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-seriesAlreadyCompleted\">seriesAlreadyCompleted</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Series Already Completed</td><td><div><p>Series Already Completed</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalReason-liveVirusConflict\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalReason.html#EvalReason-liveVirusConflict\">liveVirusConflict</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason</td><td>Live Virus Conflict</td><td><div><p>Live Virus Conflict</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-reason",
+      "version" : "0.1.0",
+      "name" : "EvalReasonVS",
+      "title" : "Evaluation Reason",
+      "status" : "draft",
+      "date" : "2024-04-30T22:06:35-04:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:c15266bd-517a-472b-aaae-60244f60cba4",
+        "timestamp" : "2024-04-30T22:06:45-04:00",
+        "total" : 15,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "noDateGiven",
+          "display" : "No Date Given"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "noCvx",
+          "display" : "No Cvx"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "expired",
+          "display" : "Expired Product"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "ageTooOld",
+          "display" : "Age: Too Old"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "ageTooYoung",
+          "display" : "Age: Too Young"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "inadvertentVaccine",
+          "display" : "Inadvertent Vaccine"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "notPreferableOrAllowable",
+          "display" : "Not a preferable or allowable vaccine"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "notRecommendedVolume",
+          "display" : "Volume administered is less than recommended volume"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "partialDose",
+          "display" : "Partial Dose"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "coldChainBreak",
+          "display" : "Cold Chain Break"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "recall",
+          "display" : "Manufacturer Recall"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "adverseStorage",
+          "display" : "Adverse Storage"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "intervalTooShort",
+          "display" : "Interval: too short"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "seriesAlreadyCompleted",
+          "display" : "Series Already Completed"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
+          "code" : "liveVirusConflict",
+          "display" : "Live Virus Conflict"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status",
     "resource" : {
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
         "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-EvalStatus.html\">codesystem Evaluation Status v0.1.0 (CodeSystem)</a></p><p>This value set contains 4 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-valid\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalStatus.html#EvalStatus-valid\">valid</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td><td>Valid</td><td><div><p>Valid</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-not-valid\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalStatus.html#EvalStatus-not_valid\">not_valid</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td><td>Not Valid</td><td><div><p>Not Valid</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-extraneous\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalStatus.html#EvalStatus-extraneous\">extraneous</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td><td>Extraneous</td><td><div><p>Extraneous</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-EvalStatus-sub-standard\"> </a>\u00a0\u00a0<a href=\"CodeSystem-EvalStatus.html#EvalStatus-sub_standard\">sub_standard</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus</td><td>Substandard</td><td><div><p>Substandard</p>\n</div></td></tr></table></div>"
       },
-      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status-value-set",
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status",
       "version" : "0.1.0",
-      "name" : "EvalStatusValueSet",
+      "name" : "EvalStatusVS",
       "title" : "Evaluation Status Value Set",
       "status" : "draft",
-      "date" : "2024-04-30T19:45:10-04:00",
+      "date" : "2024-04-30T22:06:35-04:00",
       "expansion" : {
-        "identifier" : "urn:uuid:9c3923f5-feb3-4224-b79c-4302d3417fdd",
-        "timestamp" : "2024-04-30T19:45:27-04:00",
+        "identifier" : "urn:uuid:a8146469-0513-4e7f-bc98-465fa2b0b187",
+        "timestamp" : "2024-04-30T22:06:45-04:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -64,22 +177,143 @@
     }
   },
   {
+    "fullUrl" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/interval-reason",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IntervalReason.html\">codesystem Interval Reason v0.1.0 (CodeSystem)</a></p><p>This value set contains 3 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-IntervalReason-tooLate\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IntervalReason.html#IntervalReason-tooLate\">tooLate</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/IntervalReason</td><td>Interval: too late</td><td><div><p>Interval: too late</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-IntervalReason-tooShort\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IntervalReason.html#IntervalReason-tooShort\">tooShort</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/IntervalReason</td><td>Interval: too short</td><td><div><p>Interval: too short</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-IntervalReason-gracePeriod\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IntervalReason.html#IntervalReason-gracePeriod\">gracePeriod</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/IntervalReason</td><td>Interval: grace period</td><td><div><p>Interval: grace period</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/interval-reason",
+      "version" : "0.1.0",
+      "name" : "IntervalReasonVS",
+      "title" : "Interval Reason",
+      "status" : "draft",
+      "date" : "2024-04-30T22:06:35-04:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:989a54f0-9673-4a9c-af07-4f9f1f3b6cc9",
+        "timestamp" : "2024-04-30T22:06:45-04:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/IntervalReason|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/IntervalReason",
+          "code" : "tooLate",
+          "display" : "Interval: too late"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/IntervalReason",
+          "code" : "tooShort",
+          "display" : "Interval: too short"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/IntervalReason",
+          "code" : "gracePeriod",
+          "display" : "Interval: grace period"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/preferred-allowed-reason",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-PreferredAllowedReason.html\">codesystem Reasons why certain doses are Preferred or Allowed doses v0.1.0 (CodeSystem)</a></p><p>This value set contains 6 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-PreferredAllowedReason-notAPreferableOrAllowableVaccine\"> </a>\u00a0\u00a0<a href=\"CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-notAPreferableOrAllowableVaccine\">notAPreferableOrAllowableVaccine</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason</td><td>Not a preferable or allowable vaccine</td><td><div><p>Not a preferable or allowable vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-PreferredAllowedReason-wrongTradeName\"> </a>\u00a0\u00a0<a href=\"CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-wrongTradeName\">wrongTradeName</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason</td><td>Wrong trade name</td><td><div><p>Wrong trade name</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-PreferredAllowedReason-lessThanRecommendedVolume\"> </a>\u00a0\u00a0<a href=\"CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-lessThanRecommendedVolume\">lessThanRecommendedVolume</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason</td><td>Less than recommended volume</td><td><div><p>Less than recommended volume</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-PreferredAllowedReason-administeredOutsideOfPreferredAgeRange\"> </a>\u00a0\u00a0<a href=\"CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-administeredOutsideOfPreferredAgeRange\">administeredOutsideOfPreferredAgeRange</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason</td><td>Administered outside of preferred age range</td><td><div><p>Administered outside of preferred age range</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-PreferredAllowedReason-noPreferredTypes\"> </a>\u00a0\u00a0<a href=\"CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-noPreferredTypes\">noPreferredTypes</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason</td><td>No preferred types</td><td><div><p>No preferred types</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-PreferredAllowedReason-noAllowedTypes\"> </a>\u00a0\u00a0<a href=\"CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-noAllowedTypes\">noAllowedTypes</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason</td><td>No allowed types</td><td><div><p>No allowed types</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/preferred-allowed-reason",
+      "version" : "0.1.0",
+      "name" : "PreferredAllowedReasonVS",
+      "title" : "Reasons why certain doses are Preferred or Allowed doses",
+      "status" : "draft",
+      "date" : "2024-04-30T22:06:35-04:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:88e96c53-133f-470e-a5dd-303f4e19595a",
+        "timestamp" : "2024-04-30T22:06:45-04:00",
+        "total" : 6,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason",
+          "code" : "notAPreferableOrAllowableVaccine",
+          "display" : "Not a preferable or allowable vaccine"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason",
+          "code" : "wrongTradeName",
+          "display" : "Wrong trade name"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason",
+          "code" : "lessThanRecommendedVolume",
+          "display" : "Less than recommended volume"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason",
+          "code" : "administeredOutsideOfPreferredAgeRange",
+          "display" : "Administered outside of preferred age range"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason",
+          "code" : "noPreferredTypes",
+          "display" : "No preferred types"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason",
+          "code" : "noAllowedTypes",
+          "display" : "No allowed types"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender",
     "resource" : {
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-vaccine-gender.html\">codesystem Vaccine Gender v0.1.0 (CodeSystem)</a></p><p>This value set contains 4 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-female\"> </a>\u00a0\u00a0<a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-female\">female</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td><td>Female</td><td><div><p>Female</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-transgender\"> </a>\u00a0\u00a0<a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-transgender\">transgender</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td><td>Transgender</td><td><div><p>Transgender</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-unknown\"> </a>\u00a0\u00a0<a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-unknown\">unknown</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td><td>Unknown</td><td><div><p>Unknown</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-vaccine-gender-male\"> </a>\u00a0\u00a0<a href=\"CodeSystem-vaccine-gender.html#vaccine-gender-male\">male</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender</td><td>Male</td><td><div><p>Male</p>\n</div></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-VaccineGender.html\">codesystem Vaccine Gender v0.1.0 (CodeSystem)</a></p><p>This value set contains 4 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-VaccineGender-female\"> </a>\u00a0\u00a0<a href=\"CodeSystem-VaccineGender.html#VaccineGender-female\">female</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender</td><td>Female</td><td><div><p>Female</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-VaccineGender-transgender\"> </a>\u00a0\u00a0<a href=\"CodeSystem-VaccineGender.html#VaccineGender-transgender\">transgender</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender</td><td>Transgender</td><td><div><p>Transgender</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-VaccineGender-unknown\"> </a>\u00a0\u00a0<a href=\"CodeSystem-VaccineGender.html#VaccineGender-unknown\">unknown</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender</td><td>Unknown</td><td><div><p>Unknown</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-VaccineGender-male\"> </a>\u00a0\u00a0<a href=\"CodeSystem-VaccineGender.html#VaccineGender-male\">male</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender</td><td>Male</td><td><div><p>Male</p>\n</div></td></tr></table></div>"
       },
       "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender",
       "version" : "0.1.0",
-      "name" : "VaccineGender",
+      "name" : "VaccineGenderVS",
       "title" : "Vaccine Gender",
       "status" : "draft",
-      "date" : "2024-04-30T19:45:10-04:00",
+      "date" : "2024-04-30T22:06:35-04:00",
       "expansion" : {
-        "identifier" : "urn:uuid:ea0aa89c-000c-4595-bdb2-a2371245f05c",
-        "timestamp" : "2024-04-30T19:45:27-04:00",
+        "identifier" : "urn:uuid:97d81aa8-b948-4de1-baa1-0c479b7a3bae",
+        "timestamp" : "2024-04-30T22:06:45-04:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -96,27 +330,80 @@
         },
         {
           "name" : "used-codesystem",
-          "valueUri" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender|0.1.0"
+          "valueUri" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender|0.1.0"
         }],
         "contains" : [{
-          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender",
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender",
           "code" : "female",
           "display" : "Female"
         },
         {
-          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender",
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender",
           "code" : "transgender",
           "display" : "Transgender"
         },
         {
-          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender",
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender",
           "code" : "unknown",
           "display" : "Unknown"
         },
         {
-          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender",
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender",
           "code" : "male",
           "display" : "Male"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/valid-age-reason",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-ValidAgeReason.html\">codesystem Valid Age Reason v0.1.0 (CodeSystem)</a></p><p>This value set contains 3 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-ValidAgeReason-gracePeriod\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ValidAgeReason.html#ValidAgeReason-gracePeriod\">gracePeriod</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/ValidAgeReason</td><td>Age: Grace Period</td><td><div><p>Age: Grace Period</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-ValidAgeReason-tooYoung\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ValidAgeReason.html#ValidAgeReason-tooYoung\">tooYoung</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/ValidAgeReason</td><td>Age: Too Young</td><td><div><p>Age: Too Young</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhirfli.dev-fhir-ig-pythia-CodeSystem-ValidAgeReason-tooOld\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ValidAgeReason.html#ValidAgeReason-tooOld\">tooOld</a></td><td>http://fhirfli.dev/fhir/ig/pythia/CodeSystem/ValidAgeReason</td><td>Age: Too Old</td><td><div><p>Age: Too Old</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/valid-age-reason",
+      "version" : "0.1.0",
+      "name" : "ValidAgeReasonVS",
+      "title" : "Valid Age Reason",
+      "status" : "draft",
+      "date" : "2024-04-30T22:06:35-04:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:2988d741-f388-460d-b663-09008f5098b9",
+        "timestamp" : "2024-04-30T22:06:45-04:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/ValidAgeReason|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/ValidAgeReason",
+          "code" : "gracePeriod",
+          "display" : "Age: Grace Period"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/ValidAgeReason",
+          "code" : "tooYoung",
+          "display" : "Age: Too Young"
+        },
+        {
+          "system" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/ValidAgeReason",
+          "code" : "tooOld",
+          "display" : "Age: Too Old"
         }]
       }
     }

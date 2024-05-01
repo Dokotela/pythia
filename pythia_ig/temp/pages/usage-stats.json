@@ -30,6 +30,12 @@
         "title": "Schedule Supporting Data"
       }
     ],
+    "vax-dose": [
+      {
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose",
+        "title": "Dose of a Vaccine"
+      }
+    ],
     "Patient": [
       {
         "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient",

@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "VaccineGender",
+  "name": "VaccineGenderVS",
   "id": "vaccine-gender",
   "title": "Vaccine Gender",
   "description": "Value set for gender categories relevant to vaccination data.",
@@ -9,7 +9,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-gender",
+        "system": "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender",
         "concept": [
           {
             "code": "female",

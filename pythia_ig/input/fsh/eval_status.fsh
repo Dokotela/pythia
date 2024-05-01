@@ -1,4 +1,4 @@
-CodeSystem: EvalStatus
+CodeSystem: EvalStatusCS
 Id: EvalStatus
 Title: "Evaluation Status"
 Description: "The status of the result of an evaluation."
@@ -7,7 +7,7 @@ Description: "The status of the result of an evaluation."
 * #extraneous "Extraneous" "Extraneous"
 * #sub_standard "Substandard" "Substandard"
 
-ValueSet: EvalStatus
+ValueSet: EvalStatusVS
 Id: eval-status
 Title: "Evaluation Status Value Set"
 Description: "Value Set for the status of the result of an evaluation."

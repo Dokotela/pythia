@@ -6,14 +6,14 @@
   "status" : "draft",
   "package-id" : "pythia.ig",
   "ig-ver" : "0.1.0",
-  "date" : "Tue, 30 Apr, 2024 19:45:10 -0400",
-  "dateISO8601" : "2024-04-30T19:45:10-04:00",
-  "errs" : 7,
-  "warnings" : 280,
+  "date" : "Tue, 30 Apr, 2024 22:06:35 -0400",
+  "dateISO8601" : "2024-04-30T22:06:35-04:00",
+  "errs" : 9,
+  "warnings" : 337,
   "hints" : 7,
   "suppressed-hints" : 0,
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1877578472
+  "maxMemory" : 1729355016
 }

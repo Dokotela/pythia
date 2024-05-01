@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "EvalStatus",
+  "name": "EvalStatusCS",
   "id": "EvalStatus",
   "title": "Evaluation Status",
   "description": "The status of the result of an evaluation.",

@@ -1,5 +1,5 @@
 // Define the Vaccine Gender CodeSystem
-CodeSystem: VaccineGender
+CodeSystem: VaccineGenderCS
 Id: VaccineGender
 Title: "Vaccine Gender"
 Description: "Value set for gender categories relevant to vaccination data."
@@ -9,7 +9,7 @@ Description: "Value set for gender categories relevant to vaccination data."
 * #male "Male" "Male" 
 
 // Define the Vaccine Status ValueSet
-ValueSet: VaccineGender
+ValueSet: VaccineGenderVS
 Id: vaccine-gender
 Title: "Vaccine Gender"
 Description: "Value set for gender categories relevant to vaccination data."

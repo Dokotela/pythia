@@ -561,6 +561,65 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","The system in which the code is valid (e.g., SNOMED, CDCPHINVS).","The system in which the code is valid (e.g., SNOMED, CDCPHINVS).","","","","","","","","","",,,,,"",,,,"schedule-supporting-data.vaccinationObservationMap.codedValues.codeSystem",1,1,"",""
 "schedule-supporting-data","schedule-supporting-data.vaccinationObservationMap.codedValues.text","schedule-supporting-data.vaccinationObservationMap.codedValues.text","","","",1,1,"","","","string {[]} {[]}
 ","Human-readable name or description of the code.","Human-readable name or description of the code.","","","","","","","","","",,,,,"",,,,"schedule-supporting-data.vaccinationObservationMap.codedValues.text",1,1,"",""
+"vax-dose","vax-dose","vax-dose","","","",0,*,"","","","null {[]} {[]}
+","Dose of a Vaccine","Detailed information about each vaccination dose.","","","","","","","","","",,,,,"",,,,"Element",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"vax-dose","vax-dose.id","vax-dose.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"vax-dose","vax-dose.extension","vax-dose.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"vax-dose","vax-dose.doseId","vax-dose.doseId","","","",1,1,"","","","string {[]} {[]}
+","Unique identifier for the dose.","Unique identifier for the dose.","","","","","","","","","",,,,,"",,,,"vax-dose.doseId",1,1,"",""
+"vax-dose","vax-dose.volume","vax-dose.volume","","","",0,1,"","","","decimal {[]} {[]}
+","Volume of the vaccine administered.","Volume of the vaccine administered.","","","","","","","","","",,,,,"",,,,"vax-dose.volume",0,1,"",""
+"vax-dose","vax-dose.dateGiven","vax-dose.dateGiven","","","",1,1,"","","","dateTime {[]} {[]}
+","Date the vaccine was administered.","Date the vaccine was administered.","","","","","","","","","",,,,,"",,,,"vax-dose.dateGiven",1,1,"",""
+"vax-dose","vax-dose.cvx","vax-dose.cvx","","","",1,1,"","","","code {[]} {[]}
+","CVX code for the vaccine administered.","CVX code for the vaccine administered.","","","","","","","","","",,,,,"",,,,"vax-dose.cvx",1,1,"",""
+"vax-dose","vax-dose.mvx","vax-dose.mvx","","","",0,1,"","","","string {[]} {[]}
+","Manufacturer's vaccine code.","Manufacturer's vaccine code.","","","","","","","","","",,,,,"",,,,"vax-dose.mvx",0,1,"",""
+"vax-dose","vax-dose.antigens","vax-dose.antigens","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","List of antigens in the vaccine.","List of antigens in the vaccine.","","","","","","","","","",,,,,"",,,,"vax-dose.antigens",0,*,"",""
+"vax-dose","vax-dose.dob","vax-dose.dob","","","",1,1,"","","","date {[]} {[]}
+","Date of birth of the recipient.","Date of birth of the recipient.","","","","","","","","","",,,,,"",,,,"vax-dose.dob",1,1,"",""
+"vax-dose","vax-dose.targetDisease","vax-dose.targetDisease","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Target disease for the vaccine.","Target disease for the vaccine.","","","","","","","","","",,,,,"",,,,"vax-dose.targetDisease",0,1,"",""
+"vax-dose","vax-dose.index","vax-dose.index","","","",0,1,"","","","integer {[]} {[]}
+","Index of the dose in the vaccination series.","Index of the dose in the vaccination series.","","","","","","","","","",,,,,"",,,,"vax-dose.index",0,1,"",""
+"vax-dose","vax-dose.inadvertent","vax-dose.inadvertent","","","",0,1,"","","","boolean {[]} {[]}
+","If the vaccine was administered inadvertently.","If the vaccine was administered inadvertently.","","","","","","","","","",,,,,"",,,,"vax-dose.inadvertent",0,1,"",""
+"vax-dose","vax-dose.validAgeReason","vax-dose.validAgeReason","","","",0,1,"","","","code {[]} {[]}
+","A reason related to the valid age for vaccine administration.","A reason related to the valid age for vaccine administration.","","","","","","","","","",,,,,"",,,,"vax-dose.validAgeReason",0,1,"",""
+"vax-dose","vax-dose.preferredInterval","vax-dose.preferredInterval","","","",0,1,"","","","string {[]} {[]}
+","If there was a preferred interval followed.","If there was a preferred interval followed.","","","","","","","","","",,,,,"",,,,"vax-dose.preferredInterval",0,1,"",""
+"vax-dose","vax-dose.preferredIntervalReason","vax-dose.preferredIntervalReason","","","",0,1,"","","","code {[]} {[]}
+","Reason why a preferred interval was followed.","Reason why a preferred interval was followed.","","","","","","","","","",,,,,"",,,,"vax-dose.preferredIntervalReason",0,1,"",""
+"vax-dose","vax-dose.allowedInterval","vax-dose.allowedInterval","","","",0,1,"","","","string {[]} {[]}
+","If the interval was allowed despite being non-standard.","If the interval was allowed despite being non-standard.","","","","","","","","","",,,,,"",,,,"vax-dose.allowedInterval",0,1,"",""
+"vax-dose","vax-dose.allowedIntervalReason","vax-dose.allowedIntervalReason","","","",0,1,"","","","code {[]} {[]}
+","Reason why an interval was allowed despite being non-standard.","Reason why an interval was allowed despite being non-standard.","","","","","","","","","",,,,,"",,,,"vax-dose.allowedIntervalReason",0,1,"",""
+"vax-dose","vax-dose.conflict","vax-dose.conflict","","","",0,1,"","","","boolean {[]} {[]}
+","If there was a conflict with another vaccine.","If there was a conflict with another vaccine.","","","","","","","","","",,,,,"",,,,"vax-dose.conflict",0,1,"",""
+"vax-dose","vax-dose.conflictReason","vax-dose.conflictReason","","","",0,1,"","","","string {[]} {[]}
+","Reason for the conflict.","Reason for the conflict.","","","","","","","","","",,,,,"",,,,"vax-dose.conflictReason",0,1,"",""
+"vax-dose","vax-dose.preferredVaccine","vax-dose.preferredVaccine","","","",0,1,"","","","boolean {[]} {[]}
+","If this vaccine is preferred.","If this vaccine is preferred.","","","","","","","","","",,,,,"",,,,"vax-dose.preferredVaccine",0,1,"",""
+"vax-dose","vax-dose.preferredVaccineReason","vax-dose.preferredVaccineReason","","","",0,1,"","","","code {[]} {[]}
+","Reason why this vaccine is preferred.","Reason why this vaccine is preferred.","","","","","","","","","",,,,,"",,,,"vax-dose.preferredVaccineReason",0,1,"",""
+"vax-dose","vax-dose.allowedVaccine","vax-dose.allowedVaccine","","","",0,1,"","","","boolean {[]} {[]}
+","If this vaccine was allowed.","If this vaccine was allowed.","","","","","","","","","",,,,,"",,,,"vax-dose.allowedVaccine",0,1,"",""
+"vax-dose","vax-dose.allowedVaccineReason","vax-dose.allowedVaccineReason","","","",0,1,"","","","code {[]} {[]}
+","Reason why this vaccine was allowed.","Reason why this vaccine was allowed.","","","","","","","","","",,,,,"",,,,"vax-dose.allowedVaccineReason",0,1,"",""
+"vax-dose","vax-dose.evalStatus","vax-dose.evalStatus","","","",0,1,"","","","code {[]} {[]}
+","Evaluation status of the vaccination.","Evaluation status of the vaccination.","","","","","","","","","",,,,,"",,,,"vax-dose.evalStatus",0,1,"",""
+"vax-dose","vax-dose.evalReason","vax-dose.evalReason","","","",0,1,"","","","code {[]} {[]}
+","Reason for the evaluation status.","Reason for the evaluation status.","","","","","","","","","",,,,,"",,,,"vax-dose.evalReason",0,1,"",""
+"vax-dose","vax-dose.targetDoseSatisfied","vax-dose.targetDoseSatisfied","","","",0,1,"","","","integer {[]} {[]}
+","Index of the target dose satisfied by this administration.","Index of the target dose satisfied by this administration.","","","","","","","","","",,,,,"",,,,"vax-dose.targetDoseSatisfied",0,1,"",""
 "vax-patient","Patient","Patient","","SubjectOfCare Client Resident
 ","",0,*,"","","","null {[]} {[]}
 ","Information about an individual or animal receiving health care services","Demographics and other administrative information about an individual or animal receiving care or other health-related services.","","","","","","","","","",,,,,"",,,,"Patient",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}

@@ -1,0 +1,337 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vax-dose",
+  "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose",
+  "name": "VaxDose",
+  "title": "Dose of a Vaccine",
+  "status": "draft",
+  "description": "Detailed information about each vaccination dose.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "vax-dose",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "vax-dose",
+        "path": "vax-dose",
+        "short": "Dose of a Vaccine",
+        "definition": "Detailed information about each vaccination dose."
+      },
+      {
+        "id": "vax-dose.doseId",
+        "path": "vax-dose.doseId",
+        "short": "Unique identifier for the dose.",
+        "definition": "Unique identifier for the dose.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.volume",
+        "path": "vax-dose.volume",
+        "short": "Volume of the vaccine administered.",
+        "definition": "Volume of the vaccine administered.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.dateGiven",
+        "path": "vax-dose.dateGiven",
+        "short": "Date the vaccine was administered.",
+        "definition": "Date the vaccine was administered.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.cvx",
+        "path": "vax-dose.cvx",
+        "short": "CVX code for the vaccine administered.",
+        "definition": "CVX code for the vaccine administered.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.mvx",
+        "path": "vax-dose.mvx",
+        "short": "Manufacturer's vaccine code.",
+        "definition": "Manufacturer's vaccine code.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.antigens",
+        "path": "vax-dose.antigens",
+        "short": "List of antigens in the vaccine.",
+        "definition": "List of antigens in the vaccine.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.dob",
+        "path": "vax-dose.dob",
+        "short": "Date of birth of the recipient.",
+        "definition": "Date of birth of the recipient.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.targetDisease",
+        "path": "vax-dose.targetDisease",
+        "short": "Target disease for the vaccine.",
+        "definition": "Target disease for the vaccine.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.index",
+        "path": "vax-dose.index",
+        "short": "Index of the dose in the vaccination series.",
+        "definition": "Index of the dose in the vaccination series.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.inadvertent",
+        "path": "vax-dose.inadvertent",
+        "short": "If the vaccine was administered inadvertently.",
+        "definition": "If the vaccine was administered inadvertently.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.validAgeReason",
+        "path": "vax-dose.validAgeReason",
+        "short": "A reason related to the valid age for vaccine administration.",
+        "definition": "A reason related to the valid age for vaccine administration.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.preferredInterval",
+        "path": "vax-dose.preferredInterval",
+        "short": "If there was a preferred interval followed.",
+        "definition": "If there was a preferred interval followed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.preferredIntervalReason",
+        "path": "vax-dose.preferredIntervalReason",
+        "short": "Reason why a preferred interval was followed.",
+        "definition": "Reason why a preferred interval was followed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.allowedInterval",
+        "path": "vax-dose.allowedInterval",
+        "short": "If the interval was allowed despite being non-standard.",
+        "definition": "If the interval was allowed despite being non-standard.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.allowedIntervalReason",
+        "path": "vax-dose.allowedIntervalReason",
+        "short": "Reason why an interval was allowed despite being non-standard.",
+        "definition": "Reason why an interval was allowed despite being non-standard.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.conflict",
+        "path": "vax-dose.conflict",
+        "short": "If there was a conflict with another vaccine.",
+        "definition": "If there was a conflict with another vaccine.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.conflictReason",
+        "path": "vax-dose.conflictReason",
+        "short": "Reason for the conflict.",
+        "definition": "Reason for the conflict.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.preferredVaccine",
+        "path": "vax-dose.preferredVaccine",
+        "short": "If this vaccine is preferred.",
+        "definition": "If this vaccine is preferred.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.preferredVaccineReason",
+        "path": "vax-dose.preferredVaccineReason",
+        "short": "Reason why this vaccine is preferred.",
+        "definition": "Reason why this vaccine is preferred.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.allowedVaccine",
+        "path": "vax-dose.allowedVaccine",
+        "short": "If this vaccine was allowed.",
+        "definition": "If this vaccine was allowed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.allowedVaccineReason",
+        "path": "vax-dose.allowedVaccineReason",
+        "short": "Reason why this vaccine was allowed.",
+        "definition": "Reason why this vaccine was allowed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.evalStatus",
+        "path": "vax-dose.evalStatus",
+        "short": "Evaluation status of the vaccination.",
+        "definition": "Evaluation status of the vaccination.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.evalReason",
+        "path": "vax-dose.evalReason",
+        "short": "Reason for the evaluation status.",
+        "definition": "Reason for the evaluation status.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "vax-dose.targetDoseSatisfied",
+        "path": "vax-dose.targetDoseSatisfied",
+        "short": "Index of the target dose satisfied by this administration.",
+        "definition": "Index of the target dose satisfied by this administration.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      }
+    ]
+  }
+}

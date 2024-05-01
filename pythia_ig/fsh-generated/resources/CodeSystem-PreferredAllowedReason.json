@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "PreferredAllowedReason",
+  "name": "PreferredAllowedReasonCS",
   "id": "PreferredAllowedReason",
   "title": "Reasons why certain doses are Preferred or Allowed doses",
   "description": "Reasons why certain doses are Preferred or Allowed doses",

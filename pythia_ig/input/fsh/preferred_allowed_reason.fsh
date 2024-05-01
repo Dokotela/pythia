@@ -1,4 +1,4 @@
-CodeSystem: PreferredAllowedReason
+CodeSystem: PreferredAllowedReasonCS
 Id: PreferredAllowedReason
 Title: "Reasons why certain doses are Preferred or Allowed doses"
 Description: "Reasons why certain doses are Preferred or Allowed doses"
@@ -9,7 +9,7 @@ Description: "Reasons why certain doses are Preferred or Allowed doses"
 * #noPreferredTypes "No preferred types" "No preferred types"
 * #noAllowedTypes "No allowed types" "No allowed types"
 
-ValueSet: PreferredAllowedReason
+ValueSet: PreferredAllowedReasonVS
 Id: preferred-allowed-reason
 Title: "Reasons why certain doses are Preferred or Allowed doses"
 Description: "Reasons why certain doses are Preferred or Allowed doses"
