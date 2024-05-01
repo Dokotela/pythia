@@ -1,960 +1,986 @@
 map "http://fhirfli.dev/fhir/ig/pythia/StructureMap/map-vaccine-codes" = "MapVaccineCodes"
 
-uses "Observation" as sourceObservation
-uses "Condition" as sourceCondition
-uses "Procedure" as sourceProcedure
-uses "Immunization" as sourceImmunization
-uses "Medication" as sourceMedication
-uses "MedicationStatement" as sourceMedicationStatement
-uses "MedicationRequest" as sourceMedicationRequest
-uses "MedicationAdministration" as sourceMedicationAdministration
-uses "MedicationDispense" as sourceMedicationDispense
-uses "Condition" as targetCondition
+// Define the usage of FHIR resource types with specific aliases
+uses "http://hl7.org/fhir/StructureDefinition/Observation" alias sourceObservation as source
+uses "http://hl7.org/fhir/StructureDefinition/Condition" alias sourceCondition as source
+uses "http://hl7.org/fhir/StructureDefinition/Procedure" alias sourceProcedure as source
+uses "http://hl7.org/fhir/StructureDefinition/Immunization" alias sourceImmunization as source
+uses "http://hl7.org/fhir/StructureDefinition/Medication" alias sourceMedication as source
+uses "http://hl7.org/fhir/StructureDefinition/MedicationStatement" alias sourceMedicationStatement as source
+uses "http://hl7.org/fhir/StructureDefinition/MedicationRequest" alias sourceMedicationRequest as source
+uses "http://hl7.org/fhir/StructureDefinition/MedicationAdministration" alias sourceMedicationAdministration as source
+uses "http://hl7.org/fhir/StructureDefinition/MedicationDispense" alias sourceMedicationDispense as source
+uses "http://hl7.org/fhir/StructureDefinition/Condition" alias targetCondition as target
 
 group MapToVaccineConditionObservation(source src : any, target tgt : targetCondition) {
-  src.type -> {
-    case 'Observation': MapFromObservation(src as sourceObservation, tgt);
-    case 'Condition': MapFromCondition(src as sourceCondition, tgt);
-    case 'Procedure': MapFromProcedure(src as sourceProcedure, tgt);
-    case 'Immunization': MapFromImmunization(src as sourceImmunization, tgt);
-    case 'Medication': MapFromMedication(src as sourceMedication, tgt);
-    case 'MedicationStatement': MapFromMedicationStatement(src as sourceMedicationStatement, tgt);
-    case 'MedicationRequest': MapFromMedicationRequest(src as sourceMedicationRequest, tgt);
-    case 'MedicationAdministration': MapFromMedicationAdministration(src as sourceMedicationAdministration, tgt);
-    case 'MedicationDispense': MapFromMedicationDispense(src as sourceMedicationDispense, tgt);
-  }
+  src as sourceObservation where (src is Observation) -> tgt then MapFromObservation(src, tgt) "SourceObservation";
+  src as sourceCondition where (src is Condition) -> tgt then  MapFromCondition(src, tgt) "SourceCondition";
+  src as sourceProcedure where (src is Procedure) -> tgt then  MapFromProcedure(src, tgt) "SourceProcedure";
+  src as sourceImmunization where (src is Immunization) -> tgt then  MapFromImmunization(src, tgt) "SourceImmunization";
+  src as sourceMedication where (src is Medication) -> tgt then  MapFromMedication(src, tgt) "SourceMedication";
+  src as sourceMedicationStatement where (src is MedicationStatement) -> tgt then  MapFromMedicationStatement(src, tgt) "SourceMedicationStatement";
+  src as sourceMedicationRequest where (src is MedicationRequest) -> tgt then  MapFromMedicationRequest(src, tgt) "SourceMedicationRequest";
+  src as sourceMedicationAdministration where (src is MedicationAdministration) -> tgt then  MapFromMedicationAdministration(src, tgt) "SourceMedicationAdministration";
+  src as sourceMedicationDispense where (src is MedicationDispense) -> tgt then  MapFromMedicationDispense(src, tgt) "SourceMedicationDispense";
 }
 
 group MapFromObservation(source src : sourceObservation, target tgt : targetCondition) {
-    src -> tgt.status = 'active';
-    ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.status = 'active' "ObservationSetResultToActive";
+  src as sourceObservation where (src is Observation) -> tgt then MapFromObservation(src, tgt) "SourceObservation";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromObservation";
+  src -> tgt.onsetDateTime = src.effectiveDateTime "ObservationSetOnsetDateTime";
+  src -> tgt.onsetPeriod = src.effectivePeriod "ObservationSetOnsetPeriod";
+  src -> tgt.onsetDateTime = src.effectiveInstant "ObservationSetOnsetInstant";
 }
 
 group MapFromCondition(source src : sourceCondition, target tgt : targetCondition) {
-src -> tgt.status = 'active';
-ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.status = "active" "ConditionSetStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromCondition";
+  src -> tgt.onsetDateTime = src.onsetDateTime "ConditionSetOnsetDateTime";
+  src -> tgt.onsetAge = src.onsetAge "ConditionSetOnsetAge";
+  src -> tgt.onsetPeriod = src.onsetPeriod "ConditionSetOnsetPeriod";
+  src -> tgt.onsetRange = src.onsetRange "ConditionSetOnsetRange";
+  src -> tgt.onsetString = src.onsetString "ConditionSetOnsetString";
+  src -> tgt.abatementDateTime = src.abatementDateTime "ConditionSetAbatementDateTime";
+  src -> tgt.abatementAge = src.abatementAge "ConditionSetAbatementAge";
+  src -> tgt.abatementPeriod = src.abatementPeriod "ConditionSetAbatementPeriod";
+  src -> tgt.abatementRange = src.abatementRange "ConditionSetAbatementRange";
+  src -> tgt.abatementString = src.abatementString "ConditionSetAbatementString";
 } 
 
 group MapFromProcedure(source src : sourceProcedure, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.status = "active" "ProcedureSetStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromProcedure";
+  src -> tgt.onsetDateTime = src.performedDateTime "ProcedureSetOnsetDateTime";
+  src -> tgt.onsetAge = src.performedAge "ProcedureSetOnsetAge";
+  src -> tgt.onsetPeriod = src.performedPeriod "ProcedureSetOnsetPeriod";
+  src -> tgt.onsetRange = src.performedRange "ProcedureSetOnsetRange";
+  src -> tgt.onsetString = src.performedString "ProcedureSetOnsetString";
 }
 
 group MapFromImmunization(source src : sourceImmunization, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.status = "active" "ImmunizationSetStatus";
+  src.vaccineCode as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromImmunization";
+  src -> tgt.onsetDateTime = src.occurrenceDateTime "ImmunizationSetOnsetDateTime";
+  src -> tgt.onsetString = src.occurrenceString "ImmunizationSetOnsetString";
 }
 
 group MapFromMedication(source src : sourceMedication, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.status = "active" "MedicationSetStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromMedication";
 }
 
 // What about medicationReference?
 group MapFromMedicationStatement(source src : sourceMedicationStatement, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
+  src -> tgt.status = "active" "MedicationStatementSetStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromMedicationStatement";
 }
 
 group MapFromMedicationRequest(source src : sourceMedicationRequest, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
+  src -> tgt.status = "active" "MedicationRequestSetStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromMedicationRequest";
+  src -> tgt.onsetDateTime = src.authoredOn "MedicationRequestSetOnsetDateTime";
 }
 
 group MapFromMedicationAdministration(source src : sourceMedicationAdministration, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
+  src -> tgt.status = "active" "MedicationAdministrationSetStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromMedicationAdministration";
+  src -> tgt.onsetDateTime = src.effectiveDateTime "MedicationAdministrationSetOnsetDateTime";
+  src -> tgt.onsetPeriod = src.effectivePeriod "MedicationAdministrationSetOnsetPeriod";
 }
 
 group MapFromMedicationDispense(source src : sourceMedicationDispense, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
+  src -> tgt.status = "active" "MedicationDispenseSetStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromMedicationDispense";
+  src -> tgt.onsetDateTime = src.whenHandedOver "MedicationDispenseSetOnsetDateTime";
+}
+
+group ApplyCommonMappings(source src : List<Coding>, target tgt : targetCondition) {
+    src where(src.code.coding.code = '370388006' and srouce.code.coding.system = 'http://snomed.info/sct') -> tgt.code = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes' "Set system for new coding";
+        src -> newCoding.code = '003' "Set code for immunocompromised";
+      } "Complete mapping for immunocompromised status";
 }
 
 
-function createCode(codeValue : string, systemValue : string) -> Coding {
-  Coding {
-    system = systemValue,
-    code = codeValue
-  }
-}
+// group ApplyCommonMappings(sourceCodings : List<Coding>, targetCondition : targetCondition) {
+//   // Define a map of source system codes to target codes and systems
+//   const mappings = {
+//     'http://snomed.info/sct': {
+//     // Patient Immunocompromised
+//     '370388006': ('003', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hemopoietic stem cell transplant [procedure]
+//     '234336002': ('004', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Viral hepatitis type C [disorder]
+//     '50711007': ('005', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Patient currently pregnant [finding]
+//     '77386006': ('007', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Possible pregnancy [finding]
+//     '102874004': ('007', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Pregnant woman [person]
+//     '255409004': ('007', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Breastfeeding [mother] [observable entity]
+//     '413712001': ('009', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Cerebrospinal fluid leak [disorder]
+//     '230744007': ('010', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Cochlear prosthesis in situ [finding]
+//     '449840001': ('011', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Cochlear prosthesis, device [physical object]
+//     '43252007': ('011', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Implantation of cochlear prosthetic device [procedure]
+//     '359612003': ('011', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Severe combined immunodeficiency disease [disorder]
+//     '31323000': ('013', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Diabetes mellitus [disorder]
+//     '73211009': ('014', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Chronic liver disease [disorder]
+//     '328383001': ('015', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Cirrhosis of liver [disorder]
+//     '19943007': ('015', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Chronic heart disease [disorder]
+//     '128238001': ('016', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Congestive heart failure [disorder]
+//     '42343007': ('016', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Myocardial disease [disorder]
+//     '57809008': ('016', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Cyanotic congenital heart disease [disorder]
+//     '12770006': ('016', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Chronic lung disease [disorder]
+//     '413839001': ('017', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Chronic obstructive lung disease [disorder]
+//     '13645005': ('017', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Pulmonary emphysema [disorder]
+//     '87433001': ('017', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hepatitis A Immune [Finding]
+//     '278971009': ('018', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hepatitis B Immune [Finding]
+//     '271511000': ('019', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Measles Immune [finding]
+//     '371111005': ('020', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Mumps Immune [finding]
+//     '371112003': ('021', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rubella Immune [finding]
+//     '278968001': ('022', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Varicella Immune
+//     '371113008': ('023', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Varicella [Disorder]
+//     '38907003': ('024', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Herpes Zoster [Disorder]
+//     '4740000': ('025', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Human immunodeficiency virus infection [disorder]
+//     '86406008': ('026', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Antiviral therapy [procedure]
+//     '427314002': ('026', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Asthma finding [finding]
+//     '390798007': ('027', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Asthma [disorder]
+//     '195967001': ('027', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Intussusception [morphologic abnormality]
+//     '35327006': ('028', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Intussusception of intestine [disorder]
+//     '49723003': ('028', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Acute gastroenteritis [disorder]
+//     '69776003': ('029', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Tuberculosis [disorder]
+//     '56717001': ('031', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Amantadine [substance]
+//     '372763006': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Amantadine [product]
+//     '51361008': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rimantadine [substance]
+//     '372532009': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rimantadine [product]
+//     '108712009': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Zanamivir [substance]
+//     '387010007': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Zanamivir [product]
+//     '116100000': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Oseltamivir [substance]
+//     '412261005': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Oseltamivir [product]
+//     '386142008': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Aspirin therapy finding [finding]
+//     '405742008': ('034', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Male homosexual [finding]
+//     '76102007': ('036', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Homosexual behavior [finding]
+//     '225531006': ('036', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Multiple sexual contacts [finding]
+//     '225516002': ('037', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Multiple current sexual partners [finding]
+//     '228460004': ('037', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Commitment to sexual relationship [observable entity]
+//     '228466005': ('037', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Sexual partners [observable entity]
+//     '225517006': ('038', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Contact with [contextual qualifier] [qualifier value]
+//     '11723008': ('038', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hepatitis B surface antigen positive [finding]
+//     '165806002': ('038', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Under care of genitourinary medicine physician [finding]
+//     '305489005': ('039', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Seen by genitourinary medicine physician [finding]
+//     '305679000': ('039', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Sexually transmitted infectious disease [disorder]
+//     '8098009': ('039', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Illicit drug use [finding]
+//     '307052004': ('040', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Finding relating to drug misuse behavior [finding]
+//     '228366006': ('040', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Injecting drug user [finding]
+//     '226034001': ('041', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Intravenous drug user  [finding]
+//     '228388006': ('041', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Intravenous cocaine abuse [disorder]
+//     '145101000119102': ('041', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Skin lesion due to intravenous drug abuse [disorder]
+//     '403746009': ('041', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Deep vein thrombosis of lower extremity due to intravenous drug use [disorder]
+//     '860699005': ('041', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Smoker [finding]
+//     '77176002': ('042', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Problem drinker [finding]
+//     '228281002': ('043', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Alcoholism [disorder]
+//     '7200002': ('043', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Microbiologist [occupation]
+//     '159138004': ('050', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Medical microbiologist [occupation]
+//     '14698002': ('050', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Exposure to [contextual qualifier] [qualifier value]
+//     '24932003': ('050', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Neisseria meningitidis [organism]
+//     '17872004': ('050', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Microbiologist [occupation]
+//     '159138004': ('051', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Medical microbiologist [occupation]
+//     '14698002': ('051', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Laboratory technician [occupation]
+//     '159282002': ('051', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Exposure to [contextual qualifier] [qualifier value]
+//     '24932003': ('051', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Salmonella Typhi [organism]
+//     '5595000': ('051', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Laboratory technician [occupation]
+//     '159282002': ('052', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Exposure to [contextual qualifier] [qualifier value]
+//     '24932003': ('052', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Yellow fever virus [organism]
+//     '26630006': ('052', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Laboratory technician [occupation]
+//     '159282002': ('053', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Exposure to [contextual qualifier] [qualifier value]
+//     '24932003': ('053', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rabies virus [organism]
+//     '59881000': ('053', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Laboratory technician [occupation]
+//     '159282002': ('054', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Exposure to [contextual qualifier] [qualifier value]
+//     '24932003': ('054', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Human poliovirus [organism]
+//     '44172002': ('054', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Healthcare professional [occupation]
+//     '223366009': ('055', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Healthcare professional [occupation]
+//     '223366009': ('056', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Exposure to [contextual qualifier] [qualifier value]
+//     '24932003': ('056', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Human poliovirus [organism]
+//     '44172002': ('056', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Public health nurse [occupation]
+//     '26369006': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Public health dentist [occupation]
+//     '68867008': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Public health officer [occupation]
+//     '307969004': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Public health physician [occupation]
+//     '56466003': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Public health veterinarian [occupation]
+//     '56079002': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Public health nutritionist [occupation]
+//     '60008001': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Exposure to [contextual qualifier] [qualifier value]
+//     '24932003': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Blood [substance]
+//     '87612001': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Body fluid [substance]
+//     '32457005': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Healthcare professional [occupation]
+//     '223366009': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Residential child care worker [occupation]
+//     '158942005': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Child care officer [occupation]
+//     '158939004': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Plumber [general] [occupation]
+//     '73851001': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Sewerman [occupation]
+//     '160157004': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Food/drink processor [occupation]
+//     '266006009': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Catering services occupation [occupation]
+//     '274272004': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Packer - food/garden produce [occupation]
+//     '160133004': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Animal health occupation [occupation]
+//     '265940000': ('060', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Trainer - performing animals [occupation]
+//     '159091009': ('061', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Exposure to [contextual qualifier] [qualifier value]
+//     '24932003': ('062', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rabies virus [organism]
+//     '59881000': ('062', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Student [occupation]
+//     '65853000': ('063', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Further education establishment [environment]
+//     '257561002': ('063', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Chronic renal failure syndrome [disorder]
+//     '90688005': ('066', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Substance abuse treatment center [environment]
+//     '20078004': ('068', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Penal institution [environment]
+//     '257656006': ('069', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // At risk context [qualifier value]
+//     '410519009': ('070', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Disease outbreak [event]
+//     '443684005': ('070', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Contact with [contextual qualifier] [qualifier value]
+//     '11723008': ('071', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hepatitis B surface antigen positive [finding]
+//     '165806002': ('071', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Typhoid carrier [finding]
+//     '170484009': ('072', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Transgender identify [finding]
+//     '12271241000119109': ('075', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Epilepsy [disorder]
+//     '84757009': ('076', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Post diphtheria vaccination encephalitis [disorder]
+//     '192711008': ('079', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Post tetanus vaccination encephalitis [disorder]
+//     '192710009': ('079', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Post pertussis vaccination encephalitis [disorder]
+//     '192712001': ('079', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Vaccines adverse reaction [disorder]
+//     '293104008': ('080', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Poliomyelitis vaccine adverse reaction [disorder]
+//     '293117006': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction caused by Japanese encephalitis virus vaccine [disorder]
+//     '451301000124103': ('082', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction to rotavirus vaccine [disorder]
+//     '429301000124101': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Typhoid vaccine adverse reaction [disorder]
+//     '293122006': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza virus vaccine adverse reaction [disorder]
+//     '420113004': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Pertussis vaccine adverse reaction [disorder]
+//     '293115003': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction to diphtheria vaccine [disorder]
+//     '219085007': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction to tetanus vaccine [disorder]
+//     '219084006': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction caused by varicella virus live vaccine [disorder]
+//     '451331000124106': ('089', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction to human papillomavirus vaccine [disorder]
+//     '429311000124103': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction to measles vaccine [disorder]
+//     '219096004': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Mumps vaccine adverse reaction [disorder]
+//     '293114004': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rubella vaccine adverse reaction [disorder]
+//     '293119009': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Pneumococcal vaccine adverse reaction [disorder]
+//     '293116002': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction to meningococcal vaccine [disorder]
+//     '2219088009': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction caused by meningococcal conjugate vaccine [disorder]
+//     '451111000124103': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hepatitis A vaccine adverse reaction [disorder]
+//     '293126009': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hepatitis B vaccine adverse reaction [disorder]
+//     '293110008': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Haemophilus influenzae Type B vaccine adverse reaction [disorder]
+//     '293127000': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction to yellow fever vaccine [disorder]
+//     '219095000': ('099', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction caused by zoster vaccine [disorder]
+//     '451291000124104': ('100', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Egg protein allergy [disorder]
+//     '213020009': ('101', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to eggs [disorder]
+//     '91930004': ('101', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Gelatin adverse reaction [disorder]
+//     '293309006': ('102', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Gelatin allergy [disorder]
+//     '294847001': ('102', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Latex allergy [disorder]
+//     '300916003': ('104', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Anaphylaxis due to latex [disorder]
+//     '441593005': ('104', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Gentamycin sensitivity [disorder]
+//     '419522004': ('106', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Gentamicin adverse reaction [disorder]
+//     '420094007': ('106', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Gentamicin allergy [disorder]
+//     '294469003': ('106', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Neomycin allergy [disorder]
+//     '294468006': ('107', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Neomycin adverse reaction [disorder]
+//     '292927007': ('107', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Streptomycin allergy [disorder]
+//     '294466005': ('108', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Streptomycin adverse reaction [disorder]
+//     '292925004': ('108', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Polymyxin B allergy [disorder]
+//     '294530006': ('109', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Polymyxin B adverse reaction [disorder]
+//     '292992006': ('109', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to yeast [disorder]
+//     '703936006': ('110', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rabies vaccine adverse reaction [disorder]
+//     '293118001': ('113', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // End stage renal disease [disorder]
+//     '46177005': ('114', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Protamine sulfate [substance]
+//     '64520006': ('115', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Protamine allergy [disorder]
+//     '294278007': ('115', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction caused by meningococcal group B vaccine [disorder]
+//     '451281000124102': ('116', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction caused by cholera vaccine [disorder]
+//     '219082005': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Homeless [finding]
+//     '32911000': ('121', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Transfusion of blood product [procedure]
+//     '116859006': ('132', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Transfusion of blood product [procedure]
+//     '116859006': ('133', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Transfusion of blood product [procedure]
+//     '116859006': ('134', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Transfusion of plasma [procedure]
+//     '13569004': ('135', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Platelet transfusion [procedure]
+//     '12719002': ('135', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // X-linked agammaglobulinemia [disorder]
+//     '65880007': ('145', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Common variable agammaglobulinemia [disorder]
+//     '23238000': ('145', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Selective immunoglobulin A deficiency [disorder]
+//     '190979003': ('146', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Immunoglobulin G subclass deficiency [finding]
+//     '123785006': ('146', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Severe combined immunodeficiency disease [disorder]
+//     '31323000': ('147', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DiGeorge sequence [disorder]
+//     '77128003': ('147', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DiGeorge sequence [disorder]
+//     '77128003': ('148', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Wiskott-Aldrich syndrome [disorder]
+//     '36070007': ('148', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Ataxia-telangiectasia syndrome [disorder]
+//     '68504005': ('148', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Complement deficiency disease [disorder]
+//     '24743004': ('150', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Complement deficiency disease [disorder]
+//     '24743004': ('151', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Properdin deficiency disease [disorder]
+//     '81166004': ('151', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Factor B deficiency [disorder]
+//     '234605000': ('151', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Chronic granulomatous disease [disorder]
+//     '387759001': ('152', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Congenital leukocyte adherence deficiency [disorder]
+//     '77358003': ('153', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Myeloperoxidase deficiency [disorder]
+//     '234433009': ('153', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Acquired immune deficiency syndrome [disorder]
+//     '62479008': ('154', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Acquired immune deficiency syndrome [disorder]
+//     '62479008': ('155', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Transplantation [procedure]
+//     '77465005': ('157', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Solid organ transplant [procedure]
+//     '313039003': ('157', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Immunosuppressive therapy [procedure]
+//     '86553008': ('158', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Radiation therapy procedure or service [procedure]
+//     '53438000': ('159', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Asplenia [disorder]
+//     '707147002': ('160', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Chronic kidney disease [disorder]
+//     '709044004': ('161', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Nephrotic syndrome [disorder]
+//     '52254009': ('167', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Chemotherapy [procedure]
+//     '367336001': ('168', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Sexual abuse [event]
+//     '213017001': ('169', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Sexual assault [finding
+//     '422608009': ('169', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Sexual assault [event]
+//     '248110007': ('169', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Estimated date of conception [observable entity]
+//     '248986005': ('170', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Adverse reaction caused by zoster vaccine [disorder]
+//     '451291000124104': ('172', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Leukemia, disease [disorder]
+//     '93143009': ('178', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Lymphoma [finding]
+//     '399600009': ('179', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hodgkin's disease [disorder]
+//     '118599009': ('180', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Multiple myeloma [disorder]
+//     '109989006': ('181', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Human immunodeficiency virus infection [disorder]
+//     '86406008': ('186', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Chimeric antigen receptor T-cell immunotherapy [procedure]
+//     '1156961008': ('191', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Malignant neoplastic disease [disorder]
+//     '363346000': ('198', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Interstitial lung disease [disorder]
+//     '233703007': ('199', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // cystic fibrosis [disorder]
+//     '190905008': ('200', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Pulmonary hypertension [disorder]
+//     '70995007': ('201', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Dimensia [disorder]
+//     '52448006': ('202', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Complete trisomy 21 syndrome [disorder]
+//     '41040004': ('203', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Thalassemia [disorder]
+//     '40108008': ('205', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Cerebrovascular disease [disorder]
+//     '62914000': ('206', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Chronic obstructive lung disease [disorder]
+//     '13645005': ('214', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Pulmonary emphysema [disorder]
+//     '87433001': ('215', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // American Indian or Alaska Native [racial group]
+//     '413490006': ('245', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     },
+//     'http://hl7.org/fhir/sid/cvx': {
+//     // OPV
+//     '02': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // IPV
+//     '10': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Polio, unspecified formulation
+//     '89': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-HepB-IPV
+//     '110': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-Hib-IPV
+//     '120': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV
+//     '130': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB, Historical
+//     '132': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB
+//     '146': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Japanese Encephalitis, MB
+//     '39': ('082', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Japanese Encephalitis, VC
+//     '134': ('082', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Japanese Encephalitis, unspecified
+//     '129': ('082', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rotavirus, pentavalent
+//     '116': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rotavirus, unspecified formulation
+//     '122': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rotavirus, tetravalent
+//     '74': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rotavirus, monovalent
+//     '119': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Typhoid capsular polysaccharide
+//     '101': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Typhoid oral, live, attenuated
+//     '25': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Typhoid, parenteral
+//     '41': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Typhoid, parenteral, AKD [U.S. military]
+//     '53': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Typhoid, unspecified formulation
+//     '91': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, split incl. purified surface antigen
+//     '15': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, whole
+//     '16': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, Unspecified
+//     '88': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, live, intranasal
+//     '111': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, high dose seasonal
+//     '135': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, injectable preservative free
+//     '140': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, injectable
+//     '141': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, intradermal, preservative free
+//     '144': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // influenza, live, intranasal, quadrivalent
+//     '149': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // influenza, injectable, quadrivalent, preservative free
+//     '150': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // influenza nasal, unspecified formulation
+//     '151': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, injectable, MDCK, preservative free
+//     '153': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // influenza, recombinant, injectable, preservative free
+//     '155': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, injectable, quadrivalent
+//     '158': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, injectable, quadrivalent, preservative free, peds
+//     '161': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Influenza, intradermal, quadrivalent, preservative free
+//     '166': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP
+//     '01': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP
+//     '20': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP-Hib
+//     '22': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-Hib
+//     '50': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP-Hib-HepB
+//     '102': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP, 5 pertussis antigens
+//     '106': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP, Unspecified Formulation
+//     '107': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-HepB-IPV
+//     '110': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Tdap
+//     '115': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-Hib-IPV
+//     '120': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV
+//     '130': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB,historical
+//     '132': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB
+//     '146': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP
+//     '01': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Td - Adult Adsorbed
+//     '09': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP
+//     '20': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP-Hib
+//     '22': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DT - Pediatric
+//     '28': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-Hib
+//     '50': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP-Hib-HepB
+//     '102': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP, 5 pertussis antigens
+//     '106': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP, Unspecified Formulation
+//     '107': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-HepB-IPV
+//     '110': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Td p-free
+//     '113': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Tdap
+//     '115': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-Hib-IPV
+//     '120': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV
+//     '130': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB,historical
+//     '132': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Td - Adult
+//     '138': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Td - Adult Unspecified Formulation
+//     '139': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB
+//     '146': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP
+//     '01': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Td - Adult Adsorbed
+//     '09': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP
+//     '20': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP-Hib
+//     '22': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DT - Pediatric
+//     '28': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // TT
+//     '35': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-Hib
+//     '50': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP-Hib-HepB
+//     '102': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP, 5 pertussis antigens
+//     '106': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP, Unspecified Formulation
+//     '107': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-HepB-IPV
+//     '110': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Td p-free
+//     '113': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Tdap
+//     '115': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-Hib-IPV
+//     '120': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV
+//     '130': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB,historical
+//     '132': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Td - Adult
+//     '138': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Td - Adult Unspecified Formulation
+//     '139': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB
+//     '146': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Varicella
+//     '21': ('089', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // MMRV
+//     '94': ('089', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Zoster
+//     '121': ('089', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // 4vHPV
+//     '62': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // 2vHPV
+//     '118': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // HPV Unspecified
+//     '137': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // 9vHPV
+//     '165': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // MMR
+//     '03': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Measles/Rubella
+//     '04': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Measles
+//     '05': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // MMRV
+//     '94': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // MMR
+//     '03': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Mumps
+//     '07': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rubella/Mumps
+//     '38': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // MMRV
+//     '94': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // MMR
+//     '03': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Measles/Rubella
+//     '04': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rubella
+//     '06': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rubella/Mumps
+//     '38': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // MMRV
+//     '94': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // PCV13
+//     '133': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // PCV7
+//     '100': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // PPSV23
+//     '33': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Pneumococcal, unspecified formulation
+//     '109': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Pneumococcal Conjugate, unspecified formulation
+//     '152': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Meningococcal, MPSV4
+//     '32': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Meningococcal ACWY, unspecified
+//     '108': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Meningococcal, MCV4P
+//     '114': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Meningococcal, MCV4O
+//     '136': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // MCV4, unspecified
+//     '147': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Meningococcal C/Y-HIB PRP
+//     '148': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Meningococcal, unknown serogroups
+//     '167': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hep A, adult
+//     '52': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hep A, ped/adol, 2 dose
+//     '83': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hep A, ped/adol, 3 dose
+//     '84': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hep A, Unspecified
+//     '85': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // HepA-HepB
+//     '104': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hep B, Adol/peds
+//     '08': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hep B, Adol/high risk infant
+//     '42': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hep B, Adult
+//     '43': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hep B, Dialysis
+//     '44': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hep B, Unspecified Formulation
+//     '45': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hib-HepB
+//     '51': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-Hib-HepB
+//     '102': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // HepA-HepB
+//     '104': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-HepB-IPV
+//     '110': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB, historical
+//     '132': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB
+//     '146': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hib unspecified formulation
+//     '17': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP-Hib
+//     '22': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // PRP-D
+//     '46': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // HbOC
+//     '47': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // PRP-T
+//     '48': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // PRP-OMP
+//     '49': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP/Hib
+//     '50': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hib-HepB
+//     '51': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTP-Hib-HepB
+//     '102': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV/Hib
+//     '120': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB,historical
+//     '132': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // DTaP-IPV-Hib-HepB
+//     '146': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hib-MenCY-TT
+//     '148': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Yellow Fever
+//     '25': ('099', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Zoster live
+//     '121': ('100', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rabies, intramuscular injection
+//     '18': ('113', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rabies, intradermal injection
+//     '40': ('113', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rabies, unspecified formulation
+//     '90': ('113', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Meningococcal B, recombinant
+//     '162': ('116', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Meningococcal B, OMV
+//     '163': ('116', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Meningococcal B, unspecified
+//     '164': ('116', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // cholera, unspecified formulation
+//     '26': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // cholera, WC-rBS
+//     '172': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // cholera, BivWC
+//     '173': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // cholera, live attenuated
+//     '174': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose
+//     '208': ('122', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Tetanus immune globulin
+//     '13': ('125', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hepatitis A immune globulin
+//     '154': ('126', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Hepatitis B immune globulin
+//     '30': ('127', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Rabies immune globulin
+//     '34': ('128', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Varicella zoster immune globulin
+//     '36': ('129', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Zoster subunit
+//     '187': ('172', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Tick-borne encephalitis vaccine
+//     'non-US': ('252', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Tick-borne encephalitis, unspecified
+//     '222': ('252', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Tick-borne encephalitis, inactivated, PF, 0.25mL
+//     '223': ('252', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Tick-borne encephalitis, inactivated, PF, 0.5mL
+//     '224': ('252', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     },
+//     'http://phinvads.cdc.gov': {
+//     // Immunodeficiency due to any cause
+//     'VXC27': ('003', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Previous history of intussusception
+//     'VXC21': ('028', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Encephalopathy within 7 days of previous dose of DTP or DTaP
+//     'VXC22': ('079', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('080', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('082', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('089', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('099', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('100', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to baker's yeast [anaphylactic]
+//     'VXC18': ('110', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy [anaphylactic] to 2-phenoxyethanol
+//     'VXC17': ('111', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('113', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('116', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('122', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('172', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
+//     'VXC20': ('252', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
+//     }
+//   };
 
-function ApplyCommonMappings(sourceCodings : List<Coding>, targetCondition : targetCondition) {
-  // Define a map of source system codes to target codes and systems
-  const mappings = {
-    'http://snomed.info/sct': {
-    // Patient Immunocompromised
-    '370388006': ('003', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hemopoietic stem cell transplant [procedure]
-    '234336002': ('004', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Viral hepatitis type C [disorder]
-    '50711007': ('005', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Patient currently pregnant [finding]
-    '77386006': ('007', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Possible pregnancy [finding]
-    '102874004': ('007', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Pregnant woman [person]
-    '255409004': ('007', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Breastfeeding [mother] [observable entity]
-    '413712001': ('009', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Cerebrospinal fluid leak [disorder]
-    '230744007': ('010', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Cochlear prosthesis in situ [finding]
-    '449840001': ('011', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Cochlear prosthesis, device [physical object]
-    '43252007': ('011', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Implantation of cochlear prosthetic device [procedure]
-    '359612003': ('011', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Severe combined immunodeficiency disease [disorder]
-    '31323000': ('013', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Diabetes mellitus [disorder]
-    '73211009': ('014', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Chronic liver disease [disorder]
-    '328383001': ('015', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Cirrhosis of liver [disorder]
-    '19943007': ('015', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Chronic heart disease [disorder]
-    '128238001': ('016', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Congestive heart failure [disorder]
-    '42343007': ('016', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Myocardial disease [disorder]
-    '57809008': ('016', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Cyanotic congenital heart disease [disorder]
-    '12770006': ('016', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Chronic lung disease [disorder]
-    '413839001': ('017', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Chronic obstructive lung disease [disorder]
-    '13645005': ('017', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Pulmonary emphysema [disorder]
-    '87433001': ('017', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hepatitis A Immune [Finding]
-    '278971009': ('018', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hepatitis B Immune [Finding]
-    '271511000': ('019', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Measles Immune [finding]
-    '371111005': ('020', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Mumps Immune [finding]
-    '371112003': ('021', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rubella Immune [finding]
-    '278968001': ('022', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Varicella Immune
-    '371113008': ('023', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Varicella [Disorder]
-    '38907003': ('024', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Herpes Zoster [Disorder]
-    '4740000': ('025', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Human immunodeficiency virus infection [disorder]
-    '86406008': ('026', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Antiviral therapy [procedure]
-    '427314002': ('026', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Asthma finding [finding]
-    '390798007': ('027', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Asthma [disorder]
-    '195967001': ('027', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Intussusception [morphologic abnormality]
-    '35327006': ('028', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Intussusception of intestine [disorder]
-    '49723003': ('028', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Acute gastroenteritis [disorder]
-    '69776003': ('029', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Tuberculosis [disorder]
-    '56717001': ('031', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Amantadine [substance]
-    '372763006': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Amantadine [product]
-    '51361008': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rimantadine [substance]
-    '372532009': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rimantadine [product]
-    '108712009': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Zanamivir [substance]
-    '387010007': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Zanamivir [product]
-    '116100000': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Oseltamivir [substance]
-    '412261005': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Oseltamivir [product]
-    '386142008': ('033', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Aspirin therapy finding [finding]
-    '405742008': ('034', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Male homosexual [finding]
-    '76102007': ('036', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Homosexual behavior [finding]
-    '225531006': ('036', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Multiple sexual contacts [finding]
-    '225516002': ('037', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Multiple current sexual partners [finding]
-    '228460004': ('037', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Commitment to sexual relationship [observable entity]
-    '228466005': ('037', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Sexual partners [observable entity]
-    '225517006': ('038', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Contact with [contextual qualifier] [qualifier value]
-    '11723008': ('038', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hepatitis B surface antigen positive [finding]
-    '165806002': ('038', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Under care of genitourinary medicine physician [finding]
-    '305489005': ('039', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Seen by genitourinary medicine physician [finding]
-    '305679000': ('039', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Sexually transmitted infectious disease [disorder]
-    '8098009': ('039', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Illicit drug use [finding]
-    '307052004': ('040', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Finding relating to drug misuse behavior [finding]
-    '228366006': ('040', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Injecting drug user [finding]
-    '226034001': ('041', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Intravenous drug user  [finding]
-    '228388006': ('041', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Intravenous cocaine abuse [disorder]
-    '145101000119102': ('041', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Skin lesion due to intravenous drug abuse [disorder]
-    '403746009': ('041', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Deep vein thrombosis of lower extremity due to intravenous drug use [disorder]
-    '860699005': ('041', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Smoker [finding]
-    '77176002': ('042', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Problem drinker [finding]
-    '228281002': ('043', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Alcoholism [disorder]
-    '7200002': ('043', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Microbiologist [occupation]
-    '159138004': ('050', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Medical microbiologist [occupation]
-    '14698002': ('050', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Exposure to [contextual qualifier] [qualifier value]
-    '24932003': ('050', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Neisseria meningitidis [organism]
-    '17872004': ('050', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Microbiologist [occupation]
-    '159138004': ('051', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Medical microbiologist [occupation]
-    '14698002': ('051', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Laboratory technician [occupation]
-    '159282002': ('051', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Exposure to [contextual qualifier] [qualifier value]
-    '24932003': ('051', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Salmonella Typhi [organism]
-    '5595000': ('051', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Laboratory technician [occupation]
-    '159282002': ('052', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Exposure to [contextual qualifier] [qualifier value]
-    '24932003': ('052', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Yellow fever virus [organism]
-    '26630006': ('052', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Laboratory technician [occupation]
-    '159282002': ('053', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Exposure to [contextual qualifier] [qualifier value]
-    '24932003': ('053', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rabies virus [organism]
-    '59881000': ('053', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Laboratory technician [occupation]
-    '159282002': ('054', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Exposure to [contextual qualifier] [qualifier value]
-    '24932003': ('054', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Human poliovirus [organism]
-    '44172002': ('054', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Healthcare professional [occupation]
-    '223366009': ('055', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Healthcare professional [occupation]
-    '223366009': ('056', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Exposure to [contextual qualifier] [qualifier value]
-    '24932003': ('056', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Human poliovirus [organism]
-    '44172002': ('056', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Public health nurse [occupation]
-    '26369006': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Public health dentist [occupation]
-    '68867008': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Public health officer [occupation]
-    '307969004': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Public health physician [occupation]
-    '56466003': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Public health veterinarian [occupation]
-    '56079002': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Public health nutritionist [occupation]
-    '60008001': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Exposure to [contextual qualifier] [qualifier value]
-    '24932003': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Blood [substance]
-    '87612001': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Body fluid [substance]
-    '32457005': ('057', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Healthcare professional [occupation]
-    '223366009': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Residential child care worker [occupation]
-    '158942005': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Child care officer [occupation]
-    '158939004': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Plumber [general] [occupation]
-    '73851001': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Sewerman [occupation]
-    '160157004': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Food/drink processor [occupation]
-    '266006009': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Catering services occupation [occupation]
-    '274272004': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Packer - food/garden produce [occupation]
-    '160133004': ('059', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Animal health occupation [occupation]
-    '265940000': ('060', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Trainer - performing animals [occupation]
-    '159091009': ('061', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Exposure to [contextual qualifier] [qualifier value]
-    '24932003': ('062', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rabies virus [organism]
-    '59881000': ('062', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Student [occupation]
-    '65853000': ('063', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Further education establishment [environment]
-    '257561002': ('063', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Chronic renal failure syndrome [disorder]
-    '90688005': ('066', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Substance abuse treatment center [environment]
-    '20078004': ('068', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Penal institution [environment]
-    '257656006': ('069', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // At risk context [qualifier value]
-    '410519009': ('070', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Disease outbreak [event]
-    '443684005': ('070', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Contact with [contextual qualifier] [qualifier value]
-    '11723008': ('071', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hepatitis B surface antigen positive [finding]
-    '165806002': ('071', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Typhoid carrier [finding]
-    '170484009': ('072', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Transgender identify [finding]
-    '12271241000119109': ('075', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Epilepsy [disorder]
-    '84757009': ('076', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Post diphtheria vaccination encephalitis [disorder]
-    '192711008': ('079', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Post tetanus vaccination encephalitis [disorder]
-    '192710009': ('079', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Post pertussis vaccination encephalitis [disorder]
-    '192712001': ('079', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Vaccines adverse reaction [disorder]
-    '293104008': ('080', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Poliomyelitis vaccine adverse reaction [disorder]
-    '293117006': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction caused by Japanese encephalitis virus vaccine [disorder]
-    '451301000124103': ('082', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction to rotavirus vaccine [disorder]
-    '429301000124101': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Typhoid vaccine adverse reaction [disorder]
-    '293122006': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza virus vaccine adverse reaction [disorder]
-    '420113004': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Pertussis vaccine adverse reaction [disorder]
-    '293115003': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction to diphtheria vaccine [disorder]
-    '219085007': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction to tetanus vaccine [disorder]
-    '219084006': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction caused by varicella virus live vaccine [disorder]
-    '451331000124106': ('089', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction to human papillomavirus vaccine [disorder]
-    '429311000124103': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction to measles vaccine [disorder]
-    '219096004': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Mumps vaccine adverse reaction [disorder]
-    '293114004': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rubella vaccine adverse reaction [disorder]
-    '293119009': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Pneumococcal vaccine adverse reaction [disorder]
-    '293116002': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction to meningococcal vaccine [disorder]
-    '2219088009': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction caused by meningococcal conjugate vaccine [disorder]
-    '451111000124103': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hepatitis A vaccine adverse reaction [disorder]
-    '293126009': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hepatitis B vaccine adverse reaction [disorder]
-    '293110008': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Haemophilus influenzae Type B vaccine adverse reaction [disorder]
-    '293127000': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction to yellow fever vaccine [disorder]
-    '219095000': ('099', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction caused by zoster vaccine [disorder]
-    '451291000124104': ('100', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Egg protein allergy [disorder]
-    '213020009': ('101', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to eggs [disorder]
-    '91930004': ('101', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Gelatin adverse reaction [disorder]
-    '293309006': ('102', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Gelatin allergy [disorder]
-    '294847001': ('102', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Latex allergy [disorder]
-    '300916003': ('104', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Anaphylaxis due to latex [disorder]
-    '441593005': ('104', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Gentamycin sensitivity [disorder]
-    '419522004': ('106', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Gentamicin adverse reaction [disorder]
-    '420094007': ('106', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Gentamicin allergy [disorder]
-    '294469003': ('106', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Neomycin allergy [disorder]
-    '294468006': ('107', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Neomycin adverse reaction [disorder]
-    '292927007': ('107', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Streptomycin allergy [disorder]
-    '294466005': ('108', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Streptomycin adverse reaction [disorder]
-    '292925004': ('108', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Polymyxin B allergy [disorder]
-    '294530006': ('109', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Polymyxin B adverse reaction [disorder]
-    '292992006': ('109', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to yeast [disorder]
-    '703936006': ('110', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rabies vaccine adverse reaction [disorder]
-    '293118001': ('113', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // End stage renal disease [disorder]
-    '46177005': ('114', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Protamine sulfate [substance]
-    '64520006': ('115', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Protamine allergy [disorder]
-    '294278007': ('115', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction caused by meningococcal group B vaccine [disorder]
-    '451281000124102': ('116', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction caused by cholera vaccine [disorder]
-    '219082005': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Homeless [finding]
-    '32911000': ('121', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Transfusion of blood product [procedure]
-    '116859006': ('132', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Transfusion of blood product [procedure]
-    '116859006': ('133', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Transfusion of blood product [procedure]
-    '116859006': ('134', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Transfusion of plasma [procedure]
-    '13569004': ('135', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Platelet transfusion [procedure]
-    '12719002': ('135', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // X-linked agammaglobulinemia [disorder]
-    '65880007': ('145', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Common variable agammaglobulinemia [disorder]
-    '23238000': ('145', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Selective immunoglobulin A deficiency [disorder]
-    '190979003': ('146', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Immunoglobulin G subclass deficiency [finding]
-    '123785006': ('146', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Severe combined immunodeficiency disease [disorder]
-    '31323000': ('147', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DiGeorge sequence [disorder]
-    '77128003': ('147', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DiGeorge sequence [disorder]
-    '77128003': ('148', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Wiskott-Aldrich syndrome [disorder]
-    '36070007': ('148', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Ataxia-telangiectasia syndrome [disorder]
-    '68504005': ('148', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Complement deficiency disease [disorder]
-    '24743004': ('150', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Complement deficiency disease [disorder]
-    '24743004': ('151', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Properdin deficiency disease [disorder]
-    '81166004': ('151', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Factor B deficiency [disorder]
-    '234605000': ('151', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Chronic granulomatous disease [disorder]
-    '387759001': ('152', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Congenital leukocyte adherence deficiency [disorder]
-    '77358003': ('153', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Myeloperoxidase deficiency [disorder]
-    '234433009': ('153', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Acquired immune deficiency syndrome [disorder]
-    '62479008': ('154', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Acquired immune deficiency syndrome [disorder]
-    '62479008': ('155', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Transplantation [procedure]
-    '77465005': ('157', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Solid organ transplant [procedure]
-    '313039003': ('157', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Immunosuppressive therapy [procedure]
-    '86553008': ('158', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Radiation therapy procedure or service [procedure]
-    '53438000': ('159', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Asplenia [disorder]
-    '707147002': ('160', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Chronic kidney disease [disorder]
-    '709044004': ('161', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Nephrotic syndrome [disorder]
-    '52254009': ('167', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Chemotherapy [procedure]
-    '367336001': ('168', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Sexual abuse [event]
-    '213017001': ('169', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Sexual assault [finding
-    '422608009': ('169', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Sexual assault [event]
-    '248110007': ('169', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Estimated date of conception [observable entity]
-    '248986005': ('170', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Adverse reaction caused by zoster vaccine [disorder]
-    '451291000124104': ('172', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Leukemia, disease [disorder]
-    '93143009': ('178', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Lymphoma [finding]
-    '399600009': ('179', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hodgkin's disease [disorder]
-    '118599009': ('180', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Multiple myeloma [disorder]
-    '109989006': ('181', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Human immunodeficiency virus infection [disorder]
-    '86406008': ('186', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Chimeric antigen receptor T-cell immunotherapy [procedure]
-    '1156961008': ('191', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Malignant neoplastic disease [disorder]
-    '363346000': ('198', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Interstitial lung disease [disorder]
-    '233703007': ('199', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // cystic fibrosis [disorder]
-    '190905008': ('200', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Pulmonary hypertension [disorder]
-    '70995007': ('201', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Dimensia [disorder]
-    '52448006': ('202', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Complete trisomy 21 syndrome [disorder]
-    '41040004': ('203', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Thalassemia [disorder]
-    '40108008': ('205', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Cerebrovascular disease [disorder]
-    '62914000': ('206', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Chronic obstructive lung disease [disorder]
-    '13645005': ('214', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Pulmonary emphysema [disorder]
-    '87433001': ('215', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // American Indian or Alaska Native [racial group]
-    '413490006': ('245', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    },
-    'http://hl7.org/fhir/sid/cvx': {
-    // OPV
-    '02': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // IPV
-    '10': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Polio, unspecified formulation
-    '89': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-HepB-IPV
-    '110': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-Hib-IPV
-    '120': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV
-    '130': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB, Historical
-    '132': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB
-    '146': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Japanese Encephalitis, MB
-    '39': ('082', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Japanese Encephalitis, VC
-    '134': ('082', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Japanese Encephalitis, unspecified
-    '129': ('082', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rotavirus, pentavalent
-    '116': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rotavirus, unspecified formulation
-    '122': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rotavirus, tetravalent
-    '74': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rotavirus, monovalent
-    '119': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Typhoid capsular polysaccharide
-    '101': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Typhoid oral, live, attenuated
-    '25': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Typhoid, parenteral
-    '41': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Typhoid, parenteral, AKD [U.S. military]
-    '53': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Typhoid, unspecified formulation
-    '91': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, split incl. purified surface antigen
-    '15': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, whole
-    '16': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, Unspecified
-    '88': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, live, intranasal
-    '111': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, high dose seasonal
-    '135': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, injectable preservative free
-    '140': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, injectable
-    '141': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, intradermal, preservative free
-    '144': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // influenza, live, intranasal, quadrivalent
-    '149': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // influenza, injectable, quadrivalent, preservative free
-    '150': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // influenza nasal, unspecified formulation
-    '151': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, injectable, MDCK, preservative free
-    '153': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // influenza, recombinant, injectable, preservative free
-    '155': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, injectable, quadrivalent
-    '158': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, injectable, quadrivalent, preservative free, peds
-    '161': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Influenza, intradermal, quadrivalent, preservative free
-    '166': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP
-    '01': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP
-    '20': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP-Hib
-    '22': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-Hib
-    '50': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP-Hib-HepB
-    '102': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP, 5 pertussis antigens
-    '106': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP, Unspecified Formulation
-    '107': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-HepB-IPV
-    '110': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Tdap
-    '115': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-Hib-IPV
-    '120': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV
-    '130': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB,historical
-    '132': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB
-    '146': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP
-    '01': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Td - Adult Adsorbed
-    '09': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP
-    '20': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP-Hib
-    '22': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DT - Pediatric
-    '28': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-Hib
-    '50': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP-Hib-HepB
-    '102': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP, 5 pertussis antigens
-    '106': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP, Unspecified Formulation
-    '107': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-HepB-IPV
-    '110': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Td p-free
-    '113': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Tdap
-    '115': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-Hib-IPV
-    '120': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV
-    '130': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB,historical
-    '132': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Td - Adult
-    '138': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Td - Adult Unspecified Formulation
-    '139': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB
-    '146': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP
-    '01': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Td - Adult Adsorbed
-    '09': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP
-    '20': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP-Hib
-    '22': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DT - Pediatric
-    '28': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // TT
-    '35': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-Hib
-    '50': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP-Hib-HepB
-    '102': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP, 5 pertussis antigens
-    '106': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP, Unspecified Formulation
-    '107': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-HepB-IPV
-    '110': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Td p-free
-    '113': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Tdap
-    '115': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-Hib-IPV
-    '120': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV
-    '130': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB,historical
-    '132': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Td - Adult
-    '138': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Td - Adult Unspecified Formulation
-    '139': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB
-    '146': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Varicella
-    '21': ('089', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // MMRV
-    '94': ('089', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Zoster
-    '121': ('089', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // 4vHPV
-    '62': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // 2vHPV
-    '118': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // HPV Unspecified
-    '137': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // 9vHPV
-    '165': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // MMR
-    '03': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Measles/Rubella
-    '04': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Measles
-    '05': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // MMRV
-    '94': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // MMR
-    '03': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Mumps
-    '07': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rubella/Mumps
-    '38': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // MMRV
-    '94': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // MMR
-    '03': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Measles/Rubella
-    '04': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rubella
-    '06': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rubella/Mumps
-    '38': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // MMRV
-    '94': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // PCV13
-    '133': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // PCV7
-    '100': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // PPSV23
-    '33': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Pneumococcal, unspecified formulation
-    '109': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Pneumococcal Conjugate, unspecified formulation
-    '152': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Meningococcal, MPSV4
-    '32': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Meningococcal ACWY, unspecified
-    '108': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Meningococcal, MCV4P
-    '114': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Meningococcal, MCV4O
-    '136': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // MCV4, unspecified
-    '147': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Meningococcal C/Y-HIB PRP
-    '148': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Meningococcal, unknown serogroups
-    '167': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hep A, adult
-    '52': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hep A, ped/adol, 2 dose
-    '83': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hep A, ped/adol, 3 dose
-    '84': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hep A, Unspecified
-    '85': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // HepA-HepB
-    '104': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hep B, Adol/peds
-    '08': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hep B, Adol/high risk infant
-    '42': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hep B, Adult
-    '43': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hep B, Dialysis
-    '44': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hep B, Unspecified Formulation
-    '45': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hib-HepB
-    '51': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-Hib-HepB
-    '102': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // HepA-HepB
-    '104': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-HepB-IPV
-    '110': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB, historical
-    '132': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB
-    '146': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hib unspecified formulation
-    '17': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP-Hib
-    '22': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // PRP-D
-    '46': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // HbOC
-    '47': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // PRP-T
-    '48': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // PRP-OMP
-    '49': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP/Hib
-    '50': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hib-HepB
-    '51': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTP-Hib-HepB
-    '102': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV/Hib
-    '120': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB,historical
-    '132': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // DTaP-IPV-Hib-HepB
-    '146': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hib-MenCY-TT
-    '148': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Yellow Fever
-    '25': ('099', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Zoster live
-    '121': ('100', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rabies, intramuscular injection
-    '18': ('113', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rabies, intradermal injection
-    '40': ('113', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rabies, unspecified formulation
-    '90': ('113', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Meningococcal B, recombinant
-    '162': ('116', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Meningococcal B, OMV
-    '163': ('116', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Meningococcal B, unspecified
-    '164': ('116', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // cholera, unspecified formulation
-    '26': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // cholera, WC-rBS
-    '172': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // cholera, BivWC
-    '173': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // cholera, live attenuated
-    '174': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose
-    '208': ('122', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Tetanus immune globulin
-    '13': ('125', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hepatitis A immune globulin
-    '154': ('126', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Hepatitis B immune globulin
-    '30': ('127', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Rabies immune globulin
-    '34': ('128', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Varicella zoster immune globulin
-    '36': ('129', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Zoster subunit
-    '187': ('172', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Tick-borne encephalitis vaccine
-    'non-US': ('252', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Tick-borne encephalitis, unspecified
-    '222': ('252', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Tick-borne encephalitis, inactivated, PF, 0.25mL
-    '223': ('252', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Tick-borne encephalitis, inactivated, PF, 0.5mL
-    '224': ('252', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    },
-    'http://phinvads.cdc.gov': {
-    // Immunodeficiency due to any cause
-    'VXC27': ('003', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Previous history of intussusception
-    'VXC21': ('028', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Encephalopathy within 7 days of previous dose of DTP or DTaP
-    'VXC22': ('079', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('080', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('081', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('082', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('083', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('084', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('085', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('086', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('087', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('088', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('089', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('090', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('091', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('092', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('093', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('094', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('095', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('096', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('097', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('098', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('099', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('100', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to baker's yeast [anaphylactic]
-    'VXC18': ('110', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy [anaphylactic] to 2-phenoxyethanol
-    'VXC17': ('111', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('113', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('116', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('119', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('122', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('172', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    // Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]
-    'VXC20': ('252', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),
-    }
-  };
+//   // Process each coding in the sourceCodings list
+//   sourceCodings.forEach((coding) => {
+//     if (mappings[coding.system] && mappings[coding.system][coding.code]) {
+//       const [targetCode, targetSystem] = mappings[coding.system][coding.code];
+//       if (targetCode && targetSystem) {
+//         tgt.code = create('Coding') then{
+//           createCode(targetCode, targetSystem);
+//         }
+//       }
+//     }
+//   });
+// } "Apply Common Mappings";
 
-  // Process each coding in the sourceCodings list
-  sourceCodings.forEach((coding) => {
-    if (mappings[coding.system] && mappings[coding.system][coding.code]) {
-      const [targetCode, targetSystem] = mappings[coding.system][coding.code];
-      if (targetCode && targetSystem) {
-        // Create a new Coding for the target Condition
-        tgt.code = createCode(targetCode, targetSystem);
-      }
-    }
-  });
-}
 
-function createCode(codeValue : string, systemValue : string) -> Coding {
+group createCode(source systemValue : string, source cource coding : Coding, systemValue : string) {
   return Coding {
     system = systemValue,
     code = codeValue

@@ -71,23 +71,43 @@ group MapToVaccineConditionObservation(source src : any, target tgt : targetCond
 }
 
 group MapFromObservation(source src : sourceObservation, target tgt : targetCondition) {
-    src -> tgt.status = 'active';
-    ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.status = 'active';
+  ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.onsetDateTime = src.effectiveDateTime;
+  src -> tgt.onsetPeriod = src.effectivePeriod;
+  src -> tgt.onsetDateTime = src.effectiveInstant;
 }
 
 group MapFromCondition(source src : sourceCondition, target tgt : targetCondition) {
-src -> tgt.status = 'active';
-ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.status = 'active';
+  ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.onsetDateTime = src.onsetDateTime;
+  src -> tgt.onsetAge = src.onsetAge;
+  src -> tgt.onsetPeriod = src.onsetPeriod;
+  src -> tgt.onsetRange = src.onsetRange;
+  src -> tgt.onsetString = src.onsetString;
+  src -> tgt.abatementDateTime = src.abatementDateTime;
+  src -> tgt.abatementAge = src.abatementAge;
+  src -> tgt.abatementPeriod = src.abatementPeriod;
+  src -> tgt.abatementRange = src.abatementRange;
+  src -> tgt.abatementString = src.abatementString;
 } 
 
 group MapFromProcedure(source src : sourceProcedure, target tgt : targetCondition) {
   src -> tgt.status = 'active';
   ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.onsetDateTime = src.performedDateTime;
+  src -> tgt.onsetAge = src.performedAge;
+  src -> tgt.onsetPeriod = src.performedPeriod;
+  src -> tgt.onsetRange = src.performedRange;
+  src -> tgt.onsetString = src.performedString;
 }
 
 group MapFromImmunization(source src : sourceImmunization, target tgt : targetCondition) {
   src -> tgt.status = 'active';
   ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.onsetDateTime = src.occurrenceDateTime;
+  src -> tgt.onsetString = src.occurrenceString;
 }
 
 group MapFromMedication(source src : sourceMedication, target tgt : targetCondition) {
@@ -104,16 +124,20 @@ group MapFromMedicationStatement(source src : sourceMedicationStatement, target 
 group MapFromMedicationRequest(source src : sourceMedicationRequest, target tgt : targetCondition) {
   src -> tgt.status = 'active';
   ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
+  src -> tgt.onsetDateTime = src.authoredOn;
 }
 
 group MapFromMedicationAdministration(source src : sourceMedicationAdministration, target tgt : targetCondition) {
   src -> tgt.status = 'active';
   ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
+  src -> tgt.onsetDateTime = src.effectiveDateTime;
+  src -> tgt.onsetPeriod = src.effectivePeriod;
 }
 
 group MapFromMedicationDispense(source src : sourceMedicationDispense, target tgt : targetCondition) {
   src -> tgt.status = 'active';
   ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
+  src -> tgt.onsetDateTime = src.whenHandedOver;
 }
 
 
