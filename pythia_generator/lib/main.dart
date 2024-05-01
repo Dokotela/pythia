@@ -4,11 +4,11 @@ import 'dart:io';
 import 'package:pythia_generator/supporting_strings.dart';
 
 import 'create_supporting_data/create_supporting_data.dart';
-import 'utils/download_sheets.dart';
+import 'utils/excel_sheets.dart';
 
 Future<void> main() async {
   /// Downloads all information from Google Sheets
-  final supportingStringsList = await downloadSheets();
+  final supportingStringsList = await excelSheets();
 
   final files = supportingStringsList.map((e) => e.toJson()).toList();
 
