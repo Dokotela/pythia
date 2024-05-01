@@ -5,6 +5,7 @@
 [EvalStatusVS]: ValueSet-eval-status.html
 [IntervalReasonVS]: ValueSet-interval-reason.html
 [IntervalReasonCS]: CodeSystem-IntervalReason.html
+[MapVaccineCodes]: StructureMap-MapVaccineCodes.html
 [PreferredAllowedReasonVS]: ValueSet-preferred-allowed-reason.html
 [PreferredAllowedReasonCS]: CodeSystem-PreferredAllowedReason.html
 [VaxPatient]: StructureDefinition-vax-patient.html

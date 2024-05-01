@@ -6,8 +6,8 @@
 id: pythia.ig
 canonical: http://fhirfli.dev/fhir/ig/pythia
 name: PythiaIG
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+title: The Pythia Vaccine Forecasting Engine and Guide
+description: Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html

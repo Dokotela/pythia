@@ -3,13 +3,14 @@
   "id" : "pythia.ig",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PythiaIG</h2><p>The official URL for this implementation guide is: </p><pre>http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PythiaIG</h2><p>The official URL for this implementation guide is: </p><pre>http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig</pre><div><p>Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization</p>\n</div></div>"
   },
   "url" : "http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig",
   "version" : "0.1.0",
   "name" : "PythiaIG",
+  "title" : "The Pythia Vaccine Forecasting Engine and Guide",
   "status" : "draft",
-  "date" : "2024-04-30T22:06:35-04:00",
+  "date" : "2024-05-01T10:29:48-04:00",
   "publisher" : "FHIR-FLI",
   "contact" : [{
     "name" : "FHIR-FLI",
@@ -18,6 +19,7 @@
       "value" : "http://fhirfli.dev"
     }]
   }],
+  "description" : "Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization",
   "packageId" : "pythia.ig",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
@@ -705,6 +707,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureMap"
+      }],
+      "reference" : {
+        "reference" : "StructureMap/MapVaccineCodes"
+      },
+      "name" : "MapVaccineCodes",
+      "description" : "Define the usage of FHIR resource types with specific aliases",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -862,46 +876,46 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "evaluate-vaccine-dose-administered.html"
+          "valueUrl" : "01_preparation.html"
         }],
-        "nameUrl" : "evaluate-vaccine-dose-administered.html",
-        "title" : "Evaluate Vaccine Dose Administered",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "forecast-dates-and-reasons.html"
-        }],
-        "nameUrl" : "forecast-dates-and-reasons.html",
-        "title" : "Forecast Dates and Reasons",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "logical-specification-concepts.html"
-        }],
-        "nameUrl" : "logical-specification-concepts.html",
-        "title" : "Logical Specification Concepts",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "preparation.html"
-        }],
-        "nameUrl" : "preparation.html",
+        "nameUrl" : "01_preparation.html",
         "title" : "Preparation",
         "generation" : "markdown"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "processing-model.html"
+          "valueUrl" : "02_logical-specification-concepts.html"
         }],
-        "nameUrl" : "processing-model.html",
+        "nameUrl" : "02_logical-specification-concepts.html",
+        "title" : "Logical Specification Concepts",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "03_processing-model.html"
+        }],
+        "nameUrl" : "03_processing-model.html",
         "title" : "Processing Model",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "04_evaluate-vaccine-dose-administered.html"
+        }],
+        "nameUrl" : "04_evaluate-vaccine-dose-administered.html",
+        "title" : "Evaluate Vaccine Dose Administered",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "05_forecast-dates-and-reasons.html"
+        }],
+        "nameUrl" : "05_forecast-dates-and-reasons.html",
+        "title" : "Forecast Dates and Reasons",
         "generation" : "markdown"
       }]
     },

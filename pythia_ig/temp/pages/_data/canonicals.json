@@ -98,6 +98,13 @@
     "name" : "VaxPatient"
   },
   {
+    "id" : "MapVaccineCodes",
+    "type" : "StructureMap",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureMap/map-vaccine-codes",
+    "version" : "0.1.0",
+    "name" : "MapVaccineCodes"
+  },
+  {
     "id" : "eval-reason",
     "type" : "ValueSet",
     "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-reason",

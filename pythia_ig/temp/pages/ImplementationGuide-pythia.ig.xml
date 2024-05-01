@@ -3,13 +3,15 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="pythia.ig"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>PythiaIG</h2><p>The official URL for this implementation guide is: </p><pre>http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig</pre></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>PythiaIG</h2><p>The official URL for this implementation guide is: </p><pre>http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig</pre><div><p>Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization</p>
+</div></div>
   </text>
   <url value="http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig"/>
   <version value="0.1.0"/>
   <name value="PythiaIG"/>
+  <title value="The Pythia Vaccine Forecasting Engine and Guide"/>
   <status value="draft"/>
-  <date value="2024-04-30T22:06:35-04:00"/>
+  <date value="2024-05-01T10:29:48-04:00"/>
   <publisher value="FHIR-FLI"/>
   <contact>
     <name value="FHIR-FLI"/>
@@ -18,6 +20,7 @@
       <value value="http://fhirfli.dev"/>
     </telecom>
   </contact>
+  <description value="Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization"/>
   <packageId value="pythia.ig"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
@@ -536,6 +539,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/MapVaccineCodes"/>
+      </reference>
+      <name value="MapVaccineCodes"/>
+      <description value="Define the usage of FHIR resource types with specific aliases"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -679,42 +693,42 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="evaluate-vaccine-dose-administered.html"/>
+          <valueUrl value="01_preparation.html"/>
         </extension>
-        <nameUrl value="evaluate-vaccine-dose-administered.html"/>
-        <title value="Evaluate Vaccine Dose Administered"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="forecast-dates-and-reasons.html"/>
-        </extension>
-        <nameUrl value="forecast-dates-and-reasons.html"/>
-        <title value="Forecast Dates and Reasons"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="logical-specification-concepts.html"/>
-        </extension>
-        <nameUrl value="logical-specification-concepts.html"/>
-        <title value="Logical Specification Concepts"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="preparation.html"/>
-        </extension>
-        <nameUrl value="preparation.html"/>
+        <nameUrl value="01_preparation.html"/>
         <title value="Preparation"/>
         <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="processing-model.html"/>
+          <valueUrl value="02_logical-specification-concepts.html"/>
         </extension>
-        <nameUrl value="processing-model.html"/>
+        <nameUrl value="02_logical-specification-concepts.html"/>
+        <title value="Logical Specification Concepts"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="03_processing-model.html"/>
+        </extension>
+        <nameUrl value="03_processing-model.html"/>
         <title value="Processing Model"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="04_evaluate-vaccine-dose-administered.html"/>
+        </extension>
+        <nameUrl value="04_evaluate-vaccine-dose-administered.html"/>
+        <title value="Evaluate Vaccine Dose Administered"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="05_forecast-dates-and-reasons.html"/>
+        </extension>
+        <nameUrl value="05_forecast-dates-and-reasons.html"/>
+        <title value="Forecast Dates and Reasons"/>
         <generation value="markdown"/>
       </page>
     </page>

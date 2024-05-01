@@ -13,48 +13,48 @@
     "testplans" : [],
     "testscripts" : [],
     "previous" : "toc.html",
-    "next" : "evaluate-vaccine-dose-administered.html"
+    "next" : "01_preparation.html"
   },
-  "evaluate-vaccine-dose-administered.html" : {
-    "title" : "Evaluate Vaccine Dose Administered",
-    "label" : "2",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Evaluate Vaccine Dose Administered</b></li>",
-    "previous" : "index.html",
-    "next" : "forecast-dates-and-reasons.html"
-  },
-  "forecast-dates-and-reasons.html" : {
-    "title" : "Forecast Dates and Reasons",
-    "label" : "3",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Forecast Dates and Reasons</b></li>",
-    "previous" : "evaluate-vaccine-dose-administered.html",
-    "next" : "logical-specification-concepts.html"
-  },
-  "logical-specification-concepts.html" : {
-    "title" : "Logical Specification Concepts",
-    "label" : "4",
-    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Logical Specification Concepts</b></li>",
-    "previous" : "forecast-dates-and-reasons.html",
-    "next" : "preparation.html"
-  },
-  "preparation.html" : {
+  "01_preparation.html" : {
     "title" : "Preparation",
-    "label" : "5",
+    "label" : "2",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Preparation</b></li>",
-    "previous" : "logical-specification-concepts.html",
-    "next" : "processing-model.html"
+    "previous" : "index.html",
+    "next" : "02_logical-specification-concepts.html"
   },
-  "processing-model.html" : {
+  "02_logical-specification-concepts.html" : {
+    "title" : "Logical Specification Concepts",
+    "label" : "3",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Logical Specification Concepts</b></li>",
+    "previous" : "01_preparation.html",
+    "next" : "03_processing-model.html"
+  },
+  "03_processing-model.html" : {
     "title" : "Processing Model",
-    "label" : "6",
+    "label" : "4",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Processing Model</b></li>",
-    "previous" : "preparation.html",
+    "previous" : "02_logical-specification-concepts.html",
+    "next" : "04_evaluate-vaccine-dose-administered.html"
+  },
+  "04_evaluate-vaccine-dose-administered.html" : {
+    "title" : "Evaluate Vaccine Dose Administered",
+    "label" : "5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Evaluate Vaccine Dose Administered</b></li>",
+    "previous" : "03_processing-model.html",
+    "next" : "05_forecast-dates-and-reasons.html"
+  },
+  "05_forecast-dates-and-reasons.html" : {
+    "title" : "Forecast Dates and Reasons",
+    "label" : "6",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Forecast Dates and Reasons</b></li>",
+    "previous" : "04_evaluate-vaccine-dose-administered.html",
     "next" : "artifacts.html"
   },
   "artifacts.html" : {
     "title" : "Artifacts Summary",
     "label" : "7.0",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>",
-    "previous" : "processing-model.html",
+    "previous" : "05_forecast-dates-and-reasons.html",
     "next" : "StructureDefinition-vax-patient.html"
   },
   "StructureDefinition-vax-patient.html" : {
@@ -860,6 +860,44 @@
     "title" : "Valid Age Reason - TTL Representation",
     "label" : "7.19",
     "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Valid Age Reason</b></li>",
-    "previous" : "CodeSystem-ValidAgeReason.json.html"
+    "previous" : "CodeSystem-ValidAgeReason.json.html",
+    "next" : "StructureMap-MapVaccineCodes.html"
+  },
+  "StructureMap-MapVaccineCodes.html" : {
+    "title" : "MapVaccineCodes",
+    "label" : "7.20",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MapVaccineCodes</b></li>",
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "CodeSystem-ValidAgeReason.ttl.html",
+    "next" : "StructureMap-MapVaccineCodes-testing.html"
+  },
+  "StructureMap-MapVaccineCodes-testing.html" : {
+    "title" : "MapVaccineCodes - Testing",
+    "label" : "7.20",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MapVaccineCodes</b></li>",
+    "previous" : "StructureMap-MapVaccineCodes.html",
+    "next" : "StructureMap-MapVaccineCodes.xml.html"
+  },
+  "StructureMap-MapVaccineCodes.xml.html" : {
+    "title" : "MapVaccineCodes - XML Representation",
+    "label" : "7.20",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MapVaccineCodes</b></li>",
+    "previous" : "StructureMap-MapVaccineCodes-testing.html",
+    "next" : "StructureMap-MapVaccineCodes.json.html"
+  },
+  "StructureMap-MapVaccineCodes.json.html" : {
+    "title" : "MapVaccineCodes - JSON Representation",
+    "label" : "7.20",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MapVaccineCodes</b></li>",
+    "previous" : "StructureMap-MapVaccineCodes.xml.html",
+    "next" : "StructureMap-MapVaccineCodes.ttl.html"
+  },
+  "StructureMap-MapVaccineCodes.ttl.html" : {
+    "title" : "MapVaccineCodes - TTL Representation",
+    "label" : "7.20",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MapVaccineCodes</b></li>",
+    "previous" : "StructureMap-MapVaccineCodes.json.html"
   }
 }

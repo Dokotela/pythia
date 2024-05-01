@@ -10,7 +10,9 @@
     "url" : "http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig",
     "version" : "0.1.0",
     "name" : "PythiaIG",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "title" : "The Pythia Vaccine Forecasting Engine and Guide",
+    "date" : "2024-05-01T10:29:48-04:00",
+    "description" : "Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization",
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -30,7 +32,7 @@
     "version" : "0.1.0",
     "name" : "EvalReasonCS",
     "title" : "Evaluation Reason",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "The reason for the evaluation.",
     "status" : {
       "class" : "colsd",
@@ -51,7 +53,7 @@
     "version" : "0.1.0",
     "name" : "EvalStatusCS",
     "title" : "Evaluation Status",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "The status of the result of an evaluation.",
     "status" : {
       "class" : "colsd",
@@ -72,7 +74,7 @@
     "version" : "0.1.0",
     "name" : "IntervalReasonCS",
     "title" : "Interval Reason",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "This value set includes codes for the reason an interval is considered to be invalid.",
     "status" : {
       "class" : "colsd",
@@ -93,7 +95,7 @@
     "version" : "0.1.0",
     "name" : "PreferredAllowedReasonCS",
     "title" : "Reasons why certain doses are Preferred or Allowed doses",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "Reasons why certain doses are Preferred or Allowed doses",
     "status" : {
       "class" : "colsd",
@@ -114,7 +116,7 @@
     "version" : "0.1.0",
     "name" : "VaccineGenderCS",
     "title" : "Vaccine Gender",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "Value set for gender categories relevant to vaccination data.",
     "status" : {
       "class" : "colsd",
@@ -135,7 +137,7 @@
     "version" : "0.1.0",
     "name" : "ValidAgeReasonCS",
     "title" : "Valid Age Reason",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
     "status" : {
       "class" : "colsd",
@@ -156,7 +158,7 @@
     "version" : "0.1.0",
     "name" : "VaccineObservationCodes",
     "title" : "Vaccine Observation Codes",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
     "status" : {
       "class" : "colsd",
@@ -177,7 +179,7 @@
     "version" : "0.1.0",
     "name" : "Vaccine",
     "title" : "Vaccine",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "Simple vaccine to easily obtain needed information for forecasting",
     "status" : {
       "class" : "colsd",
@@ -198,7 +200,7 @@
     "version" : "0.1.0",
     "name" : "AntigenSupportingData",
     "title" : "Antigen Supporting Data",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series.",
     "status" : {
       "class" : "colsd",
@@ -218,7 +220,7 @@
     "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/assessment-date",
     "version" : "0.1.0",
     "name" : "AssessmentDate",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "The date on which the vaccination assessment was made.",
     "status" : {
       "class" : "colsd",
@@ -239,7 +241,7 @@
     "version" : "0.1.0",
     "name" : "ScheduleSupportingData",
     "title" : "Schedule Supporting Data",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes.",
     "status" : {
       "class" : "colsd",
@@ -260,7 +262,7 @@
     "version" : "0.1.0",
     "name" : "VaxDose",
     "title" : "Dose of a Vaccine",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "Detailed information about each vaccination dose.",
     "status" : {
       "class" : "colsd",
@@ -281,7 +283,7 @@
     "version" : "0.1.0",
     "name" : "VaxPatient",
     "title" : "Vaccination Patient",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information.",
     "status" : {
       "class" : "colsd",
@@ -302,7 +304,7 @@
     "version" : "0.1.0",
     "name" : "EvalReasonVS",
     "title" : "Evaluation Reason",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "The reason for the evaluation.",
     "status" : {
       "class" : "colsd",
@@ -323,7 +325,7 @@
     "version" : "0.1.0",
     "name" : "EvalStatusVS",
     "title" : "Evaluation Status Value Set",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "Value Set for the status of the result of an evaluation.",
     "status" : {
       "class" : "colsd",
@@ -344,7 +346,7 @@
     "version" : "0.1.0",
     "name" : "IntervalReasonVS",
     "title" : "Interval Reason",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "This value set includes codes for the reason an interval is considered to be invalid.",
     "status" : {
       "class" : "colsd",
@@ -365,7 +367,7 @@
     "version" : "0.1.0",
     "name" : "PreferredAllowedReasonVS",
     "title" : "Reasons why certain doses are Preferred or Allowed doses",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "Reasons why certain doses are Preferred or Allowed doses",
     "status" : {
       "class" : "colsd",
@@ -386,7 +388,7 @@
     "version" : "0.1.0",
     "name" : "VaccineGenderVS",
     "title" : "Vaccine Gender",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "Value set for gender categories relevant to vaccination data.",
     "status" : {
       "class" : "colsd",
@@ -407,8 +409,28 @@
     "version" : "0.1.0",
     "name" : "ValidAgeReasonVS",
     "title" : "Valid Age Reason",
-    "date" : "2024-04-30T22:06:35-04:00",
+    "date" : "2024-05-01T10:29:48-04:00",
     "description" : "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
+    "status" : {
+      "class" : "colsd",
+      "owner" : "FHIR-FLI",
+      "link" : "http://fhirfli.dev",
+      "status" : "Draft"
+    }
+  },
+  "StructureMap/MapVaccineCodes" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 20,
+    "source" : "input/resources/map_vaccine_codes.json",
+    "sourceTail" : "map_vaccine_codes.json",
+    "path" : "StructureMap-MapVaccineCodes.html",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureMap/map-vaccine-codes",
+    "version" : "0.1.0",
+    "name" : "MapVaccineCodes",
+    "date" : "2024-05-01T10:29:48-04:00",
+    "description" : "Define the usage of FHIR resource types with specific aliases",
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",

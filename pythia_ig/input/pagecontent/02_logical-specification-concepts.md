@@ -4,7 +4,7 @@ There are a number of concepts that are involved in the evaluation and predictio
 
 #### A TargetDose is said to be 'unsatisfied' until a dose matches all of its required criteria. At that time, the TargetDose is incremented by one. Below is a basic example from the CDC
 
-How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image) ![Satisfy a Target Dose](images/dose_satisfies_target.png)
+How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image) ![Satisfy a Target Dose](dose_satisfies_target.png)
 
 - Target dose - this is a term that makes some intrinsic sense, and then has been used in confusing ways, at least I thought so. The target dose is the next recommended dose in a series. When we evaluate past vaccines, we check to see if a particular vaccine that was given meets the requirements of the target dose. If it is, that target dose is considered complete, and we move onto the next target dose.
 

@@ -4,6 +4,7 @@
   "url": "http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig",
   "version": "0.1.0",
   "name": "PythiaIG",
+  "title": "The Pythia Vaccine Forecasting Engine and Guide",
   "status": "draft",
   "publisher": "FHIR-FLI",
   "contact": [
@@ -17,6 +18,7 @@
       ]
     }
   ],
+  "description": "Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization",
   "packageId": "pythia.ig",
   "fhirVersion": [
     "4.0.1"
@@ -78,6 +80,14 @@
         "name": "Interval Reason",
         "description": "This value set includes codes for the reason an interval is considered to be invalid.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureMap/MapVaccineCodes"
+        },
+        "description": "Define the usage of FHIR resource types with specific aliases",
+        "exampleBoolean": false,
+        "name": "MapVaccineCodes"
       },
       {
         "reference": {
@@ -155,28 +165,28 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "evaluate-vaccine-dose-administered.html",
-          "title": "Evaluate Vaccine Dose Administered",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "forecast-dates-and-reasons.html",
-          "title": "Forecast Dates and Reasons",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "logical-specification-concepts.html",
-          "title": "Logical Specification Concepts",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "preparation.html",
+          "nameUrl": "01_preparation.html",
           "title": "Preparation",
           "generation": "markdown"
         },
         {
-          "nameUrl": "processing-model.html",
+          "nameUrl": "02_logical-specification-concepts.html",
+          "title": "Logical Specification Concepts",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "03_processing-model.html",
           "title": "Processing Model",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "04_evaluate-vaccine-dose-administered.html",
+          "title": "Evaluate Vaccine Dose Administered",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "05_forecast-dates-and-reasons.html",
+          "title": "Forecast Dates and Reasons",
           "generation": "markdown"
         }
       ]

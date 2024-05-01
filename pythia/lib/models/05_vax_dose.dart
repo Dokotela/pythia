@@ -330,6 +330,7 @@ class VaxDose {
     List<VaxDose> doses,
     int targetDose,
   ) {
+    print('targetDose: $targetDose: given: $dateGiven');
     if (intervals == null || intervals.isEmpty) {
       updatePreferredInterval(valid: true);
       updateAllowedInterval(valid: true);
@@ -424,6 +425,9 @@ class VaxDose {
           }
         }
 
+        print(
+            'REFERENCE DATE: $referenceDate - absMinInt: ${interval.absMinInt} - minInt: ${interval.minInt}');
+
         /// If we never found a referenceDate, then this interval doesn't meet
         /// the requirements
         if (referenceDate == null) {
@@ -433,6 +437,8 @@ class VaxDose {
               referenceDate.changeNullable(interval.absMinInt, false)!;
           final VaxDate minimumIntervaldate =
               referenceDate.changeNullable(interval.minInt, false)!;
+          print('absMinInt: $absoluteMinimumIntervalDate');
+          print('minInt: $minimumIntervaldate');
 
           /// If it's prior to the absoluteMinimumIntervalDate then it's not
           /// a valid inteval

@@ -4,13 +4,14 @@
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.id">id</a>" : "pythia.ig",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;PythiaIG&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig&lt;/pre&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;PythiaIG&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig&lt;/pre&gt;&lt;div&gt;&lt;p&gt;Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization&lt;/p&gt;\n&lt;/div&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
   },
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.url">url</a>" : "http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">version</a>" : "0.1.0",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.name">name</a>" : "PythiaIG",
+  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.title">title</a>" : "The Pythia Vaccine Forecasting Engine and Guide",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a>" : "2024-04-30T22:06:35-04:00",
+  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a>" : "2024-05-01T10:29:48-04:00",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.publisher">publisher</a>" : "FHIR-FLI",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.contact">contact</a>" : [
     {
@@ -23,6 +24,7 @@
       ]
     }
   ],
+  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.description">description</a>" : "Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.packageId">packageId</a>" : "pythia.ig",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.license">license</a>" : "CC0-1.0",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.fhirVersion">fhirVersion</a>" : [
@@ -840,6 +842,20 @@
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "StructureMap"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          <a href="StructureMap-MapVaccineCodes.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "StructureMap/MapVaccineCodes"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "MapVaccineCodes",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "Define the usage of FHIR resource types with specific aliases",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "ValueSet"
           }
         ],
@@ -1027,43 +1043,10 @@
           "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "evaluate-vaccine-dose-administered.html"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "01_preparation.html"
             }
           ],
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "evaluate-vaccine-dose-administered.html",
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Evaluate Vaccine Dose Administered",
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
-        },
-        {
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "forecast-dates-and-reasons.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "forecast-dates-and-reasons.html",
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Forecast Dates and Reasons",
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
-        },
-        {
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "logical-specification-concepts.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "logical-specification-concepts.html",
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Logical Specification Concepts",
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
-        },
-        {
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "preparation.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "preparation.html",
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "01_preparation.html",
           "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Preparation",
           "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
         },
@@ -1071,11 +1054,44 @@
           "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "processing-model.html"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "02_logical-specification-concepts.html"
             }
           ],
-          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "processing-model.html",
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "02_logical-specification-concepts.html",
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Logical Specification Concepts",
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "03_processing-model.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "03_processing-model.html",
           "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Processing Model",
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "04_evaluate-vaccine-dose-administered.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "04_evaluate-vaccine-dose-administered.html",
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Evaluate Vaccine Dose Administered",
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "05_forecast-dates-and-reasons.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "05_forecast-dates-and-reasons.html",
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Forecast Dates and Reasons",
           "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
         }
       ]

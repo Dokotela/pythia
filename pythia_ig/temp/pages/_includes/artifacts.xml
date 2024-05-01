@@ -16,6 +16,9 @@
       <li>
          <a href="#4">Terminology: Code Systems</a>
       </li>
+      <li>
+         <a href="#5">Terminology: Structure Maps</a>
+      </li>
    </ul>
 </div>
 <div xmlns:html="http://www.w3.org/1999/xhtml"
@@ -188,6 +191,21 @@
                <a href="CodeSystem-ValidAgeReason.html" title="CodeSystem/ValidAgeReason">Valid Age Reason</a>
             </td>
             <td>{% capture desc %}Value set for reasons why a patient's age is considered valid/invalid for a vaccine.{% endcapture %}
+{{ desc | markdownify}}</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Structure Maps </h3>{% capture grouping_desc %}These define transformations to convert between data structures used by systems conforming to this implementation guide.{% endcapture %}
+    {{ grouping_desc | markdownify}}<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureMap-MapVaccineCodes.html"
+                  title="StructureMap/MapVaccineCodes">MapVaccineCodes</a>
+            </td>
+            <td>{% capture desc %}Define the usage of FHIR resource types with specific aliases{% endcapture %}
 {{ desc | markdownify}}</td>
          </tr>
       </tbody>

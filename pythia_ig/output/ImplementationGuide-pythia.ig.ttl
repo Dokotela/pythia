@@ -10,13 +10,14 @@
   fhir:id [ fhir:v "pythia.ig"] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PythiaIG</h2><p>The official URL for this implementation guide is: </p><pre>http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig</pre></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PythiaIG</h2><p>The official URL for this implementation guide is: </p><pre>http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig</pre><div><p>Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization</p>\n</div></div>"
   ] ; # 
   fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/pythia/ImplementationGuide/pythia.ig"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PythiaIG"] ; # 
+  fhir:title [ fhir:v "The Pythia Vaccine Forecasting Engine and Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-04-30T22:06:35-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-05-01T10:29:48-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "FHIR-FLI" ] ;
@@ -25,6 +26,7 @@
        fhir:value [ fhir:v "http://fhirfli.dev" ]
      ] )
   ] ) ; # 
+  fhir:description [ fhir:v "Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization"] ; # 
   fhir:packageId [ fhir:v "pythia.ig"] ; # 
   fhir:license [ fhir:v "CC0-1.0"] ; # 
   fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
@@ -613,6 +615,18 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureMap/MapVaccineCodes> ;
+         fhir:reference [ fhir:v "StructureMap/MapVaccineCodes" ]
+       ] ;
+       fhir:name [ fhir:v "MapVaccineCodes" ] ;
+       fhir:description [ fhir:v "Define the usage of FHIR resource types with specific aliases" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
@@ -770,42 +784,42 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "evaluate-vaccine-dose-administered.html"^^xsd:anyURI ]
+           fhir:value [ fhir:v "01_preparation.html"^^xsd:anyURI ]
          ] ) ;
-         fhir:name [ fhir:v "evaluate-vaccine-dose-administered.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Evaluate Vaccine Dose Administered" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "forecast-dates-and-reasons.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "forecast-dates-and-reasons.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Forecast Dates and Reasons" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "logical-specification-concepts.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "logical-specification-concepts.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Logical Specification Concepts" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "preparation.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "preparation.html"^^xsd:anyURI ] ;
+         fhir:name [ fhir:v "01_preparation.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Preparation" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "processing-model.html"^^xsd:anyURI ]
+           fhir:value [ fhir:v "02_logical-specification-concepts.html"^^xsd:anyURI ]
          ] ) ;
-         fhir:name [ fhir:v "processing-model.html"^^xsd:anyURI ] ;
+         fhir:name [ fhir:v "02_logical-specification-concepts.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Logical Specification Concepts" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "03_processing-model.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "03_processing-model.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Processing Model" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "04_evaluate-vaccine-dose-administered.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "04_evaluate-vaccine-dose-administered.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Evaluate Vaccine Dose Administered" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "05_forecast-dates-and-reasons.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "05_forecast-dates-and-reasons.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Forecast Dates and Reasons" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;

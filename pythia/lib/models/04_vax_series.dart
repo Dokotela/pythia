@@ -70,7 +70,11 @@ class VaxSeries {
                   targetDose,
                 )) {
                   if (dose.isAllowedInterval(
-                      seriesDose.preferableInterval, doses, targetDose)) {
+                      seriesDose.allowableInterval == null
+                          ? null
+                          : <Interval>[seriesDose.allowableInterval!],
+                      doses,
+                      targetDose)) {
                     if (!dose.isLiveVirusConflict(doses)) {
                       dose.isPreferredType(seriesDose.preferableVaccine, dob);
                       if (dose.isAllowedType(
