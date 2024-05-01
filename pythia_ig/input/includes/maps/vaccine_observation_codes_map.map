@@ -13,93 +13,95 @@ uses "http://hl7.org/fhir/StructureDefinition/MedicationDispense" alias sourceMe
 uses "http://hl7.org/fhir/StructureDefinition/Condition" alias targetCondition as target
 
 group MapToVaccineConditionObservation(source src : any, target tgt : targetCondition) {
-  src as sourceObservation where (src is Observation) -> tgt then MapFromObservation(src, tgt) "SourceObservation";
-  src as sourceCondition where (src is Condition) -> tgt then  MapFromCondition(src, tgt) "SourceCondition";
-  src as sourceProcedure where (src is Procedure) -> tgt then  MapFromProcedure(src, tgt) "SourceProcedure";
-  src as sourceImmunization where (src is Immunization) -> tgt then  MapFromImmunization(src, tgt) "SourceImmunization";
-  src as sourceMedication where (src is Medication) -> tgt then  MapFromMedication(src, tgt) "SourceMedication";
-  src as sourceMedicationStatement where (src is MedicationStatement) -> tgt then  MapFromMedicationStatement(src, tgt) "SourceMedicationStatement";
-  src as sourceMedicationRequest where (src is MedicationRequest) -> tgt then  MapFromMedicationRequest(src, tgt) "SourceMedicationRequest";
-  src as sourceMedicationAdministration where (src is MedicationAdministration) -> tgt then  MapFromMedicationAdministration(src, tgt) "SourceMedicationAdministration";
-  src as sourceMedicationDispense where (src is MedicationDispense) -> tgt then  MapFromMedicationDispense(src, tgt) "SourceMedicationDispense";
+  src as sourceObservation where (src is Observation) -> tgt then MapFromObservation(src, tgt) "SourceObservationToTarget";
+  src as sourceCondition where (src is Condition) -> tgt then MapFromCondition(src, tgt) "SourceConditionToTarget";
+  src as sourceProcedure where (src is Procedure) -> tgt then MapFromProcedure(src, tgt) "SourceProcedureToTarget";
+  src as sourceImmunization where (src is Immunization) -> tgt then MapFromImmunization(src, tgt) "SourceImmunizationToTarget";
+  src as sourceMedication where (src is Medication) -> tgt then MapFromMedication(src, tgt) "SourceMedicationToTarget";
+  src as sourceMedicationStatement where (src is MedicationStatement) -> tgt then MapFromMedicationStatement(src, tgt) "SourceMedStatementToTarget";
+  src as sourceMedicationRequest where (src is MedicationRequest) -> tgt then MapFromMedicationRequest(src, tgt) "SourceMedRequestToTarget";
+  src as sourceMedicationAdministration where (src is MedicationAdministration) -> tgt then MapFromMedicationAdministration(src, tgt) "SourceMedAdminToTarget";
+  src as sourceMedicationDispense where (src is MedicationDispense) -> tgt then MapFromMedicationDispense(src, tgt) "SourceMedDispenseToTarget";
 }
 
 group MapFromObservation(source src : sourceObservation, target tgt : targetCondition) {
-  src -> tgt.status = 'active' "ObservationSetResultToActive";
-  src as sourceObservation where (src is Observation) -> tgt then MapFromObservation(src, tgt) "SourceObservation";
-  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromObservation";
-  src -> tgt.onsetDateTime = src.effectiveDateTime "ObservationSetOnsetDateTime";
-  src -> tgt.onsetPeriod = src.effectivePeriod "ObservationSetOnsetPeriod";
-  src -> tgt.onsetDateTime = src.effectiveInstant "ObservationSetOnsetInstant";
+  src -> tgt.status = 'active' "SetObservationStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyObsMappings";
+  src -> tgt.onsetDateTime = src.effectiveDateTime "SetObsOnsetDateTime";
+  src -> tgt.onsetPeriod = src.effectivePeriod "SetObsOnsetPeriod";
+  src -> tgt.onsetDateTime = src.effectiveInstant "SetObsOnsetInstant";
 }
 
 group MapFromCondition(source src : sourceCondition, target tgt : targetCondition) {
-  src -> tgt.status = "active" "ConditionSetStatus";
-  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromCondition";
-  src -> tgt.onsetDateTime = src.onsetDateTime "ConditionSetOnsetDateTime";
-  src -> tgt.onsetAge = src.onsetAge "ConditionSetOnsetAge";
-  src -> tgt.onsetPeriod = src.onsetPeriod "ConditionSetOnsetPeriod";
-  src -> tgt.onsetRange = src.onsetRange "ConditionSetOnsetRange";
-  src -> tgt.onsetString = src.onsetString "ConditionSetOnsetString";
-  src -> tgt.abatementDateTime = src.abatementDateTime "ConditionSetAbatementDateTime";
-  src -> tgt.abatementAge = src.abatementAge "ConditionSetAbatementAge";
-  src -> tgt.abatementPeriod = src.abatementPeriod "ConditionSetAbatementPeriod";
-  src -> tgt.abatementRange = src.abatementRange "ConditionSetAbatementRange";
-  src -> tgt.abatementString = src.abatementString "ConditionSetAbatementString";
-} 
+  src -> tgt.status = "active" "SetConditionStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyCondMappings";
+  src -> tgt.onsetDateTime = src.onsetDateTime "SetCondOnsetDateTime";
+  src -> tgt.onsetAge = src.onsetAge "SetCondOnsetAge";
+  src -> tgt.onsetPeriod = src.onsetPeriod "SetCondOnsetPeriod";
+  src -> tgt.onsetRange = src.onsetRange "SetCondOnsetRange";
+  src -> tgt.onsetString = src.onsetString "SetCondOnsetString";
+  src -> tgt.abatementDateTime = src.abatementDateTime "SetCondAbatementDateTime";
+  src -> tgt.abatementAge = src.abatementAge "SetCondAbatementAge";
+  src -> tgt.abatementPeriod = src.abatementPeriod "SetCondAbatementPeriod";
+  src -> tgt.abatementRange = src.abatementRange "SetCondAbatementRange";
+  src -> tgt.abatementString = src.abatementString "SetCondAbatementString";
+}
 
 group MapFromProcedure(source src : sourceProcedure, target tgt : targetCondition) {
-  src -> tgt.status = "active" "ProcedureSetStatus";
-  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromProcedure";
-  src -> tgt.onsetDateTime = src.performedDateTime "ProcedureSetOnsetDateTime";
-  src -> tgt.onsetAge = src.performedAge "ProcedureSetOnsetAge";
-  src -> tgt.onsetPeriod = src.performedPeriod "ProcedureSetOnsetPeriod";
-  src -> tgt.onsetRange = src.performedRange "ProcedureSetOnsetRange";
-  src -> tgt.onsetString = src.performedString "ProcedureSetOnsetString";
+  src -> tgt.status = "active" "SetProcedureStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyProcedureMappings";
+  src -> tgt.onsetDateTime = src.performedDateTime "SetProcedureOnsetDateTime";
+  src -> tgt.onsetAge = src.performedAge "SetProcedureOnsetAge";
+  src -> tgt.onsetPeriod = src.performedPeriod "SetProcedureOnsetPeriod";
+  src -> tgt.onsetRange = src.performedRange "SetProcedureOnsetRange";
+  src -> tgt.onsetString = src.performedString "SetProcedureOnsetString";
 }
 
 group MapFromImmunization(source src : sourceImmunization, target tgt : targetCondition) {
-  src -> tgt.status = "active" "ImmunizationSetStatus";
-  src.vaccineCode as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromImmunization";
-  src -> tgt.onsetDateTime = src.occurrenceDateTime "ImmunizationSetOnsetDateTime";
-  src -> tgt.onsetString = src.occurrenceString "ImmunizationSetOnsetString";
+  src -> tgt.status = "active" "SetImmunizationStatus";
+  src.vaccineCode as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyImmunizationMappings";
+  src -> tgt.onsetDateTime = src.occurrenceDateTime "SetImmunizationOnsetDateTime";
+  src -> tgt.onsetString = src.occurrenceString "SetImmunizationOnsetString";
 }
 
 group MapFromMedication(source src : sourceMedication, target tgt : targetCondition) {
-  src -> tgt.status = "active" "MedicationSetStatus";
-  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromMedication";
+  src -> tgt.status = "active" "SetMedicationStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedicationMappings";
 }
 
-// What about medicationReference?
+// TODO(Dokotela): what about medicationReference?
 group MapFromMedicationStatement(source src : sourceMedicationStatement, target tgt : targetCondition) {
-  src -> tgt.status = "active" "MedicationStatementSetStatus";
-  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromMedicationStatement";
+  src -> tgt.status = "active" "SetMedStatementStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedStatementMappings";
 }
 
 group MapFromMedicationRequest(source src : sourceMedicationRequest, target tgt : targetCondition) {
-  src -> tgt.status = "active" "MedicationRequestSetStatus";
-  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromMedicationRequest";
-  src -> tgt.onsetDateTime = src.authoredOn "MedicationRequestSetOnsetDateTime";
+  src -> tgt.status = "active" "SetMedRequestStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedRequestMappings";
+  src -> tgt.onsetDateTime = src.authoredOn "SetMedRequestOnsetDateTime";
 }
 
 group MapFromMedicationAdministration(source src : sourceMedicationAdministration, target tgt : targetCondition) {
-  src -> tgt.status = "active" "MedicationAdministrationSetStatus";
-  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromMedicationAdministration";
-  src -> tgt.onsetDateTime = src.effectiveDateTime "MedicationAdministrationSetOnsetDateTime";
-  src -> tgt.onsetPeriod = src.effectivePeriod "MedicationAdministrationSetOnsetPeriod";
+  src -> tgt.status = "active" "SetMedAdminStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedAdminMappings";
+  src -> tgt.onsetDateTime = src.effectiveDateTime "SetMedAdminOnsetDateTime";
+  src -> tgt.onsetPeriod = src.effectivePeriod "SetMedAdminOnsetPeriod";
 }
 
 group MapFromMedicationDispense(source src : sourceMedicationDispense, target tgt : targetCondition) {
-  src -> tgt.status = "active" "MedicationDispenseSetStatus";
-  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMappingsFromMedicationDispense";
-  src -> tgt.onsetDateTime = src.whenHandedOver "MedicationDispenseSetOnsetDateTime";
+  src -> tgt.status = "active" "SetMedDispenseStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedDispenseMappings";
+  src -> tgt.onsetDateTime = src.whenHandedOver "SetMedDispenseOnsetDateTime";
 }
 
-group ApplyCommonMappings(source src : List<Coding>, target tgt : targetCondition) {
-    src where(src.code.coding.code = '370388006' and srouce.code.coding.system = 'http://snomed.info/sct') -> tgt.code = create('Coding') as newCoding then {
-        src -> newCoding.system = 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes' "Set system for new coding";
-        src -> newCoding.code = '003' "Set code for immunocompromised";
-      } "Complete mapping for immunocompromised status";
+group ApplyCommonMappings(source src : Coding, target tgt : targetCondition) {
+  src.system as systemValue where systemValue = 'http://hl7.org/fhir/sid/cvx' -> tgt.code = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes' "SetNewCodingSystem";
+      src -> newCoding.code = '003' "SetNewCodingCode";
+      src -> newCoding.display = 'Patient Immunocompromised' "SetNewCodingDisplay";
+    } "HandleCVXCoding";
+  } "CheckSystemAndApplyMappings";
 }
 
 
@@ -980,9 +982,3 @@ group ApplyCommonMappings(source src : List<Coding>, target tgt : targetConditio
 // } "Apply Common Mappings";
 
 
-group createCode(source systemValue : string, source cource coding : Coding, systemValue : string) {
-  return Coding {
-    system = systemValue,
-    code = codeValue
-  };
-}
