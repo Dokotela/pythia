@@ -12,31 +12,48 @@ Future<void> main() async {
       for (final CodedValue codedValue
           in observation.codedValues?.codedValue ?? <CodedValue>[]) {
         if (codedValue.codeSystem == 'SNOMED') {
-          snomedEntries += '    // ${codedValue.text}\n';
-          snomedEntries +=
-              "    '${codedValue.code}': ('${observation.observationCode}', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),\n";
+          snomedEntries += '''
+      src.code as codeValue where codeValue = '${codedValue.code}' -> 
+          newCoding.system = 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes',
+          newCoding.code = '${observation.observationCode}',
+          newCoding.display = "${codedValue.text}" "SetSNOMEDCode${codedValue.code}";\n\n''';
         } else if (codedValue.codeSystem == 'CVX') {
-          cvxEntries += '    // ${codedValue.text}\n';
-          cvxEntries +=
-              "    '${codedValue.code}': ('${observation.observationCode}', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),\n";
+          cvxEntries += '''
+      src.code as codeValue where codeValue = '${codedValue.code}' -> 
+          newCoding.system = 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes',
+          newCoding.code = '${observation.observationCode}',
+          newCoding.display = "${codedValue.text}" "SetCVXCode${codedValue.code}";\n\n''';
         } else if (codedValue.codeSystem == 'CDCPHINVS') {
-          phinvadsEntries += '    // ${codedValue.text}\n';
-          phinvadsEntries +=
-              "    '${codedValue.code}': ('${observation.observationCode}', 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes'),\n";
+          phinvadsEntries += '''
+      src.code as codeValue where codeValue = '${codedValue.code}' -> 
+          newCoding.system = 'http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes',
+          newCoding.code = '${observation.observationCode}',
+          newCoding.display = "${codedValue.text}" "SetCDCPHINVSCode${codedValue.code}";\n\n''';
         }
       }
     }
   }
-  entries += "    'http://snomed.info/sct': {\n";
+  entries += '''
+  src.system as systemValue where systemValue = 'http://snomed.info/sct' -> tgt.code = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {''';
   entries += snomedEntries;
-  entries += '    },\n';
-  entries += "    'http://hl7.org/fhir/sid/cvx': {\n";
+  entries += '''
+    } "HandleIndividualSNOMEDCoding";
+  } "ApplySNOMEDMappings";\n\n''';
+  entries += '''
+  src.system as systemValue where systemValue = 'http://hl7.org/fhir/sid/cvx' -> tgt.code = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {''';
   entries += cvxEntries;
-  entries += '    },\n';
-  entries += "    'http://phinvads.cdc.gov': {\n";
+  entries += '''
+    } "HandleIndividualCVXCoding";
+  } "ApplyCVXMappings";\n\n''';
+  entries += '''
+  src.system as systemValue where systemValue = 'http://phinvads.cdc.gov' -> tgt.code = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {''';
   entries += phinvadsEntries;
-  entries += '    }\n';
-  entries += '  };\n\n';
+  entries += '''
+    } "HandleIndividualCDCPHINVSCoding";
+  } "ApplyCDCPHINVSMappings";\n''';
   entries += fileEnd;
   await File('lib/generated_files/vaccine_observation_codes_map.map')
       .writeAsString(entries);
@@ -45,130 +62,101 @@ Future<void> main() async {
 String entries = '''
 map "http://fhirfli.dev/fhir/ig/pythia/StructureMap/map-vaccine-codes" = "MapVaccineCodes"
 
-uses "Observation" as sourceObservation
-uses "Condition" as sourceCondition
-uses "Procedure" as sourceProcedure
-uses "Immunization" as sourceImmunization
-uses "Medication" as sourceMedication
-uses "MedicationStatement" as sourceMedicationStatement
-uses "MedicationRequest" as sourceMedicationRequest
-uses "MedicationAdministration" as sourceMedicationAdministration
-uses "MedicationDispense" as sourceMedicationDispense
-uses "Condition" as targetCondition
+// Define the usage of FHIR resource types with specific aliases
+uses "http://hl7.org/fhir/StructureDefinition/Observation" alias sourceObservation as source
+uses "http://hl7.org/fhir/StructureDefinition/Condition" alias sourceCondition as source
+uses "http://hl7.org/fhir/StructureDefinition/Procedure" alias sourceProcedure as source
+uses "http://hl7.org/fhir/StructureDefinition/Immunization" alias sourceImmunization as source
+uses "http://hl7.org/fhir/StructureDefinition/Medication" alias sourceMedication as source
+uses "http://hl7.org/fhir/StructureDefinition/MedicationStatement" alias sourceMedicationStatement as source
+uses "http://hl7.org/fhir/StructureDefinition/MedicationRequest" alias sourceMedicationRequest as source
+uses "http://hl7.org/fhir/StructureDefinition/MedicationAdministration" alias sourceMedicationAdministration as source
+uses "http://hl7.org/fhir/StructureDefinition/MedicationDispense" alias sourceMedicationDispense as source
+uses "http://hl7.org/fhir/StructureDefinition/Condition" alias targetCondition as target
 
 group MapToVaccineConditionObservation(source src : any, target tgt : targetCondition) {
-  src.type -> {
-    case 'Observation': MapFromObservation(src as sourceObservation, tgt);
-    case 'Condition': MapFromCondition(src as sourceCondition, tgt);
-    case 'Procedure': MapFromProcedure(src as sourceProcedure, tgt);
-    case 'Immunization': MapFromImmunization(src as sourceImmunization, tgt);
-    case 'Medication': MapFromMedication(src as sourceMedication, tgt);
-    case 'MedicationStatement': MapFromMedicationStatement(src as sourceMedicationStatement, tgt);
-    case 'MedicationRequest': MapFromMedicationRequest(src as sourceMedicationRequest, tgt);
-    case 'MedicationAdministration': MapFromMedicationAdministration(src as sourceMedicationAdministration, tgt);
-    case 'MedicationDispense': MapFromMedicationDispense(src as sourceMedicationDispense, tgt);
-  }
+  src as sourceObservation where (src is Observation) -> tgt then MapFromObservation(src, tgt) "SourceObservationToTarget";
+  src as sourceCondition where (src is Condition) -> tgt then MapFromCondition(src, tgt) "SourceConditionToTarget";
+  src as sourceProcedure where (src is Procedure) -> tgt then MapFromProcedure(src, tgt) "SourceProcedureToTarget";
+  src as sourceImmunization where (src is Immunization) -> tgt then MapFromImmunization(src, tgt) "SourceImmunizationToTarget";
+  src as sourceMedication where (src is Medication) -> tgt then MapFromMedication(src, tgt) "SourceMedicationToTarget";
+  src as sourceMedicationStatement where (src is MedicationStatement) -> tgt then MapFromMedicationStatement(src, tgt) "SourceMedStatementToTarget";
+  src as sourceMedicationRequest where (src is MedicationRequest) -> tgt then MapFromMedicationRequest(src, tgt) "SourceMedRequestToTarget";
+  src as sourceMedicationAdministration where (src is MedicationAdministration) -> tgt then MapFromMedicationAdministration(src, tgt) "SourceMedAdminToTarget";
+  src as sourceMedicationDispense where (src is MedicationDispense) -> tgt then MapFromMedicationDispense(src, tgt) "SourceMedDispenseToTarget";
 }
 
 group MapFromObservation(source src : sourceObservation, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.code.coding, tgt);
-  src -> tgt.onsetDateTime = src.effectiveDateTime;
-  src -> tgt.onsetPeriod = src.effectivePeriod;
-  src -> tgt.onsetDateTime = src.effectiveInstant;
+  src -> tgt.status = 'active' "SetObservationStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyObsMappings";
+  src -> tgt.onsetDateTime = src.effectiveDateTime "SetObsOnsetDateTime";
+  src -> tgt.onsetPeriod = src.effectivePeriod "SetObsOnsetPeriod";
+  src -> tgt.onsetDateTime = src.effectiveInstant "SetObsOnsetInstant";
 }
 
 group MapFromCondition(source src : sourceCondition, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.code.coding, tgt);
-  src -> tgt.onsetDateTime = src.onsetDateTime;
-  src -> tgt.onsetAge = src.onsetAge;
-  src -> tgt.onsetPeriod = src.onsetPeriod;
-  src -> tgt.onsetRange = src.onsetRange;
-  src -> tgt.onsetString = src.onsetString;
-  src -> tgt.abatementDateTime = src.abatementDateTime;
-  src -> tgt.abatementAge = src.abatementAge;
-  src -> tgt.abatementPeriod = src.abatementPeriod;
-  src -> tgt.abatementRange = src.abatementRange;
-  src -> tgt.abatementString = src.abatementString;
-} 
+  src -> tgt.status = "active" "SetConditionStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyCondMappings";
+  src -> tgt.onsetDateTime = src.onsetDateTime "SetCondOnsetDateTime";
+  src -> tgt.onsetAge = src.onsetAge "SetCondOnsetAge";
+  src -> tgt.onsetPeriod = src.onsetPeriod "SetCondOnsetPeriod";
+  src -> tgt.onsetRange = src.onsetRange "SetCondOnsetRange";
+  src -> tgt.onsetString = src.onsetString "SetCondOnsetString";
+  src -> tgt.abatementDateTime = src.abatementDateTime "SetCondAbatementDateTime";
+  src -> tgt.abatementAge = src.abatementAge "SetCondAbatementAge";
+  src -> tgt.abatementPeriod = src.abatementPeriod "SetCondAbatementPeriod";
+  src -> tgt.abatementRange = src.abatementRange "SetCondAbatementRange";
+  src -> tgt.abatementString = src.abatementString "SetCondAbatementString";
+}
 
 group MapFromProcedure(source src : sourceProcedure, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.code.coding, tgt);
-  src -> tgt.onsetDateTime = src.performedDateTime;
-  src -> tgt.onsetAge = src.performedAge;
-  src -> tgt.onsetPeriod = src.performedPeriod;
-  src -> tgt.onsetRange = src.performedRange;
-  src -> tgt.onsetString = src.performedString;
+  src -> tgt.status = "active" "SetProcedureStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyProcedureMappings";
+  src -> tgt.onsetDateTime = src.performedDateTime "SetProcedureOnsetDateTime";
+  src -> tgt.onsetAge = src.performedAge "SetProcedureOnsetAge";
+  src -> tgt.onsetPeriod = src.performedPeriod "SetProcedureOnsetPeriod";
+  src -> tgt.onsetRange = src.performedRange "SetProcedureOnsetRange";
+  src -> tgt.onsetString = src.performedString "SetProcedureOnsetString";
 }
 
 group MapFromImmunization(source src : sourceImmunization, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.code.coding, tgt);
-  src -> tgt.onsetDateTime = src.occurrenceDateTime;
-  src -> tgt.onsetString = src.occurrenceString;
+  src -> tgt.status = "active" "SetImmunizationStatus";
+  src.vaccineCode as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyImmunizationMappings";
+  src -> tgt.onsetDateTime = src.occurrenceDateTime "SetImmunizationOnsetDateTime";
+  src -> tgt.onsetString = src.occurrenceString "SetImmunizationOnsetString";
 }
 
 group MapFromMedication(source src : sourceMedication, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.code.coding, tgt);
+  src -> tgt.status = "active" "SetMedicationStatus";
+  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedicationMappings";
 }
 
-// What about medicationReference?
+// TODO(Dokotela): what about medicationReference?
 group MapFromMedicationStatement(source src : sourceMedicationStatement, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
+  src -> tgt.status = "active" "SetMedStatementStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedStatementMappings";
 }
 
 group MapFromMedicationRequest(source src : sourceMedicationRequest, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
-  src -> tgt.onsetDateTime = src.authoredOn;
+  src -> tgt.status = "active" "SetMedRequestStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedRequestMappings";
+  src -> tgt.onsetDateTime = src.authoredOn "SetMedRequestOnsetDateTime";
 }
 
 group MapFromMedicationAdministration(source src : sourceMedicationAdministration, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
-  src -> tgt.onsetDateTime = src.effectiveDateTime;
-  src -> tgt.onsetPeriod = src.effectivePeriod;
+  src -> tgt.status = "active" "SetMedAdminStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedAdminMappings";
+  src -> tgt.onsetDateTime = src.effectiveDateTime "SetMedAdminOnsetDateTime";
+  src -> tgt.onsetPeriod = src.effectivePeriod "SetMedAdminOnsetPeriod";
 }
 
 group MapFromMedicationDispense(source src : sourceMedicationDispense, target tgt : targetCondition) {
-  src -> tgt.status = 'active';
-  ApplyCommonMappings(src.medicationCodeableConcept.coding, tgt);
-  src -> tgt.onsetDateTime = src.whenHandedOver;
+  src -> tgt.status = "active" "SetMedDispenseStatus";
+  src.medicationCodeableConcept as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedDispenseMappings";
+  src -> tgt.onsetDateTime = src.whenHandedOver "SetMedDispenseOnsetDateTime";
 }
 
-
-function createCode(codeValue : string, systemValue : string) -> Coding {
-  Coding {
-    system = systemValue,
-    code = codeValue
-  }
-}
-
-function ApplyCommonMappings(sourceCodings : List<Coding>, targetCondition : targetCondition) {
-  // Define a map of source system codes to target codes and systems
-  const mappings = {
+group ApplyCommonMappings(source src : Coding, target tgt : targetCondition) {
 ''';
 
-const fileEnd = '''
-  // Process each coding in the sourceCodings list
-  sourceCodings.forEach((coding) => {
-    if (mappings[coding.system] && mappings[coding.system][coding.code]) {
-      const [targetCode, targetSystem] = mappings[coding.system][coding.code];
-      if (targetCode && targetSystem) {
-        // Create a new Coding for the target Condition
-        tgt.code = createCode(targetCode, targetSystem);
-      }
-    }
-  });
-}
-
-function createCode(codeValue : string, systemValue : string) -> Coding {
-  return Coding {
-    system = systemValue,
-    code = codeValue
-  };
-}''';
+const fileEnd = '}';
