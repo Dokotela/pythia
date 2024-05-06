@@ -5,4 +5,4 @@ http://fhirfli.dev/fhir/ig/pythia/CodeSystem/IntervalReason,0.1.0,draft,,Interva
 http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason,0.1.0,draft,,PreferredAllowedReasonCS,Reasons why certain doses are Preferred or Allowed doses,"Reasons why certain doses are Preferred or Allowed doses",
 http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender,0.1.0,draft,,VaccineGenderCS,Vaccine Gender,"Value set for gender categories relevant to vaccination data.",
 http://fhirfli.dev/fhir/ig/pythia/CodeSystem/ValidAgeReason,0.1.0,draft,,ValidAgeReasonCS,Valid Age Reason,"Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
-http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes,0.1.0,draft,,VaccineObservationCodes,Vaccine Observation Codes,"Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
+http://fhirfli.dev/fhir/ig/pythia/CodeSystem/cdsi-observation-codes,0.1.0,draft,,CdsiObservationCodes,CDSI Observation Codes,"Observations and Conditions that are important to indications or contraindications in vaccine forecasting",

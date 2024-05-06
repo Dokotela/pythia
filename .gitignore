@@ -128,3 +128,5 @@ ios/GoogleService-Info.plist
 
 *.jar
 *publisher.jar
+
+*template/*

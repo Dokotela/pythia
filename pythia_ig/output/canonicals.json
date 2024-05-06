@@ -1,5 +1,19 @@
 [
   {
+    "id" : "Vaccine",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/fhir/StructureDefinition/Vaccine",
+    "version" : "0.1.0",
+    "name" : "Vaccine"
+  },
+  {
+    "id" : "vax-dose",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/fhir/StructureDefinition/vax-dose",
+    "version" : "0.1.0",
+    "name" : "VaxDose"
+  },
+  {
     "id" : "EvalReason",
     "type" : "CodeSystem",
     "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason",
@@ -42,11 +56,11 @@
     "name" : "ValidAgeReasonCS"
   },
   {
-    "id" : "vaccine-observation-codes",
+    "id" : "cdsi-observation-codes",
     "type" : "CodeSystem",
-    "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/CodeSystem/cdsi-observation-codes",
     "version" : "0.1.0",
-    "name" : "VaccineObservationCodes"
+    "name" : "CdsiObservationCodes"
   },
   {
     "id" : "pythia.ig",
@@ -56,11 +70,88 @@
     "name" : "PythiaIG"
   },
   {
-    "id" : "Vaccine",
+    "id" : "MedicationAdministrationProfile",
     "type" : "StructureDefinition",
-    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/Vaccine",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationAdministrationProfile",
     "version" : "0.1.0",
-    "name" : "Vaccine"
+    "name" : "MedicationAdministrationProfile"
+  },
+  {
+    "id" : "MedicationDispenseProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationDispenseProfile",
+    "version" : "0.1.0",
+    "name" : "MedicationDispenseProfile"
+  },
+  {
+    "id" : "MedicationRequestProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationRequestProfile",
+    "version" : "0.1.0",
+    "name" : "MedicationRequestProfile"
+  },
+  {
+    "id" : "MedicationStatementProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationStatementProfile",
+    "version" : "0.1.0",
+    "name" : "MedicationStatementProfile"
+  },
+  {
+    "id" : "ProcedureProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/ProcedureProfile",
+    "version" : "0.1.0",
+    "name" : "ProcedureProfile"
+  },
+  {
+    "id" : "ReactionProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/ReactionProfile",
+    "version" : "0.1.0",
+    "name" : "ReactionProfile"
+  },
+  {
+    "id" : "VaccineConditionFhir",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/VaccineConditionFhir",
+    "version" : "0.1.0",
+    "name" : "VaccineConditionFhir"
+  },
+  {
+    "id" : "VaccineObservationFhir",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/VaccineObservationFhir",
+    "version" : "0.1.0",
+    "name" : "VaccineObservationFhir"
+  },
+  {
+    "id" : "allowed-interval-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-interval-reason",
+    "version" : "0.1.0",
+    "name" : "AllowedIntervalReason"
+  },
+  {
+    "id" : "allowed-interval-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-interval-status",
+    "version" : "0.1.0",
+    "name" : "AllowedIntervalStatus"
+  },
+  {
+    "id" : "allowed-vaccine-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-vaccine-reason",
+    "version" : "0.1.0",
+    "name" : "AllowedVaccineReason"
+  },
+  {
+    "id" : "allowed-vaccine-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-vaccine-status",
+    "version" : "0.1.0",
+    "name" : "AllowedVaccineStatus"
   },
   {
     "id" : "antigen-supporting-data",
@@ -77,6 +168,55 @@
     "name" : "AssessmentDate"
   },
   {
+    "id" : "begin-age",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/begin-age",
+    "version" : "0.1.0",
+    "name" : "BeginAge"
+  },
+  {
+    "id" : "end-age",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/end-age",
+    "version" : "0.1.0",
+    "name" : "EndAge"
+  },
+  {
+    "id" : "inadvertent-administration-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/inadvertent-administration-status",
+    "version" : "0.1.0",
+    "name" : "InadvertentAdministrationStatus"
+  },
+  {
+    "id" : "preferred-interval-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-interval-reason",
+    "version" : "0.1.0",
+    "name" : "PreferredIntervalReason"
+  },
+  {
+    "id" : "preferred-interval-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-interval-status",
+    "version" : "0.1.0",
+    "name" : "PreferredIntervalStatus"
+  },
+  {
+    "id" : "preferred-vaccine-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-vaccine-reason",
+    "version" : "0.1.0",
+    "name" : "PreferredVaccineReason"
+  },
+  {
+    "id" : "preferred-vaccine-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-vaccine-status",
+    "version" : "0.1.0",
+    "name" : "PreferredVaccineStatus"
+  },
+  {
     "id" : "schedule-supporting-data",
     "type" : "StructureDefinition",
     "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/schedule-supporting-data",
@@ -84,11 +224,32 @@
     "name" : "ScheduleSupportingData"
   },
   {
-    "id" : "vax-dose",
+    "id" : "vaccination-conflict",
     "type" : "StructureDefinition",
-    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccination-conflict",
     "version" : "0.1.0",
-    "name" : "VaxDose"
+    "name" : "VaccinationConflict"
+  },
+  {
+    "id" : "vaccine-type",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccine-type",
+    "version" : "0.1.0",
+    "name" : "VaccineType"
+  },
+  {
+    "id" : "valid-age-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/valid-age-reason",
+    "version" : "0.1.0",
+    "name" : "ValidAgeReason"
+  },
+  {
+    "id" : "valid-age-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/valid-age-status",
+    "version" : "0.1.0",
+    "name" : "ValidAgeStatus"
   },
   {
     "id" : "vax-patient",
@@ -103,6 +264,13 @@
     "url" : "http://fhirfli.dev/fhir/ig/pythia/StructureMap/map-vaccine-codes",
     "version" : "0.1.0",
     "name" : "MapVaccineCodes"
+  },
+  {
+    "id" : "VaccineCodesCvxMvx",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/VaccineCodesCvxMvx",
+    "version" : "0.1.0",
+    "name" : "VaccineCodesCvxMvx"
   },
   {
     "id" : "eval-reason",
@@ -133,11 +301,32 @@
     "name" : "PreferredAllowedReasonVS"
   },
   {
+    "id" : "procedures",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/procedures",
+    "version" : "0.1.0",
+    "name" : "ImmunizationProceduresSnomed"
+  },
+  {
+    "id" : "vaccine-condition-codes-snomed",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-condition-codes-snomed",
+    "version" : "0.1.0",
+    "name" : "VaccineConditionCodesSnomed"
+  },
+  {
     "id" : "vaccine-gender",
     "type" : "ValueSet",
     "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender",
     "version" : "0.1.0",
     "name" : "VaccineGenderVS"
+  },
+  {
+    "id" : "vaccine-medication-codes-snomed",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-medication-codes-snomed",
+    "version" : "0.1.0",
+    "name" : "VaccineMedicationCodesSnomed"
   },
   {
     "id" : "valid-age-reason",

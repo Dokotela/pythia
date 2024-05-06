@@ -11,7 +11,7 @@
   <name value="PythiaIG"/>
   <title value="The Pythia Vaccine Forecasting Engine and Guide"/>
   <status value="draft"/>
-  <date value="2024-05-01T10:29:48-04:00"/>
+  <date value="2024-05-06T15:25:10-04:00"/>
   <publisher value="FHIR-FLI"/>
   <contact>
     <name value="FHIR-FLI"/>
@@ -462,6 +462,61 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ReactionProfile"/>
+      </reference>
+      <name value="Allergy Intolerance Profile with Vaccine Codes"/>
+      <description value="Profile for allergy intolerances where the offending agent must have a CVX or MVX code."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/allowed-interval-reason"/>
+      </reference>
+      <name value="Allowed Interval Reason"/>
+      <description value="Captures the reason for the allowed interval between vaccine doses."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/allowed-interval-status"/>
+      </reference>
+      <name value="Allowed Interval Status"/>
+      <description value="Captures the status of the allowed interval for vaccination."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/allowed-vaccine-reason"/>
+      </reference>
+      <name value="Allowed Vaccine Reason"/>
+      <description value="Captures the reason why a particular vaccine is allowed."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/allowed-vaccine-status"/>
+      </reference>
+      <name value="Allowed Vaccine Status"/>
+      <description value="Indicates if the vaccine administered is allowed under certain conditions."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -469,6 +524,72 @@
       </reference>
       <name value="AssessmentDate"/>
       <description value="The date on which the vaccination assessment was made."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/begin-age"/>
+      </reference>
+      <name value="Begin Age"/>
+      <description value="The age at which the vaccine becomes applicable."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cdsi-observation-codes"/>
+      </reference>
+      <name value="CDSI Observation Codes"/>
+      <description value="Observations and Conditions that are important to indications or contraindications in vaccine forecasting"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/VaccineConditionFhir"/>
+      </reference>
+      <name value="Condition Profile with Vaccine Condition Codes"/>
+      <description value="Profile for conditions where the code must be from the Vaccine Condition Codes value set."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/VaccineObservationFhir"/>
+      </reference>
+      <name value="Condition Profile with Vaccine Condition Codes"/>
+      <description value="Profile for conditions where the code must be from the Vaccine Condition Codes value set."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vax-dose"/>
+      </reference>
+      <name value="Dose of a Vaccine"/>
+      <description value="Detailed information about each vaccination dose."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/end-age"/>
+      </reference>
+      <name value="End Age"/>
+      <description value="The age at which the vaccine is no longer applicable."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -517,6 +638,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ProcedureProfile"/>
+      </reference>
+      <name value="Immunization Procedures Profile"/>
+      <description value="Profile for medical procedures related to immunization based on SNOMED CT codes."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/inadvertent-administration-status"/>
+      </reference>
+      <name value="Inadvertent Administration Status"/>
+      <description value="Indicates if the vaccine was administered inadvertently."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -550,6 +693,116 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedicationAdministrationProfile"/>
+      </reference>
+      <name value="Medication Administration Profile with Vaccine Codes"/>
+      <description value="Profile for medication administrations with vaccine codes from CVX or MVX."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedicationDispenseProfile"/>
+      </reference>
+      <name value="Medication Dispense Profile with Vaccine Codes"/>
+      <description value="Profile for medication dispenses with vaccine codes from CVX or MVX."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedicationRequestProfile"/>
+      </reference>
+      <name value="Medication Request Profile with Vaccine Codes"/>
+      <description value="Profile for medication requests with vaccine codes from CVX or MVX."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedicationStatementProfile"/>
+      </reference>
+      <name value="Medication Statement Profile with Vaccine Codes"/>
+      <description value="Profile for medication statements with vaccine codes from CVX or MVX."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vaccine-medication-codes-snomed"/>
+      </reference>
+      <name value="Medications"/>
+      <description value="Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/preferred-interval-reason"/>
+      </reference>
+      <name value="Preferred Interval Reason"/>
+      <description value="Captures the reason for the preferred interval between vaccine doses."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/preferred-interval-status"/>
+      </reference>
+      <name value="Preferred Interval Status"/>
+      <description value="Indicates if the vaccine was administered at the preferred interval."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/preferred-vaccine-reason"/>
+      </reference>
+      <name value="Preferred Vaccine Reason"/>
+      <description value="Captures the reason why a particular vaccine is preferred."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/preferred-vaccine-status"/>
+      </reference>
+      <name value="Preferred Vaccine Status"/>
+      <description value="Indicates if the vaccine administered is the preferred vaccine."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/procedures"/>
+      </reference>
+      <name value="Procedures"/>
+      <description value="Comprehensive Value Set for medical procedures based on SNOMED CT codes."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -572,6 +825,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vaccination-conflict"/>
+      </reference>
+      <name value="Vaccination Conflict"/>
+      <description value="Indicates any conflicts with other vaccinations."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -579,6 +843,28 @@
       </reference>
       <name value="Vaccination Patient"/>
       <description value="A profile that extends the base FHIR Patient resource to include detailed vaccination-related information."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Vaccine"/>
+      </reference>
+      <name value="Vaccine"/>
+      <description value="Simple vaccine to easily obtain needed information for forecasting"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vaccine-condition-codes-snomed"/>
+      </reference>
+      <name value="Vaccine Condition Codes"/>
+      <description value="Value set for conditions based on SNOMED CT, that may impact immunization."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -605,13 +891,34 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
+        <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/vaccine-observation-codes"/>
+        <reference value="StructureDefinition/vaccine-type"/>
       </reference>
-      <name value="Vaccine Observation Codes"/>
-      <description value="Observations and Conditions that are important to indications or contraindications in vaccine forecasting"/>
+      <name value="Vaccine Type"/>
+      <description value="Type of the vaccine."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/VaccineCodesCvxMvx"/>
+      </reference>
+      <name value="VaccineCodesCvxMvx"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/valid-age-reason"/>
+      </reference>
+      <name value="Valid Age Reason"/>
+      <description value="Captures the reason why the vaccine was administered at a particular age."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -638,13 +945,14 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
+        <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Vaccine"/>
+        <reference value="StructureDefinition/valid-age-status"/>
       </reference>
-      <name value="Vaccine"/>
-      <description value="Simple vaccine to easily obtain needed information for forecasting"/>
+      <name value="Valid Age Status"/>
+      <description value="Indicates if the vaccine was administered at the correct age."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -665,16 +973,6 @@
       </reference>
       <name value="Schedule Supporting Data"/>
       <description value="This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes."/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/vax-dose"/>
-      </reference>
-      <name value="Dose of a Vaccine"/>
-      <description value="Detailed information about each vaccination dose."/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

@@ -4,18 +4,420 @@
   "fhirVersion": "4.0.1",
   "extensions": [
     {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-interval-reason",
+      "title": "Allowed Interval Reason",
+      "types": [
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-interval-status",
+      "title": "Allowed Interval Status",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-vaccine-reason",
+      "title": "Allowed Vaccine Reason",
+      "types": [
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-vaccine-status",
+      "title": "Allowed Vaccine Status",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
       "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/assessment-date",
       "title": "AssessmentDate",
       "types": [
         "dateTime"
       ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/begin-age",
+      "title": "Begin Age",
+      "types": [
+        "Age"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/end-age",
+      "title": "End Age",
+      "types": [
+        "Age"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/inadvertent-administration-status",
+      "title": "Inadvertent Administration Status",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-interval-reason",
+      "title": "Preferred Interval Reason",
+      "types": [
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-interval-status",
+      "title": "Preferred Interval Status",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-vaccine-reason",
+      "title": "Preferred Vaccine Reason",
+      "types": [
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-vaccine-status",
+      "title": "Preferred Vaccine Status",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccination-conflict",
+      "title": "Vaccination Conflict",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccine-type",
+      "title": "Vaccine Type",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/valid-age-reason",
+      "title": "Valid Age Reason",
+      "types": [
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/valid-age-status",
+      "title": "Valid Age Status",
+      "types": [
+        "boolean"
+      ]
     }
   ],
   "profiles": {
-    "Vaccine": [
+    "Medication": [
       {
-        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/Vaccine",
+        "url": "http://example.org/fhir/StructureDefinition/Vaccine",
         "title": "Vaccine"
+      }
+    ],
+    "Immunization": [
+      {
+        "url": "http://example.org/fhir/StructureDefinition/vax-dose",
+        "title": "Dose of a Vaccine"
+      }
+    ],
+    "MedicationAdministration": [
+      {
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationAdministrationProfile",
+        "title": "Medication Administration Profile with Vaccine Codes"
+      }
+    ],
+    "MedicationDispense": [
+      {
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationDispenseProfile",
+        "title": "Medication Dispense Profile with Vaccine Codes"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationRequestProfile",
+        "title": "Medication Request Profile with Vaccine Codes"
+      }
+    ],
+    "MedicationStatement": [
+      {
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationStatementProfile",
+        "title": "Medication Statement Profile with Vaccine Codes"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/ProcedureProfile",
+        "title": "Immunization Procedures Profile"
+      }
+    ],
+    "AllergyIntolerance": [
+      {
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/ReactionProfile",
+        "title": "Allergy Intolerance Profile with Vaccine Codes"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/VaccineConditionFhir",
+        "title": "Condition Profile with Vaccine Condition Codes"
+      },
+      {
+        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/VaccineObservationFhir",
+        "title": "Condition Profile with Vaccine Condition Codes"
       }
     ],
     "antigen-supporting-data": [
@@ -30,12 +432,6 @@
         "title": "Schedule Supporting Data"
       }
     ],
-    "vax-dose": [
-      {
-        "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose",
-        "title": "Dose of a Vaccine"
-      }
-    ],
     "Patient": [
       {
         "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient",
@@ -44,8 +440,54 @@
     ]
   },
   "usage": {
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-interval-reason": [
+      "Immunization"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-interval-status": [
+      "Immunization"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-vaccine-reason": [
+      "Immunization"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-vaccine-status": [
+      "Immunization"
+    ],
     "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/assessment-date": [
+      "Immunization",
       "Patient"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/begin-age": [
+      "Medication"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/end-age": [
+      "Medication"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/inadvertent-administration-status": [
+      "Immunization"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-interval-reason": [
+      "Immunization"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-interval-status": [
+      "Immunization"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-vaccine-reason": [
+      "Immunization"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-vaccine-status": [
+      "Immunization"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccination-conflict": [
+      "Immunization"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccine-type": [
+      "Medication"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/valid-age-reason": [
+      "Immunization"
+    ],
+    "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/valid-age-status": [
+      "Immunization"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
@@ -58,6 +500,9 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"

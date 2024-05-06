@@ -27,10 +27,98 @@
     "resource": [
       {
         "reference": {
+          "reference": "StructureDefinition/ReactionProfile"
+        },
+        "name": "Allergy Intolerance Profile with Vaccine Codes",
+        "description": "Profile for allergy intolerances where the offending agent must have a CVX or MVX code.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/allowed-interval-reason"
+        },
+        "name": "Allowed Interval Reason",
+        "description": "Captures the reason for the allowed interval between vaccine doses.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/allowed-interval-status"
+        },
+        "name": "Allowed Interval Status",
+        "description": "Captures the status of the allowed interval for vaccination.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/allowed-vaccine-reason"
+        },
+        "name": "Allowed Vaccine Reason",
+        "description": "Captures the reason why a particular vaccine is allowed.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/allowed-vaccine-status"
+        },
+        "name": "Allowed Vaccine Status",
+        "description": "Indicates if the vaccine administered is allowed under certain conditions.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/assessment-date"
         },
         "name": "AssessmentDate",
         "description": "The date on which the vaccination assessment was made.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/begin-age"
+        },
+        "name": "Begin Age",
+        "description": "The age at which the vaccine becomes applicable.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/cdsi-observation-codes"
+        },
+        "name": "CDSI Observation Codes",
+        "description": "Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/VaccineConditionFhir"
+        },
+        "name": "Condition Profile with Vaccine Condition Codes",
+        "description": "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/VaccineObservationFhir"
+        },
+        "name": "Condition Profile with Vaccine Condition Codes",
+        "description": "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/vax-dose"
+        },
+        "name": "Dose of a Vaccine",
+        "description": "Detailed information about each vaccination dose.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/end-age"
+        },
+        "name": "End Age",
+        "description": "The age at which the vaccine is no longer applicable.",
         "exampleBoolean": false
       },
       {
@@ -67,6 +155,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/ProcedureProfile"
+        },
+        "name": "Immunization Procedures Profile",
+        "description": "Profile for medical procedures related to immunization based on SNOMED CT codes.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/inadvertent-administration-status"
+        },
+        "name": "Inadvertent Administration Status",
+        "description": "Indicates if the vaccine was administered inadvertently.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/interval-reason"
         },
         "name": "Interval Reason",
@@ -91,6 +195,86 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/MedicationAdministrationProfile"
+        },
+        "name": "Medication Administration Profile with Vaccine Codes",
+        "description": "Profile for medication administrations with vaccine codes from CVX or MVX.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MedicationDispenseProfile"
+        },
+        "name": "Medication Dispense Profile with Vaccine Codes",
+        "description": "Profile for medication dispenses with vaccine codes from CVX or MVX.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MedicationRequestProfile"
+        },
+        "name": "Medication Request Profile with Vaccine Codes",
+        "description": "Profile for medication requests with vaccine codes from CVX or MVX.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MedicationStatementProfile"
+        },
+        "name": "Medication Statement Profile with Vaccine Codes",
+        "description": "Profile for medication statements with vaccine codes from CVX or MVX.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vaccine-medication-codes-snomed"
+        },
+        "name": "Medications",
+        "description": "Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/preferred-interval-reason"
+        },
+        "name": "Preferred Interval Reason",
+        "description": "Captures the reason for the preferred interval between vaccine doses.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/preferred-interval-status"
+        },
+        "name": "Preferred Interval Status",
+        "description": "Indicates if the vaccine was administered at the preferred interval.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/preferred-vaccine-reason"
+        },
+        "name": "Preferred Vaccine Reason",
+        "description": "Captures the reason why a particular vaccine is preferred.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/preferred-vaccine-status"
+        },
+        "name": "Preferred Vaccine Status",
+        "description": "Indicates if the vaccine administered is the preferred vaccine.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/procedures"
+        },
+        "name": "Procedures",
+        "description": "Comprehensive Value Set for medical procedures based on SNOMED CT codes.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/preferred-allowed-reason"
         },
         "name": "Reasons why certain doses are Preferred or Allowed doses",
@@ -107,10 +291,34 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/vaccination-conflict"
+        },
+        "name": "Vaccination Conflict",
+        "description": "Indicates any conflicts with other vaccinations.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/vax-patient"
         },
         "name": "Vaccination Patient",
         "description": "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Vaccine"
+        },
+        "name": "Vaccine",
+        "description": "Simple vaccine to easily obtain needed information for forecasting",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vaccine-condition-codes-snomed"
+        },
+        "name": "Vaccine Condition Codes",
+        "description": "Value set for conditions based on SNOMED CT, that may impact immunization.",
         "exampleBoolean": false
       },
       {
@@ -131,10 +339,25 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/vaccine-observation-codes"
+          "reference": "StructureDefinition/vaccine-type"
         },
-        "name": "Vaccine Observation Codes",
-        "description": "Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
+        "name": "Vaccine Type",
+        "description": "Type of the vaccine.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VaccineCodesCvxMvx"
+        },
+        "name": "VaccineCodesCvxMvx",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/valid-age-reason"
+        },
+        "name": "Valid Age Reason",
+        "description": "Captures the reason why the vaccine was administered at a particular age.",
         "exampleBoolean": false
       },
       {
@@ -151,6 +374,14 @@
         },
         "name": "Valid Age Reason",
         "description": "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/valid-age-status"
+        },
+        "name": "Valid Age Status",
+        "description": "Indicates if the vaccine was administered at the correct age.",
         "exampleBoolean": false
       }
     ],

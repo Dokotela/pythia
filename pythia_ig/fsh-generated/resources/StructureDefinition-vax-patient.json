@@ -50,6 +50,11 @@
           "strength": "required",
           "valueSet": "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender"
         }
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "min": 1
       }
     ]
   }

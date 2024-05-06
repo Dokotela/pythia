@@ -1,6 +1,15 @@
 {
   "codeSystems" : [
     {
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/VaccineCodesCvxMvx",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineCodesCvxMvx",
+      "title" : null,
+      "description" : null,
+      "systems" : ["http://hl7.org/fhir/sid/mvx", "http://hl7.org/fhir/sid/cvx"]
+    },
+    {
       "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-reason",
       "version" : "0.1.0",
       "status" : "draft",
@@ -41,6 +50,24 @@
       ]
     },
     {
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/procedures",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ImmunizationProceduresSnomed",
+      "title" : "Procedures",
+      "description" : "Comprehensive Value Set for medical procedures based on SNOMED CT codes.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-condition-codes-snomed",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineConditionCodesSnomed",
+      "title" : "Vaccine Condition Codes",
+      "description" : "Value set for conditions based on SNOMED CT, that may impact immunization.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
       "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender",
       "version" : "0.1.0",
       "status" : "draft",
@@ -48,6 +75,15 @@
       "title" : "Vaccine Gender",
       "description" : "Value set for gender categories relevant to vaccination data.",
       "systems" : ["http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender"]
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-medication-codes-snomed",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineMedicationCodesSnomed",
+      "title" : "Medications",
+      "description" : "Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products.",
+      "systems" : ["http://snomed.info/sct"]
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/pythia/ValueSet/valid-age-reason",

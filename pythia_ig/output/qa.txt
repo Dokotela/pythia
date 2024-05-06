@@ -1,33 +1,61 @@
 PythiaIG : Validation Results
 =========================================
 
-err = 68, warn = 337, info = 7
+err = 79, warn = 332, info = 8
 IG Publisher Version: 1.6.6
-Generated Wed May 01 10:30:21 EDT 2024. FHIR version 4.0.1 for pythia.ig#0.1.0 (canonical = http://fhirfli.dev/fhir/ig/pythia)
- Build Errors : 0 / 4 / 0
+Generated Mon May 06 15:26:34 EDT 2024. FHIR version 4.0.1 for pythia.ig#0.1.0 (canonical = http://fhirfli.dev/fhir/ig/pythia)
+ Build Errors : 0 / 5 / 0
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-EvalReason : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-EvalStatus : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-IntervalReason : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-PreferredAllowedReason : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-VaccineGender : 0 / 2 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-ValidAgeReason : 0 / 2 / 2
- /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-vaccine-observation-codes : 0 / 3 / 2
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/CodeSystem-cdsi-observation-codes : 0 / 3 / 2
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ImplementationGuide-pythia.ig : 0 / 0 / 1
- /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-Vaccine : 2 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-MedicationAdministrationProfile : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-MedicationDispenseProfile : 0 / 1 / 2
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-MedicationRequestProfile : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-MedicationStatementProfile : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-ProcedureProfile : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-ReactionProfile : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-Vaccine : 2 / 3 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-VaccineConditionFhir : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-VaccineObservationFhir : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-allowed-interval-reason : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-allowed-interval-status : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-allowed-vaccine-reason : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-allowed-vaccine-status : 0 / 2 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-antigen-supporting-data : 2 / 157 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-assessment-date : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-begin-age : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-end-age : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-inadvertent-administration-status : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-preferred-interval-reason : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-preferred-interval-status : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-preferred-vaccine-reason : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-preferred-vaccine-status : 0 / 2 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-schedule-supporting-data : 2 / 98 / 1
- /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vax-dose : 2 / 53 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vaccination-conflict : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vaccine-type : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-valid-age-reason : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-valid-age-status : 0 / 2 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vax-dose : 3 / 1 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vax-patient : 1 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-VaccineCodesCvxMvx : 0 / 3 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-eval-reason : 0 / 1 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-eval-status : 0 / 1 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-interval-reason : 0 / 1 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-preferred-allowed-reason : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-procedures : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-vaccine-condition-codes-snomed : 10 / 1 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-vaccine-gender : 0 / 1 / 1
+ /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-vaccine-medication-codes-snomed : 0 / 1 / 1
  /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/ValueSet-valid-age-reason : 0 / 1 / 1
  /home/grey/dev/pythia/pythia_ig/input/resources/map_vaccine_codes : 59 / 0 / 1
 </table>
 == n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/VaccineCodesCvxMvx.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
@@ -56,16 +84,47 @@ WARNING: CodeSystem/VaccineGender: CodeSystem: Published code systems SHOULD con
 INFORMATION: CodeSystem/ValidAgeReason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 WARNING: CodeSystem/ValidAgeReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 WARNING: CodeSystem/ValidAgeReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
-== fsh-generated/resources/CodeSystem-vaccine-observation-codes.json ==
-WARNING: CodeSystem/vaccine-observation-codes: CodeSystem.concept[122].definition: value should not start or finish with whitespace 'Severe allergic reaction to rice protein '
-INFORMATION: CodeSystem/vaccine-observation-codes: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
-WARNING: CodeSystem/vaccine-observation-codes: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
-WARNING: CodeSystem/vaccine-observation-codes: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-cdsi-observation-codes.json ==
+WARNING: CodeSystem/cdsi-observation-codes: CodeSystem.concept[122].definition: value should not start or finish with whitespace 'Severe allergic reaction to rice protein '
+INFORMATION: CodeSystem/cdsi-observation-codes: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/cdsi-observation-codes: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/cdsi-observation-codes: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
 == fsh-generated/resources/ImplementationGuide-pythia.ig.json ==
+== fsh-generated/resources/StructureDefinition-MedicationAdministrationProfile.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationAdministrationProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-MedicationDispenseProfile.json ==
+INFORMATION: StructureDefinition/MedicationDispenseProfile: StructureDefinition.snapshot.element[29].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationDispenseProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-MedicationRequestProfile.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationRequestProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-MedicationStatementProfile.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationStatementProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ProcedureProfile.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/ProcedureProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ReactionProfile.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/ReactionProfile'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-Vaccine.json ==
-ERROR: StructureDefinition/Vaccine: StructureDefinition.type: The type Vaccine is not legal because it is not defined in the FHIR specification. Other types must have a namespace on them
-WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/Vaccine'): The Implementation Guide contains no examples for this profile
-ERROR: StructureDefinition: Error Rendering Resource: Not the right kind of structure to generate schematrons for
+ERROR: StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/Vaccine'): Conformance resource /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-Vaccine.json - the canonical URL (http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/Vaccine) does not match the URL (http://example.org/fhir/StructureDefinition/Vaccine)
+WARNING: StructureDefinition/Vaccine: StructureDefinition.snapshot.element[17].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition/Vaccine: StructureDefinition.differential.element[7].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/Vaccine'): The Implementation Guide contains no examples for this profile
+ERROR: /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-Vaccine: URL Mismatch http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/Vaccine vs http://example.org/fhir/StructureDefinition/Vaccine
+== fsh-generated/resources/StructureDefinition-VaccineConditionFhir.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/VaccineConditionFhir'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-VaccineObservationFhir.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/VaccineObservationFhir'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-allowed-interval-reason.json ==
+WARNING: StructureDefinition/allowed-interval-reason: StructureDefinition.context[0]: Review the extension type for allowed-interval-reason: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-interval-reason'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-allowed-interval-status.json ==
+WARNING: StructureDefinition/allowed-interval-status: StructureDefinition.context[0]: Review the extension type for allowed-interval-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-interval-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-allowed-vaccine-reason.json ==
+WARNING: StructureDefinition/allowed-vaccine-reason: StructureDefinition.context[0]: Review the extension type for allowed-vaccine-reason: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-vaccine-reason'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-allowed-vaccine-status.json ==
+WARNING: StructureDefinition/allowed-vaccine-status: StructureDefinition.context[0]: Review the extension type for allowed-vaccine-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-vaccine-status'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-antigen-supporting-data.json ==
 ERROR: StructureDefinition/antigen-supporting-data: StructureDefinition.type: The type antigen-supporting-data is not legal because it is not defined in the FHIR specification. Other types must have a namespace on them
 WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
@@ -229,6 +288,27 @@ ERROR: StructureDefinition: Error Rendering Resource: Not the right kind of stru
 == fsh-generated/resources/StructureDefinition-assessment-date.json ==
 WARNING: StructureDefinition/assessment-date: StructureDefinition.context[0]: Review the extension type for assessment-date: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/assessment-date'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-begin-age.json ==
+WARNING: StructureDefinition/begin-age: StructureDefinition.context[0]: Review the extension type for begin-age: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/begin-age'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-end-age.json ==
+WARNING: StructureDefinition/end-age: StructureDefinition.context[0]: Review the extension type for end-age: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/end-age'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-inadvertent-administration-status.json ==
+WARNING: StructureDefinition/inadvertent-administration-status: StructureDefinition.context[0]: Review the extension type for inadvertent-administration-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/inadvertent-administration-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-preferred-interval-reason.json ==
+WARNING: StructureDefinition/preferred-interval-reason: StructureDefinition.context[0]: Review the extension type for preferred-interval-reason: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-interval-reason'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-preferred-interval-status.json ==
+WARNING: StructureDefinition/preferred-interval-status: StructureDefinition.context[0]: Review the extension type for preferred-interval-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-interval-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-preferred-vaccine-reason.json ==
+WARNING: StructureDefinition/preferred-vaccine-reason: StructureDefinition.context[0]: Review the extension type for preferred-vaccine-reason: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-vaccine-reason'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-preferred-vaccine-status.json ==
+WARNING: StructureDefinition/preferred-vaccine-status: StructureDefinition.context[0]: Review the extension type for preferred-vaccine-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-vaccine-status'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-schedule-supporting-data.json ==
 ERROR: StructureDefinition/schedule-supporting-data: StructureDefinition.type: The type schedule-supporting-data is not legal because it is not defined in the FHIR specification. Other types must have a namespace on them
 WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
@@ -330,65 +410,30 @@ WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.diffe
 WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[33]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/schedule-supporting-data'): The Implementation Guide contains no examples for this profile
 ERROR: StructureDefinition: Error Rendering Resource: Not the right kind of structure to generate schematrons for
+== fsh-generated/resources/StructureDefinition-vaccination-conflict.json ==
+WARNING: StructureDefinition/vaccination-conflict: StructureDefinition.context[0]: Review the extension type for vaccination-conflict: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccination-conflict'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-vaccine-type.json ==
+WARNING: StructureDefinition/vaccine-type: StructureDefinition.context[0]: Review the extension type for vaccine-type: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccine-type'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-valid-age-reason.json ==
+WARNING: StructureDefinition/valid-age-reason: StructureDefinition.context[0]: Review the extension type for valid-age-reason: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/valid-age-reason'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-valid-age-status.json ==
+WARNING: StructureDefinition/valid-age-status: StructureDefinition.context[0]: Review the extension type for valid-age-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/valid-age-status'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-vax-dose.json ==
-ERROR: StructureDefinition/vax-dose: StructureDefinition.type: The type vax-dose is not legal because it is not defined in the FHIR specification. Other types must have a namespace on them
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[7]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[8]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[9]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[11]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[12]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[13]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[14]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[16]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[17]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[18]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[19]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[20]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[24]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[25]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.snapshot.element[26]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[7]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[8]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[9]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[11]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[12]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[13]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[14]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[16]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[17]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[18]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[19]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[20]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/vax-dose: StructureDefinition.differential.element[24]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose'): The Implementation Guide contains no examples for this profile
-ERROR: StructureDefinition: Error Rendering Resource: Not the right kind of structure to generate schematrons for
+ERROR: StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/vax-dose'): Conformance resource /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vax-dose.json - the canonical URL (http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose) does not match the URL (http://example.org/fhir/StructureDefinition/vax-dose)
+ERROR: Dose of a Vaccine.Immunization.status: Binding http://fhirfli.dev/fhir/ig/pythia/ValueSet/eval-status is not a subset of binding http://hl7.org/fhir/ValueSet/immunization-status|4.0.1
+WARNING: StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/vax-dose'): The Implementation Guide contains no examples for this profile
+ERROR: /home/grey/dev/pythia/pythia_ig/fsh-generated/resources/StructureDefinition-vax-dose: URL Mismatch http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose vs http://example.org/fhir/StructureDefinition/vax-dose
 == fsh-generated/resources/StructureDefinition-vax-patient.json ==
 ERROR: Vaccination Patient.Patient.gender: Binding http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-gender is not a subset of binding http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1
 WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-patient'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/ValueSet-VaccineCodesCvxMvx.json ==
+WARNING: ValueSet/VaccineCodesCvxMvx: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.title is mandatory, but it is not present
+WARNING: ValueSet/VaccineCodesCvxMvx: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+WARNING: ValueSet/VaccineCodesCvxMvx: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.description is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-eval-reason.json ==
 WARNING: ValueSet/eval-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-eval-status.json ==
@@ -397,8 +442,24 @@ WARNING: ValueSet/eval-status: ValueSet: Published value sets SHOULD conform to 
 WARNING: ValueSet/interval-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-preferred-allowed-reason.json ==
 WARNING: ValueSet/preferred-allowed-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-procedures.json ==
+WARNING: ValueSet/procedures: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-vaccine-condition-codes-snomed.json ==
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[117].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451301000124103' is not (Unknown code '451301000124103' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[118].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '429301000124101' is not (Unknown code '429301000124101' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[124].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451331000124106' is not (Unknown code '451331000124106' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[125].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '429311000124103' is not (Unknown code '429311000124103' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[130].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '2219088009' is not (Unknown code '2219088009' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[131].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451111000124103' is not (Unknown code '451111000124103' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[136].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451291000124104' is not (Unknown code '451291000124104' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[156].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451281000124102' is not (Unknown code '451281000124102' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[184].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451291000124104' is not (Unknown code '451291000124104' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+WARNING: ValueSet/vaccine-condition-codes-snomed: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+ERROR: ValueSet.where(id = 'vaccine-condition-codes-snomed'): Error from http://tx.fhir.org/r4: The Snomed Concept 451301000124103 was not known
 == fsh-generated/resources/ValueSet-vaccine-gender.json ==
 WARNING: ValueSet/vaccine-gender: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-vaccine-medication-codes-snomed.json ==
+WARNING: ValueSet/vaccine-medication-codes-snomed: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-valid-age-reason.json ==
 WARNING: ValueSet/valid-age-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == input/resources/map_vaccine_codes.json ==

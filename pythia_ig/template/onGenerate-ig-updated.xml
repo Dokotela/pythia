@@ -16,7 +16,7 @@
    <name value="PythiaIG"/>
    <title value="The Pythia Vaccine Forecasting Engine and Guide"/>
    <status value="draft"/>
-   <date value="2024-05-01T10:29:48-04:00"/>
+   <date value="2024-05-06T15:25:10-04:00"/>
    <publisher value="FHIR-FLI"/>
    <contact>
       <name value="FHIR-FLI"/>
@@ -362,6 +362,51 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ReactionProfile.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ReactionProfile"/>
+         </reference>
+         <name value="Allergy Intolerance Profile with Vaccine Codes"/>
+         <description value="Profile for allergy intolerances where the offending agent must have a CVX or MVX code."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
             <valueInteger value="999999999"/>
@@ -387,6 +432,42 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-VaccineConditionFhir.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/VaccineConditionFhir"/>
+         </reference>
+         <name value="Condition Profile with Vaccine Condition Codes"/>
+         <description value="Profile for conditions where the code must be from the Vaccine Condition Codes value set."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-VaccineObservationFhir.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/VaccineObservationFhir"/>
+         </reference>
+         <name value="Condition Profile with Vaccine Condition Codes"/>
+         <description value="Profile for conditions where the code must be from the Vaccine Condition Codes value set."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-vax-dose.html"/>
          </extension>
          <reference>
@@ -394,6 +475,97 @@
          </reference>
          <name value="Dose of a Vaccine"/>
          <description value="Detailed information about each vaccination dose."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ProcedureProfile.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ProcedureProfile"/>
+         </reference>
+         <name value="Immunization Procedures Profile"/>
+         <description value="Profile for medical procedures related to immunization based on SNOMED CT codes."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-MedicationAdministrationProfile.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/MedicationAdministrationProfile"/>
+         </reference>
+         <name value="Medication Administration Profile with Vaccine Codes"/>
+         <description value="Profile for medication administrations with vaccine codes from CVX or MVX."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-MedicationDispenseProfile.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/MedicationDispenseProfile"/>
+         </reference>
+         <name value="Medication Dispense Profile with Vaccine Codes"/>
+         <description value="Profile for medication dispenses with vaccine codes from CVX or MVX."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-MedicationRequestProfile.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/MedicationRequestProfile"/>
+         </reference>
+         <name value="Medication Request Profile with Vaccine Codes"/>
+         <description value="Profile for medication requests with vaccine codes from CVX or MVX."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-MedicationStatementProfile.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/MedicationStatementProfile"/>
+         </reference>
+         <name value="Medication Statement Profile with Vaccine Codes"/>
+         <description value="Profile for medication statements with vaccine codes from CVX or MVX."/>
+         <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
@@ -446,7 +618,80 @@
          </reference>
          <name value="Vaccine"/>
          <description value="Simple vaccine to easily obtain needed information for forecasting"/>
+         <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-allowed-interval-reason.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/allowed-interval-reason"/>
+         </reference>
+         <name value="Allowed Interval Reason"/>
+         <description value="Captures the reason for the allowed interval between vaccine doses."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-allowed-interval-status.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/allowed-interval-status"/>
+         </reference>
+         <name value="Allowed Interval Status"/>
+         <description value="Captures the status of the allowed interval for vaccination."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-allowed-vaccine-reason.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/allowed-vaccine-reason"/>
+         </reference>
+         <name value="Allowed Vaccine Reason"/>
+         <description value="Captures the reason why a particular vaccine is allowed."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-allowed-vaccine-status.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/allowed-vaccine-status"/>
+         </reference>
+         <name value="Allowed Vaccine Status"/>
+         <description value="Indicates if the vaccine administered is allowed under certain conditions."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -463,6 +708,204 @@
          </reference>
          <name value="AssessmentDate"/>
          <description value="The date on which the vaccination assessment was made."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-begin-age.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/begin-age"/>
+         </reference>
+         <name value="Begin Age"/>
+         <description value="The age at which the vaccine becomes applicable."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-end-age.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/end-age"/>
+         </reference>
+         <name value="End Age"/>
+         <description value="The age at which the vaccine is no longer applicable."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-inadvertent-administration-status.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/inadvertent-administration-status"/>
+         </reference>
+         <name value="Inadvertent Administration Status"/>
+         <description value="Indicates if the vaccine was administered inadvertently."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-preferred-interval-reason.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/preferred-interval-reason"/>
+         </reference>
+         <name value="Preferred Interval Reason"/>
+         <description value="Captures the reason for the preferred interval between vaccine doses."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-preferred-interval-status.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/preferred-interval-status"/>
+         </reference>
+         <name value="Preferred Interval Status"/>
+         <description value="Indicates if the vaccine was administered at the preferred interval."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-preferred-vaccine-reason.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/preferred-vaccine-reason"/>
+         </reference>
+         <name value="Preferred Vaccine Reason"/>
+         <description value="Captures the reason why a particular vaccine is preferred."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-preferred-vaccine-status.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/preferred-vaccine-status"/>
+         </reference>
+         <name value="Preferred Vaccine Status"/>
+         <description value="Indicates if the vaccine administered is the preferred vaccine."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-vaccination-conflict.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/vaccination-conflict"/>
+         </reference>
+         <name value="Vaccination Conflict"/>
+         <description value="Indicates any conflicts with other vaccinations."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-vaccine-type.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/vaccine-type"/>
+         </reference>
+         <name value="Vaccine Type"/>
+         <description value="Type of the vaccine."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-valid-age-reason.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/valid-age-reason"/>
+         </reference>
+         <name value="Valid Age Reason"/>
+         <description value="Captures the reason why the vaccine was administered at a particular age."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-valid-age-status.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/valid-age-status"/>
+         </reference>
+         <name value="Valid Age Status"/>
+         <description value="Indicates if the vaccine was administered at the correct age."/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-extension"/>
       </resource>
@@ -528,6 +971,42 @@
             <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-vaccine-medication-codes-snomed.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/vaccine-medication-codes-snomed"/>
+         </reference>
+         <name value="Medications"/>
+         <description value="Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-procedures.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/procedures"/>
+         </reference>
+         <name value="Procedures"/>
+         <description value="Comprehensive Value Set for medical procedures based on SNOMED CT codes."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="ValueSet-preferred-allowed-reason.html"/>
          </extension>
          <reference>
@@ -535,6 +1014,24 @@
          </reference>
          <name value="Reasons why certain doses are Preferred or Allowed doses"/>
          <description value="Reasons why certain doses are Preferred or Allowed doses"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-vaccine-condition-codes-snomed.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/vaccine-condition-codes-snomed"/>
+         </reference>
+         <name value="Vaccine Condition Codes"/>
+         <description value="Value set for conditions based on SNOMED CT, that may impact immunization."/>
          <exampleBoolean value="false"/>
          <groupingId value="-term-valueset"/>
       </resource>
@@ -564,6 +1061,23 @@
             <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-VaccineCodesCvxMvx.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/VaccineCodesCvxMvx"/>
+         </reference>
+         <name value="VaccineCodesCvxMvx"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="ValueSet-valid-age-reason.html"/>
          </extension>
          <reference>
@@ -573,6 +1087,24 @@
          <description value="Value set for reasons why a patient's age is considered valid/invalid for a vaccine."/>
          <exampleBoolean value="false"/>
          <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-cdsi-observation-codes.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/cdsi-observation-codes"/>
+         </reference>
+         <name value="CDSI Observation Codes"/>
+         <description value="Observations and Conditions that are important to indications or contraindications in vaccine forecasting"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -672,24 +1204,6 @@
             <valueString value="CodeSystem"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-vaccine-observation-codes.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/vaccine-observation-codes"/>
-         </reference>
-         <name value="Vaccine Observation Codes"/>
-         <description value="Observations and Conditions that are important to indications or contraindications in vaccine forecasting"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="CodeSystem-ValidAgeReason.html"/>
          </extension>
          <reference>
@@ -778,6 +1292,51 @@
             <title value="Artifacts Summary"/>
             <generation value="html"/>
             <page>
+               <nameUrl value="StructureDefinition-ReactionProfile.html"/>
+               <title value="Allergy Intolerance Profile with Vaccine Codes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-VaccineConditionFhir.html"/>
+               <title value="Condition Profile with Vaccine Condition Codes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-VaccineObservationFhir.html"/>
+               <title value="Condition Profile with Vaccine Condition Codes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-vax-dose.html"/>
+               <title value="Dose of a Vaccine"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ProcedureProfile.html"/>
+               <title value="Immunization Procedures Profile"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-MedicationAdministrationProfile.html"/>
+               <title value="Medication Administration Profile with Vaccine Codes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-MedicationDispenseProfile.html"/>
+               <title value="Medication Dispense Profile with Vaccine Codes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-MedicationRequestProfile.html"/>
+               <title value="Medication Request Profile with Vaccine Codes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-MedicationStatementProfile.html"/>
+               <title value="Medication Statement Profile with Vaccine Codes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="StructureDefinition-vax-patient.html"/>
                <title value="Vaccination Patient"/>
                <generation value="generated"/>
@@ -798,13 +1357,83 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-vax-dose.html"/>
-               <title value="Dose of a Vaccine"/>
+               <nameUrl value="StructureDefinition-allowed-interval-reason.html"/>
+               <title value="Allowed Interval Reason"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-allowed-interval-status.html"/>
+               <title value="Allowed Interval Status"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-allowed-vaccine-reason.html"/>
+               <title value="Allowed Vaccine Reason"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-allowed-vaccine-status.html"/>
+               <title value="Allowed Vaccine Status"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="StructureDefinition-assessment-date.html"/>
                <title value="AssessmentDate"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-begin-age.html"/>
+               <title value="Begin Age"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-end-age.html"/>
+               <title value="End Age"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-inadvertent-administration-status.html"/>
+               <title value="Inadvertent Administration Status"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-preferred-interval-reason.html"/>
+               <title value="Preferred Interval Reason"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-preferred-interval-status.html"/>
+               <title value="Preferred Interval Status"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-preferred-vaccine-reason.html"/>
+               <title value="Preferred Vaccine Reason"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-preferred-vaccine-status.html"/>
+               <title value="Preferred Vaccine Status"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-vaccination-conflict.html"/>
+               <title value="Vaccination Conflict"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-vaccine-type.html"/>
+               <title value="Vaccine Type"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-valid-age-reason.html"/>
+               <title value="Valid Age Reason"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-valid-age-status.html"/>
+               <title value="Valid Age Status"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -823,8 +1452,23 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="ValueSet-vaccine-medication-codes-snomed.html"/>
+               <title value="Medications"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-procedures.html"/>
+               <title value="Procedures"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="ValueSet-preferred-allowed-reason.html"/>
                <title value="Reasons why certain doses are Preferred or Allowed doses"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-vaccine-condition-codes-snomed.html"/>
+               <title value="Vaccine Condition Codes"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -833,8 +1477,18 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="ValueSet-VaccineCodesCvxMvx.html"/>
+               <title value="VaccineCodesCvxMvx"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="ValueSet-valid-age-reason.html"/>
                <title value="Valid Age Reason"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-cdsi-observation-codes.html"/>
+               <title value="CDSI Observation Codes"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -860,11 +1514,6 @@
             <page>
                <nameUrl value="CodeSystem-VaccineGender.html"/>
                <title value="Vaccine Gender"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-vaccine-observation-codes.html"/>
-               <title value="Vaccine Observation Codes"/>
                <generation value="generated"/>
             </page>
             <page>

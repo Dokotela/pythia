@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "Vaccine",
-  "url": "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/Vaccine",
+  "url": "http://example.org/fhir/StructureDefinition/Vaccine",
   "name": "Vaccine",
   "title": "Vaccine",
   "status": "draft",
@@ -9,128 +9,101 @@
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
-  "type": "Vaccine",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
-  "derivation": "specialization",
+  "type": "Medication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+  "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Vaccine",
-        "path": "Vaccine",
-        "short": "Vaccine",
-        "definition": "Simple vaccine to easily obtain needed information for forecasting"
+        "id": "Medication.extension",
+        "path": "Medication.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
       },
       {
-        "id": "Vaccine.vaccineType",
-        "path": "Vaccine.vaccineType",
-        "short": "vaccineType",
-        "definition": "vaccineType",
+        "id": "Medication.extension:beginAge",
+        "path": "Medication.extension",
+        "sliceName": "beginAge",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Extension",
+            "profile": [
+              "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/begin-age"
+            ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
-        "id": "Vaccine.cvx",
-        "path": "Vaccine.cvx",
-        "short": "cvx",
-        "definition": "cvx",
+        "id": "Medication.extension:endAge",
+        "path": "Medication.extension",
+        "sliceName": "endAge",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Extension",
+            "profile": [
+              "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/end-age"
+            ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
-        "id": "Vaccine.beginAge",
-        "path": "Vaccine.beginAge",
-        "short": "beginAge",
-        "definition": "beginAge",
+        "id": "Medication.extension:vaccineType",
+        "path": "Medication.extension",
+        "sliceName": "vaccineType",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Extension",
+            "profile": [
+              "http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccine-type"
+            ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
-        "id": "Vaccine.endAge",
-        "path": "Vaccine.endAge",
-        "short": "endAge",
-        "definition": "endAge",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true
+        "id": "Medication.identifier",
+        "path": "Medication.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "type"
+            }
+          ],
+          "rules": "open"
+        }
       },
       {
-        "id": "Vaccine.tradeName",
-        "path": "Vaccine.tradeName",
-        "short": "tradeName",
-        "definition": "tradeName",
+        "id": "Medication.identifier:tradeName",
+        "path": "Medication.identifier",
+        "sliceName": "tradeName",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true
+        "max": "1"
       },
       {
-        "id": "Vaccine.mvx",
-        "path": "Vaccine.mvx",
-        "short": "mvx",
-        "definition": "mvx",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true
-      },
-      {
-        "id": "Vaccine.volume",
-        "path": "Vaccine.volume",
-        "short": "volume",
-        "definition": "volume",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true
-      },
-      {
-        "id": "Vaccine.forecastVaccineType",
-        "path": "Vaccine.forecastVaccineType",
-        "short": "forecastVaccineType",
-        "definition": "forecastVaccineType",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true
+        "id": "Medication.identifier:tradeName.type",
+        "path": "Medication.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "official"
+            }
+          ]
+        }
       }
     ]
   }

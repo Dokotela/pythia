@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PythiaIG"] ; # 
   fhir:title [ fhir:v "The Pythia Vaccine Forecasting Engine and Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-05-01T10:29:48-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "FHIR-FLI" ] ;
@@ -531,6 +531,66 @@
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/ReactionProfile> ;
+         fhir:reference [ fhir:v "StructureDefinition/ReactionProfile" ]
+       ] ;
+       fhir:name [ fhir:v "Allergy Intolerance Profile with Vaccine Codes" ] ;
+       fhir:description [ fhir:v "Profile for allergy intolerances where the offending agent must have a CVX or MVX code." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-interval-reason> ;
+         fhir:reference [ fhir:v "StructureDefinition/allowed-interval-reason" ]
+       ] ;
+       fhir:name [ fhir:v "Allowed Interval Reason" ] ;
+       fhir:description [ fhir:v "Captures the reason for the allowed interval between vaccine doses." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-interval-status> ;
+         fhir:reference [ fhir:v "StructureDefinition/allowed-interval-status" ]
+       ] ;
+       fhir:name [ fhir:v "Allowed Interval Status" ] ;
+       fhir:description [ fhir:v "Captures the status of the allowed interval for vaccination." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-vaccine-reason> ;
+         fhir:reference [ fhir:v "StructureDefinition/allowed-vaccine-reason" ]
+       ] ;
+       fhir:name [ fhir:v "Allowed Vaccine Reason" ] ;
+       fhir:description [ fhir:v "Captures the reason why a particular vaccine is allowed." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/allowed-vaccine-status> ;
+         fhir:reference [ fhir:v "StructureDefinition/allowed-vaccine-status" ]
+       ] ;
+       fhir:name [ fhir:v "Allowed Vaccine Status" ] ;
+       fhir:description [ fhir:v "Indicates if the vaccine administered is allowed under certain conditions." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:extension" ]
        ] ) ;
        fhir:reference [
@@ -539,6 +599,78 @@
        ] ;
        fhir:name [ fhir:v "AssessmentDate" ] ;
        fhir:description [ fhir:v "The date on which the vaccination assessment was made." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/begin-age> ;
+         fhir:reference [ fhir:v "StructureDefinition/begin-age" ]
+       ] ;
+       fhir:name [ fhir:v "Begin Age" ] ;
+       fhir:description [ fhir:v "The age at which the vaccine becomes applicable." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/CodeSystem/cdsi-observation-codes> ;
+         fhir:reference [ fhir:v "CodeSystem/cdsi-observation-codes" ]
+       ] ;
+       fhir:name [ fhir:v "CDSI Observation Codes" ] ;
+       fhir:description [ fhir:v "Observations and Conditions that are important to indications or contraindications in vaccine forecasting" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/VaccineConditionFhir> ;
+         fhir:reference [ fhir:v "StructureDefinition/VaccineConditionFhir" ]
+       ] ;
+       fhir:name [ fhir:v "Condition Profile with Vaccine Condition Codes" ] ;
+       fhir:description [ fhir:v "Profile for conditions where the code must be from the Vaccine Condition Codes value set." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/VaccineObservationFhir> ;
+         fhir:reference [ fhir:v "StructureDefinition/VaccineObservationFhir" ]
+       ] ;
+       fhir:name [ fhir:v "Condition Profile with Vaccine Condition Codes" ] ;
+       fhir:description [ fhir:v "Profile for conditions where the code must be from the Vaccine Condition Codes value set." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose> ;
+         fhir:reference [ fhir:v "StructureDefinition/vax-dose" ]
+       ] ;
+       fhir:name [ fhir:v "Dose of a Vaccine" ] ;
+       fhir:description [ fhir:v "Detailed information about each vaccination dose." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/end-age> ;
+         fhir:reference [ fhir:v "StructureDefinition/end-age" ]
+       ] ;
+       fhir:name [ fhir:v "End Age" ] ;
+       fhir:description [ fhir:v "The age at which the vaccine is no longer applicable." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -591,6 +723,30 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/ProcedureProfile> ;
+         fhir:reference [ fhir:v "StructureDefinition/ProcedureProfile" ]
+       ] ;
+       fhir:name [ fhir:v "Immunization Procedures Profile" ] ;
+       fhir:description [ fhir:v "Profile for medical procedures related to immunization based on SNOMED CT codes." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/inadvertent-administration-status> ;
+         fhir:reference [ fhir:v "StructureDefinition/inadvertent-administration-status" ]
+       ] ;
+       fhir:name [ fhir:v "Inadvertent Administration Status" ] ;
+       fhir:description [ fhir:v "Indicates if the vaccine was administered inadvertently." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
@@ -627,6 +783,126 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationAdministrationProfile> ;
+         fhir:reference [ fhir:v "StructureDefinition/MedicationAdministrationProfile" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Administration Profile with Vaccine Codes" ] ;
+       fhir:description [ fhir:v "Profile for medication administrations with vaccine codes from CVX or MVX." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationDispenseProfile> ;
+         fhir:reference [ fhir:v "StructureDefinition/MedicationDispenseProfile" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Dispense Profile with Vaccine Codes" ] ;
+       fhir:description [ fhir:v "Profile for medication dispenses with vaccine codes from CVX or MVX." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationRequestProfile> ;
+         fhir:reference [ fhir:v "StructureDefinition/MedicationRequestProfile" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Request Profile with Vaccine Codes" ] ;
+       fhir:description [ fhir:v "Profile for medication requests with vaccine codes from CVX or MVX." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/MedicationStatementProfile> ;
+         fhir:reference [ fhir:v "StructureDefinition/MedicationStatementProfile" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Statement Profile with Vaccine Codes" ] ;
+       fhir:description [ fhir:v "Profile for medication statements with vaccine codes from CVX or MVX." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-medication-codes-snomed> ;
+         fhir:reference [ fhir:v "ValueSet/vaccine-medication-codes-snomed" ]
+       ] ;
+       fhir:name [ fhir:v "Medications" ] ;
+       fhir:description [ fhir:v "Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-interval-reason> ;
+         fhir:reference [ fhir:v "StructureDefinition/preferred-interval-reason" ]
+       ] ;
+       fhir:name [ fhir:v "Preferred Interval Reason" ] ;
+       fhir:description [ fhir:v "Captures the reason for the preferred interval between vaccine doses." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-interval-status> ;
+         fhir:reference [ fhir:v "StructureDefinition/preferred-interval-status" ]
+       ] ;
+       fhir:name [ fhir:v "Preferred Interval Status" ] ;
+       fhir:description [ fhir:v "Indicates if the vaccine was administered at the preferred interval." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-vaccine-reason> ;
+         fhir:reference [ fhir:v "StructureDefinition/preferred-vaccine-reason" ]
+       ] ;
+       fhir:name [ fhir:v "Preferred Vaccine Reason" ] ;
+       fhir:description [ fhir:v "Captures the reason why a particular vaccine is preferred." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/preferred-vaccine-status> ;
+         fhir:reference [ fhir:v "StructureDefinition/preferred-vaccine-status" ]
+       ] ;
+       fhir:name [ fhir:v "Preferred Vaccine Status" ] ;
+       fhir:description [ fhir:v "Indicates if the vaccine administered is the preferred vaccine." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/ValueSet/procedures> ;
+         fhir:reference [ fhir:v "ValueSet/procedures" ]
+       ] ;
+       fhir:name [ fhir:v "Procedures" ] ;
+       fhir:description [ fhir:v "Comprehensive Value Set for medical procedures based on SNOMED CT codes." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
@@ -651,6 +927,18 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccination-conflict> ;
+         fhir:reference [ fhir:v "StructureDefinition/vaccination-conflict" ]
+       ] ;
+       fhir:name [ fhir:v "Vaccination Conflict" ] ;
+       fhir:description [ fhir:v "Indicates any conflicts with other vaccinations." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
@@ -659,6 +947,30 @@
        ] ;
        fhir:name [ fhir:v "Vaccination Patient" ] ;
        fhir:description [ fhir:v "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/Vaccine> ;
+         fhir:reference [ fhir:v "StructureDefinition/Vaccine" ]
+       ] ;
+       fhir:name [ fhir:v "Vaccine" ] ;
+       fhir:description [ fhir:v "Simple vaccine to easily obtain needed information for forecasting" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/ValueSet/vaccine-condition-codes-snomed> ;
+         fhir:reference [ fhir:v "ValueSet/vaccine-condition-codes-snomed" ]
+       ] ;
+       fhir:name [ fhir:v "Vaccine Condition Codes" ] ;
+       fhir:description [ fhir:v "Value set for conditions based on SNOMED CT, that may impact immunization." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -687,14 +999,37 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://fhirfli.dev/fhir/ig/pythia/CodeSystem/vaccine-observation-codes> ;
-         fhir:reference [ fhir:v "CodeSystem/vaccine-observation-codes" ]
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vaccine-type> ;
+         fhir:reference [ fhir:v "StructureDefinition/vaccine-type" ]
        ] ;
-       fhir:name [ fhir:v "Vaccine Observation Codes" ] ;
-       fhir:description [ fhir:v "Observations and Conditions that are important to indications or contraindications in vaccine forecasting" ] ;
+       fhir:name [ fhir:v "Vaccine Type" ] ;
+       fhir:description [ fhir:v "Type of the vaccine." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/ValueSet/VaccineCodesCvxMvx> ;
+         fhir:reference [ fhir:v "ValueSet/VaccineCodesCvxMvx" ]
+       ] ;
+       fhir:name [ fhir:v "VaccineCodesCvxMvx" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/valid-age-reason> ;
+         fhir:reference [ fhir:v "StructureDefinition/valid-age-reason" ]
+       ] ;
+       fhir:name [ fhir:v "Valid Age Reason" ] ;
+       fhir:description [ fhir:v "Captures the reason why the vaccine was administered at a particular age." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -723,14 +1058,15 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/Vaccine> ;
-         fhir:reference [ fhir:v "StructureDefinition/Vaccine" ]
+         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/valid-age-status> ;
+         fhir:reference [ fhir:v "StructureDefinition/valid-age-status" ]
        ] ;
-       fhir:name [ fhir:v "Vaccine" ] ;
-       fhir:description [ fhir:v "Simple vaccine to easily obtain needed information for forecasting" ]
+       fhir:name [ fhir:v "Valid Age Status" ] ;
+       fhir:description [ fhir:v "Indicates if the vaccine was administered at the correct age." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -753,17 +1089,6 @@
        ] ;
        fhir:name [ fhir:v "Schedule Supporting Data" ] ;
        fhir:description [ fhir:v "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes." ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://fhirfli.dev/fhir/ig/pythia/StructureDefinition/vax-dose> ;
-         fhir:reference [ fhir:v "StructureDefinition/vax-dose" ]
-       ] ;
-       fhir:name [ fhir:v "Dose of a Vaccine" ] ;
-       fhir:description [ fhir:v "Detailed information about each vaccination dose." ]
      ] ) ;
      fhir:page [
        fhir:extension ( [
