@@ -20,85 +20,105 @@ class VaxSeries {
   VaxDose? get currentDose =>
       doses.isEmpty ? null : doses[evaluatedDoses.length];
 
+  void updateTargetDose(SeriesDose seriesDose) {
+    if (seriesDose.recurringDose != Binary.yes) {
+      targetDose++;
+    }
+  }
+
   void evaluate() {
-    for (int i = 0; i < (series.seriesDose?.length ?? 0); i++) {
+    if (doses.isNotEmpty) {
+      setUnsatisfiedDoses();
+      indexDoses();
+      evaluateSeriesDoses();
+    }
+  }
+
+  void setUnsatisfiedDoses() {
+    for (int i = targetDose; i < (series.seriesDose?.length ?? 0); i++) {
       evaluatedTargetDose[i] = TargetDoseStatus.notSatisfied;
     }
+  }
 
-    /// We can't evaluate if there are no doses
-    if (doses.isNotEmpty) {
-      /// Keep track of what the dose's index is in all of the doses given
-      for (int i = 0; i < doses.length; i++) {
-        doses[i].index = i;
+  void indexDoses() {
+    for (int i = 0; i < doses.length; i++) {
+      doses[i].index = i;
+    }
+  }
+
+  void evaluateSeriesDoses() {
+    for (final SeriesDose seriesDose in series.seriesDose ?? <SeriesDose>[]) {
+      if (evaluatedDoses.length == doses.length) {
+        break;
+      } else {
+        evaluateNextDose(seriesDose);
       }
+    }
+  }
 
-      /// For the evaluation we have to evaluate each dose in the series
-      for (final SeriesDose seriesDose in series.seriesDose ?? <SeriesDose>[]) {
-        /// We only run through this while we still have doses to evaluate
-        if (evaluatedDoses.length == doses.length) {
+  void evaluateNextDose(SeriesDose seriesDose) {
+    for (int i = evaluatedDoses.length; i < doses.length; i++) {
+      final VaxDose dose = doses[i];
+      if (dose.evalStatus != null) {
+        continue;
+      } else {
+        if (evaluateDose(seriesDose, dose)) {
           break;
-        }
-
-        /// And for each dose in the series, we look at the doses that were
-        /// actually given to the patient to see if any of them are valid
-        /// We start at the next dose, so if evaluatedDoses has a length of 2,
-        /// meaning 2 doses have been evaluated, we look at index 2 of doses,
-        /// which is the third dose given
-        for (int i = evaluatedDoses.length; i < doses.length; i++) {
-          final VaxDose dose = doses[i];
-
-          /// If the evalStatus of the dose is not null, this should mean that
-          /// during the first step, checking if it was substandard for some
-          /// reason, we found that it was, and thus this dose cannot be
-          /// evaluated
-          if (dose.evalStatus == null) {
-            /// First we check if this dose can be skipped, if it CAN be
-            /// skipped, we record that targetDose as being completed,
-            /// increment the targetDose by 1, and break from this for loop
-            /// because we are no longer trying to satisfy that target dose
-            if (canSkip(seriesDose, SkipContext.evaluation, dose.dateGiven)) {
-              evaluatedTargetDose[targetDose] = TargetDoseStatus.skipped;
-              if (seriesDose.recurringDose != Binary.yes) {
-                targetDose++;
-              }
-              break;
-            } else {
-              if (dose.isNotInadvertent(seriesDose)) {
-                if (dose.isValidByAge(
-                  seriesDose.age,
-                  evaluatedDoses.isEmpty ? null : evaluatedDoses.last,
-                  targetDose,
-                )) {
-                  if (dose.isAllowedInterval(
-                      seriesDose.allowableInterval == null
-                          ? null
-                          : <Interval>[seriesDose.allowableInterval!],
-                      doses,
-                      targetDose)) {
-                    if (!dose.isLiveVirusConflict(doses)) {
-                      dose.isPreferredType(seriesDose.preferableVaccine, dob);
-                      if (dose.isAllowedType(
-                          seriesDose.allowableVaccine, dob)) {
-                        dose.evalStatus = EvalStatus.valid;
-                        dose.targetDoseSatisfied = targetDose;
-                        evaluatedDoses.add(dose);
-                        evaluatedTargetDose[targetDose] =
-                            TargetDoseStatus.satisfied;
-                        if (seriesDose.recurringDose != Binary.yes) {
-                          targetDose++;
-                        }
-                        break;
-                      }
-                    }
-                  }
-                }
-              }
-              evaluatedDoses.add(dose);
-            }
-          }
         }
       }
     }
+  }
+
+  bool evaluateDose(SeriesDose seriesDose, VaxDose dose) {
+    if (canSkipDose(seriesDose, dose)) {
+      markDoseSkipped(seriesDose);
+      return true;
+    }
+
+    if (evaluateDoseValidity(seriesDose, dose)) {
+      markDoseValid(seriesDose, dose);
+      return true;
+    }
+
+    return false;
+  }
+
+  bool canSkipDose(SeriesDose seriesDose, VaxDose dose) {
+    return canSkip(seriesDose, SkipContext.evaluation, dose.dateGiven);
+  }
+
+  void markDoseSkipped(SeriesDose seriesDose) {
+    evaluatedTargetDose[targetDose] = TargetDoseStatus.skipped;
+    updateTargetDose(seriesDose);
+  }
+
+  bool evaluateDoseValidity(SeriesDose seriesDose, VaxDose dose) {
+    final bool inadvertent = dose.isInadvertent(seriesDose);
+    if (inadvertent) {
+      return false;
+    } else if (!dose.isValidByAge(seriesDose.age,
+        evaluatedDoses.isEmpty ? null : evaluatedDoses.last, targetDose)) {
+      return false;
+    } else if (!dose.isAllowedInterval(
+        seriesDose.allowableInterval == null
+            ? null
+            : <Interval>[seriesDose.allowableInterval!],
+        doses,
+        targetDose)) {
+      return false;
+    } else if (dose.isLiveVirusConflict(doses)) {
+      return false;
+    } else {
+      return dose.isAllowedType(seriesDose.allowableVaccine, dob);
+    }
+  }
+
+  void markDoseValid(SeriesDose seriesDose, VaxDose dose) {
+    dose.evalStatus = EvalStatus.valid;
+    dose.targetDoseSatisfied = targetDose;
+    evaluatedDoses.add(dose);
+    evaluatedTargetDose[targetDose] = TargetDoseStatus.satisfied;
+    updateTargetDose(seriesDose);
   }
 
   void forecast(

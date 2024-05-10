@@ -161,7 +161,7 @@ class VaxDose {
     bool? allowedVaccine,
     PreferredAllowedReason? allowedVaccineReason,
   ) {
-    this.index = index ?? this.index;
+    // this.index = index ?? this.index;
     this.inadvertent = inadvertent ?? this.inadvertent;
     this.validAgeReason = validAgeReason ?? this.validAgeReason;
     this.preferredInterval = preferredInterval ?? this.preferredInterval;
@@ -211,12 +211,12 @@ class VaxDose {
                       ? subpotentReason(immunization)
                       : null;
 
-  bool isNotInadvertent(SeriesDose seriesDose) {
+  bool isInadvertent(SeriesDose seriesDose) {
     if ((seriesDose.inadvertentVaccineIndex(cvxAsInt) ?? -1) != -1) {
       markAsInadvertent();
-      return false;
+      return true;
     }
-    return true;
+    return false;
   }
 
   void markAsInadvertent() {
@@ -330,7 +330,6 @@ class VaxDose {
     List<VaxDose> doses,
     int targetDose,
   ) {
-    print('targetDose: $targetDose: given: $dateGiven');
     if (intervals == null || intervals.isEmpty) {
       updatePreferredInterval(valid: true);
       updateAllowedInterval(valid: true);
