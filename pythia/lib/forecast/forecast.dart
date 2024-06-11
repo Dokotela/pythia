@@ -71,11 +71,10 @@ Bundle forecastFromParameters(Parameters parameters) {
                 !element.evaluatedDoses[i].validity
                     .startsWith(evaluatedDoses[i].validity)) {
               disagree = true;
-              // throw ('${element.series.seriesName}\n'
-              //     'Mismatch on patient ${patient.patient.fhirId} - Dose: ${i + 1}\n'
-              //     'Official: ${evaluatedDoses[i].validity}\n'
-              //     'Pythia: ${element.evaluatedDoses[i].validity}\n');
-              // break;
+              throw Exception('${element.series.seriesName}\n'
+                  'Mismatch on patient ${patient.patient.fhirId} - Dose: ${i + 1}\n'
+                  'Official: ${evaluatedDoses[i].validity}\n'
+                  'Pythia: ${element.evaluatedDoses[i].validity}\n');
             }
           }
         }
