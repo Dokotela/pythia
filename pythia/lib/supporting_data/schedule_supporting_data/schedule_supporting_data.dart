@@ -65,11 +65,11 @@ class ScheduleSupportingData {
 
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
-      'liveVirusConflicts': liveVirusConflicts?.toJson(),
-      'vaccineGroups': vaccineGroups?.toJson(),
-      'vaccineGroupToAntigenMap': vaccineGroupToAntigenMap?.toJson(),
-      'cvxToAntigenMap': cvxToAntigenMap?.toJson(),
-      'observations': observations?.toJson(),
+      if(liveVirusConflicts != null) 'liveVirusConflicts': liveVirusConflicts?.toJson(),
+      if(vaccineGroups != null) 'vaccineGroups': vaccineGroups?.toJson(),
+      if(vaccineGroupToAntigenMap != null) 'vaccineGroupToAntigenMap': vaccineGroupToAntigenMap?.toJson(),
+      if(cvxToAntigenMap != null) 'cvxToAntigenMap': cvxToAntigenMap?.toJson(),
+      if(observations != null) 'observations': observations?.toJson(),
     };
   }
 }

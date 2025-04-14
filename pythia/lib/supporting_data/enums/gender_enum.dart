@@ -15,7 +15,7 @@ enum Gender {
       case 'Female':
         return Gender.female;
       case 'Transgender':
-        return Gender.male;
+        return Gender.transgender;
       case 'Unknown':
         return Gender.unknown;
       case 'Male':

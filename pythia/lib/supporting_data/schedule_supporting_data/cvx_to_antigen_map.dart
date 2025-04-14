@@ -21,7 +21,7 @@ class CvxToAntigenMap {
 
   Map<String, dynamic> toJson() {
     return {
-      'cvxMap': cvxMap?.map((e) => e.toJson()).toList(),
+      if(cvxMap != null) 'cvxMap': cvxMap?.map((e) => e.toJson()).toList(),
     };
   }
 }
@@ -61,9 +61,9 @@ class CvxMap {
 
   Map<String, dynamic> toJson() {
     return {
-      'cvx': cvx,
-      'shortDescription': shortDescription,
-      'association': association?.map((e) => e.toJson()).toList(),
+      if(cvx != null) 'cvx': cvx,
+      if(shortDescription != null) 'shortDescription': shortDescription,
+      if(association != null) 'association': association?.map((e) => e.toJson()).toList(),
     };
   }
 }
@@ -89,9 +89,9 @@ class Association {
 
   Map<String, dynamic> toJson() {
     return {
-      'antigen': antigen,
-      'associationBeginAge': associationBeginAge,
-      'associationEndAge': associationEndAge,
+      if(antigen != null) 'antigen': antigen,
+      if(associationBeginAge != null) 'associationBeginAge': associationBeginAge,
+      if(associationEndAge != null) 'associationEndAge': associationEndAge,
     };
   }
 }

@@ -17,12 +17,20 @@ class ConditionalSkip {
     return ConditionalSkip(
       context: json['context'] == null
           ? null
-          : SkipContext.fromJson(json['context'] as Map<String, dynamic>),
+          : SkipContext.fromJson(json['context'] as String),
       setLogic: json['setLogic'] as String?,
       set_: (json['set'] as List<dynamic>?)
           ?.map((e) => VaxSet.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      if(context != null) 'context': context?.toJson(),
+      if(setLogic != null) 'setLogic': setLogic,
+      if(set_ != null) 'set': set_?.map((e) => e.toJson()).toList(),
+    };
   }
 
   ConditionalSkip copyWith({

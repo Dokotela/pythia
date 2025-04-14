@@ -35,13 +35,13 @@ class Series {
           .toList(),
       seriesType: json['seriesType'] == null
           ? null
-          : SeriesType.fromJson(json['seriesType'] as Map<String, dynamic>),
+          : SeriesType.fromJson(json['seriesType'] as String),
       equivalentSeriesGroups: json['equivalentSeriesGroups'] == null
           ? null
           : EquivalentSeriesGroups.fromJson(
-              json['equivalentSeriesGroups'] as Map<String, dynamic>),
+              json['equivalentSeriesGroups'] as String),
       requiredGender: (json['requiredGender'] as List<dynamic>?)
-          ?.map((e) => Gender.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => Gender.fromJson(e as String))
           .whereType<Gender>()
           .toList(),
       selectSeries: json['selectSeries'] == null
@@ -54,6 +54,21 @@ class Series {
           ?.map((e) => SeriesDose.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      if(seriesName != null) 'seriesName': seriesName,
+      if(targetDisease != null) 'targetDisease': targetDisease,
+      if(vaccineGroup != null) 'vaccineGroup': vaccineGroup,
+      if(seriesAdminGuidance != null) 'seriesAdminGuidance': seriesAdminGuidance,
+      if(seriesType != null) 'seriesType': seriesType?.toJson(),
+      if(equivalentSeriesGroups != null) 'equivalentSeriesGroups': equivalentSeriesGroups?.toJson(),
+      if(requiredGender != null) 'requiredGender': requiredGender?.map((e) => e.toJson()).toList(),
+      if(selectSeries != null) 'selectSeries': selectSeries?.toJson(),
+      if(indication != null) 'indication': indication?.map((e) => e.toJson()).toList(),
+      if(seriesDose != null) 'seriesDose': seriesDose?.map((e) => e.toJson()).toList(),
+    };
   }
 
   Series copyWith({

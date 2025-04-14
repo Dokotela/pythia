@@ -23,7 +23,7 @@ class VaccineGroups {
 
     Map<String, dynamic> toJson() {
     return {
-      'vaccineGroup': vaccineGroup?.map((e) => e.toJson()).toList(),
+      if(vaccineGroup != null) 'vaccineGroup': vaccineGroup?.map((e) => e.toJson()).toList(),
     };
     }
 }
@@ -60,8 +60,8 @@ class VaccineGroup {
 
     Map<String, dynamic> toJson() {
     return {
-      'name': name,
-      'administerFullVaccineGroup': administerFullVaccineGroup?.toJson(),
+      if(name != null) 'name': name,
+      if(administerFullVaccineGroup != null) 'administerFullVaccineGroup': administerFullVaccineGroup?.toJson(),
     };
     }
 }

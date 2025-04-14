@@ -1,26 +1,43 @@
-
-
 enum DoseNumber {
-  
   num1,
-  
+
   num2,
-  
+
   num3,
-  
+
   num4,
-  
+
   num5,
-  
+
   num6,
-  
+
   num7,
-  
+
   num8,
-  
+
   num9,
-  
-  num10;
+
+  num10,
+
+  num11,
+
+  num12,
+
+  num13,
+
+  num14,
+
+  num15,
+
+  num16,
+
+  num17,
+
+  num18,
+
+  num19,
+
+  num20;
 
   static DoseNumber? fromString(String? string) {
     switch (string) {
@@ -44,6 +61,26 @@ enum DoseNumber {
         return DoseNumber.num9;
       case 'Dose 10':
         return DoseNumber.num10;
+      case 'Dose 11':
+        return DoseNumber.num11;
+      case 'Dose 12':
+        return DoseNumber.num12;
+      case 'Dose 13':
+        return DoseNumber.num13;
+      case 'Dose 14':
+        return DoseNumber.num14;
+      case 'Dose 15':
+        return DoseNumber.num15;
+      case 'Dose 16':
+        return DoseNumber.num16;
+      case 'Dose 17':
+        return DoseNumber.num17;
+      case 'Dose 18':
+        return DoseNumber.num18;
+      case 'Dose 19':
+        return DoseNumber.num19;
+      case 'Dose 20':
+        return DoseNumber.num20;
       default:
         return null;
     }
@@ -75,6 +112,26 @@ enum DoseNumber {
         return 'Dose 9';
       case DoseNumber.num10:
         return 'Dose 10';
+      case DoseNumber.num11:
+        return 'Dose 11';
+      case DoseNumber.num12:
+        return 'Dose 12';
+      case DoseNumber.num13:
+        return 'Dose 13';
+      case DoseNumber.num14:
+        return 'Dose 14';
+      case DoseNumber.num15:
+        return 'Dose 15';
+      case DoseNumber.num16:
+        return 'Dose 16';
+      case DoseNumber.num17:
+        return 'Dose 17';
+      case DoseNumber.num18:
+        return 'Dose 18';
+      case DoseNumber.num19:
+        return 'Dose 19';
+      case DoseNumber.num20:
+        return 'Dose 20';
     }
   }
 

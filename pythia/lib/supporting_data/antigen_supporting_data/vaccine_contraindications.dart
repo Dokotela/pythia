@@ -14,6 +14,12 @@ class VaccineContraindications {
     );
   }
 
+  Map<String, dynamic> toJson() {
+    return {
+      'contraindication': contraindication?.map((e) => e.toJson()).toList(),
+    };
+  }
+
   VaccineContraindications copyWith({
     List<VaccineContraindication>? contraindication,
   }) {
@@ -60,6 +66,20 @@ class VaccineContraindication {
           ?.map((e) => Vaccine.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      if (observationCode != null) 'observationCode': observationCode,
+      if (observationTitle != null) 'observationTitle': observationTitle,
+      if (contraindicationText != null)
+        'contraindicationText': contraindicationText,
+      if (contraindicationGuidance != null)
+        'contraindicationGuidance': contraindicationGuidance,
+      if (contraindicatedVaccine != null)
+        'contraindicatedVaccine':
+            contraindicatedVaccine?.map((e) => e.toJson()).toList(),
+    };
   }
 
   VaccineContraindication copyWith({

@@ -29,11 +29,11 @@ class SeriesDose {
     return SeriesDose(
       doseNumber: json['doseNumber'] == null
           ? null
-          : DoseNumber.fromJson(json['doseNumber'] as Map<String, dynamic>),
+          : DoseNumber.fromJson(json['doseNumber'] as String),
       age: (json['age'] as List<dynamic>?)
           ?.map((e) => VaxAge.fromJson(e as Map<String, dynamic>))
           .toList(),
-      preferableInterval: (json['preferableInterval'] as List<dynamic>?)
+      preferableInterval: (json['interval'] as List<dynamic>?)
           ?.map((e) => Interval.fromJson(e as Map<String, dynamic>))
           .toList(),
       allowableInterval: json['allowableInterval'] == null
@@ -54,12 +54,35 @@ class SeriesDose {
           .toList(),
       recurringDose: json['recurringDose'] == null
           ? null
-          : Binary.fromJson(json['recurringDose'] as Map<String, dynamic>),
+          : Binary.fromJson(json['recurringDose'] as String),
       seasonalRecommendation: json['seasonalRecommendation'] == null
           ? null
           : SeasonalRecommendation.fromJson(
               json['seasonalRecommendation'] as Map<String, dynamic>),
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      if (doseNumber != null) 'doseNumber': doseNumber?.toJson(),
+      if (age != null) 'age': age?.map((e) => e.toJson()).toList(),
+      if (preferableInterval != null)
+        'interval': preferableInterval?.map((e) => e.toJson()).toList(),
+      if (allowableInterval != null)
+        'allowableInterval': allowableInterval?.toJson(),
+      if (preferableVaccine != null)
+        'preferableVaccine': preferableVaccine?.map((e) => e.toJson()).toList(),
+      if (allowableVaccine != null)
+        'allowableVaccine': allowableVaccine?.map((e) => e.toJson()).toList(),
+      if (inadvertentVaccine != null)
+        'inadvertentVaccine':
+            inadvertentVaccine?.map((e) => e.toJson()).toList(),
+      if (conditionalSkip != null)
+        'conditionalSkip': conditionalSkip?.map((e) => e.toJson()).toList(),
+      if (recurringDose != null) 'recurringDose': recurringDose?.toJson(),
+      if (seasonalRecommendation != null)
+        'seasonalRecommendation': seasonalRecommendation?.toJson(),
+    };
   }
 
   SeriesDose copyWith({

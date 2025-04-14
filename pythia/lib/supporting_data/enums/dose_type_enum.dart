@@ -10,8 +10,10 @@ enum DoseType {
 
   static DoseType? fromString(String? string) {
     switch (string) {
+      case 'total':
       case 'Total':
         return DoseType.total;
+      case 'valid':
       case 'Valid':
         return DoseType.valid;
       case '':

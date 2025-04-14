@@ -30,7 +30,9 @@ class Interval {
   factory Interval.fromJson(Map<String, dynamic> json) {
     return Interval(
       fromPrevious: json['fromPrevious'] as String?,
-      fromTargetDose: json['fromTargetDose'] as int?,
+      fromTargetDose: json['fromTargetDose'] == null
+          ? null
+          : int.tryParse(json['fromTargetDose']),
       fromMostRecent: json['fromMostRecent'] as String?,
       fromRelevantObs: json['fromRelevantObs'] == null
           ? null
@@ -44,6 +46,22 @@ class Interval {
       effectiveDate: json['effectiveDate'] as String?,
       cessationDate: json['cessationDate'] as String?,
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      if(fromPrevious != null) 'fromPrevious': fromPrevious,
+     if(fromTargetDose != null) 'fromTargetDose': fromTargetDose?.toString(),
+      if(fromMostRecent != null) 'fromMostRecent': fromMostRecent,
+      if(fromRelevantObs != null) 'fromRelevantObs': fromRelevantObs?.toJson(),
+      if(absMinInt != null) 'absMinInt': absMinInt,
+      if(minInt != null) 'minInt': minInt,
+      if(earliestRecInt != null) 'earliestRecInt': earliestRecInt,
+      if(latestRecInt != null) 'latestRecInt': latestRecInt,
+      if(intervalPriority != null) 'intervalPriority': intervalPriority,
+      if(effectiveDate != null) 'effectiveDate': effectiveDate,
+      if(cessationDate != null) 'cessationDate': cessationDate,
+    };
   }
 
   List<int>? get mostRecent {

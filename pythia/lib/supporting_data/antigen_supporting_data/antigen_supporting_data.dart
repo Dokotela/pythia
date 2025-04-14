@@ -35,7 +35,8 @@ class AntigenSupportingData {
   final Contraindications? contraindications;
   final List<Series>? series;
 
-  factory AntigenSupportingData.fromJson(Map<String, dynamic> json) {
+  factory AntigenSupportingData.fromJson(Map<String, dynamic> oldJson) {
+    final json = oldJson['antigenSupportingData'];
     return AntigenSupportingData(
       targetDisease: json['targetDisease'] as String?,
       vaccineGroup: json['vaccineGroup'] as String?,
@@ -50,6 +51,16 @@ class AntigenSupportingData {
           ?.map((e) => Series.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+    if(targetDisease != null)  'targetDisease': targetDisease,
+      if(vaccineGroup != null) 'vaccineGroup': vaccineGroup,
+      if(immunity != null) 'immunity': immunity?.toJson(),
+      if(contraindications != null) 'contraindications': contraindications?.toJson(),
+      if(series != null) 'series': series?.map((e) => e.toJson()).toList(),
+    };
   }
 
   AntigenSupportingData copyWith({

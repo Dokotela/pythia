@@ -1,19 +1,22 @@
-
-
 enum SeriesPreference {
-  
   one,
-  
+
   two,
-  
+
   three,
-  
+
   four,
-  
+
   five,
-  
+
   six,
-  
+
+  seven,
+
+  eight,
+
+  nine,
+
   none;
 
   static SeriesPreference? fromString(String? string) {
@@ -30,6 +33,12 @@ enum SeriesPreference {
         return SeriesPreference.five;
       case '6':
         return SeriesPreference.six;
+      case '7':
+        return SeriesPreference.seven;
+      case '8':
+        return SeriesPreference.eight;
+      case '9':
+        return SeriesPreference.nine;
       case '':
         return SeriesPreference.none;
       default:
@@ -55,6 +64,12 @@ enum SeriesPreference {
         return '5';
       case SeriesPreference.six:
         return '6';
+      case SeriesPreference.seven:
+        return '7';
+      case SeriesPreference.eight:
+        return '8';
+      case SeriesPreference.nine:
+        return '9';
       case SeriesPreference.none:
         return '';
     }

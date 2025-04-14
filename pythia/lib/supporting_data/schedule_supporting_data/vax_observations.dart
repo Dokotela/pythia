@@ -23,7 +23,7 @@ class VaxObservations {
 
   Map<String, dynamic> toJson() {
     return {
-      'observation': observation?.map((e) => e.toJson()).toList(),
+      if(observation != null) 'observation': observation?.map((e) => e.toJson()).toList(),
     };
   }
 
@@ -115,14 +115,14 @@ class VaxObservation {
 
   Map<String, dynamic> toJson() {
     return {
-      'observationCode': observationCode,
-      'observationTitle': observationTitle,
-      'group': group,
-      'indicationText': indicationText,
-      'contraindicationText': contraindicationText,
-      'clarifyingText': clarifyingText,
-      'codedValues': codedValues?.toJson(),
-      'period': period?.toJson(),
+      if(observationCode != null) 'observationCode': observationCode,
+      if(observationTitle != null) 'observationTitle': observationTitle,
+      if(group != null) 'group': group,
+      if(indicationText != null) 'indicationText': indicationText,
+      if(contraindicationText != null) 'contraindicationText': contraindicationText,
+      if(clarifyingText != null) 'clarifyingText': clarifyingText,
+      if(codedValues != null) 'codedValues': codedValues?.toJson(),
+      if(period != null) 'period': period?.toJson(),
     };
   }
 
@@ -145,7 +145,7 @@ class CodedValues {
 
   Map<String, dynamic> toJson() {
     return {
-      'codedValue': codedValue?.map((e) => e.toJson()).toList(),
+      if(codedValue != null) 'codedValue': codedValue?.map((e) => e.toJson()).toList(),
     };
   }
 }
@@ -171,9 +171,9 @@ class CodedValue {
 
   Map<String, dynamic> toJson() {
     return {
-      'code': code,
-      'codeSystem': codeSystem,
-      'text': text,
+      if(code != null) 'code': code,
+      if(codeSystem != null) 'codeSystem': codeSystem,
+      if(text != null) 'text': text,
     };
   }
 }

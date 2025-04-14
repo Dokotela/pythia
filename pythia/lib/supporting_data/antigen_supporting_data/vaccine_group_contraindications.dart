@@ -12,6 +12,13 @@ class VaccineGroupContraindications {
     );
   }
 
+  Map<String, dynamic> toJson() {
+    return {
+      'contraindication':
+          contraindication?.map((e) => e.toJson()).toList(),
+    };
+  }
+
   VaccineGroupContraindications copyWith({
     List<GroupContraindication>? contraindication,
   }) {
@@ -59,6 +66,17 @@ class GroupContraindication {
       beginAge: json['beginAge'] as String?,
       endAge: json['endAge'] as String?,
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      if(observationCode != null) 'observationCode': observationCode,
+      if(observationTitle != null) 'observationTitle': observationTitle,
+      if(contraindicationText != null) 'contraindicationText': contraindicationText,
+      if(contraindicationGuidance != null) 'contraindicationGuidance': contraindicationGuidance,
+      if(beginAge != null) 'beginAge': beginAge,
+      if(endAge != null) 'endAge': endAge,
+    };
   }
 
   int? get codeAsInt =>

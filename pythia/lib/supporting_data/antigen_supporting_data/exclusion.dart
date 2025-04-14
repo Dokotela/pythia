@@ -13,4 +13,11 @@ class Exclusion {
       exclusionTitle: json['exclusionTitle'] as String?,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      if(exclusionCode != null) 'exclusionCode': exclusionCode,
+      if(exclusionTitle != null) 'exclusionTitle': exclusionTitle,
+    };
+  }
 }

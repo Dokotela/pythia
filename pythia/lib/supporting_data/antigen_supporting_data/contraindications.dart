@@ -23,6 +23,13 @@ class Contraindications {
     );
   }
 
+  Map<String, dynamic> toJson() {
+    return {
+      if(vaccineGroup != null) 'vaccineGroup': vaccineGroup?.toJson(),
+      if(vaccine != null) 'vaccine': vaccine?.toJson(),
+    };
+  }
+
   Contraindications copyWith({
     VaccineGroupContraindications? vaccineGroup,
     VaccineContraindications? vaccine,

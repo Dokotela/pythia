@@ -20,4 +20,12 @@ class DateOfBirth {
           .toList(),
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      if(immunityBirthDate != null) 'immunityBirthDate': immunityBirthDate,
+      if(birthCountry != null) 'birthCountry': birthCountry,
+      if(exclusion != null) 'exclusion': exclusion?.map((e) => e.toJson()).toList(),
+    };
+  }
 }

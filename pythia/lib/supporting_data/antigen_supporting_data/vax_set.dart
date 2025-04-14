@@ -30,6 +30,17 @@ class VaxSet {
     );
   }
 
+  Map<String, dynamic> toJson() {
+    return {
+      if(setID != null) 'setID': setID,
+      if(setDescription != null) 'setDescription': setDescription,
+      if(effectiveDate != null) 'effectiveDate': effectiveDate,
+      if(cessationDate != null) 'cessationDate': cessationDate,
+      if(conditionLogic != null) 'conditionLogic': conditionLogic,
+      if(condition != null) 'condition': condition?.map((e) => e.toJson()).toList(),
+    };
+  }
+
   VaxSet copyWith({
     String? setID,
     String? setDescription,

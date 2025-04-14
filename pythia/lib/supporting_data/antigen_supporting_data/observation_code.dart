@@ -14,5 +14,12 @@ class ObservationCode {
     );
   }
 
+  Map<String, dynamic> toJson() {
+    return {
+      if(text != null) 'text': text,
+      if(code != null) 'code': code,
+    };
+  }
+
   int? get codeAsInt => code == null ? null : int.tryParse(code!);
 }

@@ -21,6 +21,13 @@ class Immunity {
     );
   }
 
+  Map<String, dynamic> toJson() {
+    return {
+      if(clinicalHistory != null) 'clinicalHistory': clinicalHistory?.map((e) => e.toJson()).toList(),
+      if(dateOfBirth != null) 'dateOfBirth': dateOfBirth?.toJson(),
+    };
+  }
+
   Immunity copyWith({
     List<ClinicalHistory>? clinicalHistory,
     DateOfBirth? dateOfBirth,

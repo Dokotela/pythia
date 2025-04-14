@@ -34,14 +34,14 @@ class Vaccine {
 
   Map<String, dynamic> toJson() {
     return {
-      'vaccineType': vaccineType,
-      'cvx': cvx,
-      'beginAge': beginAge,
-      'endAge': endAge,
-      'tradeName': tradeName,
-      'mvx': mvx,
-      'volume': volume,
-      'forecastVaccineType': forecastVaccineType,
+      if(vaccineType != null) 'vaccineType': vaccineType,
+      if(cvx != null) 'cvx': cvx,
+      if(beginAge != null) 'beginAge': beginAge,
+      if(endAge != null) 'endAge': endAge,
+      if(tradeName != null) 'tradeName': tradeName,
+      if(mvx != null) 'mvx': mvx,
+      if(volume != null) 'volume': volume,
+      if(forecastVaccineType != null) 'forecastVaccineType': forecastVaccineType,
     };
   }
 

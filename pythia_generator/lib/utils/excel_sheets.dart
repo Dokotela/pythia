@@ -1,10 +1,11 @@
 import 'dart:io';
 
+import 'package:archive/archive.dart';
 import 'package:excel/excel.dart';
 
 import '../supporting_strings.dart';
 
-Future<List<SupportingStrings>> excelSheets() async {
+List<SupportingStrings> excelSheets() {
   final Directory dir = Directory('pythia_generator/lib/Excel');
   final supportingStringsList = <SupportingStrings>[];
   final fileList = dir.listSync();
@@ -12,8 +13,27 @@ Future<List<SupportingStrings>> excelSheets() async {
   for (final file in fileList) {
     final filePath = file.path;
     if (filePath.endsWith('xlsx')) {
+      print('Reading file: $filePath');
       final bytes = File(filePath).readAsBytesSync();
+      print('made it here 1');
+      Archive archive = ZipDecoder().decodeBytes(bytes);
+      for (var file in archive) {
+        print('Found file: ${file.name} (size: ${file.size} bytes)');
+
+        // Optionally, inspect worksheet XML files.
+        if (file.name.contains('worksheets')) {
+          // Convert the file content to a string.
+          var content = String.fromCharCodes(file.content);
+          // Perform a simple diagnostic check by looking for cells, rows, or even the string "null"
+          if (content.contains('null')) {
+            print('The file ${file.name} contains the string "null".');
+          }
+          // You can also print a small snippet of content for a manual check
+          print('Snippet from ${file.name}: ${content.substring(0, 200)}\n');
+        }
+      }
       var excel = Excel.decodeBytes(bytes);
+      print('made it here 2');
 
       /// If the first sheet is entitled Antigen Series Overview, it is an sheet
       /// for Antigen Supporting Data, otherwise it's for Schedule Supporting Data
@@ -128,7 +148,7 @@ Future<List<SupportingStrings>> excelSheets() async {
                 (supportingStrings as TestCasesStrings).cases = string;
                 supportingStrings.isHealthy =
                     !tab.sheetName.toLowerCase().contains('condition');
-                await File('tests.txt').writeAsString(string);
+                File('tests.txt').writeAsStringSync(string);
               } else {
                 (supportingStrings as AntigenSupportingStrings).series == null
                     ? supportingStrings.series = [string]

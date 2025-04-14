@@ -10,9 +10,9 @@ import 'create_series/create_series.dart';
 import 'immunity.dart';
 import 'schedule_supporting_data/schedule_supporting_data.dart';
 
-Future<void> createSupportingData(
+void createSupportingData(
   List<SupportingStrings> supportingStrings,
-) async {
+) {
   var newScheduleSupportingData = scheduleSupportingData.copyWith();
   const JsonEncoder jsonEncoder = JsonEncoder.withIndent('    ');
 
@@ -65,9 +65,8 @@ Future<void> createSupportingData(
         'final scheduleSupportingData = '
         'ScheduleSupportingData.fromJson(${jsonEncoder.convert(newScheduleSupportingData)});';
 
-    await File(
-            'pythia_generator/lib/generated_files/schedule_supporting_data.dart')
-        .writeAsString(dataString);
+    File('pythia_generator/lib/generated_files/schedule_supporting_data.dart')
+        .writeAsStringSync(dataString);
   }
 
   var importString = '';
@@ -107,15 +106,14 @@ Future<void> createSupportingData(
     listString += '$diseaseName,\n';
     mapString += "'${antigenSupportingData.targetDisease}': $diseaseName,\n";
 
-    await File('pythia_generator/lib/generated_files/$fileName.dart')
-        .writeAsString(dataString);
-    await File('pythia_generator/lib/generated_files/$fileName.json')
-        .writeAsString(jsonEncoder.convert(antigenSupportingData));
+    File('pythia_generator/lib/generated_files/$fileName.dart')
+        .writeAsStringSync(dataString);
+    File('pythia_generator/lib/generated_files/$fileName.json')
+        .writeAsStringSync(jsonEncoder.convert(antigenSupportingData));
   }
 
-  await File(
-          'pythia_generator/lib/generated_files/antigen_supporting_data.dart')
-      .writeAsString('$importString\n$listString];\n\n$mapString};');
+  File('pythia_generator/lib/generated_files/antigen_supporting_data.dart')
+      .writeAsStringSync('$importString\n$listString];\n\n$mapString};');
 
   for (final string in testCasesStrings as List<TestCasesStrings>) {
     createPatients(string, newScheduleSupportingData);

@@ -13,4 +13,11 @@ class SeasonalRecommendation {
       endDate: json['endDate'] as String?,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      if(startDate != null) 'startDate': startDate,
+      if(endDate != null) 'endDate': endDate,
+    };
+  }
 }

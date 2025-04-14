@@ -27,4 +27,14 @@ class Indication {
       guidance: json['guidance'] as String?,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      if(observationCode != null) 'observationCode': observationCode?.toJson(),
+      if(description != null) 'description': description,
+      if(beginAge != null) 'beginAge': beginAge,
+      if(endAge != null) 'endAge': endAge,
+      if(guidance != null) 'guidance': guidance,
+    };
+  }
 }
