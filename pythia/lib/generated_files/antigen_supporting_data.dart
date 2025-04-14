@@ -1,4 +1,5 @@
-import '../supporting_data/antigen_supporting_data/antigen_supporting_data.dart';
+import 'package:pythia/pythia.dart';
+
 import 'cholera.dart';
 import 'covid_19.dart';
 import 'dengue.dart';

@@ -3,7 +3,9 @@ import 'dart:io';
 import 'package:xml2json/xml2json.dart';
 
 void main() {
-  final xmlDir = Directory('XML');
+  final supportDir = 'pythia_generator/lib/Version_4.61-508/XML';
+  final xmlDir = Directory(supportDir);
+  Directory(supportDir.replaceAll('XML', 'JSON')).createSync();
   final xmlFiles = xmlDir.listSync().where(
       (file) => file.path.endsWith('.xml'));
 

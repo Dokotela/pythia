@@ -7,7 +7,6 @@ import 'create_supporting_data/create_supporting_data.dart';
 import 'utils/excel_sheets.dart';
 
 void main() {
-  /// Downloads all information from Google Sheets
   final supportingStringsList = excelSheets();
 
   final files = supportingStringsList.map((e) => e.toJson()).toList();

@@ -21,7 +21,7 @@ class CvxToAntigenMap {
 
   Map<String, dynamic> toJson() {
     return {
-      if(cvxMap != null) 'cvxMap': cvxMap?.map((e) => e.toJson()).toList(),
+      if (cvxMap != null) 'cvxMap': cvxMap?.map((e) => e.toJson()).toList(),
     };
   }
 }
@@ -61,9 +61,10 @@ class CvxMap {
 
   Map<String, dynamic> toJson() {
     return {
-      if(cvx != null) 'cvx': cvx,
-      if(shortDescription != null) 'shortDescription': shortDescription,
-      if(association != null) 'association': association?.map((e) => e.toJson()).toList(),
+      if (cvx != null) 'cvx': cvx,
+      if (shortDescription != null) 'shortDescription': shortDescription,
+      if (association != null)
+        'association': association?.map((e) => e.toJson()).toList(),
     };
   }
 }
@@ -75,13 +76,15 @@ class Association {
     this.associationEndAge,
   });
 
-  final String? antigen;
+  final List<String>? antigen;
   final String? associationBeginAge;
   final String? associationEndAge;
 
   factory Association.fromJson(Map<String, dynamic> json) {
     return Association(
-      antigen: json['antigen'] as String?,
+      antigen: json['antigen'] == null
+          ? null
+          : (json['antigen'] as List<dynamic>).whereType<String>().toList(),
       associationBeginAge: json['associationBeginAge'] as String?,
       associationEndAge: json['associationEndAge'] as String?,
     );
@@ -89,9 +92,10 @@ class Association {
 
   Map<String, dynamic> toJson() {
     return {
-      if(antigen != null) 'antigen': antigen,
-      if(associationBeginAge != null) 'associationBeginAge': associationBeginAge,
-      if(associationEndAge != null) 'associationEndAge': associationEndAge,
+      if (antigen != null) 'antigen': antigen,
+      if (associationBeginAge != null)
+        'associationBeginAge': associationBeginAge,
+      if (associationEndAge != null) 'associationEndAge': associationEndAge,
     };
   }
 }

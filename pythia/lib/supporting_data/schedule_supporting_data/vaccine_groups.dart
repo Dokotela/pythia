@@ -43,7 +43,7 @@ class VaccineGroup {
       administerFullVaccineGroup: json['administerFullVaccineGroup'] == null
           ? null
           : Binary.fromJson(
-              json['administerFullVaccineGroup'] as Map<String, dynamic>),
+              json['administerFullVaccineGroup'] as String),
     );
   }
 

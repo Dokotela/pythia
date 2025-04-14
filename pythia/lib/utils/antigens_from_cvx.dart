@@ -8,8 +8,8 @@ List<String> antigensFromCvx(String? cvx) {
     final List<String> diseases = <String>[];
 
     /// Make sure there's a matching CVX code in the CvxMap
-    final int? cvxIndex = scheduleSupportingData.cvxToAntigenMap?.cvxMap?.indexWhere(
-        (CvxMap element) =>
+    final int? cvxIndex = scheduleSupportingData.cvxToAntigenMap?.cvxMap
+        ?.indexWhere((CvxMap element) =>
             element.cvx != null &&
             int.tryParse(element.cvx!) == int.tryParse(cvx) &&
             int.tryParse(cvx) != null);
@@ -22,8 +22,11 @@ List<String> antigensFromCvx(String? cvx) {
 
       /// As lon as we find some associations
       if (cvxEntry.association != null && cvxEntry.association!.isNotEmpty) {
-        diseases.addAll(
-            cvxEntry.association?.map((Association e) => e.antigen ?? '').toList() ?? <String>[]);
+        for (final e in cvxEntry.association ?? <Association>[]) {
+          if (e.antigen != null) {
+            diseases.addAll(e.antigen!);
+          }
+        }
       }
     }
 

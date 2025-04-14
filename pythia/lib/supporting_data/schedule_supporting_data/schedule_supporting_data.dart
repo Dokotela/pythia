@@ -21,7 +21,8 @@ class ScheduleSupportingData {
   final CvxToAntigenMap? cvxToAntigenMap;
   final VaxObservations? observations;
 
-  factory ScheduleSupportingData.fromJson(Map<String, dynamic> json) {
+  factory ScheduleSupportingData.fromJson(Map<String, dynamic> oldJson) {
+    final json = oldJson['scheduleSupportingData'];
     return ScheduleSupportingData(
       liveVirusConflicts: json['liveVirusConflicts'] == null
           ? null
