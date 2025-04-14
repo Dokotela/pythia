@@ -1,35 +1,35 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum EvalReason {
-  @JsonValue('No Date Given')
+  
   noDateGiven,
-  @JsonValue('No Cvx')
+  
   noCvx,
-  @JsonValue('Expired Product')
+  
   expired,
-  @JsonValue('Age: Too Old')
+  
   ageTooOld,
-  @JsonValue('Age: Too Young')
+  
   ageTooYoung,
-  @JsonValue('Inadvertent Vaccine')
+  
   inadvertentVaccine,
-  @JsonValue('Not a preferable or allowable vaccine')
+  
   notPreferableOrAllowable,
-  @JsonValue('Volume administered is less than recommended volume')
+  
   notRecommendedVolume,
-  @JsonValue('Partial Dose')
+  
   partialDose,
-  @JsonValue('Cold Chain Break')
+  
   coldChainBreak,
-  @JsonValue('Manufacturer Recall')
+  
   recall,
-  @JsonValue('Adverse Storage')
+  
   adverseStorage,
-  @JsonValue('Interval: too short')
+  
   intervalTooShort,
-  @JsonValue('Series Already Completed')
+  
   seriesAlreadyCompleted,
-  @JsonValue('Live Virus Conflict')
+  
   liveVirusConflict;
 
   static EvalReason? fromString(String? string) {

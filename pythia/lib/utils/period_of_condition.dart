@@ -1,4 +1,4 @@
-import 'package:fhir/r5.dart';
+import 'package:fhir_r4/fhir_r4.dart';
 
 import '../pythia.dart';
 
@@ -8,14 +8,15 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
 
   /// Check to see if it's active, if it is, then we know we don't have to look
   /// for an end time
-  final int? activeIndex = condition.clinicalStatus.coding?.indexWhere((Coding element) =>
+  final int? activeIndex = condition.clinicalStatus?.coding?.indexWhere((Coding
+          element) =>
       element.system ==
           FhirUri('http://terminology.hl7.org/CodeSystem/condition-clinical') &&
       element.code.toString().toLowerCase() == 'active');
 
   /// If there's a valid onsetDateTime it's easy
-  if (condition.onsetDateTime != null && condition.onsetDateTime!.isValid) {
-    startDate = VaxDate.fromDateTime(condition.onsetDateTime!.value);
+  if (condition.onsetDateTime?.valueDateTime != null) {
+    startDate = VaxDate.fromDateTime(condition.onsetDateTime!.valueDateTime!);
   }
 
   /// If it's an age, we have to look through the age Object
@@ -27,18 +28,19 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
     } else if (condition.onsetRange!.high != null) {
       startDate = dateFromQuantity(birthdate, condition.onsetRange!.high!);
     }
-  } else if (condition.onsetString != null) {
-    if (FhirDateTime(condition.onsetString).isValid) {
-      startDate =
-          VaxDate.fromDateTime(FhirDateTime(condition.onsetString).value);
+  } else if (condition.onsetString?.valueString != null) {
+    final fhirDateTime =
+        FhirDateTime.tryParse(condition.onsetString!.valueString);
+    if (fhirDateTime?.valueDateTime != null) {
+      startDate = VaxDate.fromDateTime(fhirDateTime!.valueDateTime!);
     }
   }
 
   if (activeIndex == null || activeIndex == -1) {
     /// If there's a valid abatementDateTime it's easy
-    if (condition.abatementDateTime != null &&
-        condition.abatementDateTime!.isValid) {
-      endDate = VaxDate.fromDateTime(condition.abatementDateTime!.value);
+    if (condition.abatementDateTime?.valueDateTime != null) {
+      endDate =
+          VaxDate.fromDateTime(condition.abatementDateTime!.valueDateTime!);
     }
 
     /// If it's an age, we have to look through the age Object
@@ -50,10 +52,11 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
       } else if (condition.abatementRange!.high != null) {
         endDate = dateFromQuantity(birthdate, condition.abatementRange!.high!);
       }
-    } else if (condition.abatementString != null) {
-      if (FhirDateTime(condition.abatementString).isValid) {
+    } else if (condition.abatementString?.valueString != null) {
+      if (FhirDateTime.tryParse(condition.abatementString!.valueString) !=
+          null) {
         endDate = VaxDate.fromDateTime(
-            FhirDateTime(condition.abatementString).value);
+            FhirDateTime.tryParse(condition.abatementString)!.valueDateTime!);
       }
     }
   }
@@ -66,8 +69,7 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
 
 VaxDate? dateFromAge(VaxDate birthdate, Age age) {
   /// Ensure it has a numerical value
-  final double? value =
-      age.value != null && age.value!.isValid ? age.value!.value : null;
+  final double? value = age.value?.valueDouble;
   if (value != null) {
     /// Ensure the units are not null
     if (age.unit != null) {
@@ -86,9 +88,7 @@ VaxDate? dateFromAge(VaxDate birthdate, Age age) {
 
 VaxDate? dateFromQuantity(VaxDate birthdate, Quantity quantity) {
   /// Ensure it has a numerical value
-  final double? value = quantity.value != null && quantity.value!.isValid
-      ? quantity.value!.value
-      : null;
+  final double? value = quantity.value?.valueDouble;
   if (value != null) {
     /// Ensure the units are not null
     if (quantity.unit != null) {

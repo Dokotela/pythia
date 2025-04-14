@@ -1,17 +1,17 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum SeriesStatus {
-  @JsonValue('Not Complete')
+  
   notComplete,
-  @JsonValue('Immune')
+  
   immune,
-  @JsonValue('Contraindicated')
+  
   contraindicated,
-  @JsonValue('Not Recommended')
+  
   notRecommended,
-  @JsonValue('Complete')
+  
   complete,
-  @JsonValue('Aged Out')
+  
   agedOut;
 
   static SeriesStatus? fromString(String? string) {

@@ -7,7 +7,7 @@ part of 'patient_for_assessment.dart';
 // **************************************************************************
 
 String _$patientForAssessmentHash() =>
-    r'7fee6f63eb31cc0429a08a1dfc660e41e1c4d2f3';
+    r'e351ed00f681c56f5fc4de85f1caf4e68f013a10';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -159,6 +159,8 @@ class PatientForAssessmentProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin PatientForAssessmentRef on AutoDisposeNotifierProviderRef<VaxPatient> {
   /// The parameter `parameters` of this provider.
   Parameters get parameters;
@@ -174,4 +176,4 @@ class _PatientForAssessmentProviderElement
       (origin as PatientForAssessmentProvider).parameters;
 }
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

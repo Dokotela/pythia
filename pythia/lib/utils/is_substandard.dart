@@ -1,14 +1,13 @@
-import 'package:fhir/r5.dart';
+import 'package:fhir_r4/fhir_r4.dart';
 
 bool isSubstandard(Immunization immunization) {
   /// We require that an occurrenceDateTime be available, otherwise for now
   /// we're going to consider it substandard
   // TODO(Dokotela): - should this actually be considered substandard?
-  if (immunization.occurrenceDateTime != null &&
-      immunization.occurrenceDateTime!.isValid) {
+  if (immunization.occurrenceDateTime?.valueDateTime != null) {
     /// If the immunization is subpotent, regardless of the reason, we are
     /// not going to include it in evaluations
-    if (immunization.isSubpotent?.value ?? false) {
+    if (immunization.isSubpotent?.valueBoolean ?? false) {
       return true;
     }
 

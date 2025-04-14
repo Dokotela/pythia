@@ -1,11 +1,11 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum ValidAgeReason {
-  @JsonValue('Age: Grace Period')
+  
   gracePeriod,
-  @JsonValue('Age: Too Young')
+  
   tooYoung,
-  @JsonValue('Age: Too Old')
+  
   tooOld;
 
   static ValidAgeReason? fromString(String? string) {

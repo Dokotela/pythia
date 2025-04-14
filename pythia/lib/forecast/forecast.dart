@@ -1,4 +1,4 @@
-import 'package:fhir/r5.dart';
+import 'package:fhir_r4/fhir_r4.dart';
 import 'package:riverpod/riverpod.dart';
 
 import '../generated_files/test_doses.dart';
@@ -9,7 +9,7 @@ Bundle forecastFromMap(Map<String, dynamic> parameters) {
     final Parameters newParameters = Parameters.fromJson(parameters);
     return forecastFromParameters(newParameters);
   }
-  return const Bundle();
+  return const Bundle(type: BundleType.transaction);
 }
 
 Bundle forecastFromParameters(Parameters parameters) {
@@ -42,10 +42,9 @@ Bundle forecastFromParameters(Parameters parameters) {
   /// Forecast
   agMap.forEach((String k, VaxAntigen v) => v.forecast());
 
-  final List<VaxDose>? evaluatedDoses =
-      testDoses[patient.patient.fhirId.toString()]
-          ?.map((Map<String, Object> e) => VaxDose.fromJson(e))
-          .toList();
+  final List<VaxDose>? evaluatedDoses = testDoses[patient.patient.id.toString()]
+      ?.map((Map<String, Object> e) => VaxDose.fromJson(e))
+      .toList();
 
   bool disagree = false;
   agMap.forEach((String k, VaxAntigen v) {
@@ -72,7 +71,7 @@ Bundle forecastFromParameters(Parameters parameters) {
                     .startsWith(evaluatedDoses[i].validity)) {
               disagree = true;
               throw Exception('${element.series.seriesName}\n'
-                  'Mismatch on patient ${patient.patient.fhirId} - Dose: ${i + 1}\n'
+                  'Mismatch on patient ${patient.patient.id} - Dose: ${i + 1}\n'
                   'Official: ${evaluatedDoses[i].validity}\n'
                   'Pythia: ${element.evaluatedDoses[i].validity}\n');
             }
@@ -82,5 +81,6 @@ Bundle forecastFromParameters(Parameters parameters) {
     }
   });
 
-  return Bundle(fhirId: FhirId(disagree ? '1' : '0'));
+  return Bundle(
+      id: (disagree ? '1' : '0').toFhirString, type: BundleType.transaction);
 }

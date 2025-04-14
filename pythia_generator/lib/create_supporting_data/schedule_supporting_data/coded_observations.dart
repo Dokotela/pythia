@@ -80,10 +80,11 @@ VaxObservations observations(String? data) {
             observations = observations.copyWith(observation: [
               ...observations.observation!
                   .sublist(0, observations.observation!.length - 1),
-              observations.observation!.last.copyWith.codedValues!(codedValue: [
+              observations.observation!.last.copyWith(
+                  codedValues: CodedValues(codedValue: [
                 ...observations.observation!.last.codedValues!.codedValue!,
                 ...codedValueList(i[j].toString(), j)
-              ])
+              ]))
             ]);
           }
         }

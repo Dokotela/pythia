@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
-import 'package:fhir/r5.dart';
-import 'package:fhir_bulk/r5/fhir_bulk.dart';
+import 'package:fhir_r4/fhir_r4.dart';
+import 'package:fhir_r4_bulk/fhir_r4_bulk.dart';
 import 'package:pythia/forecast/forecast.dart';
 
 Future<void> main() async {
@@ -11,9 +11,9 @@ Future<void> main() async {
         .parameter
         ?.firstWhereOrNull((ParametersParameter e) => e.resource is Patient)
         ?.resource as Patient?;
-    print('ID: ${patient?.fhirId}');
+    print('ID: ${patient?.id}');
     final Bundle bundle = forecastFromParameters(parameters[i] as Parameters);
-    totalDisagreements += int.parse(bundle.fhirId?.toString() ?? '0');
+    totalDisagreements += int.parse(bundle.id?.toString() ?? '0');
   }
   print('Total Disagreements: $totalDisagreements');
 }

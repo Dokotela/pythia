@@ -1,11 +1,11 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum IntervalReason {
-  @JsonValue('Interval: too late')
+  
   tooLate,
-  @JsonValue('Interval: too short')
+  
   tooShort,
-  @JsonValue('Interval: grace period')
+  
   gracePeriod;
 
   static IntervalReason? fromString(String? string) {

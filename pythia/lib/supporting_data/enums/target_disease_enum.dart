@@ -1,63 +1,63 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum TargetDisease {
-  @JsonValue('Cholera')
+  
   cholera,
-  @JsonValue('COVID-19')
+  
   covid19,
-  @JsonValue('Dengue')
+  
   dengue,
-  @JsonValue('Diphtheria')
+  
   diphtheria,
-  @JsonValue('Pertussis')
+  
   pertussis,
-  @JsonValue('Tetanus')
+  
   tetanus,
-  @JsonValue('Ebola')
+  
   ebola,
-  @JsonValue('HepA')
+  
   hepa,
-  @JsonValue('HepB')
+  
   hepb,
-  @JsonValue('Hib')
+  
   hib,
-  @JsonValue('HPV')
+  
   hpv,
-  @JsonValue('Influenza')
+  
   influenza,
-  @JsonValue('Japanese Encephalitis')
+  
   japaneseEncephalitis,
-  @JsonValue('Meningococcal')
+  
   meningococcal,
-  @JsonValue('Meningococcal B')
+  
   meningococcalB,
-  @JsonValue('Measles')
+  
   measles,
-  @JsonValue('Mumps')
+  
   mumps,
-  @JsonValue('Rubella')
+  
   rubella,
-  @JsonValue('Orthopoxvirus')
+  
   orthopoxvirus,
-  @JsonValue('Pneumococcal')
+  
   pneumococcal,
-  @JsonValue('Polio')
+  
   polio,
-  @JsonValue('Rabies')
+  
   rabies,
-  @JsonValue('Rotavirus')
+  
   rotavirus,
-  @JsonValue('RSV')
+  
   rsv,
-  @JsonValue('TBE')
+  
   tbe,
-  @JsonValue('Typhoid')
+  
   typhoid,
-  @JsonValue('Varicella')
+  
   varicella,
-  @JsonValue('Yellow Fever')
+  
   yellowFever,
-  @JsonValue('Zoster')
+  
   zoster;
 
   static TargetDisease? fromString(String string) {

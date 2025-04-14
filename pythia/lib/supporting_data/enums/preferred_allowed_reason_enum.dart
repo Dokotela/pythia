@@ -1,17 +1,17 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum PreferredAllowedReason {
-  @JsonValue('Not a preferable or allowable vaccine')
+  
   notAPreferableOrAllowableVaccine,
-  @JsonValue('Wrong trade name')
+  
   wrongTradeName,
-  @JsonValue('Less than recommended volume')
+  
   lessThanRecommendedVolume,
-  @JsonValue('Administered outside of preferred age range')
+  
   administeredOutsideOfPreferredAgeRange,
-  @JsonValue('No preferred types')
+  
   noPreferredTypes,
-  @JsonValue('No allowed types')
+  
   noAllowedTypes;
 
   static PreferredAllowedReason? fromString(String? string) {

@@ -1,56 +1,56 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum VaccineGroup {
-  @JsonValue('Cholera')
+  
   cholera,
-  @JsonValue('COVID-19')
+  
   covid19,
-  @JsonValue('Dengue')
+  
   dengue,
-  @JsonValue('DTaP/Tdap/Td')
+  
   dtapTdapTd,
-  @JsonValue('Ebola')
+  
   ebola,
-  @JsonValue('HepA')
+  
   hepa,
-  @JsonValue('HepB')
+  
   hepb,
-  @JsonValue('Hib')
+  
   hib,
-  @JsonValue('HPV')
+  
   hpv,
-  @JsonValue('Influenza')
+  
   influenza,
-  @JsonValue('Japanese Encephalitis')
+  
   japaneseEncephalitis,
-  @JsonValue('Meningococcal')
+  
   meningococcal,
-  @JsonValue('Meningococcal B')
+  
   meningococcalB,
-  @JsonValue('MMR')
+  
   mmr,
-  @JsonValue('Orthopoxvirus')
+  
   orthopoxvirus,
-  @JsonValue('Pneumococcal')
+  
   pneumococcal,
-  @JsonValue('Polio')
+  
   polio,
-  @JsonValue('Rabies')
+  
   rabies,
-  @JsonValue('Rotavirus')
+  
   rotavirus,
-  @JsonValue('RSV')
+  
   rsv,
-  @JsonValue('TBE')
+  
   tbe,
 
-  @JsonValue('Typhoid')
+  
   typhoid,
-  @JsonValue('Varicella')
+  
   varicella,
-  @JsonValue('Yellow Fever')
+  
   yellowFever,
-  @JsonValue('Zoster')
+  
   zoster;
 
   static VaccineGroup? fromString(String string) {

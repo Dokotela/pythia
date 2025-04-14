@@ -7,7 +7,7 @@ part of 'series_group_complete.dart';
 // **************************************************************************
 
 String _$seriesGroupCompleteHash() =>
-    r'a33072cf2c9f1f45ffdd0512b315dfaf7a7be5c7';
+    r'385025cfeb98282631a230cc68eb7b2691ab96fe';
 
 /// This provider is used to track the completion of a series group. Each
 /// antigen has a multiple series of vaccines that can provide immunity.
@@ -30,4 +30,4 @@ final seriesGroupCompleteProvider = AutoDisposeNotifierProvider<
 typedef _$SeriesGroupComplete
     = AutoDisposeNotifier<Map<String, Map<String, bool>>>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

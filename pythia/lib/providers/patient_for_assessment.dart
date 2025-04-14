@@ -1,4 +1,4 @@
-import 'package:fhir/r5.dart';
+import 'package:fhir_r4/fhir_r4.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../pythia.dart';
@@ -27,15 +27,15 @@ class PatientForAssessment extends _$PatientForAssessment {
 
     parameters.parameter?.forEach((ParametersParameter parameter) {
       if (parameter.name == 'assessmentDate' &&
-          (parameter.valueDate?.isValid ?? false)) {
-        assessmentDate = parameter.valueDate!.value;
+          (parameter.valueDate?.valueDateTime != null)) {
+        assessmentDate = parameter.valueDate!.valueDateTime;
       } else if (parameter.resource != null) {
         switch (parameter.resource) {
           case Patient _:
             {
               patient = parameter.resource as Patient?;
-              birthdate = (patient?.birthDate?.isValid ?? false)
-                  ? VaxDate.fromDateTime(patient!.birthDate!.value)
+              birthdate = (patient?.birthDate?.valueDateTime != null)
+                  ? VaxDate.fromDateTime(patient!.birthDate!.valueDateTime!)
                   : null;
               break;
             }

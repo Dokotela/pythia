@@ -317,10 +317,12 @@ class VaxSeries {
       /// We check and see which of the patient's observations are applicable for
       /// the given assessmentDate
       currentObservations.retainWhere((VaxObservation element) =>
-          VaxDate.fromNullableDateTime(element.period?.start?.value, false) <=
+          VaxDate.fromNullableDateTime(
+                  element.period?.start?.valueDateTime, false) <=
               assessmentDate! &&
           assessmentDate <
-              VaxDate.fromNullableDateTime(element.period?.end?.value, true));
+              VaxDate.fromNullableDateTime(
+                  element.period?.end?.valueDateTime, true));
 
       /// Get the list of the ints associated with the observations
       final List<int> obsInts = currentObservations

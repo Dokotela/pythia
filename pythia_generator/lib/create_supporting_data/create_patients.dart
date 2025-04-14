@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:csv/csv.dart';
-import 'package:fhir/r5.dart';
+import 'package:fhir_r4/fhir_r4.dart';
 import 'package:pythia/pythia.dart' as pythia;
 import 'package:pythia/pythia.dart';
 
@@ -36,15 +36,17 @@ Future<void> createPatients(
   for (var v in values) {
     if (!v[0].contains('CDC')) {
       final patient = Patient(
-        fhirId: FhirId(v[0].toString()),
-        name: [HumanName(family: v[1]?.toString())],
-        birthDate: FhirDate(
+        id: FhirString(v[0].toString()),
+        name: v[1] == null
+            ? null
+            : [HumanName(family: v[1]!.toString().toFhirString)],
+        birthDate: FhirDate.fromDateTime(
             epoch.add(Duration(days: int.tryParse(v[2].toString()) ?? 0))),
         gender: v[3].contains('F')
-            ? FhirCode('female')
+            ? AdministrativeGender.female
             : v[3].contains('M')
-                ? FhirCode('male')
-                : FhirCode('unknown'),
+                ? AdministrativeGender.male
+                : AdministrativeGender.unknown,
       );
 
       final immunizationList = <Immunization>[];
@@ -54,8 +56,9 @@ Future<void> createPatients(
         final index = doseIndexes[i];
         if (v[index] != null && v[index] != '' && v[index] != '-') {
           final immunization = Immunization(
-            fhirId: FhirId('${patient.fhirId}_dose${i + 1}'),
+            id: FhirString('${patient.id}_dose${i + 1}'),
             patient: patient.thisReference,
+            status: ImmunizationStatusCodes.completed,
             vaccineCode: CodeableConcept(
               coding: [
                 Coding(
@@ -71,12 +74,12 @@ Future<void> createPatients(
                   ),
               ],
             ),
-            occurrenceDateTime:
-                FhirDateTime(epoch.add(Duration(days: v[index]))),
+            occurrenceX:
+                FhirDateTime.fromDateTime(epoch.add(Duration(days: v[index]))),
           );
           immunizationList.add(immunization);
-          final vaxDose = VaxDose.fromImmunization(
-              immunization, VaxDate.fromDateTime(patient.birthDate!.value));
+          final vaxDose = VaxDose.fromImmunization(immunization,
+              VaxDate.fromDateTime(patient.birthDate!.valueDateTime!));
           if (v[index + 4] != null) {
             vaxDose.evalStatus = EvalStatus.fromJson(v[index + 4]);
           }
@@ -86,7 +89,7 @@ Future<void> createPatients(
           vaxDoses.add(vaxDose);
         }
       }
-      testDoses[patient.fhirId!.toString()] =
+      testDoses[patient.id!.toString()] =
           vaxDoses.map((e) => e.toJson()).toList();
       for (var i = 0; i < cdsiObservationIndexes.length; i++) {
         final index = cdsiObservationIndexes[i];
@@ -113,11 +116,13 @@ Future<void> createPatients(
                 ],
               ),
               subject: patient.thisReference,
-              onsetDateTime: v[index + 2] != null && v[index + 2] != ''
-                  ? FhirDateTime(epoch.add(Duration(days: v[index + 2])))
+              onsetX: v[index + 2] != null && v[index + 2] != ''
+                  ? FhirDateTime.fromDateTime(
+                      epoch.add(Duration(days: v[index + 2])))
                   : null,
               recordedDate: v[index + 2] != null && v[index + 2] != ''
-                  ? FhirDateTime(epoch.add(Duration(days: v[index + 2])))
+                  ? FhirDateTime.fromDateTime(
+                      epoch.add(Duration(days: v[index + 2])))
                   : null,
               code: CodeableConcept(
                 coding: [
@@ -138,7 +143,8 @@ Future<void> createPatients(
                               obs.codedValues!.codedValue![snomedIndex].text ==
                                   ''
                           ? null
-                          : obs.codedValues!.codedValue![snomedIndex].text,
+                          : obs.codedValues!.codedValue![snomedIndex].text!
+                              .toFhirString,
                     ),
                 ],
               ),
@@ -148,17 +154,20 @@ Future<void> createPatients(
       }
       parametersList.add(
         Parameters(
-          fhirId: FhirId('parameters-${patient.fhirId}'),
+          id: FhirString('parameters-${patient.id}'),
           parameter: [
             ParametersParameter(
-                name:
-                    FhirDate(epoch.add(Duration(days: v[assessmentDateIndex])))
-                        .toString()),
-            ParametersParameter(name: 'Patient', resource: patient),
-            ...immunizationList.map(
-                (e) => ParametersParameter(name: 'immunization', resource: e)),
-            ...conditionList.map(
-                (e) => ParametersParameter(name: 'condition', resource: e)),
+              name: FhirDate.fromDateTime(
+                      epoch.add(Duration(days: v[assessmentDateIndex])))
+                  .valueString!
+                  .toFhirString,
+            ),
+            ParametersParameter(
+                name: 'Patient'.toFhirString, resource: patient),
+            ...immunizationList.map((e) => ParametersParameter(
+                name: 'immunization'.toFhirString, resource: e)),
+            ...conditionList.map((e) => ParametersParameter(
+                name: 'condition'.toFhirString, resource: e)),
           ],
         ),
       );

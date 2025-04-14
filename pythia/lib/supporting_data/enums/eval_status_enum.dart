@@ -1,13 +1,13 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum EvalStatus {
-  @JsonValue('Valid')
+  
   valid,
-  @JsonValue('Not Valid')
+  
   not_valid,
-  @JsonValue('Extraneous')
+  
   extraneous,
-  @JsonValue('Substandard')
+  
   sub_standard;
 
   static EvalStatus? fromString(String? string) {

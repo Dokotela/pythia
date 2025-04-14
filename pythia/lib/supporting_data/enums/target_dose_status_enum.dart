@@ -1,11 +1,11 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum TargetDoseStatus {
-  @JsonValue('Satisfied')
+  
   satisfied,
-  @JsonValue('Skipped')
+  
   skipped,
-  @JsonValue('Not Satisfied')
+  
   notSatisfied;
 
   static TargetDoseStatus? fromString(String? value) {

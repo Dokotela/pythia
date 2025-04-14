@@ -92,7 +92,8 @@ Immunity? immunity(String? immunityString) {
         var code = i[3]!.toString().substring(open + 1, close);
         var text = i[3]!.toString().substring(0, open - 1);
 
-        immunity = immunity.copyWith.dateOfBirth!(
+        immunity = immunity.copyWith(
+            dateOfBirth: DateOfBirth(
           exclusion: [
             if (immunity.dateOfBirth!.exclusion != null &&
                 immunity.dateOfBirth!.exclusion!.isNotEmpty)
@@ -102,7 +103,7 @@ Immunity? immunity(String? immunityString) {
               exclusionTitle: text,
             ),
           ],
-        );
+        ));
       }
     }
   }

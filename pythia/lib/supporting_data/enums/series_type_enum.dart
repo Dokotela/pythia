@@ -1,11 +1,11 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum SeriesType {
-  @JsonValue('Standard')
+  
   standard,
-  @JsonValue('Risk')
+  
   risk,
-  @JsonValue('Evaluation Only')
+  
   evaluationOnly;
 
   static SeriesType? fromString(String? seriesType) {

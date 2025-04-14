@@ -1,5 +1,5 @@
 import 'package:collection/collection.dart';
-import 'package:fhir/r5.dart';
+import 'package:fhir_r4/fhir_r4.dart';
 import 'package:riverpod/riverpod.dart';
 
 import '../pythia.dart';
@@ -20,15 +20,15 @@ class VaxDose {
 
   factory VaxDose.fromImmunization(Immunization immunization, VaxDate dob) {
     final String? cvx = cvxFromImmunization(immunization);
-    final VaxDate dateGiven = immunization.occurrenceDateTime?.isValid ?? false
-        ? VaxDate.fromDateTime(immunization.occurrenceDateTime!.value)
+    final VaxDate dateGiven = immunization.occurrenceDateTime?.valueDateTime != null
+        ? VaxDate.fromDateTime(immunization.occurrenceDateTime!.valueDateTime!)
         : VaxDate(2999, 01, 01);
-    final bool expired = (immunization.expirationDate?.isValid ?? false) &&
-        immunization.expirationDate!.value
-            .isBefore(immunization.occurrenceDateTime!.value);
+    final bool expired = (immunization.expirationDate?.valueDateTime != null) &&
+        immunization.expirationDate!.valueDateTime!
+            .isBefore(immunization.occurrenceDateTime!.valueDateTime!);
 
     return VaxDose(
-      doseId: immunization.fhirId!.toString(),
+      doseId: immunization.id!.toString(),
       volume: parseVolume(immunization.doseQuantity),
       dateGiven: dateGiven,
       cvx: cvx ?? 'none',
@@ -185,7 +185,7 @@ class VaxDose {
 
   static double? parseVolume(Quantity? doseQuantity) =>
       doseQuantity?.code?.toString().toLowerCase() == 'ml'
-          ? doseQuantity?.value?.value
+          ? doseQuantity?.value?.valueDouble
           : null;
 
   static EvalStatus? immunizationEvalStatus(VaxDate dateGiven, String? cvx,
@@ -196,7 +196,7 @@ class VaxDose {
               ? EvalStatus.not_valid
               : expired
                   ? EvalStatus.sub_standard
-                  : immunization.isSubpotent?.value ?? false
+                  : immunization.isSubpotent?.valueBoolean ?? false
                       ? EvalStatus.sub_standard
                       : null;
 
@@ -208,7 +208,7 @@ class VaxDose {
               ? EvalReason.noCvx
               : expired
                   ? EvalReason.expired
-                  : immunization.isSubpotent?.value ?? false
+                  : immunization.isSubpotent?.valueBoolean ?? false
                       ? subpotentReason(immunization)
                       : null;
 
@@ -427,9 +427,9 @@ class VaxDose {
       /// Otherwise, the reference date is the most recent active date of
       /// the appropriate observation
       final VaxObservation obs = observations.observation![index];
-      return obs.period?.end == null || !obs.period!.end!.isValid
+      return obs.period?.end == null || obs.period!.end!.valueDateTime == null
           ? VaxDate.now()
-          : VaxDate.fromDateTime(obs.period!.end!.value);
+          : VaxDate.fromDateTime(obs.period!.end!.valueDateTime!);
     }
   }
 

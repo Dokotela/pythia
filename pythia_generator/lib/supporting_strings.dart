@@ -1,9 +1,3 @@
-import 'package:json_annotation/json_annotation.dart';
-
-part 'supporting_strings.g.dart'; // Adjust filename accordingly
-
-// Make the abstract class json_serializable to extend this capability
-@JsonSerializable()
 abstract class SupportingStrings {
   dynamic toJson();
 
@@ -26,7 +20,6 @@ abstract class SupportingStrings {
   }
 }
 
-@JsonSerializable()
 class AntigenSupportingStrings extends SupportingStrings {
   AntigenSupportingStrings({
     this.antigenSeriesOverview,
@@ -44,12 +37,31 @@ class AntigenSupportingStrings extends SupportingStrings {
   String? contraindications;
   List<String>? series;
 
-  factory AntigenSupportingStrings.fromJson(Map<String, dynamic> json) =>
-      _$AntigenSupportingStringsFromJson(json);
-  Map<String, dynamic> toJson() => _$AntigenSupportingStringsToJson(this);
+  factory AntigenSupportingStrings.fromJson(Map<String, dynamic> json){
+    return AntigenSupportingStrings(
+      antigenSeriesOverview: json['antigenSeriesOverview'] as String?,
+      changeHistory: json['changeHistory'] as String?,
+      faq: json['faq'] as String?,
+      immunity: json['immunity'] as String?,
+      contraindications: json['contraindications'] as String?,
+      series: (json['series'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'antigenSeriesOverview': antigenSeriesOverview,
+      'changeHistory': changeHistory,
+      'faq': faq,
+      'immunity': immunity,
+      'contraindications': contraindications,
+      'series': series,
+    };
+  }
 }
 
-@JsonSerializable()
 class ScheduleSupportingStrings extends SupportingStrings {
   ScheduleSupportingStrings({
     this.type,
@@ -63,12 +75,28 @@ class ScheduleSupportingStrings extends SupportingStrings {
   String? changeHistory;
   String? overview;
 
-  factory ScheduleSupportingStrings.fromJson(Map<String, dynamic> json) =>
-      _$ScheduleSupportingStringsFromJson(json);
-  Map<String, dynamic> toJson() => _$ScheduleSupportingStringsToJson(this);
+  factory ScheduleSupportingStrings.fromJson(Map<String, dynamic> json) {
+    return ScheduleSupportingStrings(
+      type: json['type'] == null
+          ? null
+          : SupportingType.values
+              .firstWhere((e) => e.toString() == 'SupportingType.${json['type']}'),
+      data: json['data'] as String?,
+      changeHistory: json['changeHistory'] as String?,
+      overview: json['overview'] as String?,
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'type': type?.toString().split('.').last,
+      'data': data,
+      'changeHistory': changeHistory,
+      'overview': overview,
+    };
+  }
 }
 
-@JsonSerializable()
 class TestCasesStrings extends SupportingStrings {
   TestCasesStrings({
     this.isHealthy,
@@ -82,9 +110,23 @@ class TestCasesStrings extends SupportingStrings {
   String? testCaseLayout;
   String? cases;
 
-  factory TestCasesStrings.fromJson(Map<String, dynamic> json) =>
-      _$TestCasesStringsFromJson(json);
-  Map<String, dynamic> toJson() => _$TestCasesStringsToJson(this);
+  factory TestCasesStrings.fromJson(Map<String, dynamic> json) {
+    return TestCasesStrings(
+      isHealthy: json['isHealthy'] as bool?,
+      overview: json['overview'] as String?,
+      testCaseLayout: json['testCaseLayout'] as String?,
+      cases: json['cases'] as String?,
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'isHealthy': isHealthy,
+      'overview': overview,
+      'testCaseLayout': testCaseLayout,
+      'cases': cases,
+    };
+  }
 }
 
 enum SupportingType {

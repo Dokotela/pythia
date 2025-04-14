@@ -1,19 +1,19 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 enum ForecastReason {
-  @JsonValue('Patient has evidence of immunity')
+  
   patientHasEvidenceOfImmunity,
-  @JsonValue('Patient has a contraindication')
+  
   patientHasAContraindication,
-  @JsonValue('Not recommended at this time due to past immunization history')
+  
   notRecommendedAtThisTimeDueToPastImmunizationHistory,
-  @JsonValue('Patient series is complete')
+  
   patientSeriesIsComplete,
-  @JsonValue('Past seasonal recommendation end date')
+  
   pastSeasonalRecommendationEndDate,
-  @JsonValue('Patient has exceeded the maximum age')
+  
   patientHasExceededTheMaximumAge,
-  @JsonValue('Patient is unable to finish the series prior to the maximum age')
+  
   patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
 
   static ForecastReason? fromString(String? string) {

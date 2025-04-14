@@ -1,4 +1,6 @@
-import 'package:fhir/primitive_types/primitive_types.dart';
+
+
+import 'package:fhir_r4/fhir_r4.dart';
 
 class VaxDate extends DateTime {
   VaxDate(super.year, super.month, super.day);
@@ -69,8 +71,8 @@ class VaxDate extends DateTime {
 
   // Conversion to DateTime and FHIR types
   DateTime toDateTime() => DateTime(year, month, day);
-  FhirDateTime toFhirDateTime() => FhirDateTime(toDateTime());
-  FhirDate toFhirDate() => FhirDate(toDateTime());
+  FhirDateTime toFhirDateTime() => FhirDateTime.fromDateTime(toDateTime());
+  FhirDate toFhirDate() => FhirDate.fromDateTime(toDateTime());
 
   // Operators for comparison
   bool operator <(VaxDate other) => toDateTime().isBefore(other.toDateTime());
