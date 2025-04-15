@@ -19,17 +19,35 @@ void createSupportingData(
   /// Make copies of all of the spreadsheets so that we can divide them into
   /// appropriate categories
   var scheduleSupportingStrings = supportingStrings.toList();
+
+  /// Remove all of the strings that are not ScheduleSupportingStrings
   scheduleSupportingStrings
       .removeWhere((element) => element is! ScheduleSupportingStrings);
+
+  /// Cast the list to a list of ScheduleSupportingStrings
   scheduleSupportingStrings =
       scheduleSupportingStrings.cast<ScheduleSupportingStrings>();
+
+  /// Make copies of all of the spreadsheets so that we can divide them into
+  /// appropriate categories
   var antigenSupportingStrings = supportingStrings.toList();
+
+  /// Remove all of the strings that are not AntigenSupportingStrings
   antigenSupportingStrings
       .removeWhere((element) => element is! AntigenSupportingStrings);
+
+  /// Cast the list to a list of AntigenSupportingStrings
   antigenSupportingStrings =
       antigenSupportingStrings.cast<AntigenSupportingStrings>();
+
+  /// Make copies of all of the spreadsheets so that we can divide them into
+  /// appropriate categories
   var testCasesStrings = supportingStrings.toList();
+
+  /// Remove all of the strings that are not TestCasesStrings
   testCasesStrings.removeWhere((element) => element is! TestCasesStrings);
+
+  /// Cast the list to a list of TestCasesStrings
   testCasesStrings = testCasesStrings.cast<TestCasesStrings>();
 
   for (final scheduleSupportingString in scheduleSupportingStrings) {
@@ -37,27 +55,21 @@ void createSupportingData(
       case SupportingType.codedObservations:
         newScheduleSupportingData = newScheduleSupportingData.copyWith(
             observations: observations(scheduleSupportingString.data));
-        break;
       case SupportingType.cvxToAntigenMap:
         newScheduleSupportingData = newScheduleSupportingData.copyWith(
             cvxToAntigenMap: cvxToAntigenMap(scheduleSupportingString.data));
-        break;
       case SupportingType.liveVirusConflicts:
         newScheduleSupportingData = newScheduleSupportingData.copyWith(
             liveVirusConflicts:
                 liveVirusConflicts(scheduleSupportingString.data));
-        break;
       case SupportingType.vaccineGroups:
         newScheduleSupportingData = newScheduleSupportingData.copyWith(
             vaccineGroups: vaccineGroups(scheduleSupportingString.data));
-        break;
       case SupportingType.vaccineGroupToAntigenMap:
         newScheduleSupportingData = newScheduleSupportingData.copyWith(
             vaccineGroupToAntigenMap:
                 vaccineGroupToAntigenMap(scheduleSupportingString.data));
-        break;
-      default:
-        null;
+      case null:
     }
   }
   if (newScheduleSupportingData.toJson().isNotEmpty) {

@@ -9,16 +9,16 @@ import 'utils/excel_sheets.dart';
 void main() {
   final supportingStringsList = excelSheets();
 
-  final files = supportingStringsList.map((e) => e.toJson()).toList();
+  // final files = supportingStringsList.map((e) => e.toJson()).toList();
 
-  File('pythia_generator/lib/supporting_strings.json')
-      .writeAsStringSync(jsonEncode(files));
+  // File('pythia_generator/lib/supporting_strings.json')
+  //     .writeAsStringSync(jsonEncode(files));
 
-  final listFromFile = jsonDecode(
-      File('pythia_generator/lib/supporting_strings.json').readAsStringSync());
+  // final listFromFile = jsonDecode(
+  //     File('pythia_generator/lib/supporting_strings.json').readAsStringSync());
 
-  final newSupportingStringsList =
-      (listFromFile as List).map((e) => SupportingStrings.fromJson(e)).toList();
+  final newSupportingStringsList = supportingStringsList;
+      // (listFromFile as List).map((e) => SupportingStrings.fromJson(e)).toList();
 
   /// Creates all necessary supporting data files
   createSupportingData(newSupportingStringsList);

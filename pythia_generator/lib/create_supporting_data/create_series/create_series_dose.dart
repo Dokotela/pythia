@@ -140,7 +140,7 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
             endAge: valueToString(row[3]!),
             tradeName: tradeName,
             mvx: mvx,
-            volume: valueToString(row[5]!),
+            volume: valueToString(row[5]!.toString()),
             forecastVaccineType: valueToString(row[6]!),
           ),
         ],
@@ -248,7 +248,9 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                             doseCount: valueToString(row[15]!),
                             doseType:
                                 DoseType.fromJson(row[16]!.toString().trim()),
-                            doseCountLogic: row[17]!,
+                            doseCountLogic: row[17]!.toString() == 'n/a'
+                                ? null
+                                : row[17]!.toString(),
                             vaccineTypes: valueToString(row[18]!),
                             seriesGroups: valueToString(row[19]!),
                           ),
@@ -293,7 +295,9 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                             doseCount: valueToString(row[15]!),
                             doseType:
                                 DoseType.fromJson(row[16]!.toString().trim()),
-                            doseCountLogic: row[17]!,
+                            doseCountLogic: row[17]!.toString() == 'n/a'
+                                ? null
+                                : row[17]!.toString(),
                             vaccineTypes: valueToString(row[18]!),
                             seriesGroups: valueToString(row[19]!),
                           ),
@@ -331,7 +335,9 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                       interval: valueToString(row[14]!),
                       doseCount: valueToString(row[15]!),
                       doseType: DoseType.fromJson(row[16]!.toString().trim()),
-                      doseCountLogic: row[17]!,
+                      doseCountLogic: row[17]!.toString() == 'n/a'
+                          ? null
+                          : row[17]!.toString(),
                       vaccineTypes: valueToString(row[18]!),
                       seriesGroups: valueToString(row[19]!),
                     ),
@@ -371,7 +377,9 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
                       interval: valueToString(row[14]!),
                       doseCount: valueToString(row[15]!),
                       doseType: DoseType.fromJson(row[16]!.toString().trim()),
-                      doseCountLogic: row[17]!,
+                      doseCountLogic: row[17]!.toString() == 'n/a'
+                          ? null
+                          : row[17]!.toString(),
                       vaccineTypes: valueToString(row[18]!),
                       seriesGroups: valueToString(row[19]!),
                     ),
@@ -394,18 +402,20 @@ SeriesDose createSeriesDose(int index, List<List<dynamic>> rows) {
       seriesDose = seriesDose.copyWith(
           seasonalRecommendation: SeasonalRecommendation(
         startDate: dateFromNumberString(row[1]!),
-        endDate: dateFromNumberString(row[1]!),
+        endDate: dateFromNumberString(row[2]!),
       ));
     }
   }
   return seriesDose;
 }
 
-String? dateFromNumberString(dynamic rowValue) =>
-    valueToString(rowValue) == null
-        ? null
-        : DateTime(1899, 12, 30)
-            .add(Duration(days: int.parse(valueToString(rowValue)!)))
-            .toString()
-            .split(' ')
-            .first;
+String? dateFromNumberString(dynamic rowValue) {
+  return valueToString(rowValue) == null
+      ? null
+      : valueToString(rowValue)?.substring(0, 10);
+  // DateTime(1899, 12, 30)
+  //     .add(Duration(days: int.parse(valueToString(rowValue)!)))
+  //     .toString()
+  //     .split(' ')
+  //     .first;
+}

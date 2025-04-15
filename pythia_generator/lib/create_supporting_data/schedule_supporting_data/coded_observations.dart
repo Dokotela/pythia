@@ -73,7 +73,8 @@ VaxObservations observations(String? data) {
           ]);
         }
         for (var j in [5, 6, 7]) {
-          if (i[j] != null &&
+          if (i.length > j &&
+              i[j] != null &&
               i[j].toString() != '' &&
               i[j].toString() != 'n/a' &&
               observations.observation?.last.codedValues?.codedValue != null) {
@@ -102,13 +103,17 @@ List<CodedValue> codedValueList(String codeString, int column) {
       final openingIndex = value.indexOf('(');
       final closingIndex = value.indexOf(')');
       codedValueList.add(CodedValue(
-        code: value.substring(openingIndex + 1, closingIndex),
+        code: value.trim().isEmpty || openingIndex == -1 || closingIndex == -1
+            ? null
+            : value.substring(openingIndex + 1, closingIndex),
         codeSystem: column == 5
             ? 'SNOMED'
             : column == 6
                 ? 'CVX'
                 : 'CDCPHINVS',
-        text: value.substring(0, openingIndex - 1).trim(),
+        text: value.trim().isEmpty || openingIndex == -1 || closingIndex == -1
+            ? null
+            : value.substring(0, openingIndex - 1).trim(),
       ));
     }
   }

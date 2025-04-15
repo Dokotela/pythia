@@ -5,13 +5,15 @@ import 'package:excel/excel.dart';
 import '../supporting_strings.dart';
 
 List<SupportingStrings> excelSheets() {
-  final Directory dir = Directory('pythia_generator/lib/Version_4.61-508/Excel');
+  final Directory dir =
+      Directory('pythia_generator/lib/Version_4.61-508/Excel');
   final supportingStringsList = <SupportingStrings>[];
   final fileList = dir.listSync();
 
   for (final file in fileList) {
     final filePath = file.path;
     if (filePath.endsWith('xlsx')) {
+      print('filePath: $filePath');
       final bytes = File(filePath).readAsBytesSync();
       var excel = Excel.decodeBytes(bytes);
 
@@ -34,7 +36,7 @@ List<SupportingStrings> excelSheets() {
         /// evalute its values
         for (var v in tab.rows) {
           /// Join the values of each cell together separated by tabs
-          string += v.join('\t');
+          string += v.map((e) => e?.value.toString()).toList().join('\t');
 
           /// Separate each line with a carriage return
           string += '\n';
@@ -128,7 +130,7 @@ List<SupportingStrings> excelSheets() {
                 (supportingStrings as TestCasesStrings).cases = string;
                 supportingStrings.isHealthy =
                     !tab.sheetName.toLowerCase().contains('condition');
-                File('tests.txt').writeAsStringSync(string);
+                // File('tests.txt').writeAsStringSync(string);
               } else {
                 (supportingStrings as AntigenSupportingStrings).series == null
                     ? supportingStrings.series = [string]

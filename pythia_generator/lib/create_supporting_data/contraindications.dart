@@ -109,33 +109,41 @@ Contraindications? contraindications(String? contraindicationString) {
         var text =
             i.length < 5 ? null : i[4]!.toString().substring(0, open - 1);
 
+        final contraindicatedVaccines = <Vaccine>[];
+        if ((contraindications.vaccine?.contraindication?.isNotEmpty ??
+                false) &&
+            (contraindications.vaccine!.contraindication!.last
+                    .contraindicatedVaccine?.isNotEmpty ??
+                false)) {
+          contraindicatedVaccines.addAll(contraindications
+              .vaccine!.contraindication!.last.contraindicatedVaccine!);
+        }
+        contraindicatedVaccines.add(
+          Vaccine(
+            vaccineType: text,
+            cvx: code,
+            beginAge: i[5]!.toString() == 'n/a' ? null : valueToString(i[5]!),
+            endAge: i[6]!.toString() == 'n/a' ? null : valueToString(i[6]!),
+          ),
+        );
+        final vaccineContraindication = <VaccineContraindication>[];
+        if (contraindications.vaccine!.contraindication?.isNotEmpty ?? false) {
+          vaccineContraindication.addAll(
+              contraindications.vaccine!.contraindication!.sublist(
+                  0, contraindications.vaccine!.contraindication!.length - 1));
+          vaccineContraindication.add(
+            contraindications.vaccine!.contraindication!.last.copyWith(
+              contraindicatedVaccine: contraindicatedVaccines,
+            ),
+          );
+        } else {
+          vaccineContraindication.add(VaccineContraindication(
+              contraindicatedVaccine: contraindicatedVaccines));
+        }
+
         contraindications = contraindications.copyWith(
           vaccine: VaccineContraindications(
-            contraindication: [
-              if (contraindications.vaccine!.contraindication != null &&
-                  contraindications.vaccine!.contraindication!.isNotEmpty)
-                ...contraindications.vaccine!.contraindication!.sublist(
-                    0, contraindications.vaccine!.contraindication!.length - 1),
-              contraindications.vaccine!.contraindication!.last.copyWith(
-                contraindicatedVaccine: [
-                  if (contraindications.vaccine!.contraindication!.last
-                              .contraindicatedVaccine !=
-                          null &&
-                      contraindications.vaccine!.contraindication!.last
-                          .contraindicatedVaccine!.isNotEmpty)
-                    ...contraindications.vaccine!.contraindication!.last
-                        .contraindicatedVaccine!,
-                  Vaccine(
-                    vaccineType: text,
-                    cvx: code,
-                    beginAge:
-                        i[5]!.toString() == 'n/a' ? null : valueToString(i[5]!),
-                    endAge:
-                        i[6]!.toString() == 'n/a' ? null : valueToString(i[6]!),
-                  ),
-                ],
-              ),
-            ],
+            contraindication: vaccineContraindication,
           ),
         );
       }

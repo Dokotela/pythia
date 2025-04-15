@@ -30,12 +30,15 @@ Series createSeries(String? seriesString) {
             newSeries = newSeries
                 .copyWith(seriesAdminGuidance: [valueToString(row[1]!) ?? '']);
           } else {
-            newSeries = newSeries.copyWith(seriesAdminGuidance: [
-              if (newSeries.seriesAdminGuidance != null &&
-                  newSeries.seriesAdminGuidance!.isNotEmpty)
-                ...newSeries.seriesAdminGuidance!,
-              valueToString(row[1]!) ?? '',
-            ]);
+            final newGuidance = valueToString(row[1]!);
+            if (newGuidance != null) {
+              newSeries = newSeries.copyWith(seriesAdminGuidance: [
+                if (newSeries.seriesAdminGuidance != null &&
+                    newSeries.seriesAdminGuidance!.isNotEmpty)
+                  ...newSeries.seriesAdminGuidance!,
+                newGuidance,
+              ]);
+            }
           }
         }
       } else if (row[0]!.toString().contains('Series Type') &&
@@ -46,7 +49,8 @@ Series createSeries(String? seriesString) {
           row[1]?.toString() != 'Series Groups') {
         if (!row[1]!.toString().contains('n/a')) {
           newSeries = newSeries.copyWith(
-              equivalentSeriesGroups: EquivalentSeriesGroups.fromJson(row[1]!));
+              equivalentSeriesGroups:
+                  EquivalentSeriesGroups.fromJson(row[1]!.toString()));
         }
       } else if (row[0]!.toString().contains('Gender') &&
           row[1]?.toString() != 'Required Gender') {
@@ -72,7 +76,7 @@ Series createSeries(String? seriesString) {
             seriesGroupName: valueToString(row[3]!),
             seriesGroup: row[4]!.toString(),
             seriesPriority: SeriesPriority.fromJson(row[5]!),
-            seriesPreference: SeriesPreference.fromJson(row[6]!),
+            seriesPreference: SeriesPreference.fromJson(row[6]!.toString()),
             minAgeToStart: row[7]!.toString().contains('n/a')
                 ? null
                 : valueToString(row[7]!),
@@ -87,8 +91,10 @@ Series createSeries(String? seriesString) {
         /// extract the code from the text for the observation
         var open = row[1]!.toString().lastIndexOf('(');
         var close = row[1]!.toString().lastIndexOf(')');
-        var code = row[1]!.toString().substring(open + 1, close);
-        var text = row[1]!.toString().substring(0, open - 1);
+        var code =
+            close == -1 ? null : row[1]!.toString().substring(open + 1, close);
+        var text =
+            close == -1 ? null : row[1]!.toString().substring(0, open - 1);
 
         if (newSeries.indication == null) {
           newSeries = newSeries.copyWith(indication: []);
@@ -100,16 +106,16 @@ Series createSeries(String? seriesString) {
               ...newSeries.indication!,
             Indication(
               observationCode: ObservationCode(code: code, text: text),
-              description: row[2]!.toString().contains('n/a')
+              description: row.length <= 2 || row[2]!.toString().contains('n/a')
                   ? null
                   : valueToString(row[2]!),
-              beginAge: row[3]!.toString().contains('n/a')
+              beginAge: row.length <= 3 || row[3]!.toString().contains('n/a')
                   ? null
                   : valueToString(row[3]!),
-              endAge: row[4]!.toString().contains('n/a')
+              endAge: row.length <= 4 || row[4]!.toString().contains('n/a')
                   ? null
                   : valueToString(row[4]!),
-              guidance: row[5]!.toString().contains('n/a')
+              guidance: row.length <= 5 || row[5]!.toString().contains('n/a')
                   ? null
                   : valueToString(row[5]!),
             ),
@@ -121,8 +127,7 @@ Series createSeries(String? seriesString) {
         }
         newSeries = newSeries.copyWith(
           seriesDose: [
-            if (newSeries.seriesDose != null &&
-                newSeries.seriesDose!.isNotEmpty)
+            if (newSeries.seriesDose?.isNotEmpty ?? false)
               ...newSeries.seriesDose!,
             createSeriesDose(
               seriesData.indexWhere(

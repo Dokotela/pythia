@@ -23,6 +23,9 @@ class ScheduleSupportingData {
 
   factory ScheduleSupportingData.fromJson(Map<String, dynamic> oldJson) {
     final json = oldJson['scheduleSupportingData'];
+    if(json == null) {
+      return ScheduleSupportingData();
+    }
     return ScheduleSupportingData(
       liveVirusConflicts: json['liveVirusConflicts'] == null
           ? null

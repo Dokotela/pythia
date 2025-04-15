@@ -34,7 +34,7 @@ CvxToAntigenMap cvxToAntigenMap(String? data) {
                   : i[1].toString(),
               association: [
                 Association(
-                  antigen: i[2],
+                  antigen: i[2] == null ? null : [i[2].toString()],
                   associationBeginAge: i.length < 3 ||
                           i[3] == null ||
                           i[3].toString() == '' ||
@@ -70,7 +70,7 @@ CvxToAntigenMap cvxToAntigenMap(String? data) {
                       cvxToAntigenMap.cvxMap!.last.association!.isNotEmpty)
                     ...cvxToAntigenMap.cvxMap!.last.association!,
                   Association(
-                    antigen: i[2],
+                    antigen: i[2] == null ? null : [i[2].toString()],
                     associationBeginAge: i.length < 3 ||
                             i[3] == null ||
                             i[3].toString() == '' ||
@@ -110,7 +110,7 @@ CvxToAntigenMap cvxToAntigenMap(String? data) {
                   : i[1].toString(),
               association: [
                 Association(
-                  antigen: i[2],
+                  antigen: i[2] == null ? null : [i[2].toString()],
                   associationBeginAge: i.length < 3 ||
                           i[3] == null ||
                           i[3].toString() == '' ||
