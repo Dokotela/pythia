@@ -23,8 +23,9 @@ class Immunity {
 
   Map<String, dynamic> toJson() {
     return {
-      if(clinicalHistory != null) 'clinicalHistory': clinicalHistory?.map((e) => e.toJson()).toList(),
-      if(dateOfBirth != null) 'dateOfBirth': dateOfBirth?.toJson(),
+      if (clinicalHistory != null)
+        'clinicalHistory': clinicalHistory?.map((e) => e.toJson()).toList(),
+      if (dateOfBirth != null) 'dateOfBirth': dateOfBirth?.toJson(),
     };
   }
 
@@ -37,4 +38,8 @@ class Immunity {
       dateOfBirth: dateOfBirth ?? this.dateOfBirth,
     );
   }
+
+  bool isEmpty() =>
+      (clinicalHistory == null || clinicalHistory!.isEmpty) &&
+      dateOfBirth == null;
 }

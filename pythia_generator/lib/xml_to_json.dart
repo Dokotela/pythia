@@ -6,8 +6,8 @@ void main() {
   final supportDir = 'pythia_generator/lib/Version_4.61-508/XML';
   final xmlDir = Directory(supportDir);
   Directory(supportDir.replaceAll('XML', 'JSON')).createSync();
-  final xmlFiles = xmlDir.listSync().where(
-      (file) => file.path.endsWith('.xml'));
+  final xmlFiles =
+      xmlDir.listSync().where((file) => file.path.endsWith('.xml'));
 
   // Create an instance of Xml2Json.
   final transformer = Xml2Json();
@@ -57,9 +57,8 @@ void main() {
     final finalJson = ensureKeysAreLists(cleanedJson, keysToAlwaysList);
 
     // Write the resulting JSON to a new file.
-    final outputPath = file.path
-        .replaceAll('.xml', '.json')
-        .replaceAll('XML', 'JSON');
+    final outputPath =
+        file.path.replaceAll('.xml', '.json').replaceAll('XML', 'JSON');
     File(outputPath).writeAsStringSync(jsonPrettyPrint(finalJson), flush: true);
   }
 }
@@ -81,6 +80,14 @@ dynamic removeNulls(dynamic data) {
     return pruned;
   } else if (data is List) {
     return data.map(removeNulls).where((item) => item != null).toList();
+  } else if (data is String) {
+    data = data.trim().replaceAll('\\\\n', '\r ');
+    if (data == 'valid') {
+      data = 'Valid';
+    }
+    if (data.contains('https://') && data.endsWith('\r ')) {
+      data = data.substring(0, data.length - 2);
+    }
   }
   return data;
 }
@@ -88,7 +95,8 @@ dynamic removeNulls(dynamic data) {
 /// Recursively ensures that any keys specified in [keysToAlwaysList]
 /// have their values wrapped in a List. If the value is already a List,
 /// it is left unchanged.
-dynamic ensureKeysAreLists(dynamic data, List<String> keysToAlwaysList, [String? parentKey]) {
+dynamic ensureKeysAreLists(dynamic data, List<String> keysToAlwaysList,
+    [String? parentKey]) {
   // Define a helper function to decide if a key's value should be forced to be a list.
   bool shouldEnsureAsList(String key, String? parentKey) {
     // Special case: if key is "interval" and its immediate parent is "condition",
@@ -105,7 +113,7 @@ dynamic ensureKeysAreLists(dynamic data, List<String> keysToAlwaysList, [String?
     data.forEach((key, value) {
       // Recurse into the value, passing the current key as the parentKey for its children.
       var processedValue = ensureKeysAreLists(value, keysToAlwaysList, key);
-      
+
       // If this key should be forced into a list, and the value is not already one, wrap it.
       if (shouldEnsureAsList(key, parentKey)) {
         if (processedValue is! List) {
@@ -116,7 +124,9 @@ dynamic ensureKeysAreLists(dynamic data, List<String> keysToAlwaysList, [String?
     });
     return updated;
   } else if (data is List) {
-    return data.map((item) => ensureKeysAreLists(item, keysToAlwaysList, parentKey)).toList();
+    return data
+        .map((item) => ensureKeysAreLists(item, keysToAlwaysList, parentKey))
+        .toList();
   }
   return data;
 }

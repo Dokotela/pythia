@@ -1,40 +1,64 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:pythia/pythia.dart';
+import 'package:pythia_generator/antigen_sheet_parser.dart';
+import 'package:pythia_generator/schedule_sheet_parser.dart';
 
-import 'package:pythia_generator/supporting_strings.dart';
+void main(List<String> args) {
+  // 1) Identify your source directory
+  final sourceDir = Directory('pythia_generator/lib/Version_4.61-508/Excel');
+  if (!sourceDir.existsSync()) {
+    print("Directory not found: ${sourceDir.path}");
+    return;
+  }
 
-import 'create_supporting_data/create_supporting_data.dart';
-import 'utils/excel_sheets.dart';
+  // 2) Create output directory if desired
+  final outputDir = Directory('pythia_generator/lib/generated_files');
+  if (!outputDir.existsSync()) {
+    outputDir.createSync(recursive: true);
+  }
 
-void main() {
-  final supportingStringsList = excelSheets();
+  final antigenParser = AntigenSheetParser();
+  final scheduleParser = ScheduleSheetParser();
 
-  // final files = supportingStringsList.map((e) => e.toJson()).toList();
+  // In case you want to collect them in memory:
+  final List<AntigenSupportingData> allAntigenData = [];
+  ScheduleSupportingData? scheduleData;
 
-  // File('pythia_generator/lib/supporting_strings.json')
-  //     .writeAsStringSync(jsonEncode(files));
+  // 3) Iterate over files
+  for (final fileEntity in sourceDir.listSync()) {
+    if (fileEntity is File && fileEntity.path.endsWith('.xlsx')) {
+      final filePath = fileEntity.path;
+      print('Processing file: $filePath');
 
-  // final listFromFile = jsonDecode(
-  //     File('pythia_generator/lib/supporting_strings.json').readAsStringSync());
+      if (filePath.contains('AntigenSupportingData')) {
+        // Parse as an antigen
+        final antigenData = antigenParser.parseFile(filePath);
+        allAntigenData.add(antigenData);
 
-  final newSupportingStringsList = supportingStringsList;
-      // (listFromFile as List).map((e) => SupportingStrings.fromJson(e)).toList();
+        // Write JSON
+        final jsonPath = '${outputDir.path}/${antigenData.targetDisease}.json';
+        File(jsonPath).writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
+        print('Wrote $jsonPath');
+      } else if (filePath.contains('ScheduleSupportingData')) {
+        // Parse as schedule
+        scheduleData = scheduleParser.parseFile(filePath);
 
-  /// Creates all necessary supporting data files
-  createSupportingData(newSupportingStringsList);
-
-  /// Edit this out if testing generating files, this writes files to the actual program
-  final dir = Directory('pythia_generator/lib/generated_files');
-  final fileList = dir.listSync().map((event) => event.path).toList();
-  for (var file in fileList) {
-    if (file.endsWith('.dart')) {
-      final newFile = File(file).readAsStringSync();
-      final fileName = file.replaceAll('pythia_generator', 'pythia');
-      if (!(File(fileName).existsSync())) {
-        File(fileName).createSync();
+        // Write JSON
+        final jsonPath = '${outputDir.path}/schedule_supporting_data.json';
+        File(jsonPath)
+            .writeAsStringSync(jsonPrettyPrint(scheduleData.toJson()));
+        print('Wrote $jsonPath');
+      } else {
+        // Possibly a test-cases file or something else
+        print('Unrecognized file (not Antigen nor Schedule): $filePath');
       }
-      File(fileName).writeAsStringSync(newFile);
-      File(file).deleteSync();
     }
   }
+
+  print('Done!');
 }
+
+const jsonEncoder = JsonEncoder.withIndent('    ');
+
+String jsonPrettyPrint(Map<String, dynamic> map) => jsonEncoder.convert(map);

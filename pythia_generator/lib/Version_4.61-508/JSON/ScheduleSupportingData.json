@@ -10088,7 +10088,7 @@
                 },
                 {
                     "cvx": "315",
-                    "shortDescription": "Respiratory syncytial virus (RSV) monoclonal antibody (MAB), unspecified ",
+                    "shortDescription": "Respiratory syncytial virus (RSV) monoclonal antibody (MAB), unspecified",
                     "association": [
                         {
                             "antigen": [
@@ -11167,13 +11167,13 @@
                     "observationCode": "044",
                     "observationTitle": "Anticipate close personal contact with international adoptee",
                     "indicationText": "Administer to persons who anticipate close personal contact with an international adoptee during the first 60 days.",
-                    "clarifyingText": "e.g., household or regular babysitting\\\\nApplies when adoptee is from a country with high or intermediate endemicity"
+                    "clarifyingText": "e.g., household or regular babysitting\r Applies when adoptee is from a country with high or intermediate endemicity"
                 },
                 {
                     "observationCode": "045",
                     "observationTitle": "Travel to country with a Yellow Fever vaccination entry requirement",
                     "indicationText": "Administer to persons who travel to a country with a Yellow Fever vaccination entry requirement.",
-                    "clarifyingText": " A list of country-specific requirements is available at https://wwwnc.cdc.gov/travel/yellowbook/2024/preparing/yellow-fever-vaccine-malaria-prevention-by-country"
+                    "clarifyingText": "A list of country-specific requirements is available at https://wwwnc.cdc.gov/travel/yellowbook/2024/preparing/yellow-fever-vaccine-malaria-prevention-by-country"
                 },
                 {
                     "observationCode": "046",
@@ -11680,8 +11680,8 @@
                 {
                     "observationCode": "076",
                     "observationTitle": "Progressive neurologic disorder",
-                    "contraindicationText": "Do not vaccinate if the patient has progressive neurologic disorder until a treatment regimen has been\\\\nestablished and the condition has stabilized.",
-                    "clarifyingText": "Includes infantile spasms, uncontrolled epilepsy, or progressive encephalopathy for the administration of any pertussis-containing\\\\nvaccine",
+                    "contraindicationText": "Do not vaccinate if the patient has progressive neurologic disorder until a treatment regimen has been\r established and the condition has stabilized.",
+                    "clarifyingText": "Includes infantile spasms, uncontrolled epilepsy, or progressive encephalopathy for the administration of any pertussis-containing\r vaccine",
                     "codedValues": {
                         "codedValue": [
                             {
@@ -13012,7 +13012,7 @@
                 {
                     "observationCode": "109",
                     "observationTitle": "Severe allergic reaction to polymyxin B",
-                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to polymyxin B. ",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to polymyxin B.",
                     "codedValues": {
                         "codedValue": [
                             {
@@ -13056,7 +13056,7 @@
                     "observationCode": "112",
                     "observationTitle": "Hypersensitivity to alum",
                     "contraindicationText": "Do not vaccinate if the patient has a hypersensitivity to alum.",
-                    "clarifyingText": "AKA potassium aluminum sulfate "
+                    "clarifyingText": "AKA potassium aluminum sulfate"
                 },
                 {
                     "observationCode": "113",
@@ -13263,7 +13263,7 @@
                 },
                 {
                     "observationCode": "124",
-                    "observationTitle": "Severe allergic reaction to rice protein ",
+                    "observationTitle": "Severe allergic reaction to rice protein",
                     "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to rice protein."
                 },
                 {
@@ -13671,8 +13671,8 @@
                 {
                     "observationCode": "158",
                     "observationTitle": "Immunosuppressive therapy",
-                    "indicationText": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies. ",
-                    "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies. ",
+                    "indicationText": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
+                    "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "clarifyingText": "Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                     "codedValues": {
                         "codedValue": [
@@ -14029,7 +14029,7 @@
                     "observationCode": "196",
                     "observationTitle": "Residing in an institutional setting at increased risk for COVID-19 exposure and transmission",
                     "indicationText": "Administer to persons residing in institutional settings at increased risk for COVID-19 exposure and transmission.",
-                    "clarifyingText": "Institutional settings such as health care, schools, correctional facilities, and homeless shelters at increased risk for COVID-19 exposure and transmission and may get a booster shot based on their individual benefits and risks including "
+                    "clarifyingText": "Institutional settings such as health care, schools, correctional facilities, and homeless shelters at increased risk for COVID-19 exposure and transmission and may get a booster shot based on their individual benefits and risks including"
                 },
                 {
                     "observationCode": "197",
@@ -14283,7 +14283,7 @@
                 {
                     "observationCode": "224",
                     "observationTitle": "History or presence of atopic dermatitis",
-                    "contraindicationText": "Do not vaccinate if the patient has history or presence of atopic dermatitis. "
+                    "contraindicationText": "Do not vaccinate if the patient has history or presence of atopic dermatitis."
                 },
                 {
                     "observationCode": "225",
@@ -14412,33 +14412,33 @@
                 },
                 {
                     "observationCode": "247",
-                    "observationTitle": "Gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \\\\n1) A new diagnosis of ≥ 1 sexually transmitted disease\\\\n2)  More than one sex partner\\\\n3)  Sex at a commercial sex venue\\\\n4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
-                    "indicationText": "Administer to gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \\\\n1) A new diagnosis of ≥ 1 sexually transmitted disease\\\\n2)  More than one sex partner\\\\n3)  Sex at a commercial sex venue\\\\n4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+                    "observationTitle": "Gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+                    "indicationText": "Administer to gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
                     "clarifyingText": "Includes persons who anticipate experiencing any of the risk factors."
                 },
                 {
                     "observationCode": "248",
-                    "observationTitle": "Sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \\\\n1) A new diagnosis of ≥ 1 sexually transmitted disease\\\\n2)  More than one sex partner\\\\n3)  Sex at a commercial sex venue\\\\n4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
-                    "indicationText": "Administer to sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \\\\n1) A new diagnosis of ≥ 1 sexually transmitted disease\\\\n2)  More than one sex partner\\\\n3)  Sex at a commercial sex venue\\\\n4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+                    "observationTitle": "Sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+                    "indicationText": "Administer to sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
                     "clarifyingText": "Includes persons who anticipate experiencing any of the risk factors."
                 },
                 {
                     "observationCode": "249",
                     "observationTitle": "Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
                     "indicationText": "Administer to persons moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
-                    "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis\\\\n"
+                    "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
                 },
                 {
                     "observationCode": "250",
                     "observationTitle": "Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
                     "indicationText": "TBE vaccine may be considered for persons moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
-                    "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis\\\\n"
+                    "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
                 },
                 {
                     "observationCode": "251",
                     "observationTitle": "Laboratory workers with a potential for exposure to TBE virus",
                     "indicationText": "Administer to laboratory workers with a potential for exposure to TBE virus",
-                    "clarifyingText": "n/a\\\\n"
+                    "clarifyingText": "n/a\r "
                 },
                 {
                     "observationCode": "252",

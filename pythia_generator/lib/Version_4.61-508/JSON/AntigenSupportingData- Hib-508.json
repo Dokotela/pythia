@@ -34,7 +34,7 @@
                     {
                         "observationCode": "076",
                         "observationTitle": "Progressive neurologic disorder",
-                        "contraindicationText": "Do not vaccinate if the patient has progressive neurologic disorder until a treatment regimen has been\\\\nestablished and the condition has stabilized.",
+                        "contraindicationText": "Do not vaccinate if the patient has progressive neurologic disorder until a treatment regimen has been\r established and the condition has stabilized.",
                         "contraindicatedVaccine": [
                             {
                                 "vaccineType": "DTaP-IPV-Hib-HepB",

@@ -50,17 +50,17 @@ class Interval {
 
   Map<String, dynamic> toJson() {
     return {
-      if(fromPrevious != null) 'fromPrevious': fromPrevious,
-     if(fromTargetDose != null) 'fromTargetDose': fromTargetDose?.toString(),
-      if(fromMostRecent != null) 'fromMostRecent': fromMostRecent,
-      if(fromRelevantObs != null) 'fromRelevantObs': fromRelevantObs?.toJson(),
-      if(absMinInt != null) 'absMinInt': absMinInt,
-      if(minInt != null) 'minInt': minInt,
-      if(earliestRecInt != null) 'earliestRecInt': earliestRecInt,
-      if(latestRecInt != null) 'latestRecInt': latestRecInt,
-      if(intervalPriority != null) 'intervalPriority': intervalPriority,
-      if(effectiveDate != null) 'effectiveDate': effectiveDate,
-      if(cessationDate != null) 'cessationDate': cessationDate,
+      if (fromPrevious != null) 'fromPrevious': fromPrevious,
+      if (fromTargetDose != null) 'fromTargetDose': fromTargetDose?.toString(),
+      if (fromMostRecent != null) 'fromMostRecent': fromMostRecent,
+      if (fromRelevantObs != null) 'fromRelevantObs': fromRelevantObs?.toJson(),
+      if (absMinInt != null) 'absMinInt': absMinInt,
+      if (minInt != null) 'minInt': minInt,
+      if (earliestRecInt != null) 'earliestRecInt': earliestRecInt,
+      if (latestRecInt != null) 'latestRecInt': latestRecInt,
+      if (intervalPriority != null) 'intervalPriority': intervalPriority,
+      if (effectiveDate != null) 'effectiveDate': effectiveDate,
+      if (cessationDate != null) 'cessationDate': cessationDate,
     };
   }
 
@@ -76,4 +76,17 @@ class Interval {
       return codes;
     }
   }
+
+  bool isEmpty() =>
+      (fromPrevious == null || fromPrevious!.isEmpty) &&
+      fromTargetDose == null &&
+      (fromMostRecent == null || fromMostRecent!.isEmpty) &&
+      fromRelevantObs == null &&
+      (absMinInt == null || absMinInt!.isEmpty) &&
+      (minInt == null || minInt!.isEmpty) &&
+      (earliestRecInt == null || earliestRecInt!.isEmpty) &&
+      (latestRecInt == null || latestRecInt!.isEmpty) &&
+      (intervalPriority == null || intervalPriority!.isEmpty) &&
+      (effectiveDate == null || effectiveDate!.isEmpty) &&
+      (cessationDate == null || cessationDate!.isEmpty);
 }

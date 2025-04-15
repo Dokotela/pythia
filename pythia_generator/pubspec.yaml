@@ -17,3 +17,6 @@ dependencies:
 
 dependency_overrides:
   archive: ^3.4.10
+
+dev_dependencies:
+  very_good_analysis: ^7.0.0

@@ -28,4 +28,16 @@ class DateOfBirth {
       if(exclusion != null) 'exclusion': exclusion?.map((e) => e.toJson()).toList(),
     };
   }
+
+  DateOfBirth copyWith({
+    String? immunityBirthDate,
+    String? birthCountry,
+    List<Exclusion>? exclusion,
+  }) {
+    return DateOfBirth(
+      immunityBirthDate: immunityBirthDate ?? this.immunityBirthDate,
+      birthCountry: birthCountry ?? this.birthCountry,
+      exclusion: exclusion ?? this.exclusion,
+    );
+  }
 }

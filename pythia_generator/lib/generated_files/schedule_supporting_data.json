@@ -1,0 +1,89 @@
+{
+    "vaccineGroups": {
+        "vaccineGroup": [
+            {
+                "name": "Vaccine Group"
+            },
+            {
+                "name": "Chikungunya"
+            },
+            {
+                "name": "Cholera"
+            },
+            {
+                "name": "COVID-19"
+            },
+            {
+                "name": "Dengue"
+            },
+            {
+                "name": "DTaP/Tdap/Td",
+                "administerFullVaccineGroup": "No"
+            },
+            {
+                "name": "Ebola"
+            },
+            {
+                "name": "HepA"
+            },
+            {
+                "name": "HepB"
+            },
+            {
+                "name": "Hib"
+            },
+            {
+                "name": "HPV"
+            },
+            {
+                "name": "Influenza"
+            },
+            {
+                "name": "Japanese Encephalitis"
+            },
+            {
+                "name": "Meningococcal"
+            },
+            {
+                "name": "Meningococcal B"
+            },
+            {
+                "name": "MMR",
+                "administerFullVaccineGroup": "Yes"
+            },
+            {
+                "name": "Orthopoxvirus"
+            },
+            {
+                "name": "Pneumococcal"
+            },
+            {
+                "name": "Polio"
+            },
+            {
+                "name": "Rabies"
+            },
+            {
+                "name": "Rotavirus"
+            },
+            {
+                "name": "RSV"
+            },
+            {
+                "name": "TBE"
+            },
+            {
+                "name": "Typhoid"
+            },
+            {
+                "name": "Varicella"
+            },
+            {
+                "name": "Yellow Fever"
+            },
+            {
+                "name": "Zoster"
+            }
+        ]
+    }
+}

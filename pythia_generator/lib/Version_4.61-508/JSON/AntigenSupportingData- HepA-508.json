@@ -231,7 +231,7 @@
                         },
                         "description": "Administer to persons who have chronic liver disease.",
                         "beginAge": "19 years",
-                        "guidance": "includes, but is not limited to persons with hepatitis B virus (HBV) infection, hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal "
+                        "guidance": "includes, but is not limited to persons with hepatitis B virus (HBV) infection, hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
                     },
                     {
                         "observationCode": {
@@ -257,7 +257,7 @@
                         },
                         "description": "Administer to persons who anticipate close personal contact with an international adoptee during the first 60 days.",
                         "beginAge": "19 years",
-                        "guidance": "close personal contact includes but is not limited to household contact, caretaker, or regular babysitter. The first dose of the HepA vaccine series\\\\nshould be administered as soon as adoption is planned, ideally 2 or more weeks before the arrival of the adoptee"
+                        "guidance": "close personal contact includes but is not limited to household contact, caretaker, or regular babysitter. The first dose of the HepA vaccine series\r should be administered as soon as adoption is planned, ideally 2 or more weeks before the arrival of the adoptee"
                     },
                     {
                         "observationCode": {
@@ -458,7 +458,7 @@
                         },
                         "description": "Administer to persons who have chronic liver disease.",
                         "beginAge": "19 years",
-                        "guidance": "includes, but is not limited to persons with hepatitis B virus (HBV) infection, hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal "
+                        "guidance": "includes, but is not limited to persons with hepatitis B virus (HBV) infection, hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
                     },
                     {
                         "observationCode": {
@@ -720,7 +720,7 @@
                         },
                         "description": "Administer to persons who have chronic liver disease.",
                         "beginAge": "19 years",
-                        "guidance": "includes, but is not limited to persons with hepatitis B virus (HBV) infection, hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal "
+                        "guidance": "includes, but is not limited to persons with hepatitis B virus (HBV) infection, hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
                     },
                     {
                         "observationCode": {
@@ -1111,7 +1111,7 @@
                         },
                         "description": "Administer to persons who have chronic liver disease.",
                         "beginAge": "19 years",
-                        "guidance": "includes, but is not limited to persons with hepatitis B virus (HBV) infection, hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal "
+                        "guidance": "includes, but is not limited to persons with hepatitis B virus (HBV) infection, hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
                     },
                     {
                         "observationCode": {
@@ -1137,7 +1137,7 @@
                         },
                         "description": "Administer to persons who anticipate close personal contact with an international adoptee during the first 60 days.",
                         "beginAge": "19 years",
-                        "guidance": "close personal contact includes but is not limited to \\\\nhousehold contact, caretaker, or regular babysitter. The first dose of the HepA vaccine series\\\\nshould be administered as soon as adoption is planned, ideally 2 or more weeks before the arrival of the adoptee"
+                        "guidance": "close personal contact includes but is not limited to \r household contact, caretaker, or regular babysitter. The first dose of the HepA vaccine series\r should be administered as soon as adoption is planned, ideally 2 or more weeks before the arrival of the adoptee"
                     },
                     {
                         "observationCode": {

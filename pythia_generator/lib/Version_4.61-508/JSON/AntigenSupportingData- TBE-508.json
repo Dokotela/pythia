@@ -43,7 +43,7 @@
                         "description": "Administer to persons moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
                         "beginAge": "1 year",
                         "endAge": "16 years",
-                        "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis\\\\n"
+                        "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
                     },
                     {
                         "observationCode": {
@@ -53,7 +53,7 @@
                         "description": "TBE vaccine may be considered for persons moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
                         "beginAge": "1 year",
                         "endAge": "16 years",
-                        "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis\\\\n"
+                        "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
                     }
                 ],
                 "seriesDose": [
@@ -230,7 +230,7 @@
                 ]
             },
             {
-                "seriesName": "Risk 16 years+ 3-dose ",
+                "seriesName": "Risk 16 years+ 3-dose",
                 "targetDisease": "TBE",
                 "vaccineGroup": "TBE",
                 "seriesAdminGuidance": [
@@ -254,7 +254,7 @@
                         },
                         "description": "Administer to persons moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
                         "beginAge": "16 years",
-                        "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis\\\\n"
+                        "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
                     },
                     {
                         "observationCode": {
@@ -263,7 +263,7 @@
                         },
                         "description": "TBE vaccine may be considered for persons moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
                         "beginAge": "16 years",
-                        "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis\\\\n"
+                        "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
                     },
                     {
                         "observationCode": {

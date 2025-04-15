@@ -16,8 +16,12 @@ class SeasonalRecommendation {
 
   Map<String, dynamic> toJson() {
     return {
-      if(startDate != null) 'startDate': startDate,
-      if(endDate != null) 'endDate': endDate,
+      if (startDate != null) 'startDate': startDate,
+      if (endDate != null) 'endDate': endDate,
     };
   }
+
+  bool isEmpty() =>
+      (startDate == null || startDate!.isEmpty) &&
+      (endDate == null || endDate!.isEmpty);
 }

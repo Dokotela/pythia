@@ -20,7 +20,7 @@
                     {
                         "observationCode": "224",
                         "observationTitle": "History or presence of atopic dermatitis",
-                        "contraindicationText": "Do not vaccinate if the patient has history or presence of atopic dermatitis. ",
+                        "contraindicationText": "Do not vaccinate if the patient has history or presence of atopic dermatitis.",
                         "contraindicatedVaccine": [
                             {
                                 "vaccineType": "vaccinia smallpox",
@@ -608,19 +608,19 @@
                 "indication": [
                     {
                         "observationCode": {
-                            "text": "Gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \\\\n1) A new diagnosis of ≥ 1 sexually transmitted disease\\\\n2)  More than one sex partner\\\\n3)  Sex at a commercial sex venue\\\\n4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+                            "text": "Gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
                             "code": "247"
                         },
-                        "description": "Administer to gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \\\\n1) A new diagnosis of ≥ 1 sexually transmitted disease\\\\n2)  More than one sex partner\\\\n3)  Sex at a commercial sex venue\\\\n4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
+                        "description": "Administer to gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
                         "beginAge": "18 years",
                         "guidance": "Includes persons who anticipate experiencing any of the risk factors."
                     },
                     {
                         "observationCode": {
-                            "text": "Sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \\\\n1) A new diagnosis of ≥ 1 sexually transmitted disease\\\\n2)  More than one sex partner\\\\n3)  Sex at a commercial sex venue\\\\n4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+                            "text": "Sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
                             "code": "248"
                         },
-                        "description": "Administer to sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \\\\n1) A new diagnosis of ≥ 1 sexually transmitted disease\\\\n2)  More than one sex partner\\\\n3)  Sex at a commercial sex venue\\\\n4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
+                        "description": "Administer to sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
                         "beginAge": "18 years",
                         "guidance": "Includes persons who anticipate experiencing any of the risk factors."
                     }
