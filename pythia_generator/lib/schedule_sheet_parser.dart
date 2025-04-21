@@ -140,6 +140,40 @@ class ScheduleSheetParser {
       final indication = row.length > 2 ? row[2].trim() : '';
       final contra = row.length > 3 ? row[3].trim() : '';
       final clarify = row.length > 4 ? row[4].trim() : '';
+      final codedValues = <CodedValue>[];
+
+      if (row.length > 5 && row[5].trim().isNotEmpty) {
+        final codeStrings = row[5].trim().split(';');
+        for (final codeString in codeStrings) {
+          final (code, text) = _extractCodeAndText(codeString);
+          if (code.isNotEmpty) {
+            codedValues
+                .add(CodedValue(code: code, text: text, codeSystem: 'SNOMED'));
+          }
+        }
+      }
+
+      if (row.length > 6 && row[6].trim().isNotEmpty) {
+        final codeStrings = row[6].trim().split(';');
+        for (final codeString in codeStrings) {
+          final (code, text) = _extractCodeAndText(codeString);
+          if (code.isNotEmpty) {
+            codedValues
+                .add(CodedValue(code: code, text: text, codeSystem: 'CVX'));
+          }
+        }
+      }
+
+      if (row.length > 7 && row[7].trim().isNotEmpty) {
+        final codeStrings = row[7].trim().split(';');
+        for (final codeString in codeStrings) {
+          final (code, text) = _extractCodeAndText(codeString);
+          if (code.isNotEmpty) {
+            codedValues.add(
+                CodedValue(code: code, text: text, codeSystem: 'CDCPHINVS'));
+          }
+        }
+      }
 
       final observation = VaxObservation(
         observationCode: obsCode,
@@ -149,6 +183,9 @@ class ScheduleSheetParser {
         contraindicationText:
             contra.isNotEmpty && contra != 'n/a' ? contra : null,
         clarifyingText: clarify.isNotEmpty && clarify != 'n/a' ? clarify : null,
+        codedValues: codedValues.isNotEmpty
+            ? CodedValues(codedValue: codedValues)
+            : null,
       );
 
       obsList.add(observation);

@@ -95,13 +95,13 @@ class AntigenSheetParser {
   /// For “Antigen Series Overview,” “Change History,” or “FAQ”,
   /// you might just store them as multiline strings.
   /// Adjust if you need more structured parsing.
-  String _parseSheetAsPlainText(List<List<String>> rows) {
-    final buffer = StringBuffer();
-    for (final row in rows) {
-      buffer.writeln(row.join('\t'));
-    }
-    return buffer.toString();
-  }
+  // String _parseSheetAsPlainText(List<List<String>> rows) {
+  //   final buffer = StringBuffer();
+  //   for (final row in rows) {
+  //     buffer.writeln(row.join('\t'));
+  //   }
+  //   return buffer.toString();
+  // }
 
   /// -----------------------------------------------------------
   ///         2) Helper: Parse "Immunity" rows

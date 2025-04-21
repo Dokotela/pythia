@@ -37,6 +37,7 @@ void main() {
     'observation',
     'codedValue',
     'interval',
+    'antigen',
   ];
 
   for (final file in xmlFiles) {
@@ -87,6 +88,12 @@ dynamic removeNulls(dynamic data) {
     if (data.contains('https://') && data.endsWith('\r ')) {
       data = data.substring(0, data.length - 2);
     }
+    if (data == "n/a\r ") {
+      data = null;
+    }
+    if (data is String && data.contains('?50')) {
+      data = data.replaceAll('?50', '≤50');
+    }
   }
   return data;
 }
@@ -101,6 +108,10 @@ dynamic ensureKeysAreLists(dynamic data, List<String> keysToAlwaysList,
     // Special case: if key is "interval" and its immediate parent is "condition",
     // do not force wrap the value in a list.
     if (key == 'interval' && parentKey == 'condition') {
+      return false;
+    }
+
+    if (key == 'antigen' && parentKey == 'association') {
       return false;
     }
     // For all other cases, if the key is in the list, we want it to be a list.

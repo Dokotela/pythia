@@ -7580,19 +7580,27 @@
             "vaccineGroupMap": [
                 {
                     "name": "Chikungunya",
-                    "antigen": "Chikungunya"
+                    "antigen": [
+                        "Chikungunya"
+                    ]
                 },
                 {
                     "name": "Cholera",
-                    "antigen": "Cholera"
+                    "antigen": [
+                        "Cholera"
+                    ]
                 },
                 {
                     "name": "COVID-19",
-                    "antigen": "COVID-19"
+                    "antigen": [
+                        "COVID-19"
+                    ]
                 },
                 {
                     "name": "Dengue",
-                    "antigen": "Dengue"
+                    "antigen": [
+                        "Dengue"
+                    ]
                 },
                 {
                     "name": "DTaP/Tdap/Td",
@@ -7604,39 +7612,57 @@
                 },
                 {
                     "name": "Ebola",
-                    "antigen": "Ebola"
+                    "antigen": [
+                        "Ebola"
+                    ]
                 },
                 {
                     "name": "HepA",
-                    "antigen": "HepA"
+                    "antigen": [
+                        "HepA"
+                    ]
                 },
                 {
                     "name": "HepB",
-                    "antigen": "HepB"
+                    "antigen": [
+                        "HepB"
+                    ]
                 },
                 {
                     "name": "Hib",
-                    "antigen": "Hib"
+                    "antigen": [
+                        "Hib"
+                    ]
                 },
                 {
                     "name": "HPV",
-                    "antigen": "HPV"
+                    "antigen": [
+                        "HPV"
+                    ]
                 },
                 {
                     "name": "Influenza",
-                    "antigen": "Influenza"
+                    "antigen": [
+                        "Influenza"
+                    ]
                 },
                 {
                     "name": "Japanese Encephalitis",
-                    "antigen": "Japanese Encephalitis"
+                    "antigen": [
+                        "Japanese Encephalitis"
+                    ]
                 },
                 {
                     "name": "Meningococcal",
-                    "antigen": "Meningococcal"
+                    "antigen": [
+                        "Meningococcal"
+                    ]
                 },
                 {
                     "name": "Meningococcal B",
-                    "antigen": "Meningococcal B"
+                    "antigen": [
+                        "Meningococcal B"
+                    ]
                 },
                 {
                     "name": "MMR",
@@ -7648,47 +7674,69 @@
                 },
                 {
                     "name": "Orthopoxvirus",
-                    "antigen": "Orthopoxvirus"
+                    "antigen": [
+                        "Orthopoxvirus"
+                    ]
                 },
                 {
                     "name": "Pneumococcal",
-                    "antigen": "Pneumococcal"
+                    "antigen": [
+                        "Pneumococcal"
+                    ]
                 },
                 {
                     "name": "Polio",
-                    "antigen": "Polio"
+                    "antigen": [
+                        "Polio"
+                    ]
                 },
                 {
                     "name": "Rabies",
-                    "antigen": "Rabies"
+                    "antigen": [
+                        "Rabies"
+                    ]
                 },
                 {
                     "name": "Rotavirus",
-                    "antigen": "Rotavirus"
+                    "antigen": [
+                        "Rotavirus"
+                    ]
                 },
                 {
                     "name": "RSV",
-                    "antigen": "RSV"
+                    "antigen": [
+                        "RSV"
+                    ]
                 },
                 {
                     "name": "TBE",
-                    "antigen": "TBE"
+                    "antigen": [
+                        "TBE"
+                    ]
                 },
                 {
                     "name": "Typhoid",
-                    "antigen": "Typhoid"
+                    "antigen": [
+                        "Typhoid"
+                    ]
                 },
                 {
                     "name": "Varicella",
-                    "antigen": "Varicella"
+                    "antigen": [
+                        "Varicella"
+                    ]
                 },
                 {
                     "name": "Yellow Fever",
-                    "antigen": "Yellow Fever"
+                    "antigen": [
+                        "Yellow Fever"
+                    ]
                 },
                 {
                     "name": "Zoster",
-                    "antigen": "Zoster"
+                    "antigen": [
+                        "Zoster"
+                    ]
                 }
             ]
         },
@@ -13711,7 +13759,7 @@
                     "observationCode": "231",
                     "observationTitle": "3 or more known major cardiac risk factors",
                     "contraindicationText": "Do not vaccinate if the patient has 3 or more known major cardiac risk factors.",
-                    "clarifyingText": "Major cardiac risk factors include hypertension, diabetes, hypercholesterolemia, heart disease at age ?50 years in a first-degree relative, and smoking."
+                    "clarifyingText": "Major cardiac risk factors include hypertension, diabetes, hypercholesterolemia, heart disease at age ≤50 years in a first-degree relative, and smoking."
                 },
                 {
                     "observationCode": "232",
@@ -13827,8 +13875,7 @@
                 {
                     "observationCode": "251",
                     "observationTitle": "Laboratory workers with a potential for exposure to TBE virus",
-                    "indicationText": "Administer to laboratory workers with a potential for exposure to TBE virus",
-                    "clarifyingText": "n/a\r "
+                    "indicationText": "Administer to laboratory workers with a potential for exposure to TBE virus"
                 },
                 {
                     "observationCode": "252",
