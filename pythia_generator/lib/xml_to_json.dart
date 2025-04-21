@@ -34,7 +34,6 @@ void main() {
     'association',
     'liveVirusConflict',
     'vaccineGroupMap',
-    'antigen',
     'observation',
     'codedValue',
     'interval',

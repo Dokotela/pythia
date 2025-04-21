@@ -76,15 +76,13 @@ class Association {
     this.associationEndAge,
   });
 
-  final List<String>? antigen;
+  final String? antigen;
   final String? associationBeginAge;
   final String? associationEndAge;
 
   factory Association.fromJson(Map<String, dynamic> json) {
     return Association(
-      antigen: json['antigen'] == null
-          ? null
-          : (json['antigen'] as List<dynamic>).whereType<String>().toList(),
+      antigen: json['antigen'],
       associationBeginAge: json['associationBeginAge'] as String?,
       associationEndAge: json['associationEndAge'] as String?,
     );

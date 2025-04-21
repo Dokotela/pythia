@@ -24,7 +24,7 @@ List<String> antigensFromCvx(String? cvx) {
       if (cvxEntry.association != null && cvxEntry.association!.isNotEmpty) {
         for (final e in cvxEntry.association ?? <Association>[]) {
           if (e.antigen != null) {
-            diseases.addAll(e.antigen!);
+            diseases.add(e.antigen!);
           }
         }
       }

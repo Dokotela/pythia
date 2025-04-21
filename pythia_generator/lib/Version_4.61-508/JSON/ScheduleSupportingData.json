@@ -7580,27 +7580,19 @@
             "vaccineGroupMap": [
                 {
                     "name": "Chikungunya",
-                    "antigen": [
-                        "Chikungunya"
-                    ]
+                    "antigen": "Chikungunya"
                 },
                 {
                     "name": "Cholera",
-                    "antigen": [
-                        "Cholera"
-                    ]
+                    "antigen": "Cholera"
                 },
                 {
                     "name": "COVID-19",
-                    "antigen": [
-                        "COVID-19"
-                    ]
+                    "antigen": "COVID-19"
                 },
                 {
                     "name": "Dengue",
-                    "antigen": [
-                        "Dengue"
-                    ]
+                    "antigen": "Dengue"
                 },
                 {
                     "name": "DTaP/Tdap/Td",
@@ -7612,57 +7604,39 @@
                 },
                 {
                     "name": "Ebola",
-                    "antigen": [
-                        "Ebola"
-                    ]
+                    "antigen": "Ebola"
                 },
                 {
                     "name": "HepA",
-                    "antigen": [
-                        "HepA"
-                    ]
+                    "antigen": "HepA"
                 },
                 {
                     "name": "HepB",
-                    "antigen": [
-                        "HepB"
-                    ]
+                    "antigen": "HepB"
                 },
                 {
                     "name": "Hib",
-                    "antigen": [
-                        "Hib"
-                    ]
+                    "antigen": "Hib"
                 },
                 {
                     "name": "HPV",
-                    "antigen": [
-                        "HPV"
-                    ]
+                    "antigen": "HPV"
                 },
                 {
                     "name": "Influenza",
-                    "antigen": [
-                        "Influenza"
-                    ]
+                    "antigen": "Influenza"
                 },
                 {
                     "name": "Japanese Encephalitis",
-                    "antigen": [
-                        "Japanese Encephalitis"
-                    ]
+                    "antigen": "Japanese Encephalitis"
                 },
                 {
                     "name": "Meningococcal",
-                    "antigen": [
-                        "Meningococcal"
-                    ]
+                    "antigen": "Meningococcal"
                 },
                 {
                     "name": "Meningococcal B",
-                    "antigen": [
-                        "Meningococcal B"
-                    ]
+                    "antigen": "Meningococcal B"
                 },
                 {
                     "name": "MMR",
@@ -7674,69 +7648,47 @@
                 },
                 {
                     "name": "Orthopoxvirus",
-                    "antigen": [
-                        "Orthopoxvirus"
-                    ]
+                    "antigen": "Orthopoxvirus"
                 },
                 {
                     "name": "Pneumococcal",
-                    "antigen": [
-                        "Pneumococcal"
-                    ]
+                    "antigen": "Pneumococcal"
                 },
                 {
                     "name": "Polio",
-                    "antigen": [
-                        "Polio"
-                    ]
+                    "antigen": "Polio"
                 },
                 {
                     "name": "Rabies",
-                    "antigen": [
-                        "Rabies"
-                    ]
+                    "antigen": "Rabies"
                 },
                 {
                     "name": "Rotavirus",
-                    "antigen": [
-                        "Rotavirus"
-                    ]
+                    "antigen": "Rotavirus"
                 },
                 {
                     "name": "RSV",
-                    "antigen": [
-                        "RSV"
-                    ]
+                    "antigen": "RSV"
                 },
                 {
                     "name": "TBE",
-                    "antigen": [
-                        "TBE"
-                    ]
+                    "antigen": "TBE"
                 },
                 {
                     "name": "Typhoid",
-                    "antigen": [
-                        "Typhoid"
-                    ]
+                    "antigen": "Typhoid"
                 },
                 {
                     "name": "Varicella",
-                    "antigen": [
-                        "Varicella"
-                    ]
+                    "antigen": "Varicella"
                 },
                 {
                     "name": "Yellow Fever",
-                    "antigen": [
-                        "Yellow Fever"
-                    ]
+                    "antigen": "Yellow Fever"
                 },
                 {
                     "name": "Zoster",
-                    "antigen": [
-                        "Zoster"
-                    ]
+                    "antigen": "Zoster"
                 }
             ]
         },
@@ -7747,19 +7699,13 @@
                     "shortDescription": "DTP",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         }
                     ]
                 },
@@ -7768,9 +7714,7 @@
                     "shortDescription": "OPV",
                     "association": [
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -7779,19 +7723,13 @@
                     "shortDescription": "MMR",
                     "association": [
                         {
-                            "antigen": [
-                                "Measles"
-                            ]
+                            "antigen": "Measles"
                         },
                         {
-                            "antigen": [
-                                "Mumps"
-                            ]
+                            "antigen": "Mumps"
                         },
                         {
-                            "antigen": [
-                                "Rubella"
-                            ]
+                            "antigen": "Rubella"
                         }
                     ]
                 },
@@ -7800,14 +7738,10 @@
                     "shortDescription": "M/R",
                     "association": [
                         {
-                            "antigen": [
-                                "Measles"
-                            ]
+                            "antigen": "Measles"
                         },
                         {
-                            "antigen": [
-                                "Rubella"
-                            ]
+                            "antigen": "Rubella"
                         }
                     ]
                 },
@@ -7816,9 +7750,7 @@
                     "shortDescription": "measles",
                     "association": [
                         {
-                            "antigen": [
-                                "Measles"
-                            ]
+                            "antigen": "Measles"
                         }
                     ]
                 },
@@ -7827,9 +7759,7 @@
                     "shortDescription": "rubella",
                     "association": [
                         {
-                            "antigen": [
-                                "Rubella"
-                            ]
+                            "antigen": "Rubella"
                         }
                     ]
                 },
@@ -7838,9 +7768,7 @@
                     "shortDescription": "mumps",
                     "association": [
                         {
-                            "antigen": [
-                                "Mumps"
-                            ]
+                            "antigen": "Mumps"
                         }
                     ]
                 },
@@ -7849,9 +7777,7 @@
                     "shortDescription": "Hep B, adolescent or pediatric",
                     "association": [
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -7860,14 +7786,10 @@
                     "shortDescription": "Td (adult), adsorbed",
                     "association": [
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         }
                     ]
                 },
@@ -7876,9 +7798,7 @@
                     "shortDescription": "IPV",
                     "association": [
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -7887,9 +7807,7 @@
                     "shortDescription": "pertussis",
                     "association": [
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         }
                     ]
                 },
@@ -7898,9 +7816,7 @@
                     "shortDescription": "influenza, split (incl. purified surface antigen)",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -7909,9 +7825,7 @@
                     "shortDescription": "influenza, whole",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -7920,9 +7834,7 @@
                     "shortDescription": "Hib, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         }
                     ]
                 },
@@ -7931,9 +7843,7 @@
                     "shortDescription": "Rabies, intramuscular injection",
                     "association": [
                         {
-                            "antigen": [
-                                "Rabies"
-                            ]
+                            "antigen": "Rabies"
                         }
                     ]
                 },
@@ -7942,19 +7852,13 @@
                     "shortDescription": "DTaP",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         }
                     ]
                 },
@@ -7963,9 +7867,7 @@
                     "shortDescription": "varicella",
                     "association": [
                         {
-                            "antigen": [
-                                "Varicella"
-                            ]
+                            "antigen": "Varicella"
                         }
                     ]
                 },
@@ -7974,24 +7876,16 @@
                     "shortDescription": "DTP-Hib",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         },
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         }
                     ]
                 },
@@ -8000,9 +7894,7 @@
                     "shortDescription": "Typhoid oral, live, attenuated",
                     "association": [
                         {
-                            "antigen": [
-                                "Typhoid"
-                            ]
+                            "antigen": "Typhoid"
                         }
                     ]
                 },
@@ -8011,9 +7903,7 @@
                     "shortDescription": "cholera, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Cholera"
-                            ]
+                            "antigen": "Cholera"
                         }
                     ]
                 },
@@ -8022,14 +7912,10 @@
                     "shortDescription": "DT (pediatric)",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         }
                     ]
                 },
@@ -8038,9 +7924,7 @@
                     "shortDescription": "Hep A, pediatric, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "HepA"
-                            ]
+                            "antigen": "HepA"
                         }
                     ]
                 },
@@ -8049,9 +7933,7 @@
                     "shortDescription": "meningococcal MPSV4",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         }
                     ]
                 },
@@ -8060,9 +7942,7 @@
                     "shortDescription": "pneumococcal polysaccharide PPV23",
                     "association": [
                         {
-                            "antigen": [
-                                "Pneumococcal"
-                            ]
+                            "antigen": "Pneumococcal"
                         }
                     ]
                 },
@@ -8071,9 +7951,7 @@
                     "shortDescription": "tetanus toxoid, adsorbed",
                     "association": [
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         }
                     ]
                 },
@@ -8082,9 +7960,7 @@
                     "shortDescription": "Yellow Fever",
                     "association": [
                         {
-                            "antigen": [
-                                "Yellow Fever"
-                            ]
+                            "antigen": "Yellow Fever"
                         }
                     ]
                 },
@@ -8093,14 +7969,10 @@
                     "shortDescription": "rubella/mumps",
                     "association": [
                         {
-                            "antigen": [
-                                "Rubella"
-                            ]
+                            "antigen": "Rubella"
                         },
                         {
-                            "antigen": [
-                                "Mumps"
-                            ]
+                            "antigen": "Mumps"
                         }
                     ]
                 },
@@ -8109,9 +7981,7 @@
                     "shortDescription": "Japanese encephalitis SC",
                     "association": [
                         {
-                            "antigen": [
-                                "Japanese Encephalitis"
-                            ]
+                            "antigen": "Japanese Encephalitis"
                         }
                     ]
                 },
@@ -8120,9 +7990,7 @@
                     "shortDescription": "rabies, intradermal injection",
                     "association": [
                         {
-                            "antigen": [
-                                "Rabies"
-                            ]
+                            "antigen": "Rabies"
                         }
                     ]
                 },
@@ -8131,9 +7999,7 @@
                     "shortDescription": "typhoid, parenteral",
                     "association": [
                         {
-                            "antigen": [
-                                "Typhoid"
-                            ]
+                            "antigen": "Typhoid"
                         }
                     ]
                 },
@@ -8142,9 +8008,7 @@
                     "shortDescription": "Hep B, adolescent/high risk infant",
                     "association": [
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -8153,9 +8017,7 @@
                     "shortDescription": "Hep B, adult",
                     "association": [
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -8164,9 +8026,7 @@
                     "shortDescription": "Hep B, dialysis",
                     "association": [
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -8175,9 +8035,7 @@
                     "shortDescription": "Hep B, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -8186,9 +8044,7 @@
                     "shortDescription": "Hib (PRP-D)",
                     "association": [
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         }
                     ]
                 },
@@ -8197,9 +8053,7 @@
                     "shortDescription": "Hib (HbOC)",
                     "association": [
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         }
                     ]
                 },
@@ -8208,9 +8062,7 @@
                     "shortDescription": "Hib (PRP-T)",
                     "association": [
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         }
                     ]
                 },
@@ -8219,9 +8071,7 @@
                     "shortDescription": "Hib (PRP-OMP)",
                     "association": [
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         }
                     ]
                 },
@@ -8230,24 +8080,16 @@
                     "shortDescription": "DTaP-Hib",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         },
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         }
                     ]
                 },
@@ -8256,14 +8098,10 @@
                     "shortDescription": "Hib-Hep B",
                     "association": [
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         },
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -8272,9 +8110,7 @@
                     "shortDescription": "Hep A, adult",
                     "association": [
                         {
-                            "antigen": [
-                                "HepA"
-                            ]
+                            "antigen": "HepA"
                         }
                     ]
                 },
@@ -8283,9 +8119,7 @@
                     "shortDescription": "typhoid, parenteral, AKD (U.S. military)",
                     "association": [
                         {
-                            "antigen": [
-                                "Typhoid"
-                            ]
+                            "antigen": "Typhoid"
                         }
                     ]
                 },
@@ -8294,9 +8128,7 @@
                     "shortDescription": "Dengue Fever",
                     "association": [
                         {
-                            "antigen": [
-                                "Dengue"
-                            ]
+                            "antigen": "Dengue"
                         }
                     ]
                 },
@@ -8305,9 +8137,7 @@
                     "shortDescription": "HPV, quadrivalent",
                     "association": [
                         {
-                            "antigen": [
-                                "HPV"
-                            ]
+                            "antigen": "HPV"
                         }
                     ]
                 },
@@ -8316,9 +8146,7 @@
                     "shortDescription": "rotavirus, tetravalent",
                     "association": [
                         {
-                            "antigen": [
-                                "Rotavirus"
-                            ]
+                            "antigen": "Rotavirus"
                         }
                     ]
                 },
@@ -8327,9 +8155,7 @@
                     "shortDescription": "vaccinia - smallpox",
                     "association": [
                         {
-                            "antigen": [
-                                "Orthopoxvirus"
-                            ]
+                            "antigen": "Orthopoxvirus"
                         }
                     ]
                 },
@@ -8338,9 +8164,7 @@
                     "shortDescription": "Tick-borne encephalitis vaccine (non-US)",
                     "association": [
                         {
-                            "antigen": [
-                                "TBE"
-                            ]
+                            "antigen": "TBE"
                         }
                     ]
                 },
@@ -8349,9 +8173,7 @@
                     "shortDescription": "Hep A, ped/adol, 2 dose",
                     "association": [
                         {
-                            "antigen": [
-                                "HepA"
-                            ]
+                            "antigen": "HepA"
                         }
                     ]
                 },
@@ -8360,9 +8182,7 @@
                     "shortDescription": "Hep A, ped/adol, 3 dose",
                     "association": [
                         {
-                            "antigen": [
-                                "HepA"
-                            ]
+                            "antigen": "HepA"
                         }
                     ]
                 },
@@ -8371,9 +8191,7 @@
                     "shortDescription": "Hep A, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "HepA"
-                            ]
+                            "antigen": "HepA"
                         }
                     ]
                 },
@@ -8382,9 +8200,7 @@
                     "shortDescription": "influenza, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -8393,9 +8209,7 @@
                     "shortDescription": "polio, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -8404,9 +8218,7 @@
                     "shortDescription": "Rabies, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Rabies"
-                            ]
+                            "antigen": "Rabies"
                         }
                     ]
                 },
@@ -8415,9 +8227,7 @@
                     "shortDescription": "typhoid, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Typhoid"
-                            ]
+                            "antigen": "Typhoid"
                         }
                     ]
                 },
@@ -8426,24 +8236,16 @@
                     "shortDescription": "MMRV",
                     "association": [
                         {
-                            "antigen": [
-                                "Measles"
-                            ]
+                            "antigen": "Measles"
                         },
                         {
-                            "antigen": [
-                                "Mumps"
-                            ]
+                            "antigen": "Mumps"
                         },
                         {
-                            "antigen": [
-                                "Rubella"
-                            ]
+                            "antigen": "Rubella"
                         },
                         {
-                            "antigen": [
-                                "Varicella"
-                            ]
+                            "antigen": "Varicella"
                         }
                     ]
                 },
@@ -8452,9 +8254,7 @@
                     "shortDescription": "pneumococcal conjugate PCV 7",
                     "association": [
                         {
-                            "antigen": [
-                                "Pneumococcal"
-                            ]
+                            "antigen": "Pneumococcal"
                         }
                     ]
                 },
@@ -8463,9 +8263,7 @@
                     "shortDescription": "Typhoid capsular polysaccharide",
                     "association": [
                         {
-                            "antigen": [
-                                "Typhoid"
-                            ]
+                            "antigen": "Typhoid"
                         }
                     ]
                 },
@@ -8474,29 +8272,19 @@
                     "shortDescription": "DTP-Hib-Hep B",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         },
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         },
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -8505,9 +8293,7 @@
                     "shortDescription": "meningococcal C conjugate",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         }
                     ]
                 },
@@ -8516,14 +8302,10 @@
                     "shortDescription": "Hep A-Hep B",
                     "association": [
                         {
-                            "antigen": [
-                                "HepA"
-                            ]
+                            "antigen": "HepA"
                         },
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -8532,9 +8314,7 @@
                     "shortDescription": "vaccinia - smallpox diluted",
                     "association": [
                         {
-                            "antigen": [
-                                "Orthopoxvirus"
-                            ]
+                            "antigen": "Orthopoxvirus"
                         }
                     ]
                 },
@@ -8543,19 +8323,13 @@
                     "shortDescription": "DTaP, 5 pertussis antigens",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         }
                     ]
                 },
@@ -8564,19 +8338,13 @@
                     "shortDescription": "DTaP, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         }
                     ]
                 },
@@ -8585,9 +8353,7 @@
                     "shortDescription": "meningococcal, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         }
                     ]
                 },
@@ -8596,9 +8362,7 @@
                     "shortDescription": "pneumococcal, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Pneumococcal"
-                            ]
+                            "antigen": "Pneumococcal"
                         }
                     ]
                 },
@@ -8607,29 +8371,19 @@
                     "shortDescription": "DTaP-Hep B-IPV",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         },
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         },
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -8638,9 +8392,7 @@
                     "shortDescription": "influenza, live, trivalent, intranasal",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -8649,9 +8401,7 @@
                     "shortDescription": "tetanus toxoid, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         }
                     ]
                 },
@@ -8660,14 +8410,10 @@
                     "shortDescription": "Td (adult) preservative free",
                     "association": [
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         }
                     ]
                 },
@@ -8676,9 +8422,7 @@
                     "shortDescription": "meningococcal MCV4P",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         }
                     ]
                 },
@@ -8687,19 +8431,13 @@
                     "shortDescription": "Tdap",
                     "association": [
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         }
                     ]
                 },
@@ -8708,9 +8446,7 @@
                     "shortDescription": "rotavirus, pentavalent",
                     "association": [
                         {
-                            "antigen": [
-                                "Rotavirus"
-                            ]
+                            "antigen": "Rotavirus"
                         }
                     ]
                 },
@@ -8719,9 +8455,7 @@
                     "shortDescription": "HPV, bivalent",
                     "association": [
                         {
-                            "antigen": [
-                                "HPV"
-                            ]
+                            "antigen": "HPV"
                         }
                     ]
                 },
@@ -8730,9 +8464,7 @@
                     "shortDescription": "rotavirus, monovalent",
                     "association": [
                         {
-                            "antigen": [
-                                "Rotavirus"
-                            ]
+                            "antigen": "Rotavirus"
                         }
                     ]
                 },
@@ -8741,29 +8473,19 @@
                     "shortDescription": "DTaP-Hib-IPV",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         },
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         },
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -8772,16 +8494,12 @@
                     "shortDescription": "Zoster live",
                     "association": [
                         {
-                            "antigen": [
-                                "Varicella"
-                            ],
+                            "antigen": "Varicella",
                             "associationBeginAge": "0 days",
                             "associationEndAge": "50 years"
                         },
                         {
-                            "antigen": [
-                                "Zoster"
-                            ],
+                            "antigen": "Zoster",
                             "associationBeginAge": "50 years"
                         }
                     ]
@@ -8791,9 +8509,7 @@
                     "shortDescription": "rotavirus, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Rotavirus"
-                            ]
+                            "antigen": "Rotavirus"
                         }
                     ]
                 },
@@ -8802,9 +8518,7 @@
                     "shortDescription": "Japanese Encephalitis, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Japanese Encephalitis"
-                            ]
+                            "antigen": "Japanese Encephalitis"
                         }
                     ]
                 },
@@ -8813,24 +8527,16 @@
                     "shortDescription": "DTaP-IPV",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         },
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -8839,34 +8545,22 @@
                     "shortDescription": "DTaP-IPV-HIB-HEP B, historical",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         },
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         },
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         },
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -8875,9 +8569,7 @@
                     "shortDescription": "Pneumococcal conjugate PCV 13",
                     "association": [
                         {
-                            "antigen": [
-                                "Pneumococcal"
-                            ]
+                            "antigen": "Pneumococcal"
                         }
                     ]
                 },
@@ -8886,9 +8578,7 @@
                     "shortDescription": "Japanese Encephalitis, VC",
                     "association": [
                         {
-                            "antigen": [
-                                "Japanese Encephalitis"
-                            ]
+                            "antigen": "Japanese Encephalitis"
                         }
                     ]
                 },
@@ -8897,9 +8587,7 @@
                     "shortDescription": "Influenza, high dose, trivalent, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -8908,9 +8596,7 @@
                     "shortDescription": "Meningococcal MCV4O",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         }
                     ]
                 },
@@ -8919,9 +8605,7 @@
                     "shortDescription": "HPV, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "HPV"
-                            ]
+                            "antigen": "HPV"
                         }
                     ]
                 },
@@ -8930,14 +8614,10 @@
                     "shortDescription": "Td (adult)",
                     "association": [
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         }
                     ]
                 },
@@ -8946,14 +8626,10 @@
                     "shortDescription": "Td(adult) unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         }
                     ]
                 },
@@ -8962,9 +8638,7 @@
                     "shortDescription": "Influenza, split virus, trivalent, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -8973,9 +8647,7 @@
                     "shortDescription": "Influenza, split virus, trivalent, preservative",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -8984,9 +8656,7 @@
                     "shortDescription": "tetanus toxoid, not adsorbed",
                     "association": [
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         }
                     ]
                 },
@@ -8995,9 +8665,7 @@
                     "shortDescription": "influenza, seasonal, intradermal, preservative free",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9006,34 +8674,22 @@
                     "shortDescription": "DTaP,IPV,Hib,HepB",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         },
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         },
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         },
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -9042,9 +8698,7 @@
                     "shortDescription": "meningococcal MCV4, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         }
                     ]
                 },
@@ -9053,14 +8707,10 @@
                     "shortDescription": "Meningococcal C/Y-HIB PRP",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         },
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         }
                     ]
                 },
@@ -9069,9 +8719,7 @@
                     "shortDescription": "Influenza, live, quadrivalent, intranasal",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9080,9 +8728,7 @@
                     "shortDescription": "Influenza, split virus, quadrivalent, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9091,9 +8737,7 @@
                     "shortDescription": "influenza, nasal, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9102,9 +8746,7 @@
                     "shortDescription": "Pneumococcal Conjugate, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Pneumococcal"
-                            ]
+                            "antigen": "Pneumococcal"
                         }
                     ]
                 },
@@ -9113,9 +8755,7 @@
                     "shortDescription": "Influenza, MDCK, trivalent, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9124,9 +8764,7 @@
                     "shortDescription": "Influenza, recombinant, trivalent, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9135,9 +8773,7 @@
                     "shortDescription": "Influenza, split virus, quadrivalent, preservative",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9146,9 +8782,7 @@
                     "shortDescription": "Influenza, injectable, quadrivalent, preservative free, pediatric",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9157,9 +8791,7 @@
                     "shortDescription": "Meningococcal B, recombinant",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal B"
-                            ]
+                            "antigen": "Meningococcal B"
                         }
                     ]
                 },
@@ -9168,9 +8800,7 @@
                     "shortDescription": "Meningococcal B, OMV",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal B"
-                            ]
+                            "antigen": "Meningococcal B"
                         }
                     ]
                 },
@@ -9179,9 +8809,7 @@
                     "shortDescription": "meningococcal B, unspecified",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal B"
-                            ]
+                            "antigen": "Meningococcal B"
                         }
                     ]
                 },
@@ -9190,9 +8818,7 @@
                     "shortDescription": "HPV9",
                     "association": [
                         {
-                            "antigen": [
-                                "HPV"
-                            ]
+                            "antigen": "HPV"
                         }
                     ]
                 },
@@ -9201,9 +8827,7 @@
                     "shortDescription": "influenza, intradermal, quadrivalent, preservative free",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9212,14 +8836,10 @@
                     "shortDescription": "meningococcal, unknown serogroups",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         },
                         {
-                            "antigen": [
-                                "Meningococcal B"
-                            ]
+                            "antigen": "Meningococcal B"
                         }
                     ]
                 },
@@ -9228,9 +8848,7 @@
                     "shortDescription": "Influenza, adjuvanted, trivalent, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9239,9 +8857,7 @@
                     "shortDescription": "Hep A, live attenuated",
                     "association": [
                         {
-                            "antigen": [
-                                "HepA"
-                            ]
+                            "antigen": "HepA"
                         }
                     ]
                 },
@@ -9250,29 +8866,19 @@
                     "shortDescription": "DTAP/IPV/HIB - non-US",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         },
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         },
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         }
                     ]
                 },
@@ -9281,9 +8887,7 @@
                     "shortDescription": "Influenza, MDCK, quadrivalent, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9292,9 +8896,7 @@
                     "shortDescription": "cholera, WC-rBS",
                     "association": [
                         {
-                            "antigen": [
-                                "Cholera"
-                            ]
+                            "antigen": "Cholera"
                         }
                     ]
                 },
@@ -9303,9 +8905,7 @@
                     "shortDescription": "cholera, BivWC",
                     "association": [
                         {
-                            "antigen": [
-                                "Cholera"
-                            ]
+                            "antigen": "Cholera"
                         }
                     ]
                 },
@@ -9314,9 +8914,7 @@
                     "shortDescription": "cholera, live attenuated",
                     "association": [
                         {
-                            "antigen": [
-                                "Cholera"
-                            ]
+                            "antigen": "Cholera"
                         }
                     ]
                 },
@@ -9325,9 +8923,7 @@
                     "shortDescription": "Rabies - IM Diploid cell culture",
                     "association": [
                         {
-                            "antigen": [
-                                "Rabies"
-                            ]
+                            "antigen": "Rabies"
                         }
                     ]
                 },
@@ -9336,9 +8932,7 @@
                     "shortDescription": "Rabies - IM fibroblast culture",
                     "association": [
                         {
-                            "antigen": [
-                                "Rabies"
-                            ]
+                            "antigen": "Rabies"
                         }
                     ]
                 },
@@ -9347,9 +8941,7 @@
                     "shortDescription": "pneumococcal conjugate PCV10",
                     "association": [
                         {
-                            "antigen": [
-                                "Pneumococcal"
-                            ]
+                            "antigen": "Pneumococcal"
                         }
                     ]
                 },
@@ -9358,9 +8950,7 @@
                     "shortDescription": "OPV bivalent",
                     "association": [
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -9369,9 +8959,7 @@
                     "shortDescription": "OPV ,monovalent, unspecified",
                     "association": [
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -9380,9 +8968,7 @@
                     "shortDescription": "OPV, Unspecified",
                     "association": [
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -9391,9 +8977,7 @@
                     "shortDescription": "Yellow fever vaccine - alt",
                     "association": [
                         {
-                            "antigen": [
-                                "Yellow Fever"
-                            ]
+                            "antigen": "Yellow Fever"
                         }
                     ]
                 },
@@ -9402,9 +8986,7 @@
                     "shortDescription": "Yellow fever, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Yellow Fever"
-                            ]
+                            "antigen": "Yellow Fever"
                         }
                     ]
                 },
@@ -9413,9 +8995,7 @@
                     "shortDescription": "Influenza, recombinant, quadrivalent, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9424,9 +9004,7 @@
                     "shortDescription": "Influenza, MDCK, quadrivalent, preservative",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9435,9 +9013,7 @@
                     "shortDescription": "zoster recombinant",
                     "association": [
                         {
-                            "antigen": [
-                                "Zoster"
-                            ]
+                            "antigen": "Zoster"
                         }
                     ]
                 },
@@ -9446,9 +9022,7 @@
                     "shortDescription": "zoster, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Zoster"
-                            ]
+                            "antigen": "Zoster"
                         }
                     ]
                 },
@@ -9457,9 +9031,7 @@
                     "shortDescription": "Hep B, adjuvanted",
                     "association": [
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -9468,9 +9040,7 @@
                     "shortDescription": "Typhoid conjugate vaccine (TCV)",
                     "association": [
                         {
-                            "antigen": [
-                                "Typhoid"
-                            ]
+                            "antigen": "Typhoid"
                         }
                     ]
                 },
@@ -9479,9 +9049,7 @@
                     "shortDescription": "meningococcal A polysaccharide",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         }
                     ]
                 },
@@ -9490,9 +9058,7 @@
                     "shortDescription": "meningococcal AC polysaccharide",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         }
                     ]
                 },
@@ -9501,14 +9067,10 @@
                     "shortDescription": "Hep A-Hep B, pediatric/adolescent",
                     "association": [
                         {
-                            "antigen": [
-                                "HepA"
-                            ]
+                            "antigen": "HepA"
                         },
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -9517,9 +9079,7 @@
                     "shortDescription": "Influenza, Southern Hemisphere, unspecified formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9528,19 +9088,13 @@
                     "shortDescription": "DT, IPV adsorbed",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -9549,14 +9103,10 @@
                     "shortDescription": "Td, adsorbed, preservative free, adult use, Lf unspecified",
                     "association": [
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         }
                     ]
                 },
@@ -9565,9 +9115,7 @@
                     "shortDescription": "Influenza, high-dose, quadrivalent, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9576,29 +9124,19 @@
                     "shortDescription": "DTP-hepB-Hib Pentavalent Non-US",
                     "association": [
                         {
-                            "antigen": [
-                                "Diphtheria"
-                            ]
+                            "antigen": "Diphtheria"
                         },
                         {
-                            "antigen": [
-                                "Tetanus"
-                            ]
+                            "antigen": "Tetanus"
                         },
                         {
-                            "antigen": [
-                                "Pertussis"
-                            ]
+                            "antigen": "Pertussis"
                         },
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         },
                         {
-                            "antigen": [
-                                "Hib"
-                            ]
+                            "antigen": "Hib"
                         }
                     ]
                 },
@@ -9607,9 +9145,7 @@
                     "shortDescription": "Influenza, Southern Hemisphere, pediatric, preservative free",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9618,9 +9154,7 @@
                     "shortDescription": "Influenza, Southern Hemisphere, preservative free",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9629,9 +9163,7 @@
                     "shortDescription": "Influenza, Southern Hemisphere, quadrivalent, with preservative",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9640,9 +9172,7 @@
                     "shortDescription": "Meningococcal Polysaccharide groups A, C, Y, W-135 TT Conjugate",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         }
                     ]
                 },
@@ -9651,9 +9181,7 @@
                     "shortDescription": "Ebola Zaire Vaccine, Live",
                     "association": [
                         {
-                            "antigen": [
-                                "Ebola"
-                            ]
+                            "antigen": "Ebola"
                         }
                     ]
                 },
@@ -9662,9 +9190,7 @@
                     "shortDescription": "Influenza, adjuvanted, quadrivalent, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9673,9 +9199,7 @@
                     "shortDescription": "vaccinia - smallpox mpox vaccine live, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Orthopoxvirus"
-                            ]
+                            "antigen": "Orthopoxvirus"
                         }
                     ]
                 },
@@ -9684,9 +9208,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, 100 mcg/0.5 mL dose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9695,9 +9217,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9706,9 +9226,7 @@
                     "shortDescription": "COVID-19 vaccine, vector-nr, rS-ChAdOx1, PF, 0.5 mL",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9717,9 +9235,7 @@
                     "shortDescription": "COVID-19 vaccine, Subunit, rS-nanoparticle+Matrix-M1 Adjuvant, PF, 0.5 mL",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9728,9 +9244,7 @@
                     "shortDescription": "SARS-COV-2 (COVID-19) vaccine, vector non-replicating, recombinant spike protein-Ad26, preservative free, 0.5 mL",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9739,9 +9253,7 @@
                     "shortDescription": "SARS-COV-2 (COVID-19), vaccine Unspecified Formulation",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9750,9 +9262,7 @@
                     "shortDescription": "Ebola, Unspecified",
                     "association": [
                         {
-                            "antigen": [
-                                "Ebola"
-                            ]
+                            "antigen": "Ebola"
                         }
                     ]
                 },
@@ -9761,9 +9271,7 @@
                     "shortDescription": "Pneumococcal conjugate PCV 15",
                     "association": [
                         {
-                            "antigen": [
-                                "Pneumococcal"
-                            ]
+                            "antigen": "Pneumococcal"
                         }
                     ]
                 },
@@ -9772,9 +9280,7 @@
                     "shortDescription": "Pneumococcal conjugate PCV 20",
                     "association": [
                         {
-                            "antigen": [
-                                "Pneumococcal"
-                            ]
+                            "antigen": "Pneumococcal"
                         }
                     ]
                 },
@@ -9783,9 +9289,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose, tris-sucrose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9794,9 +9298,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL dose, tris-sucrose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9805,9 +9307,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, 3 mcg/0.2 mL dose, tris-sucrose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9816,9 +9316,7 @@
                     "shortDescription": "HepB recombinant, 3-antigen, Al(OH)3",
                     "association": [
                         {
-                            "antigen": [
-                                "HepB"
-                            ]
+                            "antigen": "HepB"
                         }
                     ]
                 },
@@ -9827,9 +9325,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL dose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9838,9 +9334,7 @@
                     "shortDescription": "Tick-borne encephalitis, unspecified",
                     "association": [
                         {
-                            "antigen": [
-                                "TBE"
-                            ]
+                            "antigen": "TBE"
                         }
                     ]
                 },
@@ -9849,9 +9343,7 @@
                     "shortDescription": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
                     "association": [
                         {
-                            "antigen": [
-                                "TBE"
-                            ]
+                            "antigen": "TBE"
                         }
                     ]
                 },
@@ -9860,9 +9352,7 @@
                     "shortDescription": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
                     "association": [
                         {
-                            "antigen": [
-                                "TBE"
-                            ]
+                            "antigen": "TBE"
                         }
                     ]
                 },
@@ -9871,9 +9361,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, pediatric 50 mcg/0.5 mL dose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9882,9 +9370,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, pediatric 25 mcg/0.25 mL dose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9893,9 +9379,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, bivalent, PF, 50 mcg/0.5 mL or 25 mcg/0.25 mL dose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9904,9 +9388,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, bivalent, PF, 10 mcg/0.2 mL",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9915,9 +9397,7 @@
                     "shortDescription": "influenza, Southern Hemisphere, high-dose, quadrivalent",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -9926,9 +9406,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, bivalent, PF, 30 mcg/0.3 mL dose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9937,9 +9415,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, bivalent, PF, 10 mcg/0.2 mL dose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9948,9 +9424,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, bivalent, PF, 3 mcg/0.2 mL dose",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -9959,9 +9433,7 @@
                     "shortDescription": "RSV, recombinant, protein subunit RSVpreF, adjuvant reconstituted, 0.5 mL, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "RSV"
-                            ]
+                            "antigen": "RSV"
                         }
                     ]
                 },
@@ -9970,9 +9442,7 @@
                     "shortDescription": "Respiratory syncytial virus (RSV), unspecified",
                     "association": [
                         {
-                            "antigen": [
-                                "RSV"
-                            ]
+                            "antigen": "RSV"
                         }
                     ]
                 },
@@ -9981,9 +9451,7 @@
                     "shortDescription": "RSV, bivalent, protein subunit RSVpreF, diluent reconstituted, 0.5 mL, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "RSV"
-                            ]
+                            "antigen": "RSV"
                         }
                     ]
                 },
@@ -9992,9 +9460,7 @@
                     "shortDescription": "RSV, mAb, nirsevimab-alip, 0.5 mL, neonate to 24 months",
                     "association": [
                         {
-                            "antigen": [
-                                "RSV"
-                            ]
+                            "antigen": "RSV"
                         }
                     ]
                 },
@@ -10003,9 +9469,7 @@
                     "shortDescription": "RSV, mAb, nirsevimab-alip, 1.0 mL, neonate to 24 months",
                     "association": [
                         {
-                            "antigen": [
-                                "RSV"
-                            ]
+                            "antigen": "RSV"
                         }
                     ]
                 },
@@ -10014,9 +9478,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 3 mcg/0.3 mL",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10025,9 +9487,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 30 mcg/0.3 mL",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10036,9 +9496,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 10 mcg/0.3 mL",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10047,9 +9505,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, 25 mcg/0.25 mL",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10058,9 +9514,7 @@
                     "shortDescription": "COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10069,9 +9523,7 @@
                     "shortDescription": "COVID-19, subunit, rS-nanoparticle, adjuvanted, PF, 5 mcg/0.5 mL",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10080,9 +9532,7 @@
                     "shortDescription": "Respiratory syncytial virus (RSV) vaccine, unspecified",
                     "association": [
                         {
-                            "antigen": [
-                                "RSV"
-                            ]
+                            "antigen": "RSV"
                         }
                     ]
                 },
@@ -10091,9 +9541,7 @@
                     "shortDescription": "Respiratory syncytial virus (RSV) monoclonal antibody (MAB), unspecified",
                     "association": [
                         {
-                            "antigen": [
-                                "RSV"
-                            ]
+                            "antigen": "RSV"
                         }
                     ]
                 },
@@ -10102,14 +9550,10 @@
                     "shortDescription": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Meningococcal"
-                            ]
+                            "antigen": "Meningococcal"
                         },
                         {
-                            "antigen": [
-                                "Meningococcal B"
-                            ]
+                            "antigen": "Meningococcal B"
                         }
                     ]
                 },
@@ -10118,9 +9562,7 @@
                     "shortDescription": "Chikungunya live attenuated vaccine, 0.5 mL, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "Chikungunya"
-                            ]
+                            "antigen": "Chikungunya"
                         }
                     ]
                 },
@@ -10129,9 +9571,7 @@
                     "shortDescription": "Influenza, MDCK, trivalent, preservative",
                     "association": [
                         {
-                            "antigen": [
-                                "Influenza"
-                            ]
+                            "antigen": "Influenza"
                         }
                     ]
                 },
@@ -10140,9 +9580,7 @@
                     "shortDescription": "Poliovirus, inactivated, fractional-dose (fIPV)",
                     "association": [
                         {
-                            "antigen": [
-                                "Polio"
-                            ]
+                            "antigen": "Polio"
                         }
                     ]
                 },
@@ -10151,9 +9589,7 @@
                     "shortDescription": "RSV, mRNA, injectable, PF",
                     "association": [
                         {
-                            "antigen": [
-                                "RSV"
-                            ]
+                            "antigen": "RSV"
                         }
                     ]
                 },
@@ -10162,9 +9598,7 @@
                     "shortDescription": "Pneumococcal conjugate PCV 21",
                     "association": [
                         {
-                            "antigen": [
-                                "Pneumococcal"
-                            ]
+                            "antigen": "Pneumococcal"
                         }
                     ]
                 },
@@ -10173,9 +9607,7 @@
                     "shortDescription": "COVID-19 Non-US Vaccine, Product Unknown",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10184,9 +9616,7 @@
                     "shortDescription": "COVID-19 IV Non-US Vaccine (QAZCOVID-IN)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10195,9 +9625,7 @@
                     "shortDescription": "COVID-19 IV Non-US Vaccine (COVAXIN)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10206,9 +9634,7 @@
                     "shortDescription": "COVID-19 LAV Non-US Vaccine (COVIVAC)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10217,9 +9643,7 @@
                     "shortDescription": "COVID-19 VVnr Non-US Vaccine (Sputnik Light)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10228,9 +9652,7 @@
                     "shortDescription": "COVID-19 VVnr Non-US Vaccine (Sputnik V)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10239,9 +9661,7 @@
                     "shortDescription": "COVID-19 VVnr Non-US Vaccine (CanSino Biological Inc./Beijing Institute of Biotechnology)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10250,9 +9670,7 @@
                     "shortDescription": "COVID-19 PS Non-US Vaccine (Anhui Zhifei Longcom Biopharmaceutical + Institute of Microbiology Chinese academy of Sciences)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10261,9 +9679,7 @@
                     "shortDescription": "COVID-19 PS Non-US Vaccine (Jiangsu Province Centers for Disease Control and Prevention)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10272,9 +9688,7 @@
                     "shortDescription": "COVID-19 PS Non-US Vaccine (EpiVacCorona)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10283,9 +9697,7 @@
                     "shortDescription": "COVID-19 IV Non-US Vaccine (BIBP, Sinopharm)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10294,9 +9706,7 @@
                     "shortDescription": "COVID-19 IV Non-US Vaccine (CoronaVac, Sinovac)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10305,9 +9715,7 @@
                     "shortDescription": "COVID-19 VLP Non-US Vaccine (Medicago, Covifenz)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10316,9 +9724,7 @@
                     "shortDescription": "COVID-19 PS Non-US Vaccine (Anhui Zhifei Longcom, Zifivax)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10327,9 +9733,7 @@
                     "shortDescription": "COVID-19 DNA Non-US Vaccine (Zydus Cadila, ZyCoV-D)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10338,9 +9742,7 @@
                     "shortDescription": "COVID-19 PS Non-US Vaccine (Medigen, MVC-COV1901)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10349,9 +9751,7 @@
                     "shortDescription": "COVID-19 Inactivated Non-US Vaccine (Minhai Biotechnology Co, KCONVAC)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10360,9 +9760,7 @@
                     "shortDescription": "COVID-19 PS Non-US Vaccine (Biological E Limited, Corbevax)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10371,9 +9769,7 @@
                     "shortDescription": "COVID-19 Inactivated Non-US Vaccine (VLA2001, Valneva)",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10382,9 +9778,7 @@
                     "shortDescription": "COVID-19 mRNA, bivalent, original/Omicron BA.1 Non-US Vaccine Product (Spikevax Bivalent), Moderna",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10393,9 +9787,7 @@
                     "shortDescription": "COVID-19 mRNA, bivalent, original/Omicron BA.1 Non-US Vaccine Product (Comirnaty Bivalent), Pfizer-BioNTech",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 },
@@ -10404,9 +9796,7 @@
                     "shortDescription": "COVID-19 SP, protein-based, adjuvanted (VidPrevtyn Beta), Sanofi-GSK",
                     "association": [
                         {
-                            "antigen": [
-                                "COVID-19"
-                            ]
+                            "antigen": "COVID-19"
                         }
                     ]
                 }

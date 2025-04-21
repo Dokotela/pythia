@@ -23,7 +23,7 @@ void main(List<String> args) {
 
   // In case you want to collect them in memory:
   final List<AntigenSupportingData> allAntigenData = [];
-  ScheduleSupportingData? scheduleData;
+  var scheduleData = ScheduleSupportingData();
 
   // 3) Iterate over files
   for (final fileEntity in sourceDir.listSync()) {
@@ -42,19 +42,18 @@ void main(List<String> args) {
         print('Wrote $jsonPath');
       } else if (filePath.contains('ScheduleSupportingData')) {
         // Parse as schedule
-        scheduleData = scheduleParser.parseFile(filePath);
-
-        // Write JSON
-        final jsonPath = '${outputDir.path}/schedule_supporting_data.json';
-        File(jsonPath)
-            .writeAsStringSync(jsonPrettyPrint(scheduleData.toJson()));
-        print('Wrote $jsonPath');
+        scheduleData = scheduleParser.parseFile(filePath, scheduleData);
       } else {
         // Possibly a test-cases file or something else
         print('Unrecognized file (not Antigen nor Schedule): $filePath');
       }
     }
   }
+
+  // Write JSON
+  final jsonPath = '${outputDir.path}/schedule_supporting_data.json';
+  File(jsonPath).writeAsStringSync(jsonPrettyPrint(scheduleData.toJson()));
+  print('Wrote $jsonPath');
 
   print('Done!');
 }

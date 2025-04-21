@@ -35,15 +35,15 @@ class AntigenSheetParser {
       // 1) Antigen Series Overview tab
       if (sheetName == 'Antigen Series Overview') {
         // Store multiline text or parse further if needed
-        final overviewText = _parseSheetAsPlainText(rows);
+        // final overviewText = _parseSheetAsPlainText(rows);
       }
       // 2) Change History tab
       else if (sheetName == 'Change History') {
-        final changeHistoryText = _parseSheetAsPlainText(rows);
+        // final changeHistoryText = _parseSheetAsPlainText(rows);
       }
       // 3) FAQ tab
       else if (sheetName == 'FAQ') {
-        final faqText = _parseSheetAsPlainText(rows);
+        // final faqText = _parseSheetAsPlainText(rows);
       }
       // 4) Immunity tab
       else if (sheetName == 'Immunity') {

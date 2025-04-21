@@ -2,311 +2,365 @@ import 'dart:io';
 import 'package:excel/excel.dart';
 import 'package:pythia/pythia.dart';
 
-/// Fully fleshed-out parser for Schedule Supporting Data.
-/// It populates ScheduleSupportingData with:
-/// - liveVirusConflicts
-/// - vaccineGroups
-/// - vaccineGroupToAntigenMap
-/// - cvxToAntigenMap
-/// - observations
+/// A parser that reads a single Excel file for one piece of the
+/// Schedule Supporting Data, then merges it into an existing
+/// [ScheduleSupportingData] object.
+///
+/// Each file is expected to have only one relevant tab:
+///  - "Coded Observations" file -> "Conditions" tab
+///  - "CVX to Antigen Map" file -> "CVX to Antigen Map" tab
+///  - "Live Virus Conflicts" file -> "Live Virus Conflicts" tab
+///  - "Vaccine Group to Antigen Map" file -> "Vaccine Group to Antigen Map" tab
+///  - "Vaccine Group" file -> "Vaccine Groups" tab
 class ScheduleSheetParser {
-  /// Reads a [excelPath] file and returns a [ScheduleSupportingData] object
-  /// with no placeholders or stub methods.
-  ScheduleSupportingData parseFile(String excelPath) {
-    final bytes = File(excelPath).readAsBytesSync();
+  /// Parse the Excel file at [path], reading only the relevant tab,
+  /// merging the parsed data into [oldScheduleData], and returning
+  /// the updated object.
+  ///
+  /// The [path] filename determines which parse logic we use:
+  ///  - If it contains "Coded Observations" -> parse "Conditions" tab
+  ///  - If it contains "CVX to Antigen Map" -> parse "CVX to Antigen Map" tab
+  ///  - If it contains "Live Virus Conflicts" -> parse "Live Virus Conflicts" tab
+  ///  - If it contains "Vaccine Group to Antigen Map" -> parse "Vaccine Group to Antigen Map" tab
+  ///  - If it contains "Vaccine Group" -> parse "Vaccine Groups" tab
+  ///
+  /// If the filename doesn't match, we just return [oldScheduleData] unchanged.
+  ScheduleSupportingData parseFile(
+    String path,
+    ScheduleSupportingData oldScheduleData,
+  ) {
+    // 1) Read Excel
+    final bytes = File(path).readAsBytesSync();
     final excel = Excel.decodeBytes(bytes);
 
-    var scheduleData = ScheduleSupportingData();
+    // We'll create a local "partial" result, then merge it into oldScheduleData
+    var partial = ScheduleSupportingData();
 
-    // Iterate over each sheet in the workbook
-    for (final sheetName in excel.tables.keys) {
-      final sheet = excel.tables[sheetName]!;
-      // Convert each row into a list of strings
-      final rows = sheet.rows
-          .map((row) => row.map((cell) => cell?.value?.toString() ?? '').toList())
-          .toList();
-
-      // 1. Live Virus Conflicts
-      if (sheetName.contains('Live Virus Conflicts')) {
-        final parsedConflicts = _parseLiveVirusConflicts(rows);
-        scheduleData = scheduleData.copyWith(liveVirusConflicts: parsedConflicts);
-      }
-      // 2. Vaccine Groups
-      else if (sheetName.contains('Vaccine Groups')) {
-        final parsedVaccineGroups = _parseVaccineGroups(rows);
-        scheduleData = scheduleData.copyWith(vaccineGroups: parsedVaccineGroups);
-      }
-      // 3. Vaccine Group to Antigen Map
-      else if (sheetName.contains('Vaccine Group to Antigen Map')) {
-        final groupMaps = _parseVaccineGroupMap(rows);
-        scheduleData = scheduleData.copyWith(
-          vaccineGroupToAntigenMap: scheduleData.vaccineGroupToAntigenMap
-              ?.copyWith(vaccineGroupMap: groupMaps) ??
-              VaccineGroupToAntigenMap(vaccineGroupMap: groupMaps),
-        );
-      }
-      // 4. CVX to Antigen Map
-      else if (sheetName.contains('CVX to Antigen Map')) {
-        final cvxMaps = _parseCVXToAntigenMap(rows);
-        scheduleData = scheduleData.copyWith(
-          cvxToAntigenMap: scheduleData.cvxToAntigenMap
-              ?.copyWith(cvxMap: cvxMaps) ??
-              CvxToAntigenMap(cvxMap: cvxMaps),
-        );
-      }
-      // 5. Observations (or Conditions)
-      else if (sheetName.contains('Observations') ||
-          sheetName.contains('Conditions')) {
-        final obsList = _parseObservations(rows);
-        scheduleData = scheduleData.copyWith(
-          observations: scheduleData.observations
-              ?.copyWith(observation: obsList) ??
+    // 2) Check which type of file we have
+    final lower = path.toLowerCase();
+    if (lower.contains('coded observations')) {
+      // We'll parse the "Conditions" tab
+      final tabName = 'Conditions';
+      if (excel.tables.keys.contains(tabName)) {
+        final sheet = excel.tables[tabName]!;
+        final rows = _sheetToRows(sheet);
+        final obsList = _parseConditionsTab(rows);
+        partial = partial.copyWith(
+          observations: partial.observations?.copyWith(
+                observation: obsList,
+              ) ??
               VaxObservations(observation: obsList),
         );
       }
-      // If there are other sheets that don't map to your model, ignore them
-    }
-
-    return scheduleData;
-  }
-
-  /// -----------------------------------------------------------------------
-  /// 1) Parse "Live Virus Conflicts" sheet
-  /// -----------------------------------------------------------------------
-  ///
-  /// Expects rows with columns:
-  /// [0] previous vaccineType
-  /// [1] previous cvx
-  /// [2] current vaccineType
-  /// [3] current cvx
-  /// [4] conflictBeginInterval
-  /// [5] minConflictEndInterval
-  /// [6] conflictEndInterval
-  LiveVirusConflicts _parseLiveVirusConflicts(List<List<String>> rows) {
-    final conflictList = <LiveVirusConflict>[];
-
-    for (final row in rows) {
-      // Skip headers or completely empty rows
-      if (row.isEmpty ||
-          row[0].trim().isEmpty ||
-          row[0].toLowerCase().contains('previous')) {
-        continue;
+    } else if (lower.contains('cvx to antigen map')) {
+      // We'll parse the "CVX to Antigen Map" tab
+      final tabName = 'CVX to Antigen Map';
+      if (excel.tables.keys.contains(tabName)) {
+        final sheet = excel.tables[tabName]!;
+        final rows = _sheetToRows(sheet);
+        final cvxList = _parseCvxToAntigenMapTab(rows);
+        partial = partial.copyWith(
+          cvxToAntigenMap: partial.cvxToAntigenMap?.copyWith(cvxMap: cvxList) ??
+              CvxToAntigenMap(cvxMap: cvxList),
+        );
       }
-
-      final previousVac = Vaccine(
-        vaccineType: row[0],
-        cvx: row.length > 1 ? row[1] : '',
-      );
-      final currentVac = Vaccine(
-        vaccineType: row.length > 2 ? row[2] : '',
-        cvx: row.length > 3 ? row[3] : '',
-      );
-      final conflictBeginInterval = row.length > 4 ? row[4] : '';
-      final minConflictEndInterval = row.length > 5 ? row[5] : '';
-      final conflictEndInterval = row.length > 6 ? row[6] : '';
-
-      final conflict = LiveVirusConflict(
-        previous: previousVac,
-        current: currentVac,
-        conflictBeginInterval: conflictBeginInterval,
-        minConflictEndInterval: minConflictEndInterval,
-        conflictEndInterval: conflictEndInterval,
-      );
-      conflictList.add(conflict);
-    }
-
-    return LiveVirusConflicts(liveVirusConflict: conflictList);
-  }
-
-  /// -----------------------------------------------------------------------
-  /// 2) Parse "Vaccine Groups" sheet
-  /// -----------------------------------------------------------------------
-  ///
-  /// Expects rows with columns:
-  /// [0] group name
-  /// [1] administerFullVaccineGroup (Yes/No or some Binary)
-  VaccineGroups _parseVaccineGroups(List<List<String>> rows) {
-    final vgList = <VaccineGroup>[];
-
-    for (final row in rows) {
-      // Skip headers or empty
-      if (row.isEmpty ||
-          row[0].trim().isEmpty ||
-          row[0].toLowerCase().contains('name')) {
-        continue;
+    } else if (lower.contains('live virus conflicts')) {
+      // We'll parse the "Live Virus Conflicts" tab
+      final tabName = 'Live Virus Conflicts';
+      if (excel.tables.keys.contains(tabName)) {
+        final sheet = excel.tables[tabName]!;
+        final rows = _sheetToRows(sheet);
+        final conflicts = _parseLiveVirusConflictsTab(rows);
+        partial = partial.copyWith(liveVirusConflicts: conflicts);
       }
-      final name = row[0];
-      final adminFull = row.length > 1 ? row[1] : '';
-      vgList.add(
-        VaccineGroup(
-          name: name,
-          administerFullVaccineGroup: Binary.fromJson(adminFull),
-        ),
-      );
-    }
-    return VaccineGroups(vaccineGroup: vgList);
-  }
-
-  /// -----------------------------------------------------------------------
-  /// 3) Parse "Vaccine Group to Antigen Map" sheet
-  /// -----------------------------------------------------------------------
-  ///
-  /// Each row has:
-  /// [0] groupName
-  /// [1..] list of antigens
-  List<VaccineGroupMap> _parseVaccineGroupMap(List<List<String>> rows) {
-    final groupMaps = <VaccineGroupMap>[];
-
-    for (final row in rows) {
-      if (row.isEmpty ||
-          row[0].trim().isEmpty ||
-          row[0].toLowerCase().contains('name')) {
-        continue;
+    } else if (lower.contains('vaccine group to antigen map')) {
+      // We'll parse the "Vaccine Group to Antigen Map" tab
+      final tabName = 'Vaccine Group to Antigen Map';
+      if (excel.tables.keys.contains(tabName)) {
+        final sheet = excel.tables[tabName]!;
+        final rows = _sheetToRows(sheet);
+        final groupMaps = _parseVaccineGroupToAntigenMapTab(rows);
+        partial = partial.copyWith(
+          vaccineGroupToAntigenMap: partial.vaccineGroupToAntigenMap
+                  ?.copyWith(vaccineGroupMap: groupMaps) ??
+              VaccineGroupToAntigenMap(vaccineGroupMap: groupMaps),
+        );
       }
-
-      final groupName = row[0];
-      // The remaining columns are antigens
-      final antigens = row.sublist(1).where((val) => val.trim().isNotEmpty).toList();
-
-      groupMaps.add(
-        VaccineGroupMap(name: groupName, antigen: antigens.cast<String>()),
-      );
-    }
-
-    return groupMaps;
-  }
-
-  /// -----------------------------------------------------------------------
-  /// 4) Parse "CVX to Antigen Map" sheet
-  /// -----------------------------------------------------------------------
-  ///
-  /// Each row has:
-  /// [0] cvx
-  /// [1] shortDescription
-  /// [2] an antigen
-  /// [3] associationBeginAge
-  /// [4] associationEndAge
-  ///
-  /// If your data has multiple antigens per CVX row, you'll need to adapt
-  /// for grouping them. This example assumes a single antigen per row.
-  List<CvxMap> _parseCVXToAntigenMap(List<List<String>> rows) {
-    final cvxMapList = <CvxMap>[];
-
-    for (final row in rows) {
-      if (row.isEmpty ||
-          row[0].trim().isEmpty ||
-          row[0].toLowerCase().contains('cvx')) {
-        continue;
+    } else if (lower.contains('vaccine group') &&
+        !lower.contains('antigen map')) {
+      // We'll parse the "Vaccine Groups" tab
+      final tabName = 'Vaccine Groups';
+      if (excel.tables.keys.contains(tabName)) {
+        final sheet = excel.tables[tabName]!;
+        final rows = _sheetToRows(sheet);
+        final groupData = _parseVaccineGroupsTab(rows);
+        partial = partial.copyWith(vaccineGroups: groupData);
       }
-
-      final cvx = row[0];
-      final shortDesc = row.length > 1 ? row[1] : '';
-      final antigenVal = row.length > 2 ? row[2] : '';
-      final beginAge = row.length > 3 ? row[3] : null;
-      final endAge = row.length > 4 ? row[4] : null;
-
-      // Build the association
-      // If your data can have multiple antigens in a single row,
-      // adapt as needed. Here, we treat it as a single [antigen].
-      final assoc = <Association>[
-        Association(
-          // We store [antigenVal] in a List<String> because your class says "final List<String>? antigen"
-          antigen: [antigenVal],
-          associationBeginAge: beginAge,
-          associationEndAge: endAge,
-        ),
-      ];
-
-      cvxMapList.add(
-        CvxMap(
-          cvx: cvx,
-          shortDescription: shortDesc,
-          association: assoc,
-        ),
-      );
+    } else {
+      // If filename doesn't match any known pattern, do nothing
+      print('parseFile: $path does not match a known schedule file type.');
     }
 
-    return cvxMapList;
+    // 3) Merge partial data into oldScheduleData
+    return _mergeSchedules(oldScheduleData, partial);
   }
 
-  /// -----------------------------------------------------------------------
-  /// 5) Parse "Observations"/"Conditions" sheet
-  /// -----------------------------------------------------------------------
+  /// Utility to convert an Excel sheet to a List<List<String>> of row data
+  List<List<String>> _sheetToRows(Sheet sheet) {
+    return sheet.rows
+        .map((row) => row
+            .map((cell) =>
+                cell?.value?.toString().replaceAll('\n', ' ').trim() ?? '')
+            .toList())
+        .toList();
+  }
+
+  // ---------------------------------------------------------------------------
+  //   1) Parse "Conditions" tab (Coded Observations)
+  // ---------------------------------------------------------------------------
   ///
-  /// Expects rows with columns:
-  /// [0] observationCode
-  /// [1] observationTitle
-  /// [2] group
-  /// [3] indicationText
-  /// [4] contraindicationText
-  /// [5] clarifyingText
-  /// [6..] repeated sets of (code, codeSystem, text) => codedValue
-  List<VaxObservation> _parseObservations(List<List<String>> rows) {
+  /// Example columns (customize to your actual layout):
+  /// [0] Observation Code
+  /// [1] Observation Title
+  /// [2] Indication Text
+  /// [3] Contraindication Text
+  /// [4] Clarifying Text
+  /// ...
+  List<VaxObservation> _parseConditionsTab(List<List<String>> rows) {
     final obsList = <VaxObservation>[];
+    if (rows.isEmpty) return obsList;
 
-    for (final row in rows) {
-      // Skip empty row or header row
-      if (row.isEmpty ||
-          row[0].trim().isEmpty ||
-          row[0].toLowerCase().contains('observationcode')) {
-        continue;
-      }
+    // Assume first row might be headers, so start from row 1
+    for (int i = 1; i < rows.length; i++) {
+      final row = rows[i];
+      if (row.isEmpty) continue;
 
       final obsCode = row[0].trim();
       final obsTitle = row.length > 1 ? row[1].trim() : '';
-      final group = row.length > 2 ? row[2].trim() : '';
-      final indication = row.length > 3 ? row[3].trim() : '';
-      final contra = row.length > 4 ? row[4].trim() : '';
-      final clarify = row.length > 5 ? row[5].trim() : '';
+      final indication = row.length > 2 ? row[2].trim() : '';
+      final contra = row.length > 3 ? row[3].trim() : '';
+      final clarify = row.length > 4 ? row[4].trim() : '';
 
-      // Starting from column 6 onward, parse coded values in sets of 3 columns:
-      // [6] => code
-      // [7] => codeSystem
-      // [8] => text
-      // Then [9] => code, [10] => codeSystem, [11] => text, etc.
-      final codedVals = <CodedValue>[];
-      if (row.length > 6) {
-        // We have extra columns
-        // We'll parse them in groups of 3
-        // i.e. index 6..8 is one codedValue, 9..11 is next, etc.
-        final extraCols = row.sublist(6);
-        for (var i = 0; i < extraCols.length; i += 3) {
-          // If we don’t have enough columns for a full set, break
-          if (i + 2 >= extraCols.length) break;
-          final code = extraCols[i].trim();
-          final codeSystem = extraCols[i + 1].trim();
-          final text = extraCols[i + 2].trim();
-          // Only add if we have something meaningful
-          if (code.isNotEmpty || codeSystem.isNotEmpty || text.isNotEmpty) {
-            codedVals.add(
-              CodedValue(
-                code: code.isNotEmpty ? code : null,
-                codeSystem: codeSystem.isNotEmpty ? codeSystem : null,
-                text: text.isNotEmpty ? text : null,
-              ),
-            );
-          }
-        }
-      }
-
-      // Wrap them in a CodedValues object if not empty
-      final codedValues = codedVals.isNotEmpty ? CodedValues(codedValue: codedVals) : null;
-
-      // Build the observation
       final observation = VaxObservation(
         observationCode: obsCode,
         observationTitle: obsTitle,
-        group: group,
-        indicationText: indication,
-        contraindicationText: contra,
-        clarifyingText: clarify,
-        codedValues: codedValues,
-        period: null, // If you parse a "period" from columns, handle it here
+        indicationText:
+            indication.isNotEmpty && indication != 'n/a' ? indication : null,
+        contraindicationText:
+            contra.isNotEmpty && contra != 'n/a' ? contra : null,
+        clarifyingText: clarify.isNotEmpty && clarify != 'n/a' ? clarify : null,
       );
 
       obsList.add(observation);
     }
-
     return obsList;
   }
+
+  // ---------------------------------------------------------------------------
+  //   2) Parse "CVX to Antigen Map" tab
+  // ---------------------------------------------------------------------------
+  ///
+  /// Example columns:
+  /// [0] CVX
+  /// [1] Short Description
+  /// [2] Antigen
+  /// [3] Association Begin Age
+  /// [4] Association End Age
+  List<CvxMap> _parseCvxToAntigenMapTab(List<List<String>> rows) {
+    final cvxList = <CvxMap>[];
+    if (rows.isEmpty) return cvxList;
+
+    for (int i = 1; i < rows.length; i++) {
+      final row = rows[i];
+      if (row.isEmpty) continue;
+
+      final cvx = row[0].trim();
+      final shortDesc = row.length > 1 ? row[1].trim() : '';
+      final antigenVal = row.length > 2 ? row[2].trim() : '';
+      final beginAge = row.length > 3 ? row[3].trim() : null;
+      final endAge = row.length > 4 ? row[4].trim() : null;
+
+      final cvxIndex = cvxList.indexWhere((c) => c.cvx == cvx);
+
+      if (cvxIndex == -1) {
+        final assoc = <Association>[
+          Association(
+            antigen: antigenVal,
+            associationBeginAge:
+                beginAge == null || beginAge == 'n/a' ? null : beginAge,
+            associationEndAge:
+                endAge == null || endAge == 'n/a' ? null : endAge,
+          )
+        ];
+
+        cvxList.add(
+          CvxMap(
+            cvx: cvx,
+            shortDescription: shortDesc,
+            association: assoc,
+          ),
+        );
+      } else {
+        final existing = cvxList[cvxIndex];
+        final assoc = existing.association?.toList() ?? <Association>[];
+        assoc.add(
+          Association(
+            antigen: antigenVal,
+            associationBeginAge:
+                beginAge == null || beginAge == 'n/a' ? null : beginAge,
+            associationEndAge:
+                endAge == null || endAge == 'n/a' ? null : endAge,
+          ),
+        );
+
+        final updated = existing.copyWith(association: assoc);
+        cvxList[cvxIndex] = updated;
+      }
+    }
+    return cvxList;
+  }
+
+  // ---------------------------------------------------------------------------
+  //   3) Parse "Live Virus Conflicts" tab
+  // ---------------------------------------------------------------------------
+  ///
+  /// Example columns:
+  /// [0] Previous Vaccine Type (CVX)
+  /// [1] Current Vaccine Type (CVX)
+  /// [2] Conflict Begin Interval
+  /// [3] Min Conflict End Interval
+  /// [4] Conflict End Interval
+  LiveVirusConflicts _parseLiveVirusConflictsTab(List<List<String>> rows) {
+    final list = <LiveVirusConflict>[];
+    if (rows.isEmpty) return LiveVirusConflicts(liveVirusConflict: list);
+
+    for (int i = 1; i < rows.length; i++) {
+      final row = rows[i];
+      if (row.isEmpty) continue;
+
+      final (previousCvx, previousType) = _extractCodeAndText(row[0].trim());
+      final (currentCvx, currentType) =
+          row.length > 1 ? _extractCodeAndText(row[1].trim()) : (null, null);
+      final beginInt = row.length > 2 ? row[2].trim() : '';
+      final minEnd = row.length > 3 ? row[3].trim() : '';
+      final endInt = row.length > 4 ? row[4].trim() : '';
+
+      final previousVac = previousType.isEmpty && previousCvx.isEmpty
+          ? null
+          : Vaccine(vaccineType: previousType, cvx: previousCvx);
+      Vaccine(vaccineType: previousType, cvx: previousCvx);
+      final currentVac = (currentType == null || currentType.isEmpty) &&
+              (currentCvx == null || currentCvx.isEmpty)
+          ? null
+          : Vaccine(vaccineType: currentType, cvx: currentCvx);
+
+      list.add(
+        LiveVirusConflict(
+          previous: previousVac,
+          current: currentVac,
+          conflictBeginInterval: beginInt,
+          minConflictEndInterval: minEnd,
+          conflictEndInterval: endInt,
+        ),
+      );
+    }
+    return LiveVirusConflicts(liveVirusConflict: list);
+  }
+
+  // ---------------------------------------------------------------------------
+  //   4) Parse "Vaccine Group to Antigen Map" tab
+  // ---------------------------------------------------------------------------
+  ///
+  /// Example columns:
+  /// [0] Vaccine Group
+  /// [1] Antigen
+  List<VaccineGroupMap> _parseVaccineGroupToAntigenMapTab(
+      List<List<String>> rows) {
+    final list = <VaccineGroupMap>[];
+    if (rows.isEmpty) return list;
+
+    for (int i = 1; i < rows.length; i++) {
+      final row = rows[i];
+      if (row.isEmpty) continue;
+
+      final groupName = row[0].trim();
+      final antigen = row.length > 1 ? row[1].trim() : '';
+
+      final existing = list.firstWhere(
+        (m) => m.name == groupName,
+        orElse: () => VaccineGroupMap(name: groupName, antigen: []),
+      );
+
+      if (!list.contains(existing)) {
+        list.add(existing);
+      }
+
+      final antList = existing.antigen?.toList() ?? <String>[];
+      antList.add(antigen);
+
+      final updated = existing.copyWith(antigen: antList);
+      final idx = list.indexOf(existing);
+      list[idx] = updated;
+    }
+
+    return list;
+  }
+
+  // ---------------------------------------------------------------------------
+  //   5) Parse "Vaccine Groups" tab
+  // ---------------------------------------------------------------------------
+  ///
+  /// Example columns:
+  /// [0] Vaccine Group Name
+  /// [1] Administer Full Vaccine Group (Yes/No or "n/a")
+  VaccineGroups _parseVaccineGroupsTab(List<List<String>> rows) {
+    final list = <VaccineGroup>[];
+    if (rows.isEmpty) return VaccineGroups(vaccineGroup: list);
+
+    for (int i = 1; i < rows.length; i++) {
+      final row = rows[i];
+      if (row.isEmpty) continue;
+
+      final groupName = row[0].trim();
+      final adminStr = row.length > 1 ? row[1].trim() : '';
+      final bin = Binary.fromJson(adminStr);
+
+      list.add(
+        VaccineGroup(
+          name: groupName,
+          administerFullVaccineGroup: bin,
+        ),
+      );
+    }
+
+    return VaccineGroups(vaccineGroup: list);
+  }
+
+  /// Merge two `ScheduleSupportingData` objects:
+  /// if `partial` has a non-null field, it overwrites the `base` field.
+  ScheduleSupportingData _mergeSchedules(
+    ScheduleSupportingData base,
+    ScheduleSupportingData partial,
+  ) {
+    return ScheduleSupportingData(
+      liveVirusConflicts: partial.liveVirusConflicts ?? base.liveVirusConflicts,
+      vaccineGroups: partial.vaccineGroups ?? base.vaccineGroups,
+      vaccineGroupToAntigenMap:
+          partial.vaccineGroupToAntigenMap ?? base.vaccineGroupToAntigenMap,
+      cvxToAntigenMap: partial.cvxToAntigenMap ?? base.cvxToAntigenMap,
+      observations: partial.observations ?? base.observations,
+    );
+  }
+}
+
+/// Helper to parse code+text from a string like "Allergic reaction (187)"
+(String, String) _extractCodeAndText(String fullString) {
+  final openParen = fullString.lastIndexOf('(');
+  final closeParen = fullString.lastIndexOf(')');
+  if (openParen == -1 || closeParen == -1 || closeParen <= openParen) {
+    return ('', fullString.trim());
+  }
+  final code = fullString.substring(openParen + 1, closeParen).trim();
+  final text = fullString.substring(0, openParen).trim();
+  return (code, text);
 }
