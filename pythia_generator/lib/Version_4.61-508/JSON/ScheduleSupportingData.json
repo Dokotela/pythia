@@ -9894,7 +9894,7 @@
                                 "text": "Hemopoietic stem cell transplant [procedure]"
                             },
                             {
-                                "code": "2371-90-05",
+                                "code": "23719005",
                                 "codeSystem": "SNOMED",
                                 "text": "Transplantation of bone marrow [procedure]"
                             }
@@ -9908,7 +9908,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "5071-10-07",
+                                "code": "50711007",
                                 "codeSystem": "SNOMED",
                                 "text": "Viral hepatitis type C [disorder]"
                             }
@@ -9928,7 +9928,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "7738-60-06",
+                                "code": "77386006",
                                 "codeSystem": "SNOMED",
                                 "text": "Patient currently pregnant [finding]"
                             },
@@ -9993,7 +9993,7 @@
                                 "text": "Cochlear prosthesis in situ [finding]"
                             },
                             {
-                                "code": "4325-20-07",
+                                "code": "43252007",
                                 "codeSystem": "SNOMED",
                                 "text": "Cochlear prosthesis, device [physical object]"
                             },
@@ -10018,7 +10018,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "3132-30-00",
+                                "code": "31323000",
                                 "codeSystem": "SNOMED",
                                 "text": "Severe combined immunodeficiency disease [disorder]"
                             }
@@ -10032,7 +10032,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "7321-10-09",
+                                "code": "73211009",
                                 "codeSystem": "SNOMED",
                                 "text": "Diabetes mellitus [disorder]"
                             }
@@ -10052,7 +10052,7 @@
                                 "text": "Chronic liver disease [disorder]"
                             },
                             {
-                                "code": "1994-30-07",
+                                "code": "19943007",
                                 "codeSystem": "SNOMED",
                                 "text": "Cirrhosis of liver [disorder]"
                             }
@@ -10073,27 +10073,27 @@
                                 "text": "Chronic heart disease [disorder]"
                             },
                             {
-                                "code": "4234-30-07",
+                                "code": "42343007",
                                 "codeSystem": "SNOMED",
                                 "text": "Congestive heart failure [disorder]"
                             },
                             {
-                                "code": "5780-90-08",
+                                "code": "57809008",
                                 "codeSystem": "SNOMED",
                                 "text": "Myocardial disease [disorder]"
                             },
                             {
-                                "code": "1277-00-06",
+                                "code": "12770006",
                                 "codeSystem": "SNOMED",
                                 "text": "Cyanotic congenital heart disease [disorder]"
                             },
                             {
-                                "code": "5374-10-08",
+                                "code": "53741008",
                                 "codeSystem": "SNOMED",
                                 "text": "Coronary arteriosclerosis [disorder]"
                             },
                             {
-                                "code": "7961-90-09",
+                                "code": "79619009",
                                 "codeSystem": "SNOMED",
                                 "text": "Mitral valve stenosis [disorder]"
                             },
@@ -10118,17 +10118,17 @@
                                 "text": "Chronic lung disease [disorder]"
                             },
                             {
-                                "code": "1364-50-05",
+                                "code": "13645005",
                                 "codeSystem": "SNOMED",
                                 "text": "Chronic obstructive lung disease [disorder]"
                             },
                             {
-                                "code": "8743-30-01",
+                                "code": "87433001",
                                 "codeSystem": "SNOMED",
                                 "text": "Pulmonary emphysema [disorder]"
                             },
                             {
-                                "code": "3987-10-06",
+                                "code": "39871006",
                                 "codeSystem": "SNOMED",
                                 "text": "Chronic respiratory failure [disorder]"
                             },
@@ -10138,7 +10138,7 @@
                                 "text": "Chronic respiratory insufficiency [disorder]"
                             },
                             {
-                                "code": "1709-70-01",
+                                "code": "17097001",
                                 "codeSystem": "SNOMED",
                                 "text": "Chronic disease of respiratory system [disorder]"
                             }
@@ -10229,7 +10229,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "3890-70-03",
+                                "code": "38907003",
                                 "codeSystem": "SNOMED",
                                 "text": "Varicella [Disorder]"
                             }
@@ -10256,7 +10256,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "8640-60-08",
+                                "code": "86406008",
                                 "codeSystem": "SNOMED",
                                 "text": "Human immunodeficiency virus infection [disorder]"
                             },
@@ -10296,12 +10296,12 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "3532-70-06",
+                                "code": "35327006",
                                 "codeSystem": "SNOMED",
                                 "text": "Intussusception [morphologic abnormality]"
                             },
                             {
-                                "code": "4972-30-03",
+                                "code": "49723003",
                                 "codeSystem": "SNOMED",
                                 "text": "Intussusception of intestine [disorder]"
                             },
@@ -10320,7 +10320,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "6977-60-03",
+                                "code": "69776003",
                                 "codeSystem": "SNOMED",
                                 "text": "Acute gastroenteritis [disorder]"
                             }
@@ -10340,7 +10340,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "5671-70-01",
+                                "code": "56717001",
                                 "codeSystem": "SNOMED",
                                 "text": "Tuberculosis [disorder]"
                             }
@@ -10365,7 +10365,7 @@
                                 "text": "Amantadine [substance]"
                             },
                             {
-                                "code": "5136-10-08",
+                                "code": "51361008",
                                 "codeSystem": "SNOMED",
                                 "text": "Amantadine [product]"
                             },
@@ -10429,7 +10429,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "7610-20-07",
+                                "code": "76102007",
                                 "codeSystem": "SNOMED",
                                 "text": "Male homosexual [finding]"
                             },
@@ -10478,7 +10478,7 @@
                                 "text": "Sexual partners [observable entity]"
                             },
                             {
-                                "code": "1172-30-08",
+                                "code": "11723008",
                                 "codeSystem": "SNOMED",
                                 "text": "Contact with [contextual qualifier] [qualifier value]"
                             },
@@ -10575,7 +10575,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "7717-60-02",
+                                "code": "77176002",
                                 "codeSystem": "SNOMED",
                                 "text": "Smoker [finding]"
                             }
@@ -10646,17 +10646,17 @@
                                 "text": "Microbiologist [occupation]"
                             },
                             {
-                                "code": "1469-80-02",
+                                "code": "14698002",
                                 "codeSystem": "SNOMED",
                                 "text": "Medical microbiologist [occupation]"
                             },
                             {
-                                "code": "2493-20-03",
+                                "code": "24932003",
                                 "codeSystem": "SNOMED",
                                 "text": "Exposure to [contextual qualifier] [qualifier value]"
                             },
                             {
-                                "code": "1787-20-04",
+                                "code": "17872004",
                                 "codeSystem": "SNOMED",
                                 "text": "Neisseria meningitidis [organism]"
                             }
@@ -10675,7 +10675,7 @@
                                 "text": "Microbiologist [occupation]"
                             },
                             {
-                                "code": "1469-80-02",
+                                "code": "14698002",
                                 "codeSystem": "SNOMED",
                                 "text": "Medical microbiologist [occupation]"
                             },
@@ -10685,7 +10685,7 @@
                                 "text": "Laboratory technician [occupation]"
                             },
                             {
-                                "code": "2493-20-03",
+                                "code": "24932003",
                                 "codeSystem": "SNOMED",
                                 "text": "Exposure to [contextual qualifier] [qualifier value]"
                             },
@@ -10709,12 +10709,12 @@
                                 "text": "Laboratory technician [occupation]"
                             },
                             {
-                                "code": "2493-20-03",
+                                "code": "24932003",
                                 "codeSystem": "SNOMED",
                                 "text": "Exposure to [contextual qualifier] [qualifier value]"
                             },
                             {
-                                "code": "2663-00-06",
+                                "code": "26630006",
                                 "codeSystem": "SNOMED",
                                 "text": "Yellow fever virus [organism]"
                             }
@@ -10733,12 +10733,12 @@
                                 "text": "Laboratory technician [occupation]"
                             },
                             {
-                                "code": "2493-20-03",
+                                "code": "24932003",
                                 "codeSystem": "SNOMED",
                                 "text": "Exposure to [contextual qualifier] [qualifier value]"
                             },
                             {
-                                "code": "5988-10-00",
+                                "code": "59881000",
                                 "codeSystem": "SNOMED",
                                 "text": "Rabies virus [organism]"
                             }
@@ -10757,12 +10757,12 @@
                                 "text": "Laboratory technician [occupation]"
                             },
                             {
-                                "code": "2493-20-03",
+                                "code": "24932003",
                                 "codeSystem": "SNOMED",
                                 "text": "Exposure to [contextual qualifier] [qualifier value]"
                             },
                             {
-                                "code": "4417-20-02",
+                                "code": "44172002",
                                 "codeSystem": "SNOMED",
                                 "text": "Human poliovirus [organism]"
                             }
@@ -10796,12 +10796,12 @@
                                 "text": "Healthcare professional [occupation]"
                             },
                             {
-                                "code": "2493-20-03",
+                                "code": "24932003",
                                 "codeSystem": "SNOMED",
                                 "text": "Exposure to [contextual qualifier] [qualifier value]"
                             },
                             {
-                                "code": "4417-20-02",
+                                "code": "44172002",
                                 "codeSystem": "SNOMED",
                                 "text": "Human poliovirus [organism]"
                             }
@@ -10815,12 +10815,12 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "2636-90-06",
+                                "code": "26369006",
                                 "codeSystem": "SNOMED",
                                 "text": "Public health nurse [occupation]"
                             },
                             {
-                                "code": "6886-70-08",
+                                "code": "68867008",
                                 "codeSystem": "SNOMED",
                                 "text": "Public health dentist [occupation]"
                             },
@@ -10830,32 +10830,32 @@
                                 "text": "Public health officer [occupation]"
                             },
                             {
-                                "code": "5646-60-03",
+                                "code": "56466003",
                                 "codeSystem": "SNOMED",
                                 "text": "Public health physician [occupation]"
                             },
                             {
-                                "code": "5607-90-02",
+                                "code": "56079002",
                                 "codeSystem": "SNOMED",
                                 "text": "Public health veterinarian [occupation]"
                             },
                             {
-                                "code": "6000-80-01",
+                                "code": "60008001",
                                 "codeSystem": "SNOMED",
                                 "text": "Public health nutritionist [occupation]"
                             },
                             {
-                                "code": "2493-20-03",
+                                "code": "24932003",
                                 "codeSystem": "SNOMED",
                                 "text": "Exposure to [contextual qualifier] [qualifier value]"
                             },
                             {
-                                "code": "8761-20-01",
+                                "code": "87612001",
                                 "codeSystem": "SNOMED",
                                 "text": "Blood [substance]"
                             },
                             {
-                                "code": "3245-70-05",
+                                "code": "32457005",
                                 "codeSystem": "SNOMED",
                                 "text": "Body fluid [substance]"
                             }
@@ -10890,7 +10890,7 @@
                                 "text": "Child care officer [occupation]"
                             },
                             {
-                                "code": "7385-10-01",
+                                "code": "73851001",
                                 "codeSystem": "SNOMED",
                                 "text": "Plumber [general] [occupation]"
                             },
@@ -10953,12 +10953,12 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "2493-20-03",
+                                "code": "24932003",
                                 "codeSystem": "SNOMED",
                                 "text": "Exposure to [contextual qualifier] [qualifier value]"
                             },
                             {
-                                "code": "5988-10-00",
+                                "code": "59881000",
                                 "codeSystem": "SNOMED",
                                 "text": "Rabies virus [organism]"
                             }
@@ -10972,7 +10972,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "6585-30-00",
+                                "code": "65853000",
                                 "codeSystem": "SNOMED",
                                 "text": "Student [occupation]"
                             },
@@ -11002,7 +11002,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "9068-80-05",
+                                "code": "90688005",
                                 "codeSystem": "SNOMED",
                                 "text": "Chronic renal failure syndrome [disorder]"
                             }
@@ -11016,7 +11016,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "2007-80-04",
+                                "code": "20078004",
                                 "codeSystem": "SNOMED",
                                 "text": "Substance abuse treatment center [environment]"
                             }
@@ -11063,7 +11063,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "1172-30-08",
+                                "code": "11723008",
                                 "codeSystem": "SNOMED",
                                 "text": "Contact with [contextual qualifier] [qualifier value]"
                             },
@@ -11123,7 +11123,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "8475-70-09",
+                                "code": "84757009",
                                 "codeSystem": "SNOMED",
                                 "text": "Epilepsy [disorder]"
                             }
@@ -12330,7 +12330,7 @@
                                 "text": "Egg protein allergy [disorder]"
                             },
                             {
-                                "code": "9193-00-04",
+                                "code": "91930004",
                                 "codeSystem": "SNOMED",
                                 "text": "Allergy to eggs [disorder]"
                             }
@@ -12538,7 +12538,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "4617-70-05",
+                                "code": "46177005",
                                 "codeSystem": "SNOMED",
                                 "text": "End stage renal disease [disorder]"
                             },
@@ -12562,7 +12562,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "6452-00-06",
+                                "code": "64520006",
                                 "codeSystem": "SNOMED",
                                 "text": "Protamine sulfate [substance]"
                             },
@@ -12668,7 +12668,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "3291-10-00",
+                                "code": "32911000",
                                 "codeSystem": "SNOMED",
                                 "text": "Homeless [finding]"
                             }
@@ -12833,12 +12833,12 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "1356-90-04",
+                                "code": "13569004",
                                 "codeSystem": "SNOMED",
                                 "text": "Transfusion of plasma [procedure]"
                             },
                             {
-                                "code": "1271-90-02",
+                                "code": "12719002",
                                 "codeSystem": "SNOMED",
                                 "text": "Platelet transfusion [procedure]"
                             }
@@ -12902,12 +12902,12 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "6588-00-07",
+                                "code": "65880007",
                                 "codeSystem": "SNOMED",
                                 "text": "X-linked agammaglobulinemia [disorder]"
                             },
                             {
-                                "code": "2323-80-00",
+                                "code": "23238000",
                                 "codeSystem": "SNOMED",
                                 "text": "Common variable agammaglobulinemia [disorder]"
                             }
@@ -12944,12 +12944,12 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "3132-30-00",
+                                "code": "31323000",
                                 "codeSystem": "SNOMED",
                                 "text": "Severe combined immunodeficiency disease [disorder]"
                             },
                             {
-                                "code": "7712-80-03",
+                                "code": "77128003",
                                 "codeSystem": "SNOMED",
                                 "text": "DiGeorge sequence [disorder]"
                             }
@@ -12965,17 +12965,17 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "7712-80-03",
+                                "code": "77128003",
                                 "codeSystem": "SNOMED",
                                 "text": "DiGeorge sequence [disorder]"
                             },
                             {
-                                "code": "3607-00-07",
+                                "code": "36070007",
                                 "codeSystem": "SNOMED",
                                 "text": "Wiskott-Aldrich syndrome [disorder]"
                             },
                             {
-                                "code": "6850-40-05",
+                                "code": "68504005",
                                 "codeSystem": "SNOMED",
                                 "text": "Ataxia-telangiectasia syndrome [disorder]"
                             }
@@ -13001,12 +13001,12 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "2474-30-04",
+                                "code": "24743004",
                                 "codeSystem": "SNOMED",
                                 "text": "Complement deficiency disease [disorder]"
                             },
                             {
-                                "code": "8116-60-04",
+                                "code": "81166004",
                                 "codeSystem": "SNOMED",
                                 "text": "Properdin deficiency disease [disorder]"
                             },
@@ -13042,7 +13042,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "7735-80-03",
+                                "code": "77358003",
                                 "codeSystem": "SNOMED",
                                 "text": "Congenital leukocyte adherence deficiency [disorder]"
                             },
@@ -13063,7 +13063,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "6247-90-08",
+                                "code": "62479008",
                                 "codeSystem": "SNOMED",
                                 "text": "Acquired immune deficiency syndrome [disorder]"
                             }
@@ -13078,7 +13078,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "6247-90-08",
+                                "code": "62479008",
                                 "codeSystem": "SNOMED",
                                 "text": "Acquired immune deficiency syndrome [disorder]"
                             }
@@ -13115,7 +13115,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "8655-30-08",
+                                "code": "86553008",
                                 "codeSystem": "SNOMED",
                                 "text": "Immunosuppressive therapy [procedure]"
                             }
@@ -13130,7 +13130,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "5343-80-00",
+                                "code": "53438000",
                                 "codeSystem": "SNOMED",
                                 "text": "Radiation therapy procedure or service [procedure]"
                             }
@@ -13202,7 +13202,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "5225-40-09",
+                                "code": "52254009",
                                 "codeSystem": "SNOMED",
                                 "text": "Nephrotic syndrome [disorder]"
                             }
@@ -13324,7 +13324,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "9314-30-09",
+                                "code": "93143009",
                                 "codeSystem": "SNOMED",
                                 "text": "Leukemia, disease [disorder]"
                             }
@@ -13401,7 +13401,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "8640-60-08",
+                                "code": "86406008",
                                 "codeSystem": "SNOMED",
                                 "text": "Human immunodeficiency virus infection [disorder]"
                             }
@@ -13524,7 +13524,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "7099-50-07",
+                                "code": "70995007",
                                 "codeSystem": "SNOMED",
                                 "text": "Pulmonary hypertension [disorder]"
                             }
@@ -13538,7 +13538,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "5244-80-06",
+                                "code": "52448006",
                                 "codeSystem": "SNOMED",
                                 "text": "Dimensia [disorder]"
                             }
@@ -13552,7 +13552,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "4104-00-04",
+                                "code": "41040004",
                                 "codeSystem": "SNOMED",
                                 "text": "Complete trisomy 21 syndrome [disorder]"
                             }
@@ -13591,7 +13591,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "4010-80-08",
+                                "code": "40108008",
                                 "codeSystem": "SNOMED",
                                 "text": "Thalassemia [disorder]"
                             }
@@ -13605,7 +13605,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "6291-40-00",
+                                "code": "62914000",
                                 "codeSystem": "SNOMED",
                                 "text": "Cerebrovascular disease [disorder]"
                             }
@@ -13655,7 +13655,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "1364-50-05",
+                                "code": "13645005",
                                 "codeSystem": "SNOMED",
                                 "text": "Chronic obstructive lung disease [disorder]"
                             }
@@ -13669,7 +13669,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "8743-30-01",
+                                "code": "87433001",
                                 "codeSystem": "SNOMED",
                                 "text": "Pulmonary emphysema [disorder]"
                             }
@@ -13973,12 +13973,12 @@
                                 "text": "Limb ischemia [disorder]"
                             },
                             {
-                                "code": "6349-10-06",
+                                "code": "63491006",
                                 "codeSystem": "SNOMED",
                                 "text": "Intermittent claudication [finding]"
                             },
                             {
-                                "code": "6519-80-09",
+                                "code": "65198009",
                                 "codeSystem": "SNOMED",
                                 "text": "Arterial thrombosis [disorder]"
                             },
@@ -13988,22 +13988,22 @@
                                 "text": "Chronic vascular insufficiency of intestine [disorder]"
                             },
                             {
-                                "code": "7099-50-07",
+                                "code": "70995007",
                                 "codeSystem": "SNOMED",
                                 "text": "Pulmonary hypertension [disorder]"
                             },
                             {
-                                "code": "5928-20-03",
+                                "code": "59282003",
                                 "codeSystem": "SNOMED",
                                 "text": "Pulmonary embolism [disorder]"
                             },
                             {
-                                "code": "1792-00-08",
+                                "code": "17920008",
                                 "codeSystem": "SNOMED",
                                 "text": "Portal vein thrombosis [disorder]"
                             },
                             {
-                                "code": "6736-20-08",
+                                "code": "67362008",
                                 "codeSystem": "SNOMED",
                                 "text": "Aortic aneurysm [disorder]"
                             },
@@ -14028,7 +14028,7 @@
                                 "text": "Dissection of aortic arch [disorder]"
                             },
                             {
-                                "code": "4589-40-03",
+                                "code": "45894003",
                                 "codeSystem": "SNOMED",
                                 "text": "Medionecrosis of aorta [disorder]"
                             },
@@ -14091,7 +14091,7 @@
                                 "text": "Sickling disorder due to hemoglobin S [disorder]"
                             },
                             {
-                                "code": "4010-80-08",
+                                "code": "40108008",
                                 "codeSystem": "SNOMED",
                                 "text": "Thalassemia [disorder]"
                             }
@@ -14125,7 +14125,7 @@
                                 "text": "Chronic respiratory failure due to neuromuscular disease [disorder]"
                             },
                             {
-                                "code": "6775-00-07",
+                                "code": "67750007",
                                 "codeSystem": "SNOMED",
                                 "text": "Ineffective airway clearance [finding]"
                             }
@@ -14233,7 +14233,7 @@
                     "codedValues": {
                         "codedValue": [
                             {
-                                "code": "7746-50-05",
+                                "code": "77465005",
                                 "codeSystem": "SNOMED",
                                 "text": "Transplantation [procedure]"
                             }

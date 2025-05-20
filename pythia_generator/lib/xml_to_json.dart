@@ -52,7 +52,8 @@ void main() {
     final decodedJson = json.decode(jsonString);
 
     // Optionally remove null values.
-    final cleanedJson = removeNulls(decodedJson);
+    final cleanedJson =
+        removeNulls(decodedJson, file.path.toLowerCase().contains('schedule'));
     // Ensure the specified keys are always treated as lists.
     final finalJson = ensureKeysAreLists(cleanedJson, keysToAlwaysList);
 
@@ -68,19 +69,21 @@ const jsonEncoder = JsonEncoder.withIndent('    ');
 String jsonPrettyPrint(dynamic data) => jsonEncoder.convert(data);
 
 /// Recursively removes null values from Maps and Lists.
-dynamic removeNulls(dynamic data) {
+dynamic removeNulls(dynamic data, bool isScheduleData) {
   if (data is Map<String, dynamic>) {
     final pruned = <String, dynamic>{};
     data.forEach((key, value) {
-      final cleanedValue = removeNulls(value);
+      final cleanedValue = removeNulls(value, isScheduleData);
       if (cleanedValue != null) {
         pruned[key] = cleanedValue;
       }
     });
     return pruned.isEmpty ? null : pruned;
   } else if (data is List) {
-    final finalList =
-        data.map(removeNulls).where((item) => item != null).toList();
+    final finalList = data
+        .map((item) => removeNulls(item, isScheduleData))
+        .where((item) => item != null)
+        .toList();
     if (finalList.isEmpty) {
       return null;
     }
@@ -100,7 +103,7 @@ dynamic removeNulls(dynamic data) {
       data = data.replaceAll('?50', '≤50');
     }
     final datePattern = RegExp(r'^\d{8}$');
-    if (data is String && datePattern.hasMatch(data)) {
+    if (data is String && datePattern.hasMatch(data) && !isScheduleData) {
       data =
           '${data.substring(0, 4)}-${data.substring(4, 6)}-${data.substring(6, 8)}';
     }
