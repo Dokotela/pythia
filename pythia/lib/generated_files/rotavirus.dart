@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
+final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Rotavirus",
     "vaccineGroup": "Rotavirus",
     "contraindications": {
@@ -65,43 +66,13 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "6 weeks - 4 days",
                             "minAge": "6 weeks",
                             "earliestRecAge": "2 months",
                             "maxAge": "15 weeks"
-                        },
-                        {
-                            "absMinAge": "10 weeks - 4 days",
-                            "minAge": "10 weeks",
-                            "earliestRecAge": "4 months",
-                            "latestRecAge": "5 months + 4 weeks",
-                            "maxAge": "8 months + 1 day"
-                        },
-                        {
-                            "absMinAge": "14 weeks - 4 days",
-                            "minAge": "14 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "7 months + 4 weeks",
-                            "maxAge": "8 months + 1 day"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -120,81 +91,9 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
                             "endAge": "8 months + 1 day",
                             "volume": "1",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Rotavirus, tetravalent",
-                            "cvx": "74",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, unspecified formulation",
-                            "cvx": "122",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, tetravalent",
-                            "cvx": "74",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, unspecified formulation",
-                            "cvx": "122",
-                            "beginAge": "6 weeks - 4 days"
-                        },
                         {
                             "vaccineType": "Rotavirus, tetravalent",
                             "cvx": "74",
@@ -219,7 +118,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "absMinAge": "10 weeks - 4 days",
@@ -227,23 +126,9 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
                             "earliestRecAge": "4 months",
                             "latestRecAge": "5 months + 4 weeks",
                             "maxAge": "8 months + 1 day"
-                        },
-                        {
-                            "absMinAge": "14 weeks - 4 days",
-                            "minAge": "14 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "7 months + 4 weeks",
-                            "maxAge": "8 months + 1 day"
                         }
                     ],
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
@@ -268,45 +153,9 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
                             "endAge": "8 months + 1 day",
                             "volume": "1",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Rotavirus, tetravalent",
-                            "cvx": "74",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, unspecified formulation",
-                            "cvx": "122",
-                            "beginAge": "6 weeks - 4 days"
-                        },
                         {
                             "vaccineType": "Rotavirus, tetravalent",
                             "cvx": "74",
@@ -413,38 +262,12 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "15 weeks",
                             "minAge": "15 weeks",
                             "maxAge": "8 months + 1 day"
-                        },
-                        {
-                            "earliestRecAge": "4 months",
-                            "latestRecAge": "5 months + 4 weeks",
-                            "maxAge": "8 months + 1 day"
-                        },
-                        {
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "7 months + 4 weeks",
-                            "maxAge": "8 months + 1 day"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -463,81 +286,9 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
                             "endAge": "8 months + 1 day",
                             "volume": "1",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Rotavirus, tetravalent",
-                            "cvx": "74",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, unspecified formulation",
-                            "cvx": "122",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, tetravalent",
-                            "cvx": "74",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, unspecified formulation",
-                            "cvx": "122",
-                            "beginAge": "6 weeks - 4 days"
-                        },
                         {
                             "vaccineType": "Rotavirus, tetravalent",
                             "cvx": "74",
@@ -562,16 +313,11 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "earliestRecAge": "4 months",
                             "latestRecAge": "5 months + 4 weeks",
-                            "maxAge": "8 months + 1 day"
-                        },
-                        {
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "7 months + 4 weeks",
                             "maxAge": "8 months + 1 day"
                         }
                     ],
@@ -581,13 +327,6 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
                             "latestRecInt": "13 weeks"
                         }
                     ],
@@ -607,45 +346,9 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
                             "endAge": "8 months + 1 day",
                             "volume": "1",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Rotavirus, tetravalent",
-                            "cvx": "74",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, pentavalent",
-                            "cvx": "116",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, unspecified formulation",
-                            "cvx": "122",
-                            "beginAge": "6 weeks - 4 days"
-                        },
                         {
                             "vaccineType": "Rotavirus, tetravalent",
                             "cvx": "74",
@@ -749,29 +452,13 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "6 weeks - 4 days",
                             "minAge": "6 weeks",
                             "earliestRecAge": "2 months",
                             "maxAge": "15 weeks"
-                        },
-                        {
-                            "absMinAge": "10 weeks - 4 days",
-                            "minAge": "10 weeks",
-                            "earliestRecAge": "4 months",
-                            "latestRecAge": "5 months + 4 weeks",
-                            "maxAge": "8 months + 1 day"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -782,22 +469,9 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
                             "endAge": "8 months + 1 day",
                             "volume": "1",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks - 4 days"
-                        },
                         {
                             "vaccineType": "Rotavirus, monovalent",
                             "cvx": "119",
@@ -866,26 +540,12 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "15 weeks",
                             "minAge": "15 weeks",
                             "maxAge": "8 months + 1 day"
-                        },
-                        {
-                            "earliestRecAge": "4 months",
-                            "latestRecAge": "5 months + 4 weeks",
-                            "maxAge": "8 months + 1 day"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -896,22 +556,9 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
                             "endAge": "8 months + 1 day",
                             "volume": "1",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks",
-                            "endAge": "8 months + 1 day",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Rotavirus, monovalent",
-                            "cvx": "119",
-                            "beginAge": "6 weeks - 4 days"
-                        },
                         {
                             "vaccineType": "Rotavirus, monovalent",
                             "cvx": "119",

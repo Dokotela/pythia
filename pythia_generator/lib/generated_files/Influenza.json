@@ -772,8 +772,8 @@
                     ],
                     "recurringDose": "No",
                     "seasonalRecommendation": {
-                        "startDate": "20240701",
-                        "endDate": "20250630"
+                        "startDate": "2024-07-01",
+                        "endDate": "2025-06-30"
                     }
                 },
                 {
@@ -1039,8 +1039,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Date",
-                                            "startDate": "20240701",
-                                            "endDate": "20250630",
+                                            "startDate": "2024-07-01",
+                                            "endDate": "2025-06-30",
                                             "doseCount": "1",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
@@ -1056,8 +1056,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Date",
-                                            "startDate": "20240701",
-                                            "endDate": "20250630",
+                                            "startDate": "2024-07-01",
+                                            "endDate": "2025-06-30",
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
@@ -1082,8 +1082,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Date",
-                                            "startDate": "20240701",
-                                            "endDate": "20250630",
+                                            "startDate": "2024-07-01",
+                                            "endDate": "2025-06-30",
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
@@ -1092,7 +1092,7 @@
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Date",
-                                            "endDate": "20240701",
+                                            "endDate": "2024-07-01",
                                             "doseCount": "1",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
@@ -1105,8 +1105,8 @@
                     ],
                     "recurringDose": "Yes",
                     "seasonalRecommendation": {
-                        "startDate": "20240701",
-                        "endDate": "20250630"
+                        "startDate": "2024-07-01",
+                        "endDate": "2025-06-30"
                     }
                 }
             ]

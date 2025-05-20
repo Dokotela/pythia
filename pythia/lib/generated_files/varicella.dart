@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
+final AntigenSupportingData varicella = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Varicella",
     "vaccineGroup": "Varicella",
     "immunity": {
@@ -21,6 +22,8 @@ final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
             }
         ],
         "dateOfBirth": {
+            "immunityBirthDate": "01/01/1980",
+            "birthCountry": "U.S.",
             "exclusion": [
                 {
                     "exclusionCode": "055",
@@ -199,7 +202,7 @@ final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
                 {
                     "observationCode": "158",
                     "observationTitle": "Immunosuppressive therapy",
-                    "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies. "
+                    "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies."
                 },
                 {
                     "observationCode": "159",
@@ -254,50 +257,16 @@ final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "12 months - 4 days",
                             "minAge": "12 months",
                             "earliestRecAge": "12 months",
                             "latestRecAge": "16 months + 4 weeks"
-                        },
-                        {
-                            "absMinAge": "13 months",
-                            "minAge": "15 months",
-                            "earliestRecAge": "4 years",
-                            "latestRecAge": "7 years + 4 weeks"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks",
-                            "earliestRecInt": "3 years",
-                            "latestRecInt": "6 years + 4 weeks"
-                        }
-                    ],
-                    "allowableInterval": {
-                        "fromPrevious": "Y",
-                        "absMinInt": "4 weeks"
-                    },
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "Varicella",
-                            "cvx": "21",
-                            "beginAge": "12 months",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "MMRV",
-                            "cvx": "94",
-                            "beginAge": "12 months",
-                            "endAge": "13 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "Varicella",
                             "cvx": "21",
@@ -315,22 +284,6 @@ final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Varicella",
-                            "cvx": "21",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "MMRV",
-                            "cvx": "94",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Zoster Live",
-                            "cvx": "121",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "50 years"
-                        },
                         {
                             "vaccineType": "Varicella",
                             "cvx": "21",
@@ -431,22 +384,13 @@ final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "13 years",
                             "minAge": "13 years",
                             "earliestRecAge": "13 years",
                             "latestRecAge": "13 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -456,32 +400,9 @@ final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
                             "beginAge": "12 months",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Varicella",
-                            "cvx": "21",
-                            "beginAge": "12 months",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Varicella",
-                            "cvx": "21",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "MMRV",
-                            "cvx": "94",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Zoster Live",
-                            "cvx": "121",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "50 years"
-                        },
                         {
                             "vaccineType": "Varicella",
                             "cvx": "21",

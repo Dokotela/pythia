@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData japaneseEncephalitis = AntigenSupportingData.fromJson({
+final AntigenSupportingData japaneseEncephalitis = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Japanese Encephalitis",
     "vaccineGroup": "Japanese Encephalitis",
     "contraindications": {
@@ -110,19 +111,13 @@ final AntigenSupportingData japaneseEncephalitis = AntigenSupportingData.fromJso
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -140,29 +135,9 @@ final AntigenSupportingData japaneseEncephalitis = AntigenSupportingData.fromJso
                             "beginAge": "3 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Japanese Encephalitis, VC",
-                            "cvx": "134",
-                            "beginAge": "2 months",
-                            "endAge": "3 years",
-                            "volume": "0.25",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Japanese Encephalitis, VC",
-                            "cvx": "134",
-                            "beginAge": "3 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Japanese Encephalitis, VC",
-                            "cvx": "134",
-                            "beginAge": "2 months - 4 days"
-                        },
                         {
                             "vaccineType": "Japanese Encephalitis, VC",
                             "cvx": "134",
@@ -288,7 +263,7 @@ final AntigenSupportingData japaneseEncephalitis = AntigenSupportingData.fromJso
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "maxAge": "65 years"
@@ -301,12 +276,6 @@ final AntigenSupportingData japaneseEncephalitis = AntigenSupportingData.fromJso
                             "minInt": "7 days",
                             "earliestRecInt": "7 days",
                             "latestRecInt": "28 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -316,29 +285,9 @@ final AntigenSupportingData japaneseEncephalitis = AntigenSupportingData.fromJso
                             "beginAge": "3 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Japanese Encephalitis, VC",
-                            "cvx": "134",
-                            "beginAge": "2 months",
-                            "endAge": "3 years",
-                            "volume": "0.25",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Japanese Encephalitis, VC",
-                            "cvx": "134",
-                            "beginAge": "3 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Japanese Encephalitis, VC",
-                            "cvx": "134",
-                            "beginAge": "2 months - 4 days"
-                        },
                         {
                             "vaccineType": "Japanese Encephalitis, VC",
                             "cvx": "134",

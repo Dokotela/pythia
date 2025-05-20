@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
+final AntigenSupportingData hpv = AntigenSupportingData.fromJson(
+{
     "targetDisease": "HPV",
     "vaccineGroup": "HPV",
     "contraindications": {
@@ -58,7 +59,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "9 years - 4 days",
@@ -68,45 +69,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "maxAge": "46 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
-                        }
-                    ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "9vHPV",
                             "cvx": "165",
@@ -136,108 +99,12 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "vaccineType": "9vHPV",
                             "cvx": "165",
                             "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Evaluation",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not required if current dose was administered at least 5 months - 4 days from the previous dose OR two total doses have already been administered",
-                                    "conditionLogic": "OR",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "9 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "62;118;137;165"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required once 5 months has passed since dose 1 or two total doses have already been administered.",
-                                    "conditionLogic": "OR",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Interval",
-                                            "interval": "5 months"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "9 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "62;118;137;165"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -245,19 +112,6 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -268,37 +122,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "endAge": "46 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
                         {
                             "vaccineType": "4vHPV",
                             "cvx": "62",
@@ -457,7 +283,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "9 years - 4 days",
@@ -483,36 +309,6 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "16 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "2016-12-15"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "2016-12-16"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -523,65 +319,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "endAge": "46 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
                         {
                             "vaccineType": "4vHPV",
                             "cvx": "62",
@@ -606,7 +346,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -614,29 +354,6 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "16 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "2016-12-15"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "2016-12-16"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -647,37 +364,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "endAge": "46 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
                         {
                             "vaccineType": "4vHPV",
                             "cvx": "62",
@@ -788,7 +477,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "9 years - 4 days",
@@ -798,45 +487,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "maxAge": "46 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
-                        }
-                    ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "9vHPV",
                             "cvx": "165",
@@ -861,112 +512,18 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "vaccineType": "9vHPV",
                             "cvx": "165",
                             "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
                         {
                             "vaccineType": "2vHPV",
                             "cvx": "118"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Evaluation",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not required if current dose was administered at least 5 months - 4 das from the previous dose OR two total doses have already been administered",
-                                    "conditionLogic": "OR",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "9 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "62;118;137;165"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required once 5 months has passed since dose 1 or two total doses have already been administered.",
-                                    "conditionLogic": "OR",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Interval",
-                                            "interval": "5 months"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "9 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "62;118;137;165"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -974,30 +531,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "9vHPV",
                             "cvx": "165",
@@ -1022,28 +558,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "vaccineType": "9vHPV",
                             "cvx": "165",
                             "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        },
                         {
                             "vaccineType": "2vHPV",
                             "cvx": "118"
@@ -1185,7 +702,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "9 years - 4 days",
@@ -1211,55 +728,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "16 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "2016-12-15"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "2016-12-16"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "9vHPV",
                             "cvx": "165",
@@ -1284,47 +755,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "vaccineType": "9vHPV",
                             "cvx": "165",
                             "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        },
                         {
                             "vaccineType": "2vHPV",
                             "cvx": "118"
@@ -1333,7 +766,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -1341,40 +774,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "16 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "2016-12-15"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "2016-12-16"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "9vHPV",
                             "cvx": "165",
@@ -1399,28 +801,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "vaccineType": "9vHPV",
                             "cvx": "165",
                             "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        },
                         {
                             "vaccineType": "2vHPV",
                             "cvx": "118"
@@ -1526,7 +909,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "9 years - 4 days",
@@ -1536,45 +919,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "maxAge": "27 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
-                        }
-                    ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "9vHPV",
                             "cvx": "165",
@@ -1604,108 +949,12 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "vaccineType": "9vHPV",
                             "cvx": "165",
                             "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Evaluation",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not required if current dose was administered at least 5 months - 4 das from the previous dose OR two total doses have already been administered",
-                                    "conditionLogic": "OR",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "9 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "62;118;137;165"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required once 5 months has passed since dose 1 or two total doses have already been administered.",
-                                    "conditionLogic": "OR",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Interval",
-                                            "interval": "5 months"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "9 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "62;118;137;165"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -1713,19 +962,6 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -1736,37 +972,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "endAge": "46 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
                         {
                             "vaccineType": "4vHPV",
                             "cvx": "62",
@@ -1931,7 +1139,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "9 years - 4 days",
@@ -1941,45 +1149,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "maxAge": "27 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
-                        }
-                    ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "9vHPV",
                             "cvx": "165",
@@ -2004,112 +1174,18 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "vaccineType": "9vHPV",
                             "cvx": "165",
                             "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
                         {
                             "vaccineType": "2vHPV",
                             "cvx": "118"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Evaluation",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not required if current dose was administered at least 5 months - 4 das from the previous dose OR two total doses have already been administered",
-                                    "conditionLogic": "OR",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Interval",
-                                            "interval": "5 months - 4 days"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "9 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "62;118;137;165"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required once 5 months has passed since dose 1 or two total doses have already been administered.",
-                                    "conditionLogic": "OR",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Interval",
-                                            "interval": "5 months"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "9 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "62;118;137;165"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -2117,30 +1193,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "13 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "9vHPV",
                             "cvx": "165",
@@ -2165,28 +1220,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "vaccineType": "9vHPV",
                             "cvx": "165",
                             "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        },
                         {
                             "vaccineType": "2vHPV",
                             "cvx": "118"
@@ -2427,7 +1463,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "9 years - 4 days",
@@ -2435,40 +1471,6 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "earliestRecAge": "11 years",
                             "latestRecAge": "13 years + 4 weeks",
                             "maxAge": "27 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "16 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "2016-12-15"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "2016-12-16"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks",
-                            "earliestRecInt": "4 months",
-                            "latestRecInt": "5 months + 4 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -2479,65 +1481,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "endAge": "46 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
                         {
                             "vaccineType": "4vHPV",
                             "cvx": "62",
@@ -2562,7 +1508,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -2570,31 +1516,6 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "16 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "2016-12-15"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "2016-12-16"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks",
-                            "earliestRecInt": "4 months",
-                            "latestRecInt": "5 months + 4 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -2605,37 +1526,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "endAge": "46 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
                         {
                             "vaccineType": "4vHPV",
                             "cvx": "62",
@@ -2845,7 +1738,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "9 years - 4 days",
@@ -2855,57 +1748,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "maxAge": "27 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "16 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "2016-12-15"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "2016-12-16"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks",
-                            "earliestRecInt": "4 months",
-                            "latestRecInt": "5 months + 4 weeks"
-                        }
-                    ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "9vHPV",
                             "cvx": "165",
@@ -2930,47 +1773,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "vaccineType": "9vHPV",
                             "cvx": "165",
                             "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        },
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        },
                         {
                             "vaccineType": "2vHPV",
                             "cvx": "118"
@@ -2979,7 +1784,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -2987,42 +1792,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "16 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "2016-12-15"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "2016-12-16"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "12 weeks - 4 days",
-                            "minInt": "12 weeks",
-                            "earliestRecInt": "4 months",
-                            "latestRecInt": "5 months + 4 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years",
-                            "endAge": "46 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "9vHPV",
                             "cvx": "165",
@@ -3047,28 +1819,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
                             "vaccineType": "9vHPV",
                             "cvx": "165",
                             "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "4vHPV",
-                            "cvx": "62",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HPV Unspecified",
-                            "cvx": "137",
-                            "beginAge": "9 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "9vHPV",
-                            "cvx": "165",
-                            "beginAge": "9 years - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
-                        {
-                            "vaccineType": "2vHPV",
-                            "cvx": "118"
-                        },
                         {
                             "vaccineType": "2vHPV",
                             "cvx": "118"

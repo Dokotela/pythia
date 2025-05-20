@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
+final AntigenSupportingData tbe = AntigenSupportingData.fromJson(
+{
     "targetDisease": "TBE",
     "vaccineGroup": "TBE",
     "contraindications": {
@@ -102,7 +103,7 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -110,19 +111,6 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "12 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months",
-                            "latestRecInt": "12 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "3 years - 4 days",
-                            "minInt": "3 years",
-                            "earliestRecInt": "3 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -133,57 +121,9 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                             "endAge": "16 years",
                             "volume": "0.25",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-                            "cvx": "223",
-                            "beginAge": "1 year",
-                            "endAge": "16 years",
-                            "volume": "0.25",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-                            "cvx": "223",
-                            "beginAge": "1 year",
-                            "endAge": "16 years",
-                            "volume": "0.25",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Tick-borne encephalitis, unspecified",
-                            "cvx": "222",
-                            "beginAge": "1 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-                            "cvx": "223",
-                            "beginAge": "1 years - 4 days",
-                            "endAge": "16 years"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-                            "cvx": "224",
-                            "beginAge": "1 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, unspecified",
-                            "cvx": "222",
-                            "beginAge": "1 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-                            "cvx": "223",
-                            "beginAge": "1 years - 4 days",
-                            "endAge": "16 years"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-                            "cvx": "224",
-                            "beginAge": "1 years - 4 days"
-                        },
                         {
                             "vaccineType": "Tick-borne encephalitis, unspecified",
                             "cvx": "222",
@@ -204,7 +144,7 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -212,12 +152,6 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
                             "latestRecInt": "12 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "3 years - 4 days",
-                            "minInt": "3 years",
-                            "earliestRecInt": "3 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -228,33 +162,9 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                             "endAge": "16 years",
                             "volume": "0.25",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-                            "cvx": "223",
-                            "beginAge": "1 year",
-                            "endAge": "16 years",
-                            "volume": "0.25",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Tick-borne encephalitis, unspecified",
-                            "cvx": "222",
-                            "beginAge": "1 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-                            "cvx": "223",
-                            "beginAge": "1 years - 4 days",
-                            "endAge": "16 years"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-                            "cvx": "224",
-                            "beginAge": "1 years - 4 days"
-                        },
                         {
                             "vaccineType": "Tick-borne encephalitis, unspecified",
                             "cvx": "222",
@@ -401,7 +311,7 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -409,19 +319,6 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                             "minInt": "14 days",
                             "earliestRecInt": "14 days",
                             "latestRecInt": "3 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months",
-                            "latestRecInt": "12 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "3 years - 4 days",
-                            "minInt": "3 years",
-                            "earliestRecInt": "3 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -431,55 +328,9 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                             "beginAge": "16 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-                            "cvx": "224",
-                            "beginAge": "16 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-                            "cvx": "224",
-                            "beginAge": "16 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Tick-borne encephalitis, unspecified",
-                            "cvx": "222",
-                            "beginAge": "1 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-                            "cvx": "223",
-                            "beginAge": "1 years - 4 days",
-                            "endAge": "16 years"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-                            "cvx": "224",
-                            "beginAge": "1 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, unspecified",
-                            "cvx": "222",
-                            "beginAge": "1 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-                            "cvx": "223",
-                            "beginAge": "1 years - 4 days",
-                            "endAge": "16 years"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-                            "cvx": "224",
-                            "beginAge": "1 years - 4 days"
-                        },
                         {
                             "vaccineType": "Tick-borne encephalitis, unspecified",
                             "cvx": "222",
@@ -500,7 +351,7 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -508,12 +359,6 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                             "minInt": "5 months",
                             "earliestRecInt": "5 months",
                             "latestRecInt": "12 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "3 years - 4 days",
-                            "minInt": "3 years",
-                            "earliestRecInt": "3 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -523,32 +368,9 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
                             "beginAge": "16 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-                            "cvx": "224",
-                            "beginAge": "16 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Tick-borne encephalitis, unspecified",
-                            "cvx": "222",
-                            "beginAge": "1 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-                            "cvx": "223",
-                            "beginAge": "1 years - 4 days",
-                            "endAge": "16 years"
-                        },
-                        {
-                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-                            "cvx": "224",
-                            "beginAge": "1 years - 4 days"
-                        },
                         {
                             "vaccineType": "Tick-borne encephalitis, unspecified",
                             "cvx": "222",

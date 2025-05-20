@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
+final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Pneumococcal",
     "vaccineGroup": "Pneumococcal",
     "contraindications": {
@@ -69,7 +70,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "6 weeks - 4 days",
@@ -77,147 +78,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "earliestRecAge": "2 months",
                             "latestRecAge": "3 months + 4 weeks",
                             "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "10 weeks - 4 days",
-                            "minAge": "10 weeks",
-                            "earliestRecAge": "4 months",
-                            "latestRecAge": "5 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "14 weeks - 4 days",
-                            "minAge": "14 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "7 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "12 months - 4 days",
-                            "minAge": "12 months",
-                            "earliestRecAge": "12 months",
-                            "latestRecAge": "16 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "maxAge": "5 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -275,7 +138,60 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "6 weeks - 4 days"
+                        }
+                    ],
+                    "inadvertentVaccine": [
+                        {
+                            "vaccineType": "PPSV23",
+                            "cvx": "33"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 2",
+                    "age": [
+                        {
+                            "absMinAge": "10 weeks - 4 days",
+                            "minAge": "10 weeks",
+                            "earliestRecAge": "4 months",
+                            "latestRecAge": "5 months + 4 weeks",
+                            "maxAge": "5 years"
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "8 weeks",
+                            "latestRecInt": "13 weeks"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "PCV13",
+                            "cvx": "133",
+                            "beginAge": "6 weeks",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
                         },
+                        {
+                            "vaccineType": "PCV15",
+                            "cvx": "215",
+                            "beginAge": "6 weeks",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        },
+                        {
+                            "vaccineType": "PCV20",
+                            "cvx": "216",
+                            "beginAge": "6 weeks",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
                         {
                             "vaccineType": "PCV7",
                             "cvx": "100",
@@ -299,91 +215,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "PCV10",
                             "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
                             "beginAge": "6 weeks - 4 days"
                         },
                         {
@@ -398,22 +229,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                         }
                     ],
                     "inadvertentVaccine": [
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33"
@@ -453,478 +268,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not required if the current dose was administered on or after 12 months of age",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "12 months"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not required if the current dose was administered on or after 12 months - 4 days of age AND at least 8 weeks - 4 days from the previous dose",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "12 months - 4 days"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Interval",
-                                            "interval": "8 weeks - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required for those 12 months or older",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "12 months"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV13, PCV15, or PCV20",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
-                    "age": [
-                        {
-                            "absMinAge": "10 weeks - 4 days",
-                            "minAge": "10 weeks",
-                            "earliestRecAge": "4 months",
-                            "latestRecAge": "5 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "14 weeks - 4 days",
-                            "minAge": "14 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "7 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "12 months - 4 days",
-                            "minAge": "12 months",
-                            "earliestRecAge": "12 months",
-                            "latestRecAge": "16 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "maxAge": "5 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        }
-                    ],
-                    "inadvertentVaccine": [
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Evaluation",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose not required if current dose was administered on or after 24 months - 4 days of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "24 months - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose not required for those who are 24 months of age or older.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "24 months"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Evaluation",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Target Dose is not required if the current dose was administered on or after 12 months of age",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "12 months"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Target Dose is not required if the current dose was administered on or after 12 months - 4 days of age AND at least 8 weeks - 4 days from the previous dose",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "12 months - 4 days"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Interval",
-                                            "interval": "8 weeks - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required for those 12 months or older",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "12 months"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV13, PCV15, or PCV20",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "recurringDose": "No"
-                },
-                {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 3",
                     "age": [
                         {
                             "absMinAge": "14 weeks - 4 days",
@@ -932,16 +281,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "earliestRecAge": "6 months",
                             "latestRecAge": "7 months + 4 weeks",
                             "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "12 months - 4 days",
-                            "minAge": "12 months",
-                            "earliestRecAge": "12 months",
-                            "latestRecAge": "16 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "maxAge": "5 years"
                         }
                     ],
                     "interval": [
@@ -951,65 +290,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "8 weeks",
                             "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -1067,67 +350,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33"
@@ -1184,42 +409,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV13, PCV15, or PCV20",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 4",
                     "age": [
                         {
                             "absMinAge": "12 months - 4 days",
                             "minAge": "12 months",
                             "earliestRecAge": "12 months",
                             "latestRecAge": "16 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
                             "maxAge": "5 years"
                         }
                     ],
@@ -1230,37 +431,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "minInt": "8 weeks",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -1318,54 +491,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV13, PCV15, or PCV20",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -1479,7 +610,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "6 weeks - 4 days",
@@ -1487,147 +618,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "earliestRecAge": "2 months",
                             "latestRecAge": "3 months + 4 weeks",
                             "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "10 weeks - 4 days",
-                            "minAge": "10 weeks",
-                            "earliestRecAge": "4 months",
-                            "latestRecAge": "5 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "14 weeks - 4 days",
-                            "minAge": "14 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "7 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "12 months - 4 days",
-                            "minAge": "12 months",
-                            "earliestRecAge": "12 months",
-                            "latestRecAge": "16 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "maxAge": "5 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -1685,7 +678,60 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "6 weeks - 4 days"
+                        }
+                    ],
+                    "inadvertentVaccine": [
+                        {
+                            "vaccineType": "PPSV23",
+                            "cvx": "33"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 2",
+                    "age": [
+                        {
+                            "absMinAge": "10 weeks - 4 days",
+                            "minAge": "10 weeks",
+                            "earliestRecAge": "4 months",
+                            "latestRecAge": "5 months + 4 weeks",
+                            "maxAge": "5 years"
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "8 weeks",
+                            "latestRecInt": "13 weeks"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "PCV13",
+                            "cvx": "133",
+                            "beginAge": "6 weeks",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
                         },
+                        {
+                            "vaccineType": "PCV15",
+                            "cvx": "215",
+                            "beginAge": "6 weeks",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        },
+                        {
+                            "vaccineType": "PCV20",
+                            "cvx": "216",
+                            "beginAge": "6 weeks",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
                         {
                             "vaccineType": "PCV7",
                             "cvx": "100",
@@ -1709,91 +755,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "PCV10",
                             "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
                             "beginAge": "6 weeks - 4 days"
                         },
                         {
@@ -1808,22 +769,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                         }
                     ],
                     "inadvertentVaccine": [
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33"
@@ -1851,312 +796,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
-                    "age": [
-                        {
-                            "absMinAge": "10 weeks - 4 days",
-                            "minAge": "10 weeks",
-                            "earliestRecAge": "4 months",
-                            "latestRecAge": "5 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "14 weeks - 4 days",
-                            "minAge": "14 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "7 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "12 months - 4 days",
-                            "minAge": "12 months",
-                            "earliestRecAge": "12 months",
-                            "latestRecAge": "16 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "maxAge": "5 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        }
-                    ],
-                    "inadvertentVaccine": [
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required for those 7 months or older",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "7 months - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "recurringDose": "No"
-                },
-                {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 3",
                     "age": [
                         {
                             "absMinAge": "14 weeks - 4 days",
@@ -2164,16 +804,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "earliestRecAge": "6 months",
                             "latestRecAge": "7 months + 4 weeks",
                             "maxAge": "5 years"
-                        },
-                        {
-                            "absMinAge": "12 months - 4 days",
-                            "minAge": "12 months",
-                            "earliestRecAge": "12 months",
-                            "latestRecAge": "16 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "maxAge": "5 years"
                         }
                     ],
                     "interval": [
@@ -2183,65 +813,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "8 weeks",
                             "latestRecInt": "13 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "7 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -2299,108 +873,24 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV13, PCV15, or PCV20",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 4",
                     "age": [
                         {
                             "absMinAge": "12 months - 4 days",
                             "minAge": "12 months",
                             "earliestRecAge": "12 months",
                             "latestRecAge": "16 months + 4 weeks",
-                            "maxAge": "5 years"
-                        },
-                        {
                             "maxAge": "5 years"
                         }
                     ],
@@ -2411,37 +901,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "minInt": "8 weeks",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -2499,54 +961,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV13, PCV15, or PCV20",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -2660,19 +1080,13 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "12 months - 4 days",
                             "minAge": "12 months",
                             "earliestRecAge": "12 months",
                             "latestRecAge": "12 months",
-                            "maxAge": "5 years"
-                        },
-                        {
-                            "maxAge": "5 years"
-                        },
-                        {
                             "maxAge": "5 years"
                         }
                     ],
@@ -2683,65 +1097,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -2799,103 +1157,19 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV7",
-                            "cvx": "100",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal, unspecified formulation",
-                            "cvx": "109",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "Pneumococcal Conjugate, unspecified formulation",
-                            "cvx": "152",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV10",
-                            "cvx": "177",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV13, PCV15, or PCV20",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "12 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "age": [
-                        {
-                            "maxAge": "5 years"
-                        },
                         {
                             "maxAge": "5 years"
                         }
@@ -2907,37 +1181,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks",
                             "latestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -2995,54 +1241,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV13, PCV15, or PCV20",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "12 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -3155,16 +1359,13 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "24 months - 4 days",
                             "minAge": "24 months",
                             "earliestRecAge": "24 months",
                             "latestRecAge": "24 months",
-                            "maxAge": "5 years"
-                        },
-                        {
                             "maxAge": "5 years"
                         }
                     ],
@@ -3173,37 +1374,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -3261,54 +1434,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "inadvertentVaccine": [
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV13, PCV15, or PCV20",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "24 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -3516,7 +1647,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years",
@@ -3531,18 +1662,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -3566,41 +1685,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -3613,31 +1697,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
                         },
                         {
                             "vaccineType": "PCV20",
@@ -3701,81 +1760,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "12 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        },
-                                        {
-                                            "conditionID": "3",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "12 months - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "2",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV20 or PPSV23",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33; 216"
                                         }
                                     ]
                                 }
@@ -3785,14 +1769,8 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
@@ -3821,20 +1799,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -3847,16 +1811,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
                         },
                         {
                             "vaccineType": "PCV20",
@@ -3920,27 +1874,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV20 or PPSV23",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33; 216"
                                         }
                                     ]
                                 }
@@ -4128,7 +2061,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years",
@@ -4143,49 +2076,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -4223,26 +2116,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -4250,60 +2123,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "context": "Both",
                             "setLogic": "OR",
                             "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "12 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        },
-                                        {
-                                            "conditionID": "3",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "12 months - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "2",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
                                 {
                                     "setID": "1",
                                     "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
@@ -4364,14 +2183,8 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
@@ -4386,27 +2199,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "2 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -4414,83 +2206,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "12 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        },
-                                        {
-                                            "conditionID": "3",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "12 months - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "2",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -4725,7 +2440,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years",
@@ -4734,18 +2449,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                         }
                     ],
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
@@ -4760,48 +2463,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "2 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -4809,165 +2470,13 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "12 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        },
-                                        {
-                                            "conditionID": "3",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "12 months - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "2",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "12 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        },
-                                        {
-                                            "conditionID": "3",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "12 months - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "2",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "8 weeks - 4 days",
@@ -4996,45 +2505,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
                         {
                             "vaccineType": "PCV13",
                             "cvx": "133",
@@ -5056,60 +2529,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "context": "Both",
                             "setLogic": "OR",
                             "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "12 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        },
-                                        {
-                                            "conditionID": "3",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "12 months - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "2",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
                                 {
                                     "setID": "1",
                                     "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
@@ -5472,7 +2891,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years",
@@ -5487,24 +2906,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "8 weeks - 4 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -5528,55 +2929,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -5589,299 +2941,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "12 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        },
-                                        {
-                                            "conditionID": "3",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "12 months - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "2",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "12 months - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        },
-                                        {
-                                            "conditionID": "3",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "12 months - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "endAge": "24 months",
-                                            "doseCount": "2",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV20 or PPSV23",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33; 216"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "216"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "recurringDose": "No"
-                },
-                {
-                    "doseNumber": "Dose 4",
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
                         },
                         {
                             "vaccineType": "PCV20",
@@ -5949,32 +3008,116 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 2",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "8 weeks - 4 days",
+                            "minInt": "8 weeks",
+                            "earliestRecInt": "8 weeks"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "PCV13",
+                            "cvx": "133",
+                            "beginAge": "6 weeks",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
                         },
                         {
+                            "vaccineType": "PCV15",
+                            "cvx": "215",
+                            "beginAge": "6 weeks",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        },
+                        {
+                            "vaccineType": "PCV20",
+                            "cvx": "216",
+                            "beginAge": "6 weeks",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "PCV13",
+                            "cvx": "133",
+                            "beginAge": "6 weeks - 4 days"
+                        },
+                        {
+                            "vaccineType": "PCV15",
+                            "cvx": "215",
+                            "beginAge": "6 weeks - 4 days"
+                        },
+                        {
+                            "vaccineType": "PCV20",
+                            "cvx": "216",
+                            "beginAge": "6 weeks - 4 days"
+                        }
+                    ],
+                    "conditionalSkip": [
+                        {
                             "context": "Both",
-                            "setLogic": "n/a",
+                            "setLogic": "OR",
                             "set": [
                                 {
                                     "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more doses of PCV20 or PPSV23",
+                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 0 doses before 12 months AND 2 or more doses between 12 and 24 months",
+                                    "conditionLogic": "AND",
                                     "condition": [
                                         {
                                             "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33; 216"
+                                            "conditionType": "Completed Series",
+                                            "seriesGroups": "1"
                                         },
                                         {
                                             "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
+                                            "conditionType": "Vaccine Count By Age",
                                             "beginAge": "6 weeks - 4 days",
+                                            "endAge": "12 months - 4 days",
                                             "doseCount": "0",
                                             "doseType": "Total",
+                                            "doseCountLogic": "equal to",
+                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
+                                        },
+                                        {
+                                            "conditionID": "3",
+                                            "conditionType": "Vaccine Count By Age",
+                                            "beginAge": "12 months - 4 days",
+                                            "endAge": "24 months",
+                                            "doseCount": "1",
+                                            "doseType": "Total",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "216"
+                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "setID": "2",
+                                    "setDescription": "Dose is not required if the patient has a complete standard series AND 3 or more doses before 24 months.",
+                                    "conditionLogic": "AND",
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Completed Series",
+                                            "seriesGroups": "1"
+                                        },
+                                        {
+                                            "conditionID": "2",
+                                            "conditionType": "Vaccine Count By Age",
+                                            "beginAge": "6 weeks - 4 days",
+                                            "endAge": "24 months",
+                                            "doseCount": "2",
+                                            "doseType": "Total",
+                                            "doseCountLogic": "greater than",
+                                            "vaccineTypes": "100; 109; 133; 152; 215; 177; 216"
                                         }
                                     ]
                                 }
@@ -5984,19 +3127,13 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -6013,33 +3150,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33",
@@ -6068,15 +3181,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "33; 216"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "216"
                                         }
                                     ]
                                 }
@@ -6292,24 +3396,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "6 years",
                             "earliestRecAge": "6 years"
-                        },
-                        {
-                            "absMinAge": "2 years - 4 days",
-                            "minAge": "6 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -6333,13 +3425,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
@@ -6352,16 +3437,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
                         },
                         {
                             "vaccineType": "PCV20",
@@ -6572,20 +3647,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "6 years",
                             "earliestRecAge": "6 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -6595,27 +3662,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "2 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -6623,44 +3669,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more total doses to date",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -6938,26 +3946,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "6 years",
                             "earliestRecAge": "6 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -6981,27 +3975,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -7014,26 +3987,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
                         },
                         {
                             "vaccineType": "PCV20",
@@ -7067,19 +4020,13 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -7089,33 +4036,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "2 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33",
@@ -7413,7 +4336,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
@@ -7421,67 +4344,11 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "earliestRecAge": "6 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        }
-                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         }
@@ -7491,74 +4358,13 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more total doses to date",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -7587,20 +4393,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -7613,16 +4405,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
                         },
                         {
                             "vaccineType": "PCV20",
@@ -7923,7 +4705,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
@@ -7931,53 +4713,11 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "earliestRecAge": "6 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        }
-                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         }
@@ -7987,67 +4727,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more total doses to date",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "5 years",
                             "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -8057,27 +4748,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "2 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -8085,44 +4755,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more total doses to date",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -8299,54 +4931,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "19 years",
                             "earliestRecAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "2 years - 4 days",
-                            "minAge": "6 years"
-                        },
-                        {
-                            "absMinAge": "50 years",
-                            "minAge": "50 years",
-                            "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "N",
-                            "fromMostRecent": "133",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromMostRecent": "215",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -8354,55 +4944,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -8441,51 +4982,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -8509,153 +5005,16 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has received a PCV20 on or after 2 years of age",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "2 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "Greater Than",
-                                            "vaccineTypes": "216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient has received a PCV21 on or after 19 years of age",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "Greater Than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "6 years"
-                        },
-                        {
-                            "absMinAge": "50 years",
-                            "minAge": "50 years",
-                            "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
@@ -8672,18 +5031,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "1 year",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -8691,34 +5038,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -8752,36 +5071,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -8818,97 +5107,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "327"
                                         }
                                     ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
                                 }
                             ]
                         }
@@ -8916,26 +5114,15 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "age": [
                         {
                             "absMinAge": "50 years",
                             "minAge": "50 years",
                             "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -8957,20 +5144,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -8978,21 +5151,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "PCV20",
@@ -9036,67 +5194,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
                                             "vaccineTypes": "215; 216; 327"
                                         }
                                     ]
@@ -9323,42 +5420,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "19 years",
                             "earliestRecAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "50 years",
-                            "minAge": "50 years",
-                            "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -9368,55 +5435,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "2 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -9424,212 +5442,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more total doses to date",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
-                    "age": [
-                        {
-                            "absMinAge": "50 years",
-                            "minAge": "50 years",
-                            "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "1 year",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -9637,34 +5461,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -9703,36 +5499,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -9756,119 +5522,17 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "age": [
                         {
                             "absMinAge": "50 years",
                             "minAge": "50 years",
                             "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
@@ -9877,29 +5541,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "5 years",
                             "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV20",
                             "cvx": "216",
@@ -9930,21 +5574,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -9978,67 +5607,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
                                             "vaccineTypes": "215; 216; 327"
                                         }
                                     ]
@@ -10212,52 +5780,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "19 years",
                             "earliestRecAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "2 years - 4 days",
-                            "minAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "N",
-                            "fromMostRecent": "133",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromMostRecent": "215",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -10265,55 +5793,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -10352,51 +5831,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -10420,166 +5854,16 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has received a PCV20 on or after 2 years of age",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "2 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "Greater Than",
-                                            "vaccineTypes": "216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient has received a PCV21 on or after 19 years of age",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "Greater Than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "Greater Than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "Greater Than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
@@ -10596,18 +5880,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -10615,34 +5887,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -10676,36 +5920,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -10742,112 +5956,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "327"
                                         }
                                     ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "Greater Than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "Greater Than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
                                 }
                             ]
                         }
@@ -10855,24 +5963,13 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "age": [
                         {
                             "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -10894,20 +5991,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -10915,21 +5998,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "PCV20",
@@ -10989,67 +6057,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
                                         }
                                     ]
                                 }
@@ -11220,40 +6227,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "19 years",
                             "earliestRecAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -11263,55 +6242,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "2 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -11319,225 +6249,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more total doses to date",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
-                    "age": [
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "1 year",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -11545,34 +6268,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -11611,36 +6306,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -11664,141 +6329,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "age": [
                         {
                             "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -11811,20 +6353,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -11851,21 +6379,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -11915,67 +6428,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
                                         }
                                     ]
                                 }
@@ -12286,54 +6738,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "19 years",
                             "earliestRecAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "N",
-                            "fromMostRecent": "133",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromMostRecent": "215",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -12341,69 +6751,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -12442,66 +6789,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -12525,209 +6812,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has received a PCV20 on or after 6 years of age",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient has received a PCV21 on or after 19 years of age",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "Greater Than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
-                    "age": [
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "N",
@@ -12742,24 +6832,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -12783,48 +6855,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -12832,51 +6862,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "PCV20",
@@ -12923,157 +6908,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "327"
                                         }
                                     ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
                                 }
                             ]
                         }
@@ -13081,30 +6915,8 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
-                    "age": [
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
+                    "doseNumber": "Dose 3",
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -13113,34 +6925,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV20",
                             "cvx": "216",
@@ -13171,36 +6955,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -13252,112 +7006,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "327"
                                         }
                                     ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
                                 }
                             ]
                         }
@@ -13365,24 +7013,13 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 4",
                     "age": [
                         {
                             "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -13395,20 +7032,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -13435,21 +7058,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -13499,67 +7107,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
                                         }
                                     ]
                                 }
@@ -13869,53 +7416,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "19 years",
                             "earliestRecAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -13925,69 +7431,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "2 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -13995,298 +7438,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more total doses to date",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
-                    "age": [
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "1 year",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -14294,48 +7457,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -14374,51 +7495,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -14442,179 +7518,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
-                    "age": [
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "N",
@@ -14628,49 +7537,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV20",
                             "cvx": "216",
@@ -14701,36 +7570,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -14782,112 +7621,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "327"
                                         }
                                     ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
                                 }
                             ]
                         }
@@ -14895,24 +7628,13 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 4",
                     "age": [
                         {
                             "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -14925,20 +7647,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -14965,21 +7673,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -15029,67 +7722,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
                                         }
                                     ]
                                 }
@@ -15398,46 +8030,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "19 years",
                             "earliestRecAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -15445,62 +8043,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         }
@@ -15510,231 +8052,13 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more total doses to date",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
-                    "age": [
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
+                    "doseNumber": "Dose 2",
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -15749,55 +8073,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "2 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -15805,225 +8080,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received 1 or more total doses to date",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "6 weeks - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133; 215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
-                    "age": [
-                        {
-                            "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
-                        }
-                    ],
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "1 year",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -16031,34 +8099,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -16097,36 +8137,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "65 years"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -16150,141 +8160,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 4",
                     "age": [
                         {
                             "absMinAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
@@ -16297,20 +8184,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV20",
                             "cvx": "216",
                             "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -16337,21 +8210,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -16401,67 +8259,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
                                             "vaccineTypes": "327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received PCV15 or PCV20 on or after age 6 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV21 on or after age 19 years",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "19 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "3",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
                                         }
                                     ]
                                 }
@@ -16613,16 +8410,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "19 years",
                             "minAge": "50 years",
                             "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "19 years",
-                            "minAge": "50 years"
                         }
                     ],
                     "interval": [
@@ -16632,21 +8425,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "1 year",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromMostRecent": "133; 215; 216",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromMostRecent": "33",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years",
-                            "latestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -16670,13 +8448,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -16694,44 +8465,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has received a valid PCV20 or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -16835,26 +8568,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "19 years",
                             "minAge": "50 years",
                             "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "19 years",
-                            "minAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "50 years",
-                            "minAge": "50 years",
-                            "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
@@ -16864,77 +8583,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "1 year",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromMostRecent": "133; 215; 216",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromMostRecent": "33",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years",
-                            "latestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -16942,155 +8590,16 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV13",
                             "cvx": "133",
                             "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "absMinAge": "19 years",
                             "minAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "50 years",
-                            "minAge": "50 years",
-                            "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
@@ -17108,49 +8617,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "minInt": "5 years",
                             "earliestRecInt": "5 years",
                             "latestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV20",
                             "cvx": "216",
@@ -17181,136 +8650,17 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "age": [
                         {
                             "absMinAge": "50 years",
                             "minAge": "50 years",
                             "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
@@ -17319,29 +8669,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "5 years",
                             "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV20",
                             "cvx": "216",
@@ -17362,21 +8692,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "PCV20",
@@ -17420,52 +8735,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
                                             "vaccineTypes": "215; 216; 327"
                                         }
                                     ]
@@ -17604,50 +8873,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "2 years - 4 days",
                             "minAge": "50 years",
                             "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "19 years",
-                            "minAge": "50 years",
-                            "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "50 years",
-                            "minAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
                         {
                             "fromPrevious": "N",
                             "fromMostRecent": "33",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "5 years",
                             "earliestRecInt": "5 years"
@@ -17660,55 +8897,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "beginAge": "2 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -17716,160 +8904,17 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PPSV23",
                             "cvx": "33",
                             "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV13",
-                            "cvx": "133",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "absMinAge": "19 years",
                             "minAge": "50 years",
                             "earliestRecAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "50 years",
-                            "minAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
@@ -17878,18 +8923,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "1 year",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -17897,34 +8930,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV15",
                             "cvx": "215",
                             "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
                         },
@@ -17963,135 +8968,16 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PPSV23",
-                            "cvx": "33",
-                            "beginAge": "2 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient has already received one dose of PPSV on or after 65 years of age.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "65 years",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "33"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "age": [
                         {
                             "absMinAge": "50 years",
                             "minAge": "50 years"
-                        },
-                        {
-                            "absMinAge": "65 years",
-                            "minAge": "65 years",
-                            "earliestRecAge": "65 years"
                         }
                     ],
                     "interval": [
@@ -18100,29 +8986,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "5 years",
                             "earliestRecInt": "5 years"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "PCV20",
                             "cvx": "216",
@@ -18153,21 +9019,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                             "vaccineType": "PCV21",
                             "cvx": "327",
                             "beginAge": "19 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV15",
-                            "cvx": "215",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV20",
-                            "cvx": "216",
-                            "beginAge": "6 weeks - 4 days"
-                        },
-                        {
-                            "vaccineType": "PCV21",
-                            "cvx": "327",
-                            "beginAge": "19 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -18201,52 +9052,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
                                             "doseCount": "0",
                                             "doseType": "Valid",
                                             "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if patient received a valid PCV15, PCV20, or PCV21",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "215; 216; 327"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "context": "Forecast",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient received PCV13 and no PCV15, PCV20, or PCV21 on or after age 6 years",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "133"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "6 years - 4 days",
-                                            "doseCount": "0",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
                                             "vaccineTypes": "215; 216; 327"
                                         }
                                     ]

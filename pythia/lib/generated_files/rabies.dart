@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
+final AntigenSupportingData rabies = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Rabies",
     "vaccineGroup": "Rabies",
     "contraindications": {

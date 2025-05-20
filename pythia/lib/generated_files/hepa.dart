@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
+final AntigenSupportingData hepa = AntigenSupportingData.fromJson(
+{
     "targetDisease": "HepA",
     "vaccineGroup": "HepA",
     "immunity": {
@@ -72,7 +73,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "12 months - 4 days",
@@ -80,43 +81,9 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "earliestRecAge": "12 months",
                             "latestRecAge": "24 months + 4 weeks",
                             "maxAge": "19 years"
-                        },
-                        {
-                            "absMinAge": "18 months - 4 days",
-                            "minAge": "18 months",
-                            "earliestRecAge": "18 months"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months",
-                            "latestRecInt": "19 months + 4 weeks"
-                        }
-                    ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "6 months - 4 days"
-                    },
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "19 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months",
-                            "endAge": "19 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "Hep A, adult",
                             "cvx": "52",
@@ -134,34 +101,6 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
                         {
                             "vaccineType": "Hep A, pediatric, Unspecified",
                             "cvx": "31",
@@ -388,7 +327,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "12 months - 4 days",
@@ -396,19 +335,6 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "earliestRecAge": "19 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
-                        }
-                    ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "6 months - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "Hep A, adult",
@@ -424,38 +350,9 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "endAge": "19 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "19 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
                         {
                             "vaccineType": "Hep A, pediatric, Unspecified",
                             "cvx": "31",
@@ -654,33 +551,12 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
                             "minAge": "19 years",
                             "earliestRecAge": "19 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -690,77 +566,9 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "1",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -770,26 +578,13 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -799,43 +594,9 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "1",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "Hep A, pediatric, Unspecified",
                             "cvx": "31",
@@ -1046,7 +807,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -1054,43 +815,6 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "earliestRecAge": "19 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        }
-                    ],
                     "allowableVaccine": [
                         {
                             "vaccineType": "Hep A, pediatric, Unspecified",
@@ -1113,63 +837,18 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "vaccineType": "Hep A, Unspecified",
                             "cvx": "85",
                             "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -1179,43 +858,9 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "1",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -1300,7 +945,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -1308,27 +953,6 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "earliestRecAge": "19 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
-                        }
-                    ],
                     "allowableVaccine": [
                         {
                             "vaccineType": "Hep A, pediatric, Unspecified",
@@ -1351,80 +975,18 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "vaccineType": "Hep A, Unspecified",
                             "cvx": "85",
                             "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
                         }
                     ],
                     "allowableVaccine": [
@@ -1449,33 +1011,6 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "vaccineType": "Hep A, Unspecified",
                             "cvx": "85",
                             "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
                         }
                     ],
                     "recurringDose": "No"
@@ -1651,7 +1186,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -1659,50 +1194,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "earliestRecAge": "19 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "7 days",
-                            "minInt": "7 days",
-                            "earliestRecInt": "7 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "14 days",
-                            "minInt": "14 days",
-                            "earliestRecInt": "14 days",
-                            "latestRecInt": "23 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
-                        }
-                    ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -1712,43 +1204,6 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -1758,27 +1213,13 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "7 days",
                             "minInt": "7 days",
                             "earliestRecInt": "7 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "14 days",
-                            "minInt": "14 days",
-                            "earliestRecInt": "14 days",
-                            "latestRecInt": "23 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -1788,55 +1229,9 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "1",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -1846,7 +1241,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -1854,13 +1249,6 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "minInt": "14 days",
                             "earliestRecInt": "14 days",
                             "latestRecInt": "23 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -1870,43 +1258,9 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "1",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, pediatric, Unspecified",
-                            "cvx": "31",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, adult",
-                            "cvx": "52",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep A, ped/adol, 2 dose",
-                            "cvx": "83",
-                            "beginAge": "12 months - 4 days",
-                            "endAge": "19 years"
-                        },
-                        {
-                            "vaccineType": "Hep A, Unspecified",
-                            "cvx": "85",
-                            "beginAge": "12 months - 4 days"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",

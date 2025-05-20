@@ -112,8 +112,8 @@
                     ],
                     "recurringDose": "No",
                     "seasonalRecommendation": {
-                        "startDate": "20241001",
-                        "endDate": "20250331"
+                        "startDate": "2024-10-01",
+                        "endDate": "2025-03-31"
                     }
                 }
             ]
@@ -271,8 +271,8 @@
                     ],
                     "recurringDose": "No",
                     "seasonalRecommendation": {
-                        "startDate": "20241001",
-                        "endDate": "20250331"
+                        "startDate": "2024-10-01",
+                        "endDate": "2025-03-31"
                     }
                 },
                 {
@@ -346,8 +346,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Date",
-                                            "startDate": "20240701",
-                                            "endDate": "20250630",
+                                            "startDate": "2024-07-01",
+                                            "endDate": "2025-06-30",
                                             "doseCount": "1",
                                             "doseType": "Valid",
                                             "doseCountLogic": "equal to",
@@ -360,8 +360,8 @@
                     ],
                     "recurringDose": "No",
                     "seasonalRecommendation": {
-                        "startDate": "20241001",
-                        "endDate": "20250331"
+                        "startDate": "2024-10-01",
+                        "endDate": "2025-03-31"
                     }
                 },
                 {
@@ -460,8 +460,8 @@
                                         {
                                             "conditionID": "2",
                                             "conditionType": "Vaccine Count by Date and Age",
-                                            "startDate": "20240701",
-                                            "endDate": "20250630",
+                                            "startDate": "2024-07-01",
+                                            "endDate": "2025-06-30",
                                             "endAge": "8 months",
                                             "doseCount": "1",
                                             "doseType": "Valid",
@@ -513,8 +513,8 @@
                     ],
                     "recurringDose": "No",
                     "seasonalRecommendation": {
-                        "startDate": "20241001",
-                        "endDate": "20250331"
+                        "startDate": "2024-10-01",
+                        "endDate": "2025-03-31"
                     }
                 }
             ]
@@ -619,8 +619,8 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count By Date",
-                                            "startDate": "20240701",
-                                            "endDate": "20250630",
+                                            "startDate": "2024-07-01",
+                                            "endDate": "2025-06-30",
                                             "doseCount": "0",
                                             "doseType": "Total",
                                             "doseCountLogic": "greater than",
@@ -633,8 +633,8 @@
                     ],
                     "recurringDose": "No",
                     "seasonalRecommendation": {
-                        "startDate": "20240901",
-                        "endDate": "20250131"
+                        "startDate": "2024-09-01",
+                        "endDate": "2025-01-31"
                     }
                 }
             ]

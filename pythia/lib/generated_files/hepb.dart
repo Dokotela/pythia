@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
+final AntigenSupportingData hepb = AntigenSupportingData.fromJson(
+{
     "targetDisease": "HepB",
     "vaccineGroup": "HepB",
     "immunity": {
@@ -126,47 +127,13 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "0 days",
                             "minAge": "0 days",
                             "earliestRecAge": "0 days",
                             "latestRecAge": "4 weeks"
-                        },
-                        {
-                            "absMinAge": "4 weeks - 4 days",
-                            "minAge": "4 weeks",
-                            "earliestRecAge": "1 month",
-                            "latestRecAge": "3 months + 4 weeks"
-                        },
-                        {
-                            "absMinAge": "24 weeks - 4 days",
-                            "minAge": "24 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "19 months + 4 weeks"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "5 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "18 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -214,241 +181,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "Hep B, Adol/peds",
                             "cvx": "08",
@@ -524,19 +259,13 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "absMinAge": "4 weeks - 4 days",
                             "minAge": "4 weeks",
                             "earliestRecAge": "1 month",
                             "latestRecAge": "3 months + 4 weeks"
-                        },
-                        {
-                            "absMinAge": "24 weeks - 4 days",
-                            "minAge": "24 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "19 months + 4 weeks"
                         }
                     ],
                     "interval": [
@@ -546,19 +275,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "5 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "18 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -606,125 +322,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "Hep B, Adol/peds",
                             "cvx": "08",
@@ -968,52 +568,13 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "0 days",
                             "minAge": "0 days",
                             "earliestRecAge": "0 days",
                             "latestRecAge": "4 weeks"
-                        },
-                        {
-                            "absMinAge": "4 weeks - 4 days",
-                            "minAge": "4 weeks",
-                            "earliestRecAge": "2 months",
-                            "latestRecAge": "3 months + 4 weeks"
-                        },
-                        {
-                            "absMinAge": "24 weeks - 4 days",
-                            "minAge": "24 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "19 months + 4 weeks"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "5 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "0 days",
-                            "earliestRecInt": "0 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "2",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -1047,315 +608,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "Hep B, Adol/peds",
                             "cvx": "08",
@@ -1431,19 +686,13 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "absMinAge": "4 weeks - 4 days",
                             "minAge": "4 weeks",
                             "earliestRecAge": "2 months",
                             "latestRecAge": "3 months + 4 weeks"
-                        },
-                        {
-                            "absMinAge": "24 weeks - 4 days",
-                            "minAge": "24 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "19 months + 4 weeks"
                         }
                     ],
                     "interval": [
@@ -1453,24 +702,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "5 months + 4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "0 days",
-                            "earliestRecInt": "0 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "2",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -1504,213 +735,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "Hep B, Adol/peds",
                             "cvx": "08",
@@ -1786,33 +813,13 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
-                    "age": [
-                        {
-                            "absMinAge": "24 weeks - 4 days",
-                            "minAge": "24 weeks",
-                            "earliestRecAge": "6 months",
-                            "latestRecAge": "19 months + 4 weeks"
-                        }
-                    ],
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "0 days",
                             "earliestRecInt": "0 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "2",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -1846,111 +853,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "Hep B, Adol/peds",
                             "cvx": "08",
@@ -2179,35 +1084,15 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "11 years - 4 days",
                             "minAge": "11 years",
                             "earliestRecAge": "11 years"
-                        },
-                        {
-                            "maxAge": "16 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 months - 4 days",
-                            "minInt": "4 months",
-                            "earliestRecInt": "4 months",
-                            "latestRecInt": "7 months + 4 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "tradeName": "RECOMBIVAX ADULT",
-                            "mvx": "MSD",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
@@ -2269,32 +1154,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "19 years",
                             "minAge": "19 years",
                             "earliestRecAge": "19 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks",
-                            "earliestRecInt": "6 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -2342,241 +1207,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "Hep B, Adol/peds",
                             "cvx": "08",
@@ -2652,25 +1285,13 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks",
-                            "earliestRecInt": "6 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -2718,125 +1339,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "6 weeks",
-                            "endAge": "5 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "Hep B, Adol/peds",
                             "cvx": "08",
@@ -3072,7 +1577,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -3085,28 +1590,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "0 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "HepB-CpG",
                             "cvx": "189",
@@ -3116,11 +1602,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "HepB-CpG",
                             "cvx": "189",
@@ -3185,47 +1666,13 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "0 days",
                             "minAge": "0 days"
-                        },
-                        {
-                            "absMinAge": "18 years - 4 days",
-                            "minAge": "18 years",
-                            "earliestRecAge": "18 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "0 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "2",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
-                        }
-                    ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "2",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "Hep B, Adol/peds",
@@ -3256,57 +1703,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "endAge": "7 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -3375,116 +1771,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -3497,30 +1789,8 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "0 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "2",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "2",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "HepB-CpG",
@@ -3528,50 +1798,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -3579,135 +1805,19 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB-CpG",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "2",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "2",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "Hep B, Adol/peds",
@@ -3745,13 +1855,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -3825,34 +1928,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -3941,7 +2016,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -3954,30 +2029,8 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "0 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "HepB-CpG",
@@ -3985,80 +2038,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -4066,201 +2045,19 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB-CpG",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "Hep B, Adol/peds",
@@ -4291,50 +2088,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "endAge": "7 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -4403,130 +2156,19 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "Hep B, Adol/peds",
@@ -4564,13 +2206,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -4644,34 +2279,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -4755,7 +2362,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -4763,42 +2370,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "earliestRecAge": "18 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
-                        }
-                    ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -4811,62 +2383,22 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -4879,21 +2411,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
@@ -4967,7 +2484,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -4976,50 +2493,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "maxAge": "60 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "7 days",
-                            "minInt": "7 days",
-                            "earliestRecInt": "7 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "14 days",
-                            "minInt": "14 days",
-                            "earliestRecInt": "14 days",
-                            "latestRecInt": "23 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
-                        }
-                    ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -5032,75 +2506,22 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "7 days",
                             "minInt": "7 days",
                             "earliestRecInt": "7 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "14 days",
-                            "minInt": "14 days",
-                            "earliestRecInt": "14 days",
-                            "latestRecInt": "23 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -5114,32 +2535,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -5147,23 +2548,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "minInt": "14 days",
                             "earliestRecInt": "14 days",
                             "latestRecInt": "23 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -5176,21 +2563,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
@@ -5397,32 +2769,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "0 days",
                             "minAge": "60 years",
                             "earliestRecAge": "60 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks",
-                            "earliestRecInt": "6 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -5432,165 +2784,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "20 years",
                             "volume": "1",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "Hep B, Adol/peds",
                             "cvx": "08",
@@ -5666,25 +2862,13 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks",
-                            "earliestRecInt": "6 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -5694,87 +2878,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "20 years",
                             "volume": "1",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "Hep B, Adol/peds",
                             "cvx": "08",
@@ -6111,7 +3217,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -6119,28 +3225,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "earliestRecAge": "60 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "8 weeks"
-                        }
-                    ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "HepB-CpG",
                             "cvx": "189",
@@ -6150,11 +3235,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
                         {
                             "vaccineType": "HepB-CpG",
                             "cvx": "189",
@@ -6359,48 +3439,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "0 days",
                             "minAge": "60 years",
                             "earliestRecAge": "60 years"
-                        },
-                        {
-                            "absMinAge": "18 years - 4 days",
-                            "minAge": "60 years",
-                            "earliestRecAge": "60 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "0 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "2",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
-                        }
-                    ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "2",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "Hep B, Adult",
@@ -6423,49 +3469,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "endAge": "7 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -6534,116 +3537,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -6656,30 +3555,8 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "0 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "2",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "2",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "HepB-CpG",
@@ -6687,42 +3564,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -6730,135 +3571,19 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB-CpG",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "2",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "2",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "Hep B, Adult",
@@ -6888,13 +3613,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -6968,34 +3686,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -7224,7 +3914,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -7237,30 +3927,8 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "0 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "HepB-CpG",
@@ -7268,64 +3936,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -7333,201 +3943,19 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB-CpG",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "Hep B, Adult",
@@ -7550,42 +3978,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "endAge": "7 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "6 weeks",
-                            "endAge": "7 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -7654,130 +4046,19 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks",
-                            "latestRecInt": "8 weeks"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "4 weeks - 4 days"
-                    },
                     "preferableVaccine": [
                         {
                             "vaccineType": "Hep B, Adult",
@@ -7807,13 +4088,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -7887,34 +4161,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose can be skipped once two doses of Heplisav-B are administered.",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "beginAge": "18 years - 4 days",
-                                            "doseCount": "1",
-                                            "doseType": "Total",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -8138,7 +4384,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -8146,42 +4392,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "earliestRecAge": "60 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
-                        }
-                    ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -8194,67 +4405,22 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 months - 4 days",
-                            "minInt": "5 months",
-                            "earliestRecInt": "5 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "6 months - 4 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -8272,21 +4438,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
@@ -8499,7 +4650,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "18 years - 4 days",
@@ -8507,50 +4658,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "earliestRecAge": "60 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "7 days",
-                            "minInt": "7 days",
-                            "earliestRecInt": "7 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "14 days",
-                            "minInt": "14 days",
-                            "earliestRecInt": "14 days",
-                            "latestRecInt": "23 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
-                        }
-                    ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -8563,75 +4671,22 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "7 days",
                             "minInt": "7 days",
                             "earliestRecInt": "7 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "14 days",
-                            "minInt": "14 days",
-                            "earliestRecInt": "14 days",
-                            "latestRecInt": "23 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -8645,32 +4700,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -8678,23 +4713,9 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "minInt": "14 days",
                             "earliestRecInt": "14 days",
                             "latestRecInt": "23 days"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "12 months - 4 days",
-                            "minInt": "12 months",
-                            "earliestRecInt": "12 months"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
@@ -8707,21 +4728,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
@@ -8799,7 +4805,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "0 days",
@@ -8807,38 +4813,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "earliestRecAge": "20 years"
                         }
                     ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks",
-                            "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        }
-                    ],
                     "preferableVaccine": [
                         {
                             "vaccineType": "Hep B, Adult",
@@ -8847,56 +4821,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "tradeName": "ENGERIX-B ADULT",
                             "mvx": "SKB",
                             "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -8970,234 +4894,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
@@ -9218,107 +4914,18 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received a complete standard series of vaccinations",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient has received 2 doses of Heplisav-B",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "doseCount": "1",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received a complete standard series of vaccinations",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient has received exactly 2 doses of HepB AND both doses were Heplisav-B",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "doseCount": "2",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "08; 42; 43; 44; 45; 51; 102; 104; 110; 132; 146; 189; 198; 220"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "doseCount": "2",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks",
-                            "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
                         }
                     ],
                     "preferableVaccine": [
@@ -9329,47 +4936,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "tradeName": "ENGERIX-B ADULT",
                             "mvx": "SKB",
                             "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -9443,163 +5009,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
@@ -9620,101 +5029,18 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "OR",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received a complete standard series of vaccinations",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient has received 2 doses of Heplisav-B",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "doseCount": "1",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "greater than",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received a complete standard series of vaccinations",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient has received exactly 2 doses of HepB AND both doses were Heplisav-B",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "doseCount": "2",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "08; 42; 43; 44; 45; 51; 102; 104; 110; 132; 146; 189; 198; 220"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "doseCount": "2",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks",
-                            "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
                         }
                     ],
                     "preferableVaccine": [
@@ -9725,38 +5051,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "tradeName": "ENGERIX-B ADULT",
                             "mvx": "SKB",
                             "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -9830,92 +5124,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/peds",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "endAge": "20 years"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adol/high risk infant",
-                            "cvx": "42",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Unspecified Formulation",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hib-HepB",
-                            "cvx": "51",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTP-Hib-HepB",
-                            "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepA-HepB",
-                            "cvx": "104",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adjuvanted",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
-                            "cvx": "198",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-                            "cvx": "220",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
                             "beginAge": "18 years - 4 days"
                         }
                     ],
@@ -9948,48 +5156,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                                             "vaccineTypes": "189"
                                         }
                                     ]
-                                },
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received a complete standard series of vaccinations",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "setID": "2",
-                                    "setDescription": "Dose is not required if patient has received exactly 2 doses of HepB AND both doses were Heplisav-B",
-                                    "conditionLogic": "AND",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "doseCount": "2",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "08; 42; 43; 44; 45; 51; 102; 104; 110; 132; 146; 189; 198; 220"
-                                        },
-                                        {
-                                            "conditionID": "2",
-                                            "conditionType": "Vaccine Count by Age",
-                                            "doseCount": "2",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "189"
-                                        }
-                                    ]
                                 }
                             ]
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 4",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -10002,12 +5176,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks",
                             "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
                         }
                     ],
                     "preferableVaccine": [
@@ -10018,29 +5186,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "tradeName": "ENGERIX-B ADULT",
                             "mvx": "SKB",
                             "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -10115,21 +5260,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
                             "cvx": "220",
                             "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -10174,7 +5304,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             ]
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
                     "doseNumber": "Dose 5",
@@ -10263,7 +5393,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "0 days",
@@ -10271,30 +5401,51 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "earliestRecAge": "20 years"
                         }
                     ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Hep B, Dialysis",
+                            "cvx": "44",
+                            "beginAge": "20 years",
+                            "volume": "1",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Hep B, Dialysis",
+                            "cvx": "44",
+                            "beginAge": "0 days"
+                        }
+                    ],
+                    "conditionalSkip": [
+                        {
+                            "context": "Both",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "1",
+                                    "setDescription": "Dose is not required if the patient has received a complete standard series of vaccinations",
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Completed Series",
+                                            "seriesGroups": "1"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks",
-                            "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
                         }
                     ],
                     "preferableVaccine": [
@@ -10304,43 +5455,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "20 years",
                             "volume": "1",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
@@ -10348,31 +5462,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -10394,125 +5483,10 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             ]
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks - 4 days",
-                            "minInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "16 weeks - 4 days",
-                            "minInt": "16 weeks",
-                            "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient has received a complete standard series of vaccinations",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Completed Series",
-                                            "seriesGroups": "1"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "recurringDose": "Yes"
-                },
-                {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -10525,12 +5499,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "absMinInt": "16 weeks - 4 days",
                             "minInt": "16 weeks",
                             "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
                         }
                     ],
                     "preferableVaccine": [
@@ -10540,29 +5508,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "beginAge": "20 years",
                             "volume": "1",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "20 years",
-                            "tradeName": "ENGERIX-B ADULT",
-                            "mvx": "SKB",
-                            "volume": "2",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "20 years",
-                            "volume": "1",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
@@ -10570,21 +5515,6 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, Dialysis",
-                            "cvx": "44",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "HepB-CpG",
-                            "cvx": "189",
-                            "beginAge": "18 years - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -10606,7 +5536,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
                             ]
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
                     "doseNumber": "Dose 4",

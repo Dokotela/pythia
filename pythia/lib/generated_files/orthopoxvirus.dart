@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
+final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Orthopoxvirus",
     "vaccineGroup": "Orthopoxvirus",
     "contraindications": {
@@ -96,7 +97,6 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                     "observationCode": "007",
                     "observationTitle": "Pregnant",
                     "contraindicationText": "Do not vaccinate if the patient is pregnant.",
-                    "contraindicationGuidance": "null",
                     "contraindicatedVaccine": [
                         {
                             "vaccineType": "vaccinia smallpox",
@@ -108,7 +108,6 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                     "observationCode": "228",
                     "observationTitle": "Household contact is pregnant",
                     "contraindicationText": "Do not vaccinate if the potential vaccinee has a household contacct who is pregnant. Household contacts include persons with prolonged intimate contact with the potential vaccinee (e.g., sexual contacts) and others who might have direct contact with the vaccination site or with potentially contaminated materials (e.g., dressings or clothing).",
-                    "contraindicationGuidance": "null",
                     "contraindicatedVaccine": [
                         {
                             "vaccineType": "vaccinia smallpox",
@@ -120,7 +119,6 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                     "observationCode": "229",
                     "observationTitle": "Age less than 1 year",
                     "contraindicationText": "Do not vaccinate if the patient age is less than 1 year.",
-                    "contraindicationGuidance": "null",
                     "contraindicatedVaccine": [
                         {
                             "vaccineType": "vaccinia smallpox",
@@ -132,7 +130,6 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                     "observationCode": "230",
                     "observationTitle": "Household contact who is less than 1 year of age",
                     "contraindicationText": "Do not vaccinate if potential vaccinee has a household contact who is less than 1 year of age. Household contacts include persons with prolonged contact with the potential vaccinee and others who might have direct contact with the vaccination site or with potentially contaminated materials (e.g., dressings or clothing).",
-                    "contraindicationGuidance": "null",
                     "contraindicatedVaccine": [
                         {
                             "vaccineType": "vaccinia smallpox",
@@ -144,7 +141,6 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                     "observationCode": "009",
                     "observationTitle": "Breastfeeding",
                     "contraindicationText": "Do not vaccinate if the patient is breastfeeding.",
-                    "contraindicationGuidance": "null",
                     "contraindicatedVaccine": [
                         {
                             "vaccineType": "vaccinia smallpox",
@@ -272,20 +268,13 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "28 days - 4 days",
                             "minInt": "28 days",
                             "earliestRecInt": "28 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "2 years",
-                            "earliestRecInt": "2 years",
-                            "latestRecInt": "3 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -295,38 +284,9 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "vaccinia - smallpox",
-                            "cvx": "75",
-                            "beginAge": "18 years",
-                            "volume": "0.0025",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
-                            "cvx": "206",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "vaccinia - smallpox",
-                            "cvx": "75",
-                            "beginAge": "1 year - 4 days"
-                        },
-                        {
-                            "vaccineType": "vaccinia - smallpox diluted",
-                            "cvx": "105",
-                            "beginAge": "1 year - 4 days"
-                        },
-                        {
-                            "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
-                            "cvx": "206",
-                            "beginAge": "1 year - 4 days"
-                        },
                         {
                             "vaccineType": "vaccinia - smallpox",
                             "cvx": "75",
@@ -366,7 +326,7 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                             ]
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
                     "doseNumber": "Dose 3",
@@ -515,19 +475,13 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "28 days - 4 days",
                             "minInt": "28 days",
                             "earliestRecInt": "28 days"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "0 days",
-                            "minInt": "10 years",
-                            "earliestRecInt": "10 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -537,38 +491,9 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                             "beginAge": "18 years",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "vaccinia - smallpox",
-                            "cvx": "75",
-                            "beginAge": "18 years",
-                            "volume": "0.0025",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
-                            "cvx": "206",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "vaccinia - smallpox",
-                            "cvx": "75",
-                            "beginAge": "1 year - 4 days"
-                        },
-                        {
-                            "vaccineType": "vaccinia - smallpox diluted",
-                            "cvx": "105",
-                            "beginAge": "1 year - 4 days"
-                        },
-                        {
-                            "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
-                            "cvx": "206",
-                            "beginAge": "1 year - 4 days"
-                        },
                         {
                             "vaccineType": "vaccinia - smallpox",
                             "cvx": "75",
@@ -608,7 +533,7 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
                             ]
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
                     "doseNumber": "Dose 3",

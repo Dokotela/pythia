@@ -814,6 +814,6 @@ class AntigenSheetParser {
 
 extension SimplifyDate on String {
   String get simplifyDate {
-    return this.substring(0, 10).replaceAll('-', '');
+    return this.substring(0, 10);
   }
 }

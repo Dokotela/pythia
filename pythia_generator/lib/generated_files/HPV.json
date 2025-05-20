@@ -286,7 +286,7 @@
                             "earliestRecAge": "11 years",
                             "latestRecAge": "13 years + 4 weeks",
                             "maxAge": "46 years",
-                            "cessationDate": "20161215"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "absMinAge": "15 years",
@@ -294,7 +294,7 @@
                             "earliestRecAge": "15 years",
                             "latestRecAge": "15 years",
                             "maxAge": "46 years",
-                            "effectiveDate": "20161216"
+                            "effectiveDate": "2016-12-16"
                         }
                     ],
                     "interval": [
@@ -395,7 +395,7 @@
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "20161215"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "fromPrevious": "N",
@@ -404,7 +404,7 @@
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "20161216"
+                            "effectiveDate": "2016-12-16"
                         },
                         {
                             "fromPrevious": "Y",
@@ -705,7 +705,7 @@
                             "earliestRecAge": "11 years",
                             "latestRecAge": "13 years + 4 weeks",
                             "maxAge": "46 years",
-                            "cessationDate": "20161215"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "absMinAge": "15 years",
@@ -713,7 +713,7 @@
                             "earliestRecAge": "15 years",
                             "latestRecAge": "15 years",
                             "maxAge": "46 years",
-                            "effectiveDate": "20161216"
+                            "effectiveDate": "2016-12-16"
                         }
                     ],
                     "interval": [
@@ -816,7 +816,7 @@
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "20161215"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "fromPrevious": "N",
@@ -825,7 +825,7 @@
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "20161216"
+                            "effectiveDate": "2016-12-16"
                         },
                         {
                             "fromPrevious": "Y",
@@ -1557,7 +1557,7 @@
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "20161215"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "fromPrevious": "N",
@@ -1566,7 +1566,7 @@
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "20161216"
+                            "effectiveDate": "2016-12-16"
                         },
                         {
                             "fromPrevious": "Y",
@@ -1834,7 +1834,7 @@
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "cessationDate": "20161215"
+                            "cessationDate": "2016-12-15"
                         },
                         {
                             "fromPrevious": "N",
@@ -1843,7 +1843,7 @@
                             "minInt": "5 months",
                             "earliestRecInt": "6 months",
                             "latestRecInt": "7 months + 4 weeks",
-                            "effectiveDate": "20161216"
+                            "effectiveDate": "2016-12-16"
                         },
                         {
                             "fromPrevious": "Y",

@@ -102,22 +102,22 @@
                             "absMinInt": "0 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "cessationDate": "20170518"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "effectiveDate": "20170519",
-                            "cessationDate": "20241024"
+                            "effectiveDate": "2017-05-19",
+                            "cessationDate": "2024-10-24"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 months - 4 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "effectiveDate": "20241025"
+                            "effectiveDate": "2024-10-25"
                         },
                         {
                             "fromPrevious": "N",
@@ -125,7 +125,7 @@
                             "absMinInt": "6 months - 4 days",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months",
-                            "effectiveDate": "20241025"
+                            "effectiveDate": "2024-10-25"
                         }
                     ],
                     "preferableVaccine": [
@@ -346,14 +346,14 @@
                             "absMinInt": "0 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "cessationDate": "20170518"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "effectiveDate": "20170519"
+                            "effectiveDate": "2017-05-19"
                         }
                     ],
                     "preferableVaccine": [
@@ -512,7 +512,7 @@
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "8 weeks",
-                            "cessationDate": "20170518"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
@@ -520,7 +520,7 @@
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "8 weeks",
-                            "effectiveDate": "20170519"
+                            "effectiveDate": "2017-05-19"
                         }
                     ],
                     "preferableVaccine": [
@@ -575,14 +575,14 @@
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "20170518"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 months - 4 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "effectiveDate": "20170519"
+                            "effectiveDate": "2017-05-19"
                         },
                         {
                             "fromPrevious": "N",
@@ -738,14 +738,14 @@
                             "absMinInt": "0 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "cessationDate": "20170518"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks - 4 days",
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
-                            "effectiveDate": "20170519"
+                            "effectiveDate": "2017-05-19"
                         }
                     ],
                     "preferableVaccine": [
@@ -845,7 +845,7 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count by Date",
-                                            "endDate": "20241025",
+                                            "endDate": "2024-10-25",
                                             "doseCount": "2",
                                             "doseType": "Valid",
                                             "doseCountLogic": "equal to",
@@ -1045,7 +1045,7 @@
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "8 weeks",
-                            "cessationDate": "20170518"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
@@ -1053,7 +1053,7 @@
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "latestRecInt": "8 weeks",
-                            "effectiveDate": "20170519"
+                            "effectiveDate": "2017-05-19"
                         }
                     ],
                     "preferableVaccine": [
@@ -1101,14 +1101,14 @@
                             "absMinInt": "0 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "cessationDate": "20170518"
+                            "cessationDate": "2017-05-18"
                         },
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "4 months - 4 days",
                             "minInt": "4 months",
                             "earliestRecInt": "4 months",
-                            "effectiveDate": "20170519"
+                            "effectiveDate": "2017-05-19"
                         },
                         {
                             "fromPrevious": "N",

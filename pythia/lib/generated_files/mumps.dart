@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
+final AntigenSupportingData mumps = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Mumps",
     "vaccineGroup": "MMR",
     "immunity": {
@@ -13,6 +14,7 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
             }
         ],
         "dateOfBirth": {
+            "immunityBirthDate": "01/01/1957",
             "exclusion": [
                 {
                     "exclusionCode": "055",
@@ -183,7 +185,7 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
                 {
                     "observationCode": "158",
                     "observationTitle": "Immunosuppressive therapy",
-                    "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies. "
+                    "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies."
                 },
                 {
                     "observationCode": "159",
@@ -237,46 +239,16 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
             },
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "12 months - 4 days",
                             "minAge": "12 months",
                             "earliestRecAge": "12 months",
                             "latestRecAge": "16 months + 4 weeks"
-                        },
-                        {
-                            "absMinAge": "13 months - 4 days",
-                            "minAge": "13 months",
-                            "earliestRecAge": "4 years",
-                            "latestRecAge": "7 years + 4 weeks"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "3 years",
-                            "latestRecInt": "6 years + 4 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "MMRV",
-                            "cvx": "94",
-                            "beginAge": "12 months",
-                            "endAge": "13 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "MMR",
                             "cvx": "03",
@@ -313,45 +285,6 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
                             "vaccineType": "MMRV",
                             "cvx": "94",
                             "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Mumps",
-                            "cvx": "07",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rubella/Mumps",
-                            "cvx": "38",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "MMRV",
-                            "cvx": "94",
-                            "beginAge": "12 months - 4 days"
-                        }
-                    ],
-                    "conditionalSkip": [
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required for those 19 years or older",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Age",
-                                            "beginAge": "19 years - 4 days"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "recurringDose": "No"
@@ -584,20 +517,12 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "12 months - 4 days",
                             "minAge": "18 years",
                             "earliestRecAge": "18 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -607,36 +532,9 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
                             "beginAge": "12 months",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Mumps",
-                            "cvx": "07",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rubella/Mumps",
-                            "cvx": "38",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "MMRV",
-                            "cvx": "94",
-                            "beginAge": "12 months - 4 days"
-                        },
                         {
                             "vaccineType": "MMR",
                             "cvx": "03",
@@ -729,7 +627,7 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
             ],
             "seriesDose": [
                 {
-                    "doseNumber": "Dose 2",
+                    "doseNumber": "Dose 1",
                     "age": [
                         {
                             "absMinAge": "12 months - 4 days",
@@ -747,12 +645,6 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "4 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -762,36 +654,9 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
                             "beginAge": "12 months",
                             "volume": "0.5",
                             "forecastVaccineType": "N"
-                        },
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "MMR",
-                            "cvx": "03",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Mumps",
-                            "cvx": "07",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "Rubella/Mumps",
-                            "cvx": "38",
-                            "beginAge": "12 months - 4 days"
-                        },
-                        {
-                            "vaccineType": "MMRV",
-                            "cvx": "94",
-                            "beginAge": "12 months - 4 days"
-                        },
                         {
                             "vaccineType": "MMR",
                             "cvx": "03",

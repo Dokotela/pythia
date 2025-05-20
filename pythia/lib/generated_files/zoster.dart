@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData zoster = AntigenSupportingData.fromJson({
+final AntigenSupportingData zoster = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Zoster",
     "vaccineGroup": "Zoster",
     "contraindications": {
@@ -166,30 +167,16 @@ final AntigenSupportingData zoster = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "0 days",
                             "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks - 4 days",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "8 weeks",
-                            "latestRecInt": "7 months + 4 weeks"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "Zoster recombinant",
-                            "cvx": "187",
-                            "beginAge": "18 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "N"
-                        },
                         {
                             "vaccineType": "Zoster recombinant",
                             "cvx": "187",
@@ -202,16 +189,6 @@ final AntigenSupportingData zoster = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "Zoster recombinant",
                             "cvx": "187",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Zoster recombinant",
-                            "cvx": "187",
-                            "beginAge": "18 years - 4 days"
-                        },
-                        {
-                            "vaccineType": "Zoster, unspecified formulation",
-                            "cvx": "188",
                             "beginAge": "18 years - 4 days"
                         }
                     ],

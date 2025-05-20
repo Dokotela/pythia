@@ -1,6 +1,7 @@
 import 'package:pythia/pythia.dart';
 
-final scheduleSupportingData = ScheduleSupportingData.fromJson({
+final scheduleSupportingData = ScheduleSupportingData.fromJson(
+{
     "liveVirusConflicts": {
         "liveVirusConflict": [
             {
@@ -7748,19 +7749,13 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTP",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     }
                 ]
             },
@@ -7769,9 +7764,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "OPV",
                 "association": [
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -7780,19 +7773,13 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "MMR",
                 "association": [
                     {
-                        "antigen": [
-                            "Measles"
-                        ]
+                        "antigen": "Measles"
                     },
                     {
-                        "antigen": [
-                            "Mumps"
-                        ]
+                        "antigen": "Mumps"
                     },
                     {
-                        "antigen": [
-                            "Rubella"
-                        ]
+                        "antigen": "Rubella"
                     }
                 ]
             },
@@ -7801,14 +7788,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "M/R",
                 "association": [
                     {
-                        "antigen": [
-                            "Measles"
-                        ]
+                        "antigen": "Measles"
                     },
                     {
-                        "antigen": [
-                            "Rubella"
-                        ]
+                        "antigen": "Rubella"
                     }
                 ]
             },
@@ -7817,9 +7800,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "measles",
                 "association": [
                     {
-                        "antigen": [
-                            "Measles"
-                        ]
+                        "antigen": "Measles"
                     }
                 ]
             },
@@ -7828,9 +7809,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "rubella",
                 "association": [
                     {
-                        "antigen": [
-                            "Rubella"
-                        ]
+                        "antigen": "Rubella"
                     }
                 ]
             },
@@ -7839,9 +7818,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "mumps",
                 "association": [
                     {
-                        "antigen": [
-                            "Mumps"
-                        ]
+                        "antigen": "Mumps"
                     }
                 ]
             },
@@ -7850,9 +7827,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep B, adolescent or pediatric",
                 "association": [
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -7861,14 +7836,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Td (adult), adsorbed",
                 "association": [
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     }
                 ]
             },
@@ -7877,9 +7848,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "IPV",
                 "association": [
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -7888,9 +7857,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "pertussis",
                 "association": [
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     }
                 ]
             },
@@ -7899,9 +7866,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "influenza, split (incl. purified surface antigen)",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -7910,9 +7875,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "influenza, whole",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -7921,9 +7884,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hib, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     }
                 ]
             },
@@ -7932,9 +7893,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Rabies, intramuscular injection",
                 "association": [
                     {
-                        "antigen": [
-                            "Rabies"
-                        ]
+                        "antigen": "Rabies"
                     }
                 ]
             },
@@ -7943,19 +7902,13 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTaP",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     }
                 ]
             },
@@ -7964,9 +7917,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "varicella",
                 "association": [
                     {
-                        "antigen": [
-                            "Varicella"
-                        ]
+                        "antigen": "Varicella"
                     }
                 ]
             },
@@ -7975,24 +7926,16 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTP-Hib",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     },
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     }
                 ]
             },
@@ -8001,9 +7944,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Typhoid oral, live, attenuated",
                 "association": [
                     {
-                        "antigen": [
-                            "Typhoid"
-                        ]
+                        "antigen": "Typhoid"
                     }
                 ]
             },
@@ -8012,9 +7953,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "cholera, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Cholera"
-                        ]
+                        "antigen": "Cholera"
                     }
                 ]
             },
@@ -8023,14 +7962,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DT (pediatric)",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     }
                 ]
             },
@@ -8039,9 +7974,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep A, pediatric, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "HepA"
-                        ]
+                        "antigen": "HepA"
                     }
                 ]
             },
@@ -8050,9 +7983,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "meningococcal MPSV4",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     }
                 ]
             },
@@ -8061,9 +7992,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "pneumococcal polysaccharide PPV23",
                 "association": [
                     {
-                        "antigen": [
-                            "Pneumococcal"
-                        ]
+                        "antigen": "Pneumococcal"
                     }
                 ]
             },
@@ -8072,9 +8001,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "tetanus toxoid, adsorbed",
                 "association": [
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     }
                 ]
             },
@@ -8083,9 +8010,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Yellow Fever",
                 "association": [
                     {
-                        "antigen": [
-                            "Yellow Fever"
-                        ]
+                        "antigen": "Yellow Fever"
                     }
                 ]
             },
@@ -8094,14 +8019,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "rubella/mumps",
                 "association": [
                     {
-                        "antigen": [
-                            "Rubella"
-                        ]
+                        "antigen": "Rubella"
                     },
                     {
-                        "antigen": [
-                            "Mumps"
-                        ]
+                        "antigen": "Mumps"
                     }
                 ]
             },
@@ -8110,9 +8031,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Japanese encephalitis SC",
                 "association": [
                     {
-                        "antigen": [
-                            "Japanese Encephalitis"
-                        ]
+                        "antigen": "Japanese Encephalitis"
                     }
                 ]
             },
@@ -8121,9 +8040,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "rabies, intradermal injection",
                 "association": [
                     {
-                        "antigen": [
-                            "Rabies"
-                        ]
+                        "antigen": "Rabies"
                     }
                 ]
             },
@@ -8132,9 +8049,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "typhoid, parenteral",
                 "association": [
                     {
-                        "antigen": [
-                            "Typhoid"
-                        ]
+                        "antigen": "Typhoid"
                     }
                 ]
             },
@@ -8143,9 +8058,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep B, adolescent/high risk infant",
                 "association": [
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -8154,9 +8067,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep B, adult",
                 "association": [
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -8165,9 +8076,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep B, dialysis",
                 "association": [
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -8176,9 +8085,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep B, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -8187,9 +8094,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hib (PRP-D)",
                 "association": [
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     }
                 ]
             },
@@ -8198,9 +8103,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hib (HbOC)",
                 "association": [
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     }
                 ]
             },
@@ -8209,9 +8112,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hib (PRP-T)",
                 "association": [
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     }
                 ]
             },
@@ -8220,9 +8121,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hib (PRP-OMP)",
                 "association": [
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     }
                 ]
             },
@@ -8231,24 +8130,16 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTaP-Hib",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     },
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     }
                 ]
             },
@@ -8257,14 +8148,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hib-Hep B",
                 "association": [
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     },
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -8273,9 +8160,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep A, adult",
                 "association": [
                     {
-                        "antigen": [
-                            "HepA"
-                        ]
+                        "antigen": "HepA"
                     }
                 ]
             },
@@ -8284,9 +8169,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "typhoid, parenteral, AKD (U.S. military)",
                 "association": [
                     {
-                        "antigen": [
-                            "Typhoid"
-                        ]
+                        "antigen": "Typhoid"
                     }
                 ]
             },
@@ -8295,9 +8178,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Dengue Fever",
                 "association": [
                     {
-                        "antigen": [
-                            "Dengue"
-                        ]
+                        "antigen": "Dengue"
                     }
                 ]
             },
@@ -8306,9 +8187,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "HPV, quadrivalent",
                 "association": [
                     {
-                        "antigen": [
-                            "HPV"
-                        ]
+                        "antigen": "HPV"
                     }
                 ]
             },
@@ -8317,9 +8196,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "rotavirus, tetravalent",
                 "association": [
                     {
-                        "antigen": [
-                            "Rotavirus"
-                        ]
+                        "antigen": "Rotavirus"
                     }
                 ]
             },
@@ -8328,9 +8205,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "vaccinia - smallpox",
                 "association": [
                     {
-                        "antigen": [
-                            "Orthopoxvirus"
-                        ]
+                        "antigen": "Orthopoxvirus"
                     }
                 ]
             },
@@ -8339,9 +8214,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Tick-borne encephalitis vaccine (non-US)",
                 "association": [
                     {
-                        "antigen": [
-                            "TBE"
-                        ]
+                        "antigen": "TBE"
                     }
                 ]
             },
@@ -8350,9 +8223,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep A, ped/adol, 2 dose",
                 "association": [
                     {
-                        "antigen": [
-                            "HepA"
-                        ]
+                        "antigen": "HepA"
                     }
                 ]
             },
@@ -8361,9 +8232,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep A, ped/adol, 3 dose",
                 "association": [
                     {
-                        "antigen": [
-                            "HepA"
-                        ]
+                        "antigen": "HepA"
                     }
                 ]
             },
@@ -8372,9 +8241,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep A, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "HepA"
-                        ]
+                        "antigen": "HepA"
                     }
                 ]
             },
@@ -8383,9 +8250,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "influenza, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -8394,9 +8259,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "polio, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -8405,9 +8268,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Rabies, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Rabies"
-                        ]
+                        "antigen": "Rabies"
                     }
                 ]
             },
@@ -8416,9 +8277,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "typhoid, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Typhoid"
-                        ]
+                        "antigen": "Typhoid"
                     }
                 ]
             },
@@ -8427,24 +8286,16 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "MMRV",
                 "association": [
                     {
-                        "antigen": [
-                            "Measles"
-                        ]
+                        "antigen": "Measles"
                     },
                     {
-                        "antigen": [
-                            "Mumps"
-                        ]
+                        "antigen": "Mumps"
                     },
                     {
-                        "antigen": [
-                            "Rubella"
-                        ]
+                        "antigen": "Rubella"
                     },
                     {
-                        "antigen": [
-                            "Varicella"
-                        ]
+                        "antigen": "Varicella"
                     }
                 ]
             },
@@ -8453,9 +8304,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "pneumococcal conjugate PCV 7",
                 "association": [
                     {
-                        "antigen": [
-                            "Pneumococcal"
-                        ]
+                        "antigen": "Pneumococcal"
                     }
                 ]
             },
@@ -8464,9 +8313,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Typhoid capsular polysaccharide",
                 "association": [
                     {
-                        "antigen": [
-                            "Typhoid"
-                        ]
+                        "antigen": "Typhoid"
                     }
                 ]
             },
@@ -8475,29 +8322,19 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTP-Hib-Hep B",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     },
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     },
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -8506,9 +8343,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "meningococcal C conjugate",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     }
                 ]
             },
@@ -8517,14 +8352,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep A-Hep B",
                 "association": [
                     {
-                        "antigen": [
-                            "HepA"
-                        ]
+                        "antigen": "HepA"
                     },
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -8533,9 +8364,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "vaccinia - smallpox diluted",
                 "association": [
                     {
-                        "antigen": [
-                            "Orthopoxvirus"
-                        ]
+                        "antigen": "Orthopoxvirus"
                     }
                 ]
             },
@@ -8544,19 +8373,13 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTaP, 5 pertussis antigens",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     }
                 ]
             },
@@ -8565,19 +8388,13 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTaP, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     }
                 ]
             },
@@ -8586,9 +8403,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "meningococcal, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     }
                 ]
             },
@@ -8597,9 +8412,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "pneumococcal, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Pneumococcal"
-                        ]
+                        "antigen": "Pneumococcal"
                     }
                 ]
             },
@@ -8608,29 +8421,19 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTaP-Hep B-IPV",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     },
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     },
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -8639,9 +8442,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "influenza, live, trivalent, intranasal",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -8650,9 +8451,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "tetanus toxoid, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     }
                 ]
             },
@@ -8661,14 +8460,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Td (adult) preservative free",
                 "association": [
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     }
                 ]
             },
@@ -8677,9 +8472,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "meningococcal MCV4P",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     }
                 ]
             },
@@ -8688,19 +8481,13 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Tdap",
                 "association": [
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     }
                 ]
             },
@@ -8709,9 +8496,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "rotavirus, pentavalent",
                 "association": [
                     {
-                        "antigen": [
-                            "Rotavirus"
-                        ]
+                        "antigen": "Rotavirus"
                     }
                 ]
             },
@@ -8720,9 +8505,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "HPV, bivalent",
                 "association": [
                     {
-                        "antigen": [
-                            "HPV"
-                        ]
+                        "antigen": "HPV"
                     }
                 ]
             },
@@ -8731,9 +8514,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "rotavirus, monovalent",
                 "association": [
                     {
-                        "antigen": [
-                            "Rotavirus"
-                        ]
+                        "antigen": "Rotavirus"
                     }
                 ]
             },
@@ -8742,29 +8523,19 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTaP-Hib-IPV",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     },
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     },
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -8773,16 +8544,12 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Zoster live",
                 "association": [
                     {
-                        "antigen": [
-                            "Varicella"
-                        ],
+                        "antigen": "Varicella",
                         "associationBeginAge": "0 days",
                         "associationEndAge": "50 years"
                     },
                     {
-                        "antigen": [
-                            "Zoster"
-                        ],
+                        "antigen": "Zoster",
                         "associationBeginAge": "50 years"
                     }
                 ]
@@ -8792,9 +8559,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "rotavirus, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Rotavirus"
-                        ]
+                        "antigen": "Rotavirus"
                     }
                 ]
             },
@@ -8803,9 +8568,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Japanese Encephalitis, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Japanese Encephalitis"
-                        ]
+                        "antigen": "Japanese Encephalitis"
                     }
                 ]
             },
@@ -8814,24 +8577,16 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTaP-IPV",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     },
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -8840,34 +8595,22 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTaP-IPV-HIB-HEP B, historical",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     },
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     },
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     },
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -8876,9 +8619,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Pneumococcal conjugate PCV 13",
                 "association": [
                     {
-                        "antigen": [
-                            "Pneumococcal"
-                        ]
+                        "antigen": "Pneumococcal"
                     }
                 ]
             },
@@ -8887,9 +8628,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Japanese Encephalitis, VC",
                 "association": [
                     {
-                        "antigen": [
-                            "Japanese Encephalitis"
-                        ]
+                        "antigen": "Japanese Encephalitis"
                     }
                 ]
             },
@@ -8898,9 +8637,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, high dose, trivalent, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -8909,9 +8646,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Meningococcal MCV4O",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     }
                 ]
             },
@@ -8920,9 +8655,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "HPV, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "HPV"
-                        ]
+                        "antigen": "HPV"
                     }
                 ]
             },
@@ -8931,14 +8664,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Td (adult)",
                 "association": [
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     }
                 ]
             },
@@ -8947,14 +8676,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Td(adult) unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     }
                 ]
             },
@@ -8963,9 +8688,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, split virus, trivalent, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -8974,9 +8697,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, split virus, trivalent, preservative",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -8985,9 +8706,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "tetanus toxoid, not adsorbed",
                 "association": [
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     }
                 ]
             },
@@ -8996,9 +8715,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "influenza, seasonal, intradermal, preservative free",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9007,34 +8724,22 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTaP,IPV,Hib,HepB",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     },
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     },
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     },
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -9043,9 +8748,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "meningococcal MCV4, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     }
                 ]
             },
@@ -9054,14 +8757,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Meningococcal C/Y-HIB PRP",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     },
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     }
                 ]
             },
@@ -9070,9 +8769,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, live, quadrivalent, intranasal",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9081,9 +8778,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, split virus, quadrivalent, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9092,9 +8787,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "influenza, nasal, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9103,9 +8796,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Pneumococcal Conjugate, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Pneumococcal"
-                        ]
+                        "antigen": "Pneumococcal"
                     }
                 ]
             },
@@ -9114,9 +8805,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, MDCK, trivalent, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9125,9 +8814,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, recombinant, trivalent, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9136,9 +8823,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, split virus, quadrivalent, preservative",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9147,9 +8832,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, injectable, quadrivalent, preservative free, pediatric",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9158,9 +8841,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Meningococcal B, recombinant",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal B"
-                        ]
+                        "antigen": "Meningococcal B"
                     }
                 ]
             },
@@ -9169,9 +8850,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Meningococcal B, OMV",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal B"
-                        ]
+                        "antigen": "Meningococcal B"
                     }
                 ]
             },
@@ -9180,9 +8859,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "meningococcal B, unspecified",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal B"
-                        ]
+                        "antigen": "Meningococcal B"
                     }
                 ]
             },
@@ -9191,9 +8868,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "HPV9",
                 "association": [
                     {
-                        "antigen": [
-                            "HPV"
-                        ]
+                        "antigen": "HPV"
                     }
                 ]
             },
@@ -9202,9 +8877,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "influenza, intradermal, quadrivalent, preservative free",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9213,14 +8886,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "meningococcal, unknown serogroups",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     },
                     {
-                        "antigen": [
-                            "Meningococcal B"
-                        ]
+                        "antigen": "Meningococcal B"
                     }
                 ]
             },
@@ -9229,9 +8898,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, adjuvanted, trivalent, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9240,9 +8907,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep A, live attenuated",
                 "association": [
                     {
-                        "antigen": [
-                            "HepA"
-                        ]
+                        "antigen": "HepA"
                     }
                 ]
             },
@@ -9251,29 +8916,19 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTAP/IPV/HIB - non-US",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     },
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     },
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     }
                 ]
             },
@@ -9282,9 +8937,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, MDCK, quadrivalent, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9293,9 +8946,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "cholera, WC-rBS",
                 "association": [
                     {
-                        "antigen": [
-                            "Cholera"
-                        ]
+                        "antigen": "Cholera"
                     }
                 ]
             },
@@ -9304,9 +8955,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "cholera, BivWC",
                 "association": [
                     {
-                        "antigen": [
-                            "Cholera"
-                        ]
+                        "antigen": "Cholera"
                     }
                 ]
             },
@@ -9315,9 +8964,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "cholera, live attenuated",
                 "association": [
                     {
-                        "antigen": [
-                            "Cholera"
-                        ]
+                        "antigen": "Cholera"
                     }
                 ]
             },
@@ -9326,9 +8973,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Rabies - IM Diploid cell culture",
                 "association": [
                     {
-                        "antigen": [
-                            "Rabies"
-                        ]
+                        "antigen": "Rabies"
                     }
                 ]
             },
@@ -9337,9 +8982,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Rabies - IM fibroblast culture",
                 "association": [
                     {
-                        "antigen": [
-                            "Rabies"
-                        ]
+                        "antigen": "Rabies"
                     }
                 ]
             },
@@ -9348,9 +8991,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "pneumococcal conjugate PCV10",
                 "association": [
                     {
-                        "antigen": [
-                            "Pneumococcal"
-                        ]
+                        "antigen": "Pneumococcal"
                     }
                 ]
             },
@@ -9359,9 +9000,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "OPV bivalent",
                 "association": [
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -9370,9 +9009,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "OPV ,monovalent, unspecified",
                 "association": [
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -9381,9 +9018,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "OPV, Unspecified",
                 "association": [
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -9392,9 +9027,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Yellow fever vaccine - alt",
                 "association": [
                     {
-                        "antigen": [
-                            "Yellow Fever"
-                        ]
+                        "antigen": "Yellow Fever"
                     }
                 ]
             },
@@ -9403,9 +9036,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Yellow fever, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Yellow Fever"
-                        ]
+                        "antigen": "Yellow Fever"
                     }
                 ]
             },
@@ -9414,9 +9045,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, recombinant, quadrivalent, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9425,9 +9054,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, MDCK, quadrivalent, preservative",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9436,9 +9063,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "zoster recombinant",
                 "association": [
                     {
-                        "antigen": [
-                            "Zoster"
-                        ]
+                        "antigen": "Zoster"
                     }
                 ]
             },
@@ -9447,9 +9072,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "zoster, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Zoster"
-                        ]
+                        "antigen": "Zoster"
                     }
                 ]
             },
@@ -9458,9 +9081,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep B, adjuvanted",
                 "association": [
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -9469,9 +9090,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Typhoid conjugate vaccine (TCV)",
                 "association": [
                     {
-                        "antigen": [
-                            "Typhoid"
-                        ]
+                        "antigen": "Typhoid"
                     }
                 ]
             },
@@ -9480,9 +9099,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "meningococcal A polysaccharide",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     }
                 ]
             },
@@ -9491,9 +9108,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "meningococcal AC polysaccharide",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     }
                 ]
             },
@@ -9502,14 +9117,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Hep A-Hep B, pediatric/adolescent",
                 "association": [
                     {
-                        "antigen": [
-                            "HepA"
-                        ]
+                        "antigen": "HepA"
                     },
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -9518,9 +9129,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, Southern Hemisphere, unspecified formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9529,19 +9138,13 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DT, IPV adsorbed",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -9550,14 +9153,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Td, adsorbed, preservative free, adult use, Lf unspecified",
                 "association": [
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     }
                 ]
             },
@@ -9566,9 +9165,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, high-dose, quadrivalent, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9577,29 +9174,19 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "DTP-hepB-Hib Pentavalent Non-US",
                 "association": [
                     {
-                        "antigen": [
-                            "Diphtheria"
-                        ]
+                        "antigen": "Diphtheria"
                     },
                     {
-                        "antigen": [
-                            "Tetanus"
-                        ]
+                        "antigen": "Tetanus"
                     },
                     {
-                        "antigen": [
-                            "Pertussis"
-                        ]
+                        "antigen": "Pertussis"
                     },
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     },
                     {
-                        "antigen": [
-                            "Hib"
-                        ]
+                        "antigen": "Hib"
                     }
                 ]
             },
@@ -9608,9 +9195,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, Southern Hemisphere, pediatric, preservative free",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9619,9 +9204,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, Southern Hemisphere, preservative free",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9630,9 +9213,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, Southern Hemisphere, quadrivalent, with preservative",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9641,9 +9222,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Meningococcal Polysaccharide groups A, C, Y, W-135 TT Conjugate",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     }
                 ]
             },
@@ -9652,9 +9231,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Ebola Zaire Vaccine, Live",
                 "association": [
                     {
-                        "antigen": [
-                            "Ebola"
-                        ]
+                        "antigen": "Ebola"
                     }
                 ]
             },
@@ -9663,9 +9240,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, adjuvanted, quadrivalent, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9674,9 +9249,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "vaccinia - smallpox mpox vaccine live, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Orthopoxvirus"
-                        ]
+                        "antigen": "Orthopoxvirus"
                     }
                 ]
             },
@@ -9685,9 +9258,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, 100 mcg/0.5 mL dose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9696,9 +9267,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9707,9 +9276,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 vaccine, vector-nr, rS-ChAdOx1, PF, 0.5 mL",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9718,9 +9285,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 vaccine, Subunit, rS-nanoparticle+Matrix-M1 Adjuvant, PF, 0.5 mL",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9729,9 +9294,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "SARS-COV-2 (COVID-19) vaccine, vector non-replicating, recombinant spike protein-Ad26, preservative free, 0.5 mL",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9740,9 +9303,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "SARS-COV-2 (COVID-19), vaccine Unspecified Formulation",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9751,9 +9312,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Ebola, Unspecified",
                 "association": [
                     {
-                        "antigen": [
-                            "Ebola"
-                        ]
+                        "antigen": "Ebola"
                     }
                 ]
             },
@@ -9762,9 +9321,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Pneumococcal conjugate PCV 15",
                 "association": [
                     {
-                        "antigen": [
-                            "Pneumococcal"
-                        ]
+                        "antigen": "Pneumococcal"
                     }
                 ]
             },
@@ -9773,9 +9330,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Pneumococcal conjugate PCV 20",
                 "association": [
                     {
-                        "antigen": [
-                            "Pneumococcal"
-                        ]
+                        "antigen": "Pneumococcal"
                     }
                 ]
             },
@@ -9784,9 +9339,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose, tris-sucrose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9795,9 +9348,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL dose, tris-sucrose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9806,9 +9357,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, 3 mcg/0.2 mL dose, tris-sucrose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9817,9 +9366,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "HepB recombinant, 3-antigen, Al(OH)3",
                 "association": [
                     {
-                        "antigen": [
-                            "HepB"
-                        ]
+                        "antigen": "HepB"
                     }
                 ]
             },
@@ -9828,9 +9375,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL dose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9839,9 +9384,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Tick-borne encephalitis, unspecified",
                 "association": [
                     {
-                        "antigen": [
-                            "TBE"
-                        ]
+                        "antigen": "TBE"
                     }
                 ]
             },
@@ -9850,9 +9393,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
                 "association": [
                     {
-                        "antigen": [
-                            "TBE"
-                        ]
+                        "antigen": "TBE"
                     }
                 ]
             },
@@ -9861,9 +9402,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
                 "association": [
                     {
-                        "antigen": [
-                            "TBE"
-                        ]
+                        "antigen": "TBE"
                     }
                 ]
             },
@@ -9872,9 +9411,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, pediatric 50 mcg/0.5 mL dose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9883,9 +9420,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, pediatric 25 mcg/0.25 mL dose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9894,9 +9429,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, bivalent, PF, 50 mcg/0.5 mL or 25 mcg/0.25 mL dose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9905,9 +9438,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, bivalent, PF, 10 mcg/0.2 mL",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9916,9 +9447,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "influenza, Southern Hemisphere, high-dose, quadrivalent",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -9927,9 +9456,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, bivalent, PF, 30 mcg/0.3 mL dose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9938,9 +9465,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, bivalent, PF, 10 mcg/0.2 mL dose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9949,9 +9474,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, bivalent, PF, 3 mcg/0.2 mL dose",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -9960,9 +9483,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "RSV, recombinant, protein subunit RSVpreF, adjuvant reconstituted, 0.5 mL, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "RSV"
-                        ]
+                        "antigen": "RSV"
                     }
                 ]
             },
@@ -9971,9 +9492,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Respiratory syncytial virus (RSV), unspecified",
                 "association": [
                     {
-                        "antigen": [
-                            "RSV"
-                        ]
+                        "antigen": "RSV"
                     }
                 ]
             },
@@ -9982,9 +9501,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "RSV, bivalent, protein subunit RSVpreF, diluent reconstituted, 0.5 mL, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "RSV"
-                        ]
+                        "antigen": "RSV"
                     }
                 ]
             },
@@ -9993,9 +9510,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "RSV, mAb, nirsevimab-alip, 0.5 mL, neonate to 24 months",
                 "association": [
                     {
-                        "antigen": [
-                            "RSV"
-                        ]
+                        "antigen": "RSV"
                     }
                 ]
             },
@@ -10004,9 +9519,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "RSV, mAb, nirsevimab-alip, 1.0 mL, neonate to 24 months",
                 "association": [
                     {
-                        "antigen": [
-                            "RSV"
-                        ]
+                        "antigen": "RSV"
                     }
                 ]
             },
@@ -10015,9 +9528,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 3 mcg/0.3 mL",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10026,9 +9537,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 30 mcg/0.3 mL",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10037,9 +9546,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 10 mcg/0.3 mL",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10048,9 +9555,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, 25 mcg/0.25 mL",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10059,9 +9564,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10070,9 +9573,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19, subunit, rS-nanoparticle, adjuvanted, PF, 5 mcg/0.5 mL",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10081,20 +9582,16 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Respiratory syncytial virus (RSV) vaccine, unspecified",
                 "association": [
                     {
-                        "antigen": [
-                            "RSV"
-                        ]
+                        "antigen": "RSV"
                     }
                 ]
             },
             {
                 "cvx": "315",
-                "shortDescription": "Respiratory syncytial virus (RSV) monoclonal antibody (MAB), unspecified ",
+                "shortDescription": "Respiratory syncytial virus (RSV) monoclonal antibody (MAB), unspecified",
                 "association": [
                     {
-                        "antigen": [
-                            "RSV"
-                        ]
+                        "antigen": "RSV"
                     }
                 ]
             },
@@ -10103,14 +9600,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Meningococcal"
-                        ]
+                        "antigen": "Meningococcal"
                     },
                     {
-                        "antigen": [
-                            "Meningococcal B"
-                        ]
+                        "antigen": "Meningococcal B"
                     }
                 ]
             },
@@ -10119,9 +9612,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Chikungunya live attenuated vaccine, 0.5 mL, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "Chikungunya"
-                        ]
+                        "antigen": "Chikungunya"
                     }
                 ]
             },
@@ -10130,9 +9621,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Influenza, MDCK, trivalent, preservative",
                 "association": [
                     {
-                        "antigen": [
-                            "Influenza"
-                        ]
+                        "antigen": "Influenza"
                     }
                 ]
             },
@@ -10141,9 +9630,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Poliovirus, inactivated, fractional-dose (fIPV)",
                 "association": [
                     {
-                        "antigen": [
-                            "Polio"
-                        ]
+                        "antigen": "Polio"
                     }
                 ]
             },
@@ -10152,9 +9639,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "RSV, mRNA, injectable, PF",
                 "association": [
                     {
-                        "antigen": [
-                            "RSV"
-                        ]
+                        "antigen": "RSV"
                     }
                 ]
             },
@@ -10163,9 +9648,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "Pneumococcal conjugate PCV 21",
                 "association": [
                     {
-                        "antigen": [
-                            "Pneumococcal"
-                        ]
+                        "antigen": "Pneumococcal"
                     }
                 ]
             },
@@ -10174,9 +9657,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 Non-US Vaccine, Product Unknown",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10185,9 +9666,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 IV Non-US Vaccine (QAZCOVID-IN)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10196,9 +9675,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 IV Non-US Vaccine (COVAXIN)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10207,9 +9684,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 LAV Non-US Vaccine (COVIVAC)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10218,9 +9693,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 VVnr Non-US Vaccine (Sputnik Light)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10229,9 +9702,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 VVnr Non-US Vaccine (Sputnik V)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10240,9 +9711,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 VVnr Non-US Vaccine (CanSino Biological Inc./Beijing Institute of Biotechnology)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10251,9 +9720,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 PS Non-US Vaccine (Anhui Zhifei Longcom Biopharmaceutical + Institute of Microbiology Chinese academy of Sciences)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10262,9 +9729,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 PS Non-US Vaccine (Jiangsu Province Centers for Disease Control and Prevention)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10273,9 +9738,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 PS Non-US Vaccine (EpiVacCorona)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10284,9 +9747,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 IV Non-US Vaccine (BIBP, Sinopharm)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10295,9 +9756,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 IV Non-US Vaccine (CoronaVac, Sinovac)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10306,9 +9765,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 VLP Non-US Vaccine (Medicago, Covifenz)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10317,9 +9774,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 PS Non-US Vaccine (Anhui Zhifei Longcom, Zifivax)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10328,9 +9783,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 DNA Non-US Vaccine (Zydus Cadila, ZyCoV-D)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10339,9 +9792,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 PS Non-US Vaccine (Medigen, MVC-COV1901)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10350,9 +9801,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 Inactivated Non-US Vaccine (Minhai Biotechnology Co, KCONVAC)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10361,9 +9810,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 PS Non-US Vaccine (Biological E Limited, Corbevax)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10372,9 +9819,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 Inactivated Non-US Vaccine (VLA2001, Valneva)",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10383,9 +9828,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 mRNA, bivalent, original/Omicron BA.1 Non-US Vaccine Product (Spikevax Bivalent), Moderna",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10394,9 +9837,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 mRNA, bivalent, original/Omicron BA.1 Non-US Vaccine Product (Comirnaty Bivalent), Pfizer-BioNTech",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             },
@@ -10405,9 +9846,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "shortDescription": "COVID-19 SP, protein-based, adjuvanted (VidPrevtyn Beta), Sanofi-GSK",
                 "association": [
                     {
-                        "antigen": [
-                            "COVID-19"
-                        ]
+                        "antigen": "COVID-19"
                     }
                 ]
             }
@@ -11174,7 +10613,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "observationCode": "045",
                 "observationTitle": "Travel to country with a Yellow Fever vaccination entry requirement",
                 "indicationText": "Administer to persons who travel to a country with a Yellow Fever vaccination entry requirement.",
-                "clarifyingText": " A list of country-specific requirements is available at https://wwwnc.cdc.gov/travel/yellowbook/2024/preparing/yellow-fever-vaccine-malaria-prevention-by-country"
+                "clarifyingText": "A list of country-specific requirements is available at https://wwwnc.cdc.gov/travel/yellowbook/2024/preparing/yellow-fever-vaccine-malaria-prevention-by-country"
             },
             {
                 "observationCode": "046",
@@ -13013,7 +12452,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
                 "observationCode": "109",
                 "observationTitle": "Severe allergic reaction to polymyxin B",
-                "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to polymyxin B. ",
+                "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to polymyxin B.",
                 "codedValues": {
                     "codedValue": [
                         {
@@ -13066,7 +12505,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "observationCode": "112",
                 "observationTitle": "Hypersensitivity to alum",
                 "contraindicationText": "Do not vaccinate if the patient has a hypersensitivity to alum.",
-                "clarifyingText": "AKA potassium aluminum sulfate "
+                "clarifyingText": "AKA potassium aluminum sulfate"
             },
             {
                 "observationCode": "113",
@@ -13273,7 +12712,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             },
             {
                 "observationCode": "124",
-                "observationTitle": "Severe allergic reaction to rice protein ",
+                "observationTitle": "Severe allergic reaction to rice protein",
                 "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to rice protein."
             },
             {
@@ -13681,8 +13120,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
                 "observationCode": "158",
                 "observationTitle": "Immunosuppressive therapy",
-                "indicationText": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies. ",
-                "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies. ",
+                "indicationText": "Administer to persons who are undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
+                "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                 "clarifyingText": "Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
                 "codedValues": {
                     "codedValue": [
@@ -13811,7 +13250,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                         {
                             "code": "422608009",
                             "codeSystem": "SNOMED",
-                            "text": "Sexual assault [finding"
+                            "text": "Sexual assault [finding]"
                         },
                         {
                             "code": "248110007",
@@ -14039,7 +13478,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "observationCode": "196",
                 "observationTitle": "Residing in an institutional setting at increased risk for COVID-19 exposure and transmission",
                 "indicationText": "Administer to persons residing in institutional settings at increased risk for COVID-19 exposure and transmission.",
-                "clarifyingText": "Institutional settings such as health care, schools, correctional facilities, and homeless shelters at increased risk for COVID-19 exposure and transmission and may get a booster shot based on their individual benefits and risks including "
+                "clarifyingText": "Institutional settings such as health care, schools, correctional facilities, and homeless shelters at increased risk for COVID-19 exposure and transmission and may get a booster shot based on their individual benefits and risks including"
             },
             {
                 "observationCode": "197",
@@ -14141,7 +13580,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                         {
                             "code": "238131007",
                             "codeSystem": "SNOMED",
-                            "text": "Overweight [finding"
+                            "text": "Overweight [finding]"
                         },
                         {
                             "code": "414915002",
@@ -14293,7 +13732,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
                 "observationCode": "224",
                 "observationTitle": "History or presence of atopic dermatitis",
-                "contraindicationText": "Do not vaccinate if the patient has history or presence of atopic dermatitis. "
+                "contraindicationText": "Do not vaccinate if the patient has history or presence of atopic dermatitis."
             },
             {
                 "observationCode": "225",
@@ -14315,20 +13754,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
                 "observationCode": "228",
                 "observationTitle": "Household contact is pregnant",
-                "contraindicationText": "Do not vaccinate if potential vaccinee has a household contact who is pregnant. Household contacts include persons with prolonged intimate contact with the potential vaccinee (e.g., sexual contacts) and others who might have direct contact with the vaccination site or with potentially contaminated materials (e.g., dressings or clothing).",
-                "clarifyingText": "null"
+                "contraindicationText": "Do not vaccinate if potential vaccinee has a household contact who is pregnant. Household contacts include persons with prolonged intimate contact with the potential vaccinee (e.g., sexual contacts) and others who might have direct contact with the vaccination site or with potentially contaminated materials (e.g., dressings or clothing)."
             },
             {
                 "observationCode": "229",
                 "observationTitle": "Age is less than 1 year",
-                "contraindicationText": "Do not vaccinate if the patient age is less than 1 year.",
-                "clarifyingText": "null"
+                "contraindicationText": "Do not vaccinate if the patient age is less than 1 year."
             },
             {
                 "observationCode": "230",
                 "observationTitle": "Household contact who is less than 1 year of age",
-                "contraindicationText": "Do not vaccinate if potential vaccinee has a household contact who is less than 1 year of age. Household contacts include persons with prolonged contact with the potential vaccinee and others who might have direct contact with the vaccination site or with potentially contaminated materials (e.g., dressings or clothing).",
-                "clarifyingText": "null"
+                "contraindicationText": "Do not vaccinate if potential vaccinee has a household contact who is less than 1 year of age. Household contacts include persons with prolonged contact with the potential vaccinee and others who might have direct contact with the vaccination site or with potentially contaminated materials (e.g., dressings or clothing)."
             },
             {
                 "observationCode": "231",
@@ -14439,19 +13875,18 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "observationCode": "249",
                 "observationTitle": "Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
                 "indicationText": "Administer to persons moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
-                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis\r "
+                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
             },
             {
                 "observationCode": "250",
                 "observationTitle": "Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
                 "indicationText": "TBE vaccine may be considered for persons moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
-                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis\r "
+                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
             },
             {
                 "observationCode": "251",
                 "observationTitle": "Laboratory workers with a potential for exposure to TBE virus",
-                "indicationText": "Administer to laboratory workers with a potential for exposure to TBE virus",
-                "clarifyingText": "n/a\r "
+                "indicationText": "Administer to laboratory workers with a potential for exposure to TBE virus"
             },
             {
                 "observationCode": "252",
@@ -14460,9 +13895,9 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                 "codedValues": {
                     "codedValue": [
                         {
-                            "code": "non-US",
+                            "code": "77",
                             "codeSystem": "CVX",
-                            "text": "Tick-borne encephalitis vaccine"
+                            "text": "Tick-borne encephalitis vaccine (non-US)"
                         },
                         {
                             "code": "222",

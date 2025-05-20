@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
+final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Meningococcal B",
     "vaccineGroup": "Meningococcal B",
     "contraindications": {
@@ -336,13 +337,8 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "age": [
-                        {
-                            "absMinAge": "10 years - 4 days",
-                            "minAge": "16 years",
-                            "earliestRecAge": "16 years"
-                        },
                         {
                             "absMinAge": "10 years - 4 days",
                             "minAge": "16 years",
@@ -363,34 +359,9 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "effectiveDate": "2017-05-19"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 months - 4 days",
-                            "minInt": "4 months",
-                            "earliestRecInt": "4 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "0 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "6 months - 4 days"
-                    },
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "meningococcal B, OMV",
                             "cvx": "163",
@@ -403,16 +374,6 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                         {
                             "vaccineType": "meningococcal B, OMV",
                             "cvx": "163",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, unspecified",
-                            "cvx": "164",
                             "beginAge": "10 years"
                         }
                     ],
@@ -775,7 +736,7 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 2",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -790,61 +751,9 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             "minInt": "4 weeks",
                             "earliestRecInt": "4 weeks",
                             "effectiveDate": "2017-05-19"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 months - 4 days",
-                            "minInt": "4 months",
-                            "earliestRecInt": "4 months"
-                        },
-                        {
-                            "fromPrevious": "N",
-                            "fromTargetDose": "1",
-                            "absMinInt": "0 days",
-                            "minInt": "6 months",
-                            "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "1 years - 4 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "2 years - 4 days",
-                            "minInt": "2 years",
-                            "earliestRecInt": "2 years",
-                            "latestRecInt": "4 years"
                         }
                     ],
-                    "allowableInterval": {
-                        "fromPrevious": "N",
-                        "fromTargetDose": "1",
-                        "absMinInt": "6 months - 4 days"
-                    },
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "meningococcal B, OMV",
                             "cvx": "163",
@@ -854,36 +763,6 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, unspecified",
-                            "cvx": "164",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, unspecified",
-                            "cvx": "164",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, unspecified",
-                            "cvx": "164",
-                            "beginAge": "10 years"
-                        },
                         {
                             "vaccineType": "meningococcal B, OMV",
                             "cvx": "163",
@@ -912,33 +791,12 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "context": "Both",
-                            "setLogic": "n/a",
-                            "set": [
-                                {
-                                    "setID": "1",
-                                    "setDescription": "Dose is not required if the patient received a valid 2-dose series under previous licensure",
-                                    "condition": [
-                                        {
-                                            "conditionID": "1",
-                                            "conditionType": "Vaccine Count by Date",
-                                            "endDate": "2024-10-25",
-                                            "doseCount": "2",
-                                            "doseType": "Valid",
-                                            "doseCountLogic": "equal to",
-                                            "vaccineTypes": "163; 164"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -952,19 +810,6 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "1 years - 4 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "2 years - 4 days",
-                            "minInt": "2 years",
-                            "earliestRecInt": "2 years",
-                            "latestRecInt": "4 years"
                         }
                     ],
                     "allowableInterval": {
@@ -979,43 +824,9 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             "beginAge": "10 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, unspecified",
-                            "cvx": "164",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, unspecified",
-                            "cvx": "164",
-                            "beginAge": "10 years"
-                        },
                         {
                             "vaccineType": "meningococcal B, OMV",
                             "cvx": "163",
@@ -1050,33 +861,19 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             ]
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 4",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "1 years - 4 days",
                             "minInt": "1 year",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "2 years - 4 days",
-                            "minInt": "2 years",
-                            "earliestRecInt": "2 years",
-                            "latestRecInt": "4 years"
                         }
                     ],
                     "preferableVaccine": [
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
                         {
                             "vaccineType": "meningococcal B, OMV",
                             "cvx": "163",
@@ -1095,19 +892,9 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             "vaccineType": "meningococcal B, unspecified",
                             "cvx": "164",
                             "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, OMV",
-                            "cvx": "163",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, unspecified",
-                            "cvx": "164",
-                            "beginAge": "10 years"
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
                     "doseNumber": "Dose 5",
@@ -1312,7 +1099,7 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 3",
                     "interval": [
                         {
                             "fromPrevious": "Y",
@@ -1334,19 +1121,6 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             "absMinInt": "0 days",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "1 years - 4 days",
-                            "minInt": "1 year",
-                            "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "2 years - 4 days",
-                            "minInt": "2 years",
-                            "earliestRecInt": "2 years",
-                            "latestRecInt": "4 years"
                         }
                     ],
                     "allowableInterval": {
@@ -1369,36 +1143,6 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             "endAge": "26 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, recombinant",
-                            "cvx": "162",
-                            "beginAge": "10 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-                            "cvx": "316",
-                            "beginAge": "10 years",
-                            "endAge": "26 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, recombinant",
-                            "cvx": "162",
-                            "beginAge": "10 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-                            "cvx": "316",
-                            "beginAge": "10 years",
-                            "endAge": "26 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -1417,57 +1161,18 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             "cvx": "316",
                             "beginAge": "10 years - 4 days",
                             "endAge": "26 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, recombinant",
-                            "cvx": "162",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, unspecified",
-                            "cvx": "164",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-                            "cvx": "316",
-                            "beginAge": "10 years - 4 days",
-                            "endAge": "26 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, recombinant",
-                            "cvx": "162",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, unspecified",
-                            "cvx": "164",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-                            "cvx": "316",
-                            "beginAge": "10 years - 4 days",
-                            "endAge": "26 years"
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 4",
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "1 years - 4 days",
                             "minInt": "1 year",
                             "earliestRecInt": "1 year"
-                        },
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "2 years - 4 days",
-                            "minInt": "2 years",
-                            "earliestRecInt": "2 years",
-                            "latestRecInt": "4 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -1485,21 +1190,6 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             "endAge": "26 years",
                             "volume": "0.5",
                             "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, recombinant",
-                            "cvx": "162",
-                            "beginAge": "10 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-                            "cvx": "316",
-                            "beginAge": "10 years",
-                            "endAge": "26 years",
-                            "volume": "0.5",
-                            "forecastVaccineType": "Y"
                         }
                     ],
                     "allowableVaccine": [
@@ -1518,25 +1208,9 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
                             "cvx": "316",
                             "beginAge": "10 years - 4 days",
                             "endAge": "26 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, recombinant",
-                            "cvx": "162",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal B, unspecified",
-                            "cvx": "164",
-                            "beginAge": "10 years"
-                        },
-                        {
-                            "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-                            "cvx": "316",
-                            "beginAge": "10 years - 4 days",
-                            "endAge": "26 years"
                         }
                     ],
-                    "recurringDose": "Yes"
+                    "recurringDose": "No"
                 },
                 {
                     "doseNumber": "Dose 5",

@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
+final AntigenSupportingData rsv = AntigenSupportingData.fromJson(
+{
     "targetDisease": "RSV",
     "vaccineGroup": "RSV",
     "contraindications": {
