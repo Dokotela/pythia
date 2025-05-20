@@ -450,8 +450,10 @@ class AntigenSheetParser {
           );
           // Replace the current dose with an updated copy
           final updatedAges = currentDose.age?.toList() ?? <VaxAge>[];
-          updatedAges.add(vaxAge);
-          currentDose = currentDose.copyWith(age: updatedAges);
+          if (vaxAge.toJson().isNotEmpty) updatedAges.add(vaxAge);
+          if (updatedAges.isNotEmpty) {
+            currentDose = currentDose.copyWith(age: updatedAges);
+          }
           doseList[doseList.length - 1] = currentDose;
         }
       }

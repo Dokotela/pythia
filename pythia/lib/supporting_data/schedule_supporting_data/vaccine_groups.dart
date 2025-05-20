@@ -21,11 +21,12 @@ class VaccineGroups {
     );
   }
 
-    Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJson() {
     return {
-      if(vaccineGroup != null) 'vaccineGroup': vaccineGroup?.map((e) => e.toJson()).toList(),
+      if (vaccineGroup != null)
+        'vaccineGroup': vaccineGroup?.map((e) => e.toJson()).toList(),
     };
-    }
+  }
 }
 
 class VaccineGroup {
@@ -42,8 +43,7 @@ class VaccineGroup {
       name: json['name'] as String?,
       administerFullVaccineGroup: json['administerFullVaccineGroup'] == null
           ? null
-          : Binary.fromJson(
-              json['administerFullVaccineGroup'] as String),
+          : Binary.fromJson(json['administerFullVaccineGroup'] as String),
     );
   }
 
@@ -58,10 +58,11 @@ class VaccineGroup {
     );
   }
 
-    Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJson() {
     return {
-      if(name != null) 'name': name,
-      if(administerFullVaccineGroup != null) 'administerFullVaccineGroup': administerFullVaccineGroup?.toJson(),
+      if (name != null) 'name': name,
+      if (administerFullVaccineGroup != null)
+        'administerFullVaccineGroup': administerFullVaccineGroup?.toJson(),
     };
-    }
+  }
 }

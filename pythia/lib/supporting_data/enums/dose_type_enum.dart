@@ -1,11 +1,8 @@
-
-
 enum DoseType {
-  
   total,
-  
+
   valid,
-  
+
   none;
 
   static DoseType? fromString(String? string) {

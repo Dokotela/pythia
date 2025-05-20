@@ -12,7 +12,8 @@ part 'series_group_complete.g.dart';
 class SeriesGroupComplete extends _$SeriesGroupComplete {
   @override
   Map<String, Map<String, bool>> build() {
-    final Map<String, Map<String, bool>> buildMap = <String, Map<String, bool>>{};
+    final Map<String, Map<String, bool>> buildMap =
+        <String, Map<String, bool>>{};
     for (final AntigenSupportingData ag in antigenSupportingData) {
       if (ag.targetDisease != null) {
         buildMap[ag.targetDisease!] = <String, bool>{};

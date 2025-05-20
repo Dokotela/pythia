@@ -1,11 +1,8 @@
-
-
 enum SeriesType {
-  
   standard,
-  
+
   risk,
-  
+
   evaluationOnly;
 
   static SeriesType? fromString(String? seriesType) {

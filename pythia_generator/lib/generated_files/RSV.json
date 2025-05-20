@@ -551,9 +551,6 @@
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
-                    "age": [
-                        {}
-                    ],
                     "interval": [
                         {
                             "fromPrevious": "N",

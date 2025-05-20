@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData cholera = AntigenSupportingData.fromJson({
+final AntigenSupportingData cholera = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Cholera",
     "vaccineGroup": "Cholera",
     "contraindications": {

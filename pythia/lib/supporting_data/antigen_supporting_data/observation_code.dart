@@ -16,8 +16,8 @@ class ObservationCode {
 
   Map<String, dynamic> toJson() {
     return {
-      if(text != null) 'text': text,
-      if(code != null) 'code': code,
+      if (text != null) 'text': text,
+      if (code != null) 'code': code,
     };
   }
 

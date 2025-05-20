@@ -25,8 +25,8 @@ class Contraindications {
 
   Map<String, dynamic> toJson() {
     return {
-      if(vaccineGroup != null) 'vaccineGroup': vaccineGroup?.toJson(),
-      if(vaccine != null) 'vaccine': vaccine?.toJson(),
+      if (vaccineGroup != null) 'vaccineGroup': vaccineGroup?.toJson(),
+      if (vaccine != null) 'vaccine': vaccine?.toJson(),
     };
   }
 

@@ -21,8 +21,9 @@ List<Series> relevantSeries(
     /// If it's a Risk group
     else if (series.seriesType == SeriesType.risk) {
       /// Get the list of indications for this series
-      final List<String>? indicationList =
-          series.indication?.map((Indication e) => e.observationCode?.code ?? '').toList();
+      final List<String>? indicationList = series.indication
+          ?.map((Indication e) => e.observationCode?.code ?? '')
+          .toList();
 
       /// If the indicationList is null, it means there are no conditions to
       /// meet (this is probably an error in the rules), but either way,

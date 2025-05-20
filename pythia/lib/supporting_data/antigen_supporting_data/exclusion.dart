@@ -16,8 +16,8 @@ class Exclusion {
 
   Map<String, dynamic> toJson() {
     return {
-      if(exclusionCode != null) 'exclusionCode': exclusionCode,
-      if(exclusionTitle != null) 'exclusionTitle': exclusionTitle,
+      if (exclusionCode != null) 'exclusionCode': exclusionCode,
+      if (exclusionTitle != null) 'exclusionTitle': exclusionTitle,
     };
   }
 }

@@ -23,7 +23,8 @@ class LiveVirusConflicts {
 
   Map<String, dynamic> toJson() {
     return {
-      if(liveVirusConflict != null) 'liveVirusConflict': liveVirusConflict?.map((e) => e.toJson()).toList(),
+      if (liveVirusConflict != null)
+        'liveVirusConflict': liveVirusConflict?.map((e) => e.toJson()).toList(),
     };
   }
 }
@@ -77,11 +78,14 @@ class LiveVirusConflict {
 
   Map<String, dynamic> toJson() {
     return {
-      if(previous != null) 'previous': previous?.toJson(),
-      if(current != null) 'current': current?.toJson(),
-      if(conflictBeginInterval != null) 'conflictBeginInterval': conflictBeginInterval,
-      if(minConflictEndInterval != null) 'minConflictEndInterval': minConflictEndInterval,
-      if(conflictEndInterval != null) 'conflictEndInterval': conflictEndInterval,
+      if (previous != null) 'previous': previous?.toJson(),
+      if (current != null) 'current': current?.toJson(),
+      if (conflictBeginInterval != null)
+        'conflictBeginInterval': conflictBeginInterval,
+      if (minConflictEndInterval != null)
+        'minConflictEndInterval': minConflictEndInterval,
+      if (conflictEndInterval != null)
+        'conflictEndInterval': conflictEndInterval,
     };
   }
 }

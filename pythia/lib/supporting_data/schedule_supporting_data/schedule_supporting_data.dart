@@ -21,11 +21,7 @@ class ScheduleSupportingData {
   final CvxToAntigenMap? cvxToAntigenMap;
   final VaxObservations? observations;
 
-  factory ScheduleSupportingData.fromJson(Map<String, dynamic> oldJson) {
-    final json = oldJson['scheduleSupportingData'];
-    if(json == null) {
-      return ScheduleSupportingData();
-    }
+  factory ScheduleSupportingData.fromJson(Map<String, dynamic> json) {
     return ScheduleSupportingData(
       liveVirusConflicts: json['liveVirusConflicts'] == null
           ? null
@@ -69,11 +65,13 @@ class ScheduleSupportingData {
 
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
-      if(liveVirusConflicts != null) 'liveVirusConflicts': liveVirusConflicts?.toJson(),
-      if(vaccineGroups != null) 'vaccineGroups': vaccineGroups?.toJson(),
-      if(vaccineGroupToAntigenMap != null) 'vaccineGroupToAntigenMap': vaccineGroupToAntigenMap?.toJson(),
-      if(cvxToAntigenMap != null) 'cvxToAntigenMap': cvxToAntigenMap?.toJson(),
-      if(observations != null) 'observations': observations?.toJson(),
+      if (liveVirusConflicts != null)
+        'liveVirusConflicts': liveVirusConflicts?.toJson(),
+      if (vaccineGroups != null) 'vaccineGroups': vaccineGroups?.toJson(),
+      if (vaccineGroupToAntigenMap != null)
+        'vaccineGroupToAntigenMap': vaccineGroupToAntigenMap?.toJson(),
+      if (cvxToAntigenMap != null) 'cvxToAntigenMap': cvxToAntigenMap?.toJson(),
+      if (observations != null) 'observations': observations?.toJson(),
     };
   }
 }

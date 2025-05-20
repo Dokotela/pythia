@@ -30,9 +30,11 @@ class SeriesDose {
       doseNumber: json['doseNumber'] == null
           ? null
           : DoseNumber.fromJson(json['doseNumber'] as String),
-      age: (json['age'] as List<dynamic>?)
-          ?.map((e) => VaxAge.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      age: json['age'] == null || (json['age'] as List).isEmpty
+          ? null
+          : (json['age'] as List<dynamic>?)
+              ?.map((e) => VaxAge.fromJson(e as Map<String, dynamic>))
+              .toList(),
       preferableInterval: (json['interval'] as List<dynamic>?)
           ?.map((e) => Interval.fromJson(e as Map<String, dynamic>))
           .toList(),

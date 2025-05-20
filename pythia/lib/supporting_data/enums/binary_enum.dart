@@ -1,11 +1,8 @@
-
-
 enum Binary {
-  
   yes,
-  
+
   no,
-  
+
   na;
 
   static Binary? fromString(String? string) {

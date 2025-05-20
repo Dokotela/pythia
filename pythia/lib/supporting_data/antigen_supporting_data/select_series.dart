@@ -12,12 +12,12 @@ class SelectSeries {
     this.maxAgeToStart,
   });
 
-  final Binary? defaultSeries; 
-  final Binary? productPath; 
+  final Binary? defaultSeries;
+  final Binary? productPath;
   final String? seriesGroupName;
   final String? seriesGroup;
-  final SeriesPriority? seriesPriority; 
-  final SeriesPreference? seriesPreference; 
+  final SeriesPriority? seriesPriority;
+  final SeriesPreference? seriesPreference;
   final String? minAgeToStart;
   final String? maxAgeToStart;
 
@@ -33,12 +33,10 @@ class SelectSeries {
       seriesGroup: json['seriesGroup'] as String?,
       seriesPriority: json['seriesPriority'] == null
           ? null
-          : SeriesPriority.fromJson(
-              json['seriesPriority'] as String),
+          : SeriesPriority.fromJson(json['seriesPriority'] as String),
       seriesPreference: json['seriesPreference'] == null
           ? null
-          : SeriesPreference.fromJson(
-              json['seriesPreference'] as String),
+          : SeriesPreference.fromJson(json['seriesPreference'] as String),
       minAgeToStart: json['minAgeToStart'] as String?,
       maxAgeToStart: json['maxAgeToStart'] as String?,
     );
@@ -46,14 +44,15 @@ class SelectSeries {
 
   Map<String, dynamic> toJson() {
     return {
-      if(defaultSeries != null) 'defaultSeries': defaultSeries?.toJson(),
-      if(productPath != null) 'productPath': productPath?.toJson(),
-      if(seriesGroupName != null) 'seriesGroupName': seriesGroupName,
-      if(seriesGroup != null) 'seriesGroup': seriesGroup,
-      if(seriesPriority != null) 'seriesPriority': seriesPriority?.toJson(),
-      if(seriesPreference != null) 'seriesPreference': seriesPreference?.toJson(),
-      if(minAgeToStart != null) 'minAgeToStart': minAgeToStart,
-      if(maxAgeToStart != null) 'maxAgeToStart': maxAgeToStart,
+      if (defaultSeries != null) 'defaultSeries': defaultSeries?.toJson(),
+      if (productPath != null) 'productPath': productPath?.toJson(),
+      if (seriesGroupName != null) 'seriesGroupName': seriesGroupName,
+      if (seriesGroup != null) 'seriesGroup': seriesGroup,
+      if (seriesPriority != null) 'seriesPriority': seriesPriority?.toJson(),
+      if (seriesPreference != null)
+        'seriesPreference': seriesPreference?.toJson(),
+      if (minAgeToStart != null) 'minAgeToStart': minAgeToStart,
+      if (maxAgeToStart != null) 'maxAgeToStart': maxAgeToStart,
     };
   }
 }

@@ -4,7 +4,8 @@ import 'package:fhir_r4_bulk/fhir_r4_bulk.dart';
 import 'package:pythia/forecast/forecast.dart';
 
 Future<void> main() async {
-  final List<Resource> parameters = await FhirBulk.fromFile('healthyTestCases.ndjson');
+  final List<Resource> parameters =
+      await FhirBulk.fromFile('healthyTestCases.ndjson');
   int totalDisagreements = 0;
   for (int i = 0; i < parameters.length; i++) {
     final Patient? patient = (parameters[i] as Parameters)

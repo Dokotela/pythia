@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData yellowFever = AntigenSupportingData.fromJson({
+final AntigenSupportingData yellowFever = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Yellow Fever",
     "vaccineGroup": "Yellow Fever",
     "contraindications": {
@@ -82,7 +83,7 @@ final AntigenSupportingData yellowFever = AntigenSupportingData.fromJson({
                 {
                     "observationCode": "158",
                     "observationTitle": "Immunosuppressive therapy",
-                    "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies. "
+                    "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies."
                 },
                 {
                     "observationCode": "159",

@@ -1,13 +1,10 @@
-
-
 enum Gender {
-  
   female,
-  
+
   transgender,
-  
+
   unknown,
-  
+
   male;
 
   static Gender? fromString(String? string) {

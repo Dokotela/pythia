@@ -55,11 +55,12 @@ class AntigenSupportingData {
 
   Map<String, dynamic> toJson() {
     return {
-    if(targetDisease != null)  'targetDisease': targetDisease,
-      if(vaccineGroup != null) 'vaccineGroup': vaccineGroup,
-      if(immunity != null) 'immunity': immunity?.toJson(),
-      if(contraindications != null) 'contraindications': contraindications?.toJson(),
-      if(series != null) 'series': series?.map((e) => e.toJson()).toList(),
+      if (targetDisease != null) 'targetDisease': targetDisease,
+      if (vaccineGroup != null) 'vaccineGroup': vaccineGroup,
+      if (immunity != null) 'immunity': immunity?.toJson(),
+      if (contraindications != null)
+        'contraindications': contraindications?.toJson(),
+      if (series != null) 'series': series?.map((e) => e.toJson()).toList(),
     };
   }
 

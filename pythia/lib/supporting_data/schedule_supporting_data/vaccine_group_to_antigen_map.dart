@@ -19,11 +19,12 @@ class VaccineGroupToAntigenMap {
     );
   }
 
-    Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJson() {
     return {
-      if(vaccineGroupMap != null) 'vaccineGroupMap': vaccineGroupMap?.map((e) => e.toJson()).toList(),
+      if (vaccineGroupMap != null)
+        'vaccineGroupMap': vaccineGroupMap?.map((e) => e.toJson()).toList(),
     };
-    }
+  }
 }
 
 class VaccineGroupMap {
@@ -50,10 +51,10 @@ class VaccineGroupMap {
     );
   }
 
-    Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJson() {
     return {
-      if(name != null) 'name': name,
-      if(antigen != null) 'antigen': antigen,
+      if (name != null) 'name': name,
+      if (antigen != null) 'antigen': antigen,
     };
-    }
+  }
 }

@@ -14,8 +14,7 @@ class VaccineGroupContraindications {
 
   Map<String, dynamic> toJson() {
     return {
-      'contraindication':
-          contraindication?.map((e) => e.toJson()).toList(),
+      'contraindication': contraindication?.map((e) => e.toJson()).toList(),
     };
   }
 
@@ -70,12 +69,14 @@ class GroupContraindication {
 
   Map<String, dynamic> toJson() {
     return {
-      if(observationCode != null) 'observationCode': observationCode,
-      if(observationTitle != null) 'observationTitle': observationTitle,
-      if(contraindicationText != null) 'contraindicationText': contraindicationText,
-      if(contraindicationGuidance != null) 'contraindicationGuidance': contraindicationGuidance,
-      if(beginAge != null) 'beginAge': beginAge,
-      if(endAge != null) 'endAge': endAge,
+      if (observationCode != null) 'observationCode': observationCode,
+      if (observationTitle != null) 'observationTitle': observationTitle,
+      if (contraindicationText != null)
+        'contraindicationText': contraindicationText,
+      if (contraindicationGuidance != null)
+        'contraindicationGuidance': contraindicationGuidance,
+      if (beginAge != null) 'beginAge': beginAge,
+      if (endAge != null) 'endAge': endAge,
     };
   }
 

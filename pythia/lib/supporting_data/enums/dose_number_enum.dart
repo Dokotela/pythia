@@ -86,8 +86,8 @@ enum DoseNumber {
     }
   }
 
-  static DoseNumber? fromNum(num? number){
-    switch(number){
+  static DoseNumber? fromNum(num? number) {
+    switch (number) {
       case 1:
         return DoseNumber.num1;
       case 2:

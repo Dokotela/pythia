@@ -14,7 +14,8 @@ Map<String, VaxAntigen> antigenMap(VaxPatient patient) {
       groupContraindications.retainWhere((GroupContraindication element) =>
           observations.codesAsInt?.contains(element.codeAsInt) ?? false);
       final List<VaccineContraindication> vaccineContraindications =
-          data.contraindications?.vaccine?.contraindication?.toList() ?? <VaccineContraindication>[];
+          data.contraindications?.vaccine?.contraindication?.toList() ??
+              <VaccineContraindication>[];
       vaccineContraindications.retainWhere((VaccineContraindication element) =>
           observations.codesAsInt?.contains(element.codeAsInt) ?? false);
       agMap[data.series!.first.targetDisease!] = VaxAntigen.fromSeries(

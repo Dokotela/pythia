@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData typhoid = AntigenSupportingData.fromJson({
+final AntigenSupportingData typhoid = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Typhoid",
     "vaccineGroup": "Typhoid",
     "contraindications": {

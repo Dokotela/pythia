@@ -11,7 +11,7 @@ class DateOfBirth {
   final String? birthCountry;
   final List<Exclusion>? exclusion;
 
-  factory DateOfBirth.fromJson(Map<String, dynamic> json){
+  factory DateOfBirth.fromJson(Map<String, dynamic> json) {
     return DateOfBirth(
       immunityBirthDate: json['immunityBirthDate'] as String?,
       birthCountry: json['birthCountry'] as String?,
@@ -23,9 +23,10 @@ class DateOfBirth {
 
   Map<String, dynamic> toJson() {
     return {
-      if(immunityBirthDate != null) 'immunityBirthDate': immunityBirthDate,
-      if(birthCountry != null) 'birthCountry': birthCountry,
-      if(exclusion != null) 'exclusion': exclusion?.map((e) => e.toJson()).toList(),
+      if (immunityBirthDate != null) 'immunityBirthDate': immunityBirthDate,
+      if (birthCountry != null) 'birthCountry': birthCountry,
+      if (exclusion != null)
+        'exclusion': exclusion?.map((e) => e.toJson()).toList(),
     };
   }
 

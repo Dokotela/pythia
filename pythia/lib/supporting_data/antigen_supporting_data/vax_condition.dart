@@ -50,18 +50,18 @@ class VaxCondition {
 
   Map<String, dynamic> toJson() {
     return {
-      if(conditionID != null) 'conditionID': conditionID,
-      if(conditionType != null) 'conditionType': conditionType,
-      if(startDate != null) 'startDate': startDate,
-      if(endDate != null) 'endDate': endDate,
-      if(beginAge != null) 'beginAge': beginAge,
-      if(endAge != null) 'endAge': endAge,
-      if(interval != null) 'interval': interval,
-      if(doseCount != null) 'doseCount': doseCount,
-      if(doseType != null) 'doseType': doseType?.toJson(),
-      if(doseCountLogic != null) 'doseCountLogic': doseCountLogic,
-      if(vaccineTypes != null) 'vaccineTypes': vaccineTypes,
-      if(seriesGroups != null) 'seriesGroups': seriesGroups,
+      if (conditionID != null) 'conditionID': conditionID,
+      if (conditionType != null) 'conditionType': conditionType,
+      if (startDate != null) 'startDate': startDate,
+      if (endDate != null) 'endDate': endDate,
+      if (beginAge != null) 'beginAge': beginAge,
+      if (endAge != null) 'endAge': endAge,
+      if (interval != null) 'interval': interval,
+      if (doseCount != null) 'doseCount': doseCount,
+      if (doseType != null) 'doseType': doseType?.toJson(),
+      if (doseCountLogic != null) 'doseCountLogic': doseCountLogic,
+      if (vaccineTypes != null) 'vaccineTypes': vaccineTypes,
+      if (seriesGroups != null) 'seriesGroups': seriesGroups,
     };
   }
 }

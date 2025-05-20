@@ -1,11 +1,8 @@
-
-
 enum IntervalReason {
-  
   tooLate,
-  
+
   tooShort,
-  
+
   gracePeriod;
 
   static IntervalReason? fromString(String? string) {

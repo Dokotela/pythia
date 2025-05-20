@@ -31,13 +31,13 @@ class VaxAge {
 
   Map<String, dynamic> toJson() {
     return {
-      if(absMinAge != null) 'absMinAge': absMinAge,
-      if(minAge != null) 'minAge': minAge,
-      if(earliestRecAge != null) 'earliestRecAge': earliestRecAge,
-      if(latestRecAge != null) 'latestRecAge': latestRecAge,
-      if(maxAge != null) 'maxAge': maxAge,
-      if(effectiveDate != null) 'effectiveDate': effectiveDate,
-      if(cessationDate != null) 'cessationDate': cessationDate,
+      if (absMinAge != null) 'absMinAge': absMinAge,
+      if (minAge != null) 'minAge': minAge,
+      if (earliestRecAge != null) 'earliestRecAge': earliestRecAge,
+      if (latestRecAge != null) 'latestRecAge': latestRecAge,
+      if (maxAge != null) 'maxAge': maxAge,
+      if (effectiveDate != null) 'effectiveDate': effectiveDate,
+      if (cessationDate != null) 'cessationDate': cessationDate,
     };
   }
 }

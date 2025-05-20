@@ -1,13 +1,10 @@
-
-
 enum EvalStatus {
-  
   valid,
-  
+
   not_valid,
-  
+
   extraneous,
-  
+
   sub_standard;
 
   static EvalStatus? fromString(String? string) {

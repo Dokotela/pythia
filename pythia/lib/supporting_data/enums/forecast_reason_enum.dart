@@ -1,19 +1,16 @@
-
-
 enum ForecastReason {
-  
   patientHasEvidenceOfImmunity,
-  
+
   patientHasAContraindication,
-  
+
   notRecommendedAtThisTimeDueToPastImmunizationHistory,
-  
+
   patientSeriesIsComplete,
-  
+
   pastSeasonalRecommendationEndDate,
-  
+
   patientHasExceededTheMaximumAge,
-  
+
   patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
 
   static ForecastReason? fromString(String? string) {

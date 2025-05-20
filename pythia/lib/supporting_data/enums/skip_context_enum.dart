@@ -1,11 +1,8 @@
-
-
 enum SkipContext {
-  
   evaluation,
-  
+
   forecast,
-  
+
   both;
 
   static SkipContext? fromString(String? json) {

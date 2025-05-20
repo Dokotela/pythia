@@ -20,7 +20,8 @@ class VaxDose {
 
   factory VaxDose.fromImmunization(Immunization immunization, VaxDate dob) {
     final String? cvx = cvxFromImmunization(immunization);
-    final VaxDate dateGiven = immunization.occurrenceDateTime?.valueDateTime != null
+    final VaxDate dateGiven = immunization.occurrenceDateTime?.valueDateTime !=
+            null
         ? VaxDate.fromDateTime(immunization.occurrenceDateTime!.valueDateTime!)
         : VaxDate(2999, 01, 01);
     final bool expired = (immunization.expirationDate?.valueDateTime != null) &&

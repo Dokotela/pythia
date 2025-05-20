@@ -1,15 +1,12 @@
-
-
 enum SeriesPriority {
-  
   a,
-  
+
   b,
-  
+
   c,
-  
+
   d,
-  
+
   e;
 
   static SeriesPriority? fromString(String? json) {

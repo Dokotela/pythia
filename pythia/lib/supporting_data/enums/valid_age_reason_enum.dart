@@ -1,11 +1,8 @@
-
-
 enum ValidAgeReason {
-  
   gracePeriod,
-  
+
   tooYoung,
-  
+
   tooOld;
 
   static ValidAgeReason? fromString(String? string) {

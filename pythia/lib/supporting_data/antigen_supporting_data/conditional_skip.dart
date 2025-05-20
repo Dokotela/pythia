@@ -27,9 +27,9 @@ class ConditionalSkip {
 
   Map<String, dynamic> toJson() {
     return {
-      if(context != null) 'context': context?.toJson(),
-      if(setLogic != null) 'setLogic': setLogic,
-      if(set_ != null) 'set': set_?.map((e) => e.toJson()).toList(),
+      if (context != null) 'context': context?.toJson(),
+      if (setLogic != null) 'setLogic': setLogic,
+      if (set_ != null) 'set': set_?.map((e) => e.toJson()).toList(),
     };
   }
 

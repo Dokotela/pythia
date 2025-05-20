@@ -1,17 +1,14 @@
-
-
 enum SeriesStatus {
-  
   notComplete,
-  
+
   immune,
-  
+
   contraindicated,
-  
+
   notRecommended,
-  
+
   complete,
-  
+
   agedOut;
 
   static SeriesStatus? fromString(String? string) {

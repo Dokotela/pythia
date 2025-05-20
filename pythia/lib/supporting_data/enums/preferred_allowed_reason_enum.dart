@@ -1,17 +1,14 @@
-
-
 enum PreferredAllowedReason {
-  
   notAPreferableOrAllowableVaccine,
-  
+
   wrongTradeName,
-  
+
   lessThanRecommendedVolume,
-  
+
   administeredOutsideOfPreferredAgeRange,
-  
+
   noPreferredTypes,
-  
+
   noAllowedTypes;
 
   static PreferredAllowedReason? fromString(String? string) {

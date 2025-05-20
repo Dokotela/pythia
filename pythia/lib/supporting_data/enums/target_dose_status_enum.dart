@@ -1,11 +1,8 @@
-
-
 enum TargetDoseStatus {
-  
   satisfied,
-  
+
   skipped,
-  
+
   notSatisfied;
 
   static TargetDoseStatus? fromString(String? value) {

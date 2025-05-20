@@ -16,8 +16,8 @@ class ClinicalHistory {
 
   Map<String, dynamic> toJson() {
     return {
-      if(guidelineCode != null) 'guidelineCode': guidelineCode,
-      if(guidelineTitle != null) 'guidelineTitle': guidelineTitle,
+      if (guidelineCode != null) 'guidelineCode': guidelineCode,
+      if (guidelineTitle != null) 'guidelineTitle': guidelineTitle,
     };
   }
 }

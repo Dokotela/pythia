@@ -2,7 +2,8 @@
 
 import '../pythia.dart';
 
-final AntigenSupportingData ebola = AntigenSupportingData.fromJson({
+final AntigenSupportingData ebola = AntigenSupportingData.fromJson(
+{
     "targetDisease": "Ebola",
     "vaccineGroup": "Ebola",
     "contraindications": {
