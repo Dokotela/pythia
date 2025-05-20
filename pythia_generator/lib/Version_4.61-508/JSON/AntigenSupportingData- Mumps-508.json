@@ -554,9 +554,6 @@
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -679,9 +676,6 @@
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",

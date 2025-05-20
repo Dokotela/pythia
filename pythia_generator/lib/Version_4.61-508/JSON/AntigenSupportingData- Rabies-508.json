@@ -112,9 +112,6 @@
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -165,9 +162,6 @@
                     },
                     {
                         "doseNumber": "Dose 3",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -223,12 +217,12 @@
                                     {
                                         "setID": "1",
                                         "setDescription": "Target dose can be skipped if 1 or more previous doses have been adminisetered on or after May 6, 2022",
-                                        "effectiveDate": "20220506",
+                                        "effectiveDate": "2022-05-06",
                                         "condition": [
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20220506",
+                                                "startDate": "2022-05-06",
                                                 "doseCount": "1",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -245,7 +239,7 @@
                                     {
                                         "setID": "2",
                                         "setDescription": "Target Dose can be skipped on or after May 6, 2022",
-                                        "effectiveDate": "20220506",
+                                        "effectiveDate": "2022-05-06",
                                         "condition": [
                                             {
                                                 "conditionID": "1",
@@ -265,9 +259,6 @@
                     },
                     {
                         "doseNumber": "Dose 4",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -422,9 +413,6 @@
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -475,9 +463,6 @@
                     },
                     {
                         "doseNumber": "Dose 3",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -533,12 +518,12 @@
                                     {
                                         "setID": "1",
                                         "setDescription": "Target dose can be skipped if 1 or more previous doses have been adminisetered on or after May 6, 2022",
-                                        "effectiveDate": "20220506",
+                                        "effectiveDate": "2022-05-06",
                                         "condition": [
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20220506",
+                                                "startDate": "2022-05-06",
                                                 "doseCount": "1",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -555,7 +540,7 @@
                                     {
                                         "setID": "2",
                                         "setDescription": "Target Dose can be skipped on or after May 6, 2022",
-                                        "effectiveDate": "20220506",
+                                        "effectiveDate": "2022-05-06",
                                         "condition": [
                                             {
                                                 "conditionID": "1",
@@ -575,9 +560,6 @@
                     },
                     {
                         "doseNumber": "Dose 4",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -719,9 +701,6 @@
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -772,9 +751,6 @@
                     },
                     {
                         "doseNumber": "Dose 3",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -830,12 +806,12 @@
                                     {
                                         "setID": "1",
                                         "setDescription": "Target dose can be skipped if 1 or more previous doses have been adminisetered on or after May 6, 2022",
-                                        "effectiveDate": "20220506",
+                                        "effectiveDate": "2022-05-06",
                                         "condition": [
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20220506",
+                                                "startDate": "2022-05-06",
                                                 "doseCount": "1",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -852,7 +828,7 @@
                                     {
                                         "setID": "2",
                                         "setDescription": "Target Dose can be skipped on or after May 6, 2022",
-                                        "effectiveDate": "20220506",
+                                        "effectiveDate": "2022-05-06",
                                         "condition": [
                                             {
                                                 "conditionID": "1",
@@ -872,9 +848,6 @@
                     },
                     {
                         "doseNumber": "Dose 4",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",

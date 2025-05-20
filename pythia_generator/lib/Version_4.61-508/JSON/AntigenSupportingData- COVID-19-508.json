@@ -157,13 +157,13 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "absMinAge": "6 months - 4 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "interval": [
@@ -179,7 +179,7 @@
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20240118"
+                                "effectiveDate": "2024-01-18"
                             }
                         ],
                         "preferableVaccine": [
@@ -258,7 +258,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -268,7 +268,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -285,7 +285,7 @@
                                 "minInt": "21 days",
                                 "earliestRecInt": "21 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
@@ -293,7 +293,7 @@
                                 "minInt": "21 days",
                                 "earliestRecInt": "21 days",
                                 "latestRecInt": "8 weeks",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -402,7 +402,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -412,7 +412,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -592,7 +592,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date and Age",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "beginAge": "5 years",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
@@ -629,7 +629,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -639,7 +639,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -647,13 +647,13 @@
                                 "fromPrevious": "Y",
                                 "absMinInt": "0 days",
                                 "minInt": "0 days",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "preferableVaccine": [
@@ -877,7 +877,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date and Age",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "beginAge": "5 years",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
@@ -902,7 +902,7 @@
                                             {
                                                 "conditionID": "2",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -915,7 +915,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -947,13 +947,13 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "absMinAge": "6 months - 4 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "interval": [
@@ -969,7 +969,7 @@
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20240118"
+                                "effectiveDate": "2024-01-18"
                             }
                         ],
                         "preferableVaccine": [
@@ -1032,7 +1032,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -1042,7 +1042,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -1059,7 +1059,7 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
@@ -1067,7 +1067,7 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "8 weeks",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -1155,7 +1155,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -1165,7 +1165,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -1173,13 +1173,13 @@
                                 "fromPrevious": "Y",
                                 "absMinInt": "0 days",
                                 "minInt": "0 days",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "preferableVaccine": [
@@ -1412,7 +1412,7 @@
                                             {
                                                 "conditionID": "2",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -1425,7 +1425,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -1469,13 +1469,13 @@
                                 "fromPrevious": "Y",
                                 "absMinInt": "0 days",
                                 "minInt": "0 days",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "preferableVaccine": [
@@ -1686,7 +1686,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -1704,7 +1704,7 @@
                                 "fromMostRecent": "308; 309; 310; 311; 312; 313",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
-                                "cessationDate": "20240228"
+                                "cessationDate": "2024-02-28"
                             },
                             {
                                 "fromPrevious": "N",
@@ -1712,20 +1712,20 @@
                                 "absMinInt": "4 months - 4 days",
                                 "minInt": "4 months",
                                 "earliestRecInt": "4 months",
-                                "effectiveDate": "20240229",
-                                "cessationDate": "20240821"
+                                "effectiveDate": "2024-02-29",
+                                "cessationDate": "2024-08-21"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "0 days",
                                 "minInt": "0 days",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "preferableVaccine": [
@@ -1937,7 +1937,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -1950,7 +1950,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -2049,7 +2049,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -2109,14 +2109,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -2168,28 +2165,25 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 3",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "4 months - 4 days",
                                 "minInt": "4 months",
                                 "earliestRecInt": "4 months",
-                                "cessationDate": "20240821"
+                                "cessationDate": "2024-08-21"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20240822"
+                                "effectiveDate": "2024-08-22"
                             }
                         ],
                         "preferableVaccine": [
@@ -2263,7 +2257,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -2276,7 +2270,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -2375,7 +2369,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -2407,13 +2401,13 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "absMinAge": "6 months - 4 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "interval": [
@@ -2429,7 +2423,7 @@
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20240118"
+                                "effectiveDate": "2024-01-18"
                             }
                         ],
                         "preferableVaccine": [
@@ -2571,7 +2565,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -2581,7 +2575,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -2598,7 +2592,7 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
@@ -2606,7 +2600,7 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "8 weeks",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -2754,7 +2748,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -2764,7 +2758,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -2937,7 +2931,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date and Age",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "beginAge": "5 years",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
@@ -2974,7 +2968,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -2984,7 +2978,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -2992,13 +2986,13 @@
                                 "fromPrevious": "Y",
                                 "absMinInt": "0 days",
                                 "minInt": "0 days",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "preferableVaccine": [
@@ -3222,7 +3216,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -3235,7 +3229,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -3286,14 +3280,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -3498,14 +3489,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 3",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -3599,7 +3587,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -3612,7 +3600,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -3676,9 +3664,6 @@
                     },
                     {
                         "doseNumber": "Dose 3",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -3772,7 +3757,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -3785,7 +3770,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -3939,14 +3924,14 @@
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
                                 "maxAge": "5 years",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "absMinAge": "6 months - 4 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
                                 "maxAge": "5 years",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "interval": [
@@ -3962,7 +3947,7 @@
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20240118"
+                                "effectiveDate": "2024-01-18"
                             }
                         ],
                         "preferableVaccine": [
@@ -4041,7 +4026,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -4051,7 +4036,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -4068,14 +4053,14 @@
                                 "minInt": "21 days",
                                 "earliestRecInt": "21 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "21 days - 4 days",
                                 "minInt": "21 days",
                                 "earliestRecInt": "21 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -4161,7 +4146,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -4171,7 +4156,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -4195,22 +4180,22 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025",
-                                "cessationDate": "20230430"
+                                "effectiveDate": "2021-10-25",
+                                "cessationDate": "2023-04-30"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20230501"
+                                "effectiveDate": "2023-05-01"
                             }
                         ],
                         "preferableVaccine": [
@@ -4296,7 +4281,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -4306,7 +4291,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -4322,22 +4307,22 @@
                                 "absMinInt": "0 days",
                                 "minInt": "5 months",
                                 "earliestRecInt": "5 months",
-                                "cessationDate": "20220618"
+                                "cessationDate": "2022-06-18"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "12 weeks - 4 days",
                                 "minInt": "5 months",
                                 "earliestRecInt": "5 months",
-                                "effectiveDate": "20220619",
-                                "cessationDate": "20220901"
+                                "effectiveDate": "2022-06-19",
+                                "cessationDate": "2022-09-01"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20220902"
+                                "effectiveDate": "2022-09-02"
                             }
                         ],
                         "preferableVaccine": [
@@ -4525,7 +4510,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -4538,14 +4523,11 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 5",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -4622,14 +4604,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 6",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -4716,7 +4695,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -4729,7 +4708,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -4884,7 +4863,7 @@
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20230419"
+                                "effectiveDate": "2023-04-19"
                             }
                         ],
                         "preferableVaccine": [
@@ -4966,14 +4945,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "N",
@@ -4988,14 +4964,14 @@
                                 "minInt": "21 days",
                                 "earliestRecInt": "21 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "21 days - 4 days",
                                 "minInt": "21 days",
                                 "earliestRecInt": "21 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -5077,14 +5053,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 3",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "N",
@@ -5106,14 +5079,14 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -5195,14 +5168,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 4",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "N",
@@ -5216,22 +5186,22 @@
                                 "absMinInt": "0 days",
                                 "minInt": "5 months",
                                 "earliestRecInt": "5 months",
-                                "cessationDate": "20220618"
+                                "cessationDate": "2022-06-18"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "12 weeks - 4 days",
                                 "minInt": "5 months",
                                 "earliestRecInt": "5 months",
-                                "effectiveDate": "20220619",
-                                "cessationDate": "20220901"
+                                "effectiveDate": "2022-06-19",
+                                "cessationDate": "2022-09-01"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20220902"
+                                "effectiveDate": "2022-09-02"
                             }
                         ],
                         "preferableVaccine": [
@@ -5409,7 +5379,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -5422,14 +5392,11 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 5",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -5519,14 +5486,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 6",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -5626,7 +5590,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -5639,7 +5603,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -5778,13 +5742,13 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "absMinAge": "6 months - 4 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "interval": [
@@ -5807,7 +5771,7 @@
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20240118"
+                                "effectiveDate": "2024-01-18"
                             }
                         ],
                         "preferableVaccine": [
@@ -5876,7 +5840,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -5886,7 +5850,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -5903,14 +5867,14 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -5978,7 +5942,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -5988,7 +5952,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -6005,14 +5969,14 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -6080,7 +6044,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -6090,7 +6054,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -6106,22 +6070,22 @@
                                 "absMinInt": "0 days",
                                 "minInt": "12 weeks",
                                 "earliestRecInt": "12 weeks",
-                                "cessationDate": "20220618"
+                                "cessationDate": "2022-06-18"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "12 weeks - 4 days",
                                 "minInt": "12 weeks",
                                 "earliestRecInt": "12 weeks",
-                                "effectiveDate": "20220619",
-                                "cessationDate": "20220901"
+                                "effectiveDate": "2022-06-19",
+                                "cessationDate": "2022-09-01"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20220902"
+                                "effectiveDate": "2022-09-02"
                             }
                         ],
                         "preferableVaccine": [
@@ -6309,7 +6273,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -6322,14 +6286,11 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 5",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -6427,14 +6388,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 6",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -6542,7 +6500,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -6555,7 +6513,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -6740,14 +6698,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "N",
@@ -6762,14 +6717,14 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -6863,28 +6818,25 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 3",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "0 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "cessationDate": "20220618"
+                                "cessationDate": "2022-06-18"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20220619"
+                                "effectiveDate": "2022-06-19"
                             }
                         ],
                         "preferableVaccine": [
@@ -7020,7 +6972,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -7033,14 +6985,11 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 4",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -7110,14 +7059,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 5",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -7197,7 +7143,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -7210,7 +7156,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -7400,28 +7346,25 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "0 days",
                                 "minInt": "3 weeks",
                                 "earliestRecInt": "3 weeks",
-                                "cessationDate": "20220719"
+                                "cessationDate": "2022-07-19"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "3 weeks - 4 days",
                                 "minInt": "3 weeks",
                                 "earliestRecInt": "3 weeks",
-                                "effectiveDate": "20220720"
+                                "effectiveDate": "2022-07-20"
                             }
                         ],
                         "preferableVaccine": [
@@ -7473,14 +7416,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 3",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "N",
@@ -7635,7 +7575,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -7648,14 +7588,11 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 4",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -7725,14 +7662,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 5",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -7812,7 +7746,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -7825,7 +7759,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -7978,13 +7912,13 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             },
                             {
                                 "absMinAge": "6 months - 4 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "effectiveDate": "20230912"
+                                "effectiveDate": "2023-09-12"
                             }
                         ],
                         "interval": [
@@ -8000,7 +7934,7 @@
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20240118"
+                                "effectiveDate": "2024-01-18"
                             }
                         ],
                         "allowableVaccine": [
@@ -8123,7 +8057,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -8133,7 +8067,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -8150,14 +8084,14 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -8304,7 +8238,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -8314,7 +8248,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -8338,22 +8272,22 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025",
-                                "cessationDate": "20230430"
+                                "effectiveDate": "2021-10-25",
+                                "cessationDate": "2023-04-30"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20230501"
+                                "effectiveDate": "2023-05-01"
                             }
                         ],
                         "preferableVaccine": [
@@ -8499,7 +8433,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -8509,7 +8443,7 @@
                                 "absMinAge": "0 days",
                                 "minAge": "6 months",
                                 "earliestRecAge": "6 months",
-                                "cessationDate": "20230911"
+                                "cessationDate": "2023-09-11"
                             }
                         ],
                         "interval": [
@@ -8525,22 +8459,22 @@
                                 "absMinInt": "0 days",
                                 "minInt": "5 months",
                                 "earliestRecInt": "5 months",
-                                "cessationDate": "20220618"
+                                "cessationDate": "2022-06-18"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "12 weeks - 4 days",
                                 "minInt": "5 months",
                                 "earliestRecInt": "5 months",
-                                "effectiveDate": "20220619",
-                                "cessationDate": "20220901"
+                                "effectiveDate": "2022-06-19",
+                                "cessationDate": "2022-09-01"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20220902"
+                                "effectiveDate": "2022-09-02"
                             }
                         ],
                         "preferableVaccine": [
@@ -8728,7 +8662,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -8741,14 +8675,11 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 5",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -8825,14 +8756,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 6",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -8919,7 +8847,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -8932,7 +8860,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -9198,14 +9126,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 2",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "N",
@@ -9220,14 +9145,14 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -9384,14 +9309,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 3",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "N",
@@ -9413,14 +9335,14 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -9576,14 +9498,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 4",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "N",
@@ -9597,22 +9516,22 @@
                                 "absMinInt": "0 days",
                                 "minInt": "5 months",
                                 "earliestRecInt": "5 months",
-                                "cessationDate": "20220618"
+                                "cessationDate": "2022-06-18"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "12 weeks - 4 days",
                                 "minInt": "5 months",
                                 "earliestRecInt": "5 months",
-                                "effectiveDate": "20220619",
-                                "cessationDate": "20220901"
+                                "effectiveDate": "2022-06-19",
+                                "cessationDate": "2022-09-01"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20220902"
+                                "effectiveDate": "2022-09-02"
                             }
                         ],
                         "preferableVaccine": [
@@ -9790,7 +9709,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -9803,14 +9722,11 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 5",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -9900,14 +9816,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 6",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -10007,7 +9920,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -10020,7 +9933,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -10205,7 +10118,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -10406,7 +10319,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -10431,14 +10344,14 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -10574,7 +10487,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -10599,22 +10512,22 @@
                                 "absMinInt": "0 days",
                                 "minInt": "12 weeks",
                                 "earliestRecInt": "12 weeks",
-                                "cessationDate": "20220618"
+                                "cessationDate": "2022-06-18"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "12 weeks - 4 days",
                                 "minInt": "12 weeks",
                                 "earliestRecInt": "12 weeks",
-                                "effectiveDate": "20220619",
-                                "cessationDate": "20220901"
+                                "effectiveDate": "2022-06-19",
+                                "cessationDate": "2022-09-01"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20220902"
+                                "effectiveDate": "2022-09-02"
                             }
                         ],
                         "preferableVaccine": [
@@ -10794,7 +10707,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -10807,14 +10720,11 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 5",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -10904,14 +10814,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 6",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -11011,7 +10918,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -11024,7 +10931,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]
@@ -11207,7 +11114,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -11266,7 +11173,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -11291,14 +11198,14 @@
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
                                 "latestRecInt": "42 days",
-                                "cessationDate": "20211024"
+                                "cessationDate": "2021-10-24"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "28 days - 4 days",
                                 "minInt": "28 days",
                                 "earliestRecInt": "28 days",
-                                "effectiveDate": "20211025"
+                                "effectiveDate": "2021-10-25"
                             }
                         ],
                         "preferableVaccine": [
@@ -11434,7 +11341,7 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
@@ -11459,22 +11366,22 @@
                                 "absMinInt": "0 days",
                                 "minInt": "12 weeks",
                                 "earliestRecInt": "12 weeks",
-                                "cessationDate": "20220618"
+                                "cessationDate": "2022-06-18"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "12 weeks - 4 days",
                                 "minInt": "12 weeks",
                                 "earliestRecInt": "12 weeks",
-                                "effectiveDate": "20220619",
-                                "cessationDate": "20220901"
+                                "effectiveDate": "2022-06-19",
+                                "cessationDate": "2022-09-01"
                             },
                             {
                                 "fromPrevious": "Y",
                                 "absMinInt": "8 weeks - 4 days",
                                 "minInt": "8 weeks",
                                 "earliestRecInt": "8 weeks",
-                                "effectiveDate": "20220902"
+                                "effectiveDate": "2022-09-02"
                             }
                         ],
                         "preferableVaccine": [
@@ -11654,7 +11561,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -11667,14 +11574,11 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 5",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -11744,14 +11648,11 @@
                         ],
                         "recurringDose": "No",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     },
                     {
                         "doseNumber": "Dose 6",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -11831,7 +11732,7 @@
                                             {
                                                 "conditionID": "1",
                                                 "conditionType": "Vaccine Count By Date",
-                                                "startDate": "20240822",
+                                                "startDate": "2024-08-22",
                                                 "doseCount": "0",
                                                 "doseType": "Valid",
                                                 "doseCountLogic": "greater than",
@@ -11844,7 +11745,7 @@
                         ],
                         "recurringDose": "Yes",
                         "seasonalRecommendation": {
-                            "startDate": "20240822"
+                            "startDate": "2024-08-22"
                         }
                     }
                 ]

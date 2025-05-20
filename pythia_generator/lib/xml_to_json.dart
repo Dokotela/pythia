@@ -77,9 +77,14 @@ dynamic removeNulls(dynamic data) {
         pruned[key] = cleanedValue;
       }
     });
-    return pruned;
+    return pruned.isEmpty ? null : pruned;
   } else if (data is List) {
-    return data.map(removeNulls).where((item) => item != null).toList();
+    final finalList =
+        data.map(removeNulls).where((item) => item != null).toList();
+    if (finalList.isEmpty) {
+      return null;
+    }
+    return finalList;
   } else if (data is String) {
     data = data.trim().replaceAll('\\\\n', '\r ');
     if (data == 'valid') {
@@ -93,6 +98,11 @@ dynamic removeNulls(dynamic data) {
     }
     if (data is String && data.contains('?50')) {
       data = data.replaceAll('?50', '≤50');
+    }
+    final datePattern = RegExp(r'^\d{8}$');
+    if (data is String && datePattern.hasMatch(data)) {
+      data =
+          '${data.substring(0, 4)}-${data.substring(4, 6)}-${data.substring(6, 8)}';
     }
   }
   return data;

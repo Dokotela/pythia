@@ -494,14 +494,14 @@
                                 "minAge": "18 weeks",
                                 "earliestRecAge": "4 years",
                                 "latestRecAge": "7 years + 4 weeks",
-                                "cessationDate": "20090806"
+                                "cessationDate": "2009-08-06"
                             },
                             {
                                 "absMinAge": "4 years - 4 days",
                                 "minAge": "4 years",
                                 "earliestRecAge": "4 years",
                                 "latestRecAge": "7 years + 4 weeks",
-                                "effectiveDate": "20090807"
+                                "effectiveDate": "2009-08-07"
                             }
                         ],
                         "interval": [
@@ -511,7 +511,7 @@
                                 "minInt": "4 weeks",
                                 "earliestRecInt": "3 years",
                                 "latestRecInt": "6 years + 4 weeks",
-                                "cessationDate": "20090806"
+                                "cessationDate": "2009-08-06"
                             },
                             {
                                 "fromPrevious": "Y",
@@ -519,7 +519,7 @@
                                 "minInt": "6 months",
                                 "earliestRecInt": "3 years",
                                 "latestRecInt": "6 years + 4 weeks",
-                                "effectiveDate": "20090807"
+                                "effectiveDate": "2009-08-07"
                             }
                         ],
                         "preferableVaccine": [
@@ -1050,9 +1050,6 @@
                     },
                     {
                         "doseNumber": "Dose 4",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
@@ -2086,14 +2083,14 @@
                                 "minAge": "18 weeks",
                                 "earliestRecAge": "4 years",
                                 "latestRecAge": "7 years + 4 weeks",
-                                "cessationDate": "20090806"
+                                "cessationDate": "2009-08-06"
                             },
                             {
                                 "absMinAge": "4 years - 4 days",
                                 "minAge": "4 years",
                                 "earliestRecAge": "4 years",
                                 "latestRecAge": "7 years + 4 weeks",
-                                "effectiveDate": "20090807"
+                                "effectiveDate": "2009-08-07"
                             }
                         ],
                         "interval": [
@@ -2103,7 +2100,7 @@
                                 "minInt": "4 weeks",
                                 "earliestRecInt": "3 years",
                                 "latestRecInt": "6 years + 4 weeks",
-                                "cessationDate": "20090806"
+                                "cessationDate": "2009-08-06"
                             },
                             {
                                 "fromPrevious": "Y",
@@ -2111,7 +2108,7 @@
                                 "minInt": "6 months",
                                 "earliestRecInt": "3 years",
                                 "latestRecInt": "6 years + 4 weeks",
-                                "effectiveDate": "20090807"
+                                "effectiveDate": "2009-08-07"
                             }
                         ],
                         "preferableVaccine": [
@@ -2689,9 +2686,6 @@
                     },
                     {
                         "doseNumber": "Dose 5",
-                        "age": [
-                            {}
-                        ],
                         "interval": [
                             {
                                 "fromPrevious": "Y",
